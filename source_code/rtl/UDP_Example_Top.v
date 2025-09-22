@@ -255,7 +255,7 @@ uidbuf#(
     .AXI_ADDR_WIDTH 	(21),
 
     .W_BUFDEPTH     	(1024),
-    .W_DATAWIDTH    	(32),
+    .W_DATAWIDTH    	(16),
     .W_BASEADDR     	(0),
     .W_DSIZEBITS    	(19),
     .W_XSIZE        	(512),
@@ -263,7 +263,7 @@ uidbuf#(
     .W_BUFSIZE      	(3),
 
     .R_BUFDEPTH     	(1024),
-    .R_DATAWIDTH    	(32),
+    .R_DATAWIDTH    	(16),
     .R_BASEADDR     	(0),
     .R_DSIZEBITS    	(19),
     .R_XSIZE        	(512),

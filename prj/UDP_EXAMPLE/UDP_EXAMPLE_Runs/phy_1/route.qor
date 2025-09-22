@@ -3,19 +3,19 @@
 -----------------------------------------------------------
 | Timing                    |                             |
 |     Setup WNS             |        -7232                |
-|     Setup TNS             |      -294244                |
-|     Num of violated S-EP  |           68                |
-|     Hold WNS              |           30                |
+|     Setup TNS             |      -294949                |
+|     Num of violated S-EP  |           66                |
+|     Hold WNS              |           54                |
 |     Hold TNS              |            0                |
 |     Num of violated H-EP  |            0                |
 -----------------------------------------------------------
 | Routing Resource          |                             |
-|     Wire length           |       161968                |
+|     Wire length           |       165624                |
 -----------------------------------------------------------
 | Utilization               |                             |
-|     #slices               |          879                |
-|     slices percentage     |        8.97%                |
-|     #RAMs                 |            6                |
+|     #slices               |          882                |
+|     slices percentage     |        9.00%                |
+|     #RAMs                 |            4                |
 |     #DSPs                 |            0                |
 |     #DRAMHARDCON          |            0                |
 -----------------------------------------------------------
