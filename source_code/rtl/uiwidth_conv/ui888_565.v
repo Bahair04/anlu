@@ -5,7 +5,7 @@
 // Revision: 2025/9/21 V1.0 released
 // Copyright : Bahair_, Inc, All right reserved.
 //////////////////////////////////////////////////////////////////////////////////////
-module ui565_888(
+module ui888_565(
     input   [23 : 0]            data_888,
     output  [15 : 0]            data_565
 );

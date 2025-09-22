@@ -70,7 +70,6 @@ always@(posedge clk_i)
 parameter OFFSET = CLK_DIV - CLK_DIV/4;        
 wire scl_offset  = (clkdiv == OFFSET);//scl delay output to fit timing
      
-reg iic_busy = 1'b0;
 reg scl_r = 1'b1;
 reg sda_o = 1'b0;    
 reg [7:0] sda_r = 8'd0;
