@@ -94,7 +94,10 @@ wire                                vtc2_de; // 视频区域有效信号
 wire                                O_tpg_vs; // TPG测试帧同步信号
 wire                                O_tpg_hs; // TPG测试行同步信号
 wire                                O_tpg_de; // TPG测试数据流有效信号
-wire    [23 : 0]                    O_tpg_data; // TPG测试数据
+wire    [23 : 0]                    O_tpg_data1; // TPG测试数据
+wire    [23 : 0]                    O_tpg_data2; // TPG测试数据
+wire    [23 : 0]                    O_tpg_data3; // TPG测试数据
+wire    [23 : 0]                    O_tpg_data4; // TPG测试数据
 
 //*------------------------------------------------------------
 //* SDRAM
@@ -105,27 +108,14 @@ wire                                fdma_clk0;          // 150MHz
 wire                                fdma_clk90; 
 wire                                fdma_clk180;
 
-wire           	                    W_wclk_i;
-wire                                W_FS_i;
-wire                                W_wren_i;
-wire    [15 : 0]                    W_data_i;
-wire    [7  : 0]                    W_sync_cnt_o;
-wire    [7  : 0]                    W_buf_i;
-
-wire           	                    R_rclk_i;
-wire                                R_FS_i;
-wire                                R_rden_i;
-wire    [15 : 0]                    R_data_o;
-wire    [7  : 0]                    R_buf_i;
-
-wire    [20 : 0] 	                fdma_waddr; // 单位 字节
+wire    [22 : 0] 	                fdma_waddr; // 单位 字节
 wire  	     	                    fdma_wareq;
 wire    [15 : 0] 	                fdma_wsize;                                    
 wire         	                    fdma_wbusy;	
 wire    [31 : 0] 	                fdma_wdata;
 wire         	                    fdma_wvalid;
 
-wire    [20 : 0] 	                fdma_raddr; // 单位 字节
+wire    [22 : 0] 	                fdma_raddr; // 单位 字节
 wire         	                    fdma_rareq;
 wire    [15 : 0] 	                fdma_rsize;                                 
 wire         	                    fdma_rbusy;
@@ -135,11 +125,11 @@ wire         	                    fdma_rvalid;
 wire 			                    sdr_init_done;
 wire 			                    sdr_init_ref_vld;
 wire 			                    app_wr_en;
-wire    [18 : 0]	                app_wr_addr; // 单位 字
+wire    [20 : 0]	                app_wr_addr; // 单位 字
 wire    [3  : 0]	                app_wr_dm;
 wire    [31 : 0]	                app_wr_din;
 wire 			                    app_rd_en;
-wire    [18 : 0]	                app_rd_addr; // 单位 字
+wire    [20 : 0]	                app_rd_addr; // 单位 字
 wire 			                    sdr_rd_en;
 wire    [31 : 0]	                sdr_rd_dout;
 wire                                sdr_busy;
@@ -197,7 +187,7 @@ assign cmos_pwdn = 1'b0;
 //* TPG
 //*------------------------------------------------------------
 // TPG测试数据
-uitpg u_uitpg(
+uitpg_static u_uitpg_1(
     .I_tpg_clk(vid_clk),
     .I_tpg_rstn(vtc_pll_lock),
     .I_tpg_vs(vid_vs),
@@ -206,9 +196,45 @@ uitpg u_uitpg(
     .O_tpg_vs(O_tpg_vs),
     .O_tpg_hs(O_tpg_hs),
     .O_tpg_de(O_tpg_de),
-    .O_tpg_data(O_tpg_data)
+    .O_tpg_data(O_tpg_data1),
+    .dis_mode('d7)
 );
-
+uitpg_static u_uitpg_2(
+    .I_tpg_clk(vid_clk),
+    .I_tpg_rstn(vtc_pll_lock),
+    .I_tpg_vs(vid_vs),
+    .I_tpg_hs(vid_hs),
+    .I_tpg_de(vid_de),
+    .O_tpg_vs(O_tpg_vs),
+    .O_tpg_hs(O_tpg_hs),
+    .O_tpg_de(O_tpg_de),
+    .O_tpg_data(O_tpg_data2),
+    .dis_mode('d12)
+);
+uitpg_static u_uitpg_3(
+    .I_tpg_clk(vid_clk),
+    .I_tpg_rstn(vtc_pll_lock),
+    .I_tpg_vs(vid_vs),
+    .I_tpg_hs(vid_hs),
+    .I_tpg_de(vid_de),
+    .O_tpg_vs(O_tpg_vs),
+    .O_tpg_hs(O_tpg_hs),
+    .O_tpg_de(O_tpg_de),
+    .O_tpg_data(O_tpg_data3),
+    .dis_mode('d13)
+);
+uitpg_static u_uitpg_4(
+    .I_tpg_clk(vid_clk),
+    .I_tpg_rstn(vtc_pll_lock),
+    .I_tpg_vs(vid_vs),
+    .I_tpg_hs(vid_hs),
+    .I_tpg_de(vid_de),
+    .O_tpg_vs(O_tpg_vs),
+    .O_tpg_hs(O_tpg_hs),
+    .O_tpg_de(O_tpg_de),
+    .O_tpg_data(O_tpg_data4),
+    .dis_mode('d14)
+);
 //*------------------------------------------------------------
 //* SDRAM
 //*------------------------------------------------------------
@@ -224,36 +250,32 @@ fdma_pll u_clk(
 	.clk2_out           (fdma_clk180    )		//150.000000MHZ	| 180DEG 
 );
 
-uisetvbuf uisetvbuf_inst
-(
-    .ui_clk             (fdma_clk0      ),
-    .bufn_i             (W_sync_cnt_o   ),
-    .bufn_o             (R_buf_i        )
-);  
-
-wire [15:0] data_565;
-ui888_565 u_ui888_565(
-    .data_888 	(O_tpg_data  ),
-    .data_565 	(data_565  )
+wire [15:0] data_565_1;
+wire [15:0] data_565_2;
+wire [15:0] data_565_3;
+wire [15:0] data_565_4;
+ui888_565 u_ui888_565_1(
+    .data_888 	(O_tpg_data1  ),
+    .data_565 	(data_565_1  )
 );
-
-
-assign      W_wclk_i = vid_clk;
-assign      W_FS_i	 = vid_vs;
-assign      W_wren_i = vtc2_de;
-assign      W_data_i = data_565;
-assign      W_buf_i  = W_sync_cnt_o;
-
-assign      R_rclk_i = vid_clk;
-assign      R_FS_i	 = vid_vs;
-assign      R_rden_i = vtc2_de;
-
+ui888_565 u_ui888_565_2(
+    .data_888 	(O_tpg_data2  ),
+    .data_565 	(data_565_2  )
+);
+ui888_565 u_ui888_565_3(
+    .data_888 	(O_tpg_data3  ),
+    .data_565 	(data_565_3  )
+);
+ui888_565 u_ui888_565_4(
+    .data_888 	(O_tpg_data4  ),
+    .data_565 	(data_565_4  )
+);
 
 wire [15:0]    	vid_data;
 
 four_channel_video_splicer #(
 	.AXI_DATA_WIDTH 	( 32  ),
-	.AXI_ADDR_WIDTH 	( 21  ),
+	.AXI_ADDR_WIDTH 	( 23  ),
 	.VID_DATA_WIDTH 	( 16  ))
 u_four_channel_video_splicer(
 	.fdma_clk0     	( fdma_clk0      ),
@@ -262,19 +284,19 @@ u_four_channel_video_splicer(
 	.vid_clk1      	( vid_clk       ),
 	.vid_vs1       	( vid_vs        ),
 	.vid_de1       	( vid_de        ),
-	.vid_data1     	( data_565      ),
+	.vid_data1     	( data_565_1      ),
 	.vid_clk2      	( vid_clk       ),
 	.vid_vs2       	( vid_vs        ),
 	.vid_de2       	( vid_de        ),
-	.vid_data2     	( data_565      ),
+	.vid_data2     	( data_565_2      ),
 	.vid_clk3      	( vid_clk       ),
 	.vid_vs3       	( vid_vs        ),
 	.vid_de3       	( vid_de        ),
-	.vid_data3     	( data_565      ),
+	.vid_data3     	( data_565_3      ),
 	.vid_clk4      	( vid_clk       ),
 	.vid_vs4       	( vid_vs        ),
 	.vid_de4       	( vid_de        ),
-	.vid_data4     	( data_565      ),
+	.vid_data4     	( data_565_4      ),
 
 	.vid_clk       	( vid_clk        ),
 	.vid_vs        	( vid_vs         ),

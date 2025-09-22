@@ -36,7 +36,7 @@ module app_fdma#
 	input   wire            				   	fdma_clk       		,
 	input   wire            				   	fdma_rstn         	,
 	//===========fdma interface=======
-	input   wire [20: 0]      					fdma_waddr          ,
+	input   wire [22: 0]      					fdma_waddr          ,
 	input   wire  	                            fdma_wareq          ,
 	input   wire [15: 0]                      	fdma_wsize          ,                                     
 	output  reg                                 fdma_wbusy          ,
@@ -45,7 +45,7 @@ module app_fdma#
 	output  wire                               	fdma_wvalid         ,
 	//input	wire                               	fdma_wready			,
 
-	input   wire [20: 0]      					fdma_raddr          ,
+	input   wire [22: 0]      					fdma_raddr          ,
 	input   wire                                fdma_rareq          ,
 	input   wire [15: 0]                      	fdma_rsize          ,                                     
 	output  reg                                 fdma_rbusy          ,
@@ -58,12 +58,12 @@ module app_fdma#
 	input	wire								sdr_init_ref_vld	,
 		
 	output	reg   								app_wr_en       	,
-	output 	reg  [18 :0]						app_wr_addr     	, 
+	output 	reg  [20 :0]						app_wr_addr     	, 
 	output 	wire [3  :0]						app_wr_dm       	,
 	output 	wire [31 :0]						app_wr_din     	 	,
 		
 	output	reg 								app_rd_en       	,
-	output 	reg  [18 :0]						app_rd_addr     	,
+	output 	reg  [20 :0]						app_rd_addr     	,
 	input	wire 								sdr_rd_en       	,
 	input  	wire [31 :0]						sdr_rd_dout         ,
 	input   wire  								sdr_busy
@@ -76,7 +76,7 @@ localparam S_READ_END   = 2'h3;
 reg [1 :0]state;
 
 //**************FDMA WRITE  BURST*******************
-reg [18:0]wr_addr;
+reg [20:0]wr_addr;
 reg wr_en;
 wire wlast,w_next,fdma_wend;
 
@@ -91,9 +91,9 @@ always@(posedge fdma_clk or negedge fdma_rstn)
 	if(fdma_rstn == 1'b0)
     	wr_addr <= 0;
 	else if((fdma_wareq==1'b1)&&(state==S_IDLE))
-		wr_addr <= fdma_waddr[20:2];
+		wr_addr <= fdma_waddr[22:2];
 	else if(w_next)
-		wr_addr[18:0] <= wr_addr[18 :0] + 1'b1; 
+		wr_addr[20:0] <= wr_addr[20 :0] + 1'b1; 
 
 //wburst counter
 always@(posedge fdma_clk or negedge fdma_rstn)
@@ -140,7 +140,7 @@ always@(posedge fdma_clk or negedge fdma_rstn)
 
 
 //**************FDMA read  BURST*******************
-reg [18:0]rd_addr;
+reg [20:0]rd_addr;
 reg rd_en;
 wire rlast,r_next,fdma_rend;
 
@@ -155,9 +155,9 @@ always@(posedge fdma_clk or negedge fdma_rstn)
 	if(fdma_rstn == 1'b0)
     	rd_addr <= 0;
 	else if((fdma_rareq==1'b1)&&(state==S_IDLE))
-		rd_addr <= fdma_raddr[20:2];
+		rd_addr <= fdma_raddr[22:2];
 	else if(r_next)
-		rd_addr[18 :0] <= rd_addr[18 :0] + 1'b1; 
+		rd_addr[20 :0] <= rd_addr[20 :0] + 1'b1; 
 
 //wburst counter
 always@(posedge fdma_clk or negedge fdma_rstn)

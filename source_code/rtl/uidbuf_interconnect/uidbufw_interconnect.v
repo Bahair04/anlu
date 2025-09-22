@@ -73,28 +73,70 @@ assign  fdma_wbusy_fall = (~fdma_wbusy)&(fdma_wbusy_dly) ;
 
 
 reg [2:0]state;
-
+reg [2:0]grant;
 always@(posedge ui_clk or negedge ui_rstn)begin
     if (ui_rstn == 1'b0) begin
         state<=IDLE;
     end else begin
         case (state)
             IDLE:begin
-                if (fdma_wareq_1) begin
-                    state<=W_1;
-                end else if (fdma_wareq_2) begin
-                    state<=W_2;
-                end else if (fdma_wareq_3) begin
-                    state<=W_3;
-                end else if (fdma_wareq_4) begin
-                    state<=W_4;
-                end else begin
-                    state<=state;
+                if (grant=='d0) begin
+                    if (fdma_wareq_1) begin
+                        state<=W_1;
+                    end else if (fdma_wareq_2) begin
+                        state<=W_2;
+                    end else if (fdma_wareq_3) begin
+                        state<=W_3;
+                    end else if (fdma_wareq_4) begin
+                        state<=W_4;
+                    end else begin
+                        state<=state;
+                    end
+                end
+                else if (grant=='d1) begin
+                    if (fdma_wareq_2) begin
+                        state<=W_2;
+                    end else if (fdma_wareq_3) begin
+                        state<=W_3;
+                    end else if (fdma_wareq_4) begin
+                        state<=W_4;
+                    end else if (fdma_wareq_1) begin
+                        state<=W_1;
+                    end else begin
+                        state<=state;
+                    end
+                end
+                else if (grant=='d2) begin
+                    if (fdma_wareq_3) begin
+                        state<=W_3;
+                    end else if (fdma_wareq_4) begin
+                        state<=W_4;
+                    end else if (fdma_wareq_1) begin
+                        state<=W_1;
+                    end else if (fdma_wareq_2) begin
+                        state<=W_2;
+                    end else begin
+                        state<=state;
+                    end
+                end
+                else if (grant=='d3) begin
+                    if (fdma_wareq_4) begin
+                        state<=W_4;
+                    end else if (fdma_wareq_1) begin
+                        state<=W_1;
+                    end else if (fdma_wareq_2) begin
+                        state<=W_2;
+                    end else if (fdma_wareq_3) begin
+                        state<=W_3;
+                    end else begin
+                        state<=state;
+                    end
                 end
             end 
             W_1:begin
                 if (fdma_wbusy_fall) begin
                     state<=IDLE;
+                    grant<='d1;
                 end else begin
                     state<=state;
                 end
@@ -102,6 +144,7 @@ always@(posedge ui_clk or negedge ui_rstn)begin
             W_2:begin
                 if (fdma_wbusy_fall) begin
                     state<=IDLE;
+                    grant<='d2;
                 end else begin
                     state<=state;
                 end
@@ -109,6 +152,7 @@ always@(posedge ui_clk or negedge ui_rstn)begin
             W_3:begin
                 if (fdma_wbusy_fall) begin
                     state<=IDLE;
+                    grant<='d3;
                 end else begin
                     state<=state;
                 end
@@ -116,6 +160,7 @@ always@(posedge ui_clk or negedge ui_rstn)begin
             W_4:begin
                 if (fdma_wbusy_fall) begin
                     state<=IDLE;
+                    grant<='d0;
                 end else begin
                     state<=state;
                 end

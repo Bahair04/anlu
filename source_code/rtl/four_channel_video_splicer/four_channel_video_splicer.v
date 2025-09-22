@@ -1,7 +1,7 @@
 module four_channel_video_splicer
 #(
     parameter  integer                   AXI_DATA_WIDTH = 32,    //AXI总线数据位宽
-	parameter  integer                   AXI_ADDR_WIDTH = 21,    //AXI总线地址位宽
+	parameter  integer                   AXI_ADDR_WIDTH = 23,    //AXI总线地址位宽
     parameter  integer                   VID_DATA_WIDTH = 16
 )(
     input   wire                            fdma_clk0,
@@ -142,12 +142,12 @@ uidbuf #(
     .ENABLE_WRITE        	(1                  ),
     .ENABLE_READ         	(1                  ),
     .AXI_DATA_WIDTH      	(32                 ),
-    .AXI_ADDR_WIDTH      	(21                 ),
+    .AXI_ADDR_WIDTH      	(23                 ),
     
     .W_BUFDEPTH          	(1024               ),
     .W_DATAWIDTH         	(16                 ),
     .W_BASEADDR          	(0                  ),
-    .W_DSIZEBITS         	(19                 ),
+    .W_DSIZEBITS         	(21                 ),
     .W_XSIZE             	(512                ),
     .W_YSIZE             	(384                ),
     .W_BUFSIZE           	(3                  ),
@@ -156,7 +156,7 @@ uidbuf #(
     .R_BUFDEPTH          	(2048               ),
     .R_DATAWIDTH         	(16                 ),
     .R_BASEADDR          	(0                  ),
-    .R_DSIZEBITS         	(19                 ),
+    .R_DSIZEBITS         	(21                 ),
     .R_XSIZE             	(1024               ),
     .R_YSIZE             	(768                ),
     .R_BUFSIZE           	(3                  ),
@@ -205,12 +205,12 @@ uidbuf #(
     .ENABLE_WRITE        	(1                  ),
     .ENABLE_READ         	(0                  ),
     .AXI_DATA_WIDTH      	(32                 ),
-    .AXI_ADDR_WIDTH      	(21                 ),
+    .AXI_ADDR_WIDTH      	(23                 ),
     
     .W_BUFDEPTH          	(1024               ),
     .W_DATAWIDTH         	(16                 ),
     .W_BASEADDR          	(512*2              ),
-    .W_DSIZEBITS         	(19                 ),
+    .W_DSIZEBITS         	(21                 ),
     .W_XSIZE             	(512                ),
     .W_YSIZE             	(384                ),
     .W_BUFSIZE           	(3                  ),
@@ -246,12 +246,12 @@ uidbuf #(
     .ENABLE_WRITE        	(1                  ),
     .ENABLE_READ         	(0                  ),
     .AXI_DATA_WIDTH      	(32                 ),
-    .AXI_ADDR_WIDTH      	(21                 ),
+    .AXI_ADDR_WIDTH      	(23                 ),
     
     .W_BUFDEPTH          	(1024               ),
     .W_DATAWIDTH         	(16                 ),
     .W_BASEADDR          	(1024*384*2         ),
-    .W_DSIZEBITS         	(19                 ),
+    .W_DSIZEBITS         	(21                 ),
     .W_XSIZE             	(512                ),
     .W_YSIZE             	(384                ),
     .W_BUFSIZE           	(3                  ),
@@ -287,12 +287,12 @@ uidbuf #(
     .ENABLE_WRITE        	(1                  ),
     .ENABLE_READ         	(0                  ),
     .AXI_DATA_WIDTH      	(32                 ),
-    .AXI_ADDR_WIDTH      	(21                 ),
+    .AXI_ADDR_WIDTH      	(23                 ),
     
     .W_BUFDEPTH          	(1024               ),
     .W_DATAWIDTH         	(16                 ),
     .W_BASEADDR          	(1024*384*2+512*2   ),
-    .W_DSIZEBITS         	(19                 ),
+    .W_DSIZEBITS         	(21                 ),
     .W_XSIZE             	(512                ),
     .W_YSIZE             	(384                ),
     .W_BUFSIZE           	(3                  ),
@@ -318,7 +318,7 @@ u_uidbuf_4(
 
 uidbufw_interconnect #(
     .AXI_DATA_WIDTH 	(32                       ),
-    .AXI_ADDR_WIDTH 	(21                       ))
+    .AXI_ADDR_WIDTH 	(23                       ))
 u_uidbufw_interconnect(
     .ui_clk        	(fdma_clk0      ),
     .ui_rstn       	(sdr_init_done  ),

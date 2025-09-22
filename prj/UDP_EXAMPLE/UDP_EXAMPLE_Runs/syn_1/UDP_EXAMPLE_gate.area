@@ -8,16 +8,16 @@ IO Statistics
   #inout                    1
 
 LUT Statistics
-#Total_luts              1355
-  #lut4                  1082
-  #lut5                   273
+#Total_luts              1297
+  #lut4                  1040
+  #lut5                   257
   #lut6                     0
   #lut5_mx41                0
   #lut4_alu1b               0
 
 Utilization Statistics
-#lut                     1571   out of  19600    8.02%
-#reg                     1285   out of  19600    6.56%
+#lut                     1511   out of  19600    7.71%
+#reg                     1278   out of  19600    6.52%
 #bram                      12   out of     64   18.75%
   #bram9k                   0
   #fifo9k                  12
@@ -34,37 +34,41 @@ Report Hierarchy Area:
 +-----------------------------------------------------------------------------------------------------------+
 |Instance                          |Module                     |lut     |ripple  |seq     |bram    |dsp     |
 +-----------------------------------------------------------------------------------------------------------+
-|top                               |UDP_Example_Top            |1463    |108     |1294    |12      |0       |
-|  app_fdma_inst                   |app_fdma                   |265     |44      |199     |0       |0       |
-|  u2_ram                          |sdr_as_ram                 |152     |5       |463     |0       |0       |
+|top                               |UDP_Example_Top            |1404    |107     |1287    |12      |0       |
+|  app_fdma_inst                   |app_fdma                   |276     |50      |207     |0       |0       |
+|  u2_ram                          |sdr_as_ram                 |156     |5       |470     |0       |0       |
 |    u1_init_ref                   |sdr_init_ref               |21      |5       |81      |0       |0       |
-|    u2_wrrd                       |sdr_wrrd                   |67      |0       |382     |0       |0       |
+|    u2_wrrd                       |sdr_wrrd                   |71      |0       |389     |0       |0       |
 |  u_PLL_HDMI_CLK                  |PLL_HDMI_CLK               |1       |0       |0       |0       |0       |
 |  u_clk                           |fdma_pll                   |0       |0       |0       |0       |0       |
-|  u_four_channel_video_splicer    |four_channel_video_splicer |375     |45      |285     |12      |0       |
-|    u_uidbuf_1                    |uidbuf                     |126     |18      |92      |6       |0       |
+|  u_four_channel_video_splicer    |four_channel_video_splicer |402     |45      |285     |12      |0       |
+|    u_uidbuf_1                    |uidbuf                     |129     |18      |92      |6       |0       |
 |      FDMA_READ$fs_cap_R0         |fs_cap                     |1       |0       |6       |0       |0       |
 |      FDMA_WRITE_ENABLE$fs_cap_W0 |fs_cap                     |1       |0       |6       |0       |0       |
-|    u_uidbuf_2                    |uidbuf                     |63      |9       |47      |2       |0       |
+|    u_uidbuf_2                    |uidbuf                     |65      |9       |47      |2       |0       |
 |      FDMA_WRITE_ENABLE$fs_cap_W0 |fs_cap                     |1       |0       |6       |0       |0       |
-|    u_uidbuf_3                    |uidbuf                     |63      |9       |47      |2       |0       |
+|    u_uidbuf_3                    |uidbuf                     |65      |9       |47      |2       |0       |
 |      FDMA_WRITE_ENABLE$fs_cap_W0 |fs_cap                     |1       |0       |6       |0       |0       |
-|    u_uidbuf_4                    |uidbuf                     |63      |9       |47      |2       |0       |
+|    u_uidbuf_4                    |uidbuf                     |65      |9       |47      |2       |0       |
 |      FDMA_WRITE_ENABLE$fs_cap_W0 |fs_cap                     |1       |0       |6       |0       |0       |
-|    u_uidbufw_interconnect        |uidbufw_interconnect       |42      |0       |23      |0       |0       |
-|    u_uidown_sample1              |uidown_sample              |18      |0       |29      |0       |0       |
-|  u_uicfg5640                     |uicfg5640                  |330     |0       |80      |0       |0       |
+|    u_uidbufw_interconnect        |uidbufw_interconnect       |60      |0       |27      |0       |0       |
+|    u_uidown_sample1              |uidown_sample              |18      |0       |14      |0       |0       |
+|    u_uidown_sample2              |uidown_sample              |0       |0       |5       |0       |0       |
+|    u_uidown_sample3              |uidown_sample              |0       |0       |6       |0       |0       |
+|  u_uicfg5640                     |uicfg5640                  |312     |0       |80      |0       |0       |
 |    uii2c_inst                    |uii2c                      |62      |0       |33      |0       |0       |
-|  u_uitpg                         |uitpg                      |107     |7       |53      |0       |0       |
+|  u_uitpg_1                       |uitpg_static               |20      |0       |19      |0       |0       |
 |  uiSensorRGB565_inst             |uiSensorRGB565             |0       |0       |2       |0       |0       |
-|  uihdmitx_inst                   |uihdmitx                   |194     |0       |174     |0       |0       |
-|    Inst_DVITransmitter           |DVITransmitter             |194     |0       |174     |0       |0       |
-|      Inst_TMDSEncoder_blue       |TMDSEncoder                |59      |0       |42      |0       |0       |
-|      Inst_TMDSEncoder_green      |TMDSEncoder                |52      |0       |39      |0       |0       |
-|      Inst_TMDSEncoder_red        |TMDSEncoder                |55      |0       |38      |0       |0       |
+|  uihdmitx_inst                   |uihdmitx                   |195     |0       |175     |0       |0       |
+|    Inst_DVITransmitter           |DVITransmitter             |195     |0       |175     |0       |0       |
+|      Inst_TMDSEncoder_blue       |TMDSEncoder                |60      |0       |43      |0       |0       |
+|      Inst_TMDSEncoder_green      |TMDSEncoder                |53      |0       |39      |0       |0       |
+|      Inst_TMDSEncoder_red        |TMDSEncoder                |54      |0       |38      |0       |0       |
 |      Inst_blue_serializer_10_1   |Serial_N_1_lvds_dat        |10      |0       |20      |0       |0       |
 |      Inst_clk_serializer_10_1    |Serial_N_1_lvds            |2       |0       |7       |0       |0       |
 |      Inst_green_serializer_10_1  |Serial_N_1_lvds_dat        |8       |0       |14      |0       |0       |
 |      Inst_red_serializer_10_1    |Serial_N_1_lvds_dat        |8       |0       |14      |0       |0       |
-|  uivtc_inst                      |uivtc                      |39      |7       |29      |0       |0       |
+|  uivtc_inst                      |uivtc                      |42      |7       |29      |0       |0       |
+|  u_uitpg_2                       |uitpg_static               |0       |0       |5       |0       |0       |
+|  u_uitpg_3                       |uitpg_static               |0       |0       |6       |0       |0       |
 +-----------------------------------------------------------------------------------------------------------+

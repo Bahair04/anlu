@@ -8,57 +8,59 @@ IO Statistics
   #inout                    1
 
 Gate Statistics
-#Basic gates             2732
-  #and                    105
+#Basic gates             2652
+  #and                    104
   #nand                     0
-  #or                     544
+  #or                     562
   #nor                      0
   #xor                      2
   #xnor                    12
   #buf                      0
-  #not                    276
+  #not                    272
   #bufif1                  33
-  #MX21                   426
+  #MX21                   339
   #FADD                     0
-  #DFF                   1334
+  #DFF                   1328
   #LATCH                    0
-#MACRO_ADD                155
-#MACRO_EQ                  60
-#MACRO_MUX                841
+#MACRO_ADD                154
+#MACRO_EQ                  52
+#MACRO_MUX                866
 #MACRO_OTHERS              11
 
 Report Hierarchy Area:
 +--------------------------------------------------------------------------------------+
 |Instance                          |Module                     |gates  |seq    |macros |
 +--------------------------------------------------------------------------------------+
-|top                               |UDP_Example_Top            |1398   |1334   |226    |
-|  app_fdma_inst                   |app_fdma                   |75     |199    |19     |
-|  u2_ram                          |sdr_as_ram                 |99     |511    |6      |
+|top                               |UDP_Example_Top            |1324   |1328   |217    |
+|  app_fdma_inst                   |app_fdma                   |75     |207    |19     |
+|  u2_ram                          |sdr_as_ram                 |99     |519    |6      |
 |    u1_init_ref                   |sdr_init_ref               |19     |81     |1      |
-|    u2_wrrd                       |sdr_wrrd                   |80     |430    |5      |
+|    u2_wrrd                       |sdr_wrrd                   |80     |438    |5      |
 |  u_PLL_HDMI_CLK                  |PLL_HDMI_CLK               |0      |0      |1      |
 |  u_clk                           |fdma_pll                   |0      |0      |1      |
-|  u_four_channel_video_splicer    |four_channel_video_splicer |604    |285    |70     |
-|    u_uidbuf_1                    |uidbuf                     |124    |92     |25     |
+|  u_four_channel_video_splicer    |four_channel_video_splicer |625    |285    |70     |
+|    u_uidbuf_1                    |uidbuf                     |43     |92     |25     |
 |      FDMA_READ$fs_cap_R0         |fs_cap                     |0      |6      |1      |
 |      FDMA_WRITE_ENABLE$fs_cap_W0 |fs_cap                     |0      |6      |1      |
-|    u_uidbuf_2                    |uidbuf                     |22     |47     |13     |
+|    u_uidbuf_2                    |uidbuf                     |32     |47     |13     |
 |      FDMA_WRITE_ENABLE$fs_cap_W0 |fs_cap                     |0      |6      |1      |
-|    u_uidbuf_3                    |uidbuf                     |32     |47     |14     |
+|    u_uidbuf_3                    |uidbuf                     |47     |47     |14     |
 |      FDMA_WRITE_ENABLE$fs_cap_W0 |fs_cap                     |0      |6      |1      |
-|    u_uidbuf_4                    |uidbuf                     |50     |47     |14     |
+|    u_uidbuf_4                    |uidbuf                     |79     |47     |14     |
 |      FDMA_WRITE_ENABLE$fs_cap_W0 |fs_cap                     |0      |6      |1      |
-|    u_uidbufw_interconnect        |uidbufw_interconnect       |369    |23     |0      |
-|    u_uidown_sample1              |uidown_sample              |6      |29     |3      |
+|    u_uidbufw_interconnect        |uidbufw_interconnect       |417    |27     |0      |
+|    u_uidown_sample1              |uidown_sample              |6      |14     |3      |
 |    uisetvbuf_i                   |uisetvbuf                  |1      |0      |1      |
+|    u_uidown_sample2              |uidown_sample              |0      |5      |0      |
+|    u_uidown_sample3              |uidown_sample              |0      |6      |0      |
 |  u_uicfg5640                     |uicfg5640                  |351    |81     |16     |
 |    ui5640reg_inst                |ui5640reg                  |243    |0      |0      |
 |    uii2c_inst                    |uii2c                      |64     |34     |13     |
-|  u_uitpg                         |uitpg                      |101    |53     |11     |
+|  u_uitpg_1                       |uitpg_static               |6      |19     |2      |
 |  uiSensorRGB565_inst             |uiSensorRGB565             |0      |2      |0      |
-|  uihdmitx_inst                   |uihdmitx                   |129    |174    |91     |
-|    Inst_DVITransmitter           |DVITransmitter             |129    |174    |91     |
-|      Inst_TMDSEncoder_blue       |TMDSEncoder                |45     |42     |29     |
+|  uihdmitx_inst                   |uihdmitx                   |129    |175    |91     |
+|    Inst_DVITransmitter           |DVITransmitter             |129    |175    |91     |
+|      Inst_TMDSEncoder_blue       |TMDSEncoder                |45     |43     |29     |
 |      Inst_TMDSEncoder_green      |TMDSEncoder                |40     |39     |29     |
 |      Inst_TMDSEncoder_red        |TMDSEncoder                |40     |38     |29     |
 |      Inst_blue_serializer_10_1   |Serial_N_1_lvds_dat        |2      |20     |1      |
@@ -66,4 +68,6 @@ Report Hierarchy Area:
 |      Inst_green_serializer_10_1  |Serial_N_1_lvds_dat        |0      |14     |1      |
 |      Inst_red_serializer_10_1    |Serial_N_1_lvds_dat        |0      |14     |1      |
 |  uivtc_inst                      |uivtc                      |8      |29     |11     |
+|  u_uitpg_2                       |uitpg_static               |0      |5      |0      |
+|  u_uitpg_3                       |uitpg_static               |0      |6      |0      |
 +--------------------------------------------------------------------------------------+
