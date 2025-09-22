@@ -27,7 +27,7 @@
 *********************************************************************/
 
 module uidbuf#(
-        parameter  integer SDRAM_MAX_BURST_LEN 				= 256,
+        parameter  integer SDRAM_MAX_BURST_LEN 				= 256,     // 单次突发读写长度 一个BURST代表一个AXI_DATA_WIDTH数据
         parameter  integer                   VIDEO_ENABLE   = 1, // 1 视频通道 使能视频同步功能 0 数据通道
         parameter  integer                   ENABLE_WRITE   = 1, // 写数据通道
         parameter  integer                   ENABLE_READ    = 1, // 读数据通道
@@ -35,21 +35,23 @@ module uidbuf#(
         parameter  integer                   AXI_DATA_WIDTH = 32, // FDMA数据宽度
         parameter  integer                   AXI_ADDR_WIDTH = 21, // FDMA地址宽度
 
-        parameter  integer                   W_BUFDEPTH     = 1024, // FIFO深度
+        parameter  integer                   W_BUFDEPTH     = 1024, // FIFO深度 单位W_DATAWIDTH
         parameter  integer                   W_DATAWIDTH    = 16,   // uidbuf数据宽度 
         parameter  [AXI_ADDR_WIDTH -1'b1: 0] W_BASEADDR     = 0,    // FIFO起始地址
         parameter  integer                   W_DSIZEBITS    = 19,   // FIFO每一帧缓存的地址大小 其余帧在高地址切换
         parameter  integer                   W_XSIZE        = 512,  // 宽度 单位W_DATAWIDTH
         parameter  integer                   W_YSIZE        = 384,  // 高度 单位W_DATAWIDTH
         parameter  integer                   W_BUFSIZE      = 3,    // FIFO缓存的帧数
+        parameter  integer                   W_XSTRIDE      = 0,    // 写通道设置的X方向的Stride值 用于缓存图形 单位W_DATAWIDTH
 
-        parameter  integer                   R_BUFDEPTH     = 1024, // FIFO深度
+        parameter  integer                   R_BUFDEPTH     = 1024, // FIFO深度 单位R_DATAWIDTH
         parameter  integer                   R_DATAWIDTH    = 16,   // uidbuf数据宽度
         parameter  [AXI_ADDR_WIDTH -1'b1: 0] R_BASEADDR     = 0,    // FIFO起始地址
         parameter  integer                   R_DSIZEBITS    = 19,   // FIFO每一帧缓存的地址大小 其余帧在高地址切换
         parameter  integer                   R_XSIZE        = 512,  // 宽度 单位W_DATAWIDTH
         parameter  integer                   R_YSIZE        = 384,  // 高度 单位W_DATAWIDTH
-        parameter  integer                   R_BUFSIZE      = 3     // FIFO缓存的帧数
+        parameter  integer                   R_BUFSIZE      = 3,    // FIFO缓存的帧数
+        parameter  integer                   R_XSTRIDE      = 0     // 读通道设置的X方向的Stride值 用于缓存图形 单位R_DATAWIDTH
     )
     (
         input wire                                  ui_clk,
@@ -114,6 +116,7 @@ generate  if(ENABLE_WRITE == 1) begin : FDMA_WRITE_ENABLE
             localparam WFIFO_DEPTH 			=   W_BUFDEPTH*W_DATAWIDTH/AXI_DATA_WIDTH; // 写FIFO的读取深度
             localparam WX_BURST_ADDR_INC    =  (FDMA_WX_BURST*(AXI_DATA_WIDTH/8)); // 一个BURST（单位AXI_DATA_WIDTH）对应的地址增量（单位 字节）
                                                                                    // 一个字节地址对应一个地址数据
+            localparam WX_BURST_TIMES       =  (W_XSIZE * W_DATAWIDTH) / (FDMA_WX_BURST * AXI_DATA_WIDTH); // 写一行的突发次数
 
             assign                                  fdma_wready = 1'b1;
             reg                                     fdma_wareq_r= 1'b0;
@@ -122,6 +125,8 @@ generate  if(ENABLE_WRITE == 1) begin : FDMA_WRITE_ENABLE
             reg [1 :0]                              W_MS=0; // 状态机
             reg [W_DSIZEBITS-1'b1:0]                W_addr=0; // 写SDR SDRAM地址（单位 字节）
             reg [15:0]                              W_bcnt=0; // 帧内突发次数计数器
+            reg [15:0]                              W_acnt=0; // 行内突发次数计数器
+
             //wire[W_RD_DATA_COUNT_WIDTH-1'b1 :0]     W_rcnt;
             wire                                     W_REQ; // 写FIFO将满标志 发起写信号 把FIFO中的数据写入SDR SDRAM
             reg [5 :0]                              wirq_dly_cnt =0; // 写完成中断延迟计数器 满足AXI标准
@@ -172,6 +177,7 @@ generate  if(ENABLE_WRITE == 1) begin : FDMA_WRITE_ENABLE
                     W_addr       <= 0;
                     W_sync_cnt_o <= 0;
                     W_bcnt       <= 0;
+                    W_acnt       <= 0;
                     wrst_cnt     <= 0;
                     fmda_wbufn    <= 0;
                     fdma_wareq_r <= 1'd0;
@@ -181,6 +187,7 @@ generate  if(ENABLE_WRITE == 1) begin : FDMA_WRITE_ENABLE
                         S_IDLE: begin
                             W_addr <= 0;
                             W_bcnt <= 0;
+                            W_acnt <= 0;
                             wrst_cnt <= 0;
                             if(W_FS) begin
                                 W_MS <= S_RST;
@@ -215,7 +222,14 @@ generate  if(ENABLE_WRITE == 1) begin : FDMA_WRITE_ENABLE
                                 if(W_bcnt == WY_BURST_TIMES)
                                     W_MS <= S_IDLE;
                                 else begin
-                                    W_addr <= W_addr +  WX_BURST_ADDR_INC;
+                                    if (W_acnt == WX_BURST_TIMES - 1) begin
+                                      W_addr <= W_addr + WX_BURST_ADDR_INC + W_XSTRIDE * (W_DATAWIDTH / 8);
+                                      W_acnt <= 'd0;
+                                    end
+                                    else begin
+                                      W_addr <= W_addr +  WX_BURST_ADDR_INC;
+                                      W_acnt <= W_acnt + 1'b1;
+                                    end
                                     W_bcnt <= W_bcnt + 1'b1;
                                     W_MS    <= S_DATA1;
                                 end
@@ -290,6 +304,7 @@ generate  if(ENABLE_READ == 1) begin : FDMA_READ
             localparam RFIFO_DEPTH 			=  R_BUFDEPTH*R_DATAWIDTH/AXI_DATA_WIDTH; // 读FIFO的写入深度
             localparam RX_BURST_ADDR_INC    = (FDMA_RX_BURST*(AXI_DATA_WIDTH/8)); // 一个BURST（单位AXI_DATA_WIDTH）对应的地址增量（单位 字节）
                                                                                   // 一个字节地址对应一个字节数据
+            localparam RX_BURST_TIMES        = (R_XSIZE*R_DATAWIDTH)/(FDMA_RX_BURST*AXI_DATA_WIDTH);
 
             assign                                  fdma_rready = 1'b1;
             reg                                     fdma_rareq_r= 1'b0;
@@ -298,6 +313,7 @@ generate  if(ENABLE_READ == 1) begin : FDMA_READ
             reg [1 :0]                              R_MS=0; // 状态机
             reg [R_DSIZEBITS-1'b1:0]                R_addr=0; // 读SDR SDRAM地址（单位字节）
             reg [15:0]                              R_bcnt=0; // 帧内突发次数计数器
+            reg [15:0]                              R_acnt=0;
             //wire[R_WR_DATA_COUNT_WIDTH-1'b1 :0]     R_wcnt;
             wire                                     R_REQ; // 读FIFO将空标志 发起读信号 把SDR SDRANM中的数据读到FIFO中
             reg [5 :0]                              rirq_dly_cnt =0; // 读完成终端延计数器 满足AXI标准
@@ -345,6 +361,7 @@ generate  if(ENABLE_READ == 1) begin : FDMA_READ
                     R_addr       <= 0;
                     R_sync_cnt_o <= 0;
                     R_bcnt       <= 0;
+                    R_acnt       <= 0;
                     rrst_cnt     <= 0;
                     fmda_rbufn    <= 0;
                     fdma_rareq_r  <= 1'd0;
@@ -354,6 +371,7 @@ generate  if(ENABLE_READ == 1) begin : FDMA_READ
                         S_IDLE: begin
                             R_addr <= 0;
                             R_bcnt <= 0;
+                            R_acnt <= 0;
                             rrst_cnt <= 0;
                             if(R_FS) begin
                                 R_MS <= S_RST;
@@ -388,7 +406,14 @@ generate  if(ENABLE_READ == 1) begin : FDMA_READ
                                 if(R_bcnt == RY_BURST_TIMES)
                                     R_MS <= S_IDLE;
                                 else begin
-                                    R_addr <= R_addr +  RX_BURST_ADDR_INC;
+                                    if (R_acnt == RX_BURST_TIMES - 1) begin
+                                      R_addr <= R_addr +  RX_BURST_ADDR_INC + R_XSTRIDE * (R_DATAWIDTH / 8);
+                                      R_acnt <= 0;
+                                    end
+                                    else begin
+                                      R_addr <= R_addr +  RX_BURST_ADDR_INC;
+                                      R_acnt <= R_acnt + 1'b1;
+                                    end
                                     R_bcnt <= R_bcnt + 1'b1;
                                     R_MS    <= S_DATA1;
                                 end

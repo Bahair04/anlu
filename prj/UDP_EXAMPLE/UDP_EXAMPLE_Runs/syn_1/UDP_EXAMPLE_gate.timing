@@ -1,6 +1,6 @@
 Created by          : Tang Dynasty v6.2.168116
                     : Copyright (c) 2012-2025 Anlogic Inc.
-Generated           : Mon Sep 22 11:53:15 2025
+Generated           : Mon Sep 22 13:30:55 2025
 
 Top Model           : UDP_Example_Top
 Device              : EG4S20BG256
@@ -111,24 +111,24 @@ net (fo=802)                            0.000          0.000          net: app_f
 launch edge                             0.000    r     0.000               
 --------------------------------------------------------------------  ---------------
 SEQ (clk2q)                             0.146    r     0.146          pin: uidbuf_inst/FDMA_WRITE_ENABLE$W_addr_reg[10].q
-net (fo=7)                              0.800          0.946          net: uidbuf_inst/fdma_waddr[10],  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(66)
+net (fo=7)                              0.800          0.946          net: uidbuf_inst/fdma_waddr[10],  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(68)
                                                                       pin: uidbuf_inst/FDMA_WRITE_ENABLE$W_MS_b1[1]_syn_1.a
 LUT4                                    0.408    f     1.354       1  pin: uidbuf_inst/FDMA_WRITE_ENABLE$W_MS_b1[1]_syn_1.o
-net (fo=3)                              0.651          2.005          net: uidbuf_inst/add6_syn_35,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(218)
+net (fo=3)                              0.651          2.005          net: uidbuf_inst/add7_syn_35,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(226)
                                                                       pin: uidbuf_inst/FDMA_WRITE_ENABLE$W_MS_b1[1]_syn_2.a
 LUT3                                    0.408    f     2.413       2  pin: uidbuf_inst/FDMA_WRITE_ENABLE$W_MS_b1[1]_syn_2.o
-net (fo=4)                              0.697          3.110          net: uidbuf_inst/add6_syn_43,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(218)
+net (fo=4)                              0.697          3.110          net: uidbuf_inst/add7_syn_43,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(226)
                                                                       pin: uidbuf_inst/FDMA_WRITE_ENABLE$W_MS_b1[1]_syn_3.a
 LUT3                                    0.408    f     3.518       3  pin: uidbuf_inst/FDMA_WRITE_ENABLE$W_MS_b1[1]_syn_3.o
 net (fo=1)                              0.562          4.080          net: uidbuf_inst/FDMA_WRITE_ENABLE$W_MS_b1[1]_syn_4,  NOFILE(0)
                                                                       pin: uidbuf_inst/FDMA_WRITE_ENABLE$W_MS_b1[1]_syn_9.a
 LUT5                                    0.424    f     4.504       4  pin: uidbuf_inst/FDMA_WRITE_ENABLE$W_MS_b1[1]_syn_9.o
-net (fo=14)                             0.934          5.438          net: uidbuf_inst/mux61_syn_164,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(180)
+net (fo=14)                             0.934          5.438          net: uidbuf_inst/mux9_syn_164,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(186)
                                                                       pin: uidbuf_inst/FDMA_WRITE_ENABLE$W_MS_b1[1]_syn_10.e
 LUT5                                    0.424    f     5.862       5  pin: uidbuf_inst/FDMA_WRITE_ENABLE$W_MS_b1[1]_syn_10.o
 net (fo=1)                              0.562          6.424          net: uidbuf_inst/FDMA_WRITE_ENABLE$W_MS_b1[1],  NOFILE(0)
                                                                       pin: uidbuf_inst/FDMA_WRITE_ENABLE$W_MS_reg[1].d
-SEQ (reg)                               0.118    f     6.542          net: uidbuf_inst/FDMA_WRITE_ENABLE$W_MS[1],  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(122)
+SEQ (reg)                               0.118    f     6.542          net: uidbuf_inst/FDMA_WRITE_ENABLE$W_MS[1],  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(125)
 --------------------------------------------------------------------  ---------------
 Arrival                                                6.542               
 
@@ -543,19 +543,19 @@ net (fo=802)                            0.000          0.000          net: app_f
 launch edge                             0.000    r     0.000               
 --------------------------------------------------------------------  ---------------
 SEQ (clk2q)                             0.146    r     0.146          pin: uidbuf_inst/FDMA_READ$R_addr_reg[10].q
-net (fo=7)                              0.800          0.946          net: uidbuf_inst/fdma_raddr[10],  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(84)
+net (fo=7)                              0.800          0.946          net: uidbuf_inst/fdma_raddr[10],  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(86)
                                                                       pin: uidbuf_inst/FDMA_READ$R_MS_b1[1]_syn_1.a
 LUT4                                    0.408    f     1.354       1  pin: uidbuf_inst/FDMA_READ$R_MS_b1[1]_syn_1.o
-net (fo=3)                              0.651          2.005          net: uidbuf_inst/add2_syn_35,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(391)
+net (fo=3)                              0.651          2.005          net: uidbuf_inst/add2_syn_35,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(410)
                                                                       pin: uidbuf_inst/FDMA_READ$R_MS_b1[1]_syn_2.a
 LUT3                                    0.408    f     2.413       2  pin: uidbuf_inst/FDMA_READ$R_MS_b1[1]_syn_2.o
-net (fo=4)                              0.697          3.110          net: uidbuf_inst/add2_syn_43,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(391)
+net (fo=4)                              0.697          3.110          net: uidbuf_inst/add2_syn_43,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(410)
                                                                       pin: uidbuf_inst/FDMA_READ$R_MS_b1[1]_syn_7.a
 LUT5                                    0.424    f     3.534       3  pin: uidbuf_inst/FDMA_READ$R_MS_b1[1]_syn_7.o
 net (fo=2)                              0.600          4.134          net: uidbuf_inst/FDMA_READ$R_MS_b1[1]_syn_8,  NOFILE(0)
-                                                                      pin: uidbuf_inst/mux30_syn_187.a
-LUT4                                    0.408    f     4.542       4  pin: uidbuf_inst/mux30_syn_187.o
-net (fo=13)                             0.920          5.462          net: uidbuf_inst/mux30_syn_164,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(353)
+                                                                      pin: uidbuf_inst/mux47_syn_187.a
+LUT4                                    0.408    f     4.542       4  pin: uidbuf_inst/mux47_syn_187.o
+net (fo=13)                             0.920          5.462          net: uidbuf_inst/mux47_syn_164,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(370)
                                                                       pin: uidbuf_inst/FDMA_READ$R_addr_reg[10].ce
 SEQ (reg)                               0.087    r     5.549               
 --------------------------------------------------------------------  ---------------
@@ -612,19 +612,19 @@ net (fo=802)                            0.000          0.000          net: app_f
 launch edge                             0.000    r     0.000               
 --------------------------------------------------------------------  ---------------
 SEQ (clk2q)                             0.146    r     0.146          pin: uidbuf_inst/FDMA_READ$R_addr_reg[10].q
-net (fo=7)                              0.800          0.946          net: uidbuf_inst/fdma_raddr[10],  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(84)
+net (fo=7)                              0.800          0.946          net: uidbuf_inst/fdma_raddr[10],  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(86)
                                                                       pin: uidbuf_inst/FDMA_READ$R_MS_b1[1]_syn_1.a
 LUT4                                    0.408    f     1.354       1  pin: uidbuf_inst/FDMA_READ$R_MS_b1[1]_syn_1.o
-net (fo=3)                              0.651          2.005          net: uidbuf_inst/add2_syn_35,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(391)
+net (fo=3)                              0.651          2.005          net: uidbuf_inst/add2_syn_35,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(410)
                                                                       pin: uidbuf_inst/FDMA_READ$R_MS_b1[1]_syn_2.a
 LUT3                                    0.408    f     2.413       2  pin: uidbuf_inst/FDMA_READ$R_MS_b1[1]_syn_2.o
-net (fo=4)                              0.697          3.110          net: uidbuf_inst/add2_syn_43,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(391)
+net (fo=4)                              0.697          3.110          net: uidbuf_inst/add2_syn_43,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(410)
                                                                       pin: uidbuf_inst/FDMA_READ$R_MS_b1[1]_syn_7.a
 LUT5                                    0.424    f     3.534       3  pin: uidbuf_inst/FDMA_READ$R_MS_b1[1]_syn_7.o
 net (fo=2)                              0.600          4.134          net: uidbuf_inst/FDMA_READ$R_MS_b1[1]_syn_8,  NOFILE(0)
-                                                                      pin: uidbuf_inst/mux30_syn_187.a
-LUT4                                    0.408    f     4.542       4  pin: uidbuf_inst/mux30_syn_187.o
-net (fo=13)                             0.920          5.462          net: uidbuf_inst/mux30_syn_164,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(353)
+                                                                      pin: uidbuf_inst/mux47_syn_187.a
+LUT4                                    0.408    f     4.542       4  pin: uidbuf_inst/mux47_syn_187.o
+net (fo=13)                             0.920          5.462          net: uidbuf_inst/mux47_syn_164,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(370)
                                                                       pin: uidbuf_inst/FDMA_READ$R_addr_reg[11].ce
 SEQ (reg)                               0.087    r     5.549               
 --------------------------------------------------------------------  ---------------
@@ -681,19 +681,19 @@ net (fo=802)                            0.000          0.000          net: app_f
 launch edge                             0.000    r     0.000               
 --------------------------------------------------------------------  ---------------
 SEQ (clk2q)                             0.146    r     0.146          pin: uidbuf_inst/FDMA_READ$R_addr_reg[10].q
-net (fo=7)                              0.800          0.946          net: uidbuf_inst/fdma_raddr[10],  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(84)
+net (fo=7)                              0.800          0.946          net: uidbuf_inst/fdma_raddr[10],  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(86)
                                                                       pin: uidbuf_inst/FDMA_READ$R_MS_b1[1]_syn_1.a
 LUT4                                    0.408    f     1.354       1  pin: uidbuf_inst/FDMA_READ$R_MS_b1[1]_syn_1.o
-net (fo=3)                              0.651          2.005          net: uidbuf_inst/add2_syn_35,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(391)
+net (fo=3)                              0.651          2.005          net: uidbuf_inst/add2_syn_35,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(410)
                                                                       pin: uidbuf_inst/FDMA_READ$R_MS_b1[1]_syn_2.a
 LUT3                                    0.408    f     2.413       2  pin: uidbuf_inst/FDMA_READ$R_MS_b1[1]_syn_2.o
-net (fo=4)                              0.697          3.110          net: uidbuf_inst/add2_syn_43,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(391)
+net (fo=4)                              0.697          3.110          net: uidbuf_inst/add2_syn_43,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(410)
                                                                       pin: uidbuf_inst/FDMA_READ$R_MS_b1[1]_syn_7.a
 LUT5                                    0.424    f     3.534       3  pin: uidbuf_inst/FDMA_READ$R_MS_b1[1]_syn_7.o
 net (fo=2)                              0.600          4.134          net: uidbuf_inst/FDMA_READ$R_MS_b1[1]_syn_8,  NOFILE(0)
-                                                                      pin: uidbuf_inst/mux30_syn_187.a
-LUT4                                    0.408    f     4.542       4  pin: uidbuf_inst/mux30_syn_187.o
-net (fo=13)                             0.920          5.462          net: uidbuf_inst/mux30_syn_164,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(353)
+                                                                      pin: uidbuf_inst/mux47_syn_187.a
+LUT4                                    0.408    f     4.542       4  pin: uidbuf_inst/mux47_syn_187.o
+net (fo=13)                             0.920          5.462          net: uidbuf_inst/mux47_syn_164,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(370)
                                                                       pin: uidbuf_inst/FDMA_READ$R_addr_reg[12].ce
 SEQ (reg)                               0.087    r     5.549               
 --------------------------------------------------------------------  ---------------
@@ -750,19 +750,19 @@ net (fo=802)                            0.000          0.000          net: app_f
 launch edge                             0.000    r     0.000               
 --------------------------------------------------------------------  ---------------
 SEQ (clk2q)                             0.146    r     0.146          pin: uidbuf_inst/FDMA_READ$R_addr_reg[10].q
-net (fo=7)                              0.800          0.946          net: uidbuf_inst/fdma_raddr[10],  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(84)
+net (fo=7)                              0.800          0.946          net: uidbuf_inst/fdma_raddr[10],  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(86)
                                                                       pin: uidbuf_inst/FDMA_READ$R_MS_b1[1]_syn_1.a
 LUT4                                    0.408    f     1.354       1  pin: uidbuf_inst/FDMA_READ$R_MS_b1[1]_syn_1.o
-net (fo=3)                              0.651          2.005          net: uidbuf_inst/add2_syn_35,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(391)
+net (fo=3)                              0.651          2.005          net: uidbuf_inst/add2_syn_35,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(410)
                                                                       pin: uidbuf_inst/FDMA_READ$R_MS_b1[1]_syn_2.a
 LUT3                                    0.408    f     2.413       2  pin: uidbuf_inst/FDMA_READ$R_MS_b1[1]_syn_2.o
-net (fo=4)                              0.697          3.110          net: uidbuf_inst/add2_syn_43,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(391)
+net (fo=4)                              0.697          3.110          net: uidbuf_inst/add2_syn_43,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(410)
                                                                       pin: uidbuf_inst/FDMA_READ$R_MS_b1[1]_syn_7.a
 LUT5                                    0.424    f     3.534       3  pin: uidbuf_inst/FDMA_READ$R_MS_b1[1]_syn_7.o
 net (fo=2)                              0.600          4.134          net: uidbuf_inst/FDMA_READ$R_MS_b1[1]_syn_8,  NOFILE(0)
-                                                                      pin: uidbuf_inst/mux30_syn_187.a
-LUT4                                    0.408    f     4.542       4  pin: uidbuf_inst/mux30_syn_187.o
-net (fo=13)                             0.920          5.462          net: uidbuf_inst/mux30_syn_164,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(353)
+                                                                      pin: uidbuf_inst/mux47_syn_187.a
+LUT4                                    0.408    f     4.542       4  pin: uidbuf_inst/mux47_syn_187.o
+net (fo=13)                             0.920          5.462          net: uidbuf_inst/mux47_syn_164,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(370)
                                                                       pin: uidbuf_inst/FDMA_READ$R_addr_reg[13].ce
 SEQ (reg)                               0.087    r     5.549               
 --------------------------------------------------------------------  ---------------
@@ -829,7 +829,7 @@ net (fo=802)                            0.000          0.000          net: app_f
 launch edge                             0.000    r     0.000               
 --------------------------------------------------------------------  ---------------
 SEQ (clk2q)                             0.109    f     0.109          pin: u2_ram/u2_wrrd/Sdr_rd_en_reg.q
-net (fo=2)                              0.600          0.709          net: uidbuf_inst/fdma_rvalid,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(89)
+net (fo=2)                              0.600          0.709          net: uidbuf_inst/fdma_rvalid,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(91)
                                                                       pin: uidbuf_inst/FDMA_READ$d2f_fifo_inst_syn_1.we
 FIFO (reg)                              0.000    f     0.709               
 --------------------------------------------------------------------  ---------------
@@ -886,7 +886,7 @@ net (fo=802)                            0.000          0.000          net: app_f
 launch edge                             0.000    r     0.000               
 --------------------------------------------------------------------  ---------------
 SEQ (clk2q)                             0.109    f     0.109          pin: u2_ram/u2_wrrd/Sdr_rd_en_reg.q
-net (fo=2)                              0.600          0.709          net: uidbuf_inst/fdma_rvalid,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(89)
+net (fo=2)                              0.600          0.709          net: uidbuf_inst/fdma_rvalid,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(91)
                                                                       pin: uidbuf_inst/FDMA_READ$d2f_fifo_inst_syn_2.we
 FIFO (reg)                              0.000    f     0.709               
 --------------------------------------------------------------------  ---------------
@@ -943,7 +943,7 @@ net (fo=802)                            0.000          0.000          net: app_f
 launch edge                             0.000    r     0.000               
 --------------------------------------------------------------------  ---------------
 SEQ (clk2q)                             0.109    f     0.109          pin: uidbuf_inst/FDMA_READ$d2f_fifo_rst_reg.q
-net (fo=4)                              0.697          0.806          net: uidbuf_inst/FDMA_READ$d2f_fifo_rst,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(406)
+net (fo=4)                              0.697          0.806          net: uidbuf_inst/FDMA_READ$d2f_fifo_rst,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(431)
                                                                       pin: uidbuf_inst/FDMA_READ$d2f_fifo_inst_syn_1.rst
 FIFO (reg)                              0.000    f     0.806               
 --------------------------------------------------------------------  ---------------
@@ -1000,7 +1000,7 @@ net (fo=802)                            0.000          0.000          net: app_f
 launch edge                             0.000    r     0.000               
 --------------------------------------------------------------------  ---------------
 SEQ (clk2q)                             0.109    f     0.109          pin: uidbuf_inst/FDMA_READ$d2f_fifo_rst_reg.q
-net (fo=4)                              0.697          0.806          net: uidbuf_inst/FDMA_READ$d2f_fifo_rst,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(406)
+net (fo=4)                              0.697          0.806          net: uidbuf_inst/FDMA_READ$d2f_fifo_rst,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(431)
                                                                       pin: uidbuf_inst/FDMA_READ$d2f_fifo_inst_syn_2.rst
 FIFO (reg)                              0.000    f     0.806               
 --------------------------------------------------------------------  ---------------
@@ -1057,7 +1057,7 @@ net (fo=802)                            0.000          0.000          net: app_f
 launch edge                             0.000    r     0.000               
 --------------------------------------------------------------------  ---------------
 SEQ (clk2q)                             0.109    f     0.109          pin: uidbuf_inst/FDMA_WRITE_ENABLE$f2d_fifo_rst_reg.q
-net (fo=4)                              0.697          0.806          net: uidbuf_inst/FDMA_WRITE_ENABLE$f2d_fifo_rst,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(235)
+net (fo=4)                              0.697          0.806          net: uidbuf_inst/FDMA_WRITE_ENABLE$f2d_fifo_rst,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(249)
                                                                       pin: uidbuf_inst/FDMA_WRITE_ENABLE$f2d_fifo_inst_syn_1.rprst
 FIFO (reg)                              0.000    f     0.806               
 --------------------------------------------------------------------  ---------------
@@ -1114,7 +1114,7 @@ net (fo=802)                            0.000          0.000          net: app_f
 launch edge                             0.000    r     0.000               
 --------------------------------------------------------------------  ---------------
 SEQ (clk2q)                             0.109    f     0.109          pin: uidbuf_inst/FDMA_WRITE_ENABLE$f2d_fifo_rst_reg.q
-net (fo=4)                              0.697          0.806          net: uidbuf_inst/FDMA_WRITE_ENABLE$f2d_fifo_rst,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(235)
+net (fo=4)                              0.697          0.806          net: uidbuf_inst/FDMA_WRITE_ENABLE$f2d_fifo_rst,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(249)
                                                                       pin: uidbuf_inst/FDMA_WRITE_ENABLE$f2d_fifo_inst_syn_2.rprst
 FIFO (reg)                              0.000    f     0.806               
 --------------------------------------------------------------------  ---------------
@@ -1410,7 +1410,7 @@ PLL                                     0.000          0.000          pin: u_PLL
 net (fo=1)                              0.000          0.000          net: u_PLL_HDMI_CLK/clk0_buf,  ../../al_ip/PLL_HDMI_CLK.v(37)
                                                                       pin: u_PLL_HDMI_CLK/bufg_feedback.clki
 GCLK                                    0.000          0.000          pin: u_PLL_HDMI_CLK/bufg_feedback.clko
-net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(58)
+net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(60)
                                                                       pin: uihdmitx_inst/Inst_DVITransmitter/Inst_TMDSEncoder_green/d_d_reg[0].clk
 launch edge                             0.000    r     0.000               
 --------------------------------------------------------------------  ---------------
@@ -1452,7 +1452,7 @@ PLL                                     0.000          0.000          pin: u_PLL
 net (fo=1)                              0.000          0.000          net: u_PLL_HDMI_CLK/clk0_buf,  ../../al_ip/PLL_HDMI_CLK.v(37)
                                                                       pin: u_PLL_HDMI_CLK/bufg_feedback.clki
 GCLK                                    0.000          0.000          pin: u_PLL_HDMI_CLK/bufg_feedback.clko
-net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(58)
+net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(60)
                                                                       pin: uihdmitx_inst/Inst_DVITransmitter/Inst_TMDSEncoder_green/n0_q_m_reg[2].clk
 capture edge                           16.000    r    16.000               
 --------------------------------------------------------------------  ---------------
@@ -1488,7 +1488,7 @@ PLL                                     0.000          0.000          pin: u_PLL
 net (fo=1)                              0.000          0.000          net: u_PLL_HDMI_CLK/clk0_buf,  ../../al_ip/PLL_HDMI_CLK.v(37)
                                                                       pin: u_PLL_HDMI_CLK/bufg_feedback.clki
 GCLK                                    0.000          0.000          pin: u_PLL_HDMI_CLK/bufg_feedback.clko
-net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(58)
+net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(60)
                                                                       pin: uihdmitx_inst/Inst_DVITransmitter/Inst_TMDSEncoder_green/d_d_reg[0].clk
 launch edge                             0.000    r     0.000               
 --------------------------------------------------------------------  ---------------
@@ -1530,7 +1530,7 @@ PLL                                     0.000          0.000          pin: u_PLL
 net (fo=1)                              0.000          0.000          net: u_PLL_HDMI_CLK/clk0_buf,  ../../al_ip/PLL_HDMI_CLK.v(37)
                                                                       pin: u_PLL_HDMI_CLK/bufg_feedback.clki
 GCLK                                    0.000          0.000          pin: u_PLL_HDMI_CLK/bufg_feedback.clko
-net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(58)
+net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(60)
                                                                       pin: uihdmitx_inst/Inst_DVITransmitter/Inst_TMDSEncoder_green/n0_q_m_reg[3].clk
 capture edge                           16.000    r    16.000               
 --------------------------------------------------------------------  ---------------
@@ -1566,7 +1566,7 @@ PLL                                     0.000          0.000          pin: u_PLL
 net (fo=1)                              0.000          0.000          net: u_PLL_HDMI_CLK/clk0_buf,  ../../al_ip/PLL_HDMI_CLK.v(37)
                                                                       pin: u_PLL_HDMI_CLK/bufg_feedback.clki
 GCLK                                    0.000          0.000          pin: u_PLL_HDMI_CLK/bufg_feedback.clko
-net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(58)
+net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(60)
                                                                       pin: uihdmitx_inst/Inst_DVITransmitter/Inst_TMDSEncoder_blue/n0_q_m_reg[1].clk
 launch edge                             0.000    r     0.000               
 --------------------------------------------------------------------  ---------------
@@ -1608,7 +1608,7 @@ PLL                                     0.000          0.000          pin: u_PLL
 net (fo=1)                              0.000          0.000          net: u_PLL_HDMI_CLK/clk0_buf,  ../../al_ip/PLL_HDMI_CLK.v(37)
                                                                       pin: u_PLL_HDMI_CLK/bufg_feedback.clki
 GCLK                                    0.000          0.000          pin: u_PLL_HDMI_CLK/bufg_feedback.clko
-net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(58)
+net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(60)
                                                                       pin: uihdmitx_inst/Inst_DVITransmitter/Inst_TMDSEncoder_blue/cnt_t_1_reg[4].clk
 capture edge                           16.000    r    16.000               
 --------------------------------------------------------------------  ---------------
@@ -1644,7 +1644,7 @@ PLL                                     0.000          0.000          pin: u_PLL
 net (fo=1)                              0.000          0.000          net: u_PLL_HDMI_CLK/clk0_buf,  ../../al_ip/PLL_HDMI_CLK.v(37)
                                                                       pin: u_PLL_HDMI_CLK/bufg_feedback.clki
 GCLK                                    0.000          0.000          pin: u_PLL_HDMI_CLK/bufg_feedback.clko
-net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(58)
+net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(60)
                                                                       pin: uihdmitx_inst/Inst_DVITransmitter/Inst_TMDSEncoder_blue/n0_q_m_reg[1].clk
 launch edge                             0.000    r     0.000               
 --------------------------------------------------------------------  ---------------
@@ -1686,7 +1686,7 @@ PLL                                     0.000          0.000          pin: u_PLL
 net (fo=1)                              0.000          0.000          net: u_PLL_HDMI_CLK/clk0_buf,  ../../al_ip/PLL_HDMI_CLK.v(37)
                                                                       pin: u_PLL_HDMI_CLK/bufg_feedback.clki
 GCLK                                    0.000          0.000          pin: u_PLL_HDMI_CLK/bufg_feedback.clko
-net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(58)
+net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(60)
                                                                       pin: uihdmitx_inst/Inst_DVITransmitter/Inst_TMDSEncoder_blue/cnt_t_1_reg[2].clk
 capture edge                           16.000    r    16.000               
 --------------------------------------------------------------------  ---------------
@@ -1722,7 +1722,7 @@ PLL                                     0.000          0.000          pin: u_PLL
 net (fo=1)                              0.000          0.000          net: u_PLL_HDMI_CLK/clk0_buf,  ../../al_ip/PLL_HDMI_CLK.v(37)
                                                                       pin: u_PLL_HDMI_CLK/bufg_feedback.clki
 GCLK                                    0.000          0.000          pin: u_PLL_HDMI_CLK/bufg_feedback.clko
-net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(58)
+net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(60)
                                                                       pin: uihdmitx_inst/Inst_DVITransmitter/Inst_TMDSEncoder_blue/n0_q_m_reg[1].clk
 launch edge                             0.000    r     0.000               
 --------------------------------------------------------------------  ---------------
@@ -1764,7 +1764,7 @@ PLL                                     0.000          0.000          pin: u_PLL
 net (fo=1)                              0.000          0.000          net: u_PLL_HDMI_CLK/clk0_buf,  ../../al_ip/PLL_HDMI_CLK.v(37)
                                                                       pin: u_PLL_HDMI_CLK/bufg_feedback.clki
 GCLK                                    0.000          0.000          pin: u_PLL_HDMI_CLK/bufg_feedback.clko
-net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(58)
+net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(60)
                                                                       pin: uihdmitx_inst/Inst_DVITransmitter/Inst_TMDSEncoder_blue/cnt_t_1_reg[3].clk
 capture edge                           16.000    r    16.000               
 --------------------------------------------------------------------  ---------------
@@ -1800,7 +1800,7 @@ PLL                                     0.000          0.000          pin: u_PLL
 net (fo=1)                              0.000          0.000          net: u_PLL_HDMI_CLK/clk0_buf,  ../../al_ip/PLL_HDMI_CLK.v(37)
                                                                       pin: u_PLL_HDMI_CLK/bufg_feedback.clki
 GCLK                                    0.000          0.000          pin: u_PLL_HDMI_CLK/bufg_feedback.clko
-net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(58)
+net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(60)
                                                                       pin: uihdmitx_inst/Inst_DVITransmitter/Inst_TMDSEncoder_green/n0_q_m_reg[1].clk
 launch edge                             0.000    r     0.000               
 --------------------------------------------------------------------  ---------------
@@ -1842,7 +1842,7 @@ PLL                                     0.000          0.000          pin: u_PLL
 net (fo=1)                              0.000          0.000          net: u_PLL_HDMI_CLK/clk0_buf,  ../../al_ip/PLL_HDMI_CLK.v(37)
                                                                       pin: u_PLL_HDMI_CLK/bufg_feedback.clki
 GCLK                                    0.000          0.000          pin: u_PLL_HDMI_CLK/bufg_feedback.clko
-net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(58)
+net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(60)
                                                                       pin: uihdmitx_inst/Inst_DVITransmitter/Inst_TMDSEncoder_green/cnt_t_1_reg[2].clk
 capture edge                           16.000    r    16.000               
 --------------------------------------------------------------------  ---------------
@@ -1878,7 +1878,7 @@ PLL                                     0.000          0.000          pin: u_PLL
 net (fo=1)                              0.000          0.000          net: u_PLL_HDMI_CLK/clk0_buf,  ../../al_ip/PLL_HDMI_CLK.v(37)
                                                                       pin: u_PLL_HDMI_CLK/bufg_feedback.clki
 GCLK                                    0.000          0.000          pin: u_PLL_HDMI_CLK/bufg_feedback.clko
-net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(58)
+net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(60)
                                                                       pin: uihdmitx_inst/Inst_DVITransmitter/Inst_TMDSEncoder_green/n0_q_m_reg[1].clk
 launch edge                             0.000    r     0.000               
 --------------------------------------------------------------------  ---------------
@@ -1920,7 +1920,7 @@ PLL                                     0.000          0.000          pin: u_PLL
 net (fo=1)                              0.000          0.000          net: u_PLL_HDMI_CLK/clk0_buf,  ../../al_ip/PLL_HDMI_CLK.v(37)
                                                                       pin: u_PLL_HDMI_CLK/bufg_feedback.clki
 GCLK                                    0.000          0.000          pin: u_PLL_HDMI_CLK/bufg_feedback.clko
-net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(58)
+net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(60)
                                                                       pin: uihdmitx_inst/Inst_DVITransmitter/Inst_TMDSEncoder_green/cnt_t_1_reg[3].clk
 capture edge                           16.000    r    16.000               
 --------------------------------------------------------------------  ---------------
@@ -1956,7 +1956,7 @@ PLL                                     0.000          0.000          pin: u_PLL
 net (fo=1)                              0.000          0.000          net: u_PLL_HDMI_CLK/clk0_buf,  ../../al_ip/PLL_HDMI_CLK.v(37)
                                                                       pin: u_PLL_HDMI_CLK/bufg_feedback.clki
 GCLK                                    0.000          0.000          pin: u_PLL_HDMI_CLK/bufg_feedback.clko
-net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(58)
+net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(60)
                                                                       pin: uihdmitx_inst/Inst_DVITransmitter/Inst_TMDSEncoder_red/n0_q_m_reg[1].clk
 launch edge                             0.000    r     0.000               
 --------------------------------------------------------------------  ---------------
@@ -1998,7 +1998,7 @@ PLL                                     0.000          0.000          pin: u_PLL
 net (fo=1)                              0.000          0.000          net: u_PLL_HDMI_CLK/clk0_buf,  ../../al_ip/PLL_HDMI_CLK.v(37)
                                                                       pin: u_PLL_HDMI_CLK/bufg_feedback.clki
 GCLK                                    0.000          0.000          pin: u_PLL_HDMI_CLK/bufg_feedback.clko
-net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(58)
+net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(60)
                                                                       pin: uihdmitx_inst/Inst_DVITransmitter/Inst_TMDSEncoder_red/cnt_t_1_reg[2].clk
 capture edge                           16.000    r    16.000               
 --------------------------------------------------------------------  ---------------
@@ -2034,7 +2034,7 @@ PLL                                     0.000          0.000          pin: u_PLL
 net (fo=1)                              0.000          0.000          net: u_PLL_HDMI_CLK/clk0_buf,  ../../al_ip/PLL_HDMI_CLK.v(37)
                                                                       pin: u_PLL_HDMI_CLK/bufg_feedback.clki
 GCLK                                    0.000          0.000          pin: u_PLL_HDMI_CLK/bufg_feedback.clko
-net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(58)
+net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(60)
                                                                       pin: uihdmitx_inst/Inst_DVITransmitter/Inst_TMDSEncoder_red/n0_q_m_reg[1].clk
 launch edge                             0.000    r     0.000               
 --------------------------------------------------------------------  ---------------
@@ -2076,7 +2076,7 @@ PLL                                     0.000          0.000          pin: u_PLL
 net (fo=1)                              0.000          0.000          net: u_PLL_HDMI_CLK/clk0_buf,  ../../al_ip/PLL_HDMI_CLK.v(37)
                                                                       pin: u_PLL_HDMI_CLK/bufg_feedback.clki
 GCLK                                    0.000          0.000          pin: u_PLL_HDMI_CLK/bufg_feedback.clko
-net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(58)
+net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(60)
                                                                       pin: uihdmitx_inst/Inst_DVITransmitter/Inst_TMDSEncoder_red/cnt_t_1_reg[3].clk
 capture edge                           16.000    r    16.000               
 --------------------------------------------------------------------  ---------------
@@ -2112,7 +2112,7 @@ PLL                                     0.000          0.000          pin: u_PLL
 net (fo=1)                              0.000          0.000          net: u_PLL_HDMI_CLK/clk0_buf,  ../../al_ip/PLL_HDMI_CLK.v(37)
                                                                       pin: u_PLL_HDMI_CLK/bufg_feedback.clki
 GCLK                                    0.000          0.000          pin: u_PLL_HDMI_CLK/bufg_feedback.clko
-net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(58)
+net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(60)
                                                                       pin: u_uitpg/h_cnt_reg[2]_syn_4.clk
 launch edge                             0.000    r     0.000               
 --------------------------------------------------------------------  ---------------
@@ -2154,7 +2154,7 @@ PLL                                     0.000          0.000          pin: u_PLL
 net (fo=1)                              0.000          0.000          net: u_PLL_HDMI_CLK/clk0_buf,  ../../al_ip/PLL_HDMI_CLK.v(37)
                                                                       pin: u_PLL_HDMI_CLK/bufg_feedback.clki
 GCLK                                    0.000          0.000          pin: u_PLL_HDMI_CLK/bufg_feedback.clko
-net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(58)
+net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(60)
                                                                       pin: u_uitpg/color_bar_reg[10].clk
 capture edge                           16.000    r    16.000               
 --------------------------------------------------------------------  ---------------
@@ -2200,12 +2200,12 @@ PLL                                     0.000          0.000          pin: u_PLL
 net (fo=1)                              0.000          0.000          net: u_PLL_HDMI_CLK/clk0_buf,  ../../al_ip/PLL_HDMI_CLK.v(37)
                                                                       pin: u_PLL_HDMI_CLK/bufg_feedback.clki
 GCLK                                    0.000          0.000          pin: u_PLL_HDMI_CLK/bufg_feedback.clko
-net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(58)
+net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(60)
                                                                       pin: u_uitpg/g_reg_reg[5].clk
 launch edge                             0.000    r     0.000               
 --------------------------------------------------------------------  ---------------
 SEQ (clk2q)                             0.109    f     0.109          pin: u_uitpg/g_reg_reg[5].q
-net (fo=1)                              0.562          0.671          net: uidbuf_inst/W_data_i[8],  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(61)
+net (fo=1)                              0.562          0.671          net: uidbuf_inst/W_data_i[8],  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(63)
                                                                       pin: uidbuf_inst/FDMA_WRITE_ENABLE$f2d_fifo_inst_syn_1.dia[8]
 FIFO (reg)                              0.000    f     0.671       1       
 --------------------------------------------------------------------  ---------------
@@ -2221,7 +2221,7 @@ PLL                                     0.000          0.000          pin: u_PLL
 net (fo=1)                              0.000          0.000          net: u_PLL_HDMI_CLK/clk0_buf,  ../../al_ip/PLL_HDMI_CLK.v(37)
                                                                       pin: u_PLL_HDMI_CLK/bufg_feedback.clki
 GCLK                                    0.000          0.000          pin: u_PLL_HDMI_CLK/bufg_feedback.clko
-net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(58)
+net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(60)
                                                                       pin: uidbuf_inst/FDMA_WRITE_ENABLE$f2d_fifo_inst_syn_1.clkw
 capture edge                            0.000    r     0.000               
 --------------------------------------------------------------------  ---------------
@@ -2257,12 +2257,12 @@ PLL                                     0.000          0.000          pin: u_PLL
 net (fo=1)                              0.000          0.000          net: u_PLL_HDMI_CLK/clk0_buf,  ../../al_ip/PLL_HDMI_CLK.v(37)
                                                                       pin: u_PLL_HDMI_CLK/bufg_feedback.clki
 GCLK                                    0.000          0.000          pin: u_PLL_HDMI_CLK/bufg_feedback.clko
-net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(58)
+net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(60)
                                                                       pin: u_uitpg/g_reg_reg[6].clk
 launch edge                             0.000    r     0.000               
 --------------------------------------------------------------------  ---------------
 SEQ (clk2q)                             0.109    f     0.109          pin: u_uitpg/g_reg_reg[6].q
-net (fo=1)                              0.562          0.671          net: uidbuf_inst/W_data_i[9],  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(61)
+net (fo=1)                              0.562          0.671          net: uidbuf_inst/W_data_i[9],  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(63)
                                                                       pin: uidbuf_inst/FDMA_WRITE_ENABLE$f2d_fifo_inst_syn_2.dia[0]
 FIFO (reg)                              0.000    f     0.671       1       
 --------------------------------------------------------------------  ---------------
@@ -2278,7 +2278,7 @@ PLL                                     0.000          0.000          pin: u_PLL
 net (fo=1)                              0.000          0.000          net: u_PLL_HDMI_CLK/clk0_buf,  ../../al_ip/PLL_HDMI_CLK.v(37)
                                                                       pin: u_PLL_HDMI_CLK/bufg_feedback.clki
 GCLK                                    0.000          0.000          pin: u_PLL_HDMI_CLK/bufg_feedback.clko
-net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(58)
+net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(60)
                                                                       pin: uidbuf_inst/FDMA_WRITE_ENABLE$f2d_fifo_inst_syn_2.clkw
 capture edge                            0.000    r     0.000               
 --------------------------------------------------------------------  ---------------
@@ -2314,7 +2314,7 @@ PLL                                     0.000          0.000          pin: u_PLL
 net (fo=1)                              0.000          0.000          net: u_PLL_HDMI_CLK/clk0_buf,  ../../al_ip/PLL_HDMI_CLK.v(37)
                                                                       pin: u_PLL_HDMI_CLK/bufg_feedback.clki
 GCLK                                    0.000          0.000          pin: u_PLL_HDMI_CLK/bufg_feedback.clko
-net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(58)
+net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(60)
                                                                       pin: uivtc_inst/O_vtc_de_reg.clk
 launch edge                             0.000    r     0.000               
 --------------------------------------------------------------------  ---------------
@@ -2335,7 +2335,7 @@ PLL                                     0.000          0.000          pin: u_PLL
 net (fo=1)                              0.000          0.000          net: u_PLL_HDMI_CLK/clk0_buf,  ../../al_ip/PLL_HDMI_CLK.v(37)
                                                                       pin: u_PLL_HDMI_CLK/bufg_feedback.clki
 GCLK                                    0.000          0.000          pin: u_PLL_HDMI_CLK/bufg_feedback.clko
-net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(58)
+net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(60)
                                                                       pin: uihdmitx_inst/Inst_DVITransmitter/Inst_TMDSEncoder_blue/de_d_reg.clk
 capture edge                            0.000    r     0.000               
 --------------------------------------------------------------------  ---------------
@@ -2371,7 +2371,7 @@ PLL                                     0.000          0.000          pin: u_PLL
 net (fo=1)                              0.000          0.000          net: u_PLL_HDMI_CLK/clk0_buf,  ../../al_ip/PLL_HDMI_CLK.v(37)
                                                                       pin: u_PLL_HDMI_CLK/bufg_feedback.clki
 GCLK                                    0.000          0.000          pin: u_PLL_HDMI_CLK/bufg_feedback.clko
-net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(58)
+net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(60)
                                                                       pin: uihdmitx_inst/Inst_DVITransmitter/Inst_TMDSEncoder_blue/de_d_reg.clk
 launch edge                             0.000    r     0.000               
 --------------------------------------------------------------------  ---------------
@@ -2392,7 +2392,7 @@ PLL                                     0.000          0.000          pin: u_PLL
 net (fo=1)                              0.000          0.000          net: u_PLL_HDMI_CLK/clk0_buf,  ../../al_ip/PLL_HDMI_CLK.v(37)
                                                                       pin: u_PLL_HDMI_CLK/bufg_feedback.clki
 GCLK                                    0.000          0.000          pin: u_PLL_HDMI_CLK/bufg_feedback.clko
-net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(58)
+net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(60)
                                                                       pin: uihdmitx_inst/Inst_DVITransmitter/Inst_TMDSEncoder_blue/de_dd_reg.clk
 capture edge                            0.000    r     0.000               
 --------------------------------------------------------------------  ---------------
@@ -2428,7 +2428,7 @@ PLL                                     0.000          0.000          pin: u_PLL
 net (fo=1)                              0.000          0.000          net: u_PLL_HDMI_CLK/clk0_buf,  ../../al_ip/PLL_HDMI_CLK.v(37)
                                                                       pin: u_PLL_HDMI_CLK/bufg_feedback.clki
 GCLK                                    0.000          0.000          pin: u_PLL_HDMI_CLK/bufg_feedback.clko
-net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(58)
+net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(60)
                                                                       pin: uivtc_inst/O_vtc_hs_reg.clk
 launch edge                             0.000    r     0.000               
 --------------------------------------------------------------------  ---------------
@@ -2449,7 +2449,7 @@ PLL                                     0.000          0.000          pin: u_PLL
 net (fo=1)                              0.000          0.000          net: u_PLL_HDMI_CLK/clk0_buf,  ../../al_ip/PLL_HDMI_CLK.v(37)
                                                                       pin: u_PLL_HDMI_CLK/bufg_feedback.clki
 GCLK                                    0.000          0.000          pin: u_PLL_HDMI_CLK/bufg_feedback.clko
-net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(58)
+net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(60)
                                                                       pin: u_uitpg/tpg_hs_r_reg.clk
 capture edge                            0.000    r     0.000               
 --------------------------------------------------------------------  ---------------
@@ -2485,7 +2485,7 @@ PLL                                     0.000          0.000          pin: u_PLL
 net (fo=1)                              0.000          0.000          net: u_PLL_HDMI_CLK/clk0_buf,  ../../al_ip/PLL_HDMI_CLK.v(37)
                                                                       pin: u_PLL_HDMI_CLK/bufg_feedback.clki
 GCLK                                    0.000          0.000          pin: u_PLL_HDMI_CLK/bufg_feedback.clko
-net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(58)
+net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(60)
                                                                       pin: u_uitpg/tpg_hs_r_reg.clk
 launch edge                             0.000    r     0.000               
 --------------------------------------------------------------------  ---------------
@@ -2506,7 +2506,7 @@ PLL                                     0.000          0.000          pin: u_PLL
 net (fo=1)                              0.000          0.000          net: u_PLL_HDMI_CLK/clk0_buf,  ../../al_ip/PLL_HDMI_CLK.v(37)
                                                                       pin: u_PLL_HDMI_CLK/bufg_feedback.clki
 GCLK                                    0.000          0.000          pin: u_PLL_HDMI_CLK/bufg_feedback.clko
-net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(58)
+net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(60)
                                                                       pin: uihdmitx_inst/Inst_DVITransmitter/Inst_TMDSEncoder_blue/c0_dd_reg.clk
 capture edge                            0.000    r     0.000               
 --------------------------------------------------------------------  ---------------
@@ -2542,7 +2542,7 @@ PLL                                     0.000          0.000          pin: u_PLL
 net (fo=1)                              0.000          0.000          net: u_PLL_HDMI_CLK/clk0_buf,  ../../al_ip/PLL_HDMI_CLK.v(37)
                                                                       pin: u_PLL_HDMI_CLK/bufg_feedback.clki
 GCLK                                    0.000          0.000          pin: u_PLL_HDMI_CLK/bufg_feedback.clko
-net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(58)
+net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(60)
                                                                       pin: u_uitpg/tpg_vs_r_reg.clk
 launch edge                             0.000    r     0.000               
 --------------------------------------------------------------------  ---------------
@@ -2563,7 +2563,7 @@ PLL                                     0.000          0.000          pin: u_PLL
 net (fo=1)                              0.000          0.000          net: u_PLL_HDMI_CLK/clk0_buf,  ../../al_ip/PLL_HDMI_CLK.v(37)
                                                                       pin: u_PLL_HDMI_CLK/bufg_feedback.clki
 GCLK                                    0.000          0.000          pin: u_PLL_HDMI_CLK/bufg_feedback.clko
-net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(58)
+net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(60)
                                                                       pin: uihdmitx_inst/Inst_DVITransmitter/Inst_TMDSEncoder_blue/c1_dd_reg.clk
 capture edge                            0.000    r     0.000               
 --------------------------------------------------------------------  ---------------
@@ -2599,7 +2599,7 @@ PLL                                     0.000          0.000          pin: u_PLL
 net (fo=1)                              0.000          0.000          net: u_PLL_HDMI_CLK/clk0_buf,  ../../al_ip/PLL_HDMI_CLK.v(37)
                                                                       pin: u_PLL_HDMI_CLK/bufg_feedback.clki
 GCLK                                    0.000          0.000          pin: u_PLL_HDMI_CLK/bufg_feedback.clko
-net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(58)
+net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(60)
                                                                       pin: uihdmitx_inst/Inst_DVITransmitter/Inst_TMDSEncoder_blue/d_d_reg[6].clk
 launch edge                             0.000    r     0.000               
 --------------------------------------------------------------------  ---------------
@@ -2620,7 +2620,7 @@ PLL                                     0.000          0.000          pin: u_PLL
 net (fo=1)                              0.000          0.000          net: u_PLL_HDMI_CLK/clk0_buf,  ../../al_ip/PLL_HDMI_CLK.v(37)
                                                                       pin: u_PLL_HDMI_CLK/bufg_feedback.clki
 GCLK                                    0.000          0.000          pin: u_PLL_HDMI_CLK/bufg_feedback.clko
-net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(58)
+net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(60)
                                                                       pin: uihdmitx_inst/Inst_DVITransmitter/Inst_TMDSEncoder_blue/q_m_d_reg[6].clk
 capture edge                            0.000    r     0.000               
 --------------------------------------------------------------------  ---------------
@@ -2656,7 +2656,7 @@ PLL                                     0.000          0.000          pin: u_PLL
 net (fo=1)                              0.000          0.000          net: u_PLL_HDMI_CLK/clk0_buf,  ../../al_ip/PLL_HDMI_CLK.v(37)
                                                                       pin: u_PLL_HDMI_CLK/bufg_feedback.clki
 GCLK                                    0.000          0.000          pin: u_PLL_HDMI_CLK/bufg_feedback.clko
-net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(58)
+net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(60)
                                                                       pin: uihdmitx_inst/Inst_DVITransmitter/Inst_TMDSEncoder_green/d_d_reg[0].clk
 launch edge                             0.000    r     0.000               
 --------------------------------------------------------------------  ---------------
@@ -2677,7 +2677,7 @@ PLL                                     0.000          0.000          pin: u_PLL
 net (fo=1)                              0.000          0.000          net: u_PLL_HDMI_CLK/clk0_buf,  ../../al_ip/PLL_HDMI_CLK.v(37)
                                                                       pin: u_PLL_HDMI_CLK/bufg_feedback.clki
 GCLK                                    0.000          0.000          pin: u_PLL_HDMI_CLK/bufg_feedback.clko
-net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(58)
+net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(60)
                                                                       pin: uihdmitx_inst/Inst_DVITransmitter/Inst_TMDSEncoder_green/q_m_d_reg[0].clk
 capture edge                            0.000    r     0.000               
 --------------------------------------------------------------------  ---------------
@@ -2713,7 +2713,7 @@ PLL                                     0.000          0.000          pin: u_PLL
 net (fo=1)                              0.000          0.000          net: u_PLL_HDMI_CLK/clk0_buf,  ../../al_ip/PLL_HDMI_CLK.v(37)
                                                                       pin: u_PLL_HDMI_CLK/bufg_feedback.clki
 GCLK                                    0.000          0.000          pin: u_PLL_HDMI_CLK/bufg_feedback.clko
-net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(58)
+net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(60)
                                                                       pin: uihdmitx_inst/Inst_DVITransmitter/Inst_TMDSEncoder_green/d_d_reg[1].clk
 launch edge                             0.000    r     0.000               
 --------------------------------------------------------------------  ---------------
@@ -2734,7 +2734,7 @@ PLL                                     0.000          0.000          pin: u_PLL
 net (fo=1)                              0.000          0.000          net: u_PLL_HDMI_CLK/clk0_buf,  ../../al_ip/PLL_HDMI_CLK.v(37)
                                                                       pin: u_PLL_HDMI_CLK/bufg_feedback.clki
 GCLK                                    0.000          0.000          pin: u_PLL_HDMI_CLK/bufg_feedback.clko
-net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(58)
+net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(60)
                                                                       pin: uihdmitx_inst/Inst_DVITransmitter/Inst_TMDSEncoder_green/q_m_d_reg[2].clk
 capture edge                            0.000    r     0.000               
 --------------------------------------------------------------------  ---------------
@@ -4929,7 +4929,7 @@ PLL                                     0.000          0.000          pin: u_PLL
 net (fo=1)                              0.000          0.000          net: u_PLL_HDMI_CLK/clk0_buf,  ../../al_ip/PLL_HDMI_CLK.v(37)
                                                                       pin: u_PLL_HDMI_CLK/bufg_feedback.clki
 GCLK                                    0.000          0.000          pin: u_PLL_HDMI_CLK/bufg_feedback.clko
-net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(58)
+net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(60)
                                                                       pin: uihdmitx_inst/Inst_DVITransmitter/Inst_TMDSEncoder_blue/q_out_d_reg[7].clk
 launch edge                             0.000    r     0.000               
 --------------------------------------------------------------------  ---------------
@@ -4986,7 +4986,7 @@ PLL                                     0.000          0.000          pin: u_PLL
 net (fo=1)                              0.000          0.000          net: u_PLL_HDMI_CLK/clk0_buf,  ../../al_ip/PLL_HDMI_CLK.v(37)
                                                                       pin: u_PLL_HDMI_CLK/bufg_feedback.clki
 GCLK                                    0.000          0.000          pin: u_PLL_HDMI_CLK/bufg_feedback.clko
-net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(58)
+net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(60)
                                                                       pin: uihdmitx_inst/Inst_DVITransmitter/Inst_TMDSEncoder_blue/q_out_d_reg[6].clk
 launch edge                             0.000    r     0.000               
 --------------------------------------------------------------------  ---------------
@@ -5043,7 +5043,7 @@ PLL                                     0.000          0.000          pin: u_PLL
 net (fo=1)                              0.000          0.000          net: u_PLL_HDMI_CLK/clk0_buf,  ../../al_ip/PLL_HDMI_CLK.v(37)
                                                                       pin: u_PLL_HDMI_CLK/bufg_feedback.clki
 GCLK                                    0.000          0.000          pin: u_PLL_HDMI_CLK/bufg_feedback.clko
-net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(58)
+net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(60)
                                                                       pin: uihdmitx_inst/Inst_DVITransmitter/Inst_TMDSEncoder_blue/q_out_d_reg[5].clk
 launch edge                             0.000    r     0.000               
 --------------------------------------------------------------------  ---------------
@@ -5100,7 +5100,7 @@ PLL                                     0.000          0.000          pin: u_PLL
 net (fo=1)                              0.000          0.000          net: u_PLL_HDMI_CLK/clk0_buf,  ../../al_ip/PLL_HDMI_CLK.v(37)
                                                                       pin: u_PLL_HDMI_CLK/bufg_feedback.clki
 GCLK                                    0.000          0.000          pin: u_PLL_HDMI_CLK/bufg_feedback.clko
-net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(58)
+net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(60)
                                                                       pin: uihdmitx_inst/Inst_DVITransmitter/Inst_TMDSEncoder_blue/q_out_d_reg[4].clk
 launch edge                             0.000    r     0.000               
 --------------------------------------------------------------------  ---------------
@@ -5157,7 +5157,7 @@ PLL                                     0.000          0.000          pin: u_PLL
 net (fo=1)                              0.000          0.000          net: u_PLL_HDMI_CLK/clk0_buf,  ../../al_ip/PLL_HDMI_CLK.v(37)
                                                                       pin: u_PLL_HDMI_CLK/bufg_feedback.clki
 GCLK                                    0.000          0.000          pin: u_PLL_HDMI_CLK/bufg_feedback.clko
-net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(58)
+net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(60)
                                                                       pin: uihdmitx_inst/Inst_DVITransmitter/Inst_TMDSEncoder_blue/q_out_d_reg[3].clk
 launch edge                             0.000    r     0.000               
 --------------------------------------------------------------------  ---------------
@@ -5214,7 +5214,7 @@ PLL                                     0.000          0.000          pin: u_PLL
 net (fo=1)                              0.000          0.000          net: u_PLL_HDMI_CLK/clk0_buf,  ../../al_ip/PLL_HDMI_CLK.v(37)
                                                                       pin: u_PLL_HDMI_CLK/bufg_feedback.clki
 GCLK                                    0.000          0.000          pin: u_PLL_HDMI_CLK/bufg_feedback.clko
-net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(58)
+net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(60)
                                                                       pin: uihdmitx_inst/Inst_DVITransmitter/Inst_TMDSEncoder_blue/q_out_d_reg[2].clk
 launch edge                             0.000    r     0.000               
 --------------------------------------------------------------------  ---------------
@@ -5271,7 +5271,7 @@ PLL                                     0.000          0.000          pin: u_PLL
 net (fo=1)                              0.000          0.000          net: u_PLL_HDMI_CLK/clk0_buf,  ../../al_ip/PLL_HDMI_CLK.v(37)
                                                                       pin: u_PLL_HDMI_CLK/bufg_feedback.clki
 GCLK                                    0.000          0.000          pin: u_PLL_HDMI_CLK/bufg_feedback.clko
-net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(58)
+net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(60)
                                                                       pin: uihdmitx_inst/Inst_DVITransmitter/Inst_TMDSEncoder_blue/q_out_d_reg[1].clk
 launch edge                             0.000    r     0.000               
 --------------------------------------------------------------------  ---------------
@@ -5328,7 +5328,7 @@ PLL                                     0.000          0.000          pin: u_PLL
 net (fo=1)                              0.000          0.000          net: u_PLL_HDMI_CLK/clk0_buf,  ../../al_ip/PLL_HDMI_CLK.v(37)
                                                                       pin: u_PLL_HDMI_CLK/bufg_feedback.clki
 GCLK                                    0.000          0.000          pin: u_PLL_HDMI_CLK/bufg_feedback.clko
-net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(58)
+net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(60)
                                                                       pin: uihdmitx_inst/Inst_DVITransmitter/Inst_TMDSEncoder_blue/q_out_d_reg[0].clk
 launch edge                             0.000    r     0.000               
 --------------------------------------------------------------------  ---------------
@@ -5385,7 +5385,7 @@ PLL                                     0.000          0.000          pin: u_PLL
 net (fo=1)                              0.000          0.000          net: u_PLL_HDMI_CLK/clk0_buf,  ../../al_ip/PLL_HDMI_CLK.v(37)
                                                                       pin: u_PLL_HDMI_CLK/bufg_feedback.clki
 GCLK                                    0.000          0.000          pin: u_PLL_HDMI_CLK/bufg_feedback.clko
-net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(58)
+net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(60)
                                                                       pin: uihdmitx_inst/Inst_DVITransmitter/Inst_TMDSEncoder_green/q_out_d_reg[7].clk
 launch edge                             0.000    r     0.000               
 --------------------------------------------------------------------  ---------------
@@ -5442,7 +5442,7 @@ PLL                                     0.000          0.000          pin: u_PLL
 net (fo=1)                              0.000          0.000          net: u_PLL_HDMI_CLK/clk0_buf,  ../../al_ip/PLL_HDMI_CLK.v(37)
                                                                       pin: u_PLL_HDMI_CLK/bufg_feedback.clki
 GCLK                                    0.000          0.000          pin: u_PLL_HDMI_CLK/bufg_feedback.clko
-net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(58)
+net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(60)
                                                                       pin: uihdmitx_inst/Inst_DVITransmitter/Inst_TMDSEncoder_green/q_out_d_reg[6].clk
 launch edge                             0.000    r     0.000               
 --------------------------------------------------------------------  ---------------
@@ -5503,7 +5503,7 @@ PLL                                     0.000          0.000          pin: u_PLL
 net (fo=1)                              0.000          0.000          net: u_PLL_HDMI_CLK/clk0_buf,  ../../al_ip/PLL_HDMI_CLK.v(37)
                                                                       pin: u_PLL_HDMI_CLK/bufg_feedback.clki
 GCLK                                    0.000          0.000          pin: u_PLL_HDMI_CLK/bufg_feedback.clko
-net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(58)
+net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(60)
                                                                       pin: uihdmitx_inst/Inst_DVITransmitter/Inst_TMDSEncoder_blue/q_out_d_reg[9].clk
 launch edge                             0.000    r     0.000               
 --------------------------------------------------------------------  ---------------
@@ -5557,7 +5557,7 @@ PLL                                     0.000          0.000          pin: u_PLL
 net (fo=1)                              0.000          0.000          net: u_PLL_HDMI_CLK/clk0_buf,  ../../al_ip/PLL_HDMI_CLK.v(37)
                                                                       pin: u_PLL_HDMI_CLK/bufg_feedback.clki
 GCLK                                    0.000          0.000          pin: u_PLL_HDMI_CLK/bufg_feedback.clko
-net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(58)
+net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(60)
                                                                       pin: uihdmitx_inst/Inst_DVITransmitter/Inst_TMDSEncoder_blue/q_out_d_reg[8].clk
 launch edge                             0.000    r     0.000               
 --------------------------------------------------------------------  ---------------
@@ -5611,7 +5611,7 @@ PLL                                     0.000          0.000          pin: u_PLL
 net (fo=1)                              0.000          0.000          net: u_PLL_HDMI_CLK/clk0_buf,  ../../al_ip/PLL_HDMI_CLK.v(37)
                                                                       pin: u_PLL_HDMI_CLK/bufg_feedback.clki
 GCLK                                    0.000          0.000          pin: u_PLL_HDMI_CLK/bufg_feedback.clko
-net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(58)
+net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(60)
                                                                       pin: uihdmitx_inst/Inst_DVITransmitter/Inst_TMDSEncoder_green/q_out_d_reg[9].clk
 launch edge                             0.000    r     0.000               
 --------------------------------------------------------------------  ---------------
@@ -5665,7 +5665,7 @@ PLL                                     0.000          0.000          pin: u_PLL
 net (fo=1)                              0.000          0.000          net: u_PLL_HDMI_CLK/clk0_buf,  ../../al_ip/PLL_HDMI_CLK.v(37)
                                                                       pin: u_PLL_HDMI_CLK/bufg_feedback.clki
 GCLK                                    0.000          0.000          pin: u_PLL_HDMI_CLK/bufg_feedback.clko
-net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(58)
+net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(60)
                                                                       pin: uihdmitx_inst/Inst_DVITransmitter/Inst_TMDSEncoder_green/q_out_d_reg[8].clk
 launch edge                             0.000    r     0.000               
 --------------------------------------------------------------------  ---------------
@@ -5719,7 +5719,7 @@ PLL                                     0.000          0.000          pin: u_PLL
 net (fo=1)                              0.000          0.000          net: u_PLL_HDMI_CLK/clk0_buf,  ../../al_ip/PLL_HDMI_CLK.v(37)
                                                                       pin: u_PLL_HDMI_CLK/bufg_feedback.clki
 GCLK                                    0.000          0.000          pin: u_PLL_HDMI_CLK/bufg_feedback.clko
-net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(58)
+net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(60)
                                                                       pin: uihdmitx_inst/Inst_DVITransmitter/Inst_TMDSEncoder_red/q_out_d_reg[9].clk
 launch edge                             0.000    r     0.000               
 --------------------------------------------------------------------  ---------------
@@ -5773,7 +5773,7 @@ PLL                                     0.000          0.000          pin: u_PLL
 net (fo=1)                              0.000          0.000          net: u_PLL_HDMI_CLK/clk0_buf,  ../../al_ip/PLL_HDMI_CLK.v(37)
                                                                       pin: u_PLL_HDMI_CLK/bufg_feedback.clki
 GCLK                                    0.000          0.000          pin: u_PLL_HDMI_CLK/bufg_feedback.clko
-net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(58)
+net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(60)
                                                                       pin: uihdmitx_inst/Inst_DVITransmitter/Inst_TMDSEncoder_red/q_out_d_reg[8].clk
 launch edge                             0.000    r     0.000               
 --------------------------------------------------------------------  ---------------
@@ -5827,7 +5827,7 @@ PLL                                     0.000          0.000          pin: u_PLL
 net (fo=1)                              0.000          0.000          net: u_PLL_HDMI_CLK/clk0_buf,  ../../al_ip/PLL_HDMI_CLK.v(37)
                                                                       pin: u_PLL_HDMI_CLK/bufg_feedback.clki
 GCLK                                    0.000          0.000          pin: u_PLL_HDMI_CLK/bufg_feedback.clko
-net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(58)
+net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(60)
                                                                       pin: uihdmitx_inst/Inst_DVITransmitter/Inst_blue_serializer_10_1/pclk_vld_reg.clk
 launch edge                             0.000    r     0.000               
 --------------------------------------------------------------------  ---------------
@@ -5881,7 +5881,7 @@ PLL                                     0.000          0.000          pin: u_PLL
 net (fo=1)                              0.000          0.000          net: u_PLL_HDMI_CLK/clk0_buf,  ../../al_ip/PLL_HDMI_CLK.v(37)
                                                                       pin: u_PLL_HDMI_CLK/bufg_feedback.clki
 GCLK                                    0.000          0.000          pin: u_PLL_HDMI_CLK/bufg_feedback.clko
-net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(58)
+net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(60)
                                                                       pin: uihdmitx_inst/Inst_DVITransmitter/Inst_TMDSEncoder_blue/q_out_d_reg[7].clk
 launch edge                             0.000    r     0.000               
 --------------------------------------------------------------------  ---------------
@@ -5938,7 +5938,7 @@ PLL                                     0.000          0.000          pin: u_PLL
 net (fo=1)                              0.000          0.000          net: u_PLL_HDMI_CLK/clk0_buf,  ../../al_ip/PLL_HDMI_CLK.v(37)
                                                                       pin: u_PLL_HDMI_CLK/bufg_feedback.clki
 GCLK                                    0.000          0.000          pin: u_PLL_HDMI_CLK/bufg_feedback.clko
-net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(58)
+net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(60)
                                                                       pin: uihdmitx_inst/Inst_DVITransmitter/Inst_TMDSEncoder_blue/q_out_d_reg[6].clk
 launch edge                             0.000    r     0.000               
 --------------------------------------------------------------------  ---------------
@@ -5995,7 +5995,7 @@ PLL                                     0.000          0.000          pin: u_PLL
 net (fo=1)                              0.000          0.000          net: u_PLL_HDMI_CLK/clk0_buf,  ../../al_ip/PLL_HDMI_CLK.v(37)
                                                                       pin: u_PLL_HDMI_CLK/bufg_feedback.clki
 GCLK                                    0.000          0.000          pin: u_PLL_HDMI_CLK/bufg_feedback.clko
-net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(58)
+net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(60)
                                                                       pin: uihdmitx_inst/Inst_DVITransmitter/Inst_TMDSEncoder_blue/q_out_d_reg[5].clk
 launch edge                             0.000    r     0.000               
 --------------------------------------------------------------------  ---------------
@@ -6068,15 +6068,15 @@ PLL                                     0.000          0.000          pin: u_PLL
 net (fo=1)                              0.000          0.000          net: u_PLL_HDMI_CLK/clk0_buf,  ../../al_ip/PLL_HDMI_CLK.v(37)
                                                                       pin: u_PLL_HDMI_CLK/bufg_feedback.clki
 GCLK                                    0.000          0.000          pin: u_PLL_HDMI_CLK/bufg_feedback.clko
-net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(58)
+net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(60)
                                                                       pin: uidbuf_inst/FDMA_READ$d2f_fifo_inst_syn_1.clkr
 launch edge                            32.000    r    32.000               
 --------------------------------------------------------------------  ---------------
 FIFO (clk2q)                            0.650    f    32.650          pin: uidbuf_inst/FDMA_READ$d2f_fifo_inst_syn_1.aempty_flag
-net (fo=1)                              0.562         33.212          net: uidbuf_inst/FDMA_READ$R_REQ,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(302)
+net (fo=1)                              0.562         33.212          net: uidbuf_inst/FDMA_READ$R_REQ,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(318)
                                                                       pin: uidbuf_inst/FDMA_READ$fdma_rareq_r_reg_syn_7.b
 LUT5                                    0.424    f    33.636       1  pin: uidbuf_inst/FDMA_READ$fdma_rareq_r_reg_syn_7.o
-net (fo=1)                              0.562         34.198          net: uidbuf_inst/FDMA_READ$fdma_rareq_r_reg_syn_5,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(341)
+net (fo=1)                              0.562         34.198          net: uidbuf_inst/FDMA_READ$fdma_rareq_r_reg_syn_5,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(357)
                                                                       pin: uidbuf_inst/FDMA_READ$fdma_rareq_r_reg.d
 SEQ (reg)                               0.118    f    34.316          net: app_fdma_inst/fdma_rareq,  ../../../../source_code/rtl/uiappfdma/uiappfdma.v(49)
 --------------------------------------------------------------------  ---------------
@@ -6128,17 +6128,17 @@ PLL                                     0.000          0.000          pin: u_PLL
 net (fo=1)                              0.000          0.000          net: u_PLL_HDMI_CLK/clk0_buf,  ../../al_ip/PLL_HDMI_CLK.v(37)
                                                                       pin: u_PLL_HDMI_CLK/bufg_feedback.clki
 GCLK                                    0.000          0.000          pin: u_PLL_HDMI_CLK/bufg_feedback.clko
-net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(58)
+net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(60)
                                                                       pin: uidbuf_inst/FDMA_WRITE_ENABLE$f2d_fifo_inst_syn_1.clkw
 launch edge                            32.000    r    32.000               
 --------------------------------------------------------------------  ---------------
 FIFO (clk2q)                            0.650    f    32.650          pin: uidbuf_inst/FDMA_WRITE_ENABLE$f2d_fifo_inst_syn_1.afull_flag
-net (fo=1)                              0.562         33.212          net: uidbuf_inst/FDMA_WRITE_ENABLE$W_REQ,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(126)
+net (fo=1)                              0.562         33.212          net: uidbuf_inst/FDMA_WRITE_ENABLE$W_REQ,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(131)
                                                                       pin: uidbuf_inst/FDMA_WRITE_ENABLE$fdma_wareq_r_reg_syn_7.b
 LUT5                                    0.424    f    33.636       1  pin: uidbuf_inst/FDMA_WRITE_ENABLE$fdma_wareq_r_reg_syn_7.o
-net (fo=1)                              0.562         34.198          net: uidbuf_inst/FDMA_WRITE_ENABLE$fdma_wareq_r_reg_syn_5,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(168)
+net (fo=1)                              0.562         34.198          net: uidbuf_inst/FDMA_WRITE_ENABLE$fdma_wareq_r_reg_syn_5,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(173)
                                                                       pin: uidbuf_inst/FDMA_WRITE_ENABLE$fdma_wareq_r_reg.d
-SEQ (reg)                               0.118    f    34.316          net: uidbuf_inst/fdma_wareq,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(67)
+SEQ (reg)                               0.118    f    34.316          net: uidbuf_inst/fdma_wareq,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(69)
 --------------------------------------------------------------------  ---------------
 Arrival                                               34.316               
 
@@ -6188,12 +6188,12 @@ PLL                                     0.000          0.000          pin: u_PLL
 net (fo=1)                              0.000          0.000          net: u_PLL_HDMI_CLK/clk0_buf,  ../../al_ip/PLL_HDMI_CLK.v(37)
                                                                       pin: u_PLL_HDMI_CLK/bufg_feedback.clki
 GCLK                                    0.000          0.000          pin: u_PLL_HDMI_CLK/bufg_feedback.clko
-net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(58)
+net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(60)
                                                                       pin: uivtc_inst/O_vtc_vs_reg.clk
 launch edge                            32.000    r    32.000               
 --------------------------------------------------------------------  ---------------
 SEQ (clk2q)                             0.146    r    32.146          pin: uivtc_inst/O_vtc_vs_reg.q
-net (fo=12)                             0.904         33.050          net: uidbuf_inst/W_FS_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(59)
+net (fo=12)                             0.904         33.050          net: uidbuf_inst/W_FS_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(61)
                                                                       pin: uidbuf_inst/FDMA_READ$fs_cap_R0/vs_i_r1_reg.d
 SEQ (reg)                               0.118    f    33.168          net: uidbuf_inst/FDMA_READ$fs_cap_R0/vs_i_r1_syn_3,  ../../../../source_code/rtl/uifdmadbuf/fs_cap.v(44)
 --------------------------------------------------------------------  ---------------
@@ -6245,12 +6245,12 @@ PLL                                     0.000          0.000          pin: u_PLL
 net (fo=1)                              0.000          0.000          net: u_PLL_HDMI_CLK/clk0_buf,  ../../al_ip/PLL_HDMI_CLK.v(37)
                                                                       pin: u_PLL_HDMI_CLK/bufg_feedback.clki
 GCLK                                    0.000          0.000          pin: u_PLL_HDMI_CLK/bufg_feedback.clko
-net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(58)
+net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(60)
                                                                       pin: uivtc_inst/O_vtc_vs_reg.clk
 launch edge                            32.000    r    32.000               
 --------------------------------------------------------------------  ---------------
 SEQ (clk2q)                             0.146    r    32.146          pin: uivtc_inst/O_vtc_vs_reg.q
-net (fo=12)                             0.904         33.050          net: uidbuf_inst/W_FS_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(59)
+net (fo=12)                             0.904         33.050          net: uidbuf_inst/W_FS_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(61)
                                                                       pin: uidbuf_inst/FDMA_WRITE_ENABLE$fs_cap_W0/vs_i_r1_reg.d
 SEQ (reg)                               0.118    f    33.168          net: uidbuf_inst/FDMA_WRITE_ENABLE$fs_cap_W0/vs_i_r1_syn_3,  ../../../../source_code/rtl/uifdmadbuf/fs_cap.v(44)
 --------------------------------------------------------------------  ---------------
@@ -6306,12 +6306,12 @@ PLL                                     0.000          0.000          pin: u_PLL
 net (fo=1)                              0.000          0.000          net: u_PLL_HDMI_CLK/clk0_buf,  ../../al_ip/PLL_HDMI_CLK.v(37)
                                                                       pin: u_PLL_HDMI_CLK/bufg_feedback.clki
 GCLK                                    0.000          0.000          pin: u_PLL_HDMI_CLK/bufg_feedback.clko
-net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(58)
+net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(60)
                                                                       pin: uivtc_inst/O_vtc_vs_reg.clk
 launch edge                             0.000    r     0.000               
 --------------------------------------------------------------------  ---------------
 SEQ (clk2q)                             0.109    f     0.109          pin: uivtc_inst/O_vtc_vs_reg.q
-net (fo=12)                             0.904          1.013          net: uidbuf_inst/W_FS_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(59)
+net (fo=12)                             0.904          1.013          net: uidbuf_inst/W_FS_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(61)
                                                                       pin: uidbuf_inst/FDMA_READ$fs_cap_R0/vs_i_r1_reg.d
 SEQ (reg)                               0.084    r     1.097          net: uidbuf_inst/FDMA_READ$fs_cap_R0/vs_i_r1_syn_3,  ../../../../source_code/rtl/uifdmadbuf/fs_cap.v(44)
 --------------------------------------------------------------------  ---------------
@@ -6363,12 +6363,12 @@ PLL                                     0.000          0.000          pin: u_PLL
 net (fo=1)                              0.000          0.000          net: u_PLL_HDMI_CLK/clk0_buf,  ../../al_ip/PLL_HDMI_CLK.v(37)
                                                                       pin: u_PLL_HDMI_CLK/bufg_feedback.clki
 GCLK                                    0.000          0.000          pin: u_PLL_HDMI_CLK/bufg_feedback.clko
-net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(58)
+net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(60)
                                                                       pin: uivtc_inst/O_vtc_vs_reg.clk
 launch edge                             0.000    r     0.000               
 --------------------------------------------------------------------  ---------------
 SEQ (clk2q)                             0.109    f     0.109          pin: uivtc_inst/O_vtc_vs_reg.q
-net (fo=12)                             0.904          1.013          net: uidbuf_inst/W_FS_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(59)
+net (fo=12)                             0.904          1.013          net: uidbuf_inst/W_FS_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(61)
                                                                       pin: uidbuf_inst/FDMA_WRITE_ENABLE$fs_cap_W0/vs_i_r1_reg.d
 SEQ (reg)                               0.084    r     1.097          net: uidbuf_inst/FDMA_WRITE_ENABLE$fs_cap_W0/vs_i_r1_syn_3,  ../../../../source_code/rtl/uifdmadbuf/fs_cap.v(44)
 --------------------------------------------------------------------  ---------------
@@ -6420,15 +6420,15 @@ PLL                                     0.000          0.000          pin: u_PLL
 net (fo=1)                              0.000          0.000          net: u_PLL_HDMI_CLK/clk0_buf,  ../../al_ip/PLL_HDMI_CLK.v(37)
                                                                       pin: u_PLL_HDMI_CLK/bufg_feedback.clki
 GCLK                                    0.000          0.000          pin: u_PLL_HDMI_CLK/bufg_feedback.clko
-net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(58)
+net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(60)
                                                                       pin: uidbuf_inst/FDMA_READ$d2f_fifo_inst_syn_1.clkr
 launch edge                             0.000    r     0.000               
 --------------------------------------------------------------------  ---------------
 FIFO (clk2q)                            0.520    f     0.520          pin: uidbuf_inst/FDMA_READ$d2f_fifo_inst_syn_1.aempty_flag
-net (fo=1)                              0.562          1.082          net: uidbuf_inst/FDMA_READ$R_REQ,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(302)
+net (fo=1)                              0.562          1.082          net: uidbuf_inst/FDMA_READ$R_REQ,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(318)
                                                                       pin: uidbuf_inst/FDMA_READ$fdma_rareq_r_reg_syn_7.b
 LUT5                                    0.316    r     1.398       1  pin: uidbuf_inst/FDMA_READ$fdma_rareq_r_reg_syn_7.o
-net (fo=1)                              0.562          1.960          net: uidbuf_inst/FDMA_READ$fdma_rareq_r_reg_syn_5,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(341)
+net (fo=1)                              0.562          1.960          net: uidbuf_inst/FDMA_READ$fdma_rareq_r_reg_syn_5,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(357)
                                                                       pin: uidbuf_inst/FDMA_READ$fdma_rareq_r_reg.d
 SEQ (reg)                               0.084    r     2.044          net: app_fdma_inst/fdma_rareq,  ../../../../source_code/rtl/uiappfdma/uiappfdma.v(49)
 --------------------------------------------------------------------  ---------------
@@ -6480,17 +6480,17 @@ PLL                                     0.000          0.000          pin: u_PLL
 net (fo=1)                              0.000          0.000          net: u_PLL_HDMI_CLK/clk0_buf,  ../../al_ip/PLL_HDMI_CLK.v(37)
                                                                       pin: u_PLL_HDMI_CLK/bufg_feedback.clki
 GCLK                                    0.000          0.000          pin: u_PLL_HDMI_CLK/bufg_feedback.clko
-net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(58)
+net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(60)
                                                                       pin: uidbuf_inst/FDMA_WRITE_ENABLE$f2d_fifo_inst_syn_1.clkw
 launch edge                             0.000    r     0.000               
 --------------------------------------------------------------------  ---------------
 FIFO (clk2q)                            0.520    f     0.520          pin: uidbuf_inst/FDMA_WRITE_ENABLE$f2d_fifo_inst_syn_1.afull_flag
-net (fo=1)                              0.562          1.082          net: uidbuf_inst/FDMA_WRITE_ENABLE$W_REQ,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(126)
+net (fo=1)                              0.562          1.082          net: uidbuf_inst/FDMA_WRITE_ENABLE$W_REQ,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(131)
                                                                       pin: uidbuf_inst/FDMA_WRITE_ENABLE$fdma_wareq_r_reg_syn_7.b
 LUT5                                    0.316    r     1.398       1  pin: uidbuf_inst/FDMA_WRITE_ENABLE$fdma_wareq_r_reg_syn_7.o
-net (fo=1)                              0.562          1.960          net: uidbuf_inst/FDMA_WRITE_ENABLE$fdma_wareq_r_reg_syn_5,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(168)
+net (fo=1)                              0.562          1.960          net: uidbuf_inst/FDMA_WRITE_ENABLE$fdma_wareq_r_reg_syn_5,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(173)
                                                                       pin: uidbuf_inst/FDMA_WRITE_ENABLE$fdma_wareq_r_reg.d
-SEQ (reg)                               0.084    r     2.044          net: uidbuf_inst/fdma_wareq,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(67)
+SEQ (reg)                               0.084    r     2.044          net: uidbuf_inst/fdma_wareq,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(69)
 --------------------------------------------------------------------  ---------------
 Arrival                                                2.044               
 
@@ -6561,7 +6561,7 @@ net (fo=802)                            0.000          0.000          net: app_f
 launch edge                            46.662    r    46.662               
 --------------------------------------------------------------------  ---------------
 SEQ (clk2q)                             0.146    r    46.808          pin: uidbuf_inst/FDMA_READ$d2f_fifo_rst_reg.q
-net (fo=4)                              0.697         47.505          net: uidbuf_inst/FDMA_READ$d2f_fifo_rst,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(406)
+net (fo=4)                              0.697         47.505          net: uidbuf_inst/FDMA_READ$d2f_fifo_rst,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(431)
                                                                       pin: uidbuf_inst/FDMA_READ$d2f_fifo_inst_syn_1.rprst
 FIFO (reg)                              0.000    f    47.505               
 --------------------------------------------------------------------  ---------------
@@ -6577,7 +6577,7 @@ PLL                                     0.000          0.000          pin: u_PLL
 net (fo=1)                              0.000          0.000          net: u_PLL_HDMI_CLK/clk0_buf,  ../../al_ip/PLL_HDMI_CLK.v(37)
                                                                       pin: u_PLL_HDMI_CLK/bufg_feedback.clki
 GCLK                                    0.000          0.000          pin: u_PLL_HDMI_CLK/bufg_feedback.clko
-net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(58)
+net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(60)
                                                                       pin: uidbuf_inst/FDMA_READ$d2f_fifo_inst_syn_1.clkr
 capture edge                           48.000    r    48.000               
 --------------------------------------------------------------------  ---------------
@@ -6618,7 +6618,7 @@ net (fo=802)                            0.000          0.000          net: app_f
 launch edge                            46.662    r    46.662               
 --------------------------------------------------------------------  ---------------
 SEQ (clk2q)                             0.146    r    46.808          pin: uidbuf_inst/FDMA_READ$d2f_fifo_rst_reg.q
-net (fo=4)                              0.697         47.505          net: uidbuf_inst/FDMA_READ$d2f_fifo_rst,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(406)
+net (fo=4)                              0.697         47.505          net: uidbuf_inst/FDMA_READ$d2f_fifo_rst,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(431)
                                                                       pin: uidbuf_inst/FDMA_READ$d2f_fifo_inst_syn_2.rprst
 FIFO (reg)                              0.000    f    47.505               
 --------------------------------------------------------------------  ---------------
@@ -6634,7 +6634,7 @@ PLL                                     0.000          0.000          pin: u_PLL
 net (fo=1)                              0.000          0.000          net: u_PLL_HDMI_CLK/clk0_buf,  ../../al_ip/PLL_HDMI_CLK.v(37)
                                                                       pin: u_PLL_HDMI_CLK/bufg_feedback.clki
 GCLK                                    0.000          0.000          pin: u_PLL_HDMI_CLK/bufg_feedback.clko
-net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(58)
+net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(60)
                                                                       pin: uidbuf_inst/FDMA_READ$d2f_fifo_inst_syn_2.clkr
 capture edge                           48.000    r    48.000               
 --------------------------------------------------------------------  ---------------
@@ -6675,7 +6675,7 @@ net (fo=802)                            0.000          0.000          net: app_f
 launch edge                            46.662    r    46.662               
 --------------------------------------------------------------------  ---------------
 SEQ (clk2q)                             0.146    r    46.808          pin: uidbuf_inst/FDMA_WRITE_ENABLE$f2d_fifo_rst_reg.q
-net (fo=4)                              0.697         47.505          net: uidbuf_inst/FDMA_WRITE_ENABLE$f2d_fifo_rst,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(235)
+net (fo=4)                              0.697         47.505          net: uidbuf_inst/FDMA_WRITE_ENABLE$f2d_fifo_rst,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(249)
                                                                       pin: uidbuf_inst/FDMA_WRITE_ENABLE$f2d_fifo_inst_syn_1.rst
 FIFO (reg)                              0.000    f    47.505               
 --------------------------------------------------------------------  ---------------
@@ -6691,7 +6691,7 @@ PLL                                     0.000          0.000          pin: u_PLL
 net (fo=1)                              0.000          0.000          net: u_PLL_HDMI_CLK/clk0_buf,  ../../al_ip/PLL_HDMI_CLK.v(37)
                                                                       pin: u_PLL_HDMI_CLK/bufg_feedback.clki
 GCLK                                    0.000          0.000          pin: u_PLL_HDMI_CLK/bufg_feedback.clko
-net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(58)
+net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(60)
                                                                       pin: uidbuf_inst/FDMA_WRITE_ENABLE$f2d_fifo_inst_syn_1.clkw
 capture edge                           48.000    r    48.000               
 --------------------------------------------------------------------  ---------------
@@ -6732,7 +6732,7 @@ net (fo=802)                            0.000          0.000          net: app_f
 launch edge                            46.662    r    46.662               
 --------------------------------------------------------------------  ---------------
 SEQ (clk2q)                             0.146    r    46.808          pin: uidbuf_inst/FDMA_WRITE_ENABLE$f2d_fifo_rst_reg.q
-net (fo=4)                              0.697         47.505          net: uidbuf_inst/FDMA_WRITE_ENABLE$f2d_fifo_rst,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(235)
+net (fo=4)                              0.697         47.505          net: uidbuf_inst/FDMA_WRITE_ENABLE$f2d_fifo_rst,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(249)
                                                                       pin: uidbuf_inst/FDMA_WRITE_ENABLE$f2d_fifo_inst_syn_2.rst
 FIFO (reg)                              0.000    f    47.505               
 --------------------------------------------------------------------  ---------------
@@ -6748,7 +6748,7 @@ PLL                                     0.000          0.000          pin: u_PLL
 net (fo=1)                              0.000          0.000          net: u_PLL_HDMI_CLK/clk0_buf,  ../../al_ip/PLL_HDMI_CLK.v(37)
                                                                       pin: u_PLL_HDMI_CLK/bufg_feedback.clki
 GCLK                                    0.000          0.000          pin: u_PLL_HDMI_CLK/bufg_feedback.clko
-net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(58)
+net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(60)
                                                                       pin: uidbuf_inst/FDMA_WRITE_ENABLE$f2d_fifo_inst_syn_2.clkw
 capture edge                           48.000    r    48.000               
 --------------------------------------------------------------------  ---------------
@@ -6793,7 +6793,7 @@ net (fo=802)                            0.000          0.000          net: app_f
 launch edge                             0.000    r     0.000               
 --------------------------------------------------------------------  ---------------
 SEQ (clk2q)                             0.109    f     0.109          pin: uidbuf_inst/FDMA_READ$d2f_fifo_rst_reg.q
-net (fo=4)                              0.697          0.806          net: uidbuf_inst/FDMA_READ$d2f_fifo_rst,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(406)
+net (fo=4)                              0.697          0.806          net: uidbuf_inst/FDMA_READ$d2f_fifo_rst,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(431)
                                                                       pin: uidbuf_inst/FDMA_READ$d2f_fifo_inst_syn_1.rprst
 FIFO (reg)                              0.000    f     0.806               
 --------------------------------------------------------------------  ---------------
@@ -6809,7 +6809,7 @@ PLL                                     0.000          0.000          pin: u_PLL
 net (fo=1)                              0.000          0.000          net: u_PLL_HDMI_CLK/clk0_buf,  ../../al_ip/PLL_HDMI_CLK.v(37)
                                                                       pin: u_PLL_HDMI_CLK/bufg_feedback.clki
 GCLK                                    0.000          0.000          pin: u_PLL_HDMI_CLK/bufg_feedback.clko
-net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(58)
+net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(60)
                                                                       pin: uidbuf_inst/FDMA_READ$d2f_fifo_inst_syn_1.clkr
 capture edge                            0.000    r     0.000               
 --------------------------------------------------------------------  ---------------
@@ -6850,7 +6850,7 @@ net (fo=802)                            0.000          0.000          net: app_f
 launch edge                             0.000    r     0.000               
 --------------------------------------------------------------------  ---------------
 SEQ (clk2q)                             0.109    f     0.109          pin: uidbuf_inst/FDMA_READ$d2f_fifo_rst_reg.q
-net (fo=4)                              0.697          0.806          net: uidbuf_inst/FDMA_READ$d2f_fifo_rst,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(406)
+net (fo=4)                              0.697          0.806          net: uidbuf_inst/FDMA_READ$d2f_fifo_rst,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(431)
                                                                       pin: uidbuf_inst/FDMA_READ$d2f_fifo_inst_syn_2.rprst
 FIFO (reg)                              0.000    f     0.806               
 --------------------------------------------------------------------  ---------------
@@ -6866,7 +6866,7 @@ PLL                                     0.000          0.000          pin: u_PLL
 net (fo=1)                              0.000          0.000          net: u_PLL_HDMI_CLK/clk0_buf,  ../../al_ip/PLL_HDMI_CLK.v(37)
                                                                       pin: u_PLL_HDMI_CLK/bufg_feedback.clki
 GCLK                                    0.000          0.000          pin: u_PLL_HDMI_CLK/bufg_feedback.clko
-net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(58)
+net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(60)
                                                                       pin: uidbuf_inst/FDMA_READ$d2f_fifo_inst_syn_2.clkr
 capture edge                            0.000    r     0.000               
 --------------------------------------------------------------------  ---------------
@@ -6907,7 +6907,7 @@ net (fo=802)                            0.000          0.000          net: app_f
 launch edge                             0.000    r     0.000               
 --------------------------------------------------------------------  ---------------
 SEQ (clk2q)                             0.109    f     0.109          pin: uidbuf_inst/FDMA_WRITE_ENABLE$f2d_fifo_rst_reg.q
-net (fo=4)                              0.697          0.806          net: uidbuf_inst/FDMA_WRITE_ENABLE$f2d_fifo_rst,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(235)
+net (fo=4)                              0.697          0.806          net: uidbuf_inst/FDMA_WRITE_ENABLE$f2d_fifo_rst,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(249)
                                                                       pin: uidbuf_inst/FDMA_WRITE_ENABLE$f2d_fifo_inst_syn_1.rst
 FIFO (reg)                              0.000    f     0.806               
 --------------------------------------------------------------------  ---------------
@@ -6923,7 +6923,7 @@ PLL                                     0.000          0.000          pin: u_PLL
 net (fo=1)                              0.000          0.000          net: u_PLL_HDMI_CLK/clk0_buf,  ../../al_ip/PLL_HDMI_CLK.v(37)
                                                                       pin: u_PLL_HDMI_CLK/bufg_feedback.clki
 GCLK                                    0.000          0.000          pin: u_PLL_HDMI_CLK/bufg_feedback.clko
-net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(58)
+net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(60)
                                                                       pin: uidbuf_inst/FDMA_WRITE_ENABLE$f2d_fifo_inst_syn_1.clkw
 capture edge                            0.000    r     0.000               
 --------------------------------------------------------------------  ---------------
@@ -6964,7 +6964,7 @@ net (fo=802)                            0.000          0.000          net: app_f
 launch edge                             0.000    r     0.000               
 --------------------------------------------------------------------  ---------------
 SEQ (clk2q)                             0.109    f     0.109          pin: uidbuf_inst/FDMA_WRITE_ENABLE$f2d_fifo_rst_reg.q
-net (fo=4)                              0.697          0.806          net: uidbuf_inst/FDMA_WRITE_ENABLE$f2d_fifo_rst,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(235)
+net (fo=4)                              0.697          0.806          net: uidbuf_inst/FDMA_WRITE_ENABLE$f2d_fifo_rst,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(249)
                                                                       pin: uidbuf_inst/FDMA_WRITE_ENABLE$f2d_fifo_inst_syn_2.rst
 FIFO (reg)                              0.000    f     0.806               
 --------------------------------------------------------------------  ---------------
@@ -6980,7 +6980,7 @@ PLL                                     0.000          0.000          pin: u_PLL
 net (fo=1)                              0.000          0.000          net: u_PLL_HDMI_CLK/clk0_buf,  ../../al_ip/PLL_HDMI_CLK.v(37)
                                                                       pin: u_PLL_HDMI_CLK/bufg_feedback.clki
 GCLK                                    0.000          0.000          pin: u_PLL_HDMI_CLK/bufg_feedback.clko
-net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(58)
+net (fo=195)                            0.000          0.000          net: uidbuf_inst/W_wclk_i,  ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(60)
                                                                       pin: uidbuf_inst/FDMA_WRITE_ENABLE$f2d_fifo_inst_syn_2.clkw
 capture edge                            0.000    r     0.000               
 --------------------------------------------------------------------  ---------------

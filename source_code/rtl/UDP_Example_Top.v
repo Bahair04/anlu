@@ -248,7 +248,8 @@ assign      R_rclk_i = vid_clk;
 assign      R_FS_i	 = vid_vs;
 assign      R_rden_i = vtc2_de;
 uidbuf#(
-    .VIDEO_ENABLE 	 	(1)  ,
+    .SDRAM_MAX_BURST_LEN(256),
+    .VIDEO_ENABLE 	 	(1),
     .ENABLE_WRITE   	(1),
     .ENABLE_READ    	(1),
     .AXI_DATA_WIDTH 	(32),
