@@ -8,12 +8,12 @@ IO Statistics
   #inout                    1
 
 Utilization Statistics
-#lut                     1347   out of  19600    6.87%
-#reg                     1085   out of  19600    5.54%
+#lut                     1331   out of  19600    6.79%
+#reg                     1084   out of  19600    5.53%
 #le                      1693
-  #lut only               608   out of   1693   35.91%
-  #reg only               346   out of   1693   20.44%
-  #lut&reg                739   out of   1693   43.65%
+  #lut only               609   out of   1693   35.97%
+  #reg only               362   out of   1693   21.38%
+  #lut&reg                722   out of   1693   42.65%
 #bram                       4   out of     64    6.25%
   #bram9k                   0
   #fifo9k                   4
@@ -69,7 +69,7 @@ Detailed IO Report
       cas_n         OUTPUT        S20        LVCMOS25      PAD            8            NONE        OREG     
       ras_n         OUTPUT        S21        LVCMOS25      PAD            8            NONE        OREG     
       cs_n          OUTPUT        S22        LVCMOS25      PAD            8            NONE        NONE     
-     addr[9]        OUTPUT        S23        LVCMOS25      PAD            8            NONE        OREG     
+     addr[9]        OUTPUT        S23        LVCMOS25      PAD            8            NONE        NONE     
      addr[8]        OUTPUT        S24        LVCMOS25      PAD            8            NONE        OREG     
      addr[7]        OUTPUT        S25        LVCMOS25      PAD            8            NONE        OREG     
      addr[6]        OUTPUT        S26        LVCMOS25      PAD            8            NONE        OREG     
@@ -124,60 +124,59 @@ Report Clock Domain Luts:
 --------------------------------------------------------------------------------------------------------------------------------------
   Index   |  Name                             |  Frequency   |  LUT As Logic   |  LUT As Shifter   |  LUT As Dram   |  BRAM   |  DSP
 --------------------------------------------------------------------------------------------------------------------------------------
-  #1      |  clk_in                           |  50MHz       |  169            |  0                |  0             |  0      |  0
-  #2      |  u_PLL_HDMI_CLK/pll_inst.clkc[0]  |  62MHz       |  152            |  0                |  0             |  4      |  0
-  #3      |  u_PLL_HDMI_CLK/pll_inst.clkc[1]  |  312MHz      |  31             |  0                |  0             |  0      |  0
-  #4      |  u_clk/pll_inst.clkc[0]           |  150MHz      |  285            |  0                |  0             |  4      |  0
+  #1      |  clk_in                           |  50MHz       |  155            |  0                |  0             |  0      |  0
+  #2      |  u_PLL_HDMI_CLK/pll_inst.clkc[0]  |  62MHz       |  155            |  0                |  0             |  4      |  0
+  #3      |  u_PLL_HDMI_CLK/pll_inst.clkc[1]  |  312MHz      |  30             |  0                |  0             |  0      |  0
+  #4      |  u_clk/pll_inst.clkc[0]           |  150MHz      |  280            |  0                |  0             |  4      |  0
 --------------------------------------------------------------------------------------------------------------------------------------
 
 Clock Resource Statistics
 Index     ClockNet                                       Type               DriverType         Driver                                          Fanout
-#1        u_clk/clk0_buf                                 Global             pll                u_clk/pll_inst.clkc0                            533
-#2        u_PLL_HDMI_CLK/clk0_buf                        Global             pll                u_PLL_HDMI_CLK/pll_inst.clkc0                   138
-#3        clk_50_dup_1                                   Global             io                 clk_50_syn_2.di                                 72
+#1        u_clk/clk0_buf                                 Global             pll                u_clk/pll_inst.clkc0                            520
+#2        u_PLL_HDMI_CLK/clk0_buf                        Global             pll                u_PLL_HDMI_CLK/pll_inst.clkc0                   132
+#3        clk_50_dup_1                                   Global             io                 clk_50_syn_2.di                                 63
 #4        uihdmitx_inst/Inst_DVITransmitter/PCLK_X5_I    Global             pll                u_PLL_HDMI_CLK/pll_inst.clkc1                   36
-#5        u_uicfg5640/uii2c_inst/scl_clk                 Global             mslice             u_uicfg5640/uii2c_inst/scl_clk_reg_syn_17.q0    16
+#5        u_uicfg5640/uii2c_inst/scl_clk                 Global             lslice             u_uicfg5640/uii2c_inst/scl_clk_reg_syn_17.q0    16
 #6        u2_ram/SDRAM_CLK                               Global             pll                u_clk/pll_inst.clkc2                            0
 
 Report Hierarchy Area:
 +------------------------------------------------------------------------------------------------------------+
 |Instance                         |Module              |le      |lut     |ripple  |seq     |bram    |dsp     |
 +------------------------------------------------------------------------------------------------------------+
-|top                              |UDP_Example_Top     |1693    |1258    |89      |1094    |4       |0       |
-|  app_fdma_inst                  |app_fdma            |340     |255     |52      |205     |0       |0       |
-|  u2_ram                         |sdr_as_ram          |418     |145     |5       |404     |0       |0       |
-|    u1_init_ref                  |sdr_init_ref        |87      |32      |5       |78      |0       |0       |
-|    u2_wrrd                      |sdr_wrrd            |331     |113     |0       |326     |0       |0       |
+|top                              |UDP_Example_Top     |1693    |1242    |89      |1093    |4       |0       |
+|  app_fdma_inst                  |app_fdma            |341     |265     |52      |201     |0       |0       |
+|  u2_ram                         |sdr_as_ram          |429     |129     |5       |414     |0       |0       |
+|    u1_init_ref                  |sdr_init_ref        |84      |27      |5       |75      |0       |0       |
+|    u2_wrrd                      |sdr_wrrd            |345     |102     |0       |339     |0       |0       |
 |  u_PLL_HDMI_CLK                 |PLL_HDMI_CLK        |1       |1       |0       |0       |0       |0       |
 |  u_clk                          |fdma_pll            |0       |0       |0       |0       |0       |0       |
-|  u_uicfg5640                    |uicfg5640           |369     |369     |0       |115     |0       |0       |
-|    uii2c_inst                   |uii2c               |58      |58      |0       |37      |0       |0       |
-|  u_uitpg                        |uitpg               |105     |97      |7       |54      |0       |0       |
-|  uidbuf_inst                    |uidbuf              |149     |127     |18      |99      |4       |0       |
-|    FDMA_READ$fs_cap_R0          |fs_cap              |5       |1       |0       |5       |0       |0       |
-|    FDMA_WRITE_ENABLE$fs_cap_W0  |fs_cap              |6       |6       |0       |5       |0       |0       |
-|  uihdmitx_inst                  |uihdmitx            |259     |219     |0       |176     |0       |0       |
-|    Inst_DVITransmitter          |DVITransmitter      |259     |219     |0       |176     |0       |0       |
-|      Inst_TMDSEncoder_blue      |TMDSEncoder         |65      |62      |0       |43      |0       |0       |
-|      Inst_TMDSEncoder_green     |TMDSEncoder         |77      |71      |0       |45      |0       |0       |
-|      Inst_TMDSEncoder_red       |TMDSEncoder         |61      |57      |0       |32      |0       |0       |
-|      Inst_blue_serializer_10_1  |Serial_N_1_lvds_dat |24      |15      |0       |24      |0       |0       |
-|      Inst_clk_serializer_10_1   |Serial_N_1_lvds     |8       |2       |0       |8       |0       |0       |
-|      Inst_green_serializer_10_1 |Serial_N_1_lvds_dat |18      |10      |0       |18      |0       |0       |
-|      Inst_red_serializer_10_1   |Serial_N_1_lvds_dat |6       |2       |0       |6       |0       |0       |
-|  uivtc_inst                     |uivtc               |50      |43      |7       |30      |0       |0       |
-|  uisetvbuf_inst                 |uisetvbuf           |2       |2       |0       |2       |0       |0       |
+|  u_uicfg5640                    |uicfg5640           |394     |394     |0       |113     |0       |0       |
+|    uii2c_inst                   |uii2c               |65      |65      |0       |39      |0       |0       |
+|  u_uitpg                        |uitpg               |103     |94      |7       |55      |0       |0       |
+|  uidbuf_inst                    |uidbuf              |135     |113     |18      |94      |4       |0       |
+|    FDMA_READ$fs_cap_R0          |fs_cap              |6       |4       |0       |6       |0       |0       |
+|    FDMA_WRITE_ENABLE$fs_cap_W0  |fs_cap              |3       |1       |0       |3       |0       |0       |
+|  uihdmitx_inst                  |uihdmitx            |242     |205     |0       |177     |0       |0       |
+|    Inst_DVITransmitter          |DVITransmitter      |242     |205     |0       |177     |0       |0       |
+|      Inst_TMDSEncoder_blue      |TMDSEncoder         |62      |58      |0       |41      |0       |0       |
+|      Inst_TMDSEncoder_green     |TMDSEncoder         |67      |61      |0       |45      |0       |0       |
+|      Inst_TMDSEncoder_red       |TMDSEncoder         |58      |58      |0       |36      |0       |0       |
+|      Inst_blue_serializer_10_1  |Serial_N_1_lvds_dat |26      |14      |0       |26      |0       |0       |
+|      Inst_clk_serializer_10_1   |Serial_N_1_lvds     |7       |2       |0       |7       |0       |0       |
+|      Inst_green_serializer_10_1 |Serial_N_1_lvds_dat |14      |8       |0       |14      |0       |0       |
+|      Inst_red_serializer_10_1   |Serial_N_1_lvds_dat |8       |4       |0       |8       |0       |0       |
+|  uivtc_inst                     |uivtc               |48      |41      |7       |30      |0       |0       |
 +------------------------------------------------------------------------------------------------------------+
 
 
 DataNet Average Fanout:
 
    Index     Fanout    Nets  
-    #1         1       1150  
-    #2         2       297   
-    #3         3       135   
-    #4         4       103   
-    #5        5-10     183   
-    #6       11-50      61   
-    #7       51-100     9    
-  Average     2.88           
+    #1         1       1158  
+    #2         2       295   
+    #3         3       147   
+    #4         4       111   
+    #5        5-10     160   
+    #6       11-50      45   
+    #7       51-100     13   
+  Average     2.84           

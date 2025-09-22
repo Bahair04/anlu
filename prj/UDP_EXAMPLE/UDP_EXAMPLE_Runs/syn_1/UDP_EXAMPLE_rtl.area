@@ -8,7 +8,7 @@ IO Statistics
   #inout                    1
 
 Gate Statistics
-#Basic gates             1974
+#Basic gates             1978
   #and                     82
   #nand                     0
   #or                      63
@@ -20,7 +20,7 @@ Gate Statistics
   #bufif1                  33
   #MX21                   412
   #FADD                     0
-  #DFF                   1137
+  #DFF                   1141
   #LATCH                    0
 #MACRO_ADD                128
 #MACRO_EQ                  48
@@ -31,11 +31,11 @@ Report Hierarchy Area:
 +------------------------------------------------------------------------------+
 |Instance                         |Module              |gates  |seq    |macros |
 +------------------------------------------------------------------------------+
-|top                              |UDP_Example_Top     |837    |1137   |184    |
+|top                              |UDP_Example_Top     |837    |1141   |184    |
 |  app_fdma_inst                  |app_fdma            |73     |199    |18     |
-|  u2_ram                         |sdr_as_ram          |99     |507    |6      |
+|  u2_ram                         |sdr_as_ram          |99     |511    |6      |
 |    u1_init_ref                  |sdr_init_ref        |19     |81     |1      |
-|    u2_wrrd                      |sdr_wrrd            |80     |426    |5      |
+|    u2_wrrd                      |sdr_wrrd            |80     |430    |5      |
 |  u_PLL_HDMI_CLK                 |PLL_HDMI_CLK        |0      |0      |1      |
 |  u_clk                          |fdma_pll            |0      |0      |1      |
 |  u_uicfg5640                    |uicfg5640           |351    |81     |16     |

@@ -118,14 +118,14 @@ wire                                R_rden_i;
 wire    [15 : 0]                    R_data_o;
 wire    [7  : 0]                    R_buf_i;
 
-wire    [20 : 0] 	                fdma_waddr;
+wire    [20 : 0] 	                fdma_waddr; // 单位 字节
 wire  	     	                    fdma_wareq;
 wire    [15 : 0] 	                fdma_wsize;                                    
 wire         	                    fdma_wbusy;	
 wire    [31 : 0] 	                fdma_wdata;
 wire         	                    fdma_wvalid;
 
-wire    [20 : 0] 	                fdma_raddr;
+wire    [20 : 0] 	                fdma_raddr; // 单位 字节
 wire         	                    fdma_rareq;
 wire    [15 : 0] 	                fdma_rsize;                                 
 wire         	                    fdma_rbusy;
@@ -135,11 +135,11 @@ wire         	                    fdma_rvalid;
 wire 			                    sdr_init_done;
 wire 			                    sdr_init_ref_vld;
 wire 			                    app_wr_en;
-wire    [22 : 0]	                app_wr_addr;
-wire    [1  : 0]	                app_wr_dm;
+wire    [18 : 0]	                app_wr_addr; // 单位 字
+wire    [3  : 0]	                app_wr_dm;
 wire    [31 : 0]	                app_wr_din;
 wire 			                    app_rd_en;
-wire    [22 : 0]	                app_rd_addr;
+wire    [18 : 0]	                app_rd_addr; // 单位 字
 wire 			                    sdr_rd_en;
 wire    [31 : 0]	                sdr_rd_dout;
 wire                                sdr_busy;
@@ -253,23 +253,23 @@ uidbuf#(
     .ENABLE_WRITE   	(1),
     .ENABLE_READ    	(1),
     .AXI_DATA_WIDTH 	(32),
-    .AXI_ADDR_WIDTH 	(21),
+    .AXI_ADDR_WIDTH 	(21), // 19+2bit
 
     .W_BUFDEPTH     	(1024),
     .W_DATAWIDTH    	(16),
     .W_BASEADDR     	(0),
-    .W_DSIZEBITS    	(19),
+    .W_DSIZEBITS    	(19), // 19bit
     .W_XSIZE        	(512),
     .W_YSIZE        	(384),
-    .W_BUFSIZE      	(3),
+    .W_BUFSIZE      	(3), // 2bit
 
     .R_BUFDEPTH     	(1024),
     .R_DATAWIDTH    	(16),
     .R_BASEADDR     	(0),
-    .R_DSIZEBITS    	(19),
+    .R_DSIZEBITS    	(19), // 19bit
     .R_XSIZE        	(512),
     .R_YSIZE        	(384),
-    .R_BUFSIZE      	(3)
+    .R_BUFSIZE      	(3) // 2bit
 )
 uidbuf_inst
 (
@@ -318,7 +318,7 @@ app_fdma app_fdma_inst
     .fdma_clk      	    (fdma_clk0     ) 	
     ,.fdma_rstn         (sdr_init_done	  )
     //===========fdma interface=======
-    ,.fdma_waddr        (fdma_waddr   )
+    ,.fdma_waddr        (fdma_waddr   ) // 单位 字节
     ,.fdma_wareq        (fdma_wareq   )
     ,.fdma_wsize        (fdma_wsize   )                                     
     ,.fdma_wbusy        (fdma_wbusy   )
@@ -326,7 +326,7 @@ app_fdma app_fdma_inst
     ,.fdma_wvalid       (fdma_wvalid  )
 
 
-    ,.fdma_raddr        (fdma_raddr   )
+    ,.fdma_raddr        (fdma_raddr   ) // 单位 字节
     ,.fdma_rareq        (fdma_rareq   )
     ,.fdma_rsize        (fdma_rsize   )                                     
     ,.fdma_rbusy        (fdma_rbusy   )
@@ -338,12 +338,12 @@ app_fdma app_fdma_inst
     ,.sdr_init_ref_vld	(sdr_init_ref_vld)
         
     ,.app_wr_en       	(app_wr_en    )
-    ,.app_wr_addr     	(app_wr_addr  ) 
+    ,.app_wr_addr     	(app_wr_addr  ) // 单位 字 
     ,.app_wr_dm       	(app_wr_dm    )
     ,.app_wr_din     	(app_wr_din   )
         
     ,.app_rd_en       	(app_rd_en    )
-    ,.app_rd_addr     	(app_rd_addr  )
+    ,.app_rd_addr     	(app_rd_addr  ) // 单位 字
     ,.sdr_rd_en       	(sdr_rd_en    )
     ,.sdr_rd_dout       (sdr_rd_dout  )
     ,.sdr_busy			(sdr_busy	  )

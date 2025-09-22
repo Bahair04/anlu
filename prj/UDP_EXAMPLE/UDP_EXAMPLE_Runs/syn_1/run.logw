@@ -4,7 +4,7 @@
    Executable = D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/bin/run.exe
    Built at =   16:32:07 Jun 12 2025
    Run by =     1
-   Run Date =   Mon Sep 22 13:30:46 2025
+   Run Date =   Mon Sep 22 14:12:24 2025
 
    Run on =     LAPTOP-EUGMKLPQ
 ============================================================
@@ -46,14 +46,11 @@ HDL-5007 WARNING: concatenation with an unsized literal will be treated as 32 bi
 HDL-5314 WARNING: net 'sda_i' does not have a driver in ../../../../source_code/rtl/uiov5640cfg/uii2c.v(82)
 HDL-5007 WARNING: actual bit length 32 differs from formal bit length 40 for port 'wr_data' in ../../../../source_code/rtl/uiov5640cfg/uicfg5640.v(110)
 HDL-5007 WARNING: actual bit length 24 differs from formal bit length 32 for port 'REG_DATA' in ../../../../source_code/rtl/uiov5640cfg/uicfg5640.v(125)
-HDL-5007 WARNING: actual bit length 23 differs from formal bit length 20 for port 'app_wr_addr' in ../../../../source_code/rtl/UDP_Example_Top.v(341)
-HDL-5007 WARNING: actual bit length 23 differs from formal bit length 20 for port 'app_rd_addr' in ../../../../source_code/rtl/UDP_Example_Top.v(346)
 HDL-5007 WARNING: concatenation with an unsized literal will be treated as 32 bits in ../../../../source_code/rtl/uieg4d_dram/enc_file/sdr_init_ref.enc.v(47)
 HDL-5007 WARNING: concatenation with an unsized literal will be treated as 32 bits in ../../../../source_code/rtl/uieg4d_dram/enc_file/sdr_wrrd.enc.v(283)
+HDL-5007 WARNING: actual bit length ** differs from formal bit length *** for port '**' in ../../../../source_code/rtl/uieg4d_dram/enc_file/sdr_as_ram.enc.v(51)
+HDL-5007 WARNING: actual bit length ** differs from formal bit length *** for port '**' in ../../../../source_code/rtl/uieg4d_dram/enc_file/sdr_as_ram.enc.v(56)
 HDL-5317 WARNING: input port '**' is not connected on this instance in ../../../../source_code/rtl/uieg4d_dram/enc_file/sdr_as_ram.enc.v(17)
-HDL-5007 WARNING: actual bit length 23 differs from formal bit length 21 for port 'App_wr_addr' in ../../../../source_code/rtl/UDP_Example_Top.v(369)
-HDL-5007 WARNING: actual bit length 2 differs from formal bit length 4 for port 'App_wr_dm' in ../../../../source_code/rtl/UDP_Example_Top.v(370)
-HDL-5007 WARNING: actual bit length 23 differs from formal bit length 21 for port 'App_rd_addr' in ../../../../source_code/rtl/UDP_Example_Top.v(374)
 HDL-5001 WARNING: Contains anonymous inst(s) and/or net(s) that have not been renamed
 HDL-5001 WARNING: Contains anonymous inst(s) and/or net(s) that have not been renamed
 HDL-5001 WARNING: Contains anonymous inst(s) and/or net(s) that have not been renamed

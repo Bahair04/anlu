@@ -3,15 +3,15 @@
 -----------------------------------------------------------
 | Timing                    |                             |
 |     Setup WNS             |        -5958                |
-|     Setup TNS             |      -317660                |
-|     Num of violated S-EP  |           82                |
+|     Setup TNS             |      -315780                |
+|     Num of violated S-EP  |           81                |
 |     Hold WNS              |          471                |
 |     Hold TNS              |            0                |
 |     Num of violated H-EP  |            0                |
 -----------------------------------------------------------
 | Utilization               |                             |
-|     #registers            |         1051                |
-|     #luts                 |         1066                |
+|     #registers            |         1056                |
+|     #luts                 |         1060                |
 |     #lut1                 |           25                |
 |     #lut1(~A)             |           25                |
 |     #slices               |           89                |
@@ -30,8 +30,8 @@
 |     #max_fanout_keep      |            0                |
 |     #async_reg            |           12                |
 -----------------------------------------------------------
-| Top 10% datanet fanout#   |        40.92                |
-| dff(single fanout)->dff   |          321                |
+| Top 10% datanet fanout#   |        41.76                |
+| dff(single fanout)->dff   |          327                |
 | dff(single fanout)->dram  |            0                |
 -----------------------------------------------------------
 | Over-quota path num*      |                             |
@@ -56,22 +56,22 @@ Over-quota Path Details
 Note: Table only show top 5 paths for each clock group in default
 
 Logic Level Distribution
---------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
   Clock                            |  Period            |  0    |  1    |  2    |  3    |  4   |  5   |  6   |  7
---------------------------------------------------------------------------------------------------------------------
-  clk_in                           |  20.000ns (50MHz)  |  40   |  44   |  22   |  6    |  10  |  14  |  1   |  0
+-------------------------------------------------------------------------------------------------------------------
+  clk_in                           |  20.000ns (50MHz)  |  40   |  44   |  22   |  5    |  14  |  9   |  3   |  0
   phy1_rgmii_rx_clk                |  8.000ns (125MHz)  |  0    |  0    |  0    |  0    |  0   |  0   |  0   |  0
-  u_PLL_HDMI_CLK/pll_inst.clkc[0]  |  16.000ns (62MHz)  |  104  |  46   |  56   |  10   |  30  |  28  |  33  |  11
+  u_PLL_HDMI_CLK/pll_inst.clkc[0]  |  16.000ns (62MHz)  |  104  |  46   |  56   |  12   |  28  |  29  |  39  |  4
   u_PLL_HDMI_CLK/pll_inst.clkc[1]  |  3.200ns (312MHz)  |  43   |  27   |  0    |  0    |  0   |  0   |  0   |  0
-  u_clk/pll_inst.clkc[0]           |  6.666ns (150MHz)  |  745  |  249  |  151  |  135  |  31  |  6   |  0   |  0
-  u_clk/pll_inst.clkc[2]           |  6.666ns (150MHz)  |  16   |  32   |  0    |  0    |  0   |  0   |  0   |  0
-  Total                            |  NA                |  948  |  398  |  229  |  151  |  71  |  48  |  34  |  11
---------------------------------------------------------------------------------------------------------------------
+  u_clk/pll_inst.clkc[0]           |  6.666ns (150MHz)  |  749  |  273  |  132  |  149  |  21  |  3   |  0   |  0
+  u_clk/pll_inst.clkc[2]           |  6.666ns (150MHz)  |  15   |  32   |  0    |  0    |  0   |  0   |  0   |  0
+  Total                            |  NA                |  951  |  422  |  210  |  166  |  63  |  41  |  42  |  4
+-------------------------------------------------------------------------------------------------------------------
 Hierarchical Rent Exponent Report
 +-----------------------------------------------------------------+
 |Inst     |Model           |Rent     |Cell     |Pin     |Term     |
 +-----------------------------------------------------------------+
-|top      |UDP_Example_Top |0.21     |2451     |8849    |18       |
+|top      |UDP_Example_Top |0.21     |2450     |8837    |18       |
 +-----------------------------------------------------------------+
 Note: Cell represents total number of cells inside module; Pin represents total number of pins
       which have net connection inside module; Term represents total number of PIs and POs of module.

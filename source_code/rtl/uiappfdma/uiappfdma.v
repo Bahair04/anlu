@@ -33,40 +33,40 @@ module app_fdma#
   parameter  integer SDRAM_MAX_BURST_LEN = 256   
 )
 (
-input   wire            				   	fdma_clk       		,
-input   wire            				   	fdma_rstn         	,
-//===========fdma interface=======
-input   wire [20: 0]      					fdma_waddr          ,
-input   wire  	                            fdma_wareq          ,
-input   wire [15: 0]                      	fdma_wsize          ,                                     
-output  reg                                 fdma_wbusy          ,
-				
-input   wire [31 :0]       					fdma_wdata			,
-output  wire                               	fdma_wvalid         ,
-//input	wire                               	fdma_wready			,
+	input   wire            				   	fdma_clk       		,
+	input   wire            				   	fdma_rstn         	,
+	//===========fdma interface=======
+	input   wire [20: 0]      					fdma_waddr          ,
+	input   wire  	                            fdma_wareq          ,
+	input   wire [15: 0]                      	fdma_wsize          ,                                     
+	output  reg                                 fdma_wbusy          ,
+					
+	input   wire [31 :0]       					fdma_wdata			,
+	output  wire                               	fdma_wvalid         ,
+	//input	wire                               	fdma_wready			,
 
-input   wire [20: 0]      					fdma_raddr          ,
-input   wire                                fdma_rareq          ,
-input   wire [15: 0]                      	fdma_rsize          ,                                     
-output  reg                                 fdma_rbusy          ,
-				
-output  wire [31 :0]       					fdma_rdata			,
-output  wire                               	fdma_rvalid         ,
-//input	wire                               	fdma_rready			,
-//===========ddr interface===============
-input	wire								sdr_init_done   	,
-input	wire								sdr_init_ref_vld	,
-	
-output	reg   								app_wr_en       	,
-output 	reg  [19 :0]						app_wr_addr     	, 
-output 	wire [1  :0]						app_wr_dm       	,
-output 	wire [31 :0]						app_wr_din     	 	,
-	
-output	reg 								app_rd_en       	,
-output 	reg  [19 :0]						app_rd_addr     	,
-input	wire 								sdr_rd_en       	,
-input  	wire [31 :0]						sdr_rd_dout         ,
-input   wire  								sdr_busy
+	input   wire [20: 0]      					fdma_raddr          ,
+	input   wire                                fdma_rareq          ,
+	input   wire [15: 0]                      	fdma_rsize          ,                                     
+	output  reg                                 fdma_rbusy          ,
+					
+	output  wire [31 :0]       					fdma_rdata			,
+	output  wire                               	fdma_rvalid         ,
+	//input	wire                               	fdma_rready			,
+	//===========ddr interface===============
+	input	wire								sdr_init_done   	,
+	input	wire								sdr_init_ref_vld	,
+		
+	output	reg   								app_wr_en       	,
+	output 	reg  [18 :0]						app_wr_addr     	, 
+	output 	wire [3  :0]						app_wr_dm       	,
+	output 	wire [31 :0]						app_wr_din     	 	,
+		
+	output	reg 								app_rd_en       	,
+	output 	reg  [18 :0]						app_rd_addr     	,
+	input	wire 								sdr_rd_en       	,
+	input  	wire [31 :0]						sdr_rd_dout         ,
+	input   wire  								sdr_busy
 );
 
 localparam S_IDLE       = 2'h0;
@@ -272,7 +272,7 @@ end
 
 assign fdma_wvalid  = wr_en;//For anlogic FPGA, fdma_wvalid will be one cycle earlier than data
 assign app_wr_din   = fdma_wdata ;
-assign app_wr_dm    =2'b00;
+assign app_wr_dm    = 4'b0000;
 assign fdma_rvalid  = sdr_rd_en;
 assign fdma_rdata   = sdr_rd_dout;
 
@@ -288,9 +288,9 @@ begin
 	else if(sdr_init_done == 1'b1)
 	begin
 		app_wr_en   <= wr_en     ;
-		app_wr_addr <= {wr_addr,1'b0}   ;
+		app_wr_addr <= {wr_addr}   ;
 		app_rd_en   <= rd_en     ;
-		app_rd_addr <= {rd_addr,1'b0}    ;
+		app_rd_addr <= {rd_addr}    ;
 	end
 	else
 	begin
