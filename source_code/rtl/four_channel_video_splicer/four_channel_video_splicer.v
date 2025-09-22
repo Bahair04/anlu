@@ -56,6 +56,69 @@ module four_channel_video_splicer
     input   wire                                fdma_rvalid
 );
 
+wire                            ds_vid_clk1 = vid_clk1;
+wire                            ds_vid_vs1;
+wire                            ds_vid_de1;
+wire    [VID_DATA_WIDTH-1:0]    ds_vid_data1;
+
+wire                            ds_vid_clk2 = vid_clk2;
+wire                            ds_vid_vs2;
+wire                            ds_vid_de2;
+wire    [VID_DATA_WIDTH-1:0]    ds_vid_data2;
+
+wire                            ds_vid_clk3 = vid_clk3;
+wire                            ds_vid_vs3;
+wire                            ds_vid_de3;
+wire    [VID_DATA_WIDTH-1:0]    ds_vid_data3;
+
+wire                            ds_vid_clk4 = vid_clk4;
+wire                            ds_vid_vs4;
+wire                            ds_vid_de4;
+wire    [VID_DATA_WIDTH-1:0]    ds_vid_data4;
+
+uidown_sample u_uidown_sample1(
+    .I_clk(vid_clk1),
+    .I_rstn(sdr_init_done),
+    .I_vid_vs(vid_vs1),
+    .I_vid_de(vid_de1),
+    .I_vid_data(vid_data1),
+    .O_vid_vs(ds_vid_vs1),
+    .O_vid_de(ds_vid_de1),
+    .O_vid_data(ds_vid_data1)
+);
+
+uidown_sample u_uidown_sample2(
+    .I_clk(vid_clk2),
+    .I_rstn(sdr_init_done),
+    .I_vid_vs(vid_vs2),
+    .I_vid_de(vid_de2),
+    .I_vid_data(vid_data2),
+    .O_vid_vs(ds_vid_vs2),
+    .O_vid_de(ds_vid_de2),
+    .O_vid_data(ds_vid_data2)
+);
+
+uidown_sample u_uidown_sample3(
+    .I_clk(vid_clk3),
+    .I_rstn(sdr_init_done),
+    .I_vid_vs(vid_vs3),
+    .I_vid_de(vid_de3),
+    .I_vid_data(vid_data3),
+    .O_vid_vs(ds_vid_vs3),
+    .O_vid_de(ds_vid_de3),
+    .O_vid_data(ds_vid_data3)
+);
+
+uidown_sample u_uidown_sample4(
+    .I_clk(vid_clk4),
+    .I_rstn(sdr_init_done),
+    .I_vid_vs(vid_vs4),
+    .I_vid_de(vid_de4),
+    .I_vid_data(vid_data4),
+    .O_vid_vs(ds_vid_vs4),
+    .O_vid_de(ds_vid_de4),
+    .O_vid_data(ds_vid_data4)
+);
 
 wire    [7 : 0]                     W_sync_cnt_o1;
 wire    [7 : 0]                     R_buf_i;
@@ -101,10 +164,10 @@ uidbuf #(
 u_uidbuf_1(
     .ui_clk       	(fdma_clk0     ),
     .ui_rstn      	(sdr_init_done ),
-    .W_wclk_i     	(vid_clk1      ),
-    .W_FS_i       	(vid_vs1       ),
-    .W_wren_i     	(vid_de1       ),
-    .W_data_i     	(vid_data1     ),
+    .W_wclk_i     	(ds_vid_clk1   ),
+    .W_FS_i       	(ds_vid_vs1    ),
+    .W_wren_i     	(ds_vid_de1    ),
+    .W_data_i     	(ds_vid_data1  ),
     .W_sync_cnt_o 	(W_sync_cnt_o1 ),
     .W_buf_i      	(W_sync_cnt_o1 ),
 
@@ -155,10 +218,10 @@ uidbuf #(
 u_uidbuf_2(
     .ui_clk       	(fdma_clk0     ),
     .ui_rstn      	(sdr_init_done ),
-    .W_wclk_i     	(vid_clk2      ),
-    .W_FS_i       	(vid_vs2       ),
-    .W_wren_i     	(vid_de2       ),
-    .W_data_i     	(vid_data2     ),
+    .W_wclk_i     	(ds_vid_clk2   ),
+    .W_FS_i       	(ds_vid_vs2    ),
+    .W_wren_i     	(ds_vid_de2    ),
+    .W_data_i     	(ds_vid_data2  ),
     .W_sync_cnt_o 	(W_sync_cnt_o2 ),
     .W_buf_i      	(W_sync_cnt_o2 ),
 
@@ -196,10 +259,10 @@ uidbuf #(
 u_uidbuf_3(
     .ui_clk       	(fdma_clk0     ),
     .ui_rstn      	(sdr_init_done ),
-    .W_wclk_i     	(vid_clk3      ),
-    .W_FS_i       	(vid_vs3       ),
-    .W_wren_i     	(vid_de3       ),
-    .W_data_i     	(vid_data3     ),
+    .W_wclk_i     	(ds_vid_clk3   ),
+    .W_FS_i       	(ds_vid_vs3    ),
+    .W_wren_i     	(ds_vid_de3    ),
+    .W_data_i     	(ds_vid_data3  ),
     .W_sync_cnt_o 	(W_sync_cnt_o3 ),
     .W_buf_i      	(W_sync_cnt_o3 ),
 
@@ -237,10 +300,10 @@ uidbuf #(
 u_uidbuf_4(
     .ui_clk       	(fdma_clk0     ),
     .ui_rstn      	(sdr_init_done ),
-    .W_wclk_i     	(vid_clk4      ),
-    .W_FS_i       	(vid_vs4       ),
-    .W_wren_i     	(vid_de4       ),
-    .W_data_i     	(vid_data4     ),
+    .W_wclk_i     	(ds_vid_clk4   ),
+    .W_FS_i       	(ds_vid_vs4    ),
+    .W_wren_i     	(ds_vid_de4    ),
+    .W_data_i     	(ds_vid_data4  ),
     .W_sync_cnt_o 	(W_sync_cnt_o4 ),
     .W_buf_i      	(W_sync_cnt_o4 ),
 
