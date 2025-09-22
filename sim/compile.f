@@ -1,0 +1,25 @@
+D:/University/AL_Proj/UDP_EG4_6.2/prj/UDP_EXAMPLE/al_ip/fdma_pll.v
+D:/University/AL_Proj/UDP_EG4_6.2/source_code/rtl/sdram/01_rtl/eg4d_sram_fdma_test.v
+D:/University/AL_Proj/UDP_EG4_6.2/source_code/rtl/sdram/01_rtl/fdma_ddr_test.v
+D:/University/AL_Proj/UDP_EG4_6.2/source_code/rtl/sdram/01_rtl/udp_fdma_ddr.v
+D:/University/AL_Proj/UDP_EG4_6.2/source_code/rtl/sdram/01_rtl/udp_fdma_ddr_rx_buff.v
+D:/University/AL_Proj/UDP_EG4_6.2/source_code/rtl/sdram/01_rtl/udp_fdma_ddr_tx_buff.v
+D:/University/AL_Proj/UDP_EG4_6.2/source_code/rtl/sdram/02_sim/IS42s32200.v
+D:/University/AL_Proj/UDP_EG4_6.2/source_code/rtl/sdram/02_sim/tb_udp_fdma_ddr.v
+D:/University/AL_Proj/UDP_EG4_6.2/source_code/rtl/sdram/03_ip/enc_file/sdr_as_ram.enc.v
+D:/University/AL_Proj/UDP_EG4_6.2/source_code/rtl/sdram/03_ip/enc_file/sdr_init_ref.enc.v
+D:/University/AL_Proj/UDP_EG4_6.2/source_code/rtl/sdram/03_ip/enc_file/sdr_wrrd.enc.v
+D:/University/AL_Proj/UDP_EG4_6.2/source_code/rtl/sdram/03_ip/pll/pll.v
+D:/University/AL_Proj/UDP_EG4_6.2/source_code/rtl/sdram/03_ip/uiappfdma/uiappfdma.v
+D:/University/AL_Proj/UDP_EG4_6.2/prj/UDP_EXAMPLE/al_ip/udp_fdma_ddr_rx_buff_fifo/udp_fdma_ddr_rx_buff_fifo.v
+D:/University/AL_Proj/UDP_EG4_6.2/prj/UDP_EXAMPLE/al_ip/udp_fdma_ddr_tx_buff_fifo/udp_fdma_ddr_tx_buff_fifo.v
+D:/University/AL_Proj/UDP_EG4_6.2/prj/UDP_EXAMPLE/al_ip/udp_fdma_ddr_wfifo/udp_fdma_ddr_wfifo.v
+D:/University/AL_Proj/UDP_EG4_6.2/prj/UDP_EXAMPLE/al_ip/udp_fdma_ddr_rx_buff_fifo/RTL/soft_fifo_d1bff0a755d3.v
+D:/University/AL_Proj/UDP_EG4_6.2/prj/UDP_EXAMPLE/al_ip/udp_fdma_ddr_tx_buff_fifo/RTL/soft_fifo_f2df10fddcf5.v
+D:/University/AL_Proj/UDP_EG4_6.2/prj/UDP_EXAMPLE/al_ip/udp_fdma_ddr_wfifo/RTL/soft_fifo_c558b4c715fa.v
+# source code
+D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_phy_config.v
+D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_phy_clk.v
+D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_phy_pll.v
+D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_phy_glbl.v
+D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/*.v

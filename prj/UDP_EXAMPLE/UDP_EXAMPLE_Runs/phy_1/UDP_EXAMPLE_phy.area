@@ -1,0 +1,116 @@
+standard
+***Report Model: UDP_Example_Top Device: EG4S20BG256***
+
+IO Statistics
+#IO                        25   out of    188   13.30%
+  #input                   13
+  #output                  11
+  #inout                    1
+
+Utilization Statistics
+#lut                      595   out of  19600    3.04%
+#reg                      249   out of  19600    1.27%
+#le                       638
+  #lut only               389   out of    638   60.97%
+  #reg only                43   out of    638    6.74%
+  #lut&reg                206   out of    638   32.29%
+#bram                       0   out of     64    0.00%
+  #bram9k                   0
+  #fifo9k                   0
+#bram32k                    0   out of     16    0.00%
+#dsp                        0   out of     29    0.00%
+#pad                       33   out of    188   17.55%
+  #ireg                     0
+  #oreg                     9
+  #treg                     0
+#pll                        1   out of      4   25.00%
+#gclk                       2   out of     16   12.50%
+
+
+Detailed IO Report
+
+      Name         Direction    Location    IOStandard    IOType    DriveStrength    PullType    PackReg  
+     clk_50          INPUT         R7        LVCMOS33      PAD           N/A           NONE       NONE    
+  cmos_data[7]       INPUT        L10        LVCMOS33      PAD           N/A          PULLUP      NONE    
+  cmos_data[6]       INPUT        E15        LVCMOS33      PAD           N/A          PULLUP      NONE    
+  cmos_data[5]       INPUT        D16        LVCMOS33      PAD           N/A          PULLUP      NONE    
+  cmos_data[4]       INPUT        F15        LVCMOS33      PAD           N/A          PULLUP      NONE    
+  cmos_data[3]       INPUT        F14        LVCMOS33      PAD           N/A          PULLUP      NONE    
+  cmos_data[2]       INPUT        G14        LVCMOS33      PAD           N/A          PULLUP      NONE    
+  cmos_data[1]       INPUT        G16        LVCMOS33      PAD           N/A          PULLUP      NONE    
+  cmos_data[0]       INPUT        J16        LVCMOS33      PAD           N/A          PULLUP      NONE    
+    cmos_href        INPUT        H15        LVCMOS33      PAD           N/A          PULLUP      NONE    
+    cmos_pclk        INPUT        M10        LVCMOS33      PAD           N/A          PULLUP      NONE    
+   cmos_vsync        INPUT        K16        LVCMOS33      PAD           N/A          PULLUP      NONE    
+      rstn           INPUT         B2        LVCMOS33      PAD           N/A           NONE       NONE    
+   HDMI_CLK_N       OUTPUT         K1         LVDS33       PAD           NA            NONE       DDRX1   
+  HDMI_CLK_N(n)     OUTPUT         J1         LVDS33       PAD           NA            NONE       NONE    
+   HDMI_CLK_P       OUTPUT         C3         LVDS33       PAD           NA            NONE       DDRX1   
+  HDMI_CLK_P(n)     OUTPUT         C2         LVDS33       PAD           NA            NONE       NONE    
+    HDMI_D0_N       OUTPUT         F5         LVDS33       PAD           NA            NONE       DDRX1   
+  HDMI_D0_N(n)      OUTPUT         F4         LVDS33       PAD           NA            NONE       NONE    
+    HDMI_D0_P       OUTPUT         G5         LVDS33       PAD           NA            NONE       DDRX1   
+  HDMI_D0_P(n)      OUTPUT         G6         LVDS33       PAD           NA            NONE       NONE    
+    HDMI_D1_N       OUTPUT         E3         LVDS33       PAD           NA            NONE       DDRX1   
+  HDMI_D1_N(n)      OUTPUT         E4         LVDS33       PAD           NA            NONE       NONE    
+    HDMI_D1_P       OUTPUT         F1         LVDS33       PAD           NA            NONE       DDRX1   
+  HDMI_D1_P(n)      OUTPUT         F2         LVDS33       PAD           NA            NONE       NONE    
+    HDMI_D2_N       OUTPUT         B3         LVDS33       PAD           NA            NONE       DDRX1   
+  HDMI_D2_N(n)      OUTPUT         D3         LVDS33       PAD           NA            NONE       NONE    
+    HDMI_D2_P       OUTPUT         E1         LVDS33       PAD           NA            NONE       DDRX1   
+  HDMI_D2_P(n)      OUTPUT         D1         LVDS33       PAD           NA            NONE       NONE    
+    cmos_pwdn       OUTPUT        P11        LVCMOS33      PAD            8            NONE       NONE    
+   cmos_reset       OUTPUT        K15        LVCMOS33      PAD            8            NONE       NONE    
+    cmos_scl        OUTPUT        M16        LVCMOS33      PAD            8            NONE       OREG    
+    cmos_sda         INOUT        H16        LVCMOS33      PAD            8           PULLUP      NONE    
+
+Report Clock Domain Luts:
+
+--------------------------------------------------------------------------------------------------------------------------------------
+  Index   |  Name                             |  Frequency   |  LUT As Logic   |  LUT As Shifter   |  LUT As Dram   |  BRAM   |  DSP
+--------------------------------------------------------------------------------------------------------------------------------------
+  #1      |  clk_in                           |  50MHz       |  171            |  0                |  0             |  0      |  0
+  #2      |  u_PLL_HDMI_CLK/pll_inst.clkc[0]  |  62MHz       |  67             |  0                |  0             |  0      |  0
+  #3      |  u_PLL_HDMI_CLK/pll_inst.clkc[1]  |  312MHz      |  21             |  0                |  0             |  0      |  0
+--------------------------------------------------------------------------------------------------------------------------------------
+
+Clock Resource Statistics
+Index     ClockNet                                       Type               DriverType         Driver                                          Fanout
+#1        u_PLL_HDMI_CLK/clk0_buf                        Global             pll                u_PLL_HDMI_CLK/pll_inst.clkc0                   70
+#2        clk_50_dup_1                                   Global             io                 clk_50_syn_2.di                                 66
+#3        uihdmitx_inst/Inst_DVITransmitter/PCLK_X5_I    Global             pll                u_PLL_HDMI_CLK/pll_inst.clkc1                   37
+#4        u_uicfg5640/uii2c_inst/scl_clk                 Global             mslice             u_uicfg5640/uii2c_inst/scl_clk_reg_syn_17.q0    16
+
+Report Hierarchy Area:
++------------------------------------------------------------------------------------------------------------+
+|Instance                         |Module              |le      |lut     |ripple  |seq     |bram    |dsp     |
++------------------------------------------------------------------------------------------------------------+
+|top                              |UDP_Example_Top     |638     |584     |11      |258     |0       |0       |
+|  u_PLL_HDMI_CLK                 |PLL_HDMI_CLK        |0       |0       |0       |0       |0       |0       |
+|  u_uicfg5640                    |uicfg5640           |414     |414     |0       |92      |0       |0       |
+|    uii2c_inst                   |uii2c               |67      |67      |0       |34      |0       |0       |
+|  u_uitpg                        |uitpg_static        |35      |28      |4       |19      |0       |0       |
+|  uihdmitx_inst                  |uihdmitx            |137     |97      |0       |108     |0       |0       |
+|    Inst_DVITransmitter          |DVITransmitter      |137     |97      |0       |108     |0       |0       |
+|      Inst_TMDSEncoder_blue      |TMDSEncoder         |27      |22      |0       |18      |0       |0       |
+|      Inst_TMDSEncoder_green     |TMDSEncoder         |30      |24      |0       |18      |0       |0       |
+|      Inst_TMDSEncoder_red       |TMDSEncoder         |25      |23      |0       |17      |0       |0       |
+|      Inst_blue_serializer_10_1  |Serial_N_1_lvds_dat |22      |11      |0       |22      |0       |0       |
+|      Inst_clk_serializer_10_1   |Serial_N_1_lvds     |6       |2       |0       |6       |0       |0       |
+|      Inst_green_serializer_10_1 |Serial_N_1_lvds_dat |16      |8       |0       |16      |0       |0       |
+|      Inst_red_serializer_10_1   |Serial_N_1_lvds_dat |11      |7       |0       |11      |0       |0       |
+|  uivtc_inst                     |uivtc               |52      |45      |7       |30      |0       |0       |
++------------------------------------------------------------------------------------------------------------+
+
+
+DataNet Average Fanout:
+
+   Index     Fanout    Nets  
+    #1         1       305   
+    #2         2       106   
+    #3         3        54   
+    #4         4        53   
+    #5        5-10      60   
+    #6       11-50      29   
+    #7       51-100     5    
+  Average     3.98           

@@ -1,0 +1,714 @@
+============================================================
+   Tang Dynasty, V6.2.168116
+   Copyright (c) 2012-2025 Anlogic Inc.
+   Executable = D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/bin/run.exe
+   Built at =   16:32:07 Jun 12 2025
+   Run by =     1
+   Run Date =   Mon Sep 22 09:11:29 2025
+
+   Run on =     LAPTOP-EUGMKLPQ
+============================================================
+RUN-1002 : start command "import_device eagle_s20.db -package EG4S20BG256"
+RUN-1001 : Using default speed grade: NA
+ARC-1001 : Device Initialization.
+ARC-1001 : ------------------------------------------------------------------
+ARC-1001 :            OPTION            |          IO          |   SETTING   
+ARC-1001 : ------------------------------------------------------------------
+ARC-1001 :   cso_b/cclk/mosi/miso/dout  |  T3/R11/T10/P10/S11  |    gpio    
+ARC-1001 :             done             |         P13          |    gpio    
+ARC-1001 :           program_b          |          T2          |  dedicate  
+ARC-1001 :        tdi/tms/tck/tdo       |   C12/A15/C14/E14    |  dedicate  
+ARC-1001 : ------------------------------------------------------------------
+ARC-1004 : Device setting, marked 5 dedicate IOs in total.
+RUN-1002 : start command "open_project UDP_EXAMPLE.prj"
+RUN-1002 : start command "commit_param -step design"
+RUN-1001 : Print Global Property
+RUN-1001 : --------------------------------------------------------
+RUN-1001 :   Parameters   |  Settings  |  Default Values  |  Note  
+RUN-1001 : --------------------------------------------------------
+RUN-1001 :   enable_seed  |    off     |       off        |        
+RUN-1001 :     message    |  standard  |     standard     |        
+RUN-1001 :   qor_monitor  |     on     |        on        |        
+RUN-1001 :   syn_ip_flow  |    off     |       off        |        
+RUN-1001 :     thread     |    auto    |       auto       |        
+RUN-1001 : --------------------------------------------------------
+RUN-1001 : Print Design Property
+RUN-1001 : ----------------------------------------------------------------
+RUN-1001 :       Parameters       |  Settings  |  Default Values  |  Note  
+RUN-1001 : ----------------------------------------------------------------
+RUN-1001 :   default_reg_initial  |    auto    |       auto       |        
+RUN-1001 :    hdl_warning_level   |   normal   |      normal      |        
+RUN-1001 : ----------------------------------------------------------------
+HDL-1007 : analyze verilog file ../../al_ip/ChipWatcher_0/RTL/ChipWatcher_7244eeadc913.sv
+HDL-1007 : analyze verilog file ../../al_ip/ChipWatcher_0/ChipWatcher_0.sv
+HDL-1007 : analyze verilog file ../../al_ip/ChipWatcher_ov5640/RTL/ChipWatcher_c1d7b979fda0.sv
+HDL-1007 : analyze verilog file ../../al_ip/ChipWatcher_ov5640/ChipWatcher_ov5640.sv
+HDL-1007 : analyze verilog file ../../al_ip/ChipWatcher_udp/RTL/ChipWatcher_0ab6c5a2fd02.sv
+HDL-1007 : analyze verilog file ../../al_ip/ChipWatcher_udp/ChipWatcher_udp.sv
+HDL-1007 : analyze verilog file ../../al_ip/ChipWatcher_uidbuf/RTL/ChipWatcher_c3b5d90bce19.sv
+HDL-1007 : analyze verilog file ../../al_ip/ChipWatcher_uidbuf/ChipWatcher_uidbuf.sv
+HDL-1007 : analyze verilog file ../../al_ip/PLL_HDMI_CLK.v
+HDL-1007 : undeclared symbol 'PLL_HDMI_CLK_open0', assumed default net type 'wire' in ../../al_ip/PLL_HDMI_CLK.v(78)
+HDL-1007 : undeclared symbol 'PLL_HDMI_CLK_open8', assumed default net type 'wire' in ../../al_ip/PLL_HDMI_CLK.v(84)
+HDL-1007 : undeclared symbol 'PLL_HDMI_CLK_open7', assumed default net type 'wire' in ../../al_ip/PLL_HDMI_CLK.v(84)
+HDL-1007 : undeclared symbol 'PLL_HDMI_CLK_open6', assumed default net type 'wire' in ../../al_ip/PLL_HDMI_CLK.v(84)
+HDL-1007 : undeclared symbol 'PLL_HDMI_CLK_open5', assumed default net type 'wire' in ../../al_ip/PLL_HDMI_CLK.v(84)
+HDL-1007 : undeclared symbol 'PLL_HDMI_CLK_open4', assumed default net type 'wire' in ../../al_ip/PLL_HDMI_CLK.v(84)
+HDL-1007 : undeclared symbol 'PLL_HDMI_CLK_open3', assumed default net type 'wire' in ../../al_ip/PLL_HDMI_CLK.v(84)
+HDL-1007 : undeclared symbol 'PLL_HDMI_CLK_open2', assumed default net type 'wire' in ../../al_ip/PLL_HDMI_CLK.v(84)
+HDL-1007 : undeclared symbol 'PLL_HDMI_CLK_open1', assumed default net type 'wire' in ../../al_ip/PLL_HDMI_CLK.v(84)
+HDL-1007 : undeclared symbol 'PLL_HDMI_CLK_open11', assumed default net type 'wire' in ../../al_ip/PLL_HDMI_CLK.v(86)
+HDL-1007 : undeclared symbol 'PLL_HDMI_CLK_open10', assumed default net type 'wire' in ../../al_ip/PLL_HDMI_CLK.v(86)
+HDL-1007 : undeclared symbol 'PLL_HDMI_CLK_open9', assumed default net type 'wire' in ../../al_ip/PLL_HDMI_CLK.v(86)
+HDL-1007 : analyze verilog file ../../al_ip/TEMAC_CORE/RTL/mac_core_aead6cd6dadd.v
+HDL-1007 : analyze verilog file ../../al_ip/TEMAC_CORE/RTL/TEMAC_CORE_aead6cd6dadd.v
+Copyright (c) 1998-2019 The OpenSSL Project.  All rights reserved.
+This product includes software developed by the OpenSSL Project
+for use in the OpenSSL Toolkit (http://www.openssl.org/)
+Copyright (C) 1995-1998 Eric Young (eay@cryptsoft.com)
+All rights reserved.
+This product includes cryptographic software written by Eric Young (eay@cryptsoft.com)
+HDL-5007 WARNING: column 1032 exceeds maximum value 1023 in ../../al_ip/TEMAC_CORE/RTL/TEMAC_CORE_aead6cd6dadd.v(30)
+HDL-1007 : back to file '../../al_ip/TEMAC_CORE/RTL/TEMAC_CORE_aead6cd6dadd.v' in ../../al_ip/TEMAC_CORE/RTL/TEMAC_CORE_aead6cd6dadd.v(86)
+HDL-5007 WARNING: event expressions must result in a singular type in ../../al_ip/TEMAC_CORE/RTL/TEMAC_CORE_aead6cd6dadd.v(3001)
+HDL-1007 : undeclared symbol '**', assumed default net type '**' in ../../al_ip/TEMAC_CORE/RTL/TEMAC_CORE_aead6cd6dadd.v(5050)
+HDL-1007 : undeclared symbol '**', assumed default net type '**' in ../../al_ip/TEMAC_CORE/RTL/TEMAC_CORE_aead6cd6dadd.v(5458)
+HDL-5007 WARNING: column 1035 exceeds maximum value 1023 in ../../al_ip/TEMAC_CORE/RTL/TEMAC_CORE_aead6cd6dadd.v(6001)
+HDL-1007 : back to file '../../al_ip/TEMAC_CORE/RTL/TEMAC_CORE_aead6cd6dadd.v' in ../../al_ip/TEMAC_CORE/RTL/TEMAC_CORE_aead6cd6dadd.v(260)
+HDL-1007 : analyze verilog file ../../al_ip/TEMAC_CORE/TEMAC_CORE.v
+HDL-1007 : analyze verilog file ../../al_ip/fdma_pll.v
+HDL-1007 : undeclared symbol 'fdma_pll_open0', assumed default net type 'wire' in ../../al_ip/fdma_pll.v(85)
+HDL-1007 : undeclared symbol 'fdma_pll_open8', assumed default net type 'wire' in ../../al_ip/fdma_pll.v(91)
+HDL-1007 : undeclared symbol 'fdma_pll_open7', assumed default net type 'wire' in ../../al_ip/fdma_pll.v(91)
+HDL-1007 : undeclared symbol 'fdma_pll_open6', assumed default net type 'wire' in ../../al_ip/fdma_pll.v(91)
+HDL-1007 : undeclared symbol 'fdma_pll_open5', assumed default net type 'wire' in ../../al_ip/fdma_pll.v(91)
+HDL-1007 : undeclared symbol 'fdma_pll_open4', assumed default net type 'wire' in ../../al_ip/fdma_pll.v(91)
+HDL-1007 : undeclared symbol 'fdma_pll_open3', assumed default net type 'wire' in ../../al_ip/fdma_pll.v(91)
+HDL-1007 : undeclared symbol 'fdma_pll_open2', assumed default net type 'wire' in ../../al_ip/fdma_pll.v(91)
+HDL-1007 : undeclared symbol 'fdma_pll_open1', assumed default net type 'wire' in ../../al_ip/fdma_pll.v(91)
+HDL-1007 : undeclared symbol 'fdma_pll_open10', assumed default net type 'wire' in ../../al_ip/fdma_pll.v(93)
+HDL-1007 : undeclared symbol 'fdma_pll_open9', assumed default net type 'wire' in ../../al_ip/fdma_pll.v(93)
+HDL-1007 : analyze verilog file ../../al_ip/pll_gen.v
+HDL-1007 : undeclared symbol 'pll_gen_open0', assumed default net type 'wire' in ../../al_ip/pll_gen.v(99)
+HDL-1007 : undeclared symbol 'pll_gen_open8', assumed default net type 'wire' in ../../al_ip/pll_gen.v(105)
+HDL-1007 : undeclared symbol 'pll_gen_open7', assumed default net type 'wire' in ../../al_ip/pll_gen.v(105)
+HDL-1007 : undeclared symbol 'pll_gen_open6', assumed default net type 'wire' in ../../al_ip/pll_gen.v(105)
+HDL-1007 : undeclared symbol 'pll_gen_open5', assumed default net type 'wire' in ../../al_ip/pll_gen.v(105)
+HDL-1007 : undeclared symbol 'pll_gen_open4', assumed default net type 'wire' in ../../al_ip/pll_gen.v(105)
+HDL-1007 : undeclared symbol 'pll_gen_open3', assumed default net type 'wire' in ../../al_ip/pll_gen.v(105)
+HDL-1007 : undeclared symbol 'pll_gen_open2', assumed default net type 'wire' in ../../al_ip/pll_gen.v(105)
+HDL-1007 : undeclared symbol 'pll_gen_open1', assumed default net type 'wire' in ../../al_ip/pll_gen.v(105)
+HDL-1007 : analyze verilog file ../../al_ip/udp_fdma_ddr_rx_buff_fifo/RTL/soft_fifo_d1bff0a755d3.v
+HDL-5007 WARNING: block identifier is required on this block in ../../al_ip/udp_fdma_ddr_rx_buff_fifo/RTL/soft_fifo_d1bff0a755d3.v(509)
+HDL-1007 : back to file '../../al_ip/udp_fdma_ddr_rx_buff_fifo/RTL/soft_fifo_d1bff0a755d3.v' in ../../al_ip/udp_fdma_ddr_rx_buff_fifo/RTL/soft_fifo_d1bff0a755d3.v(1)
+HDL-1007 : analyze verilog file ../../al_ip/udp_fdma_ddr_rx_buff_fifo/udp_fdma_ddr_rx_buff_fifo.v
+HDL-1007 : analyze verilog file ../../al_ip/udp_fdma_ddr_tx_buff_fifo/RTL/soft_fifo_f2df10fddcf5.v
+HDL-5007 WARNING: block identifier is required on this block in ../../al_ip/udp_fdma_ddr_tx_buff_fifo/RTL/soft_fifo_f2df10fddcf5.v(509)
+HDL-1007 : back to file '../../al_ip/udp_fdma_ddr_tx_buff_fifo/RTL/soft_fifo_f2df10fddcf5.v' in ../../al_ip/udp_fdma_ddr_tx_buff_fifo/RTL/soft_fifo_f2df10fddcf5.v(1)
+HDL-1007 : analyze verilog file ../../al_ip/udp_fdma_ddr_tx_buff_fifo/udp_fdma_ddr_tx_buff_fifo.v
+HDL-1007 : analyze verilog file ../../al_ip/udp_fdma_ddr_wfifo/RTL/soft_fifo_c558b4c715fa.v
+HDL-5007 WARNING: block identifier is required on this block in ../../al_ip/udp_fdma_ddr_wfifo/RTL/soft_fifo_c558b4c715fa.v(509)
+HDL-1007 : back to file '../../al_ip/udp_fdma_ddr_wfifo/RTL/soft_fifo_c558b4c715fa.v' in ../../al_ip/udp_fdma_ddr_wfifo/RTL/soft_fifo_c558b4c715fa.v(1)
+HDL-1007 : analyze verilog file ../../al_ip/udp_fdma_ddr_wfifo/udp_fdma_ddr_wfifo.v
+HDL-1007 : analyze verilog file ../../../../source_code/rtl/UDP_Example_Top.v
+HDL-1007 : analyze included file ../../../../source_code/rtl/HDMI/vga_parameter_cfg.v in ../../../../source_code/rtl/UDP_Example_Top.v(37)
+HDL-1007 : back to file '../../../../source_code/rtl/UDP_Example_Top.v' in ../../../../source_code/rtl/UDP_Example_Top.v(37)
+HDL-1007 : analyze VHDL file ../../../../source_code/rtl/HDMI/enc_file/DVITransmitter.enc.vhd
+HDL-1007 : analyze entity dvitransmitter in ../../../../source_code/rtl/HDMI/enc_file/DVITransmitter.enc.vhd(13)
+HDL-1007 : analyze architecture ** in ../../../../source_code/rtl/HDMI/enc_file/DVITransmitter.enc.vhd(2)
+HDL-1007 : analyze VHDL file ../../../../source_code/rtl/HDMI/enc_file/SerializerN_1_lvds.enc.vhd
+HDL-1007 : analyze entity ** in ../../../../source_code/rtl/HDMI/enc_file/SerializerN_1_lvds.enc.vhd(12)
+HDL-1007 : analyze architecture ** in ../../../../source_code/rtl/HDMI/enc_file/SerializerN_1_lvds.enc.vhd(25)
+HDL-1007 : analyze VHDL file ../../../../source_code/rtl/HDMI/enc_file/SerializerN_1_lvds_dat.enc.vhd
+HDL-1007 : analyze entity ** in ../../../../source_code/rtl/HDMI/enc_file/SerializerN_1_lvds_dat.enc.vhd(14)
+HDL-1007 : analyze architecture ** in ../../../../source_code/rtl/HDMI/enc_file/SerializerN_1_lvds_dat.enc.vhd(28)
+HDL-1007 : analyze VHDL file ../../../../source_code/rtl/HDMI/enc_file/TMDSEncoder.enc.vhd
+HDL-1007 : analyze entity ** in ../../../../source_code/rtl/HDMI/enc_file/TMDSEncoder.enc.vhd(13)
+HDL-1007 : analyze architecture ** in ../../../../source_code/rtl/HDMI/enc_file/TMDSEncoder.enc.vhd(24)
+HDL-1007 : analyze verilog file ../../../../source_code/rtl/uiov5640cfg/ui5640reg.v
+HDL-1007 : analyze verilog file ../../../../source_code/rtl/uiov5640cfg/uicfg5640.v
+HDL-1007 : undeclared symbol 'iic_busy', assumed default net type 'wire' in ../../../../source_code/rtl/uiov5640cfg/uicfg5640.v(116)
+HDL-5370 WARNING: parameter 'DEVID' becomes localparam in 'uicfg5640' with formal parameter declaration list in ../../../../source_code/rtl/uiov5640cfg/uicfg5640.v(41)
+HDL-1007 : analyze verilog file ../../../../source_code/rtl/uiov5640cfg/uii2c.v
+HDL-5372 WARNING: redeclaration of ANSI port 'iic_busy' is not allowed in ../../../../source_code/rtl/uiov5640cfg/uii2c.v(73)
+HDL-5370 WARNING: parameter 'IDLE' becomes localparam in 'uii2c' with formal parameter declaration list in ../../../../source_code/rtl/uiov5640cfg/uii2c.v(48)
+HDL-5370 WARNING: parameter 'START' becomes localparam in 'uii2c' with formal parameter declaration list in ../../../../source_code/rtl/uiov5640cfg/uii2c.v(49)
+HDL-5370 WARNING: parameter 'W_WAIT' becomes localparam in 'uii2c' with formal parameter declaration list in ../../../../source_code/rtl/uiov5640cfg/uii2c.v(50)
+HDL-5370 WARNING: parameter 'W_ACK' becomes localparam in 'uii2c' with formal parameter declaration list in ../../../../source_code/rtl/uiov5640cfg/uii2c.v(51)
+HDL-5370 WARNING: parameter 'R_WAIT' becomes localparam in 'uii2c' with formal parameter declaration list in ../../../../source_code/rtl/uiov5640cfg/uii2c.v(52)
+HDL-5370 WARNING: parameter 'R_ACK' becomes localparam in 'uii2c' with formal parameter declaration list in ../../../../source_code/rtl/uiov5640cfg/uii2c.v(53)
+HDL-5370 WARNING: parameter 'STOP1' becomes localparam in 'uii2c' with formal parameter declaration list in ../../../../source_code/rtl/uiov5640cfg/uii2c.v(54)
+HDL-5370 WARNING: parameter 'STOP2' becomes localparam in 'uii2c' with formal parameter declaration list in ../../../../source_code/rtl/uiov5640cfg/uii2c.v(55)
+HDL-5370 WARNING: parameter 'OFFSET' becomes localparam in 'uii2c' with formal parameter declaration list in ../../../../source_code/rtl/uiov5640cfg/uii2c.v(70)
+HDL-1007 : analyze verilog file ../../../../source_code/rtl/uiov5640cfg/uiSensorRGB565.v
+HDL-1007 : analyze verilog file ../../../../source_code/rtl/uivtc/uivtc.v
+HDL-1007 : analyze VHDL file ../../../../source_code/rtl/al_ui_hdmi_tx/hdmi_tx.vhd
+HDL-1007 : analyze entity uihdmitx in ../../../../source_code/rtl/al_ui_hdmi_tx/hdmi_tx.vhd(11)
+HDL-1007 : analyze architecture behavioral in ../../../../source_code/rtl/al_ui_hdmi_tx/hdmi_tx.vhd(32)
+HDL-1007 : analyze verilog file ../../../../source_code/rtl/uitpg/uitpg_static.v
+PRJ-1401 : Successfully analyzed 32 source files.
+RUN-1002 : start command "set_param flow readback_eram_speed 1"
+RUN-1002 : start command "set_param gate map_opt_area high"
+RUN-1002 : start command "set_param gate mapmacro_opt_timing high"
+RUN-1002 : start command "commit_param -step design"
+RUN-1001 : Print Global Property
+RUN-1001 : --------------------------------------------------------
+RUN-1001 :   Parameters   |  Settings  |  Default Values  |  Note  
+RUN-1001 : --------------------------------------------------------
+RUN-1001 :   enable_seed  |    off     |       off        |        
+RUN-1001 :     message    |  standard  |     standard     |        
+RUN-1001 :   qor_monitor  |     on     |        on        |        
+RUN-1001 :   syn_ip_flow  |    off     |       off        |        
+RUN-1001 :     thread     |    auto    |       auto       |        
+RUN-1001 : --------------------------------------------------------
+RUN-1001 : Print Design Property
+RUN-1001 : ----------------------------------------------------------------
+RUN-1001 :       Parameters       |  Settings  |  Default Values  |  Note  
+RUN-1001 : ----------------------------------------------------------------
+RUN-1001 :   default_reg_initial  |    auto    |       auto       |        
+RUN-1001 :    hdl_warning_level   |   normal   |      normal      |        
+RUN-1001 : ----------------------------------------------------------------
+RUN-1002 : start command "elaborate -top UDP_Example_Top"
+HDL-1007 : elaborate module UDP_Example_Top in ../../../../source_code/rtl/UDP_Example_Top.v(38)
+HDL-1007 : port 'sda_dg' remains unconnected for this instance in ../../../../source_code/rtl/uiov5640cfg/uicfg5640.v(98)
+HDL-1007 : elaborate module uicfg5640(CLK_DIV=239) in ../../../../source_code/rtl/uiov5640cfg/uicfg5640.v(29)
+HDL-1007 : elaborate module uii2c(WMEN_LEN=5,RMEN_LEN=1,CLK_DIV=239) in ../../../../source_code/rtl/uiov5640cfg/uii2c.v(27)
+HDL-5314 WARNING: net 'sda_i' does not have a driver in ../../../../source_code/rtl/uiov5640cfg/uii2c.v(83)
+HDL-5007 WARNING: actual bit length 32 differs from formal bit length 40 for port 'wr_data' in ../../../../source_code/rtl/uiov5640cfg/uicfg5640.v(110)
+HDL-1007 : elaborate module ui5640reg in ../../../../source_code/rtl/uiov5640cfg/ui5640reg.v(28)
+HDL-5007 WARNING: actual bit length 24 differs from formal bit length 32 for port 'REG_DATA' in ../../../../source_code/rtl/uiov5640cfg/uicfg5640.v(125)
+HDL-1007 : elaborate module uiSensorRGB565 in ../../../../source_code/rtl/uiov5640cfg/uiSensorRGB565.v(30)
+HDL-1007 : elaborate module PLL_HDMI_CLK in ../../al_ip/PLL_HDMI_CLK.v(23)
+HDL-1007 : elaborate module EG_LOGIC_BUFG in D:\Anlogic\TD_6.2.1_Engineer_6.2.168.116\arch/eagle_macro.v(5)
+HDL-1007 : elaborate module EG_PHY_PLL(FIN="50.000000",REFCLK_DIV=4,FBCLK_DIV=5,CLKC0_DIV=15,CLKC1_DIV=3,CLKC0_ENABLE="ENABLE",CLKC1_ENABLE="ENABLE",FEEDBK_PATH="CLKC0_EXT",STDBY_ENABLE="DISABLE",CLKC0_CPHASE=14,CLKC1_CPHASE=2,GMC_GAIN=0,ICP_CURRENT=9,KVCO=2,LPF_CAPACITOR=2,LPF_RESISTOR=8,SYNC_ENABLE="DISABLE") in D:\Anlogic\TD_6.2.1_Engineer_6.2.168.116\arch/eagle_macro.v(889)
+HDL-1007 : elaborate module uivtc(H_FrameSize=1344,H_SyncStart=1184,H_SyncEnd=1320,V_ActiveSize=768,V_FrameSize=806,V_SyncStart=797,V_SyncEnd=803,H2_ActiveSize=32'b01000000000,V2_ActiveSize=32'b0110000000) in ../../../../source_code/rtl/uivtc/uivtc.v(30)
+HDL-1007 : elaborate module uitpg_static in ../../../../source_code/rtl/uitpg/uitpg_static.v(1)
+HDL-1007 : switch to vhdl to elaborate module uihdmitx in ../../../../source_code/rtl/UDP_Example_Top.v(183)
+HDL-1007 : elaborate uihdmitx(1,3)(Behavioral) in ../../../../source_code/rtl/al_ui_hdmi_tx/hdmi_tx.vhd(11)
+HDL-1007 : elaborate DVITransmitter(1,3)(Behavioral) in ../../../../source_code/rtl/HDMI/enc_file/DVITransmitter.enc.vhd(13)
+HDL-1007 : elaborate **(**) in ../../../../source_code/rtl/HDMI/enc_file/TMDSEncoder.enc.vhd(13)
+HDL-1007 : elaborate **(**) in ../../../../source_code/rtl/HDMI/enc_file/SerializerN_1_lvds.enc.vhd(12)
+HDL-1007 : elaborate EG_LOGIC_ODDR(1,6)(rtl) in D:\Anlogic\TD_6.2.1_Engineer_6.2.168.116\arch/eagle_macro.vhd(1399)
+HDL-1007 : elaborate **(**) in ../../../../source_code/rtl/HDMI/enc_file/SerializerN_1_lvds_dat.enc.vhd(14)
+HDL-1007 : back to vlog to elaborate in ../../../../source_code/rtl/UDP_Example_Top.v(183)
+HDL-5001 WARNING: Contains anonymous inst(s) and/or net(s) that have not been renamed
+HDL-5001 WARNING: Contains anonymous inst(s) and/or net(s) that have not been renamed
+HDL-5001 WARNING: Contains anonymous inst(s) and/or net(s) that have not been renamed
+HDL-5001 WARNING: Contains anonymous inst(s) and/or net(s) that have not been renamed
+HDL-5001 WARNING: Contains anonymous inst(s) and/or net(s) that have not been renamed
+HDL-1200 : Current top model is UDP_Example_Top
+HDL-5106 WARNING: Initial value omitted on non-DFF net "scl_r" in ../../../../source_code/rtl/uiov5640cfg/uii2c.v(91) 
+HDL-5106 WARNING: Initial value omitted on non-DFF net "sda_o" in ../../../../source_code/rtl/uiov5640cfg/uii2c.v(98) 
+HDL-5106 WARNING: Initial value omitted on non-DFF net "cnt_t[4]" in ../../../../source_code/rtl/HDMI/enc_file/TMDSEncoder.enc.vhd(0) 
+HDL-5106 WARNING: Initial value omitted on non-DFF net "cnt_t[3]" in ../../../../source_code/rtl/HDMI/enc_file/TMDSEncoder.enc.vhd(0) 
+HDL-5106 WARNING: Initial value omitted on non-DFF net "cnt_t[2]" in ../../../../source_code/rtl/HDMI/enc_file/TMDSEncoder.enc.vhd(0) 
+HDL-5106 WARNING: Initial value omitted on non-DFF net "cnt_t[1]" in ../../../../source_code/rtl/HDMI/enc_file/TMDSEncoder.enc.vhd(0) 
+HDL-5106 WARNING: Initial value omitted on non-DFF net "cnt_t[0]" in ../../../../source_code/rtl/HDMI/enc_file/TMDSEncoder.enc.vhd(0) 
+HDL-5106 WARNING: Initial value omitted on non-DFF net "dc_bias[4]" in D:\Anlogic\TD_6.2.1_Engineer_6.2.168.116\packages/std_logic_arith.vhd(1071) 
+HDL-5106 WARNING: Initial value omitted on non-DFF net "dc_bias[3]" in D:\Anlogic\TD_6.2.1_Engineer_6.2.168.116\packages/std_logic_arith.vhd(1071) 
+HDL-5106 WARNING: Initial value omitted on non-DFF net "dc_bias[2]" in D:\Anlogic\TD_6.2.1_Engineer_6.2.168.116\packages/std_logic_arith.vhd(1071) 
+HDL-5106 Similar messages will be suppressed.
+HDL-1100 : Inferred 0 RAMs.
+RUN-1002 : start command "read_adc ../../../../source_code/constraints/UDP.adc"
+RUN-1002 : start command "set_pin_assignment  HDMI_CLK_N   LOCATION = K1; IOSTANDARD = LVDS33; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  HDMI_CLK_P   LOCATION = C3; IOSTANDARD = LVDS33; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  HDMI_D0_N   LOCATION = F5; IOSTANDARD = LVDS33; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  HDMI_D0_P   LOCATION = G5; IOSTANDARD = LVDS33; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  HDMI_D1_N   LOCATION = E3; IOSTANDARD = LVDS33; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  HDMI_D1_P   LOCATION = F1; IOSTANDARD = LVDS33; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  HDMI_D2_N   LOCATION = B3; IOSTANDARD = LVDS33; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  HDMI_D2_P   LOCATION = E1; IOSTANDARD = LVDS33; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  clk_50   LOCATION = R7; IOSTANDARD = LVCMOS33; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  cmos_data[0]   LOCATION = J16; IOSTANDARD = LVCMOS33; PULLTYPE = PULLUP; "
+RUN-1002 : start command "set_pin_assignment  cmos_data[1]   LOCATION = G16; IOSTANDARD = LVCMOS33; PULLTYPE = PULLUP; "
+RUN-1002 : start command "set_pin_assignment  cmos_data[2]   LOCATION = G14; IOSTANDARD = LVCMOS33; PULLTYPE = PULLUP; "
+RUN-1002 : start command "set_pin_assignment  cmos_data[3]   LOCATION = F14; IOSTANDARD = LVCMOS33; PULLTYPE = PULLUP; "
+RUN-1002 : start command "set_pin_assignment  cmos_data[4]   LOCATION = F15; IOSTANDARD = LVCMOS33; PULLTYPE = PULLUP; "
+RUN-1002 : start command "set_pin_assignment  cmos_data[5]   LOCATION = D16; IOSTANDARD = LVCMOS33; PULLTYPE = PULLUP; "
+RUN-1002 : start command "set_pin_assignment  cmos_data[6]   LOCATION = E15; IOSTANDARD = LVCMOS33; PULLTYPE = PULLUP; "
+RUN-1002 : start command "set_pin_assignment  cmos_data[7]   LOCATION = L10; IOSTANDARD = LVCMOS33; PULLTYPE = PULLUP; "
+RUN-1002 : start command "set_pin_assignment  cmos_href   LOCATION = H15; IOSTANDARD = LVCMOS33; PULLTYPE = PULLUP; "
+RUN-1002 : start command "set_pin_assignment  cmos_pclk   LOCATION = M10; IOSTANDARD = LVCMOS33; PULLTYPE = PULLUP; "
+RUN-1002 : start command "set_pin_assignment  cmos_pwdn   LOCATION = P11; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  cmos_reset   LOCATION = K15; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  cmos_scl   LOCATION = M16; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  cmos_sda   LOCATION = H16; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = PULLUP; "
+RUN-1002 : start command "set_pin_assignment  cmos_vsync   LOCATION = K16; IOSTANDARD = LVCMOS33; PULLTYPE = PULLUP; "
+RUN-1002 : start command "set_pin_assignment  rstn   LOCATION = B2; IOSTANDARD = LVCMOS33; PULLTYPE = NONE; "
+RUN-1001 : Starting of IO setups legality check.
+RUN-1001 : Starting of IO vref setups legality check.
+RUN-1002 : start command "read_sdc ../../../../source_code/constraints/UDP.sdc"
+RUN-1002 : start command "export_db UDP_EXAMPLE_elaborate.db"
+RUN-1001 : Exported flow parameters
+RUN-1001 : Exported /
+RUN-1001 : Exported libs
+RUN-1001 : Exported entities
+RUN-1001 : Exported ports
+RUN-1001 : Exported pins
+RUN-1001 : Exported instances
+RUN-1001 : Exported nets
+RUN-1001 : Exported buses
+RUN-1001 : Exported models
+RUN-1001 : Exported packer
+RUN-1001 : Exported congestions
+RUN-1001 : Exported violations
+RUN-1001 : Exported ATMR Setting
+RUN-1001 : Exported timing constraints
+RUN-1001 : Exported IO constraints
+RUN-1001 : Exported Inst constraints
+RUN-1001 : Exported ChipWatcher
+RUN-1002 : start command "commit_param -step rtl"
+RUN-1001 : Print Global Property
+RUN-1001 : --------------------------------------------------------
+RUN-1001 :   Parameters   |  Settings  |  Default Values  |  Note  
+RUN-1001 : --------------------------------------------------------
+RUN-1001 :   enable_seed  |    off     |       off        |        
+RUN-1001 :     message    |  standard  |     standard     |        
+RUN-1001 :   qor_monitor  |     on     |        on        |        
+RUN-1001 :   syn_ip_flow  |    off     |       off        |        
+RUN-1001 :     thread     |    auto    |       auto       |        
+RUN-1001 : --------------------------------------------------------
+RUN-1002 : start command "set_param rtl min_ripple_len 12"
+RUN-1001 : Print Rtl Property
+RUN-1001 : -------------------------------------------------------------------
+RUN-1001 :         Parameters        |  Settings  |  Default Values  |  Note  
+RUN-1001 : -------------------------------------------------------------------
+RUN-1001 :        fix_undriven       |     0      |        0         |        
+RUN-1001 :   gated_clock_conversion  |    off     |       off        |        
+RUN-1001 :         infer_fsm         |    auto    |       auto       |        
+RUN-1001 :         infer_gsr         |    off     |       off        |        
+RUN-1001 :         infer_rom         |     on     |        on        |        
+RUN-1001 :       keep_hierarchy      |    auto    |       auto       |        
+RUN-1001 :        merge_equal        |     on     |        on        |        
+RUN-1001 :      min_control_set      |     8      |        8         |        
+RUN-1001 :       min_ripple_len      |     12     |       auto       |   *    
+RUN-1001 :          seq_syn          |     on     |        on        |        
+RUN-1001 : -------------------------------------------------------------------
+RUN-1002 : start command "insert_debugger ../../chip_debugger"
+RUN-1002 : start command "optimize_rtl"
+RUN-1001 : Open license file D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/license/Anlogic.lic
+SYN-1001 : Stage 1 | Optimize RTL
+SYN-1001 : Stage 1.1 | Check Design Sanity
+SYN-1001 : End Stage 1.1 | Check Design Sanity; Time: 0.001328s wall, 0.000000s user + 0.000000s system = 0.000000s CPU (n/a%); Memory(MB): used = 137, reserved = 259, peak = 137;
+
+SYN-1079 : finish stage Check Design Sanity. Total instances: 10327, Total nets: 12101.
+
+SYN-1001 : Stage 1.2 | Initialize Design
+SYN-1001 : End Stage 1.2 | Initialize Design; Time: 0.194211s wall, 0.031250s user + 0.000000s system = 0.031250s CPU (16.1%); Memory(MB): used = 138, reserved = 259, peak = 138;
+
+SYN-1079 : finish stage Initialize Design. Total instances: 946, Total nets: 2633.
+
+SYN-1001 : Stage 1.3 | Flatten Module
+SYN-1011 : Flatten model UDP_Example_Top
+SYN-1001 : End Stage 1.3 | Flatten Module; Time: 0.017437s wall, 0.000000s user + 0.000000s system = 0.000000s CPU (n/a%); Memory(MB): used = 138, reserved = 259, peak = 138;
+
+SYN-1079 : finish stage Flatten Module. Total instances: 1168, Total nets: 2894.
+
+SYN-1001 : Stage 1.4 | Uniform Instance
+SYN-5025 WARNING: Using 0 for all undriven pins and nets
+SYN-1001 : End Stage 1.4 | Uniform Instance; Time: 0.003510s wall, 0.000000s user + 0.000000s system = 0.000000s CPU (n/a%); Memory(MB): used = 138, reserved = 259, peak = 138;
+
+SYN-1079 : finish stage Uniform Instance. Total instances: 1152, Total nets: 2874.
+
+SYN-1001 : Stage 1.5 | Optimize Design
+SYN-1066 : Inferred FSM for state register 'u_uicfg5640/TS_S_reg' in module 'UDP_Example_Top'
+--------------------------------------------
+     Previous Encoding     New Encoding
+--------------------------------------------
+                    00             0001
+                    01             0010
+                    10             0100
+                    11             1000
+--------------------------------------------
+SYN-1067 : encoded FSM with state register 'u_uicfg5640/TS_S_reg' using encoding 'one_hot' in model 'UDP_Example_Top'
+SYN-1057 : Inferred 1 FSM(s)
+SYN-1032 : 2649/4 useful/useless nets, 1093/0 useful/useless insts
+SYN-1068 : Optimized 1 binary mux instances.
+SYN-1019 : Optimized 2 mux instances.
+SYN-1021 : Optimized 1 onehot mux instances.
+SYN-1016 : Merged 232 instances.
+USR-6001 WARNING: No ports matched 'get_ports phy1_rgmii_rx_clk'
+RUN-1101 : create_clock: defined a virtual clock: phy1_rgmii_rx_clk.
+USR-1002 : Derived clock:  create_generated_clock -name {u_PLL_HDMI_CLK/pll_inst.clkc[0]} -source [get_ports {clk_50}] -master_clock {clk_in} -multiply_by 1.2500 -duty_cycle 50.0000 [get_pins {u_PLL_HDMI_CLK/pll_inst.clkc[0]}]
+USR-1002 : Derived clock:  create_generated_clock -name {u_PLL_HDMI_CLK/pll_inst.clkc[1]} -source [get_ports {clk_50}] -master_clock {clk_in} -multiply_by 6.2500 -duty_cycle 50.0000 [get_pins {u_PLL_HDMI_CLK/pll_inst.clkc[1]}]
+USR-6001 WARNING: No pins matched 'get_pins u_clk_gen/u_pll_0/pll_inst.clkc[1]'
+USR-6001 WARNING: No nets matched 'get_nets udp_clk'
+USR-8108 CRITICAL-WARNING: create_generated_clock: cannot define a generated clock without targets.
+USR-8159 CRITICAL-WARNING: Command create_generated_clock -name {udp_clk_125m} -source [get_pins {u_clk_gen/u_pll_0/pll_inst.clkc[1]}] -master_clock {pll_inst_125M_1} -divide_by 1.000 -phase 0.000 -add [get_nets {udp_clk}] in D:/University/AL_Proj/anlu/anlu/source_code/constraints/UDP.sdc(10) fails.
+USR-8130 CRITICAL-WARNING: No clock match the pattern: u_clk_gen/u_pll_0/pll_inst.clkc\[0\].
+USR-8124 CRITICAL-WARNING: Rename_clock: please specify object list.
+USR-8159 CRITICAL-WARNING: Command rename_clock -name {pll_inst_125M_0} [get_clocks {u_clk_gen/u_pll_0/pll_inst.clkc[0]}] in D:/University/AL_Proj/anlu/anlu/source_code/constraints/UDP.sdc(5) fails.
+USR-8130 CRITICAL-WARNING: No clock match the pattern: u_clk_gen/u_pll_0/pll_inst.clkc\[1\].
+USR-8124 CRITICAL-WARNING: Rename_clock: please specify object list.
+USR-8159 CRITICAL-WARNING: Command rename_clock -name {pll_inst_125M_1} [get_clocks {u_clk_gen/u_pll_0/pll_inst.clkc[1]}] in D:/University/AL_Proj/anlu/anlu/source_code/constraints/UDP.sdc(6) fails.
+USR-8130 CRITICAL-WARNING: No clock match the pattern: u_clk_gen/u_pll_0/pll_inst.clkc\[3\].
+USR-8124 CRITICAL-WARNING: Rename_clock: please specify object list.
+USR-8159 CRITICAL-WARNING: Command rename_clock -name {pll_inst_25M} [get_clocks {u_clk_gen/u_pll_0/pll_inst.clkc[3]}] in D:/University/AL_Proj/anlu/anlu/source_code/constraints/UDP.sdc(8) fails.
+USR-8130 CRITICAL-WARNING: No clock match the pattern: udp_clk_125m.
+USR-8208 CRITICAL-WARNING: Clock group is empty.
+USR-8159 CRITICAL-WARNING: Command set_clock_groups -exclusive -group [get_clocks {udp_clk_125m}] in D:/University/AL_Proj/anlu/anlu/source_code/constraints/UDP.sdc(13) fails.
+SYN-1016 : Merged 124 instances.
+SYN-1001 : End Stage 1.5 | Optimize Design; Time: 0.297192s wall, 0.046875s user + 0.000000s system = 0.046875s CPU (15.8%); Memory(MB): used = 146, reserved = 257, peak = 148;
+
+SYN-1079 : finish stage Optimize Design. Total instances: 1521, Total nets: 1795.
+
+SYN-1001 : Stage 1.6 | Optimize Iteratively
+SYN-1019 : Optimized 1 mux instances.
+SYN-1021 : Optimized 42 onehot mux instances.
+SYN-1014 : Optimize round 1
+SYN-1044 : Optimized 23 inv instances.
+SYN-1017 : Remove 8 const input seq instances
+SYN-1019 : Optimized 11 mux instances.
+SYN-1020 : Optimized 8 distributor mux.
+SYN-1001 : Optimize 9 less-than instances
+SYN-1016 : Merged 543 instances.
+SYN-1015 : Optimize round 1, 992 better
+SYN-1014 : Optimize round 2
+SYN-1044 : Optimized 4 inv instances.
+SYN-1020 : Optimized 3 distributor mux.
+SYN-1019 : Optimized 32 mux instances.
+SYN-1016 : Merged 6 instances.
+SYN-1015 : Optimize round 2, 69 better
+SYN-3010 : Optimized 63 DFF(s)
+SYN-1014 : Optimize round 1
+SYN-1020 : Optimized 40 distributor mux.
+SYN-1016 : Merged 166 instances.
+SYN-1015 : Optimize round 1, 253 better
+SYN-1014 : Optimize round 2
+SYN-1020 : Optimized 18 distributor mux.
+SYN-1016 : Merged 36 instances.
+SYN-1015 : Optimize round 2, 54 better
+SYN-1014 : Optimize round 3
+SYN-1015 : Optimize round 3, 0 better
+SYN-1001 : End Stage 1.6 | Optimize Iteratively; Time: 0.777189s wall, 0.031250s user + 0.000000s system = 0.031250s CPU (4.0%); Memory(MB): used = 120, reserved = 115, peak = 148;
+
+SYN-1079 : finish stage Optimize Iteratively. Total instances: 1238, Total nets: 1392.
+
+SYN-1001 : Stage 1.7 | Check Design
+SYN-1001 : End Stage 1.7 | Check Design; Time: 0.000245s wall, 0.000000s user + 0.000000s system = 0.000000s CPU (n/a%); Memory(MB): used = 120, reserved = 115, peak = 148;
+
+SYN-1079 : finish stage Check Design. Total instances: 1238, Total nets: 1392.
+
+SYN-1001 : End Stage 1 | Optimize RTL; Time: 1.291702s wall, 0.109375s user + 0.000000s system = 0.109375s CPU (8.5%); Memory(MB): used = 120, reserved = 115, peak = 148;
+
+SYN-1079 : finish stage Optimize RTL. Total instances: 1238, Total nets: 1392.
+
+RUN-1003 : finish command "optimize_rtl" in  1.300778s wall, 0.109375s user + 0.000000s system = 0.109375s CPU (8.4%)
+
+RUN-1004 : used memory is 120 MB, reserved memory is 115 MB, peak memory is 148 MB
+RUN-1002 : start command "report_area -file UDP_EXAMPLE_rtl.area"
+RUN-1001 : standard
+***Report Model: UDP_Example_Top Device: EG4S20BG256***
+
+IO Statistics
+#IO                        15
+  #input                    3
+  #output                  11
+  #inout                    1
+
+Gate Statistics
+#Basic gates              681
+  #and                     37
+  #nand                     0
+  #or                      28
+  #nor                      0
+  #xor                      1
+  #xnor                     0
+  #buf                      0
+  #not                    115
+  #bufif1                   1
+  #MX21                   259
+  #FADD                     0
+  #DFF                    240
+  #LATCH                    0
+#MACRO_ADD                 70
+#MACRO_EQ                  25
+#MACRO_MUX                450
+#MACRO_OTHERS               5
+
+RUN-1002 : start command "export_db UDP_EXAMPLE_rtl.db"
+RUN-1001 : Exported flow parameters
+RUN-1001 : Exported /
+RUN-1001 : Exported libs
+RUN-1001 : Exported entities
+RUN-1001 : Exported ports
+RUN-1001 : Exported pins
+RUN-1001 : Exported instances
+RUN-1001 : Exported nets
+RUN-1001 : Exported buses
+RUN-1001 : Exported models
+RUN-1001 : Exported packer
+RUN-1001 : Exported congestions
+RUN-1001 : Exported violations
+RUN-1001 : Exported ATMR Setting
+RUN-1001 : Exported timing constraints
+RUN-1001 : Exported IO constraints
+RUN-1001 : Exported Inst constraints
+RUN-1001 : Exported ChipWatcher
+RUN-1002 : start command "commit_param -step gate"
+RUN-1001 : Print Global Property
+RUN-1001 : --------------------------------------------------------
+RUN-1001 :   Parameters   |  Settings  |  Default Values  |  Note  
+RUN-1001 : --------------------------------------------------------
+RUN-1001 :   enable_seed  |    off     |       off        |        
+RUN-1001 :     message    |  standard  |     standard     |        
+RUN-1001 :   qor_monitor  |     on     |        on        |        
+RUN-1001 :   syn_ip_flow  |    off     |       off        |        
+RUN-1001 :     thread     |    auto    |       auto       |        
+RUN-1001 : --------------------------------------------------------
+RUN-1001 : Print Gate Property
+RUN-1001 : -----------------------------------------------------------
+RUN-1001 :     Parameters    |  Settings  |  Default Values  |  Note  
+RUN-1001 : -----------------------------------------------------------
+RUN-1001 :     eram_init     |    off     |       off        |        
+RUN-1001 :      map_mode     |    auto    |       auto       |        
+RUN-1001 :    pack_effort    |   medium   |      medium      |        
+RUN-1001 :   pack_seq_in_io  |    auto    |       auto       |        
+RUN-1001 :       report      |  standard  |     standard     |        
+RUN-1001 : -----------------------------------------------------------
+RUN-1002 : start command "optimize_gate -packarea UDP_EXAMPLE_gate.area"
+RUN-1001 : Open license file D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/license/Anlogic.lic
+SYN-1001 : Stage 2 | Optimize Gate
+SYN-1001 : Stage 2.1 | Map Reg
+SYN-1001 : End Stage 2.1 | Map Reg; Time: 0.013245s wall, 0.000000s user + 0.000000s system = 0.000000s CPU (n/a%); Memory(MB): used = 123, reserved = 242, peak = 148;
+
+SYN-1079 : finish stage Map Reg. Total instances: 1238, Total nets: 1392.
+
+SYN-1001 : Stage 2.2 | Map IO
+SYN-2001 : Map 25 IOs to PADs of model 'UDP_Example_Top'
+SYN-1001 : End Stage 2.2 | Map IO; Time: 0.037568s wall, 0.015625s user + 0.000000s system = 0.015625s CPU (41.6%); Memory(MB): used = 123, reserved = 243, peak = 148;
+
+SYN-1001 : Stage 2.3 | Map Macro
+RUN-1002 : start command "update_pll_param -module UDP_Example_Top"
+SYN-2501 : Processed 0 LOGIC_BUF instances.
+SYN-2501 : 1 BUFG to GCLK
+SYN-2571 : Optimize after map_dsp, round 1
+SYN-2571 : Optimize after map_dsp, round 1, 0 better
+SYN-1001 : Throwback 44 control mux instances
+SYN-1001 : Generate 9 bigger adders
+SYN-1001 : Optimize 18 adders
+SYN-2501 : Optimize round 1
+SYN-1016 : Merged 93 instances.
+SYN-2501 : Optimize round 1, 262 better
+SYN-2501 : Optimize round 2
+SYN-2501 : Optimize round 2, 0 better
+SYN-2501 : Optimize round 1
+SYN-1016 : Merged 1 instances.
+SYN-2501 : Optimize round 1, 1 better
+SYN-2501 : Optimize round 2
+SYN-2501 : Optimize round 2, 0 better
+SYN-2501 : Map 49 macro adder(s)
+SYN-1019 : Optimized 34 mux instances.
+SYN-1016 : Merged 104 instances.
+SYN-1001 : End Stage 2.3 | Map Macro; Time: 0.188267s wall, 0.093750s user + 0.000000s system = 0.093750s CPU (49.8%); Memory(MB): used = 137, reserved = 247, peak = 148;
+
+SYN-1079 : finish stage Map Macro. Total instances: 1672, Total nets: 1751.
+
+SYN-1001 : Stage 2.4 | Map Gate
+SYN-3001 : Collect 202 PI 178 PO (29 timing unconstrained) for mapping
+SYN-2581 : Mapping with K=5, #lut = 495 (3.71), #lev = 6 (2.60), #crit_level = 0
+SYN-2551 : Post LUT mapping optimization.
+SYN-2581 : Mapping with K=5, #lut = 491 (3.69), #lev = 6 (2.51), #crit_level = 0
+SYN-3001 : Logic optimization opt = 0.20 sec, map = 0.08 sec, post map opt = 2.67 sec.
+SYN-1001 : End Stage 2.4 | Map Gate; Time: 3.134930s wall, 0.453125s user + 0.000000s system = 0.453125s CPU (14.5%); Memory(MB): used = 147, reserved = 260, peak = 148;
+
+SYN-1001 : Packing model "UDP_Example_Top" ...
+SYN-4010 : Pack lib has 59 rtl pack models with 26 top pack blocks
+SYN-1014 : Optimize round 1
+SYN-1015 : Optimize round 1, 0 better
+SYN-4002 : Packing 239 DFF/LATCH to SEQ ...
+SYN-4009 : Pack 1 carry chain into lslice
+SYN-4007 : Packing 13 adder to BLE ...
+SYN-4008 : Packed 13 adder and 11 SEQ to BLE.
+SYN-4007 : Packing 0 gate4 to BLE ...
+SYN-4008 : Packed 0 gate4 and 0 SEQ to BLE.
+RUN-1002 : start command "report_qor -step gate -file gate.qor"
+RUN-1002 : start command "start_timer"
+-----------------------------------------------------------
+| QoR metrics               |         value               |
+-----------------------------------------------------------
+| Timing                    |                             |
+|     Setup WNS             |          752                |
+|     Setup TNS             |            0                |
+|     Num of violated S-EP  |            0                |
+|     Hold WNS              |          694                |
+|     Hold TNS              |            0                |
+|     Num of violated H-EP  |            0                |
+-----------------------------------------------------------
+| Utilization               |                             |
+|     #registers            |          228                |
+|     #luts                 |          491                |
+|     #lut1                 |           11                |
+|     #lut1(~A)             |           11                |
+|     #slices               |           11                |
+|     slices percentage     |        0.11%                |
+|     #RAMs                 |            0                |
+|     #DSPs                 |            0                |
+|     #f7mux                |        0.00%                |
+|     #MACROs               |            2                |
+|     #insts in MACRO       |           11                |
+-----------------------------------------------------------
+| kept_net                  |                             |
+|     #syn_keep             |            0                |
+|     #keep_hier            |            0                |
+|     #dont_touch           |            0                |
+|     #mark_debug           |            0                |
+|     #max_fanout_keep      |            0                |
+|     #async_reg            |            2                |
+-----------------------------------------------------------
+| Top 10% datanet fanout#   |        91.00                |
+| dff(single fanout)->dff   |           28                |
+| dff(single fanout)->dram  |            0                |
+-----------------------------------------------------------
+| Over-quota path num*      |                             |
+|     Total                 |            0                |
+-----------------------------------------------------------
+| Rent**                    |                             |
+-----------------------------------------------------------
+Note*: Over-quota path shows the over-path-level-threshold path number of each clock.
+       The clock will not be shown if no path is with path level over the threshold.
+       The threshold is defined as worst path_margin / 800ps.
+Note**: Rent shows the rent exponent value of the modules whose rent value exceeds the threshold.
+        Only modules under top are reported, and the threshold is defined as 0.7.
+
+Logic Level Distribution
+---------------------------------------------------------------------------------------------------------
+  Clock                            |  Period            |  0    |  1   |  2   |  3   |  4   |  5   |  6
+---------------------------------------------------------------------------------------------------------
+  clk_in                           |  20.000ns (50MHz)  |  40   |  44  |  21  |  6   |  10  |  15  |  1
+  phy1_rgmii_rx_clk                |  8.000ns (125MHz)  |  0    |  0   |  0   |  0   |  0   |  0   |  0
+  u_PLL_HDMI_CLK/pll_inst.clkc[0]  |  16.000ns (62MHz)  |  45   |  28  |  24  |  6   |  37  |  12  |  4
+  u_PLL_HDMI_CLK/pll_inst.clkc[1]  |  3.200ns (312MHz)  |  43   |  27  |  0   |  0   |  0   |  0   |  0
+  Total                            |  NA                |  128  |  99  |  45  |  12  |  47  |  27  |  5
+---------------------------------------------------------------------------------------------------------
+Note: The table count the worst 100000 paths, each endpoint count only one time.(363 paths analyzed)
+
+Hierarchical Rent Exponent Report
++--------------------------------------------------------+
+|Inst     |Model  |Rent     |Cell     |Pin     |Term     |
++--------------------------------------------------------+
++--------------------------------------------------------+
+Note: Cell represents total number of cells inside module; Pin represents total number of pins
+      which have net connection inside module; Term represents total number of PIs and POs of module.
+      Rent represents the relationship between number of terms and number of cells in module.
+      A module with higher rent corresponds to highly connected logic and strong connectivity with others.
+Report gate stage QoR done.
+
+SYN-1001 : The design has 1 dangling async_reg inst.
+RUN-1002 : start command "report_area -file UDP_EXAMPLE_gate.area"
+RUN-1001 : standard
+***Report Model: UDP_Example_Top Device: EG4S20BG256***
+
+IO Statistics
+#IO                        25   out of    188   13.30%
+  #input                   13
+  #output                  11
+  #inout                    1
+
+LUT Statistics
+#Total_luts               491
+  #lut4                   347
+  #lut5                   144
+  #lut6                     0
+  #lut5_mx41                0
+  #lut4_alu1b               0
+
+Utilization Statistics
+#lut                      513   out of  19600    2.62%
+#reg                      239   out of  19600    1.22%
+#bram                       0   out of     64    0.00%
+  #bram9k                   0
+  #fifo9k                   0
+#bram32k                    0   out of     16    0.00%
+#dsp                        0   out of     29    0.00%
+#pad                       33   out of    188   17.55%
+  #ireg                     0
+  #oreg                     9
+  #treg                     0
+#pll                        1   out of      4   25.00%
+#gclk                       1   out of     16    6.25%
+
+SYN-1001 : End Stage 2 | Optimize Gate; Time: 3.507581s wall, 0.578125s user + 0.000000s system = 0.578125s CPU (16.5%); Memory(MB): used = 148, reserved = 260, peak = 148;
+
+RUN-1003 : finish command "optimize_gate -packarea UDP_EXAMPLE_gate.area" in  3.519303s wall, 0.578125s user + 0.000000s system = 0.578125s CPU (16.4%)
+
+RUN-1004 : used memory is 148 MB, reserved memory is 260 MB, peak memory is 148 MB
+RUN-1002 : start command "legalize_phy_inst"
+SYN-1001 : Stage 3 | Legalize Phy Inst
+SYN-1011 : Flatten model UDP_Example_Top
+SYN-1001 : End Stage 3 | Legalize Phy Inst; Time: 0.001305s wall, 0.000000s user + 0.000000s system = 0.000000s CPU (n/a%); Memory(MB): used = 148, reserved = 260, peak = 148;
+
+RUN-1002 : start command "update_timing"
+RUN-1002 : start command "start_timer"
+RUN-1002 : start command "report_timing_status -file UDP_EXAMPLE_gate.ts"
+RUN-1002 : start command "report_timing_summary -file UDP_EXAMPLE_gate.timing"
+RUN-1002 : start command "flow_status -file flow.status"
+Location         : D:\University\AL_Proj\anlu\anlu\prj\UDP_EXAMPLE\UDP_EXAMPLE_Runs\syn_1
+Running with     : Tang Dynasty v6.2.168116
+                   Copyright (c) 2012-2025 Anlogic Inc.
+Top Model        : UDP_Example_Top
+Device           : EG4S20BG256
+Speed            : NA
+
+Timing Mode      : basic
+Setup            : WNS   752ps  TNS        0ps  NUM_FEPS     0
+Hold             : WNS   694ps  TNS        0ps  NUM_FEPS     0
+
+Flow Statistics  :
+RUN-1001 : Flow Statistics:
+RUN-1001 : --------------------------------------------------------------------------------------------------
+RUN-1001 :      command     |  #calls  |  wall time  |  cpu time(s)  |  used memory(mb)  |  peak memory(mb)  
+RUN-1001 : --------------------------------------------------------------------------------------------------
+RUN-1001 :   optimize_gate  |    1     |   3s(75%)   |     0(0%)     |        148        |        148        
+RUN-1001 :   optimize_rtl   |    1     |   1s(25%)   |     0(0%)     |        120        |        148        
+RUN-1001 :   import_device  |    1     |   0s(0%)    |     0(0%)     |        82         |        82         
+RUN-1001 :     read_adc     |    1     |   0s(0%)    |     0(0%)     |        133        |        133        
+RUN-1001 :     read_sdc     |    1     |   0s(0%)    |     0(0%)     |        133        |        133        
+RUN-1001 : --------------------------------------------------------------------------------------------------
+RUN-1001 :       total      |    5     |     4s      |       0       |        148        |        148        
+RUN-1001 : --------------------------------------------------------------------------------------------------
+RUN-1002 : start command "export_db UDP_EXAMPLE_gate.db"
+RUN-1001 : Exported flow parameters
+RUN-1001 : Exported /
+RUN-1001 : Exported libs
+RUN-1001 : Exported entities
+RUN-1001 : Exported ports
+RUN-1001 : Exported pins
+RUN-1001 : Exported instances
+RUN-1001 : Exported nets
+RUN-1001 : Exported buses
+RUN-1001 : Exported models
+RUN-1001 : Exported packer
+RUN-1001 : Exported congestions
+RUN-1001 : Exported violations
+RUN-1001 : Exported ATMR Setting
+RUN-1001 : Exported timing constraints
+RUN-1001 : Exported IO constraints
+RUN-1001 : Exported Inst constraints
+RUN-1001 : Exported ChipWatcher
+RUN-1002 : start command "export_flow_status -s read_design -e opt_gate"
+RUN-1002 : start command "flow_status"
+
+Location         : D:\University\AL_Proj\anlu\anlu\prj\UDP_EXAMPLE\UDP_EXAMPLE_Runs\syn_1
+Running with     : Tang Dynasty v6.2.168116
+                   Copyright (c) 2012-2025 Anlogic Inc.
+Top Model        : UDP_Example_Top
+Device           : EG4S20BG256
+Speed            : NA
+
+Timing Mode      : basic
+Setup            : WNS   752ps  TNS        0ps  NUM_FEPS     0
+Hold             : WNS   694ps  TNS        0ps  NUM_FEPS     0
+
+RUN-1001 : Flow Statistics:
+RUN-1001 : --------------------------------------------------------------------------------------------------
+RUN-1001 :      command     |  #calls  |  wall time  |  cpu time(s)  |  used memory(mb)  |  peak memory(mb)  
+RUN-1001 : --------------------------------------------------------------------------------------------------
+RUN-1001 :   optimize_gate  |    1     |   3s(75%)   |     0(0%)     |        148        |        148        
+RUN-1001 :   optimize_rtl   |    1     |   1s(25%)   |     0(0%)     |        120        |        148        
+RUN-1001 :   import_device  |    1     |   0s(0%)    |     0(0%)     |        82         |        82         
+RUN-1001 :     read_adc     |    1     |   0s(0%)    |     0(0%)     |        133        |        133        
+RUN-1001 :     read_sdc     |    1     |   0s(0%)    |     0(0%)     |        133        |        133        
+RUN-1001 : --------------------------------------------------------------------------------------------------
+RUN-1001 :       total      |    5     |     4s      |       0       |        148        |        148        
+RUN-1001 : --------------------------------------------------------------------------------------------------

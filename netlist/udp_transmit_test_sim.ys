@@ -1,0 +1,20 @@
+read_verilog -sv -formal -overwrite {workspace}/source_code/rtl/clk_gen_rst_gen.v
+read_verilog -sv -formal -overwrite {workspace}/prj/UDP_EXAMPLE/al_ip/pll_gen.v
+read_verilog -sv -formal -overwrite {workspace}/source_code/rtl/div_clk_gen.v
+read_verilog -sv -formal -overwrite {workspace}/source_code/rtl/udp_data_tpg.v
+read_verilog -sv -formal -overwrite {workspace}/source_code/rtl/udp_loopback.v
+read_verilog -sv -formal -overwrite {workspace}/source_code/rtl/temac_block.v
+read_verilog -sv -formal -overwrite {workspace}/source_code/rtl/tx_clk_en_gen.v
+read_verilog -sv -formal -overwrite {workspace}/source_code/rtl/rgmii_interface.v
+read_verilog -sv -formal -overwrite {workspace}/source_code/rtl/ODDR.v
+read_verilog -sv -formal -overwrite {workspace}/source_code/rtl/IDDR.v
+read_verilog -sv -formal -overwrite {workspace}/prj/UDP_EXAMPLE/al_ip/TEMAC_CORE/TEMAC_CORE.v
+read_verilog -sv -formal -overwrite {workspace}/prj/UDP_EXAMPLE/al_ip/TEMAC_CORE/RTL/mac_core_aead6cd6dadd.v
+read_verilog -sv -formal -overwrite {workspace}/source_code/rtl/temac_clk_gen.v
+read_verilog -sv -formal -overwrite {workspace}/source_code/rtl/BUFGMUX.v
+read_verilog -sv -formal -overwrite {workspace}/source_code/rtl/tx_client_fifo.v
+read_verilog -sv -formal -overwrite {workspace}/source_code/rtl/RAMB16_S9_S9.v
+read_verilog -sv -formal -overwrite {workspace}/source_code/rtl/rx_client_fifo.v
+read_verilog -sv -formal -overwrite {workspace}/sim/udp_transmit_test_sim.v
+design -reset-vlog; proc;
+write_json {workspace}/netlist/udp_transmit_test_sim.json

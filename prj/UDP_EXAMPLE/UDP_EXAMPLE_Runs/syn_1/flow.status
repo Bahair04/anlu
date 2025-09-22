@@ -1,0 +1,23 @@
+Location         : D:\University\AL_Proj\anlu\anlu\prj\UDP_EXAMPLE\UDP_EXAMPLE_Runs\syn_1
+Running with     : Tang Dynasty v6.2.168116
+                   Copyright (c) 2012-2025 Anlogic Inc.
+Top Model        : UDP_Example_Top
+Device           : EG4S20BG256
+Speed            : NA
+
+Timing Mode      : basic
+Setup            : WNS   752ps  TNS        0ps  NUM_FEPS     0
+Hold             : WNS   694ps  TNS        0ps  NUM_FEPS     0
+
+Flow Statistics  :
+--------------------------------------------------------------------------------------------------
+     command     |  #calls  |  wall time  |  cpu time(s)  |  used memory(mb)  |  peak memory(mb)  
+--------------------------------------------------------------------------------------------------
+  optimize_gate  |    1     |   3s(75%)   |     0(0%)     |        148        |        148        
+  optimize_rtl   |    1     |   1s(25%)   |     0(0%)     |        120        |        148        
+  import_device  |    1     |   0s(0%)    |     0(0%)     |        82         |        82         
+    read_adc     |    1     |   0s(0%)    |     0(0%)     |        133        |        133        
+    read_sdc     |    1     |   0s(0%)    |     0(0%)     |        133        |        133        
+--------------------------------------------------------------------------------------------------
+      total      |    5     |     4s      |       0       |        148        |        148        
+--------------------------------------------------------------------------------------------------

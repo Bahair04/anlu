@@ -1,0 +1,71 @@
+============================================================
+   Tang Dynasty, V6.2.168116
+   Copyright (c) 2012-2025 Anlogic Inc.
+   Executable = D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/bin/run.exe
+   Built at =   16:32:07 Jun 12 2025
+   Run by =     1
+   Run Date =   Mon Sep 22 09:11:29 2025
+
+   Run on =     LAPTOP-EUGMKLPQ
+============================================================
+Copyright (c) 1998-2019 The OpenSSL Project.  All rights reserved.
+This product includes software developed by the OpenSSL Project
+for use in the OpenSSL Toolkit (http://www.openssl.org/)
+Copyright (C) 1995-1998 Eric Young (eay@cryptsoft.com)
+All rights reserved.
+This product includes cryptographic software written by Eric Young (eay@cryptsoft.com)
+HDL-5007 WARNING: column 1032 exceeds maximum value 1023 in ../../al_ip/TEMAC_CORE/RTL/TEMAC_CORE_aead6cd6dadd.v(30)
+HDL-5007 WARNING: event expressions must result in a singular type in ../../al_ip/TEMAC_CORE/RTL/TEMAC_CORE_aead6cd6dadd.v(3001)
+HDL-5007 WARNING: column 1035 exceeds maximum value 1023 in ../../al_ip/TEMAC_CORE/RTL/TEMAC_CORE_aead6cd6dadd.v(6001)
+HDL-5007 WARNING: block identifier is required on this block in ../../al_ip/udp_fdma_ddr_rx_buff_fifo/RTL/soft_fifo_d1bff0a755d3.v(509)
+HDL-5007 WARNING: block identifier is required on this block in ../../al_ip/udp_fdma_ddr_tx_buff_fifo/RTL/soft_fifo_f2df10fddcf5.v(509)
+HDL-5007 WARNING: block identifier is required on this block in ../../al_ip/udp_fdma_ddr_wfifo/RTL/soft_fifo_c558b4c715fa.v(509)
+HDL-5370 WARNING: parameter 'DEVID' becomes localparam in 'uicfg5640' with formal parameter declaration list in ../../../../source_code/rtl/uiov5640cfg/uicfg5640.v(41)
+HDL-5372 WARNING: redeclaration of ANSI port 'iic_busy' is not allowed in ../../../../source_code/rtl/uiov5640cfg/uii2c.v(73)
+HDL-5370 WARNING: parameter 'IDLE' becomes localparam in 'uii2c' with formal parameter declaration list in ../../../../source_code/rtl/uiov5640cfg/uii2c.v(48)
+HDL-5370 WARNING: parameter 'START' becomes localparam in 'uii2c' with formal parameter declaration list in ../../../../source_code/rtl/uiov5640cfg/uii2c.v(49)
+HDL-5370 WARNING: parameter 'W_WAIT' becomes localparam in 'uii2c' with formal parameter declaration list in ../../../../source_code/rtl/uiov5640cfg/uii2c.v(50)
+HDL-5370 WARNING: parameter 'W_ACK' becomes localparam in 'uii2c' with formal parameter declaration list in ../../../../source_code/rtl/uiov5640cfg/uii2c.v(51)
+HDL-5370 WARNING: parameter 'R_WAIT' becomes localparam in 'uii2c' with formal parameter declaration list in ../../../../source_code/rtl/uiov5640cfg/uii2c.v(52)
+HDL-5370 WARNING: parameter 'R_ACK' becomes localparam in 'uii2c' with formal parameter declaration list in ../../../../source_code/rtl/uiov5640cfg/uii2c.v(53)
+HDL-5370 WARNING: parameter 'STOP1' becomes localparam in 'uii2c' with formal parameter declaration list in ../../../../source_code/rtl/uiov5640cfg/uii2c.v(54)
+HDL-5370 WARNING: parameter 'STOP2' becomes localparam in 'uii2c' with formal parameter declaration list in ../../../../source_code/rtl/uiov5640cfg/uii2c.v(55)
+HDL-5370 WARNING: parameter 'OFFSET' becomes localparam in 'uii2c' with formal parameter declaration list in ../../../../source_code/rtl/uiov5640cfg/uii2c.v(70)
+HDL-5314 WARNING: net 'sda_i' does not have a driver in ../../../../source_code/rtl/uiov5640cfg/uii2c.v(83)
+HDL-5007 WARNING: actual bit length 32 differs from formal bit length 40 for port 'wr_data' in ../../../../source_code/rtl/uiov5640cfg/uicfg5640.v(110)
+HDL-5007 WARNING: actual bit length 24 differs from formal bit length 32 for port 'REG_DATA' in ../../../../source_code/rtl/uiov5640cfg/uicfg5640.v(125)
+HDL-5001 WARNING: Contains anonymous inst(s) and/or net(s) that have not been renamed
+HDL-5001 WARNING: Contains anonymous inst(s) and/or net(s) that have not been renamed
+HDL-5001 WARNING: Contains anonymous inst(s) and/or net(s) that have not been renamed
+HDL-5001 WARNING: Contains anonymous inst(s) and/or net(s) that have not been renamed
+HDL-5001 WARNING: Contains anonymous inst(s) and/or net(s) that have not been renamed
+HDL-5106 WARNING: Initial value omitted on non-DFF net "scl_r" in ../../../../source_code/rtl/uiov5640cfg/uii2c.v(91) 
+HDL-5106 WARNING: Initial value omitted on non-DFF net "sda_o" in ../../../../source_code/rtl/uiov5640cfg/uii2c.v(98) 
+HDL-5106 WARNING: Initial value omitted on non-DFF net "cnt_t[4]" in ../../../../source_code/rtl/HDMI/enc_file/TMDSEncoder.enc.vhd(0) 
+HDL-5106 WARNING: Initial value omitted on non-DFF net "cnt_t[3]" in ../../../../source_code/rtl/HDMI/enc_file/TMDSEncoder.enc.vhd(0) 
+HDL-5106 WARNING: Initial value omitted on non-DFF net "cnt_t[2]" in ../../../../source_code/rtl/HDMI/enc_file/TMDSEncoder.enc.vhd(0) 
+HDL-5106 WARNING: Initial value omitted on non-DFF net "cnt_t[1]" in ../../../../source_code/rtl/HDMI/enc_file/TMDSEncoder.enc.vhd(0) 
+HDL-5106 WARNING: Initial value omitted on non-DFF net "cnt_t[0]" in ../../../../source_code/rtl/HDMI/enc_file/TMDSEncoder.enc.vhd(0) 
+HDL-5106 WARNING: Initial value omitted on non-DFF net "dc_bias[4]" in D:\Anlogic\TD_6.2.1_Engineer_6.2.168.116\packages/std_logic_arith.vhd(1071) 
+HDL-5106 WARNING: Initial value omitted on non-DFF net "dc_bias[3]" in D:\Anlogic\TD_6.2.1_Engineer_6.2.168.116\packages/std_logic_arith.vhd(1071) 
+HDL-5106 WARNING: Initial value omitted on non-DFF net "dc_bias[2]" in D:\Anlogic\TD_6.2.1_Engineer_6.2.168.116\packages/std_logic_arith.vhd(1071) 
+HDL-5106 WARNING: Initial value omitted on non-DFF net "dc_bias[1]" in D:\Anlogic\TD_6.2.1_Engineer_6.2.168.116\packages/std_logic_arith.vhd(1071) 
+HDL-5106 WARNING: Initial value omitted on non-DFF net "dc_bias[0]" in D:\Anlogic\TD_6.2.1_Engineer_6.2.168.116\packages/std_logic_arith.vhd(1071) 
+SYN-5025 WARNING: Using 0 for all undriven pins and nets
+USR-6001 WARNING: No ports matched 'get_ports phy1_rgmii_rx_clk'
+USR-6001 WARNING: No pins matched 'get_pins u_clk_gen/u_pll_0/pll_inst.clkc[1]'
+USR-6001 WARNING: No nets matched 'get_nets udp_clk'
+USR-8108 CRITICAL-WARNING: create_generated_clock: cannot define a generated clock without targets.
+USR-8159 CRITICAL-WARNING: Command create_generated_clock -name {udp_clk_125m} -source [get_pins {u_clk_gen/u_pll_0/pll_inst.clkc[1]}] -master_clock {pll_inst_125M_1} -divide_by 1.000 -phase 0.000 -add [get_nets {udp_clk}] in D:/University/AL_Proj/anlu/anlu/source_code/constraints/UDP.sdc(10) fails.
+USR-8130 CRITICAL-WARNING: No clock match the pattern: u_clk_gen/u_pll_0/pll_inst.clkc\[0\].
+USR-8124 CRITICAL-WARNING: Rename_clock: please specify object list.
+USR-8159 CRITICAL-WARNING: Command rename_clock -name {pll_inst_125M_0} [get_clocks {u_clk_gen/u_pll_0/pll_inst.clkc[0]}] in D:/University/AL_Proj/anlu/anlu/source_code/constraints/UDP.sdc(5) fails.
+USR-8130 CRITICAL-WARNING: No clock match the pattern: u_clk_gen/u_pll_0/pll_inst.clkc\[1\].
+USR-8124 CRITICAL-WARNING: Rename_clock: please specify object list.
+USR-8159 CRITICAL-WARNING: Command rename_clock -name {pll_inst_125M_1} [get_clocks {u_clk_gen/u_pll_0/pll_inst.clkc[1]}] in D:/University/AL_Proj/anlu/anlu/source_code/constraints/UDP.sdc(6) fails.
+USR-8130 CRITICAL-WARNING: No clock match the pattern: u_clk_gen/u_pll_0/pll_inst.clkc\[3\].
+USR-8124 CRITICAL-WARNING: Rename_clock: please specify object list.
+USR-8159 CRITICAL-WARNING: Command rename_clock -name {pll_inst_25M} [get_clocks {u_clk_gen/u_pll_0/pll_inst.clkc[3]}] in D:/University/AL_Proj/anlu/anlu/source_code/constraints/UDP.sdc(8) fails.
+USR-8130 CRITICAL-WARNING: No clock match the pattern: udp_clk_125m.
+USR-8208 CRITICAL-WARNING: Clock group is empty.
+USR-8159 CRITICAL-WARNING: Command set_clock_groups -exclusive -group [get_clocks {udp_clk_125m}] in D:/University/AL_Proj/anlu/anlu/source_code/constraints/UDP.sdc(13) fails.

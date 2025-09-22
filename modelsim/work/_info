@@ -1,0 +1,268 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dD:/modeltech64_10.7/anlogic
+vapp_fdma
+Z0 !s110 1757841139
+!i10b 1
+!s100 FJ2BZ?1[c<k236i>a<]1=1
+I@GIV:B2^T>BmWM9@zJcP13
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dD:/University/AL_Proj/UDP_EG4_6.2/modelsim
+w1754633211
+8D:/University/AL_Proj/UDP_EG4_6.2/source_code/rtl/sdram/03_ip/uiappfdma/uiappfdma.v
+FD:/University/AL_Proj/UDP_EG4_6.2/source_code/rtl/sdram/03_ip/uiappfdma/uiappfdma.v
+L0 30
+Z3 OL;L;10.7;67
+r1
+!s85 0
+31
+Z4 !s108 1757841139.000000
+!s107 D:/University/AL_Proj/UDP_EG4_6.2/source_code/rtl/sdram/03_ip/uiappfdma/uiappfdma.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/University/AL_Proj/UDP_EG4_6.2/source_code/rtl/sdram/03_ip/uiappfdma/uiappfdma.v|
+!i113 0
+Z5 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z6 tCvgOpt 0
+veg4d_sram_fdma_test
+Z7 !s110 1757841138
+!i10b 1
+!s100 oKEZi4m4EhPU6X_z9]>>I3
+IaLPGeV7mfQG42@[;>;@LK2
+R1
+R2
+w1757840745
+8D:/University/AL_Proj/UDP_EG4_6.2/source_code/rtl/sdram/01_rtl/eg4d_sram_fdma_test.v
+FD:/University/AL_Proj/UDP_EG4_6.2/source_code/rtl/sdram/01_rtl/eg4d_sram_fdma_test.v
+L0 38
+R3
+r1
+!s85 0
+31
+Z8 !s108 1757841138.000000
+!s107 D:/University/AL_Proj/UDP_EG4_6.2/source_code/rtl/sdram/01_rtl/eg4d_sram_fdma_test.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/University/AL_Proj/UDP_EG4_6.2/source_code/rtl/sdram/01_rtl/eg4d_sram_fdma_test.v|
+!i113 0
+R5
+R6
+vfdma_ddr_test
+R7
+!i10b 1
+!s100 Tg0PUFd^;nlk97O3?B3R91
+IODQ]ieKo1XA<OiV=OgH@M0
+R1
+R2
+w1757815993
+8D:/University/AL_Proj/UDP_EG4_6.2/source_code/rtl/sdram/01_rtl/fdma_ddr_test.v
+FD:/University/AL_Proj/UDP_EG4_6.2/source_code/rtl/sdram/01_rtl/fdma_ddr_test.v
+L0 29
+R3
+r1
+!s85 0
+31
+R8
+!s107 D:/University/AL_Proj/UDP_EG4_6.2/source_code/rtl/sdram/01_rtl/fdma_ddr_test.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/University/AL_Proj/UDP_EG4_6.2/source_code/rtl/sdram/01_rtl/fdma_ddr_test.v|
+!i113 0
+R5
+R6
+vIS42s32200
+R0
+!i10b 1
+!s100 HSNl50cc_gKU5S[X4gjVH0
+I3T?FIO_B48`mUan:aAJYc2
+R1
+R2
+w1754391716
+8D:/University/AL_Proj/UDP_EG4_6.2/source_code/rtl/sdram/03_ip/enc_file/IS42s32200.v
+FD:/University/AL_Proj/UDP_EG4_6.2/source_code/rtl/sdram/03_ip/enc_file/IS42s32200.v
+L0 14
+R3
+r1
+!s85 0
+31
+R4
+!s107 D:/University/AL_Proj/UDP_EG4_6.2/source_code/rtl/sdram/03_ip/enc_file/IS42s32200.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/University/AL_Proj/UDP_EG4_6.2/source_code/rtl/sdram/03_ip/enc_file/IS42s32200.v|
+!i113 0
+R5
+R6
+n@i@s42s32200
+vpll
+R0
+!i10b 1
+!s100 ;;MAn^]ITLC[:kQgb8dho3
+IQ2LmggGR@8i?eS5<odlL42
+R1
+R2
+w1650201175
+8D:/University/AL_Proj/UDP_EG4_6.2/source_code/rtl/sdram/03_ip/pll/pll_sim.v
+FD:/University/AL_Proj/UDP_EG4_6.2/source_code/rtl/sdram/03_ip/pll/pll_sim.v
+L0 5
+R3
+r1
+!s85 0
+31
+R4
+!s107 D:/University/AL_Proj/UDP_EG4_6.2/source_code/rtl/sdram/03_ip/pll/pll_sim.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/University/AL_Proj/UDP_EG4_6.2/source_code/rtl/sdram/03_ip/pll/pll_sim.v|
+!i113 0
+R5
+R6
+vsdr_as_ram
+R0
+!i10b 1
+!s100 ]a0EchPhT3TMH][6_F4RN2
+IPCI9Ee[5dzE>2564e4OZA1
+R1
+!i119 1
+R2
+w1754531541
+8D:/University/AL_Proj/UDP_EG4_6.2/source_code/rtl/sdram/03_ip/enc_file/sdr_as_ram.enc.v
+FD:/University/AL_Proj/UDP_EG4_6.2/source_code/rtl/sdram/03_ip/enc_file/sdr_as_ram.enc.v
+L0 21
+R3
+r1
+!s85 0
+31
+R4
+!s107 D:/University/AL_Proj/UDP_EG4_6.2/source_code/rtl/sdram/03_ip/enc_file/sdr_as_ram.enc.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/University/AL_Proj/UDP_EG4_6.2/source_code/rtl/sdram/03_ip/enc_file/sdr_as_ram.enc.v|
+!i113 0
+R5
+R6
+vsdr_init_ref
+R0
+!i10b 1
+!s100 CUcZHOOHBR`K9IbCLJgEY1
+I0<oLnOPO`J]_A_UGcXO5g0
+R1
+!i119 1
+R2
+w1753925799
+8D:/University/AL_Proj/UDP_EG4_6.2/source_code/rtl/sdram/03_ip/enc_file/sdr_init_ref.enc.v
+FD:/University/AL_Proj/UDP_EG4_6.2/source_code/rtl/sdram/03_ip/enc_file/sdr_init_ref.enc.v
+L0 20
+R3
+r1
+!s85 0
+31
+R4
+!s107 D:/University/AL_Proj/UDP_EG4_6.2/source_code/rtl/sdram/03_ip/enc_file/sdr_init_ref.enc.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/University/AL_Proj/UDP_EG4_6.2/source_code/rtl/sdram/03_ip/enc_file/sdr_init_ref.enc.v|
+!i113 0
+R5
+R6
+vdRE1nN/3BK2P6u1ki9AMVQ==
+R0
+!i10b 0
+!s100 gEe<H[z@;>Aa]EJ?BYlWF2
+IeWR<G[6m=7kjbaCQ:@TSM1
+R1
+!i119 1
+!i8a 163867040
+R2
+w1757841139
+8D:/University/AL_Proj/UDP_EG4_6.2/source_code/rtl/sdram/03_ip/enc_file/sdr_wrrd.enc.v
+FD:/University/AL_Proj/UDP_EG4_6.2/source_code/rtl/sdram/03_ip/enc_file/sdr_wrrd.enc.v
+L0 75
+R3
+r1
+!s85 0
+31
+R4
+!s107 D:/University/AL_Proj/UDP_EG4_6.2/source_code/rtl/sdram/03_ip/enc_file/sdr_wrrd.enc.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/University/AL_Proj/UDP_EG4_6.2/source_code/rtl/sdram/03_ip/enc_file/sdr_wrrd.enc.v|
+!i113 0
+R5
+R6
+nb86ee14
+vtb_eg4d_sram_fdma_test
+R0
+!i10b 1
+!s100 ]f^hnVIWE5P46XDn9Ia1]3
+I1`?Vi9HNB0kODK@zG=dW32
+R1
+R2
+w1757840392
+8D:/University/AL_Proj/UDP_EG4_6.2/source_code/rtl/sdram/02_sim/tb_udp_fdma_ddr.v
+FD:/University/AL_Proj/UDP_EG4_6.2/source_code/rtl/sdram/02_sim/tb_udp_fdma_ddr.v
+L0 3
+R3
+r1
+!s85 0
+31
+R4
+!s107 D:/University/AL_Proj/UDP_EG4_6.2/source_code/rtl/sdram/02_sim/tb_udp_fdma_ddr.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/University/AL_Proj/UDP_EG4_6.2/source_code/rtl/sdram/02_sim/tb_udp_fdma_ddr.v|
+!i113 0
+R5
+R6
+vudp_fdma_ddr
+R7
+!i10b 1
+!s100 X5Jn:d0aO>2>5aVZ<Q56z0
+I4Kf@b;=Ci@Bh^2]bcAcMf2
+R1
+R2
+w1757837201
+8D:/University/AL_Proj/UDP_EG4_6.2/source_code/rtl/sdram/01_rtl/udp_fdma_ddr.v
+FD:/University/AL_Proj/UDP_EG4_6.2/source_code/rtl/sdram/01_rtl/udp_fdma_ddr.v
+L0 15
+R3
+r1
+!s85 0
+31
+R8
+!s107 D:/University/AL_Proj/UDP_EG4_6.2/source_code/rtl/sdram/01_rtl/udp_fdma_ddr.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/University/AL_Proj/UDP_EG4_6.2/source_code/rtl/sdram/01_rtl/udp_fdma_ddr.v|
+!i113 0
+R5
+R6
+vudp_fdma_ddr_rx_buff
+R7
+!i10b 1
+!s100 Ae<S41Mk:>J[BYk<=FN=n3
+IM8bb87gYGP9e?k]6j5kJX0
+R1
+R2
+w1757839331
+8D:/University/AL_Proj/UDP_EG4_6.2/source_code/rtl/sdram/01_rtl/udp_fdma_ddr_rx_buff.v
+FD:/University/AL_Proj/UDP_EG4_6.2/source_code/rtl/sdram/01_rtl/udp_fdma_ddr_rx_buff.v
+Z9 L0 12
+R3
+r1
+!s85 0
+31
+R8
+!s107 D:/University/AL_Proj/UDP_EG4_6.2/source_code/rtl/sdram/01_rtl/udp_fdma_ddr_rx_buff.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/University/AL_Proj/UDP_EG4_6.2/source_code/rtl/sdram/01_rtl/udp_fdma_ddr_rx_buff.v|
+!i113 0
+R5
+R6
+vudp_fdma_ddr_tx_buff
+R7
+!i10b 1
+!s100 ]c:TM4ASO9AGQH`K7]a9L1
+I^<9T0[8?4J71;733BWd482
+R1
+R2
+w1757838798
+8D:/University/AL_Proj/UDP_EG4_6.2/source_code/rtl/sdram/01_rtl/udp_fdma_ddr_tx_buff.v
+FD:/University/AL_Proj/UDP_EG4_6.2/source_code/rtl/sdram/01_rtl/udp_fdma_ddr_tx_buff.v
+R9
+R3
+r1
+!s85 0
+31
+R8
+!s107 D:/University/AL_Proj/UDP_EG4_6.2/source_code/rtl/sdram/01_rtl/udp_fdma_ddr_tx_buff.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/University/AL_Proj/UDP_EG4_6.2/source_code/rtl/sdram/01_rtl/udp_fdma_ddr_tx_buff.v|
+!i113 0
+R5
+R6

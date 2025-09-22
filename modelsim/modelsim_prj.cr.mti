@@ -1,0 +1,99 @@
+D:/University/AL_Proj/UDP_EG4_6.2/source_code/rtl/sdram/01_rtl/udp_fdma_ddr_rx_buff.v {1 {vlog -work work -vopt -stats=none D:/University/AL_Proj/UDP_EG4_6.2/source_code/rtl/sdram/01_rtl/udp_fdma_ddr_rx_buff.v
+Model Technology ModelSim SE-64 vlog 10.7 Compiler 2017.12 Dec  7 2017
+-- Compiling module udp_fdma_ddr_rx_buff
+
+Top level modules:
+	udp_fdma_ddr_rx_buff
+
+} {} {}} D:/University/AL_Proj/UDP_EG4_6.2/source_code/rtl/sdram/03_ip/enc_file/sdr_as_ram.enc.v {1 {vlog -work work -vopt -stats=none D:/University/AL_Proj/UDP_EG4_6.2/source_code/rtl/sdram/03_ip/enc_file/sdr_as_ram.enc.v
+Model Technology ModelSim SE-64 vlog 10.7 Compiler 2017.12 Dec  7 2017
+-- Compiling module sdr_as_ram
+
+Top level modules:
+	sdr_as_ram
+
+} {} {}} D:/University/AL_Proj/UDP_EG4_6.2/source_code/rtl/sdram/01_rtl/udp_fdma_ddr_tx_buff.v {1 {vlog -work work -vopt -stats=none D:/University/AL_Proj/UDP_EG4_6.2/source_code/rtl/sdram/01_rtl/udp_fdma_ddr_tx_buff.v
+Model Technology ModelSim SE-64 vlog 10.7 Compiler 2017.12 Dec  7 2017
+-- Compiling module udp_fdma_ddr_tx_buff
+
+Top level modules:
+	udp_fdma_ddr_tx_buff
+
+} {} {}} D:/University/AL_Proj/UDP_EG4_6.2/source_code/rtl/sdram/02_sim/tb_udp_fdma_ddr.v {1 {vlog -work work -vopt -stats=none D:/University/AL_Proj/UDP_EG4_6.2/source_code/rtl/sdram/02_sim/tb_udp_fdma_ddr.v
+Model Technology ModelSim SE-64 vlog 10.7 Compiler 2017.12 Dec  7 2017
+-- Compiling module tb_eg4d_sram_fdma_test
+
+Top level modules:
+	tb_eg4d_sram_fdma_test
+
+} {} {}} D:/University/AL_Proj/UDP_EG4_6.2/source_code/rtl/sdram/03_ip/pll/pll_sim.v {1 {vlog -work work -vopt -stats=none D:/University/AL_Proj/UDP_EG4_6.2/source_code/rtl/sdram/03_ip/pll/pll_sim.v
+Model Technology ModelSim SE-64 vlog 10.7 Compiler 2017.12 Dec  7 2017
+-- Compiling module pll
+
+Top level modules:
+	pll
+
+} {} {}} D:/University/AL_Proj/UDP_EG4_6.2/source_code/rtl/sdram/03_ip/enc_file/sdr_init_ref.enc.v {2 {vlog -work work -vopt -stats=none D:/University/AL_Proj/UDP_EG4_6.2/source_code/rtl/sdram/03_ip/enc_file/sdr_init_ref.enc.v
+Model Technology ModelSim SE-64 vlog 10.7 Compiler 2017.12 Dec  7 2017
+-- Compiling module sdr_init_ref
+** Warning: (vlog-2121) D:/University/AL_Proj/UDP_EG4_6.2/source_code/rtl/sdram/03_ip/enc_file/sdr_init_ref.enc.v(214): Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+
+Top level modules:
+	sdr_init_ref
+
+} {} {}} D:/University/AL_Proj/UDP_EG4_6.2/source_code/rtl/sdram/01_rtl/eg4d_sram_fdma_test.v {1 {vlog -work work -vopt -stats=none D:/University/AL_Proj/UDP_EG4_6.2/source_code/rtl/sdram/01_rtl/eg4d_sram_fdma_test.v
+Model Technology ModelSim SE-64 vlog 10.7 Compiler 2017.12 Dec  7 2017
+-- Compiling module eg4d_sram_fdma_test
+
+Top level modules:
+	eg4d_sram_fdma_test
+
+} {} {}} D:/University/AL_Proj/UDP_EG4_6.2/source_code/rtl/sdram/02_sim/IS42s32200.v {1 {vlog -work work -vopt -stats=none D:/University/AL_Proj/UDP_EG4_6.2/source_code/rtl/sdram/02_sim/IS42s32200.v
+Model Technology ModelSim SE-64 vlog 10.7 Compiler 2017.12 Dec  7 2017
+-- Compiling module IS42s32200
+
+Top level modules:
+	IS42s32200
+
+} {} {}} D:/University/AL_Proj/UDP_EG4_6.2/source_code/rtl/sdram/03_ip/uiappfdma/uiappfdma.v {1 {vlog -work work -vopt -stats=none D:/University/AL_Proj/UDP_EG4_6.2/source_code/rtl/sdram/03_ip/uiappfdma/uiappfdma.v
+Model Technology ModelSim SE-64 vlog 10.7 Compiler 2017.12 Dec  7 2017
+-- Compiling module app_fdma
+
+Top level modules:
+	app_fdma
+
+} {} {}} D:/University/AL_Proj/UDP_EG4_6.2/source_code/rtl/sdram/01_rtl/fdma_ddr_test.v {1 {vlog -work work -vopt -stats=none D:/University/AL_Proj/UDP_EG4_6.2/source_code/rtl/sdram/01_rtl/fdma_ddr_test.v
+Model Technology ModelSim SE-64 vlog 10.7 Compiler 2017.12 Dec  7 2017
+-- Compiling module fdma_ddr_test
+
+Top level modules:
+	fdma_ddr_test
+
+} {} {}} D:/University/AL_Proj/UDP_EG4_6.2/source_code/rtl/sdram/03_ip/enc_file/sdr_wrrd.enc.v {2 {vlog -work work -vopt -stats=none D:/University/AL_Proj/UDP_EG4_6.2/source_code/rtl/sdram/03_ip/enc_file/sdr_wrrd.enc.v
+Model Technology ModelSim SE-64 vlog 10.7 Compiler 2017.12 Dec  7 2017
+** Warning: (vlog-2121) <protected>(<protected>): Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+
+Top level modules:
+
+} {} {}} D:/University/AL_Proj/UDP_EG4_6.2/source_code/rtl/sdram/03_ip/pll/pll.v {1 {vlog -work work -vopt -stats=none D:/University/AL_Proj/UDP_EG4_6.2/source_code/rtl/sdram/03_ip/pll/pll.v
+Model Technology ModelSim SE-64 vlog 10.7 Compiler 2017.12 Dec  7 2017
+-- Compiling module pll
+
+Top level modules:
+	pll
+
+} {} {}} D:/University/AL_Proj/UDP_EG4_6.2/source_code/rtl/sdram/01_rtl/udp_fdma_ddr.v {1 {vlog -work work -vopt -stats=none D:/University/AL_Proj/UDP_EG4_6.2/source_code/rtl/sdram/01_rtl/udp_fdma_ddr.v
+Model Technology ModelSim SE-64 vlog 10.7 Compiler 2017.12 Dec  7 2017
+-- Compiling module udp_fdma_ddr
+
+Top level modules:
+	udp_fdma_ddr
+
+} {} {}} D:/University/AL_Proj/UDP_EG4_6.2/source_code/rtl/sdram/03_ip/enc_file/IS42s32200.v {1 {vlog -work work -vopt -stats=none D:/University/AL_Proj/UDP_EG4_6.2/source_code/rtl/sdram/03_ip/enc_file/IS42s32200.v
+Model Technology ModelSim SE-64 vlog 10.7 Compiler 2017.12 Dec  7 2017
+-- Compiling module IS42s32200
+
+Top level modules:
+	IS42s32200
+
+} {} {}}

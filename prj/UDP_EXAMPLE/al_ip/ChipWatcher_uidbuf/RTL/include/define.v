@@ -1,0 +1,4 @@
+`define P0_Available_c3b5d90bce19
+`define P1_Available_c3b5d90bce19
+`define P2_Available_c3b5d90bce19
+`define P3_Available_c3b5d90bce19

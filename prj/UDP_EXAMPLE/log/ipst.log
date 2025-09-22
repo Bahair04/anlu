@@ -1,0 +1,12 @@
+#[INFO] IpTool V2025.07 (APP main), Windows 64bit (Release), Build 168007 2025/07/10, 18:32:53 Jul 10 2025 on WIN10-204
+#[INFO] Run at Tue Sep  9 23:00:19 2025
+
+#[INFO] Load ipc data success from F:/AL_FPGA/lab_ex_2025_7_12_nosoft/HXEG420C_lab_ex_TD6.2.1/HXEG420_lab_ex/lab_ex_1_ethernet_led/UDP_EG4_6.2/prj/UDP_EXAMPLE/al_ip/pll_gen.ipc
+#[INFO] The Tool Ip instance xml path: F:/AL_FPGA/lab_ex_2025_7_12_nosoft/HXEG420C_lab_ex_TD6.2.1/HXEG420_lab_ex/lab_ex_1_ethernet_led/UDP_EG4_6.2/prj/UDP_EXAMPLE/al_ip/TEMAC_CORE/TEMAC_CORE.xml
+#[INFO] Load instance data success from F:/AL_FPGA/lab_ex_2025_7_12_nosoft/HXEG420C_lab_ex_TD6.2.1/HXEG420_lab_ex/lab_ex_1_ethernet_led/UDP_EG4_6.2/prj/UDP_EXAMPLE/al_ip/TEMAC_CORE
+#[INFO] Load Catalog data success for IP Name TEMAC
+#[INFO] Load Component data success from D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/ip/depot/TEMAC_2.0
+#[ERROR] The D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/ip/depot/TEMAC_2.0 not exist upgrade.tcl
+#[INFO] TEMAC_CORE >> Instance Version:2.0.0 Recommend Version:2.0.0
+ipst_gui_select_dialog IP_Status
+ipst_gui_close_dialog IP_Status

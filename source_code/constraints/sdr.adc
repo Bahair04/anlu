@@ -1,0 +1,16 @@
+set_pin_assignment	{ I_sys_clk }	{ LOCATION = R7; }
+set_pin_assignment	{ I_sys_clk }	{ IOSTANDARD = LVCMOS25; }
+set_pin_assignment	{ I_sys_clk }	{ PULLTYPE = PULLUP; }
+set_pin_assignment	{ I_sys_rstn }	{ LOCATION = B2; }
+set_pin_assignment	{ I_sys_rstn }	{ IOSTANDARD = LVCMOS25; }
+set_pin_assignment	{ I_sys_rstn }	{ PULLTYPE = PULLUP; }
+set_pin_assignment	{ O_led1 }	{ LOCATION = A4; }
+set_pin_assignment	{ O_led1 }	{ IOSTANDARD = LVCMOS25; }
+set_pin_assignment	{ O_led1 }	{ DRIVESTRENGTH = 8; }
+set_pin_assignment	{ O_led1 }	{ PULLTYPE = NONE; }
+set_pin_assignment	{ O_led2 }	{ LOCATION = C10; }
+set_pin_assignment	{ O_led2 }	{ IOSTANDARD = LVCMOS25; }
+set_pin_assignment	{ O_led2 }	{ DRIVESTRENGTH = 8; }
+set_pin_assignment	{ O_led2 }	{ PULLTYPE = NONE; }
+
+
