@@ -37,7 +37,7 @@ module uidbuf#(
 
         parameter  integer                   W_BUFDEPTH     = 1024, // FIFO深度 单位W_DATAWIDTH
         parameter  integer                   W_DATAWIDTH    = 16,   // uidbuf数据宽度 
-        parameter  [AXI_ADDR_WIDTH -1'b1: 0] W_BASEADDR     = 0,    // FIFO起始地址
+        parameter  [AXI_ADDR_WIDTH -1'b1: 0] W_BASEADDR     = 0,    // FIFO起始地址 单位 字节
         parameter  integer                   W_DSIZEBITS    = 19,   // FIFO每一帧缓存的地址大小 其余帧在高地址切换
         parameter  integer                   W_XSIZE        = 512,  // 宽度 单位W_DATAWIDTH
         parameter  integer                   W_YSIZE        = 384,  // 高度 单位W_DATAWIDTH
@@ -46,7 +46,7 @@ module uidbuf#(
 
         parameter  integer                   R_BUFDEPTH     = 1024, // FIFO深度 单位R_DATAWIDTH
         parameter  integer                   R_DATAWIDTH    = 16,   // uidbuf数据宽度
-        parameter  [AXI_ADDR_WIDTH -1'b1: 0] R_BASEADDR     = 0,    // FIFO起始地址
+        parameter  [AXI_ADDR_WIDTH -1'b1: 0] R_BASEADDR     = 0,    // FIFO起始地址 单位 字节
         parameter  integer                   R_DSIZEBITS    = 19,   // FIFO每一帧缓存的地址大小 其余帧在高地址切换
         parameter  integer                   R_XSIZE        = 512,  // 宽度 单位W_DATAWIDTH
         parameter  integer                   R_YSIZE        = 384,  // 高度 单位W_DATAWIDTH

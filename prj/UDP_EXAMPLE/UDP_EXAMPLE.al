@@ -321,6 +321,24 @@
                     <Attr Name="CompileOrder" Val="57"/>
                 </FileInfo>
             </File>
+            <File Path="../../source_code/rtl/uidbuf_interconnect/uidbufw_interconnect.v">
+                <FileInfo>
+                    <Attr Name="AutoExcluded" Val="true"/>
+                    <Attr Name="UsedInSyn" Val="true"/>
+                    <Attr Name="UsedInP&R" Val="true"/>
+                    <Attr Name="BelongTo" Val="design_1"/>
+                    <Attr Name="CompileOrder" Val="58"/>
+                </FileInfo>
+            </File>
+            <File Path="../../source_code/rtl/four_channel_video_splicer/four_channel_video_splicer.v">
+                <FileInfo>
+                    <Attr Name="AutoExcluded" Val="true"/>
+                    <Attr Name="UsedInSyn" Val="true"/>
+                    <Attr Name="UsedInP&R" Val="true"/>
+                    <Attr Name="BelongTo" Val="design_1"/>
+                    <Attr Name="CompileOrder" Val="59"/>
+                </FileInfo>
+            </File>
         </Verilog>
         <VHDL>
             <File Path="../../source_code/rtl/HDMI/hdmi_tx.vhd">

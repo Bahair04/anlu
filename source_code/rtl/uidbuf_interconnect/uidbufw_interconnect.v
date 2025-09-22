@@ -50,188 +50,189 @@ module uidbufw_interconnect #(
     input   wire                                    fdma_wvalid
 
 );
-    localparam IDLE = 0;
-    localparam  W_1 = 1;
-    localparam  W_2 = 2;
-    localparam  W_3 = 3;
-    localparam  W_4 = 4;
+
+localparam IDLE = 0;
+localparam  W_1 = 1;
+localparam  W_2 = 2;
+localparam  W_3 = 3;
+localparam  W_4 = 4;
   
 
-    wire fdma_wbusy_fall;
-    reg fdma_wbusy_dly;
-    always @(posedge ui_clk or negedge ui_rstn)begin
-        if (ui_rstn == 1'b0) begin
-           fdma_wbusy_dly <= 1'b0;
-        end else begin
-           fdma_wbusy_dly <= fdma_wbusy;
-        end
+wire fdma_wbusy_fall;
+reg fdma_wbusy_dly;
+always @(posedge ui_clk or negedge ui_rstn)begin
+    if (ui_rstn == 1'b0) begin
+        fdma_wbusy_dly <= 1'b0;
+    end else begin
+        fdma_wbusy_dly <= fdma_wbusy;
     end
+end
 
-    assign  fdma_wbusy_fall = (~fdma_wbusy)&(fdma_wbusy_dly) ;
-
-
-
-    reg [2:0]state;
-
-    always@(posedge ui_clk or negedge ui_rstn)begin
-        if (ui_rstn == 1'b0) begin
-            state<=IDLE;
-        end else begin
-            case (state)
-                IDLE:begin
-                    if (fdma_wareq_1) begin
-                        state<=W_1;
-                    end else if (fdma_wareq_2) begin
-                        state<=W_2;
-                    end else if (fdma_wareq_3) begin
-                        state<=W_3;
-                    end else if (fdma_wareq_4) begin
-                        state<=W_4;
-                    end else begin
-                        state<=state;
-                    end
-                end 
-                W_1:begin
-                    if (fdma_wbusy_fall) begin
-                        state<=IDLE;
-                    end else begin
-                        state<=state;
-                    end
-                end
-                W_2:begin
-                    if (fdma_wbusy_fall) begin
-                        state<=IDLE;
-                    end else begin
-                        state<=state;
-                    end
-                end
-                W_3:begin
-                    if (fdma_wbusy_fall) begin
-                        state<=IDLE;
-                    end else begin
-                        state<=state;
-                    end
-                end
-                W_4:begin
-                    if (fdma_wbusy_fall) begin
-                        state<=IDLE;
-                    end else begin
-                        state<=state;
-                    end
-                end
-                default: state<=IDLE;
-            endcase
-        end
-    end
+assign  fdma_wbusy_fall = (~fdma_wbusy)&(fdma_wbusy_dly) ;
 
 
 
-    always @(posedge ui_clk) begin
+reg [2:0]state;
+
+always@(posedge ui_clk or negedge ui_rstn)begin
+    if (ui_rstn == 1'b0) begin
+        state<=IDLE;
+    end else begin
         case (state)
             IDLE:begin
-                fdma_waddr   <= 'd0;
-                fdma_wareq   <= 'b0;
-                fdma_wsize   <= 'd0;
-                fdma_wbusy_1 <= 'b0;
-                fdma_wbusy_2 <= 'b0;
-                fdma_wbusy_3 <= 'b0;
-                fdma_wbusy_4 <= 'b0;
+                if (fdma_wareq_1) begin
+                    state<=W_1;
+                end else if (fdma_wareq_2) begin
+                    state<=W_2;
+                end else if (fdma_wareq_3) begin
+                    state<=W_3;
+                end else if (fdma_wareq_4) begin
+                    state<=W_4;
+                end else begin
+                    state<=state;
+                end
             end 
             W_1:begin
-                fdma_waddr   <= fdma_waddr_1;
-                fdma_wareq   <= fdma_wareq_1;
-                fdma_wsize   <= fdma_wsize_1;
-                fdma_wbusy_1 <= fdma_wbusy;
-                fdma_wbusy_2 <= 'b0;
-                fdma_wbusy_3 <= 'b0;
-                fdma_wbusy_4 <= 'b0;
+                if (fdma_wbusy_fall) begin
+                    state<=IDLE;
+                end else begin
+                    state<=state;
+                end
             end
             W_2:begin
-                fdma_waddr   <= fdma_waddr_2;
-                fdma_wareq   <= fdma_wareq_2;
-                fdma_wsize   <= fdma_wsize_2;
-                fdma_wbusy_1 <= 'b0;
-                fdma_wbusy_2 <= fdma_wbusy;
-                fdma_wbusy_3 <= 'b0;
-                fdma_wbusy_4 <= 'b0;
+                if (fdma_wbusy_fall) begin
+                    state<=IDLE;
+                end else begin
+                    state<=state;
+                end
             end
             W_3:begin
-                fdma_waddr   <= fdma_waddr_3;
-                fdma_wareq   <= fdma_wareq_3;
-                fdma_wsize   <= fdma_wsize_3;
-                fdma_wbusy_1 <= 'b0;
-                fdma_wbusy_2 <= 'b0;
-                fdma_wbusy_3 <= fdma_wbusy;
-                fdma_wbusy_4 <= 'b0;
+                if (fdma_wbusy_fall) begin
+                    state<=IDLE;
+                end else begin
+                    state<=state;
+                end
             end
             W_4:begin
-                fdma_waddr   <= fdma_waddr_4;
-                fdma_wareq   <= fdma_wareq_4;
-                fdma_wsize   <= fdma_wsize_4;
-                fdma_wbusy_1 <= 'b0;
-                fdma_wbusy_2 <= 'b0;
-                fdma_wbusy_3 <= 'b0;
-                fdma_wbusy_4 <= fdma_wbusy;
+                if (fdma_wbusy_fall) begin
+                    state<=IDLE;
+                end else begin
+                    state<=state;
+                end
             end
-            default: begin
-                fdma_waddr   <= 'd0;
-                fdma_wareq   <= 'b0;
-                fdma_wsize   <= 'd0;
-                fdma_wbusy_1 <= 'b0;
-                fdma_wbusy_2 <= 'b0;
-                fdma_wbusy_3 <= 'b0;
-                fdma_wbusy_4 <= 'b0;
-            end
+            default: state<=IDLE;
         endcase
     end
+end
 
 
-    //fdma_wdata fdma_wvalid_1要立刻输出，不能延迟一个时钟周期，因为对于FDMA而言，当fdma_wvalid有效时，fdma_wdata也要有效
-    always@(*)begin
-        case (state)
-            IDLE:begin
-              fdma_wdata    <= 'd0;
-              fdma_wvalid_1 <= 'b0;
-              fdma_wvalid_2 <= 'b0;
-              fdma_wvalid_3 <= 'b0;
-              fdma_wvalid_4 <= 'b0;
-            end 
-            W_1:begin
-              fdma_wdata    <= fdma_wdata_1;
-              fdma_wvalid_1 <= fdma_wvalid;
-              fdma_wvalid_2 <= 'b0;
-              fdma_wvalid_3 <= 'b0;
-              fdma_wvalid_4 <= 'b0;
-            end
-            W_2:begin
-              fdma_wdata    <= fdma_wdata_2;
-              fdma_wvalid_1 <= 'b0;
-              fdma_wvalid_2 <= fdma_wvalid;
-              fdma_wvalid_3 <= 'b0;
-              fdma_wvalid_4 <= 'b0;
-            end
-            W_3:begin
-              fdma_wdata    <= fdma_wdata_3;
-              fdma_wvalid_1 <= 'b0;
-              fdma_wvalid_2 <= 'b0;
-              fdma_wvalid_3 <= fdma_wvalid;
-              fdma_wvalid_4 <= 'b0;
-            end
-            W_4:begin
-              fdma_wdata    <= fdma_wdata_4;
-              fdma_wvalid_1 <= 'b0;
-              fdma_wvalid_2 <= 'b0;
-              fdma_wvalid_3 <= 'b0;
-              fdma_wvalid_4 <= fdma_wvalid;
-            end
-            default: begin
-              fdma_wdata    <= 'd0;
-              fdma_wvalid_1 <= 'b0;
-              fdma_wvalid_2 <= 'b0;
-              fdma_wvalid_3 <= 'b0;
-              fdma_wvalid_4 <= 'b0;
-            end
-        endcase
-    end
+
+always @(posedge ui_clk) begin
+    case (state)
+        IDLE:begin
+            fdma_waddr   <= 'd0;
+            fdma_wareq   <= 'b0;
+            fdma_wsize   <= 'd0;
+            fdma_wbusy_1 <= 'b0;
+            fdma_wbusy_2 <= 'b0;
+            fdma_wbusy_3 <= 'b0;
+            fdma_wbusy_4 <= 'b0;
+        end 
+        W_1:begin
+            fdma_waddr   <= fdma_waddr_1;
+            fdma_wareq   <= fdma_wareq_1;
+            fdma_wsize   <= fdma_wsize_1;
+            fdma_wbusy_1 <= fdma_wbusy;
+            fdma_wbusy_2 <= 'b0;
+            fdma_wbusy_3 <= 'b0;
+            fdma_wbusy_4 <= 'b0;
+        end
+        W_2:begin
+            fdma_waddr   <= fdma_waddr_2;
+            fdma_wareq   <= fdma_wareq_2;
+            fdma_wsize   <= fdma_wsize_2;
+            fdma_wbusy_1 <= 'b0;
+            fdma_wbusy_2 <= fdma_wbusy;
+            fdma_wbusy_3 <= 'b0;
+            fdma_wbusy_4 <= 'b0;
+        end
+        W_3:begin
+            fdma_waddr   <= fdma_waddr_3;
+            fdma_wareq   <= fdma_wareq_3;
+            fdma_wsize   <= fdma_wsize_3;
+            fdma_wbusy_1 <= 'b0;
+            fdma_wbusy_2 <= 'b0;
+            fdma_wbusy_3 <= fdma_wbusy;
+            fdma_wbusy_4 <= 'b0;
+        end
+        W_4:begin
+            fdma_waddr   <= fdma_waddr_4;
+            fdma_wareq   <= fdma_wareq_4;
+            fdma_wsize   <= fdma_wsize_4;
+            fdma_wbusy_1 <= 'b0;
+            fdma_wbusy_2 <= 'b0;
+            fdma_wbusy_3 <= 'b0;
+            fdma_wbusy_4 <= fdma_wbusy;
+        end
+        default: begin
+            fdma_waddr   <= 'd0;
+            fdma_wareq   <= 'b0;
+            fdma_wsize   <= 'd0;
+            fdma_wbusy_1 <= 'b0;
+            fdma_wbusy_2 <= 'b0;
+            fdma_wbusy_3 <= 'b0;
+            fdma_wbusy_4 <= 'b0;
+        end
+    endcase
+end
+
+
+//fdma_wdata fdma_wvalid_1要立刻输出，不能延迟一个时钟周期，因为对于FDMA而言，当fdma_wvalid有效时，fdma_wdata也要有效
+always@(*)begin
+    case (state)
+        IDLE:begin
+            fdma_wdata    <= 'd0;
+            fdma_wvalid_1 <= 'b0;
+            fdma_wvalid_2 <= 'b0;
+            fdma_wvalid_3 <= 'b0;
+            fdma_wvalid_4 <= 'b0;
+        end 
+        W_1:begin
+            fdma_wdata    <= fdma_wdata_1;
+            fdma_wvalid_1 <= fdma_wvalid;
+            fdma_wvalid_2 <= 'b0;
+            fdma_wvalid_3 <= 'b0;
+            fdma_wvalid_4 <= 'b0;
+        end
+        W_2:begin
+            fdma_wdata    <= fdma_wdata_2;
+            fdma_wvalid_1 <= 'b0;
+            fdma_wvalid_2 <= fdma_wvalid;
+            fdma_wvalid_3 <= 'b0;
+            fdma_wvalid_4 <= 'b0;
+        end
+        W_3:begin
+            fdma_wdata    <= fdma_wdata_3;
+            fdma_wvalid_1 <= 'b0;
+            fdma_wvalid_2 <= 'b0;
+            fdma_wvalid_3 <= fdma_wvalid;
+            fdma_wvalid_4 <= 'b0;
+        end
+        W_4:begin
+            fdma_wdata    <= fdma_wdata_4;
+            fdma_wvalid_1 <= 'b0;
+            fdma_wvalid_2 <= 'b0;
+            fdma_wvalid_3 <= 'b0;
+            fdma_wvalid_4 <= fdma_wvalid;
+        end
+        default: begin
+            fdma_wdata    <= 'd0;
+            fdma_wvalid_1 <= 'b0;
+            fdma_wvalid_2 <= 'b0;
+            fdma_wvalid_3 <= 'b0;
+            fdma_wvalid_4 <= 'b0;
+        end
+    endcase
+end
 
 endmodule
