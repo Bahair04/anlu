@@ -57,7 +57,7 @@ module four_channel_video_splicer
 );
 
 
-reg     [7 : 0]                     W_sync_cnt_o1;
+wire    [7 : 0]                     W_sync_cnt_o1;
 wire    [7 : 0]                     R_buf_i;
 wire    [AXI_ADDR_WIDTH-1'b1: 0]    fdma_waddr1;
 wire                                fdma_wareq1;
@@ -65,6 +65,14 @@ wire    [15  :0]                    fdma_wsize1;
 wire                                fdma_wbusy1;
 wire    [AXI_DATA_WIDTH-1'b1:0]     fdma_wdata1; //wdataÒªÁ¢¿ÌÊä³ö
 wire                                fdma_wvalid1;
+
+uisetvbuf uisetvbuf_i
+(
+    .ui_clk(fdma_clk0),
+    .bufn_i(W_sync_cnt_o1),
+    .bufn_o(R_buf_i)
+);
+
 uidbuf #(
     .SDRAM_MAX_BURST_LEN 	(256                ),
     .VIDEO_ENABLE        	(1                  ),
@@ -82,7 +90,7 @@ uidbuf #(
     .W_BUFSIZE           	(3                  ),
     .W_XSTRIDE           	(512                ),
 
-    .R_BUFDEPTH          	(1024               ),
+    .R_BUFDEPTH          	(2048               ),
     .R_DATAWIDTH         	(16                 ),
     .R_BASEADDR          	(0                  ),
     .R_DSIZEBITS         	(19                 ),
@@ -121,7 +129,7 @@ u_uidbuf_1(
     .fdma_rvalid  	(fdma_rvalid   )
 );
 
-reg     [7 : 0]                     W_sync_cnt_o2;
+wire    [7 : 0]                     W_sync_cnt_o2;
 wire    [AXI_ADDR_WIDTH-1'b1: 0]    fdma_waddr2;
 wire                                fdma_wareq2;
 wire    [15  :0]                    fdma_wsize2;                                     
@@ -162,7 +170,7 @@ u_uidbuf_2(
     .fdma_wvalid  	(fdma_wvalid2   )
 );
 
-reg     [7 : 0]                     W_sync_cnt_o3;
+wire    [7 : 0]                     W_sync_cnt_o3;
 wire    [AXI_ADDR_WIDTH-1'b1: 0]    fdma_waddr3;
 wire                                fdma_wareq3;
 wire    [15  :0]                    fdma_wsize3;                                     
@@ -203,7 +211,7 @@ u_uidbuf_3(
     .fdma_wvalid  	(fdma_wvalid3   )
 );
 
-reg     [7 : 0]                     W_sync_cnt_o4;
+wire    [7 : 0]                     W_sync_cnt_o4;
 wire    [AXI_ADDR_WIDTH-1'b1: 0]    fdma_waddr4;
 wire                                fdma_wareq4;
 wire    [15  :0]                    fdma_wsize4;                                     

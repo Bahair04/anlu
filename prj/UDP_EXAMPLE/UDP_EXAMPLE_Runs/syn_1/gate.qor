@@ -3,24 +3,24 @@
 -----------------------------------------------------------
 | Timing                    |                             |
 |     Setup WNS             |        -5958                |
-|     Setup TNS             |      -315780                |
-|     Num of violated S-EP  |           81                |
-|     Hold WNS              |          471                |
+|     Setup TNS             |      -320558                |
+|     Num of violated S-EP  |          116                |
+|     Hold WNS              |          556                |
 |     Hold TNS              |            0                |
 |     Num of violated H-EP  |            0                |
 -----------------------------------------------------------
 | Utilization               |                             |
-|     #registers            |         1056                |
-|     #luts                 |         1060                |
-|     #lut1                 |           25                |
-|     #lut1(~A)             |           25                |
-|     #slices               |           89                |
-|     slices percentage     |        0.91%                |
-|     #RAMs                 |            4                |
+|     #registers            |         1196                |
+|     #luts                 |         1341                |
+|     #lut1                 |           39                |
+|     #lut1(~A)             |           38                |
+|     #slices               |          108                |
+|     slices percentage     |        1.10%                |
+|     #RAMs                 |           12                |
 |     #DSPs                 |            0                |
 |     #f7mux                |        0.00%                |
-|     #MACROs               |           13                |
-|     #insts in MACRO       |           89                |
+|     #MACROs               |           16                |
+|     #insts in MACRO       |          108                |
 -----------------------------------------------------------
 | kept_net                  |                             |
 |     #syn_keep             |           66                |
@@ -28,15 +28,15 @@
 |     #dont_touch           |            0                |
 |     #mark_debug           |            0                |
 |     #max_fanout_keep      |            0                |
-|     #async_reg            |           12                |
+|     #async_reg            |           27                |
 -----------------------------------------------------------
-| Top 10% datanet fanout#   |        41.76                |
-| dff(single fanout)->dff   |          327                |
+| Top 10% datanet fanout#   |        40.39                |
+| dff(single fanout)->dff   |          326                |
 | dff(single fanout)->dram  |            0                |
 -----------------------------------------------------------
 | Over-quota path num*      |                             |
-|     u_clk/pl...           |            2                |
-|     Total                 |            2                |
+|     u_clk/pl...           |            5                |
+|     Total                 |            5                |
 -----------------------------------------------------------
 | Rent**                    |                             |
 -----------------------------------------------------------
@@ -52,26 +52,29 @@ Over-quota Path Details
 ----------------------------------------------------------------------------------------------------------------------------
   u_clk/pll_inst.clkc[0]  |    1    |    680(6666)     |      1(1)      |  FIFO,LUT5,SEQ   |  large launch delay  |  -1102  
                           |    2    |    680(6666)     |      1(1)      |  FIFO,LUT5,SEQ   |  large launch delay  |  -1102  
+                          |    3    |    680(6666)     |      1(1)      |  FIFO,LUT5,SEQ   |  large launch delay  |  -1102  
+                          |    4    |    680(6666)     |      1(1)      |  FIFO,LUT5,SEQ   |  large launch delay  |  -1102  
+                          |    5    |    680(6666)     |      1(1)      |  FIFO,LUT5,SEQ   |  large launch delay  |  -1102  
 ----------------------------------------------------------------------------------------------------------------------------
 Note: Table only show top 5 paths for each clock group in default
 
 Logic Level Distribution
--------------------------------------------------------------------------------------------------------------------
-  Clock                            |  Period            |  0    |  1    |  2    |  3    |  4   |  5   |  6   |  7
--------------------------------------------------------------------------------------------------------------------
-  clk_in                           |  20.000ns (50MHz)  |  40   |  44   |  22   |  5    |  14  |  9   |  3   |  0
-  phy1_rgmii_rx_clk                |  8.000ns (125MHz)  |  0    |  0    |  0    |  0    |  0   |  0   |  0   |  0
-  u_PLL_HDMI_CLK/pll_inst.clkc[0]  |  16.000ns (62MHz)  |  104  |  46   |  56   |  12   |  28  |  29  |  39  |  4
-  u_PLL_HDMI_CLK/pll_inst.clkc[1]  |  3.200ns (312MHz)  |  43   |  27   |  0    |  0    |  0   |  0   |  0   |  0
-  u_clk/pll_inst.clkc[0]           |  6.666ns (150MHz)  |  749  |  273  |  132  |  149  |  21  |  3   |  0   |  0
-  u_clk/pll_inst.clkc[2]           |  6.666ns (150MHz)  |  15   |  32   |  0    |  0    |  0   |  0   |  0   |  0
-  Total                            |  NA                |  951  |  422  |  210  |  166  |  63  |  41  |  42  |  4
--------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------
+  Clock                            |  Period            |  0     |  1    |  2    |  3    |  4    |  5   |  6   |  7
+---------------------------------------------------------------------------------------------------------------------
+  clk_in                           |  20.000ns (50MHz)  |  40    |  44   |  21   |  9    |  9    |  11  |  2   |  1
+  phy1_rgmii_rx_clk                |  8.000ns (125MHz)  |  0     |  0    |  0    |  0    |  0    |  0   |  0   |  0
+  u_PLL_HDMI_CLK/pll_inst.clkc[0]  |  16.000ns (62MHz)  |  120   |  55   |  63   |  16   |  28   |  30  |  35  |  7
+  u_PLL_HDMI_CLK/pll_inst.clkc[1]  |  3.200ns (312MHz)  |  43    |  27   |  0    |  0    |  0    |  0   |  0   |  0
+  u_clk/pll_inst.clkc[0]           |  6.666ns (150MHz)  |  810   |  379  |  251  |  149  |  84   |  5   |  0   |  0
+  u_clk/pll_inst.clkc[2]           |  6.666ns (150MHz)  |  15    |  32   |  0    |  0    |  0    |  0   |  0   |  0
+  Total                            |  NA                |  1028  |  537  |  335  |  174  |  121  |  46  |  37  |  8
+---------------------------------------------------------------------------------------------------------------------
 Hierarchical Rent Exponent Report
 +-----------------------------------------------------------------+
 |Inst     |Model           |Rent     |Cell     |Pin     |Term     |
 +-----------------------------------------------------------------+
-|top      |UDP_Example_Top |0.21     |2450     |8837    |18       |
+|top      |UDP_Example_Top |0.20     |2928     |10945   |18       |
 +-----------------------------------------------------------------+
 Note: Cell represents total number of cells inside module; Pin represents total number of pins
       which have net connection inside module; Term represents total number of PIs and POs of module.

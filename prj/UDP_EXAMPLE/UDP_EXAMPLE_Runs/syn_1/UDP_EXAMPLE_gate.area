@@ -8,19 +8,19 @@ IO Statistics
   #inout                    1
 
 LUT Statistics
-#Total_luts              1060
-  #lut4                   853
-  #lut5                   207
+#Total_luts              1341
+  #lut4                  1089
+  #lut5                   252
   #lut6                     0
   #lut5_mx41                0
   #lut4_alu1b               0
 
 Utilization Statistics
-#lut                     1238   out of  19600    6.32%
-#reg                     1092   out of  19600    5.57%
-#bram                       4   out of     64    6.25%
+#lut                     1557   out of  19600    7.94%
+#reg                     1257   out of  19600    6.41%
+#bram                      12   out of     64   18.75%
   #bram9k                   0
-  #fifo9k                   4
+  #fifo9k                  12
 #bram32k                    0   out of     16    0.00%
 #dsp                        0   out of     29    0.00%
 #pad                       33   out of    188   17.55%
@@ -31,32 +31,39 @@ Utilization Statistics
 #gclk                       2   out of     16   12.50%
 
 Report Hierarchy Area:
-+---------------------------------------------------------------------------------------------------+
-|Instance                         |Module              |lut     |ripple  |seq     |bram    |dsp     |
-+---------------------------------------------------------------------------------------------------+
-|top                              |UDP_Example_Top     |1149    |89      |1101    |4       |0       |
-|  app_fdma_inst                  |app_fdma            |273     |52      |199     |0       |0       |
-|  u2_ram                         |sdr_as_ram          |88      |5       |463     |0       |0       |
-|    u1_init_ref                  |sdr_init_ref        |21      |5       |81      |0       |0       |
-|    u2_wrrd                      |sdr_wrrd            |67      |0       |382     |0       |0       |
-|  u_PLL_HDMI_CLK                 |PLL_HDMI_CLK        |1       |0       |0       |0       |0       |
-|  u_clk                          |fdma_pll            |0       |0       |0       |0       |0       |
-|  u_uicfg5640                    |uicfg5640           |329     |0       |80      |0       |0       |
-|    uii2c_inst                   |uii2c               |62      |0       |33      |0       |0       |
-|  u_uitpg                        |uitpg               |98      |7       |50      |0       |0       |
-|  uiSensorRGB565_inst            |uiSensorRGB565      |0       |0       |2       |0       |0       |
-|  uidbuf_inst                    |uidbuf              |126     |18      |92      |4       |0       |
-|    FDMA_READ$fs_cap_R0          |fs_cap              |1       |0       |6       |0       |0       |
-|    FDMA_WRITE_ENABLE$fs_cap_W0  |fs_cap              |1       |0       |6       |0       |0       |
-|  uihdmitx_inst                  |uihdmitx            |192     |0       |174     |0       |0       |
-|    Inst_DVITransmitter          |DVITransmitter      |192     |0       |174     |0       |0       |
-|      Inst_TMDSEncoder_blue      |TMDSEncoder         |55      |0       |42      |0       |0       |
-|      Inst_TMDSEncoder_green     |TMDSEncoder         |56      |0       |39      |0       |0       |
-|      Inst_TMDSEncoder_red       |TMDSEncoder         |53      |0       |38      |0       |0       |
-|      Inst_blue_serializer_10_1  |Serial_N_1_lvds_dat |10      |0       |20      |0       |0       |
-|      Inst_clk_serializer_10_1   |Serial_N_1_lvds     |2       |0       |7       |0       |0       |
-|      Inst_green_serializer_10_1 |Serial_N_1_lvds_dat |8       |0       |14      |0       |0       |
-|      Inst_red_serializer_10_1   |Serial_N_1_lvds_dat |8       |0       |14      |0       |0       |
-|  uisetvbuf_inst                 |uisetvbuf           |1       |0       |2       |0       |0       |
-|  uivtc_inst                     |uivtc               |41      |7       |30      |0       |0       |
-+---------------------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------+
+|Instance                          |Module                     |lut     |ripple  |seq     |bram    |dsp     |
++-----------------------------------------------------------------------------------------------------------+
+|top                               |UDP_Example_Top            |1449    |108     |1266    |12      |0       |
+|  app_fdma_inst                   |app_fdma                   |259     |44      |199     |0       |0       |
+|  u2_ram                          |sdr_as_ram                 |152     |5       |463     |0       |0       |
+|    u1_init_ref                   |sdr_init_ref               |21      |5       |81      |0       |0       |
+|    u2_wrrd                       |sdr_wrrd                   |67      |0       |382     |0       |0       |
+|  u_PLL_HDMI_CLK                  |PLL_HDMI_CLK               |1       |0       |0       |0       |0       |
+|  u_clk                           |fdma_pll                   |0       |0       |0       |0       |0       |
+|  u_four_channel_video_splicer    |four_channel_video_splicer |355     |45      |256     |12      |0       |
+|    u_uidbuf_1                    |uidbuf                     |124     |18      |92      |6       |0       |
+|      FDMA_READ$fs_cap_R0         |fs_cap                     |1       |0       |6       |0       |0       |
+|      FDMA_WRITE_ENABLE$fs_cap_W0 |fs_cap                     |1       |0       |6       |0       |0       |
+|    u_uidbuf_2                    |uidbuf                     |63      |9       |47      |2       |0       |
+|      FDMA_WRITE_ENABLE$fs_cap_W0 |fs_cap                     |1       |0       |6       |0       |0       |
+|    u_uidbuf_3                    |uidbuf                     |63      |9       |47      |2       |0       |
+|      FDMA_WRITE_ENABLE$fs_cap_W0 |fs_cap                     |1       |0       |6       |0       |0       |
+|    u_uidbuf_4                    |uidbuf                     |63      |9       |47      |2       |0       |
+|      FDMA_WRITE_ENABLE$fs_cap_W0 |fs_cap                     |1       |0       |6       |0       |0       |
+|    u_uidbufw_interconnect        |uidbufw_interconnect       |42      |0       |23      |0       |0       |
+|  u_uicfg5640                     |uicfg5640                  |345     |0       |80      |0       |0       |
+|    uii2c_inst                    |uii2c                      |62      |0       |33      |0       |0       |
+|  u_uitpg                         |uitpg                      |102     |7       |53      |0       |0       |
+|  uiSensorRGB565_inst             |uiSensorRGB565             |0       |0       |2       |0       |0       |
+|  uihdmitx_inst                   |uihdmitx                   |193     |0       |174     |0       |0       |
+|    Inst_DVITransmitter           |DVITransmitter             |193     |0       |174     |0       |0       |
+|      Inst_TMDSEncoder_blue       |TMDSEncoder                |60      |0       |42      |0       |0       |
+|      Inst_TMDSEncoder_green      |TMDSEncoder                |52      |0       |39      |0       |0       |
+|      Inst_TMDSEncoder_red        |TMDSEncoder                |53      |0       |38      |0       |0       |
+|      Inst_blue_serializer_10_1   |Serial_N_1_lvds_dat        |10      |0       |20      |0       |0       |
+|      Inst_clk_serializer_10_1    |Serial_N_1_lvds            |2       |0       |7       |0       |0       |
+|      Inst_green_serializer_10_1  |Serial_N_1_lvds_dat        |8       |0       |14      |0       |0       |
+|      Inst_red_serializer_10_1    |Serial_N_1_lvds_dat        |8       |0       |14      |0       |0       |
+|  uivtc_inst                      |uivtc                      |42      |7       |30      |0       |0       |
++-----------------------------------------------------------------------------------------------------------+

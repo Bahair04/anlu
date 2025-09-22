@@ -26,23 +26,16 @@
 *6) _s state mechine
 *********************************************************************/
 
-module uisetvbuf
-(
-input									ui_clk,
-input      	  [7   :0]                 	bufn_i,
-output reg    [7   :0]              	bufn_o
+module uisetvbuf#(
+	parameter  integer                  BUF_DELAY     = 1,
+	parameter  integer                  BUF_LENTH     = 3
+)(
+	input									ui_clk,
+	input      	  [7   :0]                 	bufn_i,
+	output wire   [7   :0]              	bufn_o
 );    
-
-
-always @(posedge ui_clk)begin
-	if(bufn_i == 2)
-    	bufn_o <=1;
-    else if(bufn_i == 1) 
-    	bufn_o <=0;
-    else 
-    	bufn_o <=2;
-
-end    
+ 
+assign bufn_o = bufn_i < BUF_DELAY?  (BUF_LENTH - BUF_DELAY + bufn_i) : (bufn_i - BUF_DELAY) ;
 
 endmodule
 

@@ -4,7 +4,7 @@
    Executable = D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/bin/run.exe
    Built at =   16:32:07 Jun 12 2025
    Run by =     1
-   Run Date =   Mon Sep 22 15:01:23 2025
+   Run Date =   Mon Sep 22 15:58:14 2025
 
    Run on =     LAPTOP-EUGMKLPQ
 ============================================================
@@ -113,8 +113,6 @@ HDL-1007 : analyze verilog file ../../al_ip/udp_fdma_ddr_wfifo/udp_fdma_ddr_wfif
 HDL-1007 : analyze verilog file ../../../../source_code/rtl/UDP_Example_Top.v
 HDL-1007 : analyze included file ../../../../source_code/rtl/HDMI/vga_parameter_cfg.v in ../../../../source_code/rtl/UDP_Example_Top.v(37)
 HDL-1007 : back to file '../../../../source_code/rtl/UDP_Example_Top.v' in ../../../../source_code/rtl/UDP_Example_Top.v(37)
-HDL-1007 : undeclared symbol 'fdma_wready', assumed default net type 'wire' in ../../../../source_code/rtl/UDP_Example_Top.v(293)
-HDL-1007 : undeclared symbol 'fdma_rready', assumed default net type 'wire' in ../../../../source_code/rtl/UDP_Example_Top.v(311)
 HDL-1007 : analyze VHDL file ../../../../source_code/rtl/HDMI/enc_file/DVITransmitter.enc.vhd
 HDL-1007 : analyze entity dvitransmitter in ../../../../source_code/rtl/HDMI/enc_file/DVITransmitter.enc.vhd(13)
 HDL-1007 : analyze architecture ** in ../../../../source_code/rtl/HDMI/enc_file/DVITransmitter.enc.vhd(2)
@@ -177,7 +175,9 @@ HDL-5371 WARNING: macro 'DATA_WIDTH' is redefined in ../../../../source_code/rtl
 HDL-5371 WARNING: macro 'ADDR_WIDTH' is redefined in ../../../../source_code/rtl/uieg4d_dram/enc_file/sdr_wrrd.enc.v(11)
 HDL-5007 WARNING: concatenation with an unsized literal will be treated as 32 bits in ../../../../source_code/rtl/uieg4d_dram/enc_file/sdr_wrrd.enc.v(283)
 HDL-1007 : back to file '../../../../source_code/rtl/uieg4d_dram/enc_file/sdr_wrrd.enc.v' in ../../../../source_code/rtl/uieg4d_dram/enc_file/sdr_wrrd.enc.v(17)
-PRJ-1401 : Successfully analyzed 41 source files.
+HDL-1007 : analyze verilog file ../../../../source_code/rtl/uidbuf_interconnect/uidbufw_interconnect.v
+HDL-1007 : analyze verilog file ../../../../source_code/rtl/four_channel_video_splicer/four_channel_video_splicer.v
+PRJ-1401 : Successfully analyzed 43 source files.
 RUN-1002 : start command "set_param flow readback_eram_speed 1"
 RUN-1002 : start command "set_param gate map_opt_area high"
 RUN-1002 : start command "set_param gate mapmacro_opt_timing high"
@@ -215,10 +215,72 @@ HDL-1007 : elaborate module EG_LOGIC_BUFG in D:\Anlogic\TD_6.2.1_Engineer_6.2.16
 HDL-1007 : elaborate module EG_PHY_PLL(FIN="50.000000",FBCLK_DIV=3,CLKC0_DIV=7,CLKC1_DIV=7,CLKC2_DIV=7,CLKC0_ENABLE="ENABLE",CLKC1_ENABLE="ENABLE",CLKC2_ENABLE="ENABLE",FEEDBK_PATH="CLKC0_EXT",STDBY_ENABLE="DISABLE",CLKC1_FPHASE=6,CLKC2_FPHASE=4,CLKC0_CPHASE=6,CLKC1_CPHASE=7,CLKC2_CPHASE=2,GMC_GAIN=4,ICP_CURRENT=13,KVCO=4,LPF_CAPACITOR=1,LPF_RESISTOR=4,SYNC_ENABLE="DISABLE") in D:\Anlogic\TD_6.2.1_Engineer_6.2.168.116\arch/eagle_macro.v(889)
 HDL-1007 : elaborate module uisetvbuf in ../../../../source_code/rtl/uisetvbuf/uisetvbuf.v(29)
 HDL-1007 : elaborate module ui888_565 in ../../../../source_code/rtl/uiwidth_conv/ui888_565.v(8)
-HDL-1007 : elaborate module uidbuf in ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(29)
+HDL-1007 : port 'W_full' remains unconnected for this instance in ../../../../source_code/rtl/four_channel_video_splicer/four_channel_video_splicer.v(76)
+HDL-1007 : port 'fdma_wready' remains unconnected for this instance in ../../../../source_code/rtl/four_channel_video_splicer/four_channel_video_splicer.v(76)
+HDL-1007 : port 'fmda_wbuf' remains unconnected for this instance in ../../../../source_code/rtl/four_channel_video_splicer/four_channel_video_splicer.v(76)
+HDL-1007 : port 'fdma_wirq' remains unconnected for this instance in ../../../../source_code/rtl/four_channel_video_splicer/four_channel_video_splicer.v(76)
+HDL-1007 : port 'R_sync_cnt_o' remains unconnected for this instance in ../../../../source_code/rtl/four_channel_video_splicer/four_channel_video_splicer.v(76)
+HDL-1007 : port 'R_empty' remains unconnected for this instance in ../../../../source_code/rtl/four_channel_video_splicer/four_channel_video_splicer.v(76)
+HDL-1007 : port 'fdma_rready' remains unconnected for this instance in ../../../../source_code/rtl/four_channel_video_splicer/four_channel_video_splicer.v(76)
+HDL-1007 : port 'fmda_rbuf' remains unconnected for this instance in ../../../../source_code/rtl/four_channel_video_splicer/four_channel_video_splicer.v(76)
+HDL-1007 : port 'fdma_rirq' remains unconnected for this instance in ../../../../source_code/rtl/four_channel_video_splicer/four_channel_video_splicer.v(76)
+HDL-1007 : port 'W_full' remains unconnected for this instance in ../../../../source_code/rtl/four_channel_video_splicer/four_channel_video_splicer.v(139)
+HDL-1007 : port 'fdma_wready' remains unconnected for this instance in ../../../../source_code/rtl/four_channel_video_splicer/four_channel_video_splicer.v(139)
+HDL-1007 : port 'fmda_wbuf' remains unconnected for this instance in ../../../../source_code/rtl/four_channel_video_splicer/four_channel_video_splicer.v(139)
+HDL-1007 : port 'fdma_wirq' remains unconnected for this instance in ../../../../source_code/rtl/four_channel_video_splicer/four_channel_video_splicer.v(139)
+HDL-1007 : port 'R_data_o' remains unconnected for this instance in ../../../../source_code/rtl/four_channel_video_splicer/four_channel_video_splicer.v(139)
+HDL-1007 : port 'R_sync_cnt_o' remains unconnected for this instance in ../../../../source_code/rtl/four_channel_video_splicer/four_channel_video_splicer.v(139)
+HDL-1007 : port 'R_buf_i' remains unconnected for this instance in ../../../../source_code/rtl/four_channel_video_splicer/four_channel_video_splicer.v(139)
+HDL-1007 : port 'R_empty' remains unconnected for this instance in ../../../../source_code/rtl/four_channel_video_splicer/four_channel_video_splicer.v(139)
+HDL-1007 : port 'fdma_raddr' remains unconnected for this instance in ../../../../source_code/rtl/four_channel_video_splicer/four_channel_video_splicer.v(139)
+HDL-1007 : port 'fdma_rareq' remains unconnected for this instance in ../../../../source_code/rtl/four_channel_video_splicer/four_channel_video_splicer.v(139)
+HDL-1007 : port 'fdma_rsize' remains unconnected for this instance in ../../../../source_code/rtl/four_channel_video_splicer/four_channel_video_splicer.v(139)
+HDL-1007 : port 'fdma_rbusy' remains unconnected for this instance in ../../../../source_code/rtl/four_channel_video_splicer/four_channel_video_splicer.v(139)
+HDL-1007 : port 'fdma_rready' remains unconnected for this instance in ../../../../source_code/rtl/four_channel_video_splicer/four_channel_video_splicer.v(139)
+HDL-1007 : port 'fmda_rbuf' remains unconnected for this instance in ../../../../source_code/rtl/four_channel_video_splicer/four_channel_video_splicer.v(139)
+HDL-1007 : port 'fdma_rirq' remains unconnected for this instance in ../../../../source_code/rtl/four_channel_video_splicer/four_channel_video_splicer.v(139)
+HDL-1007 : port 'W_full' remains unconnected for this instance in ../../../../source_code/rtl/four_channel_video_splicer/four_channel_video_splicer.v(180)
+HDL-1007 : port 'fdma_wready' remains unconnected for this instance in ../../../../source_code/rtl/four_channel_video_splicer/four_channel_video_splicer.v(180)
+HDL-1007 : port 'fmda_wbuf' remains unconnected for this instance in ../../../../source_code/rtl/four_channel_video_splicer/four_channel_video_splicer.v(180)
+HDL-1007 : port 'fdma_wirq' remains unconnected for this instance in ../../../../source_code/rtl/four_channel_video_splicer/four_channel_video_splicer.v(180)
+HDL-1007 : port 'R_data_o' remains unconnected for this instance in ../../../../source_code/rtl/four_channel_video_splicer/four_channel_video_splicer.v(180)
+HDL-1007 : port 'R_sync_cnt_o' remains unconnected for this instance in ../../../../source_code/rtl/four_channel_video_splicer/four_channel_video_splicer.v(180)
+HDL-1007 : port 'R_buf_i' remains unconnected for this instance in ../../../../source_code/rtl/four_channel_video_splicer/four_channel_video_splicer.v(180)
+HDL-1007 : port 'R_empty' remains unconnected for this instance in ../../../../source_code/rtl/four_channel_video_splicer/four_channel_video_splicer.v(180)
+HDL-1007 : port 'fdma_raddr' remains unconnected for this instance in ../../../../source_code/rtl/four_channel_video_splicer/four_channel_video_splicer.v(180)
+HDL-1007 : port 'fdma_rareq' remains unconnected for this instance in ../../../../source_code/rtl/four_channel_video_splicer/four_channel_video_splicer.v(180)
+HDL-1007 : port 'fdma_rsize' remains unconnected for this instance in ../../../../source_code/rtl/four_channel_video_splicer/four_channel_video_splicer.v(180)
+HDL-1007 : port 'fdma_rbusy' remains unconnected for this instance in ../../../../source_code/rtl/four_channel_video_splicer/four_channel_video_splicer.v(180)
+HDL-1007 : port 'fdma_rready' remains unconnected for this instance in ../../../../source_code/rtl/four_channel_video_splicer/four_channel_video_splicer.v(180)
+HDL-1007 : port 'fmda_rbuf' remains unconnected for this instance in ../../../../source_code/rtl/four_channel_video_splicer/four_channel_video_splicer.v(180)
+HDL-1007 : port 'fdma_rirq' remains unconnected for this instance in ../../../../source_code/rtl/four_channel_video_splicer/four_channel_video_splicer.v(180)
+HDL-1007 : port 'W_full' remains unconnected for this instance in ../../../../source_code/rtl/four_channel_video_splicer/four_channel_video_splicer.v(221)
+HDL-1007 : port 'fdma_wready' remains unconnected for this instance in ../../../../source_code/rtl/four_channel_video_splicer/four_channel_video_splicer.v(221)
+HDL-1007 : port 'fmda_wbuf' remains unconnected for this instance in ../../../../source_code/rtl/four_channel_video_splicer/four_channel_video_splicer.v(221)
+HDL-1007 : port 'fdma_wirq' remains unconnected for this instance in ../../../../source_code/rtl/four_channel_video_splicer/four_channel_video_splicer.v(221)
+HDL-1007 : port 'R_data_o' remains unconnected for this instance in ../../../../source_code/rtl/four_channel_video_splicer/four_channel_video_splicer.v(221)
+HDL-1007 : port 'R_sync_cnt_o' remains unconnected for this instance in ../../../../source_code/rtl/four_channel_video_splicer/four_channel_video_splicer.v(221)
+HDL-1007 : port 'R_buf_i' remains unconnected for this instance in ../../../../source_code/rtl/four_channel_video_splicer/four_channel_video_splicer.v(221)
+HDL-1007 : port 'R_empty' remains unconnected for this instance in ../../../../source_code/rtl/four_channel_video_splicer/four_channel_video_splicer.v(221)
+HDL-1007 : port 'fdma_raddr' remains unconnected for this instance in ../../../../source_code/rtl/four_channel_video_splicer/four_channel_video_splicer.v(221)
+HDL-1007 : port 'fdma_rareq' remains unconnected for this instance in ../../../../source_code/rtl/four_channel_video_splicer/four_channel_video_splicer.v(221)
+HDL-1007 : port 'fdma_rsize' remains unconnected for this instance in ../../../../source_code/rtl/four_channel_video_splicer/four_channel_video_splicer.v(221)
+HDL-1007 : port 'fdma_rbusy' remains unconnected for this instance in ../../../../source_code/rtl/four_channel_video_splicer/four_channel_video_splicer.v(221)
+HDL-1007 : port 'fdma_rready' remains unconnected for this instance in ../../../../source_code/rtl/four_channel_video_splicer/four_channel_video_splicer.v(221)
+HDL-1007 : port 'fmda_rbuf' remains unconnected for this instance in ../../../../source_code/rtl/four_channel_video_splicer/four_channel_video_splicer.v(221)
+HDL-1007 : port 'fdma_rirq' remains unconnected for this instance in ../../../../source_code/rtl/four_channel_video_splicer/four_channel_video_splicer.v(221)
+HDL-1007 : elaborate module four_channel_video_splicer in ../../../../source_code/rtl/four_channel_video_splicer/four_channel_video_splicer.v(1)
+HDL-1007 : elaborate module uidbuf(W_XSTRIDE=512,R_BUFDEPTH=2048,R_XSIZE=1024,R_YSIZE=768) in ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(29)
 HDL-1007 : elaborate module fs_cap in ../../../../source_code/rtl/uifdmadbuf/fs_cap.v(30)
 HDL-1007 : elaborate module EG_LOGIC_FIFO(DATA_WIDTH_W=16,DATA_WIDTH_R=32,DATA_DEPTH_R=512,AF=511,F=1024,ENDIAN="BIG") in D:\Anlogic\TD_6.2.1_Engineer_6.2.168.116\arch/eagle_macro.v(136)
-HDL-1007 : elaborate module EG_LOGIC_FIFO(DATA_WIDTH_W=32,DATA_WIDTH_R=16,DATA_DEPTH_W=512,DATA_DEPTH_R=1024,AE=511,F=512,ENDIAN="BIG") in D:\Anlogic\TD_6.2.1_Engineer_6.2.168.116\arch/eagle_macro.v(136)
+HDL-1007 : elaborate module EG_LOGIC_FIFO(DATA_WIDTH_W=32,DATA_WIDTH_R=16,DATA_DEPTH_R=2048,AE=511,F=1024,ENDIAN="BIG") in D:\Anlogic\TD_6.2.1_Engineer_6.2.168.116\arch/eagle_macro.v(136)
+HDL-1007 : elaborate module uidbuf(ENABLE_READ=0,W_BASEADDR=1024,W_XSTRIDE=512) in ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(29)
+HDL-1007 : elaborate module uidbuf(ENABLE_READ=0,W_BASEADDR=786432,W_XSTRIDE=512) in ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(29)
+HDL-1007 : elaborate module uidbuf(ENABLE_READ=0,W_BASEADDR=787456,W_XSTRIDE=512) in ../../../../source_code/rtl/uifdmadbuf/uidbuf.v(29)
+HDL-1007 : elaborate module uidbufw_interconnect in ../../../../source_code/rtl/uidbuf_interconnect/uidbufw_interconnect.v(8)
+HDL-5317 WARNING: input port 'R_rclk_i' is not connected on this instance in ../../../../source_code/rtl/four_channel_video_splicer/four_channel_video_splicer.v(155)
+HDL-5317 WARNING: input port 'R_rclk_i' is not connected on this instance in ../../../../source_code/rtl/four_channel_video_splicer/four_channel_video_splicer.v(196)
+HDL-5317 WARNING: input port 'R_rclk_i' is not connected on this instance in ../../../../source_code/rtl/four_channel_video_splicer/four_channel_video_splicer.v(237)
 HDL-1007 : elaborate module app_fdma in ../../../../source_code/rtl/uiappfdma/uiappfdma.v(31)
 HDL-1007 : elaborate module sdr_as_ram(self_refresh_open=1'b1) in ../../../../source_code/rtl/uieg4d_dram/enc_file/sdr_as_ram.enc.v(21)
 HDL-5007 WARNING: concatenation with an unsized literal will be treated as 32 bits in ../../../../source_code/rtl/uieg4d_dram/enc_file/sdr_init_ref.enc.v(47)
@@ -233,14 +295,15 @@ HDL-1007 : elaborate module PLL_HDMI_CLK in ../../al_ip/PLL_HDMI_CLK.v(23)
 HDL-1007 : elaborate module EG_PHY_PLL(FIN="50.000000",REFCLK_DIV=4,FBCLK_DIV=5,CLKC0_DIV=15,CLKC1_DIV=3,CLKC0_ENABLE="ENABLE",CLKC1_ENABLE="ENABLE",FEEDBK_PATH="CLKC0_EXT",STDBY_ENABLE="DISABLE",CLKC0_CPHASE=14,CLKC1_CPHASE=2,GMC_GAIN=0,ICP_CURRENT=9,KVCO=2,LPF_CAPACITOR=2,LPF_RESISTOR=8,SYNC_ENABLE="DISABLE") in D:\Anlogic\TD_6.2.1_Engineer_6.2.168.116\arch/eagle_macro.v(889)
 HDL-1007 : elaborate module uivtc(H_FrameSize=1344,H_SyncStart=1184,H_SyncEnd=1320,V_ActiveSize=768,V_FrameSize=806,V_SyncStart=797,V_SyncEnd=803,H2_ActiveSize=32'b01000000000,V2_ActiveSize=32'b0110000000) in ../../../../source_code/rtl/uivtc/uivtc.v(30)
 HDL-1007 : elaborate module ui565_888 in ../../../../source_code/rtl/uiwidth_conv/ui565_888.v(10)
-HDL-1007 : switch to vhdl to elaborate module uihdmitx in ../../../../source_code/rtl/UDP_Example_Top.v(446)
+HDL-1007 : switch to vhdl to elaborate module uihdmitx in ../../../../source_code/rtl/UDP_Example_Top.v(430)
 HDL-1007 : elaborate uihdmitx(1,3)(Behavioral) in ../../../../source_code/rtl/al_ui_hdmi_tx/hdmi_tx.vhd(11)
 HDL-1007 : elaborate DVITransmitter(1,3)(Behavioral) in ../../../../source_code/rtl/HDMI/enc_file/DVITransmitter.enc.vhd(13)
 HDL-1007 : elaborate **(**) in ../../../../source_code/rtl/HDMI/enc_file/TMDSEncoder.enc.vhd(13)
 HDL-1007 : elaborate **(**) in ../../../../source_code/rtl/HDMI/enc_file/SerializerN_1_lvds.enc.vhd(12)
 HDL-1007 : elaborate EG_LOGIC_ODDR(1,6)(rtl) in D:\Anlogic\TD_6.2.1_Engineer_6.2.168.116\arch/eagle_macro.vhd(1399)
 HDL-1007 : elaborate **(**) in ../../../../source_code/rtl/HDMI/enc_file/SerializerN_1_lvds_dat.enc.vhd(14)
-HDL-1007 : back to vlog to elaborate in ../../../../source_code/rtl/UDP_Example_Top.v(446)
+HDL-1007 : back to vlog to elaborate in ../../../../source_code/rtl/UDP_Example_Top.v(430)
+HDL-5314 WARNING: net 'W_sync_cnt_o[7]' does not have a driver in ../../../../source_code/rtl/UDP_Example_Top.v(112)
 HDL-5001 WARNING: Contains anonymous inst(s) and/or net(s) that have not been renamed
 HDL-5001 WARNING: Contains anonymous inst(s) and/or net(s) that have not been renamed
 HDL-5001 WARNING: Contains anonymous inst(s) and/or net(s) that have not been renamed
@@ -339,30 +402,62 @@ RUN-1002 : start command "optimize_rtl"
 RUN-1001 : Open license file D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/license/Anlogic.lic
 SYN-1001 : Stage 1 | Optimize RTL
 SYN-1001 : Stage 1.1 | Check Design Sanity
-SYN-1001 : End Stage 1.1 | Check Design Sanity; Time: 0.002034s wall, 0.000000s user + 0.000000s system = 0.000000s CPU (n/a%); Memory(MB): used = 154, reserved = 273, peak = 154;
+SYN-1001 : End Stage 1.1 | Check Design Sanity; Time: 0.002152s wall, 0.000000s user + 0.000000s system = 0.000000s CPU (n/a%); Memory(MB): used = 163, reserved = 281, peak = 163;
 
-SYN-1079 : finish stage Check Design Sanity. Total instances: 12901, Total nets: 18331.
+SYN-1079 : finish stage Check Design Sanity. Total instances: 14611, Total nets: 23036.
 
 SYN-1001 : Stage 1.2 | Initialize Design
-SYN-1001 : End Stage 1.2 | Initialize Design; Time: 0.290982s wall, 0.031250s user + 0.000000s system = 0.031250s CPU (10.7%); Memory(MB): used = 154, reserved = 273, peak = 154;
+SYN-1001 : End Stage 1.2 | Initialize Design; Time: 0.349863s wall, 0.031250s user + 0.000000s system = 0.031250s CPU (8.9%); Memory(MB): used = 163, reserved = 281, peak = 163;
 
-SYN-1079 : finish stage Initialize Design. Total instances: 1761, Total nets: 6916.
+SYN-1079 : finish stage Initialize Design. Total instances: 2312, Total nets: 10057.
 
 SYN-1001 : Stage 1.3 | Flatten Module
 SYN-1011 : Flatten model UDP_Example_Top
-SYN-1001 : End Stage 1.3 | Flatten Module; Time: 0.029484s wall, 0.000000s user + 0.000000s system = 0.000000s CPU (n/a%); Memory(MB): used = 154, reserved = 273, peak = 154;
+SYN-1001 : End Stage 1.3 | Flatten Module; Time: 0.040089s wall, 0.000000s user + 0.000000s system = 0.000000s CPU (n/a%); Memory(MB): used = 163, reserved = 281, peak = 163;
 
-SYN-1079 : finish stage Flatten Module. Total instances: 1993, Total nets: 6259.
+SYN-1079 : finish stage Flatten Module. Total instances: 2604, Total nets: 8559.
 
 SYN-1001 : Stage 1.4 | Uniform Instance
 SYN-5013 WARNING: Undriven net: model "UDP_Example_Top" / net "u2_ram/u2_wrrd/Sdr_init_ref_ba[1]" in ../../../../source_code/rtl/uieg4d_dram/enc_file/sdr_wrrd.enc.v(0)
 		the net's pin: pin "i1[1]" in ../../../../source_code/rtl/uieg4d_dram/enc_file/sdr_wrrd.enc.v(0)
 SYN-5013 WARNING: Undriven net: model "UDP_Example_Top" / net "u2_ram/u2_wrrd/Sdr_init_ref_ba[0]" in ../../../../source_code/rtl/uieg4d_dram/enc_file/sdr_wrrd.enc.v(0)
 		the net's pin: pin "i1[0]" in ../../../../source_code/rtl/uieg4d_dram/enc_file/sdr_wrrd.enc.v(0)
+SYN-5013 WARNING: Undriven net: model "UDP_Example_Top" / net "uisetvbuf_inst/bufn_i[7]" in ../../../../source_code/rtl/uisetvbuf/uisetvbuf.v(34)
+		the net's pin: pin "i0[7]" in ../../../../source_code/rtl/uisetvbuf/uisetvbuf.v(38)
+		the net's pin: pin "i1[6]" in ../../../../source_code/rtl/uisetvbuf/uisetvbuf.v(38)
+		the net's pin: pin "i0[7]" in ../../../../source_code/rtl/uisetvbuf/uisetvbuf.v(38)
+SYN-5013 WARNING: Undriven net: model "UDP_Example_Top" / net "uisetvbuf_inst/bufn_i[6]" in ../../../../source_code/rtl/uisetvbuf/uisetvbuf.v(34)
+		the net's pin: pin "i0[6]" in ../../../../source_code/rtl/uisetvbuf/uisetvbuf.v(38)
+		the net's pin: pin "i1[5]" in ../../../../source_code/rtl/uisetvbuf/uisetvbuf.v(38)
+		the net's pin: pin "i0[6]" in ../../../../source_code/rtl/uisetvbuf/uisetvbuf.v(38)
+SYN-5013 WARNING: Undriven net: model "UDP_Example_Top" / net "uisetvbuf_inst/bufn_i[5]" in ../../../../source_code/rtl/uisetvbuf/uisetvbuf.v(34)
+		the net's pin: pin "i0[5]" in ../../../../source_code/rtl/uisetvbuf/uisetvbuf.v(38)
+		the net's pin: pin "i1[4]" in ../../../../source_code/rtl/uisetvbuf/uisetvbuf.v(38)
+		the net's pin: pin "i0[5]" in ../../../../source_code/rtl/uisetvbuf/uisetvbuf.v(38)
+SYN-5013 WARNING: Undriven net: model "UDP_Example_Top" / net "uisetvbuf_inst/bufn_i[4]" in ../../../../source_code/rtl/uisetvbuf/uisetvbuf.v(34)
+		the net's pin: pin "i0[4]" in ../../../../source_code/rtl/uisetvbuf/uisetvbuf.v(38)
+		the net's pin: pin "i1[3]" in ../../../../source_code/rtl/uisetvbuf/uisetvbuf.v(38)
+		the net's pin: pin "i0[4]" in ../../../../source_code/rtl/uisetvbuf/uisetvbuf.v(38)
+SYN-5013 WARNING: Undriven net: model "UDP_Example_Top" / net "uisetvbuf_inst/bufn_i[3]" in ../../../../source_code/rtl/uisetvbuf/uisetvbuf.v(34)
+		the net's pin: pin "i0[3]" in ../../../../source_code/rtl/uisetvbuf/uisetvbuf.v(38)
+		the net's pin: pin "i1[2]" in ../../../../source_code/rtl/uisetvbuf/uisetvbuf.v(38)
+		the net's pin: pin "i0[3]" in ../../../../source_code/rtl/uisetvbuf/uisetvbuf.v(38)
+SYN-5013 WARNING: Undriven net: model "UDP_Example_Top" / net "uisetvbuf_inst/bufn_i[2]" in ../../../../source_code/rtl/uisetvbuf/uisetvbuf.v(34)
+		the net's pin: pin "i0[2]" in ../../../../source_code/rtl/uisetvbuf/uisetvbuf.v(38)
+		the net's pin: pin "i1[1]" in ../../../../source_code/rtl/uisetvbuf/uisetvbuf.v(38)
+		the net's pin: pin "i0[2]" in ../../../../source_code/rtl/uisetvbuf/uisetvbuf.v(38)
+SYN-5013 WARNING: Undriven net: model "UDP_Example_Top" / net "uisetvbuf_inst/bufn_i[1]" in ../../../../source_code/rtl/uisetvbuf/uisetvbuf.v(34)
+		the net's pin: pin "i0[1]" in ../../../../source_code/rtl/uisetvbuf/uisetvbuf.v(38)
+		the net's pin: pin "i1[0]" in ../../../../source_code/rtl/uisetvbuf/uisetvbuf.v(38)
+		the net's pin: pin "i0[1]" in ../../../../source_code/rtl/uisetvbuf/uisetvbuf.v(38)
+SYN-5013 WARNING: Undriven net: model "UDP_Example_Top" / net "uisetvbuf_inst/bufn_i[0]" in ../../../../source_code/rtl/uisetvbuf/uisetvbuf.v(34)
+		the net's pin: pin "i0[0]" in ../../../../source_code/rtl/uisetvbuf/uisetvbuf.v(38)
+		the net's pin: pin "i0[0]" in ../../../../source_code/rtl/uisetvbuf/uisetvbuf.v(38)
+		the net's pin: pin "i1[0]" in ../../../../source_code/rtl/uisetvbuf/uisetvbuf.v(38)
 SYN-5025 WARNING: Using 0 for all undriven pins and nets
-SYN-1001 : End Stage 1.4 | Uniform Instance; Time: 0.007223s wall, 0.000000s user + 0.000000s system = 0.000000s CPU (n/a%); Memory(MB): used = 153, reserved = 272, peak = 154;
+SYN-1001 : End Stage 1.4 | Uniform Instance; Time: 0.009850s wall, 0.000000s user + 0.000000s system = 0.000000s CPU (n/a%); Memory(MB): used = 161, reserved = 279, peak = 163;
 
-SYN-1079 : finish stage Uniform Instance. Total instances: 1831, Total nets: 6091.
+SYN-1079 : finish stage Uniform Instance. Total instances: 2175, Total nets: 8116.
 
 SYN-1001 : Stage 1.5 | Optimize Design
 SYN-1066 : Inferred FSM for state register 'app_fdma_inst/state_reg' in module 'UDP_Example_Top'
@@ -384,6 +479,17 @@ SYN-1066 : Inferred FSM for state register 'u2_ram/u2_wrrd/state_reg' in module 
                   0010              100
 --------------------------------------------
 SYN-1067 : encoded FSM with state register 'u2_ram/u2_wrrd/state_reg' using encoding 'one_hot' in model 'UDP_Example_Top'
+SYN-1066 : Inferred FSM for state register 'u_four_channel_video_splicer/u_uidbufw_interconnect/state_reg' in module 'UDP_Example_Top'
+--------------------------------------------
+     Previous Encoding     New Encoding
+--------------------------------------------
+                   000            00001
+                   001            00010
+                   100            00100
+                   011            01000
+                   010            10000
+--------------------------------------------
+SYN-1067 : encoded FSM with state register 'u_four_channel_video_splicer/u_uidbufw_interconnect/state_reg' using encoding 'one_hot' in model 'UDP_Example_Top'
 SYN-1066 : Inferred FSM for state register 'u_uicfg5640/TS_S_reg' in module 'UDP_Example_Top'
 --------------------------------------------
      Previous Encoding     New Encoding
@@ -394,13 +500,13 @@ SYN-1066 : Inferred FSM for state register 'u_uicfg5640/TS_S_reg' in module 'UDP
                     11             1000
 --------------------------------------------
 SYN-1067 : encoded FSM with state register 'u_uicfg5640/TS_S_reg' using encoding 'one_hot' in model 'UDP_Example_Top'
-SYN-1057 : Inferred 3 FSM(s)
-SYN-1032 : 5441/276 useful/useless nets, 1736/16 useful/useless insts
+SYN-1057 : Inferred 4 FSM(s)
+SYN-1032 : 7514/146 useful/useless nets, 2074/10 useful/useless insts
 SYN-1021 : Optimized 2 onehot mux instances.
-SYN-1068 : Optimized 8 binary mux instances.
+SYN-1068 : Optimized 20 binary mux instances.
 SYN-1019 : Optimized 3 mux instances.
 SYN-1021 : Optimized 1 onehot mux instances.
-SYN-1016 : Merged 257 instances.
+SYN-1016 : Merged 286 instances.
 USR-6001 WARNING: No ports matched 'get_ports phy1_rgmii_rx_clk'
 RUN-1101 : create_clock: defined a virtual clock: phy1_rgmii_rx_clk.
 USR-1002 : Derived clock:  create_generated_clock -name {u_PLL_HDMI_CLK/pll_inst.clkc[0]} -source [get_ports {clk_50}] -master_clock {clk_in} -multiply_by 1.2500 -duty_cycle 50.0000 [get_pins {u_PLL_HDMI_CLK/pll_inst.clkc[0]}]
@@ -423,59 +529,59 @@ USR-8159 CRITICAL-WARNING: Command rename_clock -name {pll_inst_25M} [get_clocks
 USR-8130 CRITICAL-WARNING: No clock match the pattern: udp_clk_125m.
 USR-8208 CRITICAL-WARNING: Clock group is empty.
 USR-8159 CRITICAL-WARNING: Command set_clock_groups -exclusive -group [get_clocks {udp_clk_125m}] in D:/University/AL_Proj/anlu/anlu/source_code/constraints/UDP.sdc(13) fails.
-SYN-1016 : Merged 186 instances.
-SYN-1001 : End Stage 1.5 | Optimize Design; Time: 0.445335s wall, 0.062500s user + 0.000000s system = 0.062500s CPU (14.0%); Memory(MB): used = 161, reserved = 272, peak = 163;
+SYN-1016 : Merged 243 instances.
+SYN-1001 : End Stage 1.5 | Optimize Design; Time: 0.595513s wall, 0.093750s user + 0.000000s system = 0.093750s CPU (15.7%); Memory(MB): used = 172, reserved = 281, peak = 173;
 
-SYN-1079 : finish stage Optimize Design. Total instances: 3224, Total nets: 3782.
+SYN-1079 : finish stage Optimize Design. Total instances: 3876, Total nets: 4760.
 
 SYN-1001 : Stage 1.6 | Optimize Iteratively
 SYN-1019 : Optimized 2 mux instances.
-SYN-1021 : Optimized 56 onehot mux instances.
+SYN-1021 : Optimized 115 onehot mux instances.
 SYN-1014 : Optimize round 1
-SYN-1044 : Optimized 23 inv instances.
+SYN-1044 : Optimized 27 inv instances.
 SYN-1017 : Remove 19 const input seq instances
 SYN-1019 : Optimized 12 mux instances.
-SYN-1020 : Optimized 13 distributor mux.
-SYN-1001 : Optimize 14 less-than instances
+SYN-1020 : Optimized 27 distributor mux.
+SYN-1001 : Optimize 23 less-than instances
 SYN-5084 WARNING: Register "app_fdma_inst/rburst_len[0]" in ../../../../source_code/rtl/uiappfdma/uiappfdma.v(148) is described with both an asynchronous reset/set and an initialization value of the opposite polarity. Ignore the initialization value '0'
 SYN-5084 WARNING: Register "app_fdma_inst/wburst_len[0]" in ../../../../source_code/rtl/uiappfdma/uiappfdma.v(84) is described with both an asynchronous reset/set and an initialization value of the opposite polarity. Ignore the initialization value '0'
-SYN-1019 : Optimized 2 mux instances.
-SYN-1016 : Merged 606 instances.
-SYN-1015 : Optimize round 1, 1629 better
+SYN-1019 : Optimized 19 mux instances.
+SYN-1016 : Merged 1727 instances.
+SYN-1015 : Optimize round 1, 4159 better
 SYN-1014 : Optimize round 2
 SYN-1044 : Optimized 4 inv instances.
-SYN-1019 : Optimized 2 mux instances.
+SYN-1019 : Optimized 3 mux instances.
 SYN-1020 : Optimized 3 distributor mux.
-SYN-1019 : Optimized 35 mux instances.
-SYN-1016 : Merged 7 instances.
-SYN-1015 : Optimize round 2, 78 better
-SYN-3010 : Optimized 36 DFF(s)
+SYN-1019 : Optimized 36 mux instances.
+SYN-1016 : Merged 10 instances.
+SYN-1015 : Optimize round 2, 92 better
+SYN-3010 : Optimized 147 DFF(s)
 SYN-1014 : Optimize round 1
 SYN-1020 : Optimized 35 distributor mux.
 SYN-1016 : Merged 148 instances.
-SYN-1015 : Optimize round 1, 221 better
+SYN-1015 : Optimize round 1, 233 better
 SYN-1014 : Optimize round 2
 SYN-1020 : Optimized 19 distributor mux.
 SYN-1016 : Merged 36 instances.
-SYN-1015 : Optimize round 2, 55 better
+SYN-1015 : Optimize round 2, 59 better
 SYN-1014 : Optimize round 3
 SYN-1015 : Optimize round 3, 0 better
-SYN-1001 : End Stage 1.6 | Optimize Iteratively; Time: 1.609550s wall, 0.296875s user + 0.000000s system = 0.296875s CPU (18.4%); Memory(MB): used = 140, reserved = 135, peak = 163;
+SYN-1001 : End Stage 1.6 | Optimize Iteratively; Time: 2.296778s wall, 0.562500s user + 0.000000s system = 0.562500s CPU (24.5%); Memory(MB): used = 157, reserved = 153, peak = 175;
 
-SYN-1079 : finish stage Optimize Iteratively. Total instances: 3035, Total nets: 3505.
+SYN-1079 : finish stage Optimize Iteratively. Total instances: 3943, Total nets: 4584.
 
 SYN-1001 : Stage 1.7 | Check Design
-SYN-1001 : End Stage 1.7 | Check Design; Time: 0.000621s wall, 0.000000s user + 0.000000s system = 0.000000s CPU (n/a%); Memory(MB): used = 140, reserved = 135, peak = 163;
+SYN-1001 : End Stage 1.7 | Check Design; Time: 0.000898s wall, 0.000000s user + 0.000000s system = 0.000000s CPU (n/a%); Memory(MB): used = 157, reserved = 153, peak = 175;
 
-SYN-1079 : finish stage Check Design. Total instances: 3035, Total nets: 3505.
+SYN-1079 : finish stage Check Design. Total instances: 3943, Total nets: 4584.
 
-SYN-1001 : End Stage 1 | Optimize RTL; Time: 2.386020s wall, 0.390625s user + 0.000000s system = 0.390625s CPU (16.4%); Memory(MB): used = 140, reserved = 135, peak = 163;
+SYN-1001 : End Stage 1 | Optimize RTL; Time: 3.295884s wall, 0.687500s user + 0.000000s system = 0.687500s CPU (20.9%); Memory(MB): used = 157, reserved = 153, peak = 175;
 
-SYN-1079 : finish stage Optimize RTL. Total instances: 3035, Total nets: 3505.
+SYN-1079 : finish stage Optimize RTL. Total instances: 3943, Total nets: 4584.
 
-RUN-1003 : finish command "optimize_rtl" in  2.394689s wall, 0.390625s user + 0.000000s system = 0.390625s CPU (16.3%)
+RUN-1003 : finish command "optimize_rtl" in  3.304039s wall, 0.687500s user + 0.000000s system = 0.687500s CPU (20.8%)
 
-RUN-1004 : used memory is 140 MB, reserved memory is 135 MB, peak memory is 163 MB
+RUN-1004 : used memory is 157 MB, reserved memory is 153 MB, peak memory is 175 MB
 RUN-1002 : start command "report_area -file UDP_EXAMPLE_rtl.area"
 RUN-1001 : standard
 ***Report Model: UDP_Example_Top Device: EG4S20BG256***
@@ -487,24 +593,24 @@ IO Statistics
   #inout                    1
 
 Gate Statistics
-#Basic gates             1978
-  #and                     82
+#Basic gates             2699
+  #and                    104
   #nand                     0
-  #or                      63
+  #or                     544
   #nor                      0
   #xor                      2
   #xnor                    12
   #buf                      0
-  #not                    233
+  #not                    274
   #bufif1                  33
-  #MX21                   412
+  #MX21                   424
   #FADD                     0
-  #DFF                   1141
+  #DFF                   1306
   #LATCH                    0
-#MACRO_ADD                128
-#MACRO_EQ                  48
-#MACRO_MUX                712
-#MACRO_OTHERS               8
+#MACRO_ADD                156
+#MACRO_EQ                  58
+#MACRO_MUX                828
+#MACRO_OTHERS              11
 
 RUN-1002 : start command "export_db UDP_EXAMPLE_rtl.db"
 RUN-1001 : Exported flow parameters
@@ -550,14 +656,14 @@ RUN-1002 : start command "optimize_gate -packarea UDP_EXAMPLE_gate.area"
 RUN-1001 : Open license file D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/license/Anlogic.lic
 SYN-1001 : Stage 2 | Optimize Gate
 SYN-1001 : Stage 2.1 | Map Reg
-SYN-1001 : End Stage 2.1 | Map Reg; Time: 0.040363s wall, 0.015625s user + 0.000000s system = 0.015625s CPU (38.7%); Memory(MB): used = 146, reserved = 264, peak = 163;
+SYN-1001 : End Stage 2.1 | Map Reg; Time: 0.050882s wall, 0.000000s user + 0.000000s system = 0.000000s CPU (n/a%); Memory(MB): used = 163, reserved = 282, peak = 175;
 
-SYN-1079 : finish stage Map Reg. Total instances: 3035, Total nets: 3505.
+SYN-1079 : finish stage Map Reg. Total instances: 3943, Total nets: 4584.
 
 SYN-1001 : Stage 2.2 | Map IO
 SYN-2002 : EG_PHY_SDRAM_2M_32 instance sdram.
 SYN-2001 : Map 80 IOs to PADs of model 'UDP_Example_Top'
-SYN-1001 : End Stage 2.2 | Map IO; Time: 0.105675s wall, 0.000000s user + 0.000000s system = 0.000000s CPU (n/a%); Memory(MB): used = 146, reserved = 264, peak = 163;
+SYN-1001 : End Stage 2.2 | Map IO; Time: 0.111542s wall, 0.046875s user + 0.000000s system = 0.046875s CPU (42.0%); Memory(MB): used = 163, reserved = 282, peak = 175;
 
 SYN-1001 : Stage 2.3 | Map Macro
 RUN-1002 : start command "update_pll_param -module UDP_Example_Top"
@@ -566,13 +672,13 @@ SYN-2501 : Processed 0 LOGIC_BUF instances.
 SYN-2501 : 2 BUFG to GCLK
 SYN-2571 : Optimize after map_dsp, round 1
 SYN-2571 : Optimize after map_dsp, round 1, 0 better
-SYN-1001 : Throwback 93 control mux instances
+SYN-1001 : Throwback 140 control mux instances
 SYN-1001 : Generate 12 bigger adders
-SYN-1001 : Optimize 19 adders
+SYN-1001 : Optimize 27 adders
 SYN-1001 : Optimize 3 less-than instances
 SYN-2501 : Optimize round 1
-SYN-1016 : Merged 102 instances.
-SYN-2501 : Optimize round 1, 385 better
+SYN-1016 : Merged 104 instances.
+SYN-2501 : Optimize round 1, 455 better
 SYN-2501 : Optimize round 2
 SYN-2501 : Optimize round 2, 0 better
 SYN-2501 : Optimize round 1
@@ -580,9 +686,9 @@ SYN-1016 : Merged 1 instances.
 SYN-2501 : Optimize round 1, 1 better
 SYN-2501 : Optimize round 2
 SYN-2501 : Optimize round 2, 0 better
-SYN-2501 : Map 99 macro adder(s)
-SYN-1019 : Optimized 64 mux instances.
-SYN-1016 : Merged 204 instances.
+SYN-2501 : Map 127 macro adder(s)
+SYN-1019 : Optimized 840 mux instances.
+SYN-1016 : Merged 257 instances.
 SYN-5011 WARNING: Undriven pin: model "UDP_Example_Top" / inst "u2_ram/u2_wrrd/Sdr_rd_dout_reg[0]" in ../../../../source_code/rtl/uieg4d_dram/enc_file/sdr_wrrd.enc.v(0) / pin "clk"
 SYN-5011 WARNING: Undriven pin: model "UDP_Example_Top" / inst "u2_ram/u2_wrrd/Sdr_rd_dout_reg[1]" in ../../../../source_code/rtl/uieg4d_dram/enc_file/sdr_wrrd.enc.v(0) / pin "clk"
 SYN-5011 WARNING: Undriven pin: model "UDP_Example_Top" / inst "u2_ram/u2_wrrd/Sdr_rd_dout_reg[2]" in ../../../../source_code/rtl/uieg4d_dram/enc_file/sdr_wrrd.enc.v(0) / pin "clk"
@@ -595,26 +701,26 @@ SYN-5011 WARNING: Undriven pin: model "UDP_Example_Top" / inst "u2_ram/u2_wrrd/S
 SYN-5011 WARNING: Undriven pin: model "UDP_Example_Top" / inst "u2_ram/u2_wrrd/Sdr_rd_dout_reg[9]" in ../../../../source_code/rtl/uieg4d_dram/enc_file/sdr_wrrd.enc.v(0) / pin "clk"
 SYN-5011 Similar messages will be suppressed.
 SYN-5025 WARNING: Using 0 for all undriven pins and nets
-SYN-1001 : End Stage 2.3 | Map Macro; Time: 0.491968s wall, 0.093750s user + 0.000000s system = 0.093750s CPU (19.1%); Memory(MB): used = 163, reserved = 270, peak = 163;
+SYN-1001 : End Stage 2.3 | Map Macro; Time: 0.622023s wall, 0.156250s user + 0.000000s system = 0.156250s CPU (25.1%); Memory(MB): used = 179, reserved = 287, peak = 179;
 
-SYN-1079 : finish stage Map Macro. Total instances: 4133, Total nets: 4542.
+SYN-1079 : finish stage Map Macro. Total instances: 6011, Total nets: 6592.
 
 SYN-1001 : Stage 2.4 | Map Gate
-SYN-3001 : Collect 732 PI 581 PO (32 timing unconstrained) for mapping
-SYN-2581 : Mapping with K=5, #lut = 1117 (3.41), #lev = 7 (2.30), #crit_level = 1
+SYN-3001 : Collect 1022 PI 749 PO (32 timing unconstrained) for mapping
+SYN-2581 : Mapping with K=5, #lut = 1399 (3.44), #lev = 7 (2.25), #crit_level = 1
 SYN-2551 : Post LUT mapping optimization.
-SYN-2581 : Mapping with K=5, #lut = 1060 (3.39), #lev = 7 (2.30), #crit_level = 0
-SYN-3001 : Logic optimization opt = 0.44 sec, map = 0.14 sec, post map opt = 4.38 sec.
-SYN-1001 : End Stage 2.4 | Map Gate; Time: 5.876176s wall, 1.000000s user + 0.000000s system = 1.000000s CPU (17.0%); Memory(MB): used = 176, reserved = 275, peak = 176;
+SYN-2581 : Mapping with K=5, #lut = 1340 (3.43), #lev = 7 (2.24), #crit_level = 0
+SYN-3001 : Logic optimization opt = 0.51 sec, map = 0.18 sec, post map opt = 5.17 sec.
+SYN-1001 : End Stage 2.4 | Map Gate; Time: 6.905262s wall, 2.140625s user + 0.031250s system = 2.171875s CPU (31.5%); Memory(MB): used = 125, reserved = 286, peak = 189;
 
 SYN-1001 : Packing model "UDP_Example_Top" ...
 SYN-4010 : Pack lib has 59 rtl pack models with 26 top pack blocks
 SYN-1014 : Optimize round 1
 SYN-1015 : Optimize round 1, 0 better
-SYN-4002 : Packing 1092 DFF/LATCH to SEQ ...
-SYN-4009 : Pack 6 carry chain into lslice
-SYN-4007 : Packing 111 adder to BLE ...
-SYN-4008 : Packed 111 adder and 36 SEQ to BLE.
+SYN-4002 : Packing 1257 DFF/LATCH to SEQ ...
+SYN-4009 : Pack 8 carry chain into lslice
+SYN-4007 : Packing 128 adder to BLE ...
+SYN-4008 : Packed 128 adder and 61 SEQ to BLE.
 SYN-4007 : Packing 0 gate4 to BLE ...
 SYN-4008 : Packed 0 gate4 and 0 SEQ to BLE.
 RUN-1002 : start command "report_qor -step gate -file gate.qor"
@@ -624,24 +730,24 @@ RUN-1002 : start command "start_timer"
 -----------------------------------------------------------
 | Timing                    |                             |
 |     Setup WNS             |        -5958                |
-|     Setup TNS             |      -315780                |
-|     Num of violated S-EP  |           81                |
-|     Hold WNS              |          471                |
+|     Setup TNS             |      -320558                |
+|     Num of violated S-EP  |          116                |
+|     Hold WNS              |          556                |
 |     Hold TNS              |            0                |
 |     Num of violated H-EP  |            0                |
 -----------------------------------------------------------
 | Utilization               |                             |
-|     #registers            |         1056                |
-|     #luts                 |         1060                |
-|     #lut1                 |           25                |
-|     #lut1(~A)             |           25                |
-|     #slices               |           89                |
-|     slices percentage     |        0.91%                |
-|     #RAMs                 |            4                |
+|     #registers            |         1196                |
+|     #luts                 |         1341                |
+|     #lut1                 |           39                |
+|     #lut1(~A)             |           38                |
+|     #slices               |          108                |
+|     slices percentage     |        1.10%                |
+|     #RAMs                 |           12                |
 |     #DSPs                 |            0                |
 |     #f7mux                |        0.00%                |
-|     #MACROs               |           13                |
-|     #insts in MACRO       |           89                |
+|     #MACROs               |           16                |
+|     #insts in MACRO       |          108                |
 -----------------------------------------------------------
 | kept_net                  |                             |
 |     #syn_keep             |           66                |
@@ -649,15 +755,15 @@ RUN-1002 : start command "start_timer"
 |     #dont_touch           |            0                |
 |     #mark_debug           |            0                |
 |     #max_fanout_keep      |            0                |
-|     #async_reg            |           12                |
+|     #async_reg            |           27                |
 -----------------------------------------------------------
-| Top 10% datanet fanout#   |        41.76                |
-| dff(single fanout)->dff   |          327                |
+| Top 10% datanet fanout#   |        40.39                |
+| dff(single fanout)->dff   |          326                |
 | dff(single fanout)->dram  |            0                |
 -----------------------------------------------------------
 | Over-quota path num*      |                             |
-|     u_clk/pl...           |            2                |
-|     Total                 |            2                |
+|     u_clk/pl...           |            5                |
+|     Total                 |            5                |
 -----------------------------------------------------------
 | Rent**                    |                             |
 -----------------------------------------------------------
@@ -673,28 +779,31 @@ Over-quota Path Details
 ----------------------------------------------------------------------------------------------------------------------------
   u_clk/pll_inst.clkc[0]  |    1    |    680(6666)     |      1(1)      |  FIFO,LUT5,SEQ   |  large launch delay  |  -1102  
                           |    2    |    680(6666)     |      1(1)      |  FIFO,LUT5,SEQ   |  large launch delay  |  -1102  
+                          |    3    |    680(6666)     |      1(1)      |  FIFO,LUT5,SEQ   |  large launch delay  |  -1102  
+                          |    4    |    680(6666)     |      1(1)      |  FIFO,LUT5,SEQ   |  large launch delay  |  -1102  
+                          |    5    |    680(6666)     |      1(1)      |  FIFO,LUT5,SEQ   |  large launch delay  |  -1102  
 ----------------------------------------------------------------------------------------------------------------------------
 Note: Table only show top 5 paths for each clock group in default
 
 Logic Level Distribution
--------------------------------------------------------------------------------------------------------------------
-  Clock                            |  Period            |  0    |  1    |  2    |  3    |  4   |  5   |  6   |  7
--------------------------------------------------------------------------------------------------------------------
-  clk_in                           |  20.000ns (50MHz)  |  40   |  44   |  22   |  5    |  14  |  9   |  3   |  0
-  phy1_rgmii_rx_clk                |  8.000ns (125MHz)  |  0    |  0    |  0    |  0    |  0   |  0   |  0   |  0
-  u_PLL_HDMI_CLK/pll_inst.clkc[0]  |  16.000ns (62MHz)  |  104  |  46   |  56   |  12   |  28  |  29  |  39  |  4
-  u_PLL_HDMI_CLK/pll_inst.clkc[1]  |  3.200ns (312MHz)  |  43   |  27   |  0    |  0    |  0   |  0   |  0   |  0
-  u_clk/pll_inst.clkc[0]           |  6.666ns (150MHz)  |  749  |  273  |  132  |  149  |  21  |  3   |  0   |  0
-  u_clk/pll_inst.clkc[2]           |  6.666ns (150MHz)  |  15   |  32   |  0    |  0    |  0   |  0   |  0   |  0
-  Total                            |  NA                |  951  |  422  |  210  |  166  |  63  |  41  |  42  |  4
--------------------------------------------------------------------------------------------------------------------
-Note: The table count the worst 100000 paths, each endpoint count only one time.(1899 paths analyzed)
+---------------------------------------------------------------------------------------------------------------------
+  Clock                            |  Period            |  0     |  1    |  2    |  3    |  4    |  5   |  6   |  7
+---------------------------------------------------------------------------------------------------------------------
+  clk_in                           |  20.000ns (50MHz)  |  40    |  44   |  21   |  9    |  9    |  11  |  2   |  1
+  phy1_rgmii_rx_clk                |  8.000ns (125MHz)  |  0     |  0    |  0    |  0    |  0    |  0   |  0   |  0
+  u_PLL_HDMI_CLK/pll_inst.clkc[0]  |  16.000ns (62MHz)  |  120   |  55   |  63   |  16   |  28   |  30  |  35  |  7
+  u_PLL_HDMI_CLK/pll_inst.clkc[1]  |  3.200ns (312MHz)  |  43    |  27   |  0    |  0    |  0    |  0   |  0   |  0
+  u_clk/pll_inst.clkc[0]           |  6.666ns (150MHz)  |  810   |  379  |  251  |  149  |  84   |  5   |  0   |  0
+  u_clk/pll_inst.clkc[2]           |  6.666ns (150MHz)  |  15    |  32   |  0    |  0    |  0    |  0   |  0   |  0
+  Total                            |  NA                |  1028  |  537  |  335  |  174  |  121  |  46  |  37  |  8
+---------------------------------------------------------------------------------------------------------------------
+Note: The table count the worst 100000 paths, each endpoint count only one time.(2286 paths analyzed)
 
 Hierarchical Rent Exponent Report
 +-----------------------------------------------------------------+
 |Inst     |Model           |Rent     |Cell     |Pin     |Term     |
 +-----------------------------------------------------------------+
-|top      |UDP_Example_Top |0.21     |2450     |8837    |18       |
+|top      |UDP_Example_Top |0.20     |2928     |10945   |18       |
 +-----------------------------------------------------------------+
 Note: Cell represents total number of cells inside module; Pin represents total number of pins
       which have net connection inside module; Term represents total number of PIs and POs of module.
@@ -714,19 +823,19 @@ IO Statistics
   #inout                    1
 
 LUT Statistics
-#Total_luts              1060
-  #lut4                   853
-  #lut5                   207
+#Total_luts              1341
+  #lut4                  1089
+  #lut5                   252
   #lut6                     0
   #lut5_mx41                0
   #lut4_alu1b               0
 
 Utilization Statistics
-#lut                     1238   out of  19600    6.32%
-#reg                     1092   out of  19600    5.57%
-#bram                       4   out of     64    6.25%
+#lut                     1557   out of  19600    7.94%
+#reg                     1257   out of  19600    6.41%
+#bram                      12   out of     64   18.75%
   #bram9k                   0
-  #fifo9k                   4
+  #fifo9k                  12
 #bram32k                    0   out of     16    0.00%
 #dsp                        0   out of     29    0.00%
 #pad                       33   out of    188   17.55%
@@ -736,15 +845,15 @@ Utilization Statistics
 #pll                        2   out of      4   50.00%
 #gclk                       2   out of     16   12.50%
 
-SYN-1001 : End Stage 2 | Optimize Gate; Time: 7.558156s wall, 1.281250s user + 0.031250s system = 1.312500s CPU (17.4%); Memory(MB): used = 177, reserved = 275, peak = 177;
+SYN-1001 : End Stage 2 | Optimize Gate; Time: 8.700795s wall, 2.593750s user + 0.156250s system = 2.750000s CPU (31.6%); Memory(MB): used = 130, reserved = 286, peak = 189;
 
-RUN-1003 : finish command "optimize_gate -packarea UDP_EXAMPLE_gate.area" in  7.566538s wall, 1.281250s user + 0.031250s system = 1.312500s CPU (17.3%)
+RUN-1003 : finish command "optimize_gate -packarea UDP_EXAMPLE_gate.area" in  8.709334s wall, 2.593750s user + 0.156250s system = 2.750000s CPU (31.6%)
 
-RUN-1004 : used memory is 177 MB, reserved memory is 275 MB, peak memory is 177 MB
+RUN-1004 : used memory is 130 MB, reserved memory is 286 MB, peak memory is 189 MB
 RUN-1002 : start command "legalize_phy_inst"
 SYN-1001 : Stage 3 | Legalize Phy Inst
 SYN-1011 : Flatten model UDP_Example_Top
-SYN-1001 : End Stage 3 | Legalize Phy Inst; Time: 0.008509s wall, 0.015625s user + 0.000000s system = 0.015625s CPU (183.6%); Memory(MB): used = 177, reserved = 275, peak = 177;
+SYN-1001 : End Stage 3 | Legalize Phy Inst; Time: 0.009762s wall, 0.000000s user + 0.000000s system = 0.000000s CPU (n/a%); Memory(MB): used = 130, reserved = 286, peak = 189;
 
 RUN-1002 : start command "update_timing"
 RUN-1002 : start command "start_timer"
@@ -759,21 +868,21 @@ Device           : EG4S20BG256
 Speed            : NA
 
 Timing Mode      : basic
-Setup            : WNS -5958ps  TNS  -315780ps  NUM_FEPS    81
-Hold             : WNS   471ps  TNS        0ps  NUM_FEPS     0
+Setup            : WNS -5958ps  TNS  -320558ps  NUM_FEPS   116
+Hold             : WNS   556ps  TNS        0ps  NUM_FEPS     0
 
 Flow Statistics  :
 RUN-1001 : Flow Statistics:
 RUN-1001 : --------------------------------------------------------------------------------------------------
 RUN-1001 :      command     |  #calls  |  wall time  |  cpu time(s)  |  used memory(mb)  |  peak memory(mb)  
 RUN-1001 : --------------------------------------------------------------------------------------------------
-RUN-1001 :   optimize_gate  |    1     |   7s(77%)   |    1(100%)    |        177        |        177        
-RUN-1001 :   optimize_rtl   |    1     |   2s(22%)   |     0(0%)     |        140        |        163        
+RUN-1001 :   optimize_gate  |    1     |   8s(72%)   |    2(100%)    |        130        |        189        
+RUN-1001 :   optimize_rtl   |    1     |   3s(27%)   |     0(0%)     |        157        |        175        
 RUN-1001 :   import_device  |    1     |   0s(0%)    |     0(0%)     |        82         |        82         
-RUN-1001 :     read_adc     |    1     |   0s(0%)    |     0(0%)     |        147        |        147        
-RUN-1001 :     read_sdc     |    1     |   0s(0%)    |     0(0%)     |        147        |        147        
+RUN-1001 :     read_adc     |    1     |   0s(0%)    |     0(0%)     |        155        |        155        
+RUN-1001 :     read_sdc     |    1     |   0s(0%)    |     0(0%)     |        155        |        155        
 RUN-1001 : --------------------------------------------------------------------------------------------------
-RUN-1001 :       total      |    5     |     9s      |       1       |        177        |        177        
+RUN-1001 :       total      |    5     |     11s     |       2       |        157        |        189        
 RUN-1001 : --------------------------------------------------------------------------------------------------
 RUN-1002 : start command "export_db UDP_EXAMPLE_gate.db"
 RUN-1001 : Exported flow parameters
@@ -805,18 +914,18 @@ Device           : EG4S20BG256
 Speed            : NA
 
 Timing Mode      : basic
-Setup            : WNS -5958ps  TNS  -315780ps  NUM_FEPS    81
-Hold             : WNS   471ps  TNS        0ps  NUM_FEPS     0
+Setup            : WNS -5958ps  TNS  -320558ps  NUM_FEPS   116
+Hold             : WNS   556ps  TNS        0ps  NUM_FEPS     0
 
 RUN-1001 : Flow Statistics:
 RUN-1001 : --------------------------------------------------------------------------------------------------
 RUN-1001 :      command     |  #calls  |  wall time  |  cpu time(s)  |  used memory(mb)  |  peak memory(mb)  
 RUN-1001 : --------------------------------------------------------------------------------------------------
-RUN-1001 :   optimize_gate  |    1     |   7s(77%)   |    1(100%)    |        177        |        177        
-RUN-1001 :   optimize_rtl   |    1     |   2s(22%)   |     0(0%)     |        140        |        163        
+RUN-1001 :   optimize_gate  |    1     |   8s(72%)   |    2(100%)    |        130        |        189        
+RUN-1001 :   optimize_rtl   |    1     |   3s(27%)   |     0(0%)     |        157        |        175        
 RUN-1001 :   import_device  |    1     |   0s(0%)    |     0(0%)     |        82         |        82         
-RUN-1001 :     read_adc     |    1     |   0s(0%)    |     0(0%)     |        147        |        147        
-RUN-1001 :     read_sdc     |    1     |   0s(0%)    |     0(0%)     |        147        |        147        
+RUN-1001 :     read_adc     |    1     |   0s(0%)    |     0(0%)     |        155        |        155        
+RUN-1001 :     read_sdc     |    1     |   0s(0%)    |     0(0%)     |        155        |        155        
 RUN-1001 : --------------------------------------------------------------------------------------------------
-RUN-1001 :       total      |    5     |     9s      |       1       |        177        |        177        
+RUN-1001 :       total      |    5     |     11s     |       2       |        157        |        189        
 RUN-1001 : --------------------------------------------------------------------------------------------------

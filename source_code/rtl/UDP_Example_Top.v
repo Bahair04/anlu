@@ -247,71 +247,55 @@ assign      W_buf_i  = W_sync_cnt_o;
 assign      R_rclk_i = vid_clk;
 assign      R_FS_i	 = vid_vs;
 assign      R_rden_i = vtc2_de;
-uidbuf#(
-    .SDRAM_MAX_BURST_LEN(256),
-    .VIDEO_ENABLE 	 	(1),
-    .ENABLE_WRITE   	(1),
-    .ENABLE_READ    	(1),
-    .AXI_DATA_WIDTH 	(32),
-    .AXI_ADDR_WIDTH 	(21), // 19+2bit
 
-    .W_BUFDEPTH     	(1024),
-    .W_DATAWIDTH    	(16),
-    .W_BASEADDR     	(0),
-    .W_DSIZEBITS    	(19), // 19bit
-    .W_XSIZE        	(512),
-    .W_YSIZE        	(384),
-    .W_BUFSIZE      	(3), // 2bit
 
-    .R_BUFDEPTH     	(1024),
-    .R_DATAWIDTH    	(16),
-    .R_BASEADDR     	(0),
-    .R_DSIZEBITS    	(19), // 19bit
-    .R_XSIZE        	(512),
-    .R_YSIZE        	(384),
-    .R_BUFSIZE      	(3) // 2bit
-)
-uidbuf_inst
-(
-    .ui_clk			    (fdma_clk0    )
-    ,.ui_rstn			(sdr_init_done   )
-    //sensor input -W_FIFO--------------
-    ,.W_wclk_i			(W_wclk_i    )
-    ,.W_FS_i			(W_FS_i      )
-    ,.W_wren_i			(W_wren_i    )
-    ,.W_data_i			(W_data_i )
-    ,.W_sync_cnt_o		(W_sync_cnt_o)
-    ,.W_buf_i			(W_buf_i     )
-    ,.W_full			()
-    //----------fdma signals write-------       
-    ,.fdma_waddr		(fdma_waddr  )
-    ,.fdma_wareq		(fdma_wareq  )
-    ,.fdma_wsize		(fdma_wsize  )                                     
-    ,.fdma_wbusy		(fdma_wbusy  )		
-    ,.fdma_wdata		(fdma_wdata  )
-    ,.fdma_wvalid		(fdma_wvalid )
-    ,.fdma_wready		(fdma_wready )
-    ,.fmda_wbuf			()
-    ,.fdma_wirq			()	
-    //----------fdma signals read-------  
-    ,.R_rclk_i			(R_rclk_i    )
-    ,.R_FS_i			(R_FS_i      )
-    ,.R_rden_i			(R_rden_i    )
-    ,.R_data_o			(R_data_o    )
-    ,.R_sync_cnt_o 		() 
-    ,.R_buf_i			(R_buf_i     )
-    ,.R_empty			()
+wire [15:0]    	vid_data;
 
-    ,.fdma_raddr		(fdma_raddr  )
-    ,.fdma_rareq		(fdma_rareq  )
-    ,.fdma_rsize		(fdma_rsize  )                                   
-    ,.fdma_rbusy		(fdma_rbusy  )	
-    ,.fdma_rdata		(fdma_rdata  )
-    ,.fdma_rvalid		(fdma_rvalid )
-    ,.fdma_rready		(fdma_rready )
-    ,.fmda_rbuf			()
-    ,.fdma_rirq			()	
-);    
+four_channel_video_splicer #(
+	.AXI_DATA_WIDTH 	( 32  ),
+	.AXI_ADDR_WIDTH 	( 21  ),
+	.VID_DATA_WIDTH 	( 16  ))
+u_four_channel_video_splicer(
+	.fdma_clk0     	( fdma_clk0      ),
+	.sdr_init_done 	( sdr_init_done  ),
+
+	.vid_clk1      	( vid_clk       ),
+	.vid_vs1       	( vid_vs        ),
+	.vid_de1       	( vtc2_de      ),
+	.vid_data1     	( data_565      ),
+	.vid_clk2      	( vid_clk       ),
+	.vid_vs2       	( vid_vs        ),
+	.vid_de2       	( vtc2_de      ),
+	.vid_data2     	( data_565      ),
+	.vid_clk3      	( vid_clk       ),
+	.vid_vs3       	( vid_vs        ),
+	.vid_de3       	( vtc2_de      ),
+	.vid_data3     	( data_565      ),
+	.vid_clk4      	( vid_clk       ),
+	.vid_vs4       	( vid_vs        ),
+	.vid_de4       	( vtc2_de      ),
+	.vid_data4     	( data_565      ),
+
+	.vid_clk       	( vid_clk        ),
+	.vid_vs        	( vid_vs         ),
+	.vid_de        	( vid_de         ),
+	.vid_data      	( vid_data       ),
+
+	.fdma_waddr    	( fdma_waddr     ),
+	.fdma_wareq    	( fdma_wareq     ),
+	.fdma_wsize    	( fdma_wsize     ),
+	.fdma_wbusy    	( fdma_wbusy     ),
+	.fdma_wdata    	( fdma_wdata     ),
+	.fdma_wvalid   	( fdma_wvalid    ),
+
+	.fdma_raddr    	( fdma_raddr     ),
+	.fdma_rareq    	( fdma_rareq     ),
+	.fdma_rsize    	( fdma_rsize     ),
+	.fdma_rbusy    	( fdma_rbusy     ),
+	.fdma_rdata    	( fdma_rdata     ),
+	.fdma_rvalid   	( fdma_rvalid    )
+);
+
 //*******************app fdma controller********************
 app_fdma app_fdma_inst
 (
@@ -438,7 +422,7 @@ wire [23:0] data_888;
 ui565_888 #(
     .COMPLEMENT_ENABLE 	(1  ))
 u_ui565_888(
-    .data_565 	(R_data_o  ),
+    .data_565 	(vid_data  ),
     .data_888 	(data_888  )
 );
 
@@ -450,7 +434,7 @@ uihdmitx#(
     .HS_i(O_tpg_hs),
     .VS_i(O_tpg_vs),
     .DE_i(vid_de),
-    .RGB_i(vtc2_de ? data_888 : 24'hFFFFFF),
+    .RGB_i(vid_de ? data_888 : 24'hFFFFFF),
     .PCLKX1_i(hdmi_clk_1x),
     .PCLKX5_i(hdmi_clk_5x),
     .HDMI_CLK_P(O_HDMI_CLK_P),
