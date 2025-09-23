@@ -3,27 +3,27 @@
 -----------------------------------------------------------
 | Timing                    |                             |
 |     Setup WNS             |        -5380                |
-|     Setup TNS             |      -297445                |
+|     Setup TNS             |      -297145                |
 |     Num of violated S-EP  |           81                |
 |     FMAX                  |    83.015MHz                |
 |     SWNS path clock period |       6666ps                |
-|     Hold WNS              |            9                |
+|     Hold WNS              |           30                |
 |     Hold TNS              |            0                |
 |     Num of violated H-EP  |            0                |
 -----------------------------------------------------------
 | Routing Resource          |                             |
-|     Wire length           |        93703                |
+|     Wire length           |        97379                |
 -----------------------------------------------------------
 | Utilization               |                             |
-|     #slices               |         1039                |
-|     slices percentage     |       10.60%                |
+|     #slices               |         1034                |
+|     slices percentage     |       10.55%                |
 |     #RAMs                 |           12                |
 |     #DSPs                 |            0                |
 |     #DRAMHARDCON          |            0                |
 -----------------------------------------------------------
 | Congestion                |                             |
-|     Top 1% tile util      |           27                |
-|     Top 1% tile avg util  |       29.83%                |
+|     Top 1% tile util      |           28                |
+|     Top 1% tile avg util  |       32.00%                |
 |     Over 100% util #tile  |            0                |
 -----------------------------------------------------------
 Report place stage QoR done.

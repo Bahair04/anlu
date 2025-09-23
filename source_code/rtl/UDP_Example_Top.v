@@ -426,15 +426,15 @@ uivtc#(
     .V_SyncStart(`V_DISP+`V_BP),         //视频时间参数,场同步开始，即多少行数后开始产生场同步信号 
     .V_SyncEnd (`V_DISP+`V_BP+`V_SYNC),        //视频时间参数,场同步结束，多少行后停止产生长同步信号
     .V_FrameSize(`V_DISP+`V_BP+`V_SYNC+`V_FP),     //视频时间参数,场视频信号，一帧视频信号总计占用的行数量    
-    .H2_ActiveSize('d512),
-    .V2_ActiveSize('d384)
+    .H2_ActiveSize('d1023),
+    .V2_ActiveSize('d768)
 ) uivtc_inst(
     .I_vtc_rstn(vtc_pll_lock),
     .I_vtc_clk(vid_clk),
     .O_vtc_vs(vid_vs),//场同步输出
     .O_vtc_hs(vid_hs),//行同步输出
     .O_vtc_de(vid_de),//视频数据有效
-    .vtc2_offset_x('d0),
+    .vtc2_offset_x('d1),
     .vtc2_offset_y('d0),
     .vtc2_de_o(vtc2_de)
 );
@@ -454,7 +454,7 @@ uihdmitx#(
     .HS_i(O_tpg_hs),
     .VS_i(O_tpg_vs),
     .DE_i(vid_de),
-    .RGB_i(vid_de ? data_888 : 24'hFFFFFF),
+    .RGB_i(vtc2_de ? data_888 : 24'h000000),
     .PCLKX1_i(hdmi_clk_1x),
     .PCLKX5_i(hdmi_clk_5x),
     .HDMI_CLK_P(O_HDMI_CLK_P),
