@@ -8,38 +8,38 @@ IO Statistics
   #inout                    1
 
 Utilization Statistics
-#lut                     1616   out of  19600    8.24%
-#reg                     1279   out of  19600    6.53%
-#le                      1957
-  #lut only               678   out of   1957   34.64%
-  #reg only               341   out of   1957   17.42%
-  #lut&reg                938   out of   1957   47.93%
+#lut                     1592   out of  19600    8.12%
+#reg                     1251   out of  19600    6.38%
+#le                      1947
+  #lut only               696   out of   1947   35.75%
+  #reg only               355   out of   1947   18.23%
+  #lut&reg                896   out of   1947   46.02%
 #bram                      12   out of     64   18.75%
   #bram9k                   0
   #fifo9k                  12
 #bram32k                    0   out of     16    0.00%
 #dsp                        0   out of     29    0.00%
 #pad                       33   out of    188   17.55%
-  #ireg                     0
+  #ireg                     9
   #oreg                     9
   #treg                     0
 #pll                        2   out of      4   50.00%
-#gclk                       3   out of     16   18.75%
+#gclk                       4   out of     16   25.00%
 
 
 Detailed IO Report
 
       Name         Direction    Location    IOStandard    IOType    DriveStrength    PullType     PackReg   
      clk_50          INPUT         R7        LVCMOS33      PAD           N/A           NONE        NONE     
-  cmos_data[7]       INPUT        L10        LVCMOS33      PAD           N/A          PULLUP       NONE     
-  cmos_data[6]       INPUT        E15        LVCMOS33      PAD           N/A          PULLUP       NONE     
-  cmos_data[5]       INPUT        D16        LVCMOS33      PAD           N/A          PULLUP       NONE     
-  cmos_data[4]       INPUT        F15        LVCMOS33      PAD           N/A          PULLUP       NONE     
-  cmos_data[3]       INPUT        F14        LVCMOS33      PAD           N/A          PULLUP       NONE     
-  cmos_data[2]       INPUT        G14        LVCMOS33      PAD           N/A          PULLUP       NONE     
-  cmos_data[1]       INPUT        G16        LVCMOS33      PAD           N/A          PULLUP       NONE     
-  cmos_data[0]       INPUT        J16        LVCMOS33      PAD           N/A          PULLUP       NONE     
-    cmos_href        INPUT        H15        LVCMOS33      PAD           N/A          PULLUP       NONE     
+  cmos_data[7]       INPUT        L10        LVCMOS33      PAD           N/A          PULLUP       IREG     
+  cmos_data[6]       INPUT        E15        LVCMOS33      PAD           N/A          PULLUP       IREG     
+  cmos_data[5]       INPUT        D16        LVCMOS33      PAD           N/A          PULLUP       IREG     
+  cmos_data[4]       INPUT        F15        LVCMOS33      PAD           N/A          PULLUP       IREG     
+  cmos_data[3]       INPUT        F14        LVCMOS33      PAD           N/A          PULLUP       IREG     
+  cmos_data[2]       INPUT        G14        LVCMOS33      PAD           N/A          PULLUP       IREG     
+  cmos_data[1]       INPUT        G16        LVCMOS33      PAD           N/A          PULLUP       IREG     
+  cmos_data[0]       INPUT        J16        LVCMOS33      PAD           N/A          PULLUP       IREG     
+    cmos_href        INPUT        H15        LVCMOS33      PAD           N/A          PULLUP       IREG     
     cmos_pclk        INPUT        M10        LVCMOS33      PAD           N/A          PULLUP       NONE     
    cmos_vsync        INPUT        K16        LVCMOS33      PAD           N/A          PULLUP       NONE     
       rstn           INPUT         B2        LVCMOS33      PAD           N/A           NONE        NONE     
@@ -124,72 +124,69 @@ Report Clock Domain Luts:
 --------------------------------------------------------------------------------------------------------------------------------------
   Index   |  Name                             |  Frequency   |  LUT As Logic   |  LUT As Shifter   |  LUT As Dram   |  BRAM   |  DSP
 --------------------------------------------------------------------------------------------------------------------------------------
-  #1      |  clk_in                           |  50MHz       |  161            |  0                |  0             |  0      |  0
-  #2      |  u_PLL_HDMI_CLK/pll_inst.clkc[0]  |  62MHz       |  117            |  0                |  0             |  12     |  0
-  #3      |  u_PLL_HDMI_CLK/pll_inst.clkc[1]  |  312MHz      |  27             |  0                |  0             |  0      |  0
-  #4      |  u_clk/pll_inst.clkc[0]           |  150MHz      |  461            |  0                |  0             |  12     |  0
+  #1      |  clk_in                           |  50MHz       |  152            |  0                |  0             |  0      |  0
+  #2      |  u_PLL_HDMI_CLK/pll_inst.clkc[0]  |  62MHz       |  85             |  0                |  0             |  4      |  0
+  #3      |  u_PLL_HDMI_CLK/pll_inst.clkc[1]  |  312MHz      |  30             |  0                |  0             |  0      |  0
+  #4      |  u_clk/pll_inst.clkc[0]           |  150MHz      |  471            |  0                |  0             |  12     |  0
 --------------------------------------------------------------------------------------------------------------------------------------
 
 Clock Resource Statistics
-Index     ClockNet                                       Type               DriverType         Driver                                                                               Fanout
-#1        u_clk/clk0_buf                                 Global             pll                u_clk/pll_inst.clkc0                                                                 655
-#2        u_PLL_HDMI_CLK/clk0_buf                        Global             pll                u_PLL_HDMI_CLK/pll_inst.clkc0                                                        149
-#3        clk_50_dup_1                                   Global             io                 clk_50_syn_2.di                                                                      60
-#4        uihdmitx_inst/Inst_DVITransmitter/PCLK_X5_I    Global             pll                u_PLL_HDMI_CLK/pll_inst.clkc1                                                        36
-#5        u_uicfg5640/uii2c_inst/scl_clk                 Global             lslice             u_four_channel_video_splicer/u_uidbuf_3/FDMA_WRITE_ENABLE$f2d_fifo_inst_syn_18.q0    16
-#6        u2_ram/SDRAM_CLK                               Global             pll                u_clk/pll_inst.clkc2                                                                 0
+Index     ClockNet                                       Type               DriverType         Driver                                          Fanout
+#1        u_clk/clk0_buf                                 Global             pll                u_clk/pll_inst.clkc0                            639
+#2        u_PLL_HDMI_CLK/clk0_buf                        Global             pll                u_PLL_HDMI_CLK/pll_inst.clkc0                   101
+#3        clk_50_dup_1                                   Global             io                 clk_50_syn_2.di                                 65
+#4        cmos_pclk_dup_4                                Global             io                 cmos_pclk_syn_5.di                              43
+#5        uihdmitx_inst/Inst_DVITransmitter/PCLK_X5_I    Global             pll                u_PLL_HDMI_CLK/pll_inst.clkc1                   37
+#6        u_uicfg5640/uii2c_inst/scl_clk                 Global             lslice             u_uicfg5640/uii2c_inst/scl_clk_reg_syn_14.q0    18
+#7        u2_ram/SDRAM_CLK                               Global             pll                u_clk/pll_inst.clkc2                            0
 
 Report Hierarchy Area:
 +--------------------------------------------------------------------------------------------------------------------+
 |Instance                          |Module                     |le      |lut     |ripple  |seq     |bram    |dsp     |
 +--------------------------------------------------------------------------------------------------------------------+
-|top                               |UDP_Example_Top            |1957    |1509    |107     |1288    |12      |0       |
-|  app_fdma_inst                   |app_fdma                   |357     |274     |50      |209     |0       |0       |
-|  u2_ram                          |sdr_as_ram                 |489     |228     |5       |447     |0       |0       |
-|    u1_init_ref                   |sdr_init_ref               |87      |31      |5       |78      |0       |0       |
-|    u2_wrrd                       |sdr_wrrd                   |364     |159     |0       |360     |0       |0       |
+|top                               |UDP_Example_Top            |1947    |1485    |107     |1269    |12      |0       |
+|  app_fdma_inst                   |app_fdma                   |353     |270     |50      |216     |0       |0       |
+|  u2_ram                          |sdr_as_ram                 |467     |216     |5       |429     |0       |0       |
+|    u1_init_ref                   |sdr_init_ref               |83      |20      |5       |75      |0       |0       |
+|    u2_wrrd                       |sdr_wrrd                   |356     |168     |0       |353     |0       |0       |
 |  u_PLL_HDMI_CLK                  |PLL_HDMI_CLK               |1       |1       |0       |0       |0       |0       |
 |  u_clk                           |fdma_pll                   |0       |0       |0       |0       |0       |0       |
-|  u_four_channel_video_splicer    |four_channel_video_splicer |438     |375     |45      |298     |12      |0       |
-|    u_uidbuf_1                    |uidbuf                     |148     |123     |18      |105     |6       |0       |
-|      FDMA_READ$fs_cap_R0         |fs_cap                     |10      |7       |0       |10      |0       |0       |
+|  u_four_channel_video_splicer    |four_channel_video_splicer |412     |353     |45      |276     |12      |0       |
+|    u_uidbuf_1                    |uidbuf                     |149     |124     |18      |100     |6       |0       |
+|      FDMA_READ$fs_cap_R0         |fs_cap                     |7       |5       |0       |7       |0       |0       |
 |      FDMA_WRITE_ENABLE$fs_cap_W0 |fs_cap                     |5       |1       |0       |5       |0       |0       |
-|    u_uidbuf_2                    |uidbuf                     |80      |69      |9       |49      |2       |0       |
-|      FDMA_WRITE_ENABLE$fs_cap_W0 |fs_cap                     |7       |5       |0       |7       |0       |0       |
-|    u_uidbuf_3                    |uidbuf                     |72      |63      |9       |48      |2       |0       |
-|      FDMA_WRITE_ENABLE$fs_cap_W0 |fs_cap                     |5       |5       |0       |5       |0       |0       |
-|    u_uidbuf_4                    |uidbuf                     |71      |62      |9       |47      |2       |0       |
-|      FDMA_WRITE_ENABLE$fs_cap_W0 |fs_cap                     |6       |6       |0       |6       |0       |0       |
-|    u_uidbufw_interconnect        |uidbufw_interconnect       |41      |40      |0       |25      |0       |0       |
-|    u_uidown_sample1              |uidown_sample              |14      |14      |0       |12      |0       |0       |
-|    u_uidown_sample2              |uidown_sample              |5       |0       |0       |5       |0       |0       |
-|    u_uidown_sample3              |uidown_sample              |7       |4       |0       |7       |0       |0       |
-|  u_uicfg5640                     |uicfg5640                  |363     |363     |0       |91      |0       |0       |
-|    uii2c_inst                    |uii2c                      |62      |62      |0       |38      |0       |0       |
-|  u_uitpg_1                       |uitpg_static               |23      |22      |0       |21      |0       |0       |
-|  uihdmitx_inst                   |uihdmitx                   |236     |204     |0       |173     |0       |0       |
-|    Inst_DVITransmitter           |DVITransmitter             |236     |204     |0       |173     |0       |0       |
-|      Inst_TMDSEncoder_blue       |TMDSEncoder                |64      |63      |0       |41      |0       |0       |
-|      Inst_TMDSEncoder_green      |TMDSEncoder                |62      |58      |0       |41      |0       |0       |
-|      Inst_TMDSEncoder_red        |TMDSEncoder                |54      |54      |0       |35      |0       |0       |
-|      Inst_blue_serializer_10_1   |Serial_N_1_lvds_dat        |23      |13      |0       |23      |0       |0       |
+|    u_uidbuf_2                    |uidbuf                     |81      |70      |9       |51      |2       |0       |
+|      FDMA_WRITE_ENABLE$fs_cap_W0 |fs_cap                     |5       |3       |0       |5       |0       |0       |
+|    u_uidbuf_3                    |uidbuf                     |74      |60      |9       |47      |2       |0       |
+|      FDMA_WRITE_ENABLE$fs_cap_W0 |fs_cap                     |6       |1       |0       |6       |0       |0       |
+|    u_uidbuf_4                    |uidbuf                     |72      |63      |9       |50      |2       |0       |
+|      FDMA_WRITE_ENABLE$fs_cap_W0 |fs_cap                     |3       |3       |0       |3       |0       |0       |
+|    u_uidbufw_interconnect        |uidbufw_interconnect       |36      |36      |0       |28      |0       |0       |
+|  u_uicfg5640                     |uicfg5640                  |388     |388     |0       |90      |0       |0       |
+|    uii2c_inst                    |uii2c                      |60      |60      |0       |34      |0       |0       |
+|  uiSensorRGB565_inst             |uiSensorRGB565             |33      |11      |0       |32      |0       |0       |
+|  uihdmitx_inst                   |uihdmitx                   |244     |204     |0       |178     |0       |0       |
+|    Inst_DVITransmitter           |DVITransmitter             |244     |204     |0       |178     |0       |0       |
+|      Inst_TMDSEncoder_blue       |TMDSEncoder                |58      |50      |0       |41      |0       |0       |
+|      Inst_TMDSEncoder_green      |TMDSEncoder                |71      |66      |0       |48      |0       |0       |
+|      Inst_TMDSEncoder_red        |TMDSEncoder                |60      |60      |0       |34      |0       |0       |
+|      Inst_blue_serializer_10_1   |Serial_N_1_lvds_dat        |20      |10      |0       |20      |0       |0       |
 |      Inst_clk_serializer_10_1    |Serial_N_1_lvds            |7       |2       |0       |7       |0       |0       |
-|      Inst_green_serializer_10_1  |Serial_N_1_lvds_dat        |16      |8       |0       |16      |0       |0       |
+|      Inst_green_serializer_10_1  |Serial_N_1_lvds_dat        |18      |10      |0       |18      |0       |0       |
 |      Inst_red_serializer_10_1    |Serial_N_1_lvds_dat        |10      |6       |0       |10      |0       |0       |
-|  uivtc_inst                      |uivtc                      |41      |34      |7       |31      |0       |0       |
-|  u_uitpg_2                       |uitpg_static               |3       |3       |0       |3       |0       |0       |
-|  u_uitpg_3                       |uitpg_static               |6       |5       |0       |6       |0       |0       |
+|  uivtc_inst                      |uivtc                      |49      |42      |7       |30      |0       |0       |
 +--------------------------------------------------------------------------------------------------------------------+
 
 
 DataNet Average Fanout:
 
-   Index     Fanout    Nets  
-    #1         1       1365  
-    #2         2       364   
-    #3         3       174   
-    #4         4       134   
-    #5        5-10     217   
-    #6       11-50      69   
-    #7       51-100     11   
-  Average     2.89           
+   Index     Fanout     Nets  
+    #1          1       1372  
+    #2          2       345   
+    #3          3       156   
+    #4          4       132   
+    #5        5-10      234   
+    #6        11-50      60   
+    #7       51-100      12   
+    #8       101-500     1    
+  Average     2.89            

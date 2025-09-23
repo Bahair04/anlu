@@ -187,7 +187,7 @@ assign cmos_pwdn = 1'b0;
 //* TPG
 //*------------------------------------------------------------
 // TPG测试数据
-uitpg_static u_uitpg_1(
+uitpg u_uitpg_1(
     .I_tpg_clk(vid_clk),
     .I_tpg_rstn(vtc_pll_lock),
     .I_tpg_vs(vid_vs),
@@ -196,8 +196,7 @@ uitpg_static u_uitpg_1(
     .O_tpg_vs(O_tpg_vs),
     .O_tpg_hs(O_tpg_hs),
     .O_tpg_de(O_tpg_de),
-    .O_tpg_data(O_tpg_data1),
-    .dis_mode('d7)
+    .O_tpg_data(O_tpg_data1)
 );
 uitpg_static u_uitpg_2(
     .I_tpg_clk(vid_clk),
@@ -223,7 +222,7 @@ uitpg_static u_uitpg_3(
     .O_tpg_data(O_tpg_data3),
     .dis_mode('d13)
 );
-uitpg_static u_uitpg_4(
+uitpg u_uitpg_4(
     .I_tpg_clk(vid_clk),
     .I_tpg_rstn(vtc_pll_lock),
     .I_tpg_vs(vid_vs),
@@ -232,8 +231,7 @@ uitpg_static u_uitpg_4(
     .O_tpg_vs(O_tpg_vs),
     .O_tpg_hs(O_tpg_hs),
     .O_tpg_de(O_tpg_de),
-    .O_tpg_data(O_tpg_data4),
-    .dis_mode('d14)
+    .O_tpg_data(O_tpg_data4)
 );
 //*------------------------------------------------------------
 //* SDRAM
@@ -281,22 +279,22 @@ u_four_channel_video_splicer(
 	.fdma_clk0     	( fdma_clk0      ),
 	.sdr_init_done 	( sdr_init_done  ),
 
-	.vid_clk1      	( vid_clk       ),
-	.vid_vs1       	( vid_vs        ),
-	.vid_de1       	( vid_de        ),
-	.vid_data1     	( data_565_1      ),
-	.vid_clk2      	( vid_clk       ),
-	.vid_vs2       	( vid_vs        ),
-	.vid_de2       	( vid_de        ),
-	.vid_data2     	( data_565_2      ),
-	.vid_clk3      	( vid_clk       ),
-	.vid_vs3       	( vid_vs        ),
-	.vid_de3       	( vid_de        ),
-	.vid_data3     	( data_565_3      ),
-	.vid_clk4      	( vid_clk       ),
-	.vid_vs4       	( vid_vs        ),
-	.vid_de4       	( vid_de        ),
-	.vid_data4     	( data_565_4      ),
+	.vid_clk1      	( cmos_pclk       ),
+	.vid_vs1       	( cmos_vs_o        ),
+	.vid_de1       	( cmos_de_o        ),
+	.vid_data1     	( cmos_rgb_o      ),
+	.vid_clk2      	( cmos_pclk       ),
+	.vid_vs2       	( cmos_vs_o        ),
+	.vid_de2       	( cmos_de_o        ),
+	.vid_data2     	( cmos_rgb_o      ),
+	.vid_clk3      	( cmos_pclk       ),
+	.vid_vs3       	( cmos_vs_o        ),
+	.vid_de3       	( cmos_de_o        ),
+	.vid_data3     	( cmos_rgb_o      ),
+	.vid_clk4      	( cmos_pclk       ),
+	.vid_vs4       	( cmos_vs_o        ),
+	.vid_de4       	( cmos_de_o        ),
+	.vid_data4     	( cmos_rgb_o      ),
 
 	.vid_clk       	( vid_clk        ),
 	.vid_vs        	( vid_vs         ),

@@ -75,7 +75,7 @@ always @(posedge I_tpg_clk) begin
 end
  //测试图形输出
 always @(posedge I_tpg_clk) begin
-    case(dis_mode[7+3:4+3])//截取高位，控制切换显示速度
+    case(dis_mode[7:4])//截取高位，控制切换显示速度
         4'd0: begin
             r_reg <= 0;
             b_reg <= 0;

@@ -3,27 +3,27 @@
 -----------------------------------------------------------
 | Timing                    |                             |
 |     Setup WNS             |        -5380                |
-|     Setup TNS             |      -299317                |
-|     Num of violated S-EP  |           86                |
+|     Setup TNS             |      -297445                |
+|     Num of violated S-EP  |           81                |
 |     FMAX                  |    83.015MHz                |
 |     SWNS path clock period |       6666ps                |
-|     Hold WNS              |           30                |
+|     Hold WNS              |            9                |
 |     Hold TNS              |            0                |
 |     Num of violated H-EP  |            0                |
 -----------------------------------------------------------
 | Routing Resource          |                             |
-|     Wire length           |       116761                |
+|     Wire length           |        93703                |
 -----------------------------------------------------------
 | Utilization               |                             |
-|     #slices               |         1046                |
-|     slices percentage     |       10.67%                |
+|     #slices               |         1039                |
+|     slices percentage     |       10.60%                |
 |     #RAMs                 |           12                |
 |     #DSPs                 |            0                |
 |     #DRAMHARDCON          |            0                |
 -----------------------------------------------------------
 | Congestion                |                             |
-|     Top 1% tile util      |           24                |
-|     Top 1% tile avg util  |       27.52%                |
+|     Top 1% tile util      |           27                |
+|     Top 1% tile avg util  |       29.83%                |
 |     Over 100% util #tile  |            0                |
 -----------------------------------------------------------
 Report place stage QoR done.
