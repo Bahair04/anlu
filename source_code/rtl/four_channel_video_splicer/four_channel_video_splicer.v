@@ -141,8 +141,8 @@ uidbuf #(
     .VIDEO_ENABLE        	(1                  ),
     .ENABLE_WRITE        	(1                  ),
     .ENABLE_READ         	(1                  ),
-    .AXI_DATA_WIDTH      	(32                 ),
-    .AXI_ADDR_WIDTH      	(23                 ),
+    .AXI_DATA_WIDTH      	(AXI_DATA_WIDTH     ),
+    .AXI_ADDR_WIDTH      	(AXI_ADDR_WIDTH     ),
     
     .W_BUFDEPTH          	(1024               ),
     .W_DATAWIDTH         	(16                 ),
@@ -204,8 +204,8 @@ uidbuf #(
     .VIDEO_ENABLE        	(1                  ),
     .ENABLE_WRITE        	(1                  ),
     .ENABLE_READ         	(0                  ),
-    .AXI_DATA_WIDTH      	(32                 ),
-    .AXI_ADDR_WIDTH      	(23                 ),
+    .AXI_DATA_WIDTH      	(AXI_DATA_WIDTH     ),
+    .AXI_ADDR_WIDTH      	(AXI_ADDR_WIDTH     ),
     
     .W_BUFDEPTH          	(1024               ),
     .W_DATAWIDTH         	(16                 ),
@@ -245,8 +245,8 @@ uidbuf #(
     .VIDEO_ENABLE        	(1                  ),
     .ENABLE_WRITE        	(1                  ),
     .ENABLE_READ         	(0                  ),
-    .AXI_DATA_WIDTH      	(32                 ),
-    .AXI_ADDR_WIDTH      	(23                 ),
+    .AXI_DATA_WIDTH      	(AXI_DATA_WIDTH     ),
+    .AXI_ADDR_WIDTH      	(AXI_ADDR_WIDTH     ),
     
     .W_BUFDEPTH          	(1024               ),
     .W_DATAWIDTH         	(16                 ),
@@ -286,8 +286,8 @@ uidbuf #(
     .VIDEO_ENABLE        	(1                  ),
     .ENABLE_WRITE        	(1                  ),
     .ENABLE_READ         	(0                  ),
-    .AXI_DATA_WIDTH      	(32                 ),
-    .AXI_ADDR_WIDTH      	(23                 ),
+    .AXI_DATA_WIDTH      	(AXI_DATA_WIDTH     ),
+    .AXI_ADDR_WIDTH      	(AXI_ADDR_WIDTH     ),
     
     .W_BUFDEPTH          	(1024               ),
     .W_DATAWIDTH         	(16                 ),
@@ -317,8 +317,8 @@ u_uidbuf_4(
 
 
 uidbufw_interconnect #(
-    .AXI_DATA_WIDTH 	(32                       ),
-    .AXI_ADDR_WIDTH 	(23                       ))
+    .AXI_DATA_WIDTH 	(AXI_DATA_WIDTH           ),
+    .AXI_ADDR_WIDTH 	(AXI_ADDR_WIDTH           ))
 u_uidbufw_interconnect(
     .ui_clk        	(fdma_clk0      ),
     .ui_rstn       	(sdr_init_done  ),

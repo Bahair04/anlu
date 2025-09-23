@@ -28,7 +28,8 @@
 `define UDP_LOOP_BACK
 
 `define   DATA_WIDTH                        32										// 数据位宽
-`define   ADDR_WIDTH                        21										// 地址位宽
+`define   ADDR_WIDTH                        23										// 地址位宽 单位 字节
+`define   APP_ADDR_WIDTH                    (`ADDR_WIDTH - 2)                       // SDR地址位宽 单位 字
 `define   DM_WIDTH                          4										// 数据掩码位宽
 `define   ROW_WIDTH                         11										// 行地址位宽
 `define   BA_WIDTH                          2										// Bank位宽
@@ -108,30 +109,30 @@ wire                                fdma_clk0;          // 150MHz
 wire                                fdma_clk90; 
 wire                                fdma_clk180;
 
-wire    [22 : 0] 	                fdma_waddr; // 单位 字节
+wire    [`ADDR_WIDTH - 1 : 0]       fdma_waddr; // 单位 字节
 wire  	     	                    fdma_wareq;
 wire    [15 : 0] 	                fdma_wsize;                                    
 wire         	                    fdma_wbusy;	
-wire    [31 : 0] 	                fdma_wdata;
+wire    [`DATA_WIDTH - 1 : 0]       fdma_wdata;
 wire         	                    fdma_wvalid;
 
-wire    [22 : 0] 	                fdma_raddr; // 单位 字节
+wire    [`ADDR_WIDTH - 1 : 0]       fdma_raddr; // 单位 字节
 wire         	                    fdma_rareq;
 wire    [15 : 0] 	                fdma_rsize;                                 
 wire         	                    fdma_rbusy;
-wire    [31 : 0] 	                fdma_rdata;
+wire    [`DATA_WIDTH - 1 : 0]       fdma_rdata;
 wire         	                    fdma_rvalid;
 
 wire 			                    sdr_init_done;
 wire 			                    sdr_init_ref_vld;
 wire 			                    app_wr_en;
-wire    [20 : 0]	                app_wr_addr; // 单位 字
+wire    [`APP_ADDR_WIDTH - 1 : 0]	app_wr_addr; // 单位 字
 wire    [3  : 0]	                app_wr_dm;
-wire    [31 : 0]	                app_wr_din;
+wire    [`DATA_WIDTH - 1 : 0]       app_wr_din;
 wire 			                    app_rd_en;
-wire    [20 : 0]	                app_rd_addr; // 单位 字
+wire    [`APP_ADDR_WIDTH - 1 : 0]	app_rd_addr; // 单位 字
 wire 			                    sdr_rd_en;
-wire    [31 : 0]	                sdr_rd_dout;
+wire    [`DATA_WIDTH - 1 : 0]       sdr_rd_dout;
 wire                                sdr_busy;
 
 wire 						        CLK;
