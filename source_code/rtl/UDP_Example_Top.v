@@ -60,17 +60,17 @@ module UDP_Example_Top(
         input   wire                        cmos_href,
         input   wire    [7 : 0]             cmos_data,
         output  wire                        cmos_reset,
-        output  wire                        cmos_pwdn
+        output  wire                        cmos_pwdn,
 
         //////////////////////////////////////////////////////////////////////////////////////
         // ETH UDP
-        // input   wire                        phy1_rgmii_rx_clk,                  // RGMI接收时钟
-        // input   wire                        phy1_rgmii_rx_ctl,                  // RGMI接收控制
-        // input   wire    [3 : 0]             phy1_rgmii_rx_data,                 // RGMI接收数据
+        input   wire                        phy1_rgmii_rx_clk,                  // RGMI接收时钟
+        input   wire                        phy1_rgmii_rx_ctl,                  // RGMI接收控制
+        input   wire    [3 : 0]             phy1_rgmii_rx_data,                 // RGMI接收数据
                                 
-        // output  wire                        phy1_rgmii_tx_clk,                  // RGMI发送时钟
-        // output  wire                        phy1_rgmii_tx_ctl,                  // RGMI发送控制
-        // output  wire    [3 : 0]             phy1_rgmii_tx_data                  // RGMI发送数据
+        output  wire                        phy1_rgmii_tx_clk,                  // RGMI发送时钟
+        output  wire                        phy1_rgmii_tx_ctl,                  // RGMI发送控制
+        output  wire    [3 : 0]             phy1_rgmii_tx_data                  // RGMI发送数据
 );
 
 //*------------------------------------------------------------
@@ -85,7 +85,7 @@ wire                                cmos_hs_o;
 //*------------------------------------------------------------
 //* HDMI 单倍时钟, 5倍时钟以及TMDS信号
 //*------------------------------------------------------------
-wire                                hdmi_clk_1x;
+wire                                hdmi_clk_1x; // 62.5MHz
 wire                                hdmi_clk_5x;
 wire                                vtc_pll_lock;
 wire                                O_HDMI_CLK_P;
@@ -93,7 +93,7 @@ wire    [2 : 0]                     O_HDMI_TX_P;
 //*------------------------------------------------------------
 //* 视频帧信号
 //*------------------------------------------------------------
-wire 					            vid_clk = hdmi_clk_1x; // 视频时钟
+wire 					            vid_clk = hdmi_clk_1x; // 视频时钟 62.5MHz
 wire 					            vid_vs; // 视频帧同步信号
 wire 					            vid_hs; // 视频行同步信号
 wire 					            vid_de; // 视频数据流有效信号
@@ -515,22 +515,22 @@ assign HDMI_D0_N = O_HDMI_TX_P[0];
 //* ETH UDP
 //*------------------------------------------------------------
 
-// udp_top #(
-//     .DEVICE             	("EG4"                            ),
-//     .LOCAL_UDP_PORT_NUM 	(16'h0001                         ),
-//     .LOCAL_IP_ADDRESS   	(32'hc0a8f001                     ),
-//     .LOCAL_MAC_ADDRESS  	(48'h0123456789ab                 ),
-//     .DST_UDP_PORT_NUM   	(16'h0002                         ),
-//     .DST_IP_ADDRESS     	(32'hc0a8f002                     ))
-// u_udp_top(
-//     .clk_50             	(clk_50              ),
-//     .rstn               	(rstn                ),
-//     .phy1_rgmii_tx_data 	(phy1_rgmii_tx_data  ),
-//     .phy1_rgmii_tx_ctl  	(phy1_rgmii_tx_ctl   ),
-//     .phy1_rgmii_tx_clk  	(phy1_rgmii_tx_clk   ),
-//     .phy1_rgmii_rx_data 	(phy1_rgmii_rx_data  ),
-//     .phy1_rgmii_rx_ctl  	(phy1_rgmii_rx_ctl   ),
-//     .phy1_rgmii_rx_clk  	(phy1_rgmii_rx_clk   )
-// );
+udp_top #(
+    .DEVICE             	("EG4"                            ),
+    .LOCAL_UDP_PORT_NUM 	(16'h0001                         ),
+    .LOCAL_IP_ADDRESS   	(32'hc0a8f001                     ),
+    .LOCAL_MAC_ADDRESS  	(48'h0123456789ab                 ),
+    .DST_UDP_PORT_NUM   	(16'h0002                         ),
+    .DST_IP_ADDRESS     	(32'hc0a8f002                     ))
+u_udp_top(
+    .clk_50             	(clk_50              ),
+    .rstn               	(rstn                ),
+    .phy1_rgmii_tx_data 	(phy1_rgmii_tx_data  ),
+    .phy1_rgmii_tx_ctl  	(phy1_rgmii_tx_ctl   ),
+    .phy1_rgmii_tx_clk  	(phy1_rgmii_tx_clk   ),
+    .phy1_rgmii_rx_data 	(phy1_rgmii_rx_data  ),
+    .phy1_rgmii_rx_ctl  	(phy1_rgmii_rx_ctl   ),
+    .phy1_rgmii_rx_clk  	(phy1_rgmii_rx_clk   )
+);
 
 endmodule
