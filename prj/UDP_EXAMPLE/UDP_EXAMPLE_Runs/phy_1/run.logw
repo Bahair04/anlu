@@ -4,10 +4,11 @@
    Executable = D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/bin/run.exe
    Built at =   16:32:07 Jun 12 2025
    Run by =     1
-   Run Date =   Wed Sep 24 09:42:40 2025
+   Run Date =   Wed Sep 24 13:37:22 2025
 
    Run on =     LAPTOP-EUGMKLPQ
 ============================================================
+USR-6001 WARNING: No ports matched 'get_ports phy1_rgmii_rx_clk'
 USR-6001 WARNING: No pins matched 'get_pins u_clk_gen/u_pll_0/pll_inst.clkc[1]'
 USR-6001 WARNING: No nets matched 'get_nets udp_clk'
 USR-8108 CRITICAL-WARNING: create_generated_clock: cannot define a generated clock without targets.
@@ -43,6 +44,7 @@ KIT-5603 WARNING: Net rx_valid is invalid in chipwatcher, ignored.
 KIT-5603 WARNING: Net u4_trimac_block/u1_rgmii_interface/gmii_rx_dv is invalid in chipwatcher, ignored.
 KIT-5603 WARNING: Net u4_trimac_block/u1_rgmii_interface/gmii_rx_er is invalid in chipwatcher, ignored.
 KIT-5618 CRITICAL-WARNING: the bus u4_trimac_block/u1_rgmii_interface/gmii_rxd[7:0] is invalid in chipwatcher, ignored.
+USR-6001 WARNING: No ports matched 'get_ports phy1_rgmii_rx_clk'
 USR-6001 WARNING: No pins matched 'get_pins u_clk_gen/u_pll_0/pll_inst.clkc[1]'
 USR-6001 WARNING: No nets matched 'get_nets udp_clk'
 USR-8108 CRITICAL-WARNING: create_generated_clock: cannot define a generated clock without targets.
@@ -63,6 +65,7 @@ PHY-7002 CRITICAL-WARNING: Instance sdram location (12, 12) is not honored. Cell
 PHY-7002 CRITICAL-WARNING: Instance sdram location (164, 288) is not honored. Cell's initial location is not legal at the beginning of ECO placement, and will be moved during placement. Please verify user location constraints through the adc file.
 PHY-7002 CRITICAL-WARNING: Instance sdram location (164, 288) is not honored. Cell's initial location is not legal at the beginning of ECO placement, and will be moved during placement. Please verify user location constraints through the adc file.
 
+USR-6001 WARNING: No ports matched 'get_ports phy1_rgmii_rx_clk'
 USR-6001 WARNING: No pins matched 'get_pins u_clk_gen/u_pll_0/pll_inst.clkc[1]'
 USR-6001 WARNING: No nets matched 'get_nets udp_clk'
 USR-8108 CRITICAL-WARNING: create_generated_clock: cannot define a generated clock without targets.
@@ -79,6 +82,4 @@ USR-8159 CRITICAL-WARNING: Command rename_clock -name {pll_inst_25M} [get_clocks
 USR-8130 CRITICAL-WARNING: No clock match the pattern: udp_clk_125m.
 USR-8208 CRITICAL-WARNING: Clock group is empty.
 USR-8159 CRITICAL-WARNING: Command set_clock_groups -exclusive -group [get_clocks {udp_clk_125m}] in D:/University/AL_Proj/anlu/anlu/source_code/constraints/UDP.sdc(13) fails.
-
-
 PHY-5079 CRITICAL-WARNING: Marked 1 clock net(s) utilize the local routing resources. Please check log message and the sinks of clock nets.

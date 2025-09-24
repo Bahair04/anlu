@@ -81,89 +81,62 @@ always@(posedge ui_clk or negedge ui_rstn)begin
         case (state)
             IDLE:begin
                 if (grant=='d0) begin
-                    if (fdma_wareq_1) begin
-                        state<=W_1;
-                    end else if (fdma_wareq_2) begin
-                        state<=W_2;
-                    end else if (fdma_wareq_3) begin
-                        state<=W_3;
-                    end else if (fdma_wareq_4) begin
-                        state<=W_4;
-                    end else begin
-                        state<=state;
-                    end
+                    if (fdma_wareq_1)state<=W_1;
+                    else if (fdma_wareq_2) state<=W_2;
+                    else if (fdma_wareq_3) state<=W_3;
+                    else if (fdma_wareq_4) state<=W_4;
+                    else state<=state;
                 end
                 else if (grant=='d1) begin
-                    if (fdma_wareq_2) begin
-                        state<=W_2;
-                    end else if (fdma_wareq_3) begin
-                        state<=W_3;
-                    end else if (fdma_wareq_4) begin
-                        state<=W_4;
-                    end else if (fdma_wareq_1) begin
-                        state<=W_1;
-                    end else begin
-                        state<=state;
-                    end
+                    if (fdma_wareq_2) state<=W_2;
+                    else if (fdma_wareq_3) state<=W_3;
+                    else if (fdma_wareq_4) state<=W_4;
+                    else if (fdma_wareq_1) state<=W_1;
+                    else state<=state;
                 end
                 else if (grant=='d2) begin
-                    if (fdma_wareq_3) begin
-                        state<=W_3;
-                    end else if (fdma_wareq_4) begin
-                        state<=W_4;
-                    end else if (fdma_wareq_1) begin
-                        state<=W_1;
-                    end else if (fdma_wareq_2) begin
-                        state<=W_2;
-                    end else begin
-                        state<=state;
-                    end
+                    if (fdma_wareq_3) state<=W_3;
+                    else if (fdma_wareq_4) state<=W_4;
+                    else if (fdma_wareq_1) state<=W_1;
+                    else if (fdma_wareq_2) state<=W_2;
+                    else state<=state;
+                    
                 end
                 else if (grant=='d3) begin
-                    if (fdma_wareq_4) begin
-                        state<=W_4;
-                    end else if (fdma_wareq_1) begin
-                        state<=W_1;
-                    end else if (fdma_wareq_2) begin
-                        state<=W_2;
-                    end else if (fdma_wareq_3) begin
-                        state<=W_3;
-                    end else begin
-                        state<=state;
-                    end
+                    if (fdma_wareq_4) state<=W_4;
+                    else if (fdma_wareq_1) state<=W_1;
+                    else if (fdma_wareq_2) state<=W_2;
+                    else if (fdma_wareq_3) state<=W_3;
+                    else state<=state;
                 end
             end 
             W_1:begin
                 if (fdma_wbusy_fall) begin
                     state<=IDLE;
                     grant<='d1;
-                end else begin
-                    state<=state;
-                end
+                end 
+                else state<=state;
             end
             W_2:begin
                 if (fdma_wbusy_fall) begin
                     state<=IDLE;
                     grant<='d2;
-                end else begin
-                    state<=state;
-                end
+                end 
+                else state<=state;
             end
             W_3:begin
                 if (fdma_wbusy_fall) begin
                     state<=IDLE;
                     grant<='d3;
-                end else begin
-                    state<=state;
-                end
+                end 
+                else state<=state;
             end
             W_4:begin
                 if (fdma_wbusy_fall) begin
                     state<=IDLE;
                     grant<='d0;
-                end else begin
-                    state<=state;
-                end
+                end 
+                else state<=state;
             end
             default: state<=IDLE;
         endcase
