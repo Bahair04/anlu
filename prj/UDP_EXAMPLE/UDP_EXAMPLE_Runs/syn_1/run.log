@@ -4,7 +4,7 @@
    Executable = D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/bin/run.exe
    Built at =   16:32:07 Jun 12 2025
    Run by =     1
-   Run Date =   Tue Sep 23 22:31:06 2025
+   Run Date =   Wed Sep 24 09:42:04 2025
 
    Run on =     LAPTOP-EUGMKLPQ
 ============================================================
@@ -218,7 +218,8 @@ HDL-1007 : back to file '../../../../source_code/rtl/uieg4d_dram/enc_file/sdr_wr
 HDL-1007 : analyze verilog file ../../../../source_code/rtl/uidbuf_interconnect/uidbufw_interconnect.v
 HDL-1007 : analyze verilog file ../../../../source_code/rtl/four_channel_video_splicer/four_channel_video_splicer.v
 HDL-1007 : analyze verilog file ../../../../source_code/rtl/uidown_sample/uidown_sample.v
-PRJ-1401 : Successfully analyzed 58 source files.
+HDL-1007 : analyze verilog file ../../../../source_code/rtl/ETH/udp_top.v
+PRJ-1401 : Successfully analyzed 59 source files.
 RUN-1002 : start command "set_param flow readback_eram_speed 1"
 RUN-1002 : start command "set_param gate map_opt_area high"
 RUN-1002 : start command "set_param gate mapmacro_opt_timing high"
@@ -241,10 +242,6 @@ RUN-1001 :   default_reg_initial  |    auto    |       auto       |
 RUN-1001 :    hdl_warning_level   |   normal   |      normal      |        
 RUN-1001 : ----------------------------------------------------------------
 RUN-1002 : start command "elaborate -top UDP_Example_Top"
-HDL-1007 : port 'tri_speed' remains unconnected for this instance in ../../../../source_code/rtl/UDP_Example_Top.v(715)
-HDL-1007 : port 'mdio_o' remains unconnected for this instance in ../../../../source_code/rtl/UDP_Example_Top.v(715)
-HDL-1007 : port 'mdio_oen' remains unconnected for this instance in ../../../../source_code/rtl/UDP_Example_Top.v(715)
-HDL-1007 : port 'mdio_clk' remains unconnected for this instance in ../../../../source_code/rtl/UDP_Example_Top.v(715)
 HDL-1007 : elaborate module UDP_Example_Top in ../../../../source_code/rtl/UDP_Example_Top.v(39)
 HDL-1007 : port 'sda_dg' remains unconnected for this instance in ../../../../source_code/rtl/uiov5640cfg/uicfg5640.v(98)
 HDL-1007 : elaborate module uicfg5640(CLK_DIV=239) in ../../../../source_code/rtl/uiov5640cfg/uicfg5640.v(29)
@@ -340,14 +337,19 @@ HDL-1007 : elaborate module PLL_HDMI_CLK in ../../al_ip/PLL_HDMI_CLK.v(23)
 HDL-1007 : elaborate module EG_PHY_PLL(FIN="50.000000",REFCLK_DIV=4,FBCLK_DIV=5,CLKC0_DIV=15,CLKC1_DIV=3,CLKC0_ENABLE="ENABLE",CLKC1_ENABLE="ENABLE",FEEDBK_PATH="CLKC0_EXT",STDBY_ENABLE="DISABLE",CLKC0_CPHASE=14,CLKC1_CPHASE=2,GMC_GAIN=0,ICP_CURRENT=9,KVCO=2,LPF_CAPACITOR=2,LPF_RESISTOR=8,SYNC_ENABLE="DISABLE") in D:\Anlogic\TD_6.2.1_Engineer_6.2.168.116\arch/eagle_macro.v(889)
 HDL-1007 : elaborate module uivtc(H_FrameSize=1344,H_SyncStart=1184,H_SyncEnd=1320,V_ActiveSize=768,V_FrameSize=806,V_SyncStart=797,V_SyncEnd=803,H2_ActiveSize=32'b01111111111,V2_ActiveSize=32'b01100000000) in ../../../../source_code/rtl/uivtc/uivtc.v(30)
 HDL-1007 : elaborate module ui565_888 in ../../../../source_code/rtl/uiwidth_conv/ui565_888.v(10)
-HDL-1007 : switch to vhdl to elaborate module uihdmitx in ../../../../source_code/rtl/UDP_Example_Top.v(570)
+HDL-1007 : switch to vhdl to elaborate module uihdmitx in ../../../../source_code/rtl/UDP_Example_Top.v(472)
 HDL-1007 : elaborate uihdmitx(1,3)(Behavioral) in ../../../../source_code/rtl/al_ui_hdmi_tx/hdmi_tx.vhd(11)
 HDL-1007 : elaborate DVITransmitter(1,3)(Behavioral) in ../../../../source_code/rtl/HDMI/enc_file/DVITransmitter.enc.vhd(13)
 HDL-1007 : elaborate **(**) in ../../../../source_code/rtl/HDMI/enc_file/TMDSEncoder.enc.vhd(13)
 HDL-1007 : elaborate **(**) in ../../../../source_code/rtl/HDMI/enc_file/SerializerN_1_lvds.enc.vhd(12)
 HDL-1007 : elaborate EG_LOGIC_ODDR(1,6)(rtl) in D:\Anlogic\TD_6.2.1_Engineer_6.2.168.116\arch/eagle_macro.vhd(1399)
 HDL-1007 : elaborate **(**) in ../../../../source_code/rtl/HDMI/enc_file/SerializerN_1_lvds_dat.enc.vhd(14)
-HDL-1007 : back to vlog to elaborate in ../../../../source_code/rtl/UDP_Example_Top.v(570)
+HDL-1007 : back to vlog to elaborate in ../../../../source_code/rtl/UDP_Example_Top.v(472)
+HDL-1007 : port 'tri_speed' remains unconnected for this instance in ../../../../source_code/rtl/ETH/udp_top.v(240)
+HDL-1007 : port 'mdio_o' remains unconnected for this instance in ../../../../source_code/rtl/ETH/udp_top.v(240)
+HDL-1007 : port 'mdio_oen' remains unconnected for this instance in ../../../../source_code/rtl/ETH/udp_top.v(240)
+HDL-1007 : port 'mdio_clk' remains unconnected for this instance in ../../../../source_code/rtl/ETH/udp_top.v(240)
+HDL-1007 : elaborate module udp_top in ../../../../source_code/rtl/ETH/udp_top.v(8)
 HDL-1007 : elaborate module clk_gen_rst_gen in ../../../../source_code/rtl/ETH/clk_gen_rst_gen.v(48)
 HDL-1007 : elaborate module pll_gen in ../../al_ip/pll_gen.v(26)
 HDL-1007 : elaborate module EG_PHY_PLL(FIN="50.000000",REFCLK_DIV=2,FBCLK_DIV=5,CLKC0_DIV=8,CLKC1_DIV=8,CLKC2_DIV=80,CLKC3_DIV=40,CLKC4_DIV=8,CLKC0_ENABLE="ENABLE",CLKC1_ENABLE="ENABLE",CLKC2_ENABLE="ENABLE",CLKC3_ENABLE="ENABLE",CLKC4_ENABLE="ENABLE",FEEDBK_PATH="CLKC0_EXT",STDBY_ENABLE="DISABLE",CLKC0_CPHASE=7,CLKC1_CPHASE=7,CLKC2_CPHASE=79,CLKC3_CPHASE=39,GMC_GAIN=2,ICP_CURRENT=9,KVCO=2,LPF_CAPACITOR=1,LPF_RESISTOR=8,SYNC_ENABLE="DISABLE") in D:\Anlogic\TD_6.2.1_Engineer_6.2.168.116\arch/eagle_macro.v(889)
@@ -458,7 +460,7 @@ HDL-5007 WARNING: actual bit length 32 differs from formal bit length 1 for port
 HDL-5007 WARNING: actual bit length 32 differs from formal bit length 1 for port 'web' in ../../../../source_code/rtl/ETH/rx_client_fifo.v(904)
 HDL-5323 WARNING: input port 'dib[8]' remains unconnected for this instance in ../../../../source_code/rtl/ETH/rx_client_fifo.v(871)
 HDL-5323 WARNING: input port 'dib[8]' remains unconnected for this instance in ../../../../source_code/rtl/ETH/rx_client_fifo.v(892)
-HDL-5323 WARNING: input port 'mdio_i' remains unconnected for this instance in ../../../../source_code/rtl/UDP_Example_Top.v(718)
+HDL-5323 WARNING: input port 'mdio_i' remains unconnected for this instance in ../../../../source_code/rtl/ETH/udp_top.v(243)
 HDL-5001 WARNING: Contains anonymous inst(s) and/or net(s) that have not been renamed
 HDL-5001 WARNING: Contains anonymous inst(s) and/or net(s) that have not been renamed
 HDL-5001 WARNING: Contains anonymous inst(s) and/or net(s) that have not been renamed
@@ -570,14 +572,14 @@ RUN-1002 : start command "optimize_rtl"
 RUN-1001 : Open license file D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/license/Anlogic.lic
 SYN-1001 : Stage 1 | Optimize RTL
 SYN-1001 : Stage 1.1 | Check Design Sanity
-SYN-1001 : End Stage 1.1 | Check Design Sanity; Time: 0.007719s wall, 0.000000s user + 0.000000s system = 0.000000s CPU (n/a%); Memory(MB): used = 275, reserved = 382, peak = 275;
+SYN-1001 : End Stage 1.1 | Check Design Sanity; Time: 0.008885s wall, 0.000000s user + 0.000000s system = 0.000000s CPU (n/a%); Memory(MB): used = 273, reserved = 382, peak = 273;
 
-SYN-1079 : finish stage Check Design Sanity. Total instances: 32526, Total nets: 70414.
+SYN-1079 : finish stage Check Design Sanity. Total instances: 32530, Total nets: 70431.
 
 SYN-1001 : Stage 1.2 | Initialize Design
-SYN-1001 : End Stage 1.2 | Initialize Design; Time: 1.032361s wall, 0.468750s user + 0.000000s system = 0.468750s CPU (45.4%); Memory(MB): used = 275, reserved = 382, peak = 275;
+SYN-1001 : End Stage 1.2 | Initialize Design; Time: 1.024316s wall, 0.468750s user + 0.000000s system = 0.468750s CPU (45.8%); Memory(MB): used = 273, reserved = 382, peak = 273;
 
-SYN-1079 : finish stage Initialize Design. Total instances: 6884, Total nets: 38780.
+SYN-1079 : finish stage Initialize Design. Total instances: 6888, Total nets: 38797.
 
 SYN-1001 : Stage 1.3 | Flatten Module
 SYN-1011 : Flatten model UDP_Example_Top
@@ -587,16 +589,16 @@ SYN-5066 WARNING: Disconnect the driver 'u_uitpg_1/O_tpg_hs_i' of the multi-driv
 SYN-5066 WARNING: Disconnect the driver 'u_uitpg_3/O_tpg_vs_i' of the multi-driven net 'uihdmitx_inst/Inst_DVITransmitter/VS_I'
 SYN-5066 WARNING: Disconnect the driver 'u_uitpg_2/O_tpg_vs_i' of the multi-driven net 'uihdmitx_inst/Inst_DVITransmitter/VS_I'
 SYN-5066 WARNING: Disconnect the driver 'u_uitpg_1/O_tpg_vs_i' of the multi-driven net 'uihdmitx_inst/Inst_DVITransmitter/VS_I'
-SYN-1001 : End Stage 1.3 | Flatten Module; Time: 0.168905s wall, 0.062500s user + 0.000000s system = 0.062500s CPU (37.0%); Memory(MB): used = 276, reserved = 382, peak = 276;
+SYN-1001 : End Stage 1.3 | Flatten Module; Time: 0.172410s wall, 0.093750s user + 0.000000s system = 0.093750s CPU (54.4%); Memory(MB): used = 274, reserved = 382, peak = 274;
 
-SYN-1079 : finish stage Flatten Module. Total instances: 7694, Total nets: 32301.
+SYN-1079 : finish stage Flatten Module. Total instances: 7697, Total nets: 32304.
 
 SYN-1001 : Stage 1.4 | Uniform Instance
 SYN-5013 WARNING: Undriven net: model "UDP_Example_Top" / net "u2_ram/u2_wrrd/Sdr_init_ref_ba[1]" in ../../../../source_code/rtl/uieg4d_dram/enc_file/sdr_wrrd.enc.v(0)
 		the net's pin: pin "i1[1]" in ../../../../source_code/rtl/uieg4d_dram/enc_file/sdr_wrrd.enc.v(0)
 SYN-5013 WARNING: Undriven net: model "UDP_Example_Top" / net "u2_ram/u2_wrrd/Sdr_init_ref_ba[0]" in ../../../../source_code/rtl/uieg4d_dram/enc_file/sdr_wrrd.enc.v(0)
 		the net's pin: pin "i1[0]" in ../../../../source_code/rtl/uieg4d_dram/enc_file/sdr_wrrd.enc.v(0)
-SYN-5013 WARNING: Undriven net: model "UDP_Example_Top" / net "u4_trimac_block/trimac_core/mac_core_aead6cd6dadd_Inst/TEMAC_CORE_INST/mac_has_sgmii" in ../../al_ip/TEMAC_CORE/RTL/TEMAC_CORE_aead6cd6dadd.v(20)
+SYN-5013 WARNING: Undriven net: model "UDP_Example_Top" / net "u_udp_top/u4_trimac_block/trimac_core/mac_core_aead6cd6dadd_Inst/TEMAC_CORE_INST/mac_has_sgmii" in ../../al_ip/TEMAC_CORE/RTL/TEMAC_CORE_aead6cd6dadd.v(20)
 		the net's pin: pin "sel" in ../../al_ip/TEMAC_CORE/RTL/TEMAC_CORE_aead6cd6dadd.v(0)
 		the net's pin: pin "sel" in ../../al_ip/TEMAC_CORE/RTL/TEMAC_CORE_aead6cd6dadd.v(0)
 		the net's pin: pin "sel" in ../../al_ip/TEMAC_CORE/RTL/TEMAC_CORE_aead6cd6dadd.v(0)
@@ -604,25 +606,25 @@ SYN-5013 WARNING: Undriven net: model "UDP_Example_Top" / net "u4_trimac_block/t
 		the net's pin: pin "sel" in ../../al_ip/TEMAC_CORE/RTL/TEMAC_CORE_aead6cd6dadd.v(0)
 		the net's pin: pin "sel" in ../../al_ip/TEMAC_CORE/RTL/TEMAC_CORE_aead6cd6dadd.v(0)
 		the net's pin: pin "sel" in ../../al_ip/TEMAC_CORE/RTL/TEMAC_CORE_aead6cd6dadd.v(0)
-SYN-5013 WARNING: Undriven net: model "UDP_Example_Top" / net "u6_tx_fifo/ramgen_l/dib[8]" in ../../../../source_code/rtl/ETH/RAMB16_S9_S9.v(16)
+SYN-5013 WARNING: Undriven net: model "UDP_Example_Top" / net "u_udp_top/u6_tx_fifo/ramgen_l/dib[8]" in ../../../../source_code/rtl/ETH/RAMB16_S9_S9.v(16)
 		the net's pin: pin "dib[8]" in ../../../../source_code/rtl/ETH/RAMB16_S9_S9.v(45)
-SYN-5013 WARNING: Undriven net: model "UDP_Example_Top" / net "u6_tx_fifo/ramgen_l/dib[7]" in ../../../../source_code/rtl/ETH/RAMB16_S9_S9.v(16)
+SYN-5013 WARNING: Undriven net: model "UDP_Example_Top" / net "u_udp_top/u6_tx_fifo/ramgen_l/dib[7]" in ../../../../source_code/rtl/ETH/RAMB16_S9_S9.v(16)
 		the net's pin: pin "dib[7]" in ../../../../source_code/rtl/ETH/RAMB16_S9_S9.v(45)
-SYN-5013 WARNING: Undriven net: model "UDP_Example_Top" / net "u6_tx_fifo/ramgen_l/dib[6]" in ../../../../source_code/rtl/ETH/RAMB16_S9_S9.v(16)
+SYN-5013 WARNING: Undriven net: model "UDP_Example_Top" / net "u_udp_top/u6_tx_fifo/ramgen_l/dib[6]" in ../../../../source_code/rtl/ETH/RAMB16_S9_S9.v(16)
 		the net's pin: pin "dib[6]" in ../../../../source_code/rtl/ETH/RAMB16_S9_S9.v(45)
-SYN-5013 WARNING: Undriven net: model "UDP_Example_Top" / net "u6_tx_fifo/ramgen_l/dib[5]" in ../../../../source_code/rtl/ETH/RAMB16_S9_S9.v(16)
+SYN-5013 WARNING: Undriven net: model "UDP_Example_Top" / net "u_udp_top/u6_tx_fifo/ramgen_l/dib[5]" in ../../../../source_code/rtl/ETH/RAMB16_S9_S9.v(16)
 		the net's pin: pin "dib[5]" in ../../../../source_code/rtl/ETH/RAMB16_S9_S9.v(45)
-SYN-5013 WARNING: Undriven net: model "UDP_Example_Top" / net "u6_tx_fifo/ramgen_l/dib[4]" in ../../../../source_code/rtl/ETH/RAMB16_S9_S9.v(16)
+SYN-5013 WARNING: Undriven net: model "UDP_Example_Top" / net "u_udp_top/u6_tx_fifo/ramgen_l/dib[4]" in ../../../../source_code/rtl/ETH/RAMB16_S9_S9.v(16)
 		the net's pin: pin "dib[4]" in ../../../../source_code/rtl/ETH/RAMB16_S9_S9.v(45)
-SYN-5013 WARNING: Undriven net: model "UDP_Example_Top" / net "u6_tx_fifo/ramgen_l/dib[3]" in ../../../../source_code/rtl/ETH/RAMB16_S9_S9.v(16)
+SYN-5013 WARNING: Undriven net: model "UDP_Example_Top" / net "u_udp_top/u6_tx_fifo/ramgen_l/dib[3]" in ../../../../source_code/rtl/ETH/RAMB16_S9_S9.v(16)
 		the net's pin: pin "dib[3]" in ../../../../source_code/rtl/ETH/RAMB16_S9_S9.v(45)
-SYN-5013 WARNING: Undriven net: model "UDP_Example_Top" / net "u6_tx_fifo/ramgen_l/dib[2]" in ../../../../source_code/rtl/ETH/RAMB16_S9_S9.v(16)
+SYN-5013 WARNING: Undriven net: model "UDP_Example_Top" / net "u_udp_top/u6_tx_fifo/ramgen_l/dib[2]" in ../../../../source_code/rtl/ETH/RAMB16_S9_S9.v(16)
 		the net's pin: pin "dib[2]" in ../../../../source_code/rtl/ETH/RAMB16_S9_S9.v(45)
 SYN-5013 Similar messages will be suppressed.
 SYN-5025 WARNING: Using 0 for all undriven pins and nets
-SYN-1001 : End Stage 1.4 | Uniform Instance; Time: 0.033785s wall, 0.015625s user + 0.000000s system = 0.015625s CPU (46.2%); Memory(MB): used = 258, reserved = 364, peak = 276;
+SYN-1001 : End Stage 1.4 | Uniform Instance; Time: 0.035031s wall, 0.015625s user + 0.000000s system = 0.015625s CPU (44.6%); Memory(MB): used = 257, reserved = 365, peak = 274;
 
-SYN-1079 : finish stage Uniform Instance. Total instances: 7087, Total nets: 31651.
+SYN-1079 : finish stage Uniform Instance. Total instances: 7090, Total nets: 31654.
 
 SYN-1001 : Stage 1.5 | Optimize Design
 SYN-1066 : Inferred FSM for state register 'app_fdma_inst/state_reg' in module 'UDP_Example_Top'
@@ -644,7 +646,18 @@ SYN-1066 : Inferred FSM for state register 'u2_ram/u2_wrrd/state_reg' in module 
                   0010              100
 --------------------------------------------
 SYN-1067 : encoded FSM with state register 'u2_ram/u2_wrrd/state_reg' using encoding 'one_hot' in model 'UDP_Example_Top'
-SYN-1066 : Inferred FSM for state register 'u2_udp_loopback/STATE_reg' in module 'UDP_Example_Top'
+SYN-1066 : Inferred FSM for state register 'u_four_channel_video_splicer/u_uidbufw_interconnect/state_reg' in module 'UDP_Example_Top'
+--------------------------------------------
+     Previous Encoding     New Encoding
+--------------------------------------------
+                   000            00001
+                   100            00010
+                   011            00100
+                   010            01000
+                   001            10000
+--------------------------------------------
+SYN-1067 : encoded FSM with state register 'u_four_channel_video_splicer/u_uidbufw_interconnect/state_reg' using encoding 'one_hot' in model 'UDP_Example_Top'
+SYN-1066 : Inferred FSM for state register 'u_udp_top/u2_udp_loopback/STATE_reg' in module 'UDP_Example_Top'
 --------------------------------------------
      Previous Encoding     New Encoding
 --------------------------------------------
@@ -652,16 +665,16 @@ SYN-1066 : Inferred FSM for state register 'u2_udp_loopback/STATE_reg' in module
                     01              010
                     10              100
 --------------------------------------------
-SYN-1067 : encoded FSM with state register 'u2_udp_loopback/STATE_reg' using encoding 'one_hot' in model 'UDP_Example_Top'
-SYN-1066 : Inferred FSM for state register 'u3_udp_ip_protocol_stack/arp_layer/arp_receive_module/STATE_reg' in module 'UDP_Example_Top'
+SYN-1067 : encoded FSM with state register 'u_udp_top/u2_udp_loopback/STATE_reg' using encoding 'one_hot' in model 'UDP_Example_Top'
+SYN-1066 : Inferred FSM for state register 'u_udp_top/u3_udp_ip_protocol_stack/arp_layer/arp_receive_module/STATE_reg' in module 'UDP_Example_Top'
 --------------------------------------------
      Previous Encoding     New Encoding
 --------------------------------------------
                     00               01
                     01               10
 --------------------------------------------
-SYN-1067 : encoded FSM with state register 'u3_udp_ip_protocol_stack/arp_layer/arp_receive_module/STATE_reg' using encoding 'one_hot' in model 'UDP_Example_Top'
-SYN-1066 : Inferred FSM for state register 'u3_udp_ip_protocol_stack/arp_layer/arp_receive_module/arp_rx_cnt_reg' in module 'UDP_Example_Top'
+SYN-1067 : encoded FSM with state register 'u_udp_top/u3_udp_ip_protocol_stack/arp_layer/arp_receive_module/STATE_reg' using encoding 'one_hot' in model 'UDP_Example_Top'
+SYN-1066 : Inferred FSM for state register 'u_udp_top/u3_udp_ip_protocol_stack/arp_layer/arp_receive_module/arp_rx_cnt_reg' in module 'UDP_Example_Top'
 ------------------------------------------------------------
      Previous Encoding                     New Encoding
 ------------------------------------------------------------
@@ -694,8 +707,8 @@ SYN-1066 : Inferred FSM for state register 'u3_udp_ip_protocol_stack/arp_layer/a
                  11010     0100000000000000000000000000
                  11011     1000000000000000000000000000
 ------------------------------------------------------------
-SYN-1067 : encoded FSM with state register 'u3_udp_ip_protocol_stack/arp_layer/arp_receive_module/arp_rx_cnt_reg' using encoding 'one_hot' in model 'UDP_Example_Top'
-SYN-1066 : Inferred FSM for state register 'u3_udp_ip_protocol_stack/ip_layer/ip_receive_module/STATE_reg' in module 'UDP_Example_Top'
+SYN-1067 : encoded FSM with state register 'u_udp_top/u3_udp_ip_protocol_stack/arp_layer/arp_receive_module/arp_rx_cnt_reg' using encoding 'one_hot' in model 'UDP_Example_Top'
+SYN-1066 : Inferred FSM for state register 'u_udp_top/u3_udp_ip_protocol_stack/ip_layer/ip_receive_module/STATE_reg' in module 'UDP_Example_Top'
 --------------------------------------------
      Previous Encoding     New Encoding
 --------------------------------------------
@@ -704,8 +717,8 @@ SYN-1066 : Inferred FSM for state register 'u3_udp_ip_protocol_stack/ip_layer/ip
                     10             0100
                     11             1000
 --------------------------------------------
-SYN-1067 : encoded FSM with state register 'u3_udp_ip_protocol_stack/ip_layer/ip_receive_module/STATE_reg' using encoding 'one_hot' in model 'UDP_Example_Top'
-SYN-1066 : Inferred FSM for state register 'u3_udp_ip_protocol_stack/ip_layer/ip_receive_module/cnt_reg' in module 'UDP_Example_Top'
+SYN-1067 : encoded FSM with state register 'u_udp_top/u3_udp_ip_protocol_stack/ip_layer/ip_receive_module/STATE_reg' using encoding 'one_hot' in model 'UDP_Example_Top'
+SYN-1066 : Inferred FSM for state register 'u_udp_top/u3_udp_ip_protocol_stack/ip_layer/ip_receive_module/cnt_reg' in module 'UDP_Example_Top'
 ---------------------------------------------------
      Previous Encoding            New Encoding
 ---------------------------------------------------
@@ -729,8 +742,8 @@ SYN-1066 : Inferred FSM for state register 'u3_udp_ip_protocol_stack/ip_layer/ip
                  10001     0100000000000000000
                  10010     1000000000000000000
 ---------------------------------------------------
-SYN-1067 : encoded FSM with state register 'u3_udp_ip_protocol_stack/ip_layer/ip_receive_module/cnt_reg' using encoding 'one_hot' in model 'UDP_Example_Top'
-SYN-1066 : Inferred FSM for state register 'u3_udp_ip_protocol_stack/ip_layer/ip_receive_module/icmp_packet_process_module/checksum_state_reg' in module 'UDP_Example_Top'
+SYN-1067 : encoded FSM with state register 'u_udp_top/u3_udp_ip_protocol_stack/ip_layer/ip_receive_module/cnt_reg' using encoding 'one_hot' in model 'UDP_Example_Top'
+SYN-1066 : Inferred FSM for state register 'u_udp_top/u3_udp_ip_protocol_stack/ip_layer/ip_receive_module/icmp_packet_process_module/checksum_state_reg' in module 'UDP_Example_Top'
 --------------------------------------------
      Previous Encoding     New Encoding
 --------------------------------------------
@@ -739,8 +752,8 @@ SYN-1066 : Inferred FSM for state register 'u3_udp_ip_protocol_stack/ip_layer/ip
                     10             0100
                     11             1000
 --------------------------------------------
-SYN-1067 : encoded FSM with state register 'u3_udp_ip_protocol_stack/ip_layer/ip_receive_module/icmp_packet_process_module/checksum_state_reg' using encoding 'one_hot' in model 'UDP_Example_Top'
-SYN-1066 : Inferred FSM for state register 'u3_udp_ip_protocol_stack/ip_layer/ip_receive_module/icmp_packet_process_module/cnt_reg' in module 'UDP_Example_Top'
+SYN-1067 : encoded FSM with state register 'u_udp_top/u3_udp_ip_protocol_stack/ip_layer/ip_receive_module/icmp_packet_process_module/checksum_state_reg' using encoding 'one_hot' in model 'UDP_Example_Top'
+SYN-1066 : Inferred FSM for state register 'u_udp_top/u3_udp_ip_protocol_stack/ip_layer/ip_receive_module/icmp_packet_process_module/cnt_reg' in module 'UDP_Example_Top'
 --------------------------------------------
      Previous Encoding     New Encoding
 --------------------------------------------
@@ -754,8 +767,8 @@ SYN-1066 : Inferred FSM for state register 'u3_udp_ip_protocol_stack/ip_layer/ip
                   0111        010000000
                   1000        100000000
 --------------------------------------------
-SYN-1067 : encoded FSM with state register 'u3_udp_ip_protocol_stack/ip_layer/ip_receive_module/icmp_packet_process_module/cnt_reg' using encoding 'one_hot' in model 'UDP_Example_Top'
-SYN-1066 : Inferred FSM for state register 'u3_udp_ip_protocol_stack/ip_layer/ip_receive_module/ip_header_checksum_check_module/state_reg' in module 'UDP_Example_Top'
+SYN-1067 : encoded FSM with state register 'u_udp_top/u3_udp_ip_protocol_stack/ip_layer/ip_receive_module/icmp_packet_process_module/cnt_reg' using encoding 'one_hot' in model 'UDP_Example_Top'
+SYN-1066 : Inferred FSM for state register 'u_udp_top/u3_udp_ip_protocol_stack/ip_layer/ip_receive_module/ip_header_checksum_check_module/state_reg' in module 'UDP_Example_Top'
 --------------------------------------------
      Previous Encoding     New Encoding
 --------------------------------------------
@@ -764,8 +777,8 @@ SYN-1066 : Inferred FSM for state register 'u3_udp_ip_protocol_stack/ip_layer/ip
                     10             0100
                     11             1000
 --------------------------------------------
-SYN-1067 : encoded FSM with state register 'u3_udp_ip_protocol_stack/ip_layer/ip_receive_module/ip_header_checksum_check_module/state_reg' using encoding 'one_hot' in model 'UDP_Example_Top'
-SYN-1066 : Inferred FSM for state register 'u3_udp_ip_protocol_stack/ip_layer/ip_send_module/STATE_reg' in module 'UDP_Example_Top'
+SYN-1067 : encoded FSM with state register 'u_udp_top/u3_udp_ip_protocol_stack/ip_layer/ip_receive_module/ip_header_checksum_check_module/state_reg' using encoding 'one_hot' in model 'UDP_Example_Top'
+SYN-1066 : Inferred FSM for state register 'u_udp_top/u3_udp_ip_protocol_stack/ip_layer/ip_send_module/STATE_reg' in module 'UDP_Example_Top'
 --------------------------------------------
      Previous Encoding     New Encoding
 --------------------------------------------
@@ -775,8 +788,8 @@ SYN-1066 : Inferred FSM for state register 'u3_udp_ip_protocol_stack/ip_layer/ip
                    100            01000
                    011            10000
 --------------------------------------------
-SYN-1067 : encoded FSM with state register 'u3_udp_ip_protocol_stack/ip_layer/ip_send_module/STATE_reg' using encoding 'one_hot' in model 'UDP_Example_Top'
-SYN-1066 : Inferred FSM for state register 'u3_udp_ip_protocol_stack/ip_layer/ip_send_module/cnt_reg' in module 'UDP_Example_Top'
+SYN-1067 : encoded FSM with state register 'u_udp_top/u3_udp_ip_protocol_stack/ip_layer/ip_send_module/STATE_reg' using encoding 'one_hot' in model 'UDP_Example_Top'
+SYN-1066 : Inferred FSM for state register 'u_udp_top/u3_udp_ip_protocol_stack/ip_layer/ip_send_module/cnt_reg' in module 'UDP_Example_Top'
 ----------------------------------------------------
      Previous Encoding             New Encoding
 ----------------------------------------------------
@@ -801,8 +814,8 @@ SYN-1066 : Inferred FSM for state register 'u3_udp_ip_protocol_stack/ip_layer/ip
                  10010     01000000000000000000
                  10011     10000000000000000000
 ----------------------------------------------------
-SYN-1067 : encoded FSM with state register 'u3_udp_ip_protocol_stack/ip_layer/ip_send_module/cnt_reg' using encoding 'one_hot' in model 'UDP_Example_Top'
-SYN-1066 : Inferred FSM for state register 'u3_udp_ip_protocol_stack/ip_layer/ip_send_module/icmp_packet_send_module/STATE_reg' in module 'UDP_Example_Top'
+SYN-1067 : encoded FSM with state register 'u_udp_top/u3_udp_ip_protocol_stack/ip_layer/ip_send_module/cnt_reg' using encoding 'one_hot' in model 'UDP_Example_Top'
+SYN-1066 : Inferred FSM for state register 'u_udp_top/u3_udp_ip_protocol_stack/ip_layer/ip_send_module/icmp_packet_send_module/STATE_reg' in module 'UDP_Example_Top'
 --------------------------------------------
      Previous Encoding     New Encoding
 --------------------------------------------
@@ -810,8 +823,8 @@ SYN-1066 : Inferred FSM for state register 'u3_udp_ip_protocol_stack/ip_layer/ip
                     01              010
                     10              100
 --------------------------------------------
-SYN-1067 : encoded FSM with state register 'u3_udp_ip_protocol_stack/ip_layer/ip_send_module/icmp_packet_send_module/STATE_reg' using encoding 'one_hot' in model 'UDP_Example_Top'
-SYN-1066 : Inferred FSM for state register 'u3_udp_ip_protocol_stack/ip_layer/ip_send_module/icmp_packet_send_module/cnt1_reg' in module 'UDP_Example_Top'
+SYN-1067 : encoded FSM with state register 'u_udp_top/u3_udp_ip_protocol_stack/ip_layer/ip_send_module/icmp_packet_send_module/STATE_reg' using encoding 'one_hot' in model 'UDP_Example_Top'
+SYN-1066 : Inferred FSM for state register 'u_udp_top/u3_udp_ip_protocol_stack/ip_layer/ip_send_module/icmp_packet_send_module/cnt1_reg' in module 'UDP_Example_Top'
 --------------------------------------------
      Previous Encoding     New Encoding
 --------------------------------------------
@@ -825,8 +838,8 @@ SYN-1066 : Inferred FSM for state register 'u3_udp_ip_protocol_stack/ip_layer/ip
                   0111        010000000
                   1000        100000000
 --------------------------------------------
-SYN-1067 : encoded FSM with state register 'u3_udp_ip_protocol_stack/ip_layer/ip_send_module/icmp_packet_send_module/cnt1_reg' using encoding 'one_hot' in model 'UDP_Example_Top'
-SYN-1066 : Inferred FSM for state register 'u3_udp_ip_protocol_stack/send_buffer/STATE_reg' in module 'UDP_Example_Top'
+SYN-1067 : encoded FSM with state register 'u_udp_top/u3_udp_ip_protocol_stack/ip_layer/ip_send_module/icmp_packet_send_module/cnt1_reg' using encoding 'one_hot' in model 'UDP_Example_Top'
+SYN-1066 : Inferred FSM for state register 'u_udp_top/u3_udp_ip_protocol_stack/send_buffer/STATE_reg' in module 'UDP_Example_Top'
 --------------------------------------------
      Previous Encoding     New Encoding
 --------------------------------------------
@@ -838,8 +851,8 @@ SYN-1066 : Inferred FSM for state register 'u3_udp_ip_protocol_stack/send_buffer
                    101          0100000
                    110          1000000
 --------------------------------------------
-SYN-1067 : encoded FSM with state register 'u3_udp_ip_protocol_stack/send_buffer/STATE_reg' using encoding 'one_hot' in model 'UDP_Example_Top'
-SYN-1066 : Inferred FSM for state register 'u3_udp_ip_protocol_stack/temac_data_process/RX_STATE_reg' in module 'UDP_Example_Top'
+SYN-1067 : encoded FSM with state register 'u_udp_top/u3_udp_ip_protocol_stack/send_buffer/STATE_reg' using encoding 'one_hot' in model 'UDP_Example_Top'
+SYN-1066 : Inferred FSM for state register 'u_udp_top/u3_udp_ip_protocol_stack/temac_data_process/RX_STATE_reg' in module 'UDP_Example_Top'
 --------------------------------------------
      Previous Encoding     New Encoding
 --------------------------------------------
@@ -847,8 +860,8 @@ SYN-1066 : Inferred FSM for state register 'u3_udp_ip_protocol_stack/temac_data_
                     01              010
                     10              100
 --------------------------------------------
-SYN-1067 : encoded FSM with state register 'u3_udp_ip_protocol_stack/temac_data_process/RX_STATE_reg' using encoding 'one_hot' in model 'UDP_Example_Top'
-SYN-1066 : Inferred FSM for state register 'u3_udp_ip_protocol_stack/temac_data_process/TX_STATE_reg' in module 'UDP_Example_Top'
+SYN-1067 : encoded FSM with state register 'u_udp_top/u3_udp_ip_protocol_stack/temac_data_process/RX_STATE_reg' using encoding 'one_hot' in model 'UDP_Example_Top'
+SYN-1066 : Inferred FSM for state register 'u_udp_top/u3_udp_ip_protocol_stack/temac_data_process/TX_STATE_reg' in module 'UDP_Example_Top'
 --------------------------------------------
      Previous Encoding     New Encoding
 --------------------------------------------
@@ -856,8 +869,8 @@ SYN-1066 : Inferred FSM for state register 'u3_udp_ip_protocol_stack/temac_data_
                     01              010
                     10              100
 --------------------------------------------
-SYN-1067 : encoded FSM with state register 'u3_udp_ip_protocol_stack/temac_data_process/TX_STATE_reg' using encoding 'one_hot' in model 'UDP_Example_Top'
-SYN-1066 : Inferred FSM for state register 'u3_udp_ip_protocol_stack/temac_data_process/temac_rx_cnt_reg' in module 'UDP_Example_Top'
+SYN-1067 : encoded FSM with state register 'u_udp_top/u3_udp_ip_protocol_stack/temac_data_process/TX_STATE_reg' using encoding 'one_hot' in model 'UDP_Example_Top'
+SYN-1066 : Inferred FSM for state register 'u_udp_top/u3_udp_ip_protocol_stack/temac_data_process/temac_rx_cnt_reg' in module 'UDP_Example_Top'
 ----------------------------------------------
      Previous Encoding       New Encoding
 ----------------------------------------------
@@ -876,8 +889,8 @@ SYN-1066 : Inferred FSM for state register 'u3_udp_ip_protocol_stack/temac_data_
                   1100     01000000000000
                   1101     10000000000000
 ----------------------------------------------
-SYN-1067 : encoded FSM with state register 'u3_udp_ip_protocol_stack/temac_data_process/temac_rx_cnt_reg' using encoding 'one_hot' in model 'UDP_Example_Top'
-SYN-1066 : Inferred FSM for state register 'u3_udp_ip_protocol_stack/temac_data_process/temac_tx_cnt_reg' in module 'UDP_Example_Top'
+SYN-1067 : encoded FSM with state register 'u_udp_top/u3_udp_ip_protocol_stack/temac_data_process/temac_rx_cnt_reg' using encoding 'one_hot' in model 'UDP_Example_Top'
+SYN-1066 : Inferred FSM for state register 'u_udp_top/u3_udp_ip_protocol_stack/temac_data_process/temac_tx_cnt_reg' in module 'UDP_Example_Top'
 -----------------------------------------------
      Previous Encoding        New Encoding
 -----------------------------------------------
@@ -897,8 +910,8 @@ SYN-1066 : Inferred FSM for state register 'u3_udp_ip_protocol_stack/temac_data_
                   1101     010000000000000
                   1110     100000000000000
 -----------------------------------------------
-SYN-1067 : encoded FSM with state register 'u3_udp_ip_protocol_stack/temac_data_process/temac_tx_cnt_reg' using encoding 'one_hot' in model 'UDP_Example_Top'
-SYN-1066 : Inferred FSM for state register 'u3_udp_ip_protocol_stack/udp_layer/udp_receive_module/cnt_reg' in module 'UDP_Example_Top'
+SYN-1067 : encoded FSM with state register 'u_udp_top/u3_udp_ip_protocol_stack/temac_data_process/temac_tx_cnt_reg' using encoding 'one_hot' in model 'UDP_Example_Top'
+SYN-1066 : Inferred FSM for state register 'u_udp_top/u3_udp_ip_protocol_stack/udp_layer/udp_receive_module/cnt_reg' in module 'UDP_Example_Top'
 --------------------------------------------
      Previous Encoding     New Encoding
 --------------------------------------------
@@ -914,8 +927,8 @@ SYN-1066 : Inferred FSM for state register 'u3_udp_ip_protocol_stack/udp_layer/u
                   1001      01000000000
                   1010      10000000000
 --------------------------------------------
-SYN-1067 : encoded FSM with state register 'u3_udp_ip_protocol_stack/udp_layer/udp_receive_module/cnt_reg' using encoding 'one_hot' in model 'UDP_Example_Top'
-SYN-1066 : Inferred FSM for state register 'u3_udp_ip_protocol_stack/udp_layer/udp_send_module/STATE_reg' in module 'UDP_Example_Top'
+SYN-1067 : encoded FSM with state register 'u_udp_top/u3_udp_ip_protocol_stack/udp_layer/udp_receive_module/cnt_reg' using encoding 'one_hot' in model 'UDP_Example_Top'
+SYN-1066 : Inferred FSM for state register 'u_udp_top/u3_udp_ip_protocol_stack/udp_layer/udp_send_module/STATE_reg' in module 'UDP_Example_Top'
 --------------------------------------------
      Previous Encoding     New Encoding
 --------------------------------------------
@@ -924,8 +937,8 @@ SYN-1066 : Inferred FSM for state register 'u3_udp_ip_protocol_stack/udp_layer/u
                     10             0100
                     11             1000
 --------------------------------------------
-SYN-1067 : encoded FSM with state register 'u3_udp_ip_protocol_stack/udp_layer/udp_send_module/STATE_reg' using encoding 'one_hot' in model 'UDP_Example_Top'
-SYN-1066 : Inferred FSM for state register 'u3_udp_ip_protocol_stack/udp_layer/udp_send_module/cnt_reg' in module 'UDP_Example_Top'
+SYN-1067 : encoded FSM with state register 'u_udp_top/u3_udp_ip_protocol_stack/udp_layer/udp_send_module/STATE_reg' using encoding 'one_hot' in model 'UDP_Example_Top'
+SYN-1066 : Inferred FSM for state register 'u_udp_top/u3_udp_ip_protocol_stack/udp_layer/udp_send_module/cnt_reg' in module 'UDP_Example_Top'
 --------------------------------------------
      Previous Encoding     New Encoding
 --------------------------------------------
@@ -938,8 +951,8 @@ SYN-1066 : Inferred FSM for state register 'u3_udp_ip_protocol_stack/udp_layer/u
                   0110         01000000
                   0111         10000000
 --------------------------------------------
-SYN-1067 : encoded FSM with state register 'u3_udp_ip_protocol_stack/udp_layer/udp_send_module/cnt_reg' using encoding 'one_hot' in model 'UDP_Example_Top'
-SYN-1066 : Inferred FSM for state register 'u4_trimac_block/trimac_core/mac_core_aead6cd6dadd_Inst/TEMAC_CORE_INST/al102_vfhtA8Nz/al102_6KjBLuws/al102_FvxPC15R$al102_NkBI8S2N/al102_sGgJ2iOw_reg' in module 'UDP_Example_Top'
+SYN-1067 : encoded FSM with state register 'u_udp_top/u3_udp_ip_protocol_stack/udp_layer/udp_send_module/cnt_reg' using encoding 'one_hot' in model 'UDP_Example_Top'
+SYN-1066 : Inferred FSM for state register 'u_udp_top/u4_trimac_block/trimac_core/mac_core_aead6cd6dadd_Inst/TEMAC_CORE_INST/al102_vfhtA8Nz/al102_6KjBLuws/al102_FvxPC15R$al102_NkBI8S2N/al102_sGgJ2iOw_reg' in module 'UDP_Example_Top'
 --------------------------------------------
      Previous Encoding     New Encoding
 --------------------------------------------
@@ -947,15 +960,15 @@ SYN-1066 : Inferred FSM for state register 'u4_trimac_block/trimac_core/mac_core
                     01              010
                     10              100
 --------------------------------------------
-SYN-1067 : encoded FSM with state register 'u4_trimac_block/trimac_core/mac_core_aead6cd6dadd_Inst/TEMAC_CORE_INST/al102_vfhtA8Nz/al102_6KjBLuws/al102_FvxPC15R$al102_NkBI8S2N/al102_sGgJ2iOw_reg' using encoding 'one_hot' in model 'UDP_Example_Top'
-SYN-1066 : Inferred FSM for state register 'u4_trimac_block/trimac_core/mac_core_aead6cd6dadd_Inst/TEMAC_CORE_INST/al102_vfhtA8Nz/al102_6KjBLuws/al102_FvxPC15R$al102_ORYeWAza/al102_sGgJ2iOw_reg' in module 'UDP_Example_Top'
+SYN-1067 : encoded FSM with state register 'u_udp_top/u4_trimac_block/trimac_core/mac_core_aead6cd6dadd_Inst/TEMAC_CORE_INST/al102_vfhtA8Nz/al102_6KjBLuws/al102_FvxPC15R$al102_NkBI8S2N/al102_sGgJ2iOw_reg' using encoding 'one_hot' in model 'UDP_Example_Top'
+SYN-1066 : Inferred FSM for state register 'u_udp_top/u4_trimac_block/trimac_core/mac_core_aead6cd6dadd_Inst/TEMAC_CORE_INST/al102_vfhtA8Nz/al102_6KjBLuws/al102_FvxPC15R$al102_ORYeWAza/al102_sGgJ2iOw_reg' in module 'UDP_Example_Top'
 --------------------------------------------
      Previous Encoding     New Encoding
 --------------------------------------------
                    000                1
 --------------------------------------------
-SYN-1067 : encoded FSM with state register 'u4_trimac_block/trimac_core/mac_core_aead6cd6dadd_Inst/TEMAC_CORE_INST/al102_vfhtA8Nz/al102_6KjBLuws/al102_FvxPC15R$al102_ORYeWAza/al102_sGgJ2iOw_reg' using encoding 'one_hot' in model 'UDP_Example_Top'
-SYN-1066 : Inferred FSM for state register 'u6_tx_fifo/rd_state_reg' in module 'UDP_Example_Top'
+SYN-1067 : encoded FSM with state register 'u_udp_top/u4_trimac_block/trimac_core/mac_core_aead6cd6dadd_Inst/TEMAC_CORE_INST/al102_vfhtA8Nz/al102_6KjBLuws/al102_FvxPC15R$al102_ORYeWAza/al102_sGgJ2iOw_reg' using encoding 'one_hot' in model 'UDP_Example_Top'
+SYN-1066 : Inferred FSM for state register 'u_udp_top/u6_tx_fifo/rd_state_reg' in module 'UDP_Example_Top'
 --------------------------------------------
      Previous Encoding     New Encoding
 --------------------------------------------
@@ -967,8 +980,8 @@ SYN-1066 : Inferred FSM for state register 'u6_tx_fifo/rd_state_reg' in module '
                   0101          0100000
                   0110          1000000
 --------------------------------------------
-SYN-1067 : encoded FSM with state register 'u6_tx_fifo/rd_state_reg' using encoding 'one_hot' in model 'UDP_Example_Top'
-SYN-1066 : Inferred FSM for state register 'u6_tx_fifo/wr_state_reg' in module 'UDP_Example_Top'
+SYN-1067 : encoded FSM with state register 'u_udp_top/u6_tx_fifo/rd_state_reg' using encoding 'one_hot' in model 'UDP_Example_Top'
+SYN-1066 : Inferred FSM for state register 'u_udp_top/u6_tx_fifo/wr_state_reg' in module 'UDP_Example_Top'
 --------------------------------------------
      Previous Encoding     New Encoding
 --------------------------------------------
@@ -977,8 +990,8 @@ SYN-1066 : Inferred FSM for state register 'u6_tx_fifo/wr_state_reg' in module '
                     11             0100
                     10             1000
 --------------------------------------------
-SYN-1067 : encoded FSM with state register 'u6_tx_fifo/wr_state_reg' using encoding 'one_hot' in model 'UDP_Example_Top'
-SYN-1066 : Inferred FSM for state register 'u7_rx_fifo/rd_state_reg' in module 'UDP_Example_Top'
+SYN-1067 : encoded FSM with state register 'u_udp_top/u6_tx_fifo/wr_state_reg' using encoding 'one_hot' in model 'UDP_Example_Top'
+SYN-1066 : Inferred FSM for state register 'u_udp_top/u7_rx_fifo/rd_state_reg' in module 'UDP_Example_Top'
 --------------------------------------------
      Previous Encoding     New Encoding
 --------------------------------------------
@@ -991,8 +1004,8 @@ SYN-1066 : Inferred FSM for state register 'u7_rx_fifo/rd_state_reg' in module '
                    111         01000000
                    101         10000000
 --------------------------------------------
-SYN-1067 : encoded FSM with state register 'u7_rx_fifo/rd_state_reg' using encoding 'one_hot' in model 'UDP_Example_Top'
-SYN-1066 : Inferred FSM for state register 'u7_rx_fifo/wr_state_reg' in module 'UDP_Example_Top'
+SYN-1067 : encoded FSM with state register 'u_udp_top/u7_rx_fifo/rd_state_reg' using encoding 'one_hot' in model 'UDP_Example_Top'
+SYN-1066 : Inferred FSM for state register 'u_udp_top/u7_rx_fifo/wr_state_reg' in module 'UDP_Example_Top'
 --------------------------------------------
      Previous Encoding     New Encoding
 --------------------------------------------
@@ -1003,18 +1016,7 @@ SYN-1066 : Inferred FSM for state register 'u7_rx_fifo/wr_state_reg' in module '
                    100           010000
                    011           100000
 --------------------------------------------
-SYN-1067 : encoded FSM with state register 'u7_rx_fifo/wr_state_reg' using encoding 'one_hot' in model 'UDP_Example_Top'
-SYN-1066 : Inferred FSM for state register 'u_four_channel_video_splicer/u_uidbufw_interconnect/state_reg' in module 'UDP_Example_Top'
---------------------------------------------
-     Previous Encoding     New Encoding
---------------------------------------------
-                   000            00001
-                   100            00010
-                   011            00100
-                   010            01000
-                   001            10000
---------------------------------------------
-SYN-1067 : encoded FSM with state register 'u_four_channel_video_splicer/u_uidbufw_interconnect/state_reg' using encoding 'one_hot' in model 'UDP_Example_Top'
+SYN-1067 : encoded FSM with state register 'u_udp_top/u7_rx_fifo/wr_state_reg' using encoding 'one_hot' in model 'UDP_Example_Top'
 SYN-1066 : Inferred FSM for state register 'u_uicfg5640/TS_S_reg' in module 'UDP_Example_Top'
 --------------------------------------------
      Previous Encoding     New Encoding
@@ -1026,27 +1028,40 @@ SYN-1066 : Inferred FSM for state register 'u_uicfg5640/TS_S_reg' in module 'UDP
 --------------------------------------------
 SYN-1067 : encoded FSM with state register 'u_uicfg5640/TS_S_reg' using encoding 'one_hot' in model 'UDP_Example_Top'
 SYN-1057 : Inferred 30 FSM(s)
-SYN-1032 : 27120/475 useful/useless nets, 6123/57 useful/useless insts
+SYN-1032 : 27123/475 useful/useless nets, 6126/57 useful/useless insts
 SYN-1021 : Optimized 3 onehot mux instances.
 SYN-1068 : Optimized 26 binary mux instances.
 SYN-1019 : Optimized 3 mux instances.
 SYN-1021 : Optimized 1 onehot mux instances.
 SYN-1021 : Optimized 1 onehot mux instances.
-SYN-1016 : Merged 507 instances.
+SYN-1016 : Merged 510 instances.
 USR-1002 : Derived clock:  create_generated_clock -name {u_PLL_HDMI_CLK/pll_inst.clkc[0]} -source [get_ports {clk_50}] -master_clock {clk_in} -multiply_by 1.2500 -duty_cycle 50.0000 [get_pins {u_PLL_HDMI_CLK/pll_inst.clkc[0]}]
 USR-1002 : Derived clock:  create_generated_clock -name {u_PLL_HDMI_CLK/pll_inst.clkc[1]} -source [get_ports {clk_50}] -master_clock {clk_in} -multiply_by 6.2500 -duty_cycle 50.0000 [get_pins {u_PLL_HDMI_CLK/pll_inst.clkc[1]}]
 USR-1002 : Derived clock:  create_generated_clock -name {u_clk/pll_inst.clkc[0]} -source [get_ports {clk_50}] -master_clock {clk_in} -multiply_by 3.0000 -duty_cycle 50.0000 [get_pins {u_clk/pll_inst.clkc[0]}]
 USR-1002 : Derived clock:  create_generated_clock -name {u_clk/pll_inst.clkc[2]} -source [get_ports {clk_50}] -master_clock {clk_in} -multiply_by 3.0000 -phase 180 -duty_cycle 50.0000 [get_pins {u_clk/pll_inst.clkc[2]}]
-USR-1002 : Derived clock:  create_generated_clock -name {u_clk_gen/u_pll_0/pll_inst.clkc[0]} -source [get_ports {clk_50}] -master_clock {clk_in} -multiply_by 2.5000 -duty_cycle 50.0000 [get_pins {u_clk_gen/u_pll_0/pll_inst.clkc[0]}]
-USR-1002 : Derived clock:  create_generated_clock -name {u_clk_gen/u_pll_0/pll_inst.clkc[1]} -source [get_ports {clk_50}] -master_clock {clk_in} -multiply_by 2.5000 -duty_cycle 50.0000 [get_pins {u_clk_gen/u_pll_0/pll_inst.clkc[1]}]
-USR-1002 : Derived clock:  create_generated_clock -name {u_clk_gen/u_pll_0/pll_inst.clkc[4]} -source [get_ports {clk_50}] -master_clock {clk_in} -multiply_by 2.5000 -phase 90 -duty_cycle 50.0000 [get_pins {u_clk_gen/u_pll_0/pll_inst.clkc[4]}]
+USR-1002 : Derived clock:  create_generated_clock -name {u_udp_top/u_clk_gen/u_pll_0/pll_inst.clkc[0]} -source [get_ports {clk_50}] -master_clock {clk_in} -multiply_by 2.5000 -duty_cycle 50.0000 [get_pins {u_udp_top/u_clk_gen/u_pll_0/pll_inst.clkc[0]}]
+USR-1002 : Derived clock:  create_generated_clock -name {u_udp_top/u_clk_gen/u_pll_0/pll_inst.clkc[1]} -source [get_ports {clk_50}] -master_clock {clk_in} -multiply_by 2.5000 -duty_cycle 50.0000 [get_pins {u_udp_top/u_clk_gen/u_pll_0/pll_inst.clkc[1]}]
+USR-1002 : Derived clock:  create_generated_clock -name {u_udp_top/u_clk_gen/u_pll_0/pll_inst.clkc[4]} -source [get_ports {clk_50}] -master_clock {clk_in} -multiply_by 2.5000 -phase 90 -duty_cycle 50.0000 [get_pins {u_udp_top/u_clk_gen/u_pll_0/pll_inst.clkc[4]}]
+USR-6001 WARNING: No pins matched 'get_pins u_clk_gen/u_pll_0/pll_inst.clkc[1]'
+USR-6001 WARNING: No nets matched 'get_nets udp_clk'
+USR-8108 CRITICAL-WARNING: create_generated_clock: cannot define a generated clock without targets.
+USR-8159 CRITICAL-WARNING: Command create_generated_clock -name {udp_clk_125m} -source [get_pins {u_clk_gen/u_pll_0/pll_inst.clkc[1]}] -master_clock {pll_inst_125M_1} -divide_by 1.000 -phase 0.000 -add [get_nets {udp_clk}] in D:/University/AL_Proj/anlu/anlu/source_code/constraints/UDP.sdc(10) fails.
+USR-8130 CRITICAL-WARNING: No clock match the pattern: u_clk_gen/u_pll_0/pll_inst.clkc\[0\].
+USR-8124 CRITICAL-WARNING: Rename_clock: please specify object list.
+USR-8159 CRITICAL-WARNING: Command rename_clock -name {pll_inst_125M_0} [get_clocks {u_clk_gen/u_pll_0/pll_inst.clkc[0]}] in D:/University/AL_Proj/anlu/anlu/source_code/constraints/UDP.sdc(5) fails.
+USR-8130 CRITICAL-WARNING: No clock match the pattern: u_clk_gen/u_pll_0/pll_inst.clkc\[1\].
+USR-8124 CRITICAL-WARNING: Rename_clock: please specify object list.
+USR-8159 CRITICAL-WARNING: Command rename_clock -name {pll_inst_125M_1} [get_clocks {u_clk_gen/u_pll_0/pll_inst.clkc[1]}] in D:/University/AL_Proj/anlu/anlu/source_code/constraints/UDP.sdc(6) fails.
 USR-8130 CRITICAL-WARNING: No clock match the pattern: u_clk_gen/u_pll_0/pll_inst.clkc\[3\].
 USR-8124 CRITICAL-WARNING: Rename_clock: please specify object list.
 USR-8159 CRITICAL-WARNING: Command rename_clock -name {pll_inst_25M} [get_clocks {u_clk_gen/u_pll_0/pll_inst.clkc[3]}] in D:/University/AL_Proj/anlu/anlu/source_code/constraints/UDP.sdc(8) fails.
+USR-8130 CRITICAL-WARNING: No clock match the pattern: udp_clk_125m.
+USR-8208 CRITICAL-WARNING: Clock group is empty.
+USR-8159 CRITICAL-WARNING: Command set_clock_groups -exclusive -group [get_clocks {udp_clk_125m}] in D:/University/AL_Proj/anlu/anlu/source_code/constraints/UDP.sdc(13) fails.
 SYN-1016 : Merged 659 instances.
-SYN-1001 : End Stage 1.5 | Optimize Design; Time: 3.416526s wall, 1.578125s user + 0.000000s system = 1.578125s CPU (46.2%); Memory(MB): used = 386, reserved = 370, peak = 386;
+SYN-1001 : End Stage 1.5 | Optimize Design; Time: 3.180521s wall, 1.640625s user + 0.000000s system = 1.640625s CPU (51.6%); Memory(MB): used = 354, reserved = 340, peak = 354;
 
-SYN-1079 : finish stage Optimize Design. Total instances: 13942, Total nets: 15661.
+SYN-1079 : finish stage Optimize Design. Total instances: 13944, Total nets: 15663.
 
 SYN-1001 : Stage 1.6 | Optimize Iteratively
 SYN-1018 : Transformed 4 mux instances.
@@ -1061,12 +1076,12 @@ SYN-1001 : Optimize 24 less-than instances
 SYN-5084 WARNING: Register "app_fdma_inst/rburst_len[0]" in ../../../../source_code/rtl/uiappfdma/uiappfdma.v(148) is described with both an asynchronous reset/set and an initialization value of the opposite polarity. Ignore the initialization value '0'
 SYN-5084 WARNING: Register "app_fdma_inst/wburst_len[0]" in ../../../../source_code/rtl/uiappfdma/uiappfdma.v(84) is described with both an asynchronous reset/set and an initialization value of the opposite polarity. Ignore the initialization value '0'
 SYN-1019 : Optimized 256 mux instances.
-SYN-2595 : bram inst: u6_tx_fifo/ramgen_l/inst is set to PDPW/SP from DP for resource saving
-SYN-2595 : bram inst: u6_tx_fifo/ramgen_u/inst is set to PDPW/SP from DP for resource saving
-SYN-2595 : bram inst: u7_rx_fifo/ramgen_l/inst is set to PDPW/SP from DP for resource saving
-SYN-2595 : bram inst: u7_rx_fifo/ramgen_u/inst is set to PDPW/SP from DP for resource saving
+SYN-2595 : bram inst: u_udp_top/u6_tx_fifo/ramgen_l/inst is set to PDPW/SP from DP for resource saving
+SYN-2595 : bram inst: u_udp_top/u6_tx_fifo/ramgen_u/inst is set to PDPW/SP from DP for resource saving
+SYN-2595 : bram inst: u_udp_top/u7_rx_fifo/ramgen_l/inst is set to PDPW/SP from DP for resource saving
+SYN-2595 : bram inst: u_udp_top/u7_rx_fifo/ramgen_u/inst is set to PDPW/SP from DP for resource saving
 SYN-1016 : Merged 12104 instances.
-SYN-1015 : Optimize round 1, 21688 better
+SYN-1015 : Optimize round 1, 21679 better
 SYN-1014 : Optimize round 2
 SYN-1044 : Optimized 12 inv instances.
 SYN-1017 : Remove 11 const input seq instances
@@ -1081,29 +1096,29 @@ SYN-1014 : Optimize round 1
 SYN-1017 : Remove 1 const input seq instances
 SYN-1020 : Optimized 181 distributor mux.
 SYN-1016 : Merged 937 instances.
-SYN-1015 : Optimize round 1, 1187 better
+SYN-1015 : Optimize round 1, 1196 better
 SYN-1014 : Optimize round 2
 SYN-1020 : Optimized 41 distributor mux.
 SYN-1016 : Merged 79 instances.
 SYN-1015 : Optimize round 2, 124 better
 SYN-1014 : Optimize round 3
 SYN-1015 : Optimize round 3, 0 better
-SYN-1001 : End Stage 1.6 | Optimize Iteratively; Time: 9.609647s wall, 2.796875s user + 0.015625s system = 2.812500s CPU (29.3%); Memory(MB): used = 124, reserved = 386, peak = 476;
+SYN-1001 : End Stage 1.6 | Optimize Iteratively; Time: 7.498002s wall, 4.296875s user + 0.078125s system = 4.375000s CPU (58.3%); Memory(MB): used = 351, reserved = 346, peak = 404;
 
-SYN-1079 : finish stage Optimize Iteratively. Total instances: 18920, Total nets: 20185.
+SYN-1079 : finish stage Optimize Iteratively. Total instances: 18921, Total nets: 20186.
 
 SYN-1001 : Stage 1.7 | Check Design
-SYN-1001 : End Stage 1.7 | Check Design; Time: 0.004406s wall, 0.000000s user + 0.000000s system = 0.000000s CPU (n/a%); Memory(MB): used = 124, reserved = 386, peak = 476;
+SYN-1001 : End Stage 1.7 | Check Design; Time: 0.002614s wall, 0.000000s user + 0.000000s system = 0.000000s CPU (n/a%); Memory(MB): used = 351, reserved = 346, peak = 404;
 
-SYN-1079 : finish stage Check Design. Total instances: 18920, Total nets: 20185.
+SYN-1079 : finish stage Check Design. Total instances: 18921, Total nets: 20186.
 
-SYN-1001 : End Stage 1 | Optimize RTL; Time: 14.274531s wall, 4.921875s user + 0.015625s system = 4.937500s CPU (34.6%); Memory(MB): used = 124, reserved = 386, peak = 476;
+SYN-1001 : End Stage 1 | Optimize RTL; Time: 11.923228s wall, 6.515625s user + 0.078125s system = 6.593750s CPU (55.3%); Memory(MB): used = 351, reserved = 346, peak = 404;
 
-SYN-1079 : finish stage Optimize RTL. Total instances: 18920, Total nets: 20185.
+SYN-1079 : finish stage Optimize RTL. Total instances: 18921, Total nets: 20186.
 
-RUN-1003 : finish command "optimize_rtl" in  14.283186s wall, 4.921875s user + 0.015625s system = 4.937500s CPU (34.6%)
+RUN-1003 : finish command "optimize_rtl" in  11.931451s wall, 6.515625s user + 0.078125s system = 6.593750s CPU (55.3%)
 
-RUN-1004 : used memory is 124 MB, reserved memory is 386 MB, peak memory is 476 MB
+RUN-1004 : used memory is 351 MB, reserved memory is 346 MB, peak memory is 404 MB
 RUN-1002 : start command "report_area -file UDP_EXAMPLE_rtl.area"
 RUN-1001 : standard
 ***Report Model: UDP_Example_Top Device: EG4S20BG256***
@@ -1115,7 +1130,7 @@ IO Statistics
   #inout                    1
 
 Gate Statistics
-#Basic gates            15092
+#Basic gates            15093
   #and                   3960
   #nand                     0
   #or                    4129
@@ -1123,7 +1138,7 @@ Gate Statistics
   #xor                    473
   #xnor                    12
   #buf                      0
-  #not                    698
+  #not                    699
   #bufif1                  33
   #MX21                   941
   #FADD                     0
@@ -1178,28 +1193,28 @@ RUN-1002 : start command "optimize_gate -packarea UDP_EXAMPLE_gate.area"
 RUN-1001 : Open license file D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/license/Anlogic.lic
 SYN-1001 : Stage 2 | Optimize Gate
 SYN-1001 : Stage 2.1 | Map Reg
-SYN-1001 : End Stage 2.1 | Map Reg; Time: 0.544651s wall, 0.234375s user + 0.000000s system = 0.234375s CPU (43.0%); Memory(MB): used = 167, reserved = 515, peak = 476;
+SYN-1001 : End Stage 2.1 | Map Reg; Time: 0.288556s wall, 0.218750s user + 0.000000s system = 0.218750s CPU (75.8%); Memory(MB): used = 368, reserved = 475, peak = 404;
 
-SYN-1079 : finish stage Map Reg. Total instances: 18920, Total nets: 20185.
+SYN-1079 : finish stage Map Reg. Total instances: 18921, Total nets: 20186.
 
 SYN-1001 : Stage 2.2 | Map IO
 SYN-2002 : EG_PHY_SDRAM_2M_32 instance sdram.
 SYN-2001 : Map 92 IOs to PADs of model 'UDP_Example_Top'
-SYN-1001 : End Stage 2.2 | Map IO; Time: 0.317995s wall, 0.140625s user + 0.000000s system = 0.140625s CPU (44.2%); Memory(MB): used = 169, reserved = 515, peak = 476;
+SYN-1001 : End Stage 2.2 | Map IO; Time: 0.171497s wall, 0.078125s user + 0.000000s system = 0.078125s CPU (45.6%); Memory(MB): used = 368, reserved = 475, peak = 404;
 
 SYN-1001 : Stage 2.3 | Map Macro
 RUN-1002 : start command "update_pll_param -module UDP_Example_Top"
-SYN-6577 WARNING: The clock signal "temac_clk" is added with the synthetic instruction (keep/mark_debug/dont_touch/max_fanout), which may create additional logic on this net
-SYN-6577 WARNING: The clock signal "udp_clk" is added with the synthetic instruction (keep/mark_debug/dont_touch/max_fanout), which may create additional logic on this net
 SYN-6577 WARNING: The clock signal "u2_ram/SDRAM_CLK" is added with the synthetic instruction (keep/mark_debug/dont_touch/max_fanout), which may create additional logic on this net
+SYN-6577 WARNING: The clock signal "u_udp_top/temac_clk" is added with the synthetic instruction (keep/mark_debug/dont_touch/max_fanout), which may create additional logic on this net
+SYN-6577 WARNING: The clock signal "u_udp_top/udp_clk" is added with the synthetic instruction (keep/mark_debug/dont_touch/max_fanout), which may create additional logic on this net
 SYN-2501 : Processed 0 LOGIC_BUF instances.
 SYN-2501 : 4 BUFG to GCLK
-SYN-6562 WARNING: The init value of "u2_udp_loopback/udp_packet_fifo/u_anlogic_soft_async_fifo/inst(../../../../source_code/rtl/ETH/udp_ip_protocol_stack_merge.enc.v(0))" will be ignored since gate eram_init is set to off
-SYN-6562 WARNING: The init value of "u3_udp_ip_protocol_stack/ip_layer/icmp_echo_data_fifo/u_anlogic_soft_async_fifo/inst(../../../../source_code/rtl/ETH/udp_ip_protocol_stack_merge.enc.v(0))" will be ignored since gate eram_init is set to off
-SYN-6562 WARNING: The init value of "u6_tx_fifo/ramgen_l/inst(../../../../source_code/rtl/ETH/RAMB16_S9_S9.v(45))" will be ignored since gate eram_init is set to off
-SYN-6562 WARNING: The init value of "u6_tx_fifo/ramgen_u/inst(../../../../source_code/rtl/ETH/RAMB16_S9_S9.v(45))" will be ignored since gate eram_init is set to off
-SYN-6562 WARNING: The init value of "u7_rx_fifo/ramgen_l/inst(../../../../source_code/rtl/ETH/RAMB16_S9_S9.v(45))" will be ignored since gate eram_init is set to off
-SYN-6562 WARNING: The init value of "u7_rx_fifo/ramgen_u/inst(../../../../source_code/rtl/ETH/RAMB16_S9_S9.v(45))" will be ignored since gate eram_init is set to off
+SYN-6562 WARNING: The init value of "u_udp_top/u2_udp_loopback/udp_packet_fifo/u_anlogic_soft_async_fifo/inst(../../../../source_code/rtl/ETH/udp_ip_protocol_stack_merge.enc.v(0))" will be ignored since gate eram_init is set to off
+SYN-6562 WARNING: The init value of "u_udp_top/u3_udp_ip_protocol_stack/ip_layer/icmp_echo_data_fifo/u_anlogic_soft_async_fifo/inst(../../../../source_code/rtl/ETH/udp_ip_protocol_stack_merge.enc.v(0))" will be ignored since gate eram_init is set to off
+SYN-6562 WARNING: The init value of "u_udp_top/u6_tx_fifo/ramgen_l/inst(../../../../source_code/rtl/ETH/RAMB16_S9_S9.v(45))" will be ignored since gate eram_init is set to off
+SYN-6562 WARNING: The init value of "u_udp_top/u6_tx_fifo/ramgen_u/inst(../../../../source_code/rtl/ETH/RAMB16_S9_S9.v(45))" will be ignored since gate eram_init is set to off
+SYN-6562 WARNING: The init value of "u_udp_top/u7_rx_fifo/ramgen_l/inst(../../../../source_code/rtl/ETH/RAMB16_S9_S9.v(45))" will be ignored since gate eram_init is set to off
+SYN-6562 WARNING: The init value of "u_udp_top/u7_rx_fifo/ramgen_u/inst(../../../../source_code/rtl/ETH/RAMB16_S9_S9.v(45))" will be ignored since gate eram_init is set to off
 SYN-2571 : Optimize after map_dsp, round 1
 SYN-1016 : Merged 8 instances.
 SYN-2571 : Optimize after map_dsp, round 1, 8 better
@@ -1207,7 +1222,7 @@ SYN-2571 : Optimize after map_dsp, round 2
 SYN-2571 : Optimize after map_dsp, round 2, 0 better
 SYN-1001 : Throwback 341 control mux instances
 SYN-1001 : Generate 14 bigger adders
-SYN-1001 : Optimize 37 adders
+SYN-1001 : Optimize 32 adders
 SYN-1001 : Optimize 3 less-than instances
 SYN-2501 : Optimize round 1
 SYN-1016 : Merged 118 instances.
@@ -1234,17 +1249,17 @@ SYN-5011 WARNING: Undriven pin: model "UDP_Example_Top" / inst "u2_ram/u2_wrrd/S
 SYN-5011 WARNING: Undriven pin: model "UDP_Example_Top" / inst "u2_ram/u2_wrrd/Sdr_rd_dout_reg[9]" in ../../../../source_code/rtl/uieg4d_dram/enc_file/sdr_wrrd.enc.v(0) / pin "clk"
 SYN-5011 Similar messages will be suppressed.
 SYN-5025 WARNING: Using 0 for all undriven pins and nets
-SYN-1001 : End Stage 2.3 | Map Macro; Time: 7.343655s wall, 2.531250s user + 0.046875s system = 2.578125s CPU (35.1%); Memory(MB): used = 347, reserved = 534, peak = 476;
+SYN-1001 : End Stage 2.3 | Map Macro; Time: 3.420081s wall, 1.953125s user + 0.000000s system = 1.953125s CPU (57.1%); Memory(MB): used = 389, reserved = 493, peak = 404;
 
-SYN-1079 : finish stage Map Macro. Total instances: 23447, Total nets: 24657.
+SYN-1079 : finish stage Map Macro. Total instances: 23448, Total nets: 24658.
 
 SYN-1001 : Stage 2.4 | Map Gate
 SYN-3001 : Collect 4438 PI 3089 PO (45 timing unconstrained) for mapping
-SYN-2581 : Mapping with K=5, #lut = 4726 (3.37), #lev = 7 (2.30), #crit_level = 0
+SYN-2581 : Mapping with K=5, #lut = 4857 (3.37), #lev = 7 (2.30), #crit_level = 0
 SYN-2551 : Post LUT mapping optimization.
-SYN-2581 : Mapping with K=5, #lut = 4738 (3.31), #lev = 6 (2.35), #crit_level = 0
-SYN-3001 : Logic optimization opt = 2.97 sec, map = 0.54 sec, post map opt = 17.50 sec.
-SYN-1001 : End Stage 2.4 | Map Gate; Time: 26.355200s wall, 12.171875s user + 0.078125s system = 12.250000s CPU (46.5%); Memory(MB): used = 382, reserved = 567, peak = 476;
+SYN-2581 : Mapping with K=5, #lut = 4685 (3.33), #lev = 7 (2.35), #crit_level = 0
+SYN-3001 : Logic optimization opt = 1.44 sec, map = 0.38 sec, post map opt = 11.05 sec.
+SYN-1001 : End Stage 2.4 | Map Gate; Time: 15.108007s wall, 8.296875s user + 0.015625s system = 8.312500s CPU (55.0%); Memory(MB): used = 414, reserved = 513, peak = 415;
 
 SYN-1001 : Packing model "UDP_Example_Top" ...
 SYN-4010 : Pack lib has 57 rtl pack models with 26 top pack blocks
@@ -1253,7 +1268,7 @@ SYN-1015 : Optimize round 1, 0 better
 SYN-4002 : Packing 4789 DFF/LATCH to SEQ ...
 SYN-4009 : Pack 23 carry chain into lslice
 SYN-4007 : Packing 409 adder to BLE ...
-SYN-4008 : Packed 409 adder and 128 SEQ to BLE.
+SYN-4008 : Packed 409 adder and 99 SEQ to BLE.
 SYN-4007 : Packing 0 gate4 to BLE ...
 SYN-4008 : Packed 0 gate4 and 0 SEQ to BLE.
 RUN-1002 : start command "report_qor -step gate -file gate.qor"
@@ -1263,15 +1278,15 @@ RUN-1002 : start command "start_timer"
 -----------------------------------------------------------
 | Timing                    |                             |
 |     Setup WNS             |        -5958                |
-|     Setup TNS             |      -352904                |
-|     Num of violated S-EP  |          438                |
+|     Setup TNS             |      -330575                |
+|     Num of violated S-EP  |          411                |
 |     Hold WNS              |          471                |
 |     Hold TNS              |            0                |
 |     Num of violated H-EP  |            0                |
 -----------------------------------------------------------
 | Utilization               |                             |
-|     #registers            |         4661                |
-|     #luts                 |         4739                |
+|     #registers            |         4690                |
+|     #luts                 |         4686                |
 |     #lut1                 |           58                |
 |     #lut1(~A)             |           57                |
 |     #slices               |          339                |
@@ -1290,7 +1305,7 @@ RUN-1002 : start command "start_timer"
 |     #max_fanout_keep      |            0                |
 |     #async_reg            |           27                |
 -----------------------------------------------------------
-| Top 10% datanet fanout#   |        42.19                |
+| Top 10% datanet fanout#   |        41.96                |
 | dff(single fanout)->dff   |          626                |
 | dff(single fanout)->dram  |            0                |
 -----------------------------------------------------------
@@ -1315,39 +1330,38 @@ Over-quota Path Details
 Note: Table only show top 5 paths for each clock group in default
 
 Logic Level Distribution
-------------------------------------------------------------------------------------------------------------------------------
-  Clock                               |  Period            |  0     |  1     |  2     |  3     |  4    |  5    |  6    |  7
-------------------------------------------------------------------------------------------------------------------------------
-  clk_in                              |  20.000ns (50MHz)  |  40    |  44    |  22    |  8     |  8    |  11   |  4    |  0
-  phy1_rgmii_rx_clk                   |  8.000ns (125MHz)  |  518   |  152   |  101   |  56    |  33   |  3    |  0    |  0
-  pll_inst_125M_0                     |  8.000ns (125MHz)  |  323   |  99    |  70    |  141   |  36   |  5    |  2    |  0
-  pll_inst_125M_1                     |  8.000ns (125MHz)  |  1076  |  1179  |  745   |  3268  |  405  |  408  |  619  |  46
-  u_PLL_HDMI_CLK/pll_inst.clkc[0]     |  16.000ns (62MHz)  |  89    |  15    |  39    |  14    |  32   |  43   |  5    |  0
-  u_PLL_HDMI_CLK/pll_inst.clkc[1]     |  3.200ns (312MHz)  |  43    |  27    |  0     |  0     |  0    |  0    |  0    |  0
-  u_clk/pll_inst.clkc[0]              |  6.666ns (150MHz)  |  824   |  387   |  244   |  166   |  93   |  4    |  1    |  0
-  u_clk/pll_inst.clkc[2]              |  6.666ns (150MHz)  |  16    |  32    |  0     |  0     |  0    |  0    |  0    |  0
-  u_clk_gen/u_pll_0/pll_inst.clkc[4]  |  8.000ns (125MHz)  |  2     |  0     |  0     |  0     |  0    |  0    |  0    |  0
-  udp_clk_125m                        |  8.000ns (125MHz)  |  0     |  0     |  0     |  0     |  0    |  0    |  0    |  0
-  Total                               |  NA                |  2931  |  1935  |  1221  |  3653  |  607  |  474  |  631  |  46
-------------------------------------------------------------------------------------------------------------------------------
-Note: The table count the worst 100000 paths, each endpoint count only one time.(11498 paths analyzed)
+----------------------------------------------------------------------------------------------------------------------------------------------
+  Clock                                         |  Period            |  0     |  1     |  2     |  3     |  4    |  5    |  6    |  7   |  8
+----------------------------------------------------------------------------------------------------------------------------------------------
+  clk_in                                        |  20.000ns (50MHz)  |  40    |  44    |  22    |  6     |  9    |  11   |  4    |  1   |  0
+  phy1_rgmii_rx_clk                             |  8.000ns (125MHz)  |  518   |  153   |  114   |  46    |  30   |  2    |  0    |  0   |  0
+  u_PLL_HDMI_CLK/pll_inst.clkc[0]               |  16.000ns (62MHz)  |  89    |  15    |  40    |  14    |  28   |  28   |  17   |  6   |  0
+  u_PLL_HDMI_CLK/pll_inst.clkc[1]               |  3.200ns (312MHz)  |  43    |  27    |  0     |  0     |  0    |  0    |  0    |  0   |  0
+  u_clk/pll_inst.clkc[0]                        |  6.666ns (150MHz)  |  824   |  397   |  247   |  164   |  102  |  5    |  0    |  0   |  0
+  u_clk/pll_inst.clkc[2]                        |  6.666ns (150MHz)  |  16    |  32    |  0     |  0     |  0    |  0    |  0    |  0   |  0
+  u_udp_top/u_clk_gen/u_pll_0/pll_inst.clkc[0]  |  8.000ns (125MHz)  |  323   |  100   |  73    |  139   |  34   |  5    |  2    |  0   |  0
+  u_udp_top/u_clk_gen/u_pll_0/pll_inst.clkc[1]  |  8.000ns (125MHz)  |  1076  |  1179  |  749   |  3227  |  396  |  576  |  495  |  46  |  2
+  u_udp_top/u_clk_gen/u_pll_0/pll_inst.clkc[4]  |  8.000ns (125MHz)  |  2     |  0     |  0     |  0     |  0    |  0    |  0    |  0   |  0
+  Total                                         |  NA                |  2931  |  1947  |  1245  |  3596  |  599  |  627  |  518  |  53  |  2
+----------------------------------------------------------------------------------------------------------------------------------------------
+Note: The table count the worst 100000 paths, each endpoint count only one time.(11518 paths analyzed)
 
 Hierarchical Rent Exponent Report
-+-------------------------------------------------------------------------------------------+
-|Inst                       |Model                   |Rent     |Cell     |Pin     |Term     |
-+-------------------------------------------------------------------------------------------+
-|top                        |UDP_Example_Top         |0.19     |10097    |40315   |24       |
-|  u3_udp_ip_protocol_stack |udp_ip_protocol_stack_4 |0.35     |5255     |21555   |79       |
-+-------------------------------------------------------------------------------------------+
++--------------------------------------------------------------------+
+|Inst        |Model           |Rent     |Cell     |Pin     |Term     |
++--------------------------------------------------------------------+
+|top         |UDP_Example_Top |0.19     |10073    |40271   |24       |
+|  u_udp_top |udp_top_6       |0.22     |7158     |29391   |29       |
++--------------------------------------------------------------------+
 Note: Cell represents total number of cells inside module; Pin represents total number of pins
       which have net connection inside module; Term represents total number of PIs and POs of module.
       Rent represents the relationship between number of terms and number of cells in module.
       A module with higher rent corresponds to highly connected logic and strong connectivity with others.
 Report gate stage QoR done.
 
-RUN-1003 : finish command "report_qor -step gate -file gate.qor" in  3.394611s wall, 2.078125s user + 0.000000s system = 2.078125s CPU (61.2%)
+RUN-1003 : finish command "report_qor -step gate -file gate.qor" in  1.387016s wall, 0.937500s user + 0.000000s system = 0.937500s CPU (67.6%)
 
-RUN-1004 : used memory is 380 MB, reserved memory is 565 MB, peak memory is 476 MB
+RUN-1004 : used memory is 413 MB, reserved memory is 512 MB, peak memory is 415 MB
 RUN-1002 : start command "report_area -file UDP_EXAMPLE_gate.area"
 RUN-1001 : standard
 ***Report Model: UDP_Example_Top Device: EG4S20BG256***
@@ -1359,15 +1373,15 @@ IO Statistics
   #inout                    1
 
 LUT Statistics
-#Total_luts              4739
-  #lut4                  4041
-  #lut5                   698
+#Total_luts              4686
+  #lut4                  3972
+  #lut5                   714
   #lut6                     0
   #lut5_mx41                0
   #lut4_alu1b               0
 
 Utilization Statistics
-#lut                     5417   out of  19600   27.64%
+#lut                     5364   out of  19600   27.37%
 #reg                     4789   out of  19600   24.43%
 #bram                      26   out of     64   40.62%
   #bram9k                  14
@@ -1381,21 +1395,18 @@ Utilization Statistics
 #pll                        3   out of      4   75.00%
 #gclk                       4   out of     16   25.00%
 
-SYN-1001 : End Stage 2 | Optimize Gate; Time: 39.749561s wall, 17.328125s user + 1.046875s system = 18.375000s CPU (46.2%); Memory(MB): used = 380, reserved = 565, peak = 476;
+SYN-1001 : End Stage 2 | Optimize Gate; Time: 21.130372s wall, 11.609375s user + 0.343750s system = 11.953125s CPU (56.6%); Memory(MB): used = 413, reserved = 512, peak = 415;
 
-RUN-1003 : finish command "optimize_gate -packarea UDP_EXAMPLE_gate.area" in  39.765354s wall, 17.328125s user + 1.046875s system = 18.375000s CPU (46.2%)
+RUN-1003 : finish command "optimize_gate -packarea UDP_EXAMPLE_gate.area" in  21.138023s wall, 11.609375s user + 0.343750s system = 11.953125s CPU (56.5%)
 
-RUN-1004 : used memory is 380 MB, reserved memory is 565 MB, peak memory is 476 MB
+RUN-1004 : used memory is 413 MB, reserved memory is 512 MB, peak memory is 415 MB
 RUN-1002 : start command "legalize_phy_inst"
 SYN-1001 : Stage 3 | Legalize Phy Inst
 SYN-1011 : Flatten model UDP_Example_Top
-SYN-1001 : End Stage 3 | Legalize Phy Inst; Time: 0.079664s wall, 0.031250s user + 0.000000s system = 0.031250s CPU (39.2%); Memory(MB): used = 380, reserved = 565, peak = 476;
+SYN-1001 : End Stage 3 | Legalize Phy Inst; Time: 0.022865s wall, 0.015625s user + 0.000000s system = 0.015625s CPU (68.3%); Memory(MB): used = 413, reserved = 512, peak = 415;
 
 RUN-1002 : start command "update_timing"
 RUN-1002 : start command "start_timer"
-RUN-1003 : finish command "update_timing" in  1.855539s wall, 1.031250s user + 0.000000s system = 1.031250s CPU (55.6%)
-
-RUN-1004 : used memory is 380 MB, reserved memory is 565 MB, peak memory is 476 MB
 RUN-1002 : start command "report_timing_status -file UDP_EXAMPLE_gate.ts"
 RUN-1002 : start command "report_timing_summary -file UDP_EXAMPLE_gate.timing"
 RUN-1002 : start command "flow_status -file flow.status"
@@ -1407,7 +1418,7 @@ Device           : EG4S20BG256
 Speed            : NA
 
 Timing Mode      : basic
-Setup            : WNS -5958ps  TNS  -352904ps  NUM_FEPS   438
+Setup            : WNS -5958ps  TNS  -330575ps  NUM_FEPS   411
 Hold             : WNS   471ps  TNS        0ps  NUM_FEPS     0
 
 Flow Statistics  :
@@ -1415,13 +1426,13 @@ RUN-1001 : Flow Statistics:
 RUN-1001 : --------------------------------------------------------------------------------------------------
 RUN-1001 :      command     |  #calls  |  wall time  |  cpu time(s)  |  used memory(mb)  |  peak memory(mb)  
 RUN-1001 : --------------------------------------------------------------------------------------------------
-RUN-1001 :   optimize_gate  |    1     |  39s(73%)   |    18(81%)    |        380        |        476        
-RUN-1001 :   optimize_rtl   |    1     |  14s(26%)   |    4(18%)     |        124        |        476        
+RUN-1001 :   optimize_gate  |    1     |  21s(65%)   |    11(64%)    |        413        |        415        
+RUN-1001 :   optimize_rtl   |    1     |  11s(34%)   |    6(35%)     |        351        |        404        
 RUN-1001 :   import_device  |    1     |   0s(0%)    |     0(0%)     |        82         |        82         
-RUN-1001 :     read_adc     |    1     |   0s(0%)    |     0(0%)     |        256        |        256        
-RUN-1001 :     read_sdc     |    2     |   0s(0%)    |     0(0%)     |        257        |        257        
+RUN-1001 :     read_adc     |    1     |   0s(0%)    |     0(0%)     |        254        |        254        
+RUN-1001 :     read_sdc     |    2     |   0s(0%)    |     0(0%)     |        255        |        255        
 RUN-1001 : --------------------------------------------------------------------------------------------------
-RUN-1001 :       total      |    6     |     53s     |      22       |        380        |        476        
+RUN-1001 :       total      |    6     |     32s     |      17       |        413        |        415        
 RUN-1001 : --------------------------------------------------------------------------------------------------
 RUN-1002 : start command "export_db UDP_EXAMPLE_gate.db"
 RUN-1001 : Exported flow parameters
@@ -1453,18 +1464,18 @@ Device           : EG4S20BG256
 Speed            : NA
 
 Timing Mode      : basic
-Setup            : WNS -5958ps  TNS  -352904ps  NUM_FEPS   438
+Setup            : WNS -5958ps  TNS  -330575ps  NUM_FEPS   411
 Hold             : WNS   471ps  TNS        0ps  NUM_FEPS     0
 
 RUN-1001 : Flow Statistics:
 RUN-1001 : --------------------------------------------------------------------------------------------------
 RUN-1001 :      command     |  #calls  |  wall time  |  cpu time(s)  |  used memory(mb)  |  peak memory(mb)  
 RUN-1001 : --------------------------------------------------------------------------------------------------
-RUN-1001 :   optimize_gate  |    1     |  39s(73%)   |    18(81%)    |        380        |        476        
-RUN-1001 :   optimize_rtl   |    1     |  14s(26%)   |    4(18%)     |        124        |        476        
+RUN-1001 :   optimize_gate  |    1     |  21s(65%)   |    11(64%)    |        413        |        415        
+RUN-1001 :   optimize_rtl   |    1     |  11s(34%)   |    6(35%)     |        351        |        404        
 RUN-1001 :   import_device  |    1     |   0s(0%)    |     0(0%)     |        82         |        82         
-RUN-1001 :     read_adc     |    1     |   0s(0%)    |     0(0%)     |        256        |        256        
-RUN-1001 :     read_sdc     |    2     |   0s(0%)    |     0(0%)     |        257        |        257        
+RUN-1001 :     read_adc     |    1     |   0s(0%)    |     0(0%)     |        254        |        254        
+RUN-1001 :     read_sdc     |    2     |   0s(0%)    |     0(0%)     |        255        |        255        
 RUN-1001 : --------------------------------------------------------------------------------------------------
-RUN-1001 :       total      |    6     |     53s     |      22       |        380        |        476        
+RUN-1001 :       total      |    6     |     32s     |      17       |        413        |        415        
 RUN-1001 : --------------------------------------------------------------------------------------------------

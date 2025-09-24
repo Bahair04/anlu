@@ -331,6 +331,14 @@
                     <Attr Name="CompileOrder" Val="60"/>
                 </FileInfo>
             </File>
+            <File Path="../../source_code/rtl/ETH/udp_top.v">
+                <FileInfo>
+                    <Attr Name="UsedInSyn" Val="true"/>
+                    <Attr Name="UsedInP&R" Val="true"/>
+                    <Attr Name="BelongTo" Val="design_1"/>
+                    <Attr Name="CompileOrder" Val="61"/>
+                </FileInfo>
+            </File>
         </Verilog>
         <VHDL>
             <File Path="../../source_code/rtl/HDMI/hdmi_tx.vhd">
