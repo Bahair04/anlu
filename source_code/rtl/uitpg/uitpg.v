@@ -8,7 +8,8 @@ module uitpg
     output  wire                O_tpg_vs, //场同步输出
     output  wire                O_tpg_hs, //行同步输出
     output  wire                O_tpg_de, //视频数据有效输出
-    output  wire    [23 : 0]    O_tpg_data //有效测试数据
+    output  wire    [23 : 0]    O_tpg_data, //有效测试数据
+    output  wire    [3 : 0]     O_dis_mode
 );
 
 reg                     tpg_vs_r = 1'b0; //对 vs 信号寄存
@@ -19,7 +20,7 @@ reg     [10 : 0]        dis_mode = 11'd0;//显示模式寄存器
 reg     [7  : 0]        r_reg = 8'd0; //红寄存器
 reg     [7  : 0]        g_reg = 8'd0; //绿寄存器
 reg     [7  : 0]        b_reg = 8'd0; //蓝寄存器
-
+assign O_dis_mode = dis_mode[7:4];
 always @(posedge I_tpg_clk) begin
     tpg_vs_r <= I_tpg_vs; //对 vs 信号寄存一次
     tpg_hs_r <= I_tpg_hs; //对 hs 信号寄存一次

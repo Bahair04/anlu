@@ -102,9 +102,9 @@ wire                                vtc2_de; // 视频区域有效信号
 //*------------------------------------------------------------
 //* TPG测试数据
 //*------------------------------------------------------------
-wire                                O_tpg_vs; // TPG测试帧同步信号
-wire                                O_tpg_hs; // TPG测试行同步信号
-wire                                O_tpg_de; // TPG测试数据流有效信号
+wire                                O_tpg_vs1, O_tpg_vs2, O_tpg_vs3, O_tpg_vs4; // TPG测试帧同步信号
+wire                                O_tpg_hs1, O_tpg_hs2, O_tpg_hs3, O_tpg_hs4; // TPG测试行同步信号
+wire                                O_tpg_de1, O_tpg_de2, O_tpg_de3, O_tpg_de4; // TPG测试数据流有效信号
 wire    [23 : 0]                    O_tpg_data1; // TPG测试数据
 wire    [23 : 0]                    O_tpg_data2; // TPG测试数据
 wire    [23 : 0]                    O_tpg_data3; // TPG测试数据
@@ -208,6 +208,7 @@ assign cmos_pwdn = 1'b0;
 //*------------------------------------------------------------
 //* TPG
 //*------------------------------------------------------------
+wire    [3 : 0]        O_dis_mode;
 // TPG测试数据
 uitpg u_uitpg_1(
     .I_tpg_clk(vid_clk),
@@ -215,10 +216,11 @@ uitpg u_uitpg_1(
     .I_tpg_vs(vid_vs),
     .I_tpg_hs(vid_hs),
     .I_tpg_de(vid_de),
-    .O_tpg_vs(O_tpg_vs),
-    .O_tpg_hs(O_tpg_hs),
-    .O_tpg_de(O_tpg_de),
-    .O_tpg_data(O_tpg_data1)
+    .O_tpg_vs(O_tpg_vs1),
+    .O_tpg_hs(O_tpg_hs1),
+    .O_tpg_de(O_tpg_de1),
+    .O_tpg_data(O_tpg_data1),
+    .O_dis_mode(O_dis_mode)
 );
 uitpg_static u_uitpg_2(
     .I_tpg_clk(vid_clk),
@@ -226,9 +228,9 @@ uitpg_static u_uitpg_2(
     .I_tpg_vs(vid_vs),
     .I_tpg_hs(vid_hs),
     .I_tpg_de(vid_de),
-    .O_tpg_vs(O_tpg_vs),
-    .O_tpg_hs(O_tpg_hs),
-    .O_tpg_de(O_tpg_de),
+    .O_tpg_vs(O_tpg_vs2),
+    .O_tpg_hs(O_tpg_hs2),
+    .O_tpg_de(O_tpg_de2),
     .O_tpg_data(O_tpg_data2),
     .dis_mode('d12)
 );
@@ -238,22 +240,23 @@ uitpg_static u_uitpg_3(
     .I_tpg_vs(vid_vs),
     .I_tpg_hs(vid_hs),
     .I_tpg_de(vid_de),
-    .O_tpg_vs(O_tpg_vs),
-    .O_tpg_hs(O_tpg_hs),
-    .O_tpg_de(O_tpg_de),
+    .O_tpg_vs(O_tpg_vs3),
+    .O_tpg_hs(O_tpg_hs3),
+    .O_tpg_de(O_tpg_de3),
     .O_tpg_data(O_tpg_data3),
-    .dis_mode('d13)
+    .dis_mode(O_dis_mode+1)
 );
-uitpg u_uitpg_4(
+uitpg_static u_uitpg_4(
     .I_tpg_clk(vid_clk),
     .I_tpg_rstn(vtc_pll_lock),
     .I_tpg_vs(vid_vs),
     .I_tpg_hs(vid_hs),
     .I_tpg_de(vid_de),
-    .O_tpg_vs(O_tpg_vs),
-    .O_tpg_hs(O_tpg_hs),
-    .O_tpg_de(O_tpg_de),
-    .O_tpg_data(O_tpg_data4)
+    .O_tpg_vs(O_tpg_vs4),
+    .O_tpg_hs(O_tpg_hs4),
+    .O_tpg_de(O_tpg_de4),
+    .O_tpg_data(O_tpg_data4),
+    .dis_mode(O_dis_mode+2)
 );
 //*------------------------------------------------------------
 //* SDRAM
@@ -309,14 +312,31 @@ u_four_channel_video_splicer(
 	.vid_vs2       	( cmos_vs_o        ),
 	.vid_de2       	( cmos_de_o        ),
 	.vid_data2     	( cmos_rgb_o      ),
-	.vid_clk3      	( cmos_pclk       ),
-	.vid_vs3       	( cmos_vs_o        ),
-	.vid_de3       	( cmos_de_o        ),
-	.vid_data3     	( cmos_rgb_o      ),
-	.vid_clk4      	( cmos_pclk       ),
-	.vid_vs4       	( cmos_vs_o        ),
-	.vid_de4       	( cmos_de_o        ),
-	.vid_data4     	( cmos_rgb_o      ),
+	// .vid_clk3      	( cmos_pclk       ),
+	// .vid_vs3       	( cmos_vs_o        ),
+	// .vid_de3       	( cmos_de_o        ),
+	// .vid_data3     	( cmos_rgb_o      ),
+	// .vid_clk4      	( cmos_pclk       ),
+	// .vid_vs4       	( cmos_vs_o        ),
+	// .vid_de4       	( cmos_de_o        ),
+	// .vid_data4     	( cmos_rgb_o      ),
+
+	// .vid_clk1      	( vid_clk       ),
+	// .vid_vs1       	( O_tpg_vs1        ),
+	// .vid_de1       	( O_tpg_de1        ),
+	// .vid_data1     	( data_565_1      ),
+	// .vid_clk2      	( vid_clk       ),
+	// .vid_vs2       	( O_tpg_vs2        ),
+	// .vid_de2       	( O_tpg_de2        ),
+	// .vid_data2     	( data_565_2      ),
+	.vid_clk3      	( vid_clk       ),
+	.vid_vs3       	( O_tpg_vs3        ),
+	.vid_de3       	( O_tpg_de3        ),
+	.vid_data3     	( data_565_3      ),
+	.vid_clk4      	( vid_clk       ),
+	.vid_vs4       	( O_tpg_vs4        ),
+	.vid_de4       	( O_tpg_de4        ),
+	.vid_data4     	( data_565_4      ),
 
 	.vid_clk       	( vid_clk        ),
 	.vid_vs        	( vid_vs         ),
@@ -473,8 +493,8 @@ uihdmitx#(
     .FAMILY("EG4")			
 ) uihdmitx_inst(
     .RSTn_i(vtc_pll_lock),
-    .HS_i(O_tpg_hs),
-    .VS_i(O_tpg_vs),
+    .HS_i(vid_hs),
+    .VS_i(vid_vs),
     .DE_i(vid_de),
     .RGB_i(vtc2_de ? data_888 : 24'h000000),
     .PCLKX1_i(hdmi_clk_1x),

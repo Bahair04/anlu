@@ -113,21 +113,21 @@ always@(posedge ui_clk or negedge ui_rstn)begin
             W_1:begin
                 if (fdma_wbusy_fall) begin
                     state<=IDLE;
-                    grant<='d1;
+                    grant<='d0;
                 end 
                 else state<=state;
             end
             W_2:begin
                 if (fdma_wbusy_fall) begin
                     state<=IDLE;
-                    grant<='d2;
+                    grant<='d0;
                 end 
                 else state<=state;
             end
             W_3:begin
                 if (fdma_wbusy_fall) begin
                     state<=IDLE;
-                    grant<='d3;
+                    grant<='d0;
                 end 
                 else state<=state;
             end

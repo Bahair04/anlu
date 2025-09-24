@@ -259,10 +259,10 @@ uidbuf #(
 u_uidbuf_3(
     .ui_clk       	(fdma_clk0     ),
     .ui_rstn      	(sdr_init_done ),
-    .W_wclk_i     	(vid_clk3   ),
-    .W_FS_i       	(vid_vs3    ),
-    .W_wren_i     	(vid_de3    ),
-    .W_data_i     	(vid_data3  ),
+    .W_wclk_i     	(ds_vid_clk3   ),
+    .W_FS_i       	(ds_vid_vs3    ),
+    .W_wren_i     	(ds_vid_de3    ),
+    .W_data_i     	(ds_vid_data3  ),
     .W_sync_cnt_o 	(W_sync_cnt_o3 ),
     .W_buf_i      	(W_sync_cnt_o3 ),
 
@@ -300,10 +300,10 @@ uidbuf #(
 u_uidbuf_4(
     .ui_clk       	(fdma_clk0     ),
     .ui_rstn      	(sdr_init_done ),
-    .W_wclk_i     	(vid_clk4   ),
-    .W_FS_i       	(vid_vs4    ),
-    .W_wren_i     	(vid_de4    ),
-    .W_data_i     	(vid_data4  ),
+    .W_wclk_i     	(ds_vid_clk4   ),
+    .W_FS_i       	(ds_vid_vs4    ),
+    .W_wren_i     	(ds_vid_de4    ),
+    .W_data_i     	(ds_vid_data4  ),
     .W_sync_cnt_o 	(W_sync_cnt_o4 ),
     .W_buf_i      	(W_sync_cnt_o4 ),
 

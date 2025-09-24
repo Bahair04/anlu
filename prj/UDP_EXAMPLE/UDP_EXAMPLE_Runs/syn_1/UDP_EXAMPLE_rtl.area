@@ -8,37 +8,37 @@ IO Statistics
   #inout                    1
 
 Gate Statistics
-#Basic gates             2640
-  #and                    106
+#Basic gates             2958
+  #and                    111
   #nand                     0
-  #or                     563
+  #or                     567
   #nor                      0
-  #xor                      1
+  #xor                      2
   #xnor                    12
   #buf                      0
-  #not                    272
+  #not                    284
   #bufif1                  33
-  #MX21                   337
+  #MX21                   526
   #FADD                     0
-  #DFF                   1316
+  #DFF                   1423
   #LATCH                    0
-#MACRO_ADD                154
-#MACRO_EQ                  51
-#MACRO_MUX                855
+#MACRO_ADD                158
+#MACRO_EQ                  61
+#MACRO_MUX                851
 #MACRO_OTHERS              11
 
 Report Hierarchy Area:
 +--------------------------------------------------------------------------------------+
 |Instance                          |Module                     |gates  |seq    |macros |
 +--------------------------------------------------------------------------------------+
-|top                               |UDP_Example_Top            |1324   |1316   |216    |
+|top                               |UDP_Example_Top            |1535   |1423   |230    |
 |  app_fdma_inst                   |app_fdma                   |75     |207    |19     |
 |  u2_ram                          |sdr_as_ram                 |99     |519    |6      |
 |    u1_init_ref                   |sdr_init_ref               |19     |81     |1      |
 |    u2_wrrd                       |sdr_wrrd                   |80     |438    |5      |
 |  u_PLL_HDMI_CLK                  |PLL_HDMI_CLK               |0      |0      |1      |
 |  u_clk                           |fdma_pll                   |0      |0      |1      |
-|  u_four_channel_video_splicer    |four_channel_video_splicer |619    |260    |67     |
+|  u_four_channel_video_splicer    |four_channel_video_splicer |627    |303    |70     |
 |    u_uidbuf_1                    |uidbuf                     |43     |92     |25     |
 |      FDMA_READ$fs_cap_R0         |fs_cap                     |0      |6      |1      |
 |      FDMA_WRITE_ENABLE$fs_cap_W0 |fs_cap                     |0      |6      |1      |
@@ -48,15 +48,20 @@ Report Hierarchy Area:
 |      FDMA_WRITE_ENABLE$fs_cap_W0 |fs_cap                     |0      |6      |1      |
 |    u_uidbuf_4                    |uidbuf                     |79     |47     |14     |
 |      FDMA_WRITE_ENABLE$fs_cap_W0 |fs_cap                     |0      |6      |1      |
-|    u_uidbufw_interconnect        |uidbufw_interconnect       |417    |27     |0      |
+|    u_uidbufw_interconnect        |uidbufw_interconnect       |419    |25     |0      |
+|    u_uidown_sample3              |uidown_sample              |6      |29     |3      |
 |    uisetvbuf_i                   |uisetvbuf                  |1      |0      |1      |
+|    u_uidown_sample4              |uidown_sample              |0      |16     |0      |
 |  u_uicfg5640                     |uicfg5640                  |351    |81     |16     |
 |    ui5640reg_inst                |ui5640reg                  |243    |0      |0      |
 |    uii2c_inst                    |uii2c                      |64     |34     |13     |
+|  u_uitpg_1                       |uitpg                      |5      |9      |1      |
+|  u_uitpg_3                       |uitpg_static               |100    |41     |10     |
+|  u_uitpg_4                       |uitpg_static               |98     |16     |0      |
 |  uiSensorRGB565_inst             |uiSensorRGB565             |10     |43     |3      |
-|  uihdmitx_inst                   |uihdmitx                   |129    |176    |91     |
-|    Inst_DVITransmitter           |DVITransmitter             |129    |176    |91     |
-|      Inst_TMDSEncoder_blue       |TMDSEncoder                |45     |44     |29     |
+|  uihdmitx_inst                   |uihdmitx                   |129    |174    |91     |
+|    Inst_DVITransmitter           |DVITransmitter             |129    |174    |91     |
+|      Inst_TMDSEncoder_blue       |TMDSEncoder                |45     |42     |29     |
 |      Inst_TMDSEncoder_green      |TMDSEncoder                |40     |39     |29     |
 |      Inst_TMDSEncoder_red        |TMDSEncoder                |40     |38     |29     |
 |      Inst_blue_serializer_10_1   |Serial_N_1_lvds_dat        |2      |20     |1      |

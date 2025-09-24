@@ -3,24 +3,24 @@
 -----------------------------------------------------------
 | Timing                    |                             |
 |     Setup WNS             |        -5958                |
-|     Setup TNS             |      -318611                |
-|     Num of violated S-EP  |          114                |
-|     Hold WNS              |          556                |
+|     Setup TNS             |      -421861                |
+|     Num of violated S-EP  |          193                |
+|     Hold WNS              |          471                |
 |     Hold TNS              |            0                |
 |     Num of violated H-EP  |            0                |
 -----------------------------------------------------------
 | Utilization               |                             |
-|     #registers            |         1217                |
-|     #luts                 |         1276                |
-|     #lut1                 |           37                |
-|     #lut1(~A)             |           36                |
-|     #slices               |          107                |
-|     slices percentage     |        1.09%                |
+|     #registers            |         1313                |
+|     #luts                 |         1423                |
+|     #lut1                 |           40                |
+|     #lut1(~A)             |           39                |
+|     #slices               |          110                |
+|     slices percentage     |        1.12%                |
 |     #RAMs                 |           12                |
 |     #DSPs                 |            0                |
 |     #f7mux                |        0.00%                |
-|     #MACROs               |           15                |
-|     #insts in MACRO       |          107                |
+|     #MACROs               |           16                |
+|     #insts in MACRO       |          110                |
 -----------------------------------------------------------
 | kept_net                  |                             |
 |     #syn_keep             |           66                |
@@ -30,13 +30,13 @@
 |     #max_fanout_keep      |            0                |
 |     #async_reg            |           27                |
 -----------------------------------------------------------
-| Top 10% datanet fanout#   |        40.23                |
-| dff(single fanout)->dff   |          341                |
+| Top 10% datanet fanout#   |        41.36                |
+| dff(single fanout)->dff   |          370                |
 | dff(single fanout)->dram  |            0                |
 -----------------------------------------------------------
 | Over-quota path num*      |                             |
-|     u_clk/pl...           |            1                |
-|     Total                 |            1                |
+|     u_clk/pl...           |            3                |
+|     Total                 |            3                |
 -----------------------------------------------------------
 | Rent**                    |                             |
 -----------------------------------------------------------
@@ -51,6 +51,8 @@ Over-quota Path Details
           Clock           |  Index  |  Budget(Period)  |  Level(Quota)  |  Cell Type List  |        Reason        |  Slack  
 ----------------------------------------------------------------------------------------------------------------------------
   u_clk/pll_inst.clkc[0]  |    1    |    680(6666)     |      1(1)      |  FIFO,LUT5,SEQ   |  large launch delay  |  -1102  
+                          |    2    |    680(6666)     |      1(1)      |  FIFO,LUT5,SEQ   |  large launch delay  |  -1102  
+                          |    3    |    680(6666)     |      1(1)      |  FIFO,LUT5,SEQ   |  large launch delay  |  -1102  
 ----------------------------------------------------------------------------------------------------------------------------
 Note: Table only show top 5 paths for each clock group in default
 
@@ -58,19 +60,19 @@ Logic Level Distribution
 ---------------------------------------------------------------------------------------------------------------------
   Clock                            |  Period            |  0     |  1    |  2    |  3    |  4    |  5   |  6   |  7
 ---------------------------------------------------------------------------------------------------------------------
-  clk_in                           |  20.000ns (50MHz)  |  40    |  44   |  21   |  8    |  8    |  12  |  2   |  2
+  clk_in                           |  20.000ns (50MHz)  |  40    |  44   |  21   |  6    |  13   |  9   |  3   |  1
   phy1_rgmii_rx_clk                |  8.000ns (125MHz)  |  0     |  0    |  0    |  0    |  0    |  0   |  0   |  0
-  u_PLL_HDMI_CLK/pll_inst.clkc[0]  |  16.000ns (62MHz)  |  89    |  18   |  36   |  13   |  23   |  20  |  31  |  7
+  u_PLL_HDMI_CLK/pll_inst.clkc[0]  |  16.000ns (62MHz)  |  190   |  81   |  77   |  21   |  52   |  29  |  28  |  2
   u_PLL_HDMI_CLK/pll_inst.clkc[1]  |  3.200ns (312MHz)  |  43    |  27   |  0    |  0    |  0    |  0   |  0   |  0
-  u_clk/pll_inst.clkc[0]           |  6.666ns (150MHz)  |  824   |  385  |  246  |  165  |  94   |  4   |  1   |  0
+  u_clk/pll_inst.clkc[0]           |  6.666ns (150MHz)  |  826   |  389  |  248  |  159  |  94   |  3   |  0   |  0
   u_clk/pll_inst.clkc[2]           |  6.666ns (150MHz)  |  16    |  32   |  0    |  0    |  0    |  0   |  0   |  0
-  Total                            |  NA                |  1012  |  506  |  303  |  186  |  125  |  36  |  34  |  9
+  Total                            |  NA                |  1115  |  573  |  346  |  186  |  159  |  41  |  31  |  3
 ---------------------------------------------------------------------------------------------------------------------
 Hierarchical Rent Exponent Report
 +-----------------------------------------------------------------+
 |Inst     |Model           |Rent     |Cell     |Pin     |Term     |
 +-----------------------------------------------------------------+
-|top      |UDP_Example_Top |0.20     |2883     |10728   |18       |
+|top      |UDP_Example_Top |0.19     |3129     |11762   |18       |
 +-----------------------------------------------------------------+
 Note: Cell represents total number of cells inside module; Pin represents total number of pins
       which have net connection inside module; Term represents total number of PIs and POs of module.
