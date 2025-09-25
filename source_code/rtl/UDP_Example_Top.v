@@ -515,6 +515,42 @@ assign HDMI_D0_N = O_HDMI_TX_P[0];
 //* ETH UDP
 //*------------------------------------------------------------
 
+//------------------------------------------------------------
+//udp_loopback
+//------------------------------------------------------------
+wire                        udp_clk;
+wire                        reset;
+wire                        app_rx_data_valid;
+wire    [7 : 0]             app_rx_data;       
+wire    [15 : 0]            app_rx_data_length;
+
+wire                        udp_tx_ready;
+wire                        app_tx_ack;
+wire                        app_tx_data_request;
+wire                        app_tx_data_valid; 
+wire    [7 : 0]             app_tx_data;       
+wire    [15 : 0]            udp_data_length;
+udp_loopback#(
+    .DEVICE("EG4")
+)
+u2_udp_loopback
+(
+    .app_rx_clk                 (udp_clk                ),
+    .app_tx_clk                 (udp_clk                ),
+    .reset                      (reset                  ),
+
+    .app_rx_data                (app_rx_data            ),
+    .app_rx_data_valid          (app_rx_data_valid      ),
+    .app_rx_data_length         (app_rx_data_length     ),
+    
+    .udp_tx_ready               (udp_tx_ready           ),
+    .app_tx_ack                 (app_tx_ack             ),
+    .app_tx_data                (app_tx_data            ),
+    .app_tx_data_request        (app_tx_data_request    ),
+    .app_tx_data_valid          (app_tx_data_valid      ),
+    .udp_data_length            (udp_data_length        )   
+);
+
 udp_top #(
     .DEVICE             	("EG4"                            ),
     .LOCAL_UDP_PORT_NUM 	(16'h0001                         ),
@@ -530,7 +566,21 @@ u_udp_top(
     .phy1_rgmii_tx_clk  	(phy1_rgmii_tx_clk   ),
     .phy1_rgmii_rx_data 	(phy1_rgmii_rx_data  ),
     .phy1_rgmii_rx_ctl  	(phy1_rgmii_rx_ctl   ),
-    .phy1_rgmii_rx_clk  	(phy1_rgmii_rx_clk   )
+    .phy1_rgmii_rx_clk  	(phy1_rgmii_rx_clk   ),
+
+    .app_rx_data_valid      (app_rx_data_valid   ), 
+    .app_rx_data            (app_rx_data         ),       
+    .app_rx_data_length     (app_rx_data_length  ),
+
+    .udp_tx_ready           (udp_tx_ready        ),
+    .app_tx_ack             (app_tx_ack          ),
+    .app_tx_data_request    (app_tx_data_request ),
+    .app_tx_data_valid      (app_tx_data_valid   ), 
+    .app_tx_data            (app_tx_data         ),       
+    .udp_data_length        (udp_data_length     ),
+
+    .o_udp_clk              (udp_clk                    ),
+    .o_reset                (reset)
 );
 
 endmodule

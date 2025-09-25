@@ -4,7 +4,7 @@
    Executable = D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/bin/run.exe
    Built at =   16:32:07 Jun 12 2025
    Run by =     1
-   Run Date =   Thu Sep 25 10:01:21 2025
+   Run Date =   Thu Sep 25 10:31:08 2025
 
    Run on =     LAPTOP-EUGMKLPQ
 ============================================================
@@ -21,7 +21,6 @@ ARC-1001 :        tdi/tms/tck/tdo       |   C12/A15/C14/E14    |  dedicate
 ARC-1001 : ------------------------------------------------------------------
 ARC-1004 : Device setting, marked 5 dedicate IOs in total.
 RUN-1002 : start command "open_project UDP_EXAMPLE.prj"
-PRJ-7001 CRITICAL-WARNING: ../../../../source_code/rtl/UDP_RX/udp_rx_buf_tb.v: Can't find this file, try to add this file again.
 RUN-1002 : start command "commit_param -step design"
 RUN-1001 : Print Global Property
 RUN-1001 : --------------------------------------------------------
@@ -348,16 +347,6 @@ HDL-1007 : elaborate **(**) in ../../../../source_code/rtl/HDMI/enc_file/Seriali
 HDL-1007 : elaborate EG_LOGIC_ODDR(1,6)(rtl) in D:\Anlogic\TD_6.2.1_Engineer_6.2.168.116\arch/eagle_macro.vhd(1399)
 HDL-1007 : elaborate **(**) in ../../../../source_code/rtl/HDMI/enc_file/SerializerN_1_lvds_dat.enc.vhd(14)
 HDL-1007 : back to vlog to elaborate in ../../../../source_code/rtl/UDP_Example_Top.v(492)
-HDL-1007 : port 'tri_speed' remains unconnected for this instance in ../../../../source_code/rtl/ETH/udp_top.v(240)
-HDL-1007 : port 'mdio_o' remains unconnected for this instance in ../../../../source_code/rtl/ETH/udp_top.v(240)
-HDL-1007 : port 'mdio_oen' remains unconnected for this instance in ../../../../source_code/rtl/ETH/udp_top.v(240)
-HDL-1007 : port 'mdio_clk' remains unconnected for this instance in ../../../../source_code/rtl/ETH/udp_top.v(240)
-HDL-1007 : elaborate module udp_top in ../../../../source_code/rtl/ETH/udp_top.v(8)
-HDL-1007 : elaborate module clk_gen_rst_gen in ../../../../source_code/rtl/ETH/clk_gen_rst_gen.v(48)
-HDL-1007 : elaborate module pll_gen in ../../al_ip/pll_gen.v(26)
-HDL-1007 : elaborate module EG_PHY_PLL(FIN="50.000000",REFCLK_DIV=2,FBCLK_DIV=5,CLKC0_DIV=8,CLKC1_DIV=8,CLKC2_DIV=80,CLKC3_DIV=40,CLKC4_DIV=8,CLKC0_ENABLE="ENABLE",CLKC1_ENABLE="ENABLE",CLKC2_ENABLE="ENABLE",CLKC3_ENABLE="ENABLE",CLKC4_ENABLE="ENABLE",FEEDBK_PATH="CLKC0_EXT",STDBY_ENABLE="DISABLE",CLKC0_CPHASE=7,CLKC1_CPHASE=7,CLKC2_CPHASE=79,CLKC3_CPHASE=39,GMC_GAIN=2,ICP_CURRENT=9,KVCO=2,LPF_CAPACITOR=1,LPF_RESISTOR=8,SYNC_ENABLE="DISABLE") in D:\Anlogic\TD_6.2.1_Engineer_6.2.168.116\arch/eagle_macro.v(889)
-HDL-1007 : elaborate module div_clk_gen in ../../../../source_code/rtl/ETH/div_clk_gen.v(31)
-HDL-1007 : elaborate module udp_clk_gen in ../../../../source_code/rtl/ETH/temac_clk_gen.v(30)
 HDL-1007 : port 'afull' remains unconnected for this instance in ../../../../source_code/rtl/ETH/udp_loopback.v(75)
 HDL-1007 : port 'aempty' remains unconnected for this instance in ../../../../source_code/rtl/ETH/udp_loopback.v(75)
 HDL-1007 : elaborate module udp_loopback in ../../../../source_code/rtl/ETH/udp_loopback.v(44)
@@ -368,6 +357,16 @@ HDL-5007 WARNING: actual bit length ** differs from formal bit length *** for po
 HDL-5007 WARNING: actual bit length ** differs from formal bit length *** for port '**' in ../../../../source_code/rtl/ETH/udp_ip_protocol_stack_merge.enc.v(2671)
 HDL-1007 : elaborate module ** in ../../../../source_code/rtl/ETH/udp_ip_protocol_stack_merge.enc.v(3068)
 HDL-5007 WARNING: actual bit length 12 differs from formal bit length 13 for port 'rdusedw' in ../../../../source_code/rtl/ETH/udp_loopback.v(96)
+HDL-1007 : port 'tri_speed' remains unconnected for this instance in ../../../../source_code/rtl/ETH/udp_top.v(221)
+HDL-1007 : port 'mdio_o' remains unconnected for this instance in ../../../../source_code/rtl/ETH/udp_top.v(221)
+HDL-1007 : port 'mdio_oen' remains unconnected for this instance in ../../../../source_code/rtl/ETH/udp_top.v(221)
+HDL-1007 : port 'mdio_clk' remains unconnected for this instance in ../../../../source_code/rtl/ETH/udp_top.v(221)
+HDL-1007 : elaborate module udp_top in ../../../../source_code/rtl/ETH/udp_top.v(8)
+HDL-1007 : elaborate module clk_gen_rst_gen in ../../../../source_code/rtl/ETH/clk_gen_rst_gen.v(48)
+HDL-1007 : elaborate module pll_gen in ../../al_ip/pll_gen.v(26)
+HDL-1007 : elaborate module EG_PHY_PLL(FIN="50.000000",REFCLK_DIV=2,FBCLK_DIV=5,CLKC0_DIV=8,CLKC1_DIV=8,CLKC2_DIV=80,CLKC3_DIV=40,CLKC4_DIV=8,CLKC0_ENABLE="ENABLE",CLKC1_ENABLE="ENABLE",CLKC2_ENABLE="ENABLE",CLKC3_ENABLE="ENABLE",CLKC4_ENABLE="ENABLE",FEEDBK_PATH="CLKC0_EXT",STDBY_ENABLE="DISABLE",CLKC0_CPHASE=7,CLKC1_CPHASE=7,CLKC2_CPHASE=79,CLKC3_CPHASE=39,GMC_GAIN=2,ICP_CURRENT=9,KVCO=2,LPF_CAPACITOR=1,LPF_RESISTOR=8,SYNC_ENABLE="DISABLE") in D:\Anlogic\TD_6.2.1_Engineer_6.2.168.116\arch/eagle_macro.v(889)
+HDL-1007 : elaborate module div_clk_gen in ../../../../source_code/rtl/ETH/div_clk_gen.v(31)
+HDL-1007 : elaborate module udp_clk_gen in ../../../../source_code/rtl/ETH/temac_clk_gen.v(30)
 HDL-1007 : port '**' remains unconnected for this instance in ../../../../source_code/rtl/ETH/udp_ip_protocol_stack_merge.enc.v(284)
 HDL-1007 : port '**' remains unconnected for this instance in ../../../../source_code/rtl/ETH/udp_ip_protocol_stack_merge.enc.v(284)
 HDL-1007 : port '**' remains unconnected for this instance in ../../../../source_code/rtl/ETH/udp_ip_protocol_stack_merge.enc.v(284)
@@ -463,7 +462,7 @@ HDL-5007 WARNING: actual bit length 32 differs from formal bit length 1 for port
 HDL-5007 WARNING: actual bit length 32 differs from formal bit length 1 for port 'web' in ../../../../source_code/rtl/ETH/rx_client_fifo.v(904)
 HDL-5323 WARNING: input port 'dib[8]' remains unconnected for this instance in ../../../../source_code/rtl/ETH/rx_client_fifo.v(871)
 HDL-5323 WARNING: input port 'dib[8]' remains unconnected for this instance in ../../../../source_code/rtl/ETH/rx_client_fifo.v(892)
-HDL-5323 WARNING: input port 'mdio_i' remains unconnected for this instance in ../../../../source_code/rtl/ETH/udp_top.v(243)
+HDL-5323 WARNING: input port 'mdio_i' remains unconnected for this instance in ../../../../source_code/rtl/ETH/udp_top.v(224)
 HDL-5001 WARNING: Contains anonymous inst(s) and/or net(s) that have not been renamed
 HDL-5001 WARNING: Contains anonymous inst(s) and/or net(s) that have not been renamed
 HDL-5001 WARNING: Contains anonymous inst(s) and/or net(s) that have not been renamed
@@ -575,18 +574,18 @@ RUN-1002 : start command "optimize_rtl"
 RUN-1001 : Open license file D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/license/Anlogic.lic
 SYN-1001 : Stage 1 | Optimize RTL
 SYN-1001 : Stage 1.1 | Check Design Sanity
-SYN-1001 : End Stage 1.1 | Check Design Sanity; Time: 0.007864s wall, 0.000000s user + 0.000000s system = 0.000000s CPU (n/a%); Memory(MB): used = 273, reserved = 382, peak = 273;
+SYN-1001 : End Stage 1.1 | Check Design Sanity; Time: 0.007723s wall, 0.000000s user + 0.000000s system = 0.000000s CPU (n/a%); Memory(MB): used = 274, reserved = 382, peak = 274;
 
-SYN-1079 : finish stage Check Design Sanity. Total instances: 32536, Total nets: 70455.
+SYN-1079 : finish stage Check Design Sanity. Total instances: 32538, Total nets: 70512.
 
 SYN-1001 : Stage 1.2 | Initialize Design
-SYN-1001 : End Stage 1.2 | Initialize Design; Time: 1.046012s wall, 0.593750s user + 0.000000s system = 0.593750s CPU (56.8%); Memory(MB): used = 273, reserved = 382, peak = 273;
+SYN-1001 : End Stage 1.2 | Initialize Design; Time: 1.028796s wall, 0.640625s user + 0.000000s system = 0.640625s CPU (62.3%); Memory(MB): used = 274, reserved = 382, peak = 274;
 
-SYN-1079 : finish stage Initialize Design. Total instances: 6890, Total nets: 38878.
+SYN-1079 : finish stage Initialize Design. Total instances: 6890, Total nets: 38933.
 
 SYN-1001 : Stage 1.3 | Flatten Module
 SYN-1011 : Flatten model UDP_Example_Top
-SYN-1001 : End Stage 1.3 | Flatten Module; Time: 0.185868s wall, 0.093750s user + 0.000000s system = 0.093750s CPU (50.4%); Memory(MB): used = 274, reserved = 382, peak = 274;
+SYN-1001 : End Stage 1.3 | Flatten Module; Time: 0.172502s wall, 0.046875s user + 0.000000s system = 0.046875s CPU (27.2%); Memory(MB): used = 274, reserved = 382, peak = 274;
 
 SYN-1079 : finish stage Flatten Module. Total instances: 7692, Total nets: 32270.
 
@@ -619,7 +618,7 @@ SYN-5013 WARNING: Undriven net: model "UDP_Example_Top" / net "u_udp_top/u6_tx_f
 		the net's pin: pin "dib[2]" in ../../../../source_code/rtl/ETH/RAMB16_S9_S9.v(45)
 SYN-5013 Similar messages will be suppressed.
 SYN-5025 WARNING: Using 0 for all undriven pins and nets
-SYN-1001 : End Stage 1.4 | Uniform Instance; Time: 0.037404s wall, 0.015625s user + 0.000000s system = 0.015625s CPU (41.8%); Memory(MB): used = 257, reserved = 365, peak = 274;
+SYN-1001 : End Stage 1.4 | Uniform Instance; Time: 0.034133s wall, 0.015625s user + 0.000000s system = 0.015625s CPU (45.8%); Memory(MB): used = 258, reserved = 365, peak = 274;
 
 SYN-1079 : finish stage Uniform Instance. Total instances: 7085, Total nets: 31614.
 
@@ -643,6 +642,15 @@ SYN-1066 : Inferred FSM for state register 'u2_ram/u2_wrrd/state_reg' in module 
                   0010              100
 --------------------------------------------
 SYN-1067 : encoded FSM with state register 'u2_ram/u2_wrrd/state_reg' using encoding 'one_hot' in model 'UDP_Example_Top'
+SYN-1066 : Inferred FSM for state register 'u2_udp_loopback/STATE_reg' in module 'UDP_Example_Top'
+--------------------------------------------
+     Previous Encoding     New Encoding
+--------------------------------------------
+                    00              001
+                    01              010
+                    10              100
+--------------------------------------------
+SYN-1067 : encoded FSM with state register 'u2_udp_loopback/STATE_reg' using encoding 'one_hot' in model 'UDP_Example_Top'
 SYN-1066 : Inferred FSM for state register 'u_four_channel_video_splicer/u_uidbufw_interconnect/state_reg' in module 'UDP_Example_Top'
 --------------------------------------------
      Previous Encoding     New Encoding
@@ -654,15 +662,6 @@ SYN-1066 : Inferred FSM for state register 'u_four_channel_video_splicer/u_uidbu
                    001            10000
 --------------------------------------------
 SYN-1067 : encoded FSM with state register 'u_four_channel_video_splicer/u_uidbufw_interconnect/state_reg' using encoding 'one_hot' in model 'UDP_Example_Top'
-SYN-1066 : Inferred FSM for state register 'u_udp_top/u2_udp_loopback/STATE_reg' in module 'UDP_Example_Top'
---------------------------------------------
-     Previous Encoding     New Encoding
---------------------------------------------
-                    00              001
-                    01              010
-                    10              100
---------------------------------------------
-SYN-1067 : encoded FSM with state register 'u_udp_top/u2_udp_loopback/STATE_reg' using encoding 'one_hot' in model 'UDP_Example_Top'
 SYN-1066 : Inferred FSM for state register 'u_udp_top/u3_udp_ip_protocol_stack/arp_layer/arp_receive_module/STATE_reg' in module 'UDP_Example_Top'
 --------------------------------------------
      Previous Encoding     New Encoding
@@ -1040,9 +1039,6 @@ USR-1002 : Derived clock:  create_generated_clock -name {u_udp_top/u_clk_gen/u_p
 USR-1002 : Derived clock:  create_generated_clock -name {u_udp_top/u_clk_gen/u_pll_0/pll_inst.clkc[1]} -source [get_ports {clk_50}] -master_clock {clk_in} -multiply_by 2.5000 -duty_cycle 50.0000 [get_pins {u_udp_top/u_clk_gen/u_pll_0/pll_inst.clkc[1]}]
 USR-1002 : Derived clock:  create_generated_clock -name {u_udp_top/u_clk_gen/u_pll_0/pll_inst.clkc[4]} -source [get_ports {clk_50}] -master_clock {clk_in} -multiply_by 2.5000 -phase 90 -duty_cycle 50.0000 [get_pins {u_udp_top/u_clk_gen/u_pll_0/pll_inst.clkc[4]}]
 USR-6001 WARNING: No pins matched 'get_pins u_clk_gen/u_pll_0/pll_inst.clkc[1]'
-USR-6001 WARNING: No nets matched 'get_nets udp_clk'
-USR-8108 CRITICAL-WARNING: create_generated_clock: cannot define a generated clock without targets.
-USR-8159 CRITICAL-WARNING: Command create_generated_clock -name {udp_clk_125m} -source [get_pins {u_clk_gen/u_pll_0/pll_inst.clkc[1]}] -master_clock {pll_inst_125M_1} -divide_by 1.000 -phase 0.000 -add [get_nets {udp_clk}] in D:/University/AL_Proj/anlu/anlu/source_code/constraints/UDP.sdc(10) fails.
 USR-8130 CRITICAL-WARNING: No clock match the pattern: u_clk_gen/u_pll_0/pll_inst.clkc\[0\].
 USR-8124 CRITICAL-WARNING: Rename_clock: please specify object list.
 USR-8159 CRITICAL-WARNING: Command rename_clock -name {pll_inst_125M_0} [get_clocks {u_clk_gen/u_pll_0/pll_inst.clkc[0]}] in D:/University/AL_Proj/anlu/anlu/source_code/constraints/UDP.sdc(5) fails.
@@ -1052,13 +1048,16 @@ USR-8159 CRITICAL-WARNING: Command rename_clock -name {pll_inst_125M_1} [get_clo
 USR-8130 CRITICAL-WARNING: No clock match the pattern: u_clk_gen/u_pll_0/pll_inst.clkc\[3\].
 USR-8124 CRITICAL-WARNING: Rename_clock: please specify object list.
 USR-8159 CRITICAL-WARNING: Command rename_clock -name {pll_inst_25M} [get_clocks {u_clk_gen/u_pll_0/pll_inst.clkc[3]}] in D:/University/AL_Proj/anlu/anlu/source_code/constraints/UDP.sdc(8) fails.
+USR-6001 WARNING: No pins matched 'get_pins u_clk_gen/u_pll_0/pll_inst.clkc[1]'
+USR-8171 CRITICAL-WARNING: create_generated_clock: master clock pll_inst_125M_1 is not found. Please specify valid master clock name.
+USR-8159 CRITICAL-WARNING: Command create_generated_clock -name {udp_clk_125m} -source [get_pins {u_clk_gen/u_pll_0/pll_inst.clkc[1]}] -master_clock {pll_inst_125M_1} -divide_by 1.000 -phase 0.000 -add [get_nets {udp_clk}] in D:/University/AL_Proj/anlu/anlu/source_code/constraints/UDP.sdc(10) fails.
 USR-8130 CRITICAL-WARNING: No clock match the pattern: udp_clk_125m.
 USR-8208 CRITICAL-WARNING: Clock group is empty.
 USR-8159 CRITICAL-WARNING: Command set_clock_groups -exclusive -group [get_clocks {udp_clk_125m}] in D:/University/AL_Proj/anlu/anlu/source_code/constraints/UDP.sdc(13) fails.
 SYN-1016 : Merged 751 instances.
-SYN-1001 : End Stage 1.5 | Optimize Design; Time: 3.406916s wall, 1.562500s user + 0.015625s system = 1.578125s CPU (46.3%); Memory(MB): used = 359, reserved = 345, peak = 359;
+SYN-1001 : End Stage 1.5 | Optimize Design; Time: 3.210434s wall, 1.468750s user + 0.015625s system = 1.484375s CPU (46.2%); Memory(MB): used = 359, reserved = 345, peak = 359;
 
-SYN-1079 : finish stage Optimize Design. Total instances: 14308, Total nets: 16070.
+SYN-1079 : finish stage Optimize Design. Total instances: 14309, Total nets: 16071.
 
 SYN-1001 : Stage 1.6 | Optimize Iteratively
 SYN-1018 : Transformed 4 mux instances.
@@ -1078,7 +1077,7 @@ SYN-2595 : bram inst: u_udp_top/u6_tx_fifo/ramgen_u/inst is set to PDPW/SP from 
 SYN-2595 : bram inst: u_udp_top/u7_rx_fifo/ramgen_l/inst is set to PDPW/SP from DP for resource saving
 SYN-2595 : bram inst: u_udp_top/u7_rx_fifo/ramgen_u/inst is set to PDPW/SP from DP for resource saving
 SYN-1016 : Merged 12118 instances.
-SYN-1015 : Optimize round 1, 21695 better
+SYN-1015 : Optimize round 1, 21686 better
 SYN-1014 : Optimize round 2
 SYN-1044 : Optimized 12 inv instances.
 SYN-1017 : Remove 11 const input seq instances
@@ -1100,22 +1099,22 @@ SYN-1016 : Merged 79 instances.
 SYN-1015 : Optimize round 2, 124 better
 SYN-1014 : Optimize round 3
 SYN-1015 : Optimize round 3, 0 better
-SYN-1001 : End Stage 1.6 | Optimize Iteratively; Time: 12.449406s wall, 5.718750s user + 0.062500s system = 5.781250s CPU (46.4%); Memory(MB): used = 358, reserved = 353, peak = 407;
+SYN-1001 : End Stage 1.6 | Optimize Iteratively; Time: 7.889360s wall, 4.390625s user + 0.015625s system = 4.406250s CPU (55.9%); Memory(MB): used = 357, reserved = 352, peak = 406;
 
-SYN-1079 : finish stage Optimize Iteratively. Total instances: 19249, Total nets: 20544.
+SYN-1079 : finish stage Optimize Iteratively. Total instances: 19251, Total nets: 20546.
 
 SYN-1001 : Stage 1.7 | Check Design
-SYN-1001 : End Stage 1.7 | Check Design; Time: 0.004279s wall, 0.000000s user + 0.000000s system = 0.000000s CPU (n/a%); Memory(MB): used = 358, reserved = 353, peak = 407;
+SYN-1001 : End Stage 1.7 | Check Design; Time: 0.002763s wall, 0.000000s user + 0.000000s system = 0.000000s CPU (n/a%); Memory(MB): used = 357, reserved = 353, peak = 406;
 
-SYN-1079 : finish stage Check Design. Total instances: 19249, Total nets: 20544.
+SYN-1079 : finish stage Check Design. Total instances: 19251, Total nets: 20546.
 
-SYN-1001 : End Stage 1 | Optimize RTL; Time: 17.138984s wall, 8.000000s user + 0.078125s system = 8.078125s CPU (47.1%); Memory(MB): used = 358, reserved = 353, peak = 407;
+SYN-1001 : End Stage 1 | Optimize RTL; Time: 12.346920s wall, 6.562500s user + 0.031250s system = 6.593750s CPU (53.4%); Memory(MB): used = 357, reserved = 353, peak = 406;
 
-SYN-1079 : finish stage Optimize RTL. Total instances: 19249, Total nets: 20544.
+SYN-1079 : finish stage Optimize RTL. Total instances: 19251, Total nets: 20546.
 
-RUN-1003 : finish command "optimize_rtl" in  17.147458s wall, 8.000000s user + 0.078125s system = 8.078125s CPU (47.1%)
+RUN-1003 : finish command "optimize_rtl" in  12.355727s wall, 6.562500s user + 0.031250s system = 6.593750s CPU (53.4%)
 
-RUN-1004 : used memory is 358 MB, reserved memory is 353 MB, peak memory is 407 MB
+RUN-1004 : used memory is 357 MB, reserved memory is 353 MB, peak memory is 406 MB
 RUN-1002 : start command "report_area -file UDP_EXAMPLE_rtl.area"
 RUN-1001 : standard
 ***Report Model: UDP_Example_Top Device: EG4S20BG256***
@@ -1127,7 +1126,7 @@ IO Statistics
   #inout                    1
 
 Gate Statistics
-#Basic gates            15411
+#Basic gates            15412
   #and                   3965
   #nand                     0
   #or                    4133
@@ -1135,7 +1134,7 @@ Gate Statistics
   #xor                    474
   #xnor                    12
   #buf                      0
-  #not                    711
+  #not                    712
   #bufif1                  33
   #MX21                  1130
   #FADD                     0
@@ -1143,7 +1142,7 @@ Gate Statistics
   #LATCH                    0
 #MACRO_ADD                226
 #MACRO_EQ                 132
-#MACRO_MUX               3211
+#MACRO_MUX               3212
 #MACRO_OTHERS              30
 
 RUN-1002 : start command "export_db UDP_EXAMPLE_rtl.db"
@@ -1190,14 +1189,14 @@ RUN-1002 : start command "optimize_gate -packarea UDP_EXAMPLE_gate.area"
 RUN-1001 : Open license file D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/license/Anlogic.lic
 SYN-1001 : Stage 2 | Optimize Gate
 SYN-1001 : Stage 2.1 | Map Reg
-SYN-1001 : End Stage 2.1 | Map Reg; Time: 0.503245s wall, 0.156250s user + 0.000000s system = 0.156250s CPU (31.0%); Memory(MB): used = 375, reserved = 481, peak = 407;
+SYN-1001 : End Stage 2.1 | Map Reg; Time: 0.300786s wall, 0.125000s user + 0.000000s system = 0.125000s CPU (41.6%); Memory(MB): used = 377, reserved = 474, peak = 406;
 
-SYN-1079 : finish stage Map Reg. Total instances: 19249, Total nets: 20544.
+SYN-1079 : finish stage Map Reg. Total instances: 19251, Total nets: 20546.
 
 SYN-1001 : Stage 2.2 | Map IO
 SYN-2002 : EG_PHY_SDRAM_2M_32 instance sdram.
 SYN-2001 : Map 92 IOs to PADs of model 'UDP_Example_Top'
-SYN-1001 : End Stage 2.2 | Map IO; Time: 0.304358s wall, 0.218750s user + 0.000000s system = 0.218750s CPU (71.9%); Memory(MB): used = 375, reserved = 482, peak = 407;
+SYN-1001 : End Stage 2.2 | Map IO; Time: 0.176714s wall, 0.109375s user + 0.000000s system = 0.109375s CPU (61.9%); Memory(MB): used = 377, reserved = 474, peak = 406;
 
 SYN-1001 : Stage 2.3 | Map Macro
 RUN-1002 : start command "update_pll_param -module UDP_Example_Top"
@@ -1206,7 +1205,7 @@ SYN-6577 WARNING: The clock signal "u_udp_top/temac_clk" is added with the synth
 SYN-6577 WARNING: The clock signal "u_udp_top/udp_clk" is added with the synthetic instruction (keep/mark_debug/dont_touch/max_fanout), which may create additional logic on this net
 SYN-2501 : Processed 0 LOGIC_BUF instances.
 SYN-2501 : 4 BUFG to GCLK
-SYN-6562 WARNING: The init value of "u_udp_top/u2_udp_loopback/udp_packet_fifo/u_anlogic_soft_async_fifo/inst(../../../../source_code/rtl/ETH/udp_ip_protocol_stack_merge.enc.v(0))" will be ignored since gate eram_init is set to off
+SYN-6562 WARNING: The init value of "u2_udp_loopback/udp_packet_fifo/u_anlogic_soft_async_fifo/inst(../../../../source_code/rtl/ETH/udp_ip_protocol_stack_merge.enc.v(0))" will be ignored since gate eram_init is set to off
 SYN-6562 WARNING: The init value of "u_udp_top/u3_udp_ip_protocol_stack/ip_layer/icmp_echo_data_fifo/u_anlogic_soft_async_fifo/inst(../../../../source_code/rtl/ETH/udp_ip_protocol_stack_merge.enc.v(0))" will be ignored since gate eram_init is set to off
 SYN-6562 WARNING: The init value of "u_udp_top/u6_tx_fifo/ramgen_l/inst(../../../../source_code/rtl/ETH/RAMB16_S9_S9.v(45))" will be ignored since gate eram_init is set to off
 SYN-6562 WARNING: The init value of "u_udp_top/u6_tx_fifo/ramgen_u/inst(../../../../source_code/rtl/ETH/RAMB16_S9_S9.v(45))" will be ignored since gate eram_init is set to off
@@ -1246,17 +1245,17 @@ SYN-5011 WARNING: Undriven pin: model "UDP_Example_Top" / inst "u2_ram/u2_wrrd/S
 SYN-5011 WARNING: Undriven pin: model "UDP_Example_Top" / inst "u2_ram/u2_wrrd/Sdr_rd_dout_reg[9]" in ../../../../source_code/rtl/uieg4d_dram/enc_file/sdr_wrrd.enc.v(0) / pin "clk"
 SYN-5011 Similar messages will be suppressed.
 SYN-5025 WARNING: Using 0 for all undriven pins and nets
-SYN-1001 : End Stage 2.3 | Map Macro; Time: 6.385593s wall, 2.781250s user + 0.000000s system = 2.781250s CPU (43.6%); Memory(MB): used = 402, reserved = 499, peak = 407;
+SYN-1001 : End Stage 2.3 | Map Macro; Time: 3.551207s wall, 1.750000s user + 0.000000s system = 1.750000s CPU (49.3%); Memory(MB): used = 404, reserved = 492, peak = 406;
 
-SYN-1079 : finish stage Map Macro. Total instances: 23867, Total nets: 25107.
+SYN-1079 : finish stage Map Macro. Total instances: 23868, Total nets: 25108.
 
 SYN-1001 : Stage 2.4 | Map Gate
-SYN-3001 : Collect 4485 PI 3156 PO (43 timing unconstrained) for mapping
-SYN-2581 : Mapping with K=5, #lut = 4987 (3.38), #lev = 7 (2.29), #crit_level = 4
+SYN-3001 : Collect 4485 PI 3157 PO (43 timing unconstrained) for mapping
+SYN-2581 : Mapping with K=5, #lut = 4910 (3.38), #lev = 7 (2.29), #crit_level = 4
 SYN-2551 : Post LUT mapping optimization.
-SYN-2581 : Mapping with K=5, #lut = 4829 (3.33), #lev = 7 (2.39), #crit_level = 0
-SYN-3001 : Logic optimization opt = 2.60 sec, map = 0.56 sec, post map opt = 14.55 sec.
-SYN-1001 : End Stage 2.4 | Map Gate; Time: 20.876953s wall, 9.546875s user + 0.062500s system = 9.609375s CPU (46.0%); Memory(MB): used = 431, reserved = 522, peak = 431;
+SYN-2581 : Mapping with K=5, #lut = 4828 (3.33), #lev = 7 (2.40), #crit_level = 0
+SYN-3001 : Logic optimization opt = 1.59 sec, map = 0.39 sec, post map opt = 10.82 sec.
+SYN-1001 : End Stage 2.4 | Map Gate; Time: 15.143561s wall, 7.609375s user + 0.015625s system = 7.625000s CPU (50.4%); Memory(MB): used = 434, reserved = 522, peak = 434;
 
 SYN-1001 : Packing model "UDP_Example_Top" ...
 SYN-4010 : Pack lib has 57 rtl pack models with 26 top pack blocks
@@ -1275,15 +1274,15 @@ RUN-1002 : start command "start_timer"
 -----------------------------------------------------------
 | Timing                    |                             |
 |     Setup WNS             |        -5958                |
-|     Setup TNS             |      -531683                |
-|     Num of violated S-EP  |          369                |
+|     Setup TNS             |      -492057                |
+|     Num of violated S-EP  |          537                |
 |     Hold WNS              |          471                |
 |     Hold TNS              |            0                |
 |     Num of violated H-EP  |            0                |
 -----------------------------------------------------------
 | Utilization               |                             |
 |     #registers            |         4786                |
-|     #luts                 |         4830                |
+|     #luts                 |         4829                |
 |     #lut1                 |           61                |
 |     #lut1(~A)             |           60                |
 |     #slices               |          346                |
@@ -1302,7 +1301,7 @@ RUN-1002 : start command "start_timer"
 |     #max_fanout_keep      |            0                |
 |     #async_reg            |           27                |
 -----------------------------------------------------------
-| Top 10% datanet fanout#   |        41.94                |
+| Top 10% datanet fanout#   |        42.08                |
 | dff(single fanout)->dff   |          655                |
 | dff(single fanout)->dram  |            0                |
 -----------------------------------------------------------
@@ -1329,28 +1328,28 @@ Over-quota Path Details
 Note: Table only show top 5 paths for each clock group in default
 
 Logic Level Distribution
------------------------------------------------------------------------------------------------------------------------------------------------
-  Clock                                         |  Period            |  0     |  1     |  2     |  3     |  4    |  5    |  6    |  7    |  8
------------------------------------------------------------------------------------------------------------------------------------------------
-  clk_in                                        |  20.000ns (50MHz)  |  40    |  44    |  22    |  6     |  12   |  9    |  4    |  0    |  0
-  phy1_rgmii_rx_clk                             |  8.000ns (125MHz)  |  518   |  153   |  112   |  52    |  26   |  2    |  0    |  0    |  0
-  u_PLL_HDMI_CLK/pll_inst.clkc[0]               |  16.000ns (62MHz)  |  190   |  78    |  80    |  33    |  38   |  26   |  29   |  6    |  0
-  u_PLL_HDMI_CLK/pll_inst.clkc[1]               |  3.200ns (312MHz)  |  43    |  27    |  0     |  0     |  0    |  0    |  0    |  0    |  0
-  u_clk/pll_inst.clkc[0]                        |  6.666ns (150MHz)  |  826   |  399   |  248   |  161   |  100  |  4    |  0    |  1    |  0
-  u_clk/pll_inst.clkc[2]                        |  6.666ns (150MHz)  |  16    |  32    |  0     |  0     |  0    |  0    |  0    |  0    |  0
-  u_udp_top/u_clk_gen/u_pll_0/pll_inst.clkc[0]  |  8.000ns (125MHz)  |  323   |  100   |  73    |  139   |  34   |  3    |  4    |  0    |  0
-  u_udp_top/u_clk_gen/u_pll_0/pll_inst.clkc[1]  |  8.000ns (125MHz)  |  1076  |  1178  |  750   |  3224  |  518  |  555  |  299  |  144  |  2
-  u_udp_top/u_clk_gen/u_pll_0/pll_inst.clkc[4]  |  8.000ns (125MHz)  |  2     |  0     |  0     |  0     |  0    |  0    |  0    |  0    |  0
-  Total                                         |  NA                |  3034  |  2011  |  1285  |  3615  |  728  |  599  |  336  |  151  |  2
------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------
+  Clock                                         |  Period            |  0     |  1     |  2     |  3     |  4    |  5    |  6    |  7   |  8
+----------------------------------------------------------------------------------------------------------------------------------------------
+  clk_in                                        |  20.000ns (50MHz)  |  40    |  44    |  22    |  5     |  10   |  14   |  2    |  0   |  0
+  phy1_rgmii_rx_clk                             |  8.000ns (125MHz)  |  518   |  161   |  105   |  45    |  32   |  2    |  0    |  0   |  0
+  u_PLL_HDMI_CLK/pll_inst.clkc[0]               |  16.000ns (62MHz)  |  190   |  78    |  80    |  35    |  48   |  23   |  24   |  2   |  0
+  u_PLL_HDMI_CLK/pll_inst.clkc[1]               |  3.200ns (312MHz)  |  43    |  27    |  0     |  0     |  0    |  0    |  0    |  0   |  0
+  u_clk/pll_inst.clkc[0]                        |  6.666ns (150MHz)  |  826   |  399   |  248   |  161   |  100  |  4    |  1    |  0   |  0
+  u_clk/pll_inst.clkc[2]                        |  6.666ns (150MHz)  |  16    |  32    |  0     |  0     |  0    |  0    |  0    |  0   |  0
+  u_udp_top/u_clk_gen/u_pll_0/pll_inst.clkc[0]  |  8.000ns (125MHz)  |  323   |  100   |  73    |  140   |  33   |  3    |  4    |  0   |  0
+  u_udp_top/u_clk_gen/u_pll_0/pll_inst.clkc[1]  |  8.000ns (125MHz)  |  1076  |  1178  |  718   |  3289  |  403  |  427  |  569  |  84  |  2
+  u_udp_top/u_clk_gen/u_pll_0/pll_inst.clkc[4]  |  8.000ns (125MHz)  |  2     |  0     |  0     |  0     |  0    |  0    |  0    |  0   |  0
+  Total                                         |  NA                |  3034  |  2019  |  1246  |  3675  |  626  |  473  |  600  |  86  |  2
+----------------------------------------------------------------------------------------------------------------------------------------------
 Note: The table count the worst 100000 paths, each endpoint count only one time.(11761 paths analyzed)
 
 Hierarchical Rent Exponent Report
 +--------------------------------------------------------------------+
 |Inst        |Model           |Rent     |Cell     |Pin     |Term     |
 +--------------------------------------------------------------------+
-|top         |UDP_Example_Top |0.19     |10320    |41233   |24       |
-|  u_udp_top |udp_top_6       |0.22     |7165     |29362   |29       |
+|top         |UDP_Example_Top |0.19     |10319    |41234   |24       |
+|  u_udp_top |udp_top_7       |0.34     |6860     |27997   |84       |
 +--------------------------------------------------------------------+
 Note: Cell represents total number of cells inside module; Pin represents total number of pins
       which have net connection inside module; Term represents total number of PIs and POs of module.
@@ -1358,9 +1357,9 @@ Note: Cell represents total number of cells inside module; Pin represents total 
       A module with higher rent corresponds to highly connected logic and strong connectivity with others.
 Report gate stage QoR done.
 
-RUN-1003 : finish command "report_qor -step gate -file gate.qor" in  2.795030s wall, 1.687500s user + 0.000000s system = 1.687500s CPU (60.4%)
+RUN-1003 : finish command "report_qor -step gate -file gate.qor" in  1.443652s wall, 0.843750s user + 0.000000s system = 0.843750s CPU (58.4%)
 
-RUN-1004 : used memory is 431 MB, reserved memory is 520 MB, peak memory is 431 MB
+RUN-1004 : used memory is 434 MB, reserved memory is 521 MB, peak memory is 434 MB
 RUN-1002 : start command "report_area -file UDP_EXAMPLE_gate.area"
 RUN-1001 : standard
 ***Report Model: UDP_Example_Top Device: EG4S20BG256***
@@ -1372,15 +1371,15 @@ IO Statistics
   #inout                    1
 
 LUT Statistics
-#Total_luts              4830
-  #lut4                  4126
-  #lut5                   704
+#Total_luts              4829
+  #lut4                  4073
+  #lut5                   756
   #lut6                     0
   #lut5_mx41                0
   #lut4_alu1b               0
 
 Utilization Statistics
-#lut                     5522   out of  19600   28.17%
+#lut                     5521   out of  19600   28.17%
 #reg                     4896   out of  19600   24.98%
 #bram                      26   out of     64   40.62%
   #bram9k                  14
@@ -1394,21 +1393,18 @@ Utilization Statistics
 #pll                        3   out of      4   75.00%
 #gclk                       4   out of     16   25.00%
 
-SYN-1001 : End Stage 2 | Optimize Gate; Time: 32.238372s wall, 14.531250s user + 0.546875s system = 15.078125s CPU (46.8%); Memory(MB): used = 431, reserved = 520, peak = 431;
+SYN-1001 : End Stage 2 | Optimize Gate; Time: 21.400459s wall, 10.468750s user + 0.375000s system = 10.843750s CPU (50.7%); Memory(MB): used = 434, reserved = 521, peak = 434;
 
-RUN-1003 : finish command "optimize_gate -packarea UDP_EXAMPLE_gate.area" in  32.253434s wall, 14.531250s user + 0.546875s system = 15.078125s CPU (46.7%)
+RUN-1003 : finish command "optimize_gate -packarea UDP_EXAMPLE_gate.area" in  21.408199s wall, 10.468750s user + 0.375000s system = 10.843750s CPU (50.7%)
 
-RUN-1004 : used memory is 431 MB, reserved memory is 520 MB, peak memory is 431 MB
+RUN-1004 : used memory is 434 MB, reserved memory is 521 MB, peak memory is 434 MB
 RUN-1002 : start command "legalize_phy_inst"
 SYN-1001 : Stage 3 | Legalize Phy Inst
 SYN-1011 : Flatten model UDP_Example_Top
-SYN-1001 : End Stage 3 | Legalize Phy Inst; Time: 0.040291s wall, 0.000000s user + 0.000000s system = 0.000000s CPU (n/a%); Memory(MB): used = 431, reserved = 520, peak = 431;
+SYN-1001 : End Stage 3 | Legalize Phy Inst; Time: 0.021218s wall, 0.031250s user + 0.000000s system = 0.031250s CPU (147.3%); Memory(MB): used = 434, reserved = 521, peak = 434;
 
 RUN-1002 : start command "update_timing"
 RUN-1002 : start command "start_timer"
-RUN-1003 : finish command "update_timing" in  1.126132s wall, 0.671875s user + 0.000000s system = 0.671875s CPU (59.7%)
-
-RUN-1004 : used memory is 431 MB, reserved memory is 520 MB, peak memory is 431 MB
 RUN-1002 : start command "report_timing_status -file UDP_EXAMPLE_gate.ts"
 RUN-1002 : start command "report_timing_summary -file UDP_EXAMPLE_gate.timing"
 RUN-1002 : start command "flow_status -file flow.status"
@@ -1420,7 +1416,7 @@ Device           : EG4S20BG256
 Speed            : NA
 
 Timing Mode      : basic
-Setup            : WNS -5958ps  TNS  -531683ps  NUM_FEPS   369
+Setup            : WNS -5958ps  TNS  -492057ps  NUM_FEPS   537
 Hold             : WNS   471ps  TNS        0ps  NUM_FEPS     0
 
 Flow Statistics  :
@@ -1428,13 +1424,13 @@ RUN-1001 : Flow Statistics:
 RUN-1001 : --------------------------------------------------------------------------------------------------
 RUN-1001 :      command     |  #calls  |  wall time  |  cpu time(s)  |  used memory(mb)  |  peak memory(mb)  
 RUN-1001 : --------------------------------------------------------------------------------------------------
-RUN-1001 :   optimize_gate  |    1     |  32s(65%)   |    14(63%)    |        431        |        431        
-RUN-1001 :   optimize_rtl   |    1     |  17s(34%)   |    8(36%)     |        358        |        407        
+RUN-1001 :   optimize_gate  |    1     |  21s(63%)   |    10(62%)    |        434        |        434        
+RUN-1001 :   optimize_rtl   |    1     |  12s(36%)   |    6(37%)     |        357        |        406        
 RUN-1001 :   import_device  |    1     |   0s(0%)    |     0(0%)     |        82         |        82         
 RUN-1001 :     read_adc     |    1     |   0s(0%)    |     0(0%)     |        255        |        255        
 RUN-1001 :     read_sdc     |    2     |   0s(0%)    |     0(0%)     |        255        |        255        
 RUN-1001 : --------------------------------------------------------------------------------------------------
-RUN-1001 :       total      |    6     |     49s     |      22       |        431        |        431        
+RUN-1001 :       total      |    6     |     33s     |      16       |        434        |        434        
 RUN-1001 : --------------------------------------------------------------------------------------------------
 RUN-1002 : start command "export_db UDP_EXAMPLE_gate.db"
 RUN-1001 : Exported flow parameters
@@ -1466,18 +1462,18 @@ Device           : EG4S20BG256
 Speed            : NA
 
 Timing Mode      : basic
-Setup            : WNS -5958ps  TNS  -531683ps  NUM_FEPS   369
+Setup            : WNS -5958ps  TNS  -492057ps  NUM_FEPS   537
 Hold             : WNS   471ps  TNS        0ps  NUM_FEPS     0
 
 RUN-1001 : Flow Statistics:
 RUN-1001 : --------------------------------------------------------------------------------------------------
 RUN-1001 :      command     |  #calls  |  wall time  |  cpu time(s)  |  used memory(mb)  |  peak memory(mb)  
 RUN-1001 : --------------------------------------------------------------------------------------------------
-RUN-1001 :   optimize_gate  |    1     |  32s(65%)   |    14(63%)    |        431        |        431        
-RUN-1001 :   optimize_rtl   |    1     |  17s(34%)   |    8(36%)     |        358        |        407        
+RUN-1001 :   optimize_gate  |    1     |  21s(63%)   |    10(62%)    |        434        |        434        
+RUN-1001 :   optimize_rtl   |    1     |  12s(36%)   |    6(37%)     |        357        |        406        
 RUN-1001 :   import_device  |    1     |   0s(0%)    |     0(0%)     |        82         |        82         
 RUN-1001 :     read_adc     |    1     |   0s(0%)    |     0(0%)     |        255        |        255        
 RUN-1001 :     read_sdc     |    2     |   0s(0%)    |     0(0%)     |        255        |        255        
 RUN-1001 : --------------------------------------------------------------------------------------------------
-RUN-1001 :       total      |    6     |     49s     |      22       |        431        |        431        
+RUN-1001 :       total      |    6     |     33s     |      16       |        434        |        434        
 RUN-1001 : --------------------------------------------------------------------------------------------------

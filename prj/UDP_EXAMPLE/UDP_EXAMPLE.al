@@ -348,15 +348,6 @@
                     <Attr Name="CompileOrder" Val="62"/>
                 </FileInfo>
             </File>
-            <File Path="../../source_code/rtl/UDP_RX/udp_rx_buf_tb.v">
-                <FileInfo>
-                    <Attr Name="AutoExcluded" Val="true"/>
-                    <Attr Name="UsedInSyn" Val="true"/>
-                    <Attr Name="UsedInP&R" Val="true"/>
-                    <Attr Name="BelongTo" Val="design_1"/>
-                    <Attr Name="CompileOrder" Val="63"/>
-                </FileInfo>
-            </File>
         </Verilog>
         <VHDL>
             <File Path="../../source_code/rtl/HDMI/hdmi_tx.vhd">

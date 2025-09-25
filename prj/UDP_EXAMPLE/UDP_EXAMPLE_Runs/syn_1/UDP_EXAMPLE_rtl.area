@@ -8,7 +8,7 @@ IO Statistics
   #inout                    1
 
 Gate Statistics
-#Basic gates            15411
+#Basic gates            15412
   #and                   3965
   #nand                     0
   #or                    4133
@@ -16,7 +16,7 @@ Gate Statistics
   #xor                    474
   #xnor                    12
   #buf                      0
-  #not                    711
+  #not                    712
   #bufif1                  33
   #MX21                  1130
   #FADD                     0
@@ -24,18 +24,22 @@ Gate Statistics
   #LATCH                    0
 #MACRO_ADD                226
 #MACRO_EQ                 132
-#MACRO_MUX               3211
+#MACRO_MUX               3212
 #MACRO_OTHERS              30
 
 Report Hierarchy Area:
 +---------------------------------------------------------------------------------------------------------------------+
 |Instance                                                        |Module                      |gates  |seq    |macros |
 +---------------------------------------------------------------------------------------------------------------------+
-|top                                                             |UDP_Example_Top             |10458  |4953   |388    |
+|top                                                             |UDP_Example_Top             |10459  |4953   |388    |
 |  app_fdma_inst                                                 |app_fdma                    |75     |207    |19     |
 |  u2_ram                                                        |sdr_as_ram                  |99     |519    |6      |
 |    u1_init_ref                                                 |sdr_init_ref                |19     |81     |1      |
 |    u2_wrrd                                                     |sdr_wrrd                    |80     |438    |5      |
+|  u2_udp_loopback                                               |udp_loopback                |57     |169    |11     |
+|    udp_packet_fifo                                             |ram_fifo                    |43     |102    |7      |
+|      u_anlogic_soft_async_fifo                                 |generic_async_fifo          |43     |102    |7      |
+|        u6                                                      |gray2bin                    |12     |0      |0      |
 |  u_PLL_HDMI_CLK                                                |PLL_HDMI_CLK                |0      |0      |1      |
 |  u_clk                                                         |fdma_pll                    |0      |0      |1      |
 |  u_four_channel_video_splicer                                  |four_channel_video_splicer  |627    |303    |70     |
@@ -52,12 +56,8 @@ Report Hierarchy Area:
 |    u_uidown_sample3                                            |uidown_sample               |6      |29     |3      |
 |    uisetvbuf_i                                                 |uisetvbuf                   |1      |0      |1      |
 |    u_uidown_sample4                                            |uidown_sample               |0      |16     |0      |
-|  u_udp_top                                                     |udp_top                     |8923   |3530   |158    |
-|    u2_udp_loopback                                             |udp_loopback                |57     |169    |11     |
-|      udp_packet_fifo                                           |ram_fifo                    |43     |102    |7      |
-|        u_anlogic_soft_async_fifo                               |generic_async_fifo          |43     |102    |7      |
-|          u6                                                    |gray2bin                    |12     |0      |0      |
-|    u3_udp_ip_protocol_stack                                    |udp_ip_protocol_stack       |7784   |2536   |69     |
+|  u_udp_top                                                     |udp_top                     |8867   |3361   |147    |
+|    u3_udp_ip_protocol_stack                                    |udp_ip_protocol_stack       |7785   |2536   |69     |
 |      arp_layer                                                 |arp_layer                   |781    |1042   |16     |
 |        arp_receive_module                                      |arp_receive                 |474    |320    |3      |
 |        arp_send_module                                         |arp_send                    |274    |266    |4      |
@@ -70,7 +70,7 @@ Report Hierarchy Area:
 |        ip_send_module                                          |ip_send                     |3350   |453    |20     |
 |          icmp_packet_send_module                               |icmp_packet_send            |310    |121    |4      |
 |          ip_shift_register                                     |shift_top                   |0      |160    |0      |
-|      receive_buffer                                            |receive_buffer              |18     |18     |2      |
+|      receive_buffer                                            |receive_buffer              |19     |18     |2      |
 |      send_buffer                                               |send_buffer                 |1856   |217    |6      |
 |      temac_data_process                                        |temac_data_process          |428    |272    |2      |
 |        mac_shift_register                                      |shift_top                   |0      |144    |0      |

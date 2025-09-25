@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- HMAC is: ee320538558be43df2ffb534b6e42c50924b64bc5bbfdcd8bd18469082a61793 -->
+<!-- HMAC is: 4f10c8b7d32912bb3dc5ca7e99386a645095cfb0dbbbebe264fe0777ff181385 -->
 <All_Bram_Infos>
-    <Ucode>11110110</Ucode>
+    <Ucode>11111110</Ucode>
     <AL_PHY_BRAM>
         <INST_1>
             <rid>0X0004</rid>
@@ -9,10 +9,10 @@
             <is_debuggable>n</is_debuggable>
             <is_initialize>n</is_initialize>
             <model_type>AL_PHY_BRAM</model_type>
-            <name>u_udp_top/u2_udp_loopback/udp_packet_fifo/u_anlogic_soft_async_fifo/inst_syn_1</name>
+            <name>u2_udp_loopback/udp_packet_fifo/u_anlogic_soft_async_fifo/inst_syn_1</name>
             <width_a>2</width_a>
             <width_b>2</width_b>
-            <logic_name>u_udp_top/u2_udp_loopback/udp_packet_fifo/u_anlogic_soft_async_fifo/inst</logic_name>
+            <logic_name>u2_udp_loopback/udp_packet_fifo/u_anlogic_soft_async_fifo/inst</logic_name>
             <logic_width>8</logic_width>
             <logic_depth>4096</logic_depth>
             <sub_bid_info>
@@ -40,10 +40,10 @@
             <is_debuggable>n</is_debuggable>
             <is_initialize>n</is_initialize>
             <model_type>AL_PHY_BRAM</model_type>
-            <name>u_udp_top/u2_udp_loopback/udp_packet_fifo/u_anlogic_soft_async_fifo/inst_syn_4</name>
+            <name>u2_udp_loopback/udp_packet_fifo/u_anlogic_soft_async_fifo/inst_syn_4</name>
             <width_a>2</width_a>
             <width_b>2</width_b>
-            <logic_name>u_udp_top/u2_udp_loopback/udp_packet_fifo/u_anlogic_soft_async_fifo/inst</logic_name>
+            <logic_name>u2_udp_loopback/udp_packet_fifo/u_anlogic_soft_async_fifo/inst</logic_name>
             <logic_width>8</logic_width>
             <logic_depth>4096</logic_depth>
             <sub_bid_info>
@@ -71,10 +71,10 @@
             <is_debuggable>n</is_debuggable>
             <is_initialize>n</is_initialize>
             <model_type>AL_PHY_BRAM</model_type>
-            <name>u_udp_top/u2_udp_loopback/udp_packet_fifo/u_anlogic_soft_async_fifo/inst_syn_7</name>
+            <name>u2_udp_loopback/udp_packet_fifo/u_anlogic_soft_async_fifo/inst_syn_7</name>
             <width_a>2</width_a>
             <width_b>2</width_b>
-            <logic_name>u_udp_top/u2_udp_loopback/udp_packet_fifo/u_anlogic_soft_async_fifo/inst</logic_name>
+            <logic_name>u2_udp_loopback/udp_packet_fifo/u_anlogic_soft_async_fifo/inst</logic_name>
             <logic_width>8</logic_width>
             <logic_depth>4096</logic_depth>
             <sub_bid_info>
@@ -102,10 +102,10 @@
             <is_debuggable>n</is_debuggable>
             <is_initialize>n</is_initialize>
             <model_type>AL_PHY_BRAM</model_type>
-            <name>u_udp_top/u2_udp_loopback/udp_packet_fifo/u_anlogic_soft_async_fifo/inst_syn_10</name>
+            <name>u2_udp_loopback/udp_packet_fifo/u_anlogic_soft_async_fifo/inst_syn_10</name>
             <width_a>2</width_a>
             <width_b>2</width_b>
-            <logic_name>u_udp_top/u2_udp_loopback/udp_packet_fifo/u_anlogic_soft_async_fifo/inst</logic_name>
+            <logic_name>u2_udp_loopback/udp_packet_fifo/u_anlogic_soft_async_fifo/inst</logic_name>
             <logic_width>8</logic_width>
             <logic_depth>4096</logic_depth>
             <sub_bid_info>

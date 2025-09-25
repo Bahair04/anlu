@@ -8,12 +8,12 @@ IO Statistics
   #inout                    1
 
 Utilization Statistics
-#lut                     5899   out of  19600   30.10%
-#reg                     4931   out of  19600   25.16%
-#le                      6577
-  #lut only              1646   out of   6577   25.03%
-  #reg only               678   out of   6577   10.31%
-  #lut&reg               4253   out of   6577   64.66%
+#lut                     5944   out of  19600   30.33%
+#reg                     4932   out of  19600   25.16%
+#le                      6726
+  #lut only              1794   out of   6726   26.67%
+  #reg only               782   out of   6726   11.63%
+  #lut&reg               4150   out of   6726   61.70%
 #bram                      26   out of     64   40.62%
   #bram9k                  14
   #fifo9k                  12
@@ -136,26 +136,27 @@ Report Clock Domain Luts:
 ---------------------------------------------------------------------------------------------------------------------------------------------------
   Index   |  Name                                          |  Frequency   |  LUT As Logic   |  LUT As Shifter   |  LUT As Dram   |  BRAM   |  DSP
 ---------------------------------------------------------------------------------------------------------------------------------------------------
-  #1      |  clk_in                                        |  50MHz       |  189            |  0                |  0             |  0      |  0
+  #1      |  clk_in                                        |  50MHz       |  163            |  0                |  0             |  0      |  0
   #2      |  phy1_rgmii_rx_clk                             |  125MHz      |  148            |  0                |  0             |  4      |  0
-  #3      |  u_PLL_HDMI_CLK/pll_inst.clkc[0]               |  62MHz       |  194            |  0                |  0             |  8      |  0
-  #4      |  u_PLL_HDMI_CLK/pll_inst.clkc[1]               |  312MHz      |  28             |  0                |  0             |  0      |  0
-  #5      |  u_clk/pll_inst.clkc[0]                        |  150MHz      |  453            |  0                |  0             |  12     |  0
-  #6      |  u_udp_top/u_clk_gen/u_pll_0/pll_inst.clkc[0]  |  125MHz      |  145            |  0                |  0             |  4      |  0
-  #7      |  u_udp_top/u_clk_gen/u_pll_0/pll_inst.clkc[1]  |  125MHz      |  1671           |  0                |  0             |  14     |  0
+  #3      |  u_PLL_HDMI_CLK/pll_inst.clkc[0]               |  62MHz       |  202            |  0                |  0             |  8      |  0
+  #4      |  u_PLL_HDMI_CLK/pll_inst.clkc[1]               |  312MHz      |  27             |  0                |  0             |  0      |  0
+  #5      |  u_clk/pll_inst.clkc[0]                        |  150MHz      |  455            |  0                |  0             |  12     |  0
+  #6      |  u_udp_top/u_clk_gen/u_pll_0/pll_inst.clkc[0]  |  125MHz      |  147            |  0                |  0             |  4      |  0
+  #7      |  u_udp_top/u_clk_gen/u_pll_0/pll_inst.clkc[1]  |  125MHz      |  1706           |  0                |  0             |  14     |  0
+  #8      |  u_udp_top/u_clk_gen/u_pll_0/pll_inst.clkc[4]  |  125MHz      |  1              |  0                |  0             |  0      |  0
 ---------------------------------------------------------------------------------------------------------------------------------------------------
 
 Clock Resource Statistics
 Index     ClockNet                                                          Type               DriverType         Driver                                          Fanout
-#1        u_udp_top/udp_clk                                                 Global             pll                u_udp_top/u_clk_gen/u_pll_0/pll_inst.clkc1      1848
-#2        u_clk/clk0_buf                                                    Global             pll                u_clk/pll_inst.clkc0                            680
-#3        phy1_rgmii_rx_clk_dup_1                                           Global             io                 phy1_rgmii_rx_clk_syn_2.di                      252
-#4        u_udp_top/u_clk_gen/u_pll_0/clk0_buf                              Global             pll                u_udp_top/u_clk_gen/u_pll_0/pll_inst.clkc0      189
+#1        u_udp_top/udp_clk                                                 Global             pll                u_udp_top/u_clk_gen/u_pll_0/pll_inst.clkc1      1837
+#2        u_clk/clk0_buf                                                    Global             pll                u_clk/pll_inst.clkc0                            671
+#3        phy1_rgmii_rx_clk_dup_1                                           Global             io                 phy1_rgmii_rx_clk_syn_2.di                      241
+#4        u_udp_top/u_clk_gen/u_pll_0/clk0_buf                              Global             pll                u_udp_top/u_clk_gen/u_pll_0/pll_inst.clkc0      195
 #5        u_PLL_HDMI_CLK/clk0_buf                                           Global             pll                u_PLL_HDMI_CLK/pll_inst.clkc0                   170
-#6        clk_50_dup_1                                                      Global             io                 clk_50_syn_2.di                                 62
-#7        cmos_pclk_dup_2                                                   Global             io                 cmos_pclk_syn_3.di                              39
-#8        uihdmitx_inst/Inst_DVITransmitter/PCLK_X5_I                       Global             pll                u_PLL_HDMI_CLK/pll_inst.clkc1                   38
-#9        u_uicfg5640/uii2c_inst/scl_clk                                    Global             lslice             u_uicfg5640/uii2c_inst/scl_clk_reg_syn_17.q0    16
+#6        clk_50_dup_1                                                      Global             io                 clk_50_syn_2.di                                 66
+#7        uihdmitx_inst/Inst_DVITransmitter/PCLK_X5_I                       Global             pll                u_PLL_HDMI_CLK/pll_inst.clkc1                   39
+#8        cmos_pclk_dup_2                                                   Global             io                 cmos_pclk_syn_3.di                              34
+#9        u_uicfg5640/uii2c_inst/scl_clk                                    Global             lslice             u_uicfg5640/uii2c_inst/scl_clk_reg_syn_14.q1    18
 #10       u_udp_top/u4_trimac_block/u1_rgmii_interface/rgmii_txc_ddr/clk    Global             pll                u_udp_top/u_clk_gen/u_pll_0/pll_inst.clkc4      1
 #11       u2_ram/SDRAM_CLK                                                  Global             pll                u_clk/pll_inst.clkc2                            0
 
@@ -163,121 +164,122 @@ Report Hierarchy Area:
 +---------------------------------------------------------------------------------------------------------------------------------------------------+
 |Instance                                                        |Module                      |le      |lut     |ripple  |seq     |bram    |dsp     |
 +---------------------------------------------------------------------------------------------------------------------------------------------------+
-|top                                                             |UDP_Example_Top             |6577    |5553    |346     |4960    |26      |0       |
-|  app_fdma_inst                                                 |app_fdma                    |342     |277     |42      |211     |0       |0       |
-|  u2_ram                                                        |sdr_as_ram                  |478     |314     |5       |432     |0       |0       |
-|    u1_init_ref                                                 |sdr_init_ref                |92      |30      |5       |81      |0       |0       |
-|    u2_wrrd                                                     |sdr_wrrd                    |358     |256     |0       |346     |0       |0       |
+|top                                                             |UDP_Example_Top             |6726    |5598    |346     |4961    |26      |0       |
+|  app_fdma_inst                                                 |app_fdma                    |338     |258     |42      |221     |0       |0       |
+|  u2_ram                                                        |sdr_as_ram                  |466     |264     |5       |426     |0       |0       |
+|    u1_init_ref                                                 |sdr_init_ref                |97      |22      |5       |85      |0       |0       |
+|    u2_wrrd                                                     |sdr_wrrd                    |348     |221     |0       |338     |0       |0       |
+|  u2_udp_loopback                                               |udp_loopback                |241     |163     |45      |172     |4       |0       |
+|    udp_packet_fifo                                             |ram_fifo                    |141     |99      |28      |103     |4       |0       |
+|      u_anlogic_soft_async_fifo                                 |generic_async_fifo          |141     |99      |28      |103     |4       |0       |
 |  u_PLL_HDMI_CLK                                                |PLL_HDMI_CLK                |0       |0       |0       |0       |0       |0       |
 |  u_clk                                                         |fdma_pll                    |0       |0       |0       |0       |0       |0       |
-|  u_four_channel_video_splicer                                  |four_channel_video_splicer  |416     |362     |25      |301     |12      |0       |
-|    u_uidbuf_1                                                  |uidbuf                      |132     |114     |10      |94      |6       |0       |
-|      FDMA_READ$fs_cap_R0                                       |fs_cap                      |7       |1       |0       |7       |0       |0       |
-|      FDMA_WRITE_ENABLE$fs_cap_W0                               |fs_cap                      |8       |6       |0       |8       |0       |0       |
-|    u_uidbuf_2                                                  |uidbuf                      |67      |62      |5       |44      |2       |0       |
-|      FDMA_WRITE_ENABLE$fs_cap_W0                               |fs_cap                      |5       |5       |0       |4       |0       |0       |
-|    u_uidbuf_3                                                  |uidbuf                      |67      |59      |5       |52      |2       |0       |
-|      FDMA_WRITE_ENABLE$fs_cap_W0                               |fs_cap                      |5       |3       |0       |5       |0       |0       |
-|    u_uidbuf_4                                                  |uidbuf                      |63      |58      |5       |48      |2       |0       |
+|  u_four_channel_video_splicer                                  |four_channel_video_splicer  |429     |375     |25      |305     |12      |0       |
+|    u_uidbuf_1                                                  |uidbuf                      |139     |120     |10      |96      |6       |0       |
+|      FDMA_READ$fs_cap_R0                                       |fs_cap                      |4       |4       |0       |4       |0       |0       |
+|      FDMA_WRITE_ENABLE$fs_cap_W0                               |fs_cap                      |5       |1       |0       |5       |0       |0       |
+|    u_uidbuf_2                                                  |uidbuf                      |76      |69      |5       |52      |2       |0       |
 |      FDMA_WRITE_ENABLE$fs_cap_W0                               |fs_cap                      |8       |8       |0       |8       |0       |0       |
-|    u_uidbufw_interconnect                                      |uidbufw_interconnect        |43      |43      |0       |22      |0       |0       |
-|    u_uidown_sample3                                            |uidown_sample               |36      |18      |0       |33      |0       |0       |
-|    u_uidown_sample4                                            |uidown_sample               |8       |8       |0       |8       |0       |0       |
-|  u_udp_top                                                     |udp_top                     |4622    |3928    |260     |3567    |14      |0       |
-|    u2_udp_loopback                                             |udp_loopback                |241     |163     |45      |166     |4       |0       |
-|      udp_packet_fifo                                           |ram_fifo                    |143     |99      |28      |99      |4       |0       |
-|        u_anlogic_soft_async_fifo                               |generic_async_fifo          |143     |99      |28      |99      |4       |0       |
-|    u3_udp_ip_protocol_stack                                    |udp_ip_protocol_stack       |3289    |2810    |159     |2571    |2       |0       |
-|      arp_layer                                                 |arp_layer                   |1251    |1049    |0       |1053    |0       |0       |
-|        arp_receive_module                                      |arp_receive                 |330     |260     |0       |323     |0       |0       |
-|        arp_send_module                                         |arp_send                    |314     |263     |0       |261     |0       |0       |
-|        ip_mac_addr_pairs_cache_module                          |ip_mac_addr_pairs_cache     |530     |449     |0       |392     |0       |0       |
-|      ip_layer                                                  |ip_layer                    |1136    |917     |111     |827     |2       |0       |
-|        icmp_echo_data_fifo                                     |ram_fifo                    |118     |73      |20      |96      |2       |0       |
-|          u_anlogic_soft_async_fifo                             |generic_async_fifo          |118     |73      |20      |96      |2       |0       |
-|        ip_receive_module                                       |ip_receive                  |308     |199     |28      |252     |0       |0       |
-|          icmp_packet_process_module                            |icmp_packet_process         |213     |149     |28      |158     |0       |0       |
-|        ip_send_module                                          |ip_send                     |710     |645     |63      |479     |0       |0       |
-|          icmp_packet_send_module                               |icmp_packet_send            |163     |161     |0       |124     |0       |0       |
-|          ip_shift_register                                     |shift_top                   |159     |159     |0       |159     |0       |0       |
-|      receive_buffer                                            |receive_buffer              |19      |19      |0       |17      |0       |0       |
-|      send_buffer                                               |send_buffer                 |261     |254     |7       |206     |0       |0       |
-|      temac_data_process                                        |temac_data_process          |312     |306     |0       |266     |0       |0       |
-|        mac_shift_register                                      |shift_top                   |140     |140     |0       |139     |0       |0       |
-|        temac_shift_register                                    |shift_top                   |30      |30      |0       |30      |0       |0       |
-|      udp_layer                                                 |udp_layer                   |310     |265     |41      |202     |0       |0       |
-|        udp_receive_module                                      |udp_receive                 |133     |108     |25      |73      |0       |0       |
-|        udp_send_module                                         |udp_send                    |177     |157     |16      |129     |0       |0       |
-|          udp_shfit_register                                    |shift_top                   |59      |59      |0       |59      |0       |0       |
-|    u4_trimac_block                                             |temac_block                 |586     |552     |0       |453     |0       |0       |
-|      trimac_core                                               |TEMAC_CORE                  |572     |541     |0       |443     |0       |0       |
-|        mac_core_aead6cd6dadd_Inst                              |mac_core_aead6cd6dadd       |572     |541     |0       |443     |0       |0       |
-|          TEMAC_CORE_INST                                       |TEMAC_CORE_aead6cd6dadd     |572     |541     |0       |443     |0       |0       |
-|            al102_vfhtA8Nz                                      |al102_nTnczhDj_aead6cd6dadd |572     |541     |0       |443     |0       |0       |
-|              addr_filter_top                                   |al102_TNLVOd0g_aead6cd6dadd |55      |51      |0       |45      |0       |0       |
-|                al102_hxcEIhDE$dynamic_config                   |al102_jzYAprLM_aead6cd6dadd |55      |51      |0       |45      |0       |0       |
-|                  al102_rBT2HiW3                                |al102_GJdu7z0F_aead6cd6dadd |2       |2       |0       |2       |0       |0       |
-|              al102_0zphc5uy                                    |al102_ofxvusEN_aead6cd6dadd |7       |4       |0       |6       |0       |0       |
-|              al102_6KjBLuws                                    |al102_LOhHHNug_aead6cd6dadd |187     |185     |0       |130     |0       |0       |
-|                al102_BrbRRXKu                                  |al102_pY1FTerE_aead6cd6dadd |187     |185     |0       |130     |0       |0       |
-|                  al102_aSis0jQ9                                |al102_aJclEuUV_aead6cd6dadd |44      |44      |0       |33      |0       |0       |
-|              al102_F3nxfdNo$al102_Ba3Y7fv8                     |al102_ofxvusEN_aead6cd6dadd |6       |3       |0       |6       |0       |0       |
-|              al102_f4biXjlA                                    |al102_3J80Reqk_aead6cd6dadd |263     |254     |0       |208     |0       |0       |
-|                al102_0_I1BBbU                                  |al102_jpVxQ2cS_aead6cd6dadd |20      |20      |0       |16      |0       |0       |
-|                al102_idhI9aZL                                  |al102_aJclEuUV_aead6cd6dadd |52      |52      |0       |34      |0       |0       |
-|                al102_tubZOSG6                                  |al102_dQOqX6Hm_aead6cd6dadd |46      |46      |0       |36      |0       |0       |
-|                al102_yKqPCjEw                                  |al102_2SPbf3Jy_aead6cd6dadd |45      |45      |0       |24      |0       |0       |
-|                al102_NWvBaxDl$al102_nDUUxN4p[0]$al102_0W8IXuYR |al102_nTnceH5P_aead6cd6dadd |2       |2       |0       |2       |0       |0       |
-|                al102_NWvBaxDl$al102_nDUUxN4p[1]$al102_0W8IXuYR |al102_nTnceH5P_aead6cd6dadd |5       |2       |0       |5       |0       |0       |
-|                al102_NWvBaxDl$al102_nDUUxN4p[2]$al102_0W8IXuYR |al102_nTnceH5P_aead6cd6dadd |2       |2       |0       |2       |0       |0       |
-|                al102_NWvBaxDl$al102_nDUUxN4p[3]$al102_0W8IXuYR |al102_nTnceH5P_aead6cd6dadd |6       |6       |0       |6       |0       |0       |
-|                al102_NWvBaxDl$al102_nDUUxN4p[4]$al102_0W8IXuYR |al102_nTnceH5P_aead6cd6dadd |6       |6       |0       |6       |0       |0       |
+|    u_uidbuf_3                                                  |uidbuf                      |64      |57      |5       |48      |2       |0       |
+|      FDMA_WRITE_ENABLE$fs_cap_W0                               |fs_cap                      |7       |7       |0       |7       |0       |0       |
+|    u_uidbuf_4                                                  |uidbuf                      |64      |59      |5       |41      |2       |0       |
+|      FDMA_WRITE_ENABLE$fs_cap_W0                               |fs_cap                      |1       |1       |0       |1       |0       |0       |
+|    u_uidbufw_interconnect                                      |uidbufw_interconnect        |44      |44      |0       |28      |0       |0       |
+|    u_uidown_sample3                                            |uidown_sample               |31      |16      |0       |29      |0       |0       |
+|    u_uidown_sample4                                            |uidown_sample               |11      |10      |0       |11      |0       |0       |
+|  u_udp_top                                                     |udp_top                     |4432    |3763    |215     |3396    |10      |0       |
+|    u3_udp_ip_protocol_stack                                    |udp_ip_protocol_stack       |3339    |2881    |159     |2548    |2       |0       |
+|      arp_layer                                                 |arp_layer                   |1269    |1053    |0       |1044    |0       |0       |
+|        arp_receive_module                                      |arp_receive                 |321     |252     |0       |318     |0       |0       |
+|        arp_send_module                                         |arp_send                    |326     |274     |0       |269     |0       |0       |
+|        ip_mac_addr_pairs_cache_module                          |ip_mac_addr_pairs_cache     |547     |452     |0       |382     |0       |0       |
+|      ip_layer                                                  |ip_layer                    |1190    |1007    |111     |829     |2       |0       |
+|        icmp_echo_data_fifo                                     |ram_fifo                    |109     |75      |20      |89      |2       |0       |
+|          u_anlogic_soft_async_fifo                             |generic_async_fifo          |109     |75      |20      |89      |2       |0       |
+|        ip_receive_module                                       |ip_receive                  |309     |225     |28      |247     |0       |0       |
+|          icmp_packet_process_module                            |icmp_packet_process         |212     |160     |28      |155     |0       |0       |
+|        ip_send_module                                          |ip_send                     |772     |707     |63      |493     |0       |0       |
+|          icmp_packet_send_module                               |icmp_packet_send            |198     |197     |0       |134     |0       |0       |
+|          ip_shift_register                                     |shift_top                   |165     |165     |0       |165     |0       |0       |
+|      receive_buffer                                            |receive_buffer              |20      |20      |0       |18      |0       |0       |
+|      send_buffer                                               |send_buffer                 |256     |249     |7       |211     |0       |0       |
+|      temac_data_process                                        |temac_data_process          |305     |294     |0       |260     |0       |0       |
+|        mac_shift_register                                      |shift_top                   |132     |132     |0       |132     |0       |0       |
+|        temac_shift_register                                    |shift_top                   |27      |27      |0       |27      |0       |0       |
+|      udp_layer                                                 |udp_layer                   |299     |258     |41      |186     |0       |0       |
+|        udp_receive_module                                      |udp_receive                 |122     |97      |25      |71      |0       |0       |
+|        udp_send_module                                         |udp_send                    |177     |161     |16      |115     |0       |0       |
+|          udp_shfit_register                                    |shift_top                   |56      |56      |0       |56      |0       |0       |
+|    u4_trimac_block                                             |temac_block                 |571     |478     |0       |462     |0       |0       |
+|      trimac_core                                               |TEMAC_CORE                  |557     |468     |0       |450     |0       |0       |
+|        mac_core_aead6cd6dadd_Inst                              |mac_core_aead6cd6dadd       |557     |468     |0       |450     |0       |0       |
+|          TEMAC_CORE_INST                                       |TEMAC_CORE_aead6cd6dadd     |557     |468     |0       |450     |0       |0       |
+|            al102_vfhtA8Nz                                      |al102_nTnczhDj_aead6cd6dadd |557     |468     |0       |450     |0       |0       |
+|              addr_filter_top                                   |al102_TNLVOd0g_aead6cd6dadd |50      |36      |0       |44      |0       |0       |
+|                al102_hxcEIhDE$dynamic_config                   |al102_jzYAprLM_aead6cd6dadd |50      |36      |0       |44      |0       |0       |
+|                  al102_rBT2HiW3                                |al102_GJdu7z0F_aead6cd6dadd |4       |4       |0       |2       |0       |0       |
+|              al102_0zphc5uy                                    |al102_ofxvusEN_aead6cd6dadd |6       |6       |0       |6       |0       |0       |
+|              al102_6KjBLuws                                    |al102_LOhHHNug_aead6cd6dadd |187     |186     |0       |130     |0       |0       |
+|                al102_BrbRRXKu                                  |al102_pY1FTerE_aead6cd6dadd |187     |186     |0       |130     |0       |0       |
+|                  al102_aSis0jQ9                                |al102_aJclEuUV_aead6cd6dadd |43      |43      |0       |34      |0       |0       |
+|              al102_F3nxfdNo$al102_Ba3Y7fv8                     |al102_ofxvusEN_aead6cd6dadd |7       |6       |0       |6       |0       |0       |
+|              al102_f4biXjlA                                    |al102_3J80Reqk_aead6cd6dadd |250     |199     |0       |210     |0       |0       |
+|                al102_0_I1BBbU                                  |al102_jpVxQ2cS_aead6cd6dadd |19      |19      |0       |16      |0       |0       |
+|                al102_idhI9aZL                                  |al102_aJclEuUV_aead6cd6dadd |47      |47      |0       |31      |0       |0       |
+|                al102_tubZOSG6                                  |al102_dQOqX6Hm_aead6cd6dadd |41      |41      |0       |35      |0       |0       |
+|                al102_yKqPCjEw                                  |al102_2SPbf3Jy_aead6cd6dadd |39      |39      |0       |24      |0       |0       |
+|                al102_NWvBaxDl$al102_nDUUxN4p[0]$al102_0W8IXuYR |al102_nTnceH5P_aead6cd6dadd |4       |2       |0       |4       |0       |0       |
+|                al102_NWvBaxDl$al102_nDUUxN4p[1]$al102_0W8IXuYR |al102_nTnceH5P_aead6cd6dadd |5       |0       |0       |5       |0       |0       |
+|                al102_NWvBaxDl$al102_nDUUxN4p[2]$al102_0W8IXuYR |al102_nTnceH5P_aead6cd6dadd |4       |0       |0       |4       |0       |0       |
+|                al102_NWvBaxDl$al102_nDUUxN4p[3]$al102_0W8IXuYR |al102_nTnceH5P_aead6cd6dadd |4       |0       |0       |4       |0       |0       |
+|                al102_NWvBaxDl$al102_nDUUxN4p[4]$al102_0W8IXuYR |al102_nTnceH5P_aead6cd6dadd |4       |0       |0       |4       |0       |0       |
 |                al102_NWvBaxDl$al102_nDUUxN4p[5]$al102_0W8IXuYR |al102_nTnceH5P_aead6cd6dadd |4       |4       |0       |4       |0       |0       |
-|                al102_NWvBaxDl$al102_nDUUxN4p[6]$al102_0W8IXuYR |al102_nTnceH5P_aead6cd6dadd |3       |3       |0       |3       |0       |0       |
+|                al102_NWvBaxDl$al102_nDUUxN4p[6]$al102_0W8IXuYR |al102_nTnceH5P_aead6cd6dadd |2       |0       |0       |2       |0       |0       |
+|                al102_NWvBaxDl$al102_nDUUxN4p[7]$al102_0W8IXuYR |al102_nTnceH5P_aead6cd6dadd |4       |4       |0       |4       |0       |0       |
 |                al102_UYd_BhtE                                  |al102_nTnceH5P_aead6cd6dadd |2       |2       |0       |2       |0       |0       |
-|                al102_gR2N1e7t                                  |al102_nTnceH5P_aead6cd6dadd |5       |5       |0       |5       |0       |0       |
-|              al102_gfc619z4                                    |al102_9c8Z7BxD_aead6cd6dadd |21      |21      |0       |19      |0       |0       |
-|              al102_jlblKL3I                                    |al102_nZfRKD5m_aead6cd6dadd |28      |18      |0       |24      |0       |0       |
-|                al102_LOhHHNug_aead6cd6dadd                     |al102_yQt6hWFf_aead6cd6dadd |12      |12      |0       |8       |0       |0       |
-|              al102_qNes26Dr                                    |al102__OtSFRd6_aead6cd6dadd |5       |5       |0       |5       |0       |0       |
+|                al102_gR2N1e7t                                  |al102_nTnceH5P_aead6cd6dadd |4       |4       |0       |4       |0       |0       |
+|              al102_gfc619z4                                    |al102_9c8Z7BxD_aead6cd6dadd |22      |19      |0       |20      |0       |0       |
+|              al102_jlblKL3I                                    |al102_nZfRKD5m_aead6cd6dadd |25      |12      |0       |24      |0       |0       |
+|                al102_LOhHHNug_aead6cd6dadd                     |al102_yQt6hWFf_aead6cd6dadd |8       |7       |0       |7       |0       |0       |
+|              al102_qNes26Dr                                    |al102__OtSFRd6_aead6cd6dadd |10      |4       |0       |10      |0       |0       |
 |      u1_rgmii_interface                                        |rgmii_interface             |0       |0       |0       |0       |0       |0       |
-|      u_tx_clk_en_gen                                           |tx_clk_en_gen               |3       |2       |0       |2       |0       |0       |
-|    u6_tx_fifo                                                  |tx_client_fifo              |287     |223     |28      |210     |4       |0       |
-|      ramgen_l                                                  |RAMB16_S9_S9                |2       |2       |0       |0       |2       |0       |
-|      ramgen_u                                                  |RAMB16_S9_S9                |0       |0       |0       |0       |2       |0       |
-|    u7_rx_fifo                                                  |rx_client_fifo              |213     |174     |28      |161     |4       |0       |
+|      u_tx_clk_en_gen                                           |tx_clk_en_gen               |4       |3       |0       |4       |0       |0       |
+|    u6_tx_fifo                                                  |tx_client_fifo              |304     |249     |28      |215     |4       |0       |
 |      ramgen_l                                                  |RAMB16_S9_S9                |0       |0       |0       |0       |2       |0       |
 |      ramgen_u                                                  |RAMB16_S9_S9                |0       |0       |0       |0       |2       |0       |
+|    u7_rx_fifo                                                  |rx_client_fifo              |210     |147     |28      |163     |4       |0       |
+|      ramgen_l                                                  |RAMB16_S9_S9                |1       |1       |0       |0       |2       |0       |
+|      ramgen_u                                                  |RAMB16_S9_S9                |2       |2       |0       |1       |2       |0       |
 |    u_clk_gen                                                   |clk_gen_rst_gen             |0       |0       |0       |0       |0       |0       |
 |      u_pll_0                                                   |pll_gen                     |0       |0       |0       |0       |0       |0       |
-|  u_uicfg5640                                                   |uicfg5640                   |317     |317     |0       |106     |0       |0       |
-|    uii2c_inst                                                  |uii2c                       |57      |57      |0       |41      |0       |0       |
-|  u_uitpg_3                                                     |uitpg_static                |69      |61      |7       |53      |0       |0       |
-|  u_uitpg_4                                                     |uitpg_static                |23      |23      |0       |18      |0       |0       |
-|  uiSensorRGB565_inst                                           |uiSensorRGB565              |30      |20      |0       |30      |0       |0       |
-|  uihdmitx_inst                                                 |uihdmitx                    |239     |217     |0       |175     |0       |0       |
-|    Inst_DVITransmitter                                         |DVITransmitter              |239     |217     |0       |175     |0       |0       |
-|      Inst_TMDSEncoder_blue                                     |TMDSEncoder                 |60      |55      |0       |32      |0       |0       |
-|      Inst_TMDSEncoder_green                                    |TMDSEncoder                 |67      |65      |0       |47      |0       |0       |
-|      Inst_TMDSEncoder_red                                      |TMDSEncoder                 |57      |57      |0       |41      |0       |0       |
-|      Inst_blue_serializer_10_1                                 |Serial_N_1_lvds_dat         |22      |16      |0       |22      |0       |0       |
-|      Inst_clk_serializer_10_1                                  |Serial_N_1_lvds             |6       |6       |0       |6       |0       |0       |
-|      Inst_green_serializer_10_1                                |Serial_N_1_lvds_dat         |16      |12      |0       |16      |0       |0       |
-|      Inst_red_serializer_10_1                                  |Serial_N_1_lvds_dat         |11      |6       |0       |11      |0       |0       |
-|  uivtc_inst                                                    |uivtc                       |33      |26      |7       |30      |0       |0       |
-|  u_uitpg_1                                                     |uitpg                       |8       |8       |0       |8       |0       |0       |
+|  u_uicfg5640                                                   |uicfg5640                   |392     |392     |0       |97      |0       |0       |
+|    uii2c_inst                                                  |uii2c                       |59      |59      |0       |35      |0       |0       |
+|  u_uitpg_1                                                     |uitpg                       |10      |10      |0       |10      |0       |0       |
+|  u_uitpg_3                                                     |uitpg_static                |78      |71      |7       |44      |0       |0       |
+|  u_uitpg_4                                                     |uitpg_static                |41      |41      |0       |25      |0       |0       |
+|  uiSensorRGB565_inst                                           |uiSensorRGB565              |29      |25      |0       |29      |0       |0       |
+|  uihdmitx_inst                                                 |uihdmitx                    |230     |203     |0       |177     |0       |0       |
+|    Inst_DVITransmitter                                         |DVITransmitter              |230     |203     |0       |177     |0       |0       |
+|      Inst_TMDSEncoder_blue                                     |TMDSEncoder                 |62      |55      |0       |39      |0       |0       |
+|      Inst_TMDSEncoder_green                                    |TMDSEncoder                 |48      |48      |0       |42      |0       |0       |
+|      Inst_TMDSEncoder_red                                      |TMDSEncoder                 |63      |59      |0       |40      |0       |0       |
+|      Inst_blue_serializer_10_1                                 |Serial_N_1_lvds_dat         |24      |19      |0       |23      |0       |0       |
+|      Inst_clk_serializer_10_1                                  |Serial_N_1_lvds             |7       |2       |0       |7       |0       |0       |
+|      Inst_green_serializer_10_1                                |Serial_N_1_lvds_dat         |12      |9       |0       |12      |0       |0       |
+|      Inst_red_serializer_10_1                                  |Serial_N_1_lvds_dat         |14      |11      |0       |14      |0       |0       |
+|  uivtc_inst                                                    |uivtc                       |40      |33      |7       |30      |0       |0       |
 +---------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 DataNet Average Fanout:
 
    Index     Fanout     Nets  
-    #1          1       4839  
-    #2          2       1274  
-    #3          3       609   
-    #4          4       408   
-    #5        5-10      716   
-    #6        11-50     301   
-    #7       51-100      38   
-    #8       101-500     4    
-  Average     3.14            
+    #1          1       4768  
+    #2          2       1332  
+    #3          3       615   
+    #4          4       409   
+    #5        5-10      709   
+    #6        11-50     311   
+    #7       51-100      46   
+    #8       101-500     1    
+  Average     3.16            

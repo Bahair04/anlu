@@ -21,7 +21,22 @@ module udp_top#(
     output  wire                        phy1_rgmii_tx_clk,
     input   wire    [3 : 0]             phy1_rgmii_rx_data,
     input   wire                        phy1_rgmii_rx_ctl,
-    input   wire                        phy1_rgmii_rx_clk
+    input   wire                        phy1_rgmii_rx_clk,
+
+    // udp_loopback <----> udp_ip_protocol_stack
+    output  wire                        app_rx_data_valid, 
+    output  wire    [7 : 0]             app_rx_data,       
+    output  wire    [15 : 0]            app_rx_data_length,
+
+    output  wire                        udp_tx_ready,
+    output  wire                        app_tx_ack,
+    input   wire                        app_tx_data_request,
+    input   wire                        app_tx_data_valid, 
+    input   wire    [7 : 0]             app_tx_data,       
+    input   wire    [15 : 0]            udp_data_length,
+
+    output  wire                        o_udp_clk,
+    output  wire                        o_reset
 
 );
 
@@ -35,17 +50,7 @@ assign                              TRI_speed = 2'b10;          //千兆2'b10 百兆
 wire                                reset_reg;                  // reset_reg: 锁相环输出lock信号
 
 // udp_loopback <----> udp_ip_protocol_stack
-wire                                app_rx_data_valid; 
-wire    [7 : 0]                     app_rx_data;       
-wire    [15 : 0]                    app_rx_data_length;
 wire    [15 : 0]                    app_rx_port_num;
-
-wire                                udp_tx_ready;
-wire                                app_tx_ack;
-wire                                app_tx_data_request;
-wire                                app_tx_data_valid; 
-wire    [7 : 0]                     app_tx_data;       
-wire    [15 : 0]                    udp_data_length;
 
 // temac_block
 wire                                tx_stop;
@@ -116,7 +121,7 @@ begin
     else
         soft_reset_cnt<=soft_reset_cnt;
 end
-
+assign o_reset = reset;
 //------------------------------------------------------------
 //clk_gen
 //------------------------------------------------------------
@@ -147,31 +152,7 @@ u5_temac_clk_gen
     .clk_1_25_in          (clk_1_25_out             ),//1.25M 
     .udp_clk_out          (udp_clk                  )
 );
-
-//------------------------------------------------------------
-//udp_loopback
-//------------------------------------------------------------
-udp_loopback#(
-    .DEVICE(DEVICE)
-)
-u2_udp_loopback
-(
-    .app_rx_clk                 (udp_clk                ),
-    .app_tx_clk                 (udp_clk                ),
-    .reset                      (reset                  ),
-
-    .app_rx_data                (app_rx_data            ),
-    .app_rx_data_valid          (app_rx_data_valid      ),
-    .app_rx_data_length         (app_rx_data_length     ),
-    
-    .udp_tx_ready               (udp_tx_ready           ),
-    .app_tx_ack                 (app_tx_ack             ),
-    .app_tx_data                (app_tx_data            ),
-    .app_tx_data_request        (app_tx_data_request    ),
-    .app_tx_data_valid          (app_tx_data_valid      ),
-    .udp_data_length            (udp_data_length        )   
-);
-
+assign o_udp_clk = udp_clk;
 //------------------------------------------------------------
 //--------------            --------------                  --------------                  --------------                              
 //|             |           |             |   --------      |             |                 |             |
