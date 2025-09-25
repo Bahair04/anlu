@@ -2,3 +2,10 @@
 `define P1_Available_7244eeadc913
 `define P2_Available_7244eeadc913
 `define P3_Available_7244eeadc913
+`define P4_Available_7244eeadc913
+`define P5_Available_7244eeadc913
+`define P6_Available_7244eeadc913
+`define P7_Available_7244eeadc913
+`define P8_Available_7244eeadc913
+`define P9_Available_7244eeadc913
+`define P10_Available_7244eeadc913

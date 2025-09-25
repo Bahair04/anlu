@@ -21,7 +21,7 @@ module udp_rx_buf
     input   wire    [15 : 0]        app_rx_data_length,
     input   wire    [24 : 0]        app_rx_data_total,
 
-    input   wire                    vid_clk,
+    output  wire                    vid_clk,
     output  reg                     vid_vs,
     output  reg                     vid_de,
     output  wire    [15 : 0]        vid_data
@@ -42,6 +42,22 @@ reg [3 : 0]             dly_cnt;
 reg                     app_rx_data_en;
 reg [1 : 0]             comb_data_cnt;
 reg [15 : 0]            comb_data;
+
+
+ChipWatcher_0 u_ChipWatcher_0(
+    .probe0(app_rx_data),
+    .probe1(app_rx_data_valid),
+    .probe2(app_rx_data_length),
+    .probe3(app_rx_data_total),
+    .probe4(state),
+    .probe5(app_rx_data_d[9]),
+    .probe6(app_rx_data_cnt),
+    .probe7(dly_cnt),
+    .probe8(vid_de),
+    .probe9(vid_vs),
+    .probe10(vid_data),
+    .clk(app_rx_clk)
+);
 
 always @(posedge app_rx_clk or negedge rstn) begin
     if (!rstn)
@@ -162,4 +178,5 @@ always @(posedge app_rx_clk or negedge rstn) begin
 end
 
 assign vid_data = vid_de ? comb_data : 'd0;
+assign vid_clk = app_rx_clk;
 endmodule

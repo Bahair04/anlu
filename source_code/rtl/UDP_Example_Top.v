@@ -161,7 +161,10 @@ wire    [`DATA_WIDTH - 1 : 0]		DQ;
 //* ETH UDP
 //*------------------------------------------------------------
 
-
+wire                                vid_clk_udp;
+wire        	                    vid_vs_udp;
+wire        	                    vid_de_udp;
+wire [15:0] 	                    vid_data_udp;
 
 
 
@@ -551,6 +554,22 @@ u2_udp_loopback
     .udp_data_length            (udp_data_length        )   
 );
 
+
+udp_rx_buf #(
+	.FRAME_HEAD 	( 32'hF3ED7A93  ))
+u_udp_rx_buf(
+	.rstn               	( ~reset              ),
+	.app_rx_clk         	( udp_clk             ),
+	.app_rx_data_valid  	( app_rx_data_valid   ),
+	.app_rx_data        	( app_rx_data         ),
+	.app_rx_data_length 	( app_rx_data_length  ),
+	.app_rx_data_total  	( 'd512 * 'd384       ),
+	.vid_clk            	( vid_clk_udp         ),
+	.vid_vs             	( vid_vs_udp          ),
+	.vid_de             	( vid_de_udp          ),
+	.vid_data           	( vid_data_udp        )
+);
+
 udp_top #(
     .DEVICE             	("EG4"                            ),
     .LOCAL_UDP_PORT_NUM 	(16'h0001                         ),
@@ -579,8 +598,8 @@ u_udp_top(
     .app_tx_data            (app_tx_data         ),       
     .udp_data_length        (udp_data_length     ),
 
-    .o_udp_clk              (udp_clk                    ),
-    .o_reset                (reset)
+    .o_udp_clk              (udp_clk             ),
+    .o_reset                (reset               )
 );
 
 endmodule

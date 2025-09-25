@@ -255,13 +255,17 @@ ipgen_gui_set_spin_box_text IP_Generator Probe252_WIDTH 1
 ipgen_gui_set_spin_box_text IP_Generator Probe253_WIDTH 1
 ipgen_gui_set_spin_box_text IP_Generator Probe254_WIDTH 1
 ipgen_gui_set_spin_box_text IP_Generator Probe255_WIDTH 1
-ipgen_gui_set_spin_box_text IP_Generator CWC_BUS_NUM 3
+ipgen_gui_set_spin_box_text IP_Generator CWC_BUS_NUM 11
+ipgen_gui_set_spin_box_text IP_Generator Probe0_WIDTH 8
 ipgen_gui_set_spin_box_text IP_Generator Probe2_WIDTH 16
+ipgen_gui_set_spin_box_text IP_Generator Probe3_WIDTH 25
+ipgen_gui_set_spin_box_text IP_Generator Probe4_WIDTH 2
+ipgen_gui_set_spin_box_text IP_Generator Probe5_WIDTH 8
+ipgen_gui_set_spin_box_text IP_Generator Probe6_WIDTH 25
+ipgen_gui_set_spin_box_text IP_Generator Probe7_WIDTH 4
+ipgen_gui_set_spin_box_text IP_Generator Probe10_WIDTH 16
 ipgen_gui_select_window IP_Generator
-ipgen_gui_set_spin_box_text IP_Generator CWC_BUS_NUM 4
-ipgen_gui_select_tab IP_Generator Tab_0 Probe0~31 1
-ipgen_gui_set_spin_box_text IP_Generator Probe2_WIDTH 1
-ipgen_gui_set_spin_box_text IP_Generator Probe3_WIDTH 16
+ipgen_gui_select_combobox_item IP_Generator RAM_DATA_DEPTH 1024 3
 ipgen_gui_resize_window_central IP_Generator 1024 768
 ipgen_gui_click_push_button IP_Generator OK
 ipgen_gui_select_dialog IP_Generating_Options
@@ -269,4 +273,4 @@ ipgen_gui_click_push_button IP_Generator GenOptionDialog.Generate
 ipgen_gui_select_window IP_Generator
 ipgen_gui_select_dialog StandardMessageBox #IP Gen Succeeded
 ipgen_gui_click_push_button StandardMessageBox Ok
-#GUI-2000 : The IP files have been generated successfully. :{EG4S20BG256(D:/University/AL_Proj/CMOS_SDR/UDP_EG4_6.2/prj/UDP_EXAMPLE/al_ip/ChipWatcher_uidbuf/ChipWatcher_uidbuf.xml)}
+#GUI-2000 : The IP files have been generated successfully. :{EG4S20BG256(D:/University/AL_Proj/anlu/anlu/prj/UDP_EXAMPLE/al_ip/ChipWatcher_0/ChipWatcher_0.xml)}

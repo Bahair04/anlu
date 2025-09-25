@@ -1,15 +1,15 @@
-CWC_BUS_NUM : 4 : U : En :  : 1 : 256
+CWC_BUS_NUM : 11 : U : En :  : 1 : 256
 P0_Available : 1 : G : En :  :  : 
 P1_Available : 1 : G : En :  :  : 
 P2_Available : 1 : G : En :  :  : 
 P3_Available : 1 : G : En :  :  : 
-P4_Available : 0 : G : En :  :  : 
-P5_Available : 0 : G : En :  :  : 
-P6_Available : 0 : G : En :  :  : 
-P7_Available : 0 : G : En :  :  : 
-P8_Available : 0 : G : En :  :  : 
-P9_Available : 0 : G : En :  :  : 
-P10_Available : 0 : G : En :  :  : 
+P4_Available : 1 : G : En :  :  : 
+P5_Available : 1 : G : En :  :  : 
+P6_Available : 1 : G : En :  :  : 
+P7_Available : 1 : G : En :  :  : 
+P8_Available : 1 : G : En :  :  : 
+P9_Available : 1 : G : En :  :  : 
+P10_Available : 1 : G : En :  :  : 
 P11_Available : 0 : G : En :  :  : 
 P12_Available : 0 : G : En :  :  : 
 P13_Available : 0 : G : En :  :  : 
@@ -255,18 +255,18 @@ P252_Available : 0 : G : En :  :  :
 P253_Available : 0 : G : En :  :  : 
 P254_Available : 0 : G : En :  :  : 
 P255_Available : 0 : G : En :  :  : 
-Probe_Width : 16 16 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 : G : En :  :  : 
-Probe0_WIDTH : 16 : U : En :  : 1 : 1024
-Probe1_WIDTH : 16 : U : En :  : 1 : 1024
-Probe2_WIDTH : 1 : U : En :  : 1 : 1024
-Probe3_WIDTH : 1 : U : En :  : 1 : 1024
-Probe4_WIDTH : 1 : U : Dis :  : 1 : 1024
-Probe5_WIDTH : 1 : U : Dis :  : 1 : 1024
-Probe6_WIDTH : 1 : U : Dis :  : 1 : 1024
-Probe7_WIDTH : 1 : U : Dis :  : 1 : 1024
-Probe8_WIDTH : 1 : U : Dis :  : 1 : 1024
-Probe9_WIDTH : 1 : U : Dis :  : 1 : 1024
-Probe10_WIDTH : 1 : U : Dis :  : 1 : 1024
+Probe_Width : 8 1 16 25 2 8 25 4 1 1 16 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 : G : En :  :  : 
+Probe0_WIDTH : 8 : U : En :  : 1 : 1024
+Probe1_WIDTH : 1 : U : En :  : 1 : 1024
+Probe2_WIDTH : 16 : U : En :  : 1 : 1024
+Probe3_WIDTH : 25 : U : En :  : 1 : 1024
+Probe4_WIDTH : 2 : U : En :  : 1 : 1024
+Probe5_WIDTH : 8 : U : En :  : 1 : 1024
+Probe6_WIDTH : 25 : U : En :  : 1 : 1024
+Probe7_WIDTH : 4 : U : En :  : 1 : 1024
+Probe8_WIDTH : 1 : U : En :  : 1 : 1024
+Probe9_WIDTH : 1 : U : En :  : 1 : 1024
+Probe10_WIDTH : 16 : U : En :  : 1 : 1024
 Probe11_WIDTH : 1 : U : Dis :  : 1 : 1024
 Probe12_WIDTH : 1 : U : Dis :  : 1 : 1024
 Probe13_WIDTH : 1 : U : Dis :  : 1 : 1024
@@ -516,13 +516,13 @@ Probe0_Data_Enable : 1 : U : En :  :  :
 Probe1_Data_Enable : 1 : U : En :  :  : 
 Probe2_Data_Enable : 1 : U : En :  :  : 
 Probe3_Data_Enable : 1 : U : En :  :  : 
-Probe4_Data_Enable : 1 : U : Dis :  :  : 
-Probe5_Data_Enable : 1 : U : Dis :  :  : 
-Probe6_Data_Enable : 1 : U : Dis :  :  : 
-Probe7_Data_Enable : 1 : U : Dis :  :  : 
-Probe8_Data_Enable : 1 : U : Dis :  :  : 
-Probe9_Data_Enable : 1 : U : Dis :  :  : 
-Probe10_Data_Enable : 1 : U : Dis :  :  : 
+Probe4_Data_Enable : 1 : U : En :  :  : 
+Probe5_Data_Enable : 1 : U : En :  :  : 
+Probe6_Data_Enable : 1 : U : En :  :  : 
+Probe7_Data_Enable : 1 : U : En :  :  : 
+Probe8_Data_Enable : 1 : U : En :  :  : 
+Probe9_Data_Enable : 1 : U : En :  :  : 
+Probe10_Data_Enable : 1 : U : En :  :  : 
 Probe11_Data_Enable : 1 : U : Dis :  :  : 
 Probe12_Data_Enable : 1 : U : Dis :  :  : 
 Probe13_Data_Enable : 1 : U : Dis :  :  : 
@@ -773,13 +773,13 @@ Probe0_Trigger_Enable : 1 : U : En :  :  :
 Probe1_Trigger_Enable : 1 : U : En :  :  : 
 Probe2_Trigger_Enable : 1 : U : En :  :  : 
 Probe3_Trigger_Enable : 1 : U : En :  :  : 
-Probe4_Trigger_Enable : 1 : U : Dis :  :  : 
-Probe5_Trigger_Enable : 1 : U : Dis :  :  : 
-Probe6_Trigger_Enable : 1 : U : Dis :  :  : 
-Probe7_Trigger_Enable : 1 : U : Dis :  :  : 
-Probe8_Trigger_Enable : 1 : U : Dis :  :  : 
-Probe9_Trigger_Enable : 1 : U : Dis :  :  : 
-Probe10_Trigger_Enable : 1 : U : Dis :  :  : 
+Probe4_Trigger_Enable : 1 : U : En :  :  : 
+Probe5_Trigger_Enable : 1 : U : En :  :  : 
+Probe6_Trigger_Enable : 1 : U : En :  :  : 
+Probe7_Trigger_Enable : 1 : U : En :  :  : 
+Probe8_Trigger_Enable : 1 : U : En :  :  : 
+Probe9_Trigger_Enable : 1 : U : En :  :  : 
+Probe10_Trigger_Enable : 1 : U : En :  :  : 
 Probe11_Trigger_Enable : 1 : U : Dis :  :  : 
 Probe12_Trigger_Enable : 1 : U : Dis :  :  : 
 Probe13_Trigger_Enable : 1 : U : Dis :  :  : 
@@ -1026,7 +1026,7 @@ Probe253_Trigger_Enable : 1 : U : Dis :  :  :
 Probe254_Trigger_Enable : 1 : U : Dis :  :  : 
 Probe255_Trigger_Enable : 1 : U : Dis :  :  : 
 Probe_Trigger_Enable : 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 : G : En :  :  : 
-RAM_DATA_DEPTH : 4096 : U : En : 128;;256;;512;;1024;;2048;;4096;;8192;;16384;;32768;;65536 :  : 
+RAM_DATA_DEPTH : 1024 : U : En : 128;;256;;512;;1024;;2048;;4096;;8192;;16384;;32768;;65536 :  : 
 INPUT_PIPE_NUM : 0 : U : En : 0;;1;;2;;3;;4;;5;;6 : 0 : 6
 OUTPUT_PIPE_NUM : 0 : U : En : 0;;1;;2;;3;;4;;5;;6 : 0 : 6
 Capture_Control : 0 : U : En :  :  : 
