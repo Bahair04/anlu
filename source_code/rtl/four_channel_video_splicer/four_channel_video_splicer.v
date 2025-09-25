@@ -242,13 +242,13 @@ wire    [AXI_DATA_WIDTH-1'b1:0]     fdma_wdata3; //wdataÒªÁ¢¿ÌÊä³ö
 wire                                fdma_wvalid3;
 uidbuf #(
     .SDRAM_MAX_BURST_LEN 	(256                ),
-    .VIDEO_ENABLE        	(1                  ),
+    .VIDEO_ENABLE        	(0                  ),
     .ENABLE_WRITE        	(1                  ),
     .ENABLE_READ         	(0                  ),
     .AXI_DATA_WIDTH      	(AXI_DATA_WIDTH     ),
     .AXI_ADDR_WIDTH      	(AXI_ADDR_WIDTH     ),
     
-    .W_BUFDEPTH          	(1024               ),
+    .W_BUFDEPTH          	(4096               ),
     .W_DATAWIDTH         	(16                 ),
     .W_BASEADDR          	(1024*384*2         ),
     .W_DSIZEBITS         	(21                 ),
@@ -259,10 +259,10 @@ uidbuf #(
 u_uidbuf_3(
     .ui_clk       	(fdma_clk0     ),
     .ui_rstn      	(sdr_init_done ),
-    .W_wclk_i     	(ds_vid_clk3   ),
-    .W_FS_i       	(ds_vid_vs3    ),
-    .W_wren_i     	(ds_vid_de3    ),
-    .W_data_i     	(ds_vid_data3  ),
+    .W_wclk_i     	(vid_clk3   ),
+    .W_FS_i       	(vid_vs3    ),
+    .W_wren_i     	(vid_de3    ),
+    .W_data_i     	(vid_data3  ),
     .W_sync_cnt_o 	(W_sync_cnt_o3 ),
     .W_buf_i      	(W_sync_cnt_o3 ),
 

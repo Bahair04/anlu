@@ -5,15 +5,15 @@ module tb_udp_rx_buf;
 // udp_rx_buf Parameters
 parameter PERIOD      = 8          ;
 parameter FRAME_HEAD  = 32'hF3ED7A93;
-parameter APP_RX_DATA_TOTAL = 'd60;
+parameter APP_RX_DATA_TOTAL = 'd54;
 // udp_rx_buf Inputs
 reg   rstn                                 = 0 ;
 reg   app_rx_clk                           = 1 ;
 reg   app_rx_data_valid                    = 0 ;
 reg   [7 : 0]  app_rx_data                 = 0 ;
-reg   [15 : 0]  app_rx_data_length         = 0 ;
-reg   [24 : 0]  app_rx_data_total          = APP_RX_DATA_TOTAL ;
-reg   vid_clk                              = 0 ;
+reg   [15 : 0]  app_rx_data_length         ;
+reg   [24 : 0]  app_rx_data_total          = APP_RX_DATA_TOTAL;
+wire  vid_clk                              ;
 
 // udp_rx_buf Outputs
 wire  vid_vs                               ;
@@ -35,7 +35,10 @@ end
 integer i = 0;
 initial begin
     repeat (60) @(posedge app_rx_clk);
+    app_rx_data_length <= 'd17;
     app_rx_data_valid <= 1'b1;
+    // app_rx_data <= 8'h00;
+    // @(posedge app_rx_clk);
     app_rx_data <= 8'h01;
     @(posedge app_rx_clk);
     app_rx_data <= 8'h02;
@@ -54,6 +57,12 @@ initial begin
         app_rx_data <= i;
         i <= i + 1'b1;
         @(posedge app_rx_clk);
+        if (i % 9 == 0) begin
+            app_rx_data_valid <= 1'b0;
+            repeat (20) @(posedge app_rx_clk);
+            app_rx_data_length <= 'd9;
+            app_rx_data_valid <= 1'b1;
+        end
     end
     app_rx_data_valid <= 1'b0;
     repeat (20) @(posedge app_rx_clk);

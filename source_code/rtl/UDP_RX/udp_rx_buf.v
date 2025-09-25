@@ -39,25 +39,26 @@ reg [24 : 0]            app_rx_data_cnt;
 
 reg [3 : 0]             dly_cnt;
 
+reg [15 : 0]            udp_data_cnt;
 reg                     app_rx_data_en;
 reg [1 : 0]             comb_data_cnt;
 reg [15 : 0]            comb_data;
 
 
-ChipWatcher_0 u_ChipWatcher_0(
-    .probe0(app_rx_data),
-    .probe1(app_rx_data_valid),
-    .probe2(app_rx_data_length),
-    .probe3(app_rx_data_total),
-    .probe4(state),
-    .probe5(app_rx_data_d[9]),
-    .probe6(app_rx_data_cnt),
-    .probe7(dly_cnt),
-    .probe8(vid_de),
-    .probe9(vid_vs),
-    .probe10(vid_data),
-    .clk(app_rx_clk)
-);
+// ChipWatcher_0 u_ChipWatcher_0(
+//     .probe0(app_rx_data),
+//     .probe1(app_rx_data_valid),
+//     .probe2(app_rx_data_length),
+//     .probe3(app_rx_data_total),
+//     .probe4(state),
+//     .probe5(app_rx_data_d[9]),
+//     .probe6(app_rx_data_cnt),
+//     .probe7(dly_cnt),
+//     .probe8(vid_de),
+//     .probe9(vid_vs),
+//     .probe10(vid_data),
+//     .clk(app_rx_clk)
+// );
 
 always @(posedge app_rx_clk or negedge rstn) begin
     if (!rstn)
@@ -108,6 +109,20 @@ end
 
 always @(posedge app_rx_clk or negedge rstn) begin
     if (!rstn)
+        udp_data_cnt <= 'd0;
+    else if (app_rx_data_valid_d[9]) begin
+        if (udp_data_cnt == app_rx_data_length - 1'b1)
+            udp_data_cnt <= 'd0;
+        else
+            udp_data_cnt <= udp_data_cnt + 1'b1;
+    end
+    else 
+        udp_data_cnt <= 'd0;
+end
+
+
+always @(posedge app_rx_clk or negedge rstn) begin
+    if (!rstn)
         app_rx_data_cnt <= 'd0;
     else if (dly_cnt >= 'd9 && app_rx_data_valid_d[9]) begin
         if (app_rx_data_cnt == app_rx_data_total - 1'b1)
@@ -116,7 +131,8 @@ always @(posedge app_rx_clk or negedge rstn) begin
             app_rx_data_cnt <= app_rx_data_cnt + 1'b1;
     end
 end
-
+wire [7 : 0] app_rxdata = app_rx_data_d[9];
+wire         app_rxdata_valid = app_rx_data_valid_d[9];
 always @(posedge app_rx_clk or negedge rstn) begin
     if (!rstn)
         dly_cnt <= 'd0;
@@ -139,15 +155,11 @@ always @(posedge app_rx_clk or negedge rstn) begin
         vid_vs <= 1'b0;
 end
 
-always @(posedge app_rx_clk or negedge rstn) begin
+always @(*) begin
     if (!rstn)
         app_rx_data_en <= 1'b0;
-    else if (state == REC && dly_cnt >= 'd8) begin
-        if (app_rx_data_cnt == app_rx_data_total - 1'b1)
-            app_rx_data_en <= 1'b0;
-        else 
-            app_rx_data_en <= 1'b1;
-    end
+    else if (state == REC && dly_cnt >= 'd9) 
+        app_rx_data_en <= app_rx_data_valid_d[9];
     else 
         app_rx_data_en <= 1'b0;
 end
@@ -171,7 +183,7 @@ end
 always @(posedge app_rx_clk or negedge rstn) begin
     if (!rstn)
         vid_de <= 1'b0;
-    else if (state == REC && comb_data_cnt == 'd1)
+    else if (state == REC && comb_data_cnt == 'd1 && app_rx_data_valid_d[9])
         vid_de <= 1'b1;
     else 
         vid_de <= 1'b0;
