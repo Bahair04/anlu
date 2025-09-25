@@ -4,10 +4,11 @@
    Executable = D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/bin/run.exe
    Built at =   16:32:07 Jun 12 2025
    Run by =     1
-   Run Date =   Wed Sep 24 21:29:15 2025
+   Run Date =   Thu Sep 25 10:02:14 2025
 
    Run on =     LAPTOP-EUGMKLPQ
 ============================================================
+PRJ-7001 CRITICAL-WARNING: ../../../../source_code/rtl/UDP_RX/udp_rx_buf_tb.v: Can't find this file, try to add this file again.
 USR-6001 WARNING: No pins matched 'get_pins u_clk_gen/u_pll_0/pll_inst.clkc[1]'
 USR-6001 WARNING: No nets matched 'get_nets udp_clk'
 USR-8108 CRITICAL-WARNING: create_generated_clock: cannot define a generated clock without targets.

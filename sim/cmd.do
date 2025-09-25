@@ -6,7 +6,7 @@ vmap work work
 vlog -timescale 1ps/1ps -f  compile.f                                                                     
                                                        
 ## part 3: sim
-vsim -L D:/modeltech64_10.7/anlogic/EG4S -gui -voptargs=+acc work.tb_udp_fdma_ddr
+vsim -L D:/modeltech64_10.7/anlogic/EG4S -gui -voptargs=+acc work.tb_udp_rx_buf
 
 #vsim -voptargs=+acc work.fdma_ddr_test_tb                              
 
