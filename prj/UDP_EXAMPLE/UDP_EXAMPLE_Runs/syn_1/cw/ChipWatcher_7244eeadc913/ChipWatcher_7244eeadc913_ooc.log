@@ -4,7 +4,7 @@
    Executable = D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/bin/run.exe
    Built at =   16:32:07 Jun 12 2025
    Run by =     1
-   Run Date =   Fri Sep 26 18:13:36 2025
+   Run Date =   Fri Sep 26 21:22:30 2025
 
    Run on =     LAPTOP-EUGMKLPQ
 ============================================================
@@ -60,12 +60,12 @@ RUN-1002 : start command "optimize_rtl"
 RUN-1001 : Open license file D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/license/Anlogic.lic
 SYN-1001 : Stage 1 | Optimize RTL
 SYN-1001 : Stage 1.1 | Check Design Sanity
-SYN-1001 : End Stage 1.1 | Check Design Sanity; Time: 0.002437s wall, 0.000000s user + 0.000000s system = 0.000000s CPU (n/a%); Memory(MB): used = 113, reserved = 101, peak = 113;
+SYN-1001 : End Stage 1.1 | Check Design Sanity; Time: 0.001348s wall, 0.000000s user + 0.000000s system = 0.000000s CPU (n/a%); Memory(MB): used = 111, reserved = 101, peak = 111;
 
 SYN-1079 : finish stage Check Design Sanity. Total instances: 5624, Total nets: 12468.
 
 SYN-1001 : Stage 1.2 | Initialize Design
-SYN-1001 : End Stage 1.2 | Initialize Design; Time: 0.189378s wall, 0.046875s user + 0.000000s system = 0.046875s CPU (24.8%); Memory(MB): used = 113, reserved = 101, peak = 113;
+SYN-1001 : End Stage 1.2 | Initialize Design; Time: 0.182900s wall, 0.046875s user + 0.000000s system = 0.046875s CPU (25.6%); Memory(MB): used = 111, reserved = 101, peak = 111;
 
 SYN-1079 : finish stage Initialize Design. Total instances: 2419, Total nets: 7687.
 
@@ -77,12 +77,12 @@ RUN-1001 :           instance           |  keep_hierarchy  |         down_module
 RUN-1001 : ------------------------------------------------------------------------------------------------------------
 RUN-1001 :   wrapper_cwc_top/U_cwc_ram  |       true       | anlogic05_cwc_ram(DATA_...  | D:\Anlogic\TD_6.2.1_Eng...  
 RUN-1001 : ------------------------------------------------------------------------------------------------------------
-SYN-1001 : End Stage 1.3 | Flatten Module; Time: 0.024924s wall, 0.000000s user + 0.000000s system = 0.000000s CPU (n/a%); Memory(MB): used = 113, reserved = 101, peak = 113;
+SYN-1001 : End Stage 1.3 | Flatten Module; Time: 0.023195s wall, 0.000000s user + 0.000000s system = 0.000000s CPU (n/a%); Memory(MB): used = 111, reserved = 101, peak = 111;
 
 SYN-1079 : finish stage Flatten Module. Total instances: 3421, Total nets: 6005.
 
 SYN-1001 : Stage 1.4 | Uniform Instance
-SYN-1001 : End Stage 1.4 | Uniform Instance; Time: 0.008377s wall, 0.000000s user + 0.000000s system = 0.000000s CPU (n/a%); Memory(MB): used = 109, reserved = 105, peak = 113;
+SYN-1001 : End Stage 1.4 | Uniform Instance; Time: 0.006419s wall, 0.000000s user + 0.000000s system = 0.000000s CPU (n/a%); Memory(MB): used = 107, reserved = 105, peak = 111;
 
 SYN-1079 : finish stage Uniform Instance. Total instances: 3033, Total nets: 5617.
 
@@ -95,7 +95,7 @@ SYN-1026 : Infer Logic BRAM(wrapper_cwc_top/U_cwc_ram/ramread0_syn_4)
 	 port b size: 1024 x 113	 write mode: NORMAL
 SYN-1023 : Infer 0 Logic DRAMs, 1 Logic BRAMs.
 SYN-1016 : Merged 132 instances.
-SYN-1001 : End Stage 1.5 | Optimize Design; Time: 0.182339s wall, 0.078125s user + 0.000000s system = 0.078125s CPU (42.8%); Memory(MB): used = 113, reserved = 109, peak = 114;
+SYN-1001 : End Stage 1.5 | Optimize Design; Time: 0.151745s wall, 0.078125s user + 0.000000s system = 0.078125s CPU (51.5%); Memory(MB): used = 111, reserved = 110, peak = 112;
 
 SYN-1079 : finish stage Optimize Design. Total instances: 4657, Total nets: 5213.
 
@@ -110,31 +110,31 @@ SYN-1015 : Optimize round 2, 16 better
 SYN-3010 : Optimized 112 DFF(s)
 SYN-1014 : Optimize round 1
 SYN-1015 : Optimize round 1, 0 better
-SYN-1001 : End Stage 1.6 | Optimize Iteratively; Time: 0.712347s wall, 0.421875s user + 0.000000s system = 0.421875s CPU (59.2%); Memory(MB): used = 134, reserved = 128, peak = 140;
+SYN-1001 : End Stage 1.6 | Optimize Iteratively; Time: 0.642537s wall, 0.375000s user + 0.000000s system = 0.375000s CPU (58.4%); Memory(MB): used = 132, reserved = 128, peak = 138;
 
 SYN-1079 : finish stage Optimize Iteratively. Total instances: 4544, Total nets: 5100.
 
 SYN-1001 : Stage 1.7 | Check Design
-SYN-1001 : End Stage 1.7 | Check Design; Time: 0.001179s wall, 0.000000s user + 0.000000s system = 0.000000s CPU (n/a%); Memory(MB): used = 134, reserved = 128, peak = 140;
+SYN-1001 : End Stage 1.7 | Check Design; Time: 0.000406s wall, 0.000000s user + 0.000000s system = 0.000000s CPU (n/a%); Memory(MB): used = 132, reserved = 128, peak = 138;
 
 SYN-1079 : finish stage Check Design. Total instances: 4544, Total nets: 5100.
 
-SYN-1001 : End Stage 1 | Optimize RTL; Time: 1.121681s wall, 0.546875s user + 0.000000s system = 0.546875s CPU (48.8%); Memory(MB): used = 134, reserved = 128, peak = 140;
+SYN-1001 : End Stage 1 | Optimize RTL; Time: 1.008987s wall, 0.500000s user + 0.000000s system = 0.500000s CPU (49.6%); Memory(MB): used = 132, reserved = 128, peak = 138;
 
 SYN-1079 : finish stage Optimize RTL. Total instances: 4544, Total nets: 5100.
 
-RUN-1003 : finish command "optimize_rtl" in  1.131066s wall, 0.546875s user + 0.000000s system = 0.546875s CPU (48.4%)
+RUN-1003 : finish command "optimize_rtl" in  1.017239s wall, 0.515625s user + 0.000000s system = 0.515625s CPU (50.7%)
 
-RUN-1004 : used memory is 134 MB, reserved memory is 128 MB, peak memory is 140 MB
+RUN-1004 : used memory is 132 MB, reserved memory is 128 MB, peak memory is 138 MB
 RUN-1002 : start command "map_macro"
 SYN-1001 : Stage 2 | Map Reg
-SYN-1001 : End Stage 2 | Map Reg; Time: 0.043366s wall, 0.015625s user + 0.000000s system = 0.015625s CPU (36.0%); Memory(MB): used = 132, reserved = 125, peak = 140;
+SYN-1001 : End Stage 2 | Map Reg; Time: 0.039048s wall, 0.000000s user + 0.000000s system = 0.000000s CPU (n/a%); Memory(MB): used = 130, reserved = 125, peak = 138;
 
 SYN-1079 : finish stage Map Reg. Total instances: 4544, Total nets: 5100.
 
 SYN-1001 : Stage 3 | Map IO
 SYN-2001 : Map 0 IOs to PADs of model 'ChipWatcher_7244eeadc913'
-SYN-1001 : End Stage 3 | Map IO; Time: 0.002919s wall, 0.000000s user + 0.000000s system = 0.000000s CPU (n/a%); Memory(MB): used = 132, reserved = 125, peak = 140;
+SYN-1001 : End Stage 3 | Map IO; Time: 0.001912s wall, 0.000000s user + 0.000000s system = 0.000000s CPU (n/a%); Memory(MB): used = 130, reserved = 125, peak = 138;
 
 SYN-1001 : Stage 4 | Map Macro
 RUN-1002 : start command "update_pll_param -module ChipWatcher_7244eeadc913"
@@ -152,7 +152,7 @@ SYN-2501 : Optimize round 1
 SYN-2501 : Optimize round 1, 0 better
 SYN-2501 : Map 26 macro adder(s)
 SYN-1016 : Merged 11 instances.
-SYN-1001 : End Stage 4 | Map Macro; Time: 0.149972s wall, 0.046875s user + 0.000000s system = 0.046875s CPU (31.3%); Memory(MB): used = 137, reserved = 130, peak = 140;
+SYN-1001 : End Stage 4 | Map Macro; Time: 0.128147s wall, 0.062500s user + 0.000000s system = 0.062500s CPU (48.8%); Memory(MB): used = 135, reserved = 130, peak = 138;
 
 SYN-1079 : finish stage Map Macro. Total instances: 5392, Total nets: 5950.
 
@@ -161,8 +161,8 @@ SYN-1001 : Stage 5 | Map Gate
 SYN-2581 : Mapping with K=5, #lut = 633 (3.26), #lev = 5 (1.26), #crit_level = 0
 SYN-2551 : Post LUT mapping optimization.
 SYN-2581 : Mapping with K=5, #lut = 626 (3.30), #lev = 5 (1.25), #crit_level = 0
-SYN-3001 : Logic optimization opt = 0.12 sec, map = 0.04 sec, post map opt = 0.12 sec.
-SYN-1001 : End Stage 5 | Map Gate; Time: 0.318293s wall, 0.140625s user + 0.015625s system = 0.156250s CPU (49.1%); Memory(MB): used = 150, reserved = 133, peak = 150;
+SYN-3001 : Logic optimization opt = 0.12 sec, map = 0.04 sec, post map opt = 0.11 sec.
+SYN-1001 : End Stage 5 | Map Gate; Time: 0.302854s wall, 0.093750s user + 0.000000s system = 0.093750s CPU (31.0%); Memory(MB): used = 148, reserved = 133, peak = 148;
 
 RUN-1002 : start command "pack"
 SYN-1001 : Packing model "ChipWatcher_7244eeadc913" ...

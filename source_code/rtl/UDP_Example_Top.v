@@ -163,9 +163,6 @@ wire        	                    vid_vs_udp;
 wire        	                    vid_de_udp;
 wire [15:0] 	                    vid_data_udp;
 
-
-
-
 //*------------------------------------------------------------
 //*------------------------------------------------------------
 //* main_process
@@ -252,7 +249,7 @@ uisetvbuf uisetvbuf_i
 );
 uidbuf #(
     .SDRAM_MAX_BURST_LEN 	(256                ),
-    .VIDEO_ENABLE        	(0                  ),
+    .VIDEO_ENABLE        	(1                  ),
     .ENABLE_WRITE        	(1                  ),
     .ENABLE_READ         	(1                  ),
     .AXI_DATA_WIDTH      	(32                 ),
@@ -262,8 +259,8 @@ uidbuf #(
     .W_DATAWIDTH         	(16                 ),
     .W_BASEADDR          	(0                  ),
     .W_DSIZEBITS         	(21                 ),
-    .W_XSIZE             	(1024               ),
-    .W_YSIZE             	(768                ),
+    .W_XSIZE             	(512               ),
+    .W_YSIZE             	(384                ),
     .W_BUFSIZE           	(3                  ),
     .W_XSTRIDE           	(0                  ),
 
@@ -271,8 +268,8 @@ uidbuf #(
     .R_DATAWIDTH         	(16                 ),
     .R_BASEADDR          	(0                  ),
     .R_DSIZEBITS         	(21                 ),
-    .R_XSIZE             	(1024               ),
-    .R_YSIZE             	(768                ),
+    .R_XSIZE             	(512               ),
+    .R_YSIZE             	(384                ),
     .R_BUFSIZE           	(3                  ),
     .R_XSTRIDE           	(0                  ))
 u_uidbuf_1(
@@ -294,7 +291,7 @@ u_uidbuf_1(
 
     .R_rclk_i     	(vid_clk       ),
     .R_FS_i       	(vid_vs        ),
-    .R_rden_i     	(vid_de        ),
+    .R_rden_i     	(vtc2_de        ),
     .R_data_o     	(vid_data      ),
     .R_buf_i      	(R_buf_i       ),
 
@@ -417,8 +414,8 @@ uivtc#(
     .V_SyncStart(`V_DISP+`V_BP),         //视频时间参数,场同步开始，即多少行数后开始产生场同步信号 
     .V_SyncEnd (`V_DISP+`V_BP+`V_SYNC),        //视频时间参数,场同步结束，多少行后停止产生长同步信号
     .V_FrameSize(`V_DISP+`V_BP+`V_SYNC+`V_FP),     //视频时间参数,场视频信号，一帧视频信号总计占用的行数量    
-    .H2_ActiveSize('d1023),
-    .V2_ActiveSize('d768)
+    .H2_ActiveSize('d512),
+    .V2_ActiveSize('d384)
 ) uivtc_inst(
     .I_vtc_rstn(vtc_pll_lock),
     .I_vtc_clk(vid_clk),
@@ -509,7 +506,7 @@ u_udp_rx_buf(
 	.app_rx_data_valid  	( app_rx_data_valid   ),
 	.app_rx_data        	( app_rx_data         ),
 	.app_rx_data_length 	( app_rx_data_length  ),
-	.app_rx_data_total  	( 'd1024 * 'd768 * 'd2     ),
+	.app_rx_data_total  	( 'd512 * 'd384 * 'd2     ),
 	.vid_clk            	( vid_clk_udp         ),
 	.vid_vs             	( vid_vs_udp          ),
 	.vid_de             	( vid_de_udp          ),

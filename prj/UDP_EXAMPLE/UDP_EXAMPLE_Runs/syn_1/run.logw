@@ -4,7 +4,7 @@
    Executable = D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/bin/run.exe
    Built at =   16:32:07 Jun 12 2025
    Run by =     1
-   Run Date =   Fri Sep 26 18:13:34 2025
+   Run Date =   Fri Sep 26 21:39:59 2025
 
    Run on =     LAPTOP-EUGMKLPQ
 ============================================================
@@ -207,9 +207,6 @@ SYN-5013 WARNING: Undriven net: model "UDP_Example_Top" / net "u_udp_top/u7_rx_f
 		the net's pin: pin "dib[0]" in ../../../../source_code/rtl/ETH/RAMB16_S9_S9.v(45)
 SYN-5025 WARNING: Using 0 for all undriven pins and nets
 USR-6001 WARNING: No pins matched 'get_pins u_clk_gen/u_pll_0/pll_inst.clkc[1]'
-USR-6001 WARNING: No nets matched 'get_nets udp_clk'
-USR-8108 CRITICAL-WARNING: create_generated_clock: cannot define a generated clock without targets.
-USR-8159 CRITICAL-WARNING: Command create_generated_clock -name {udp_clk_125m} -source [get_pins {u_clk_gen/u_pll_0/pll_inst.clkc[1]}] -master_clock {pll_inst_125M_1} -divide_by 1.000 -phase 0.000 -add [get_nets {udp_clk}] in D:/University/AL_Proj/anlu/anlu/source_code/constraints/UDP.sdc(10) fails.
 USR-8130 CRITICAL-WARNING: No clock match the pattern: u_clk_gen/u_pll_0/pll_inst.clkc\[0\].
 USR-8124 CRITICAL-WARNING: Rename_clock: please specify object list.
 USR-8159 CRITICAL-WARNING: Command rename_clock -name {pll_inst_125M_0} [get_clocks {u_clk_gen/u_pll_0/pll_inst.clkc[0]}] in D:/University/AL_Proj/anlu/anlu/source_code/constraints/UDP.sdc(5) fails.
@@ -219,13 +216,15 @@ USR-8159 CRITICAL-WARNING: Command rename_clock -name {pll_inst_125M_1} [get_clo
 USR-8130 CRITICAL-WARNING: No clock match the pattern: u_clk_gen/u_pll_0/pll_inst.clkc\[3\].
 USR-8124 CRITICAL-WARNING: Rename_clock: please specify object list.
 USR-8159 CRITICAL-WARNING: Command rename_clock -name {pll_inst_25M} [get_clocks {u_clk_gen/u_pll_0/pll_inst.clkc[3]}] in D:/University/AL_Proj/anlu/anlu/source_code/constraints/UDP.sdc(8) fails.
+USR-6001 WARNING: No pins matched 'get_pins u_clk_gen/u_pll_0/pll_inst.clkc[1]'
+USR-8171 CRITICAL-WARNING: create_generated_clock: master clock pll_inst_125M_1 is not found. Please specify valid master clock name.
+USR-8159 CRITICAL-WARNING: Command create_generated_clock -name {udp_clk_125m} -source [get_pins {u_clk_gen/u_pll_0/pll_inst.clkc[1]}] -master_clock {pll_inst_125M_1} -divide_by 1.000 -phase 0.000 -add [get_nets {udp_clk}] in D:/University/AL_Proj/anlu/anlu/source_code/constraints/UDP.sdc(10) fails.
 USR-8130 CRITICAL-WARNING: No clock match the pattern: udp_clk_125m.
 USR-8208 CRITICAL-WARNING: Clock group is empty.
 USR-8159 CRITICAL-WARNING: Command set_clock_groups -exclusive -group [get_clocks {udp_clk_125m}] in D:/University/AL_Proj/anlu/anlu/source_code/constraints/UDP.sdc(13) fails.
 SYN-5084 WARNING: Register "app_fdma_inst/rburst_len[0]" in ../../../../source_code/rtl/uiappfdma/uiappfdma.v(148) is described with both an asynchronous reset/set and an initialization value of the opposite polarity. Ignore the initialization value '0'
 SYN-5084 WARNING: Register "app_fdma_inst/wburst_len[0]" in ../../../../source_code/rtl/uiappfdma/uiappfdma.v(84) is described with both an asynchronous reset/set and an initialization value of the opposite polarity. Ignore the initialization value '0'
 SYN-6577 WARNING: The clock signal "u2_ram/SDRAM_CLK" is added with the synthetic instruction (keep/mark_debug/dont_touch/max_fanout), which may create additional logic on this net
-SYN-6577 WARNING: The clock signal "u_udp_rx_buf/app_rx_clk" is added with the synthetic instruction (keep/mark_debug/dont_touch/max_fanout), which may create additional logic on this net
 SYN-6577 WARNING: The clock signal "u_udp_top/temac_clk" is added with the synthetic instruction (keep/mark_debug/dont_touch/max_fanout), which may create additional logic on this net
 SYN-6577 WARNING: The clock signal "u_udp_top/udp_clk" is added with the synthetic instruction (keep/mark_debug/dont_touch/max_fanout), which may create additional logic on this net
 SYN-6562 WARNING: The init value of "u2_udp_loopback/udp_packet_fifo/u_anlogic_soft_async_fifo/inst(../../../../source_code/rtl/ETH/udp_ip_protocol_stack_merge.enc.v(0))" will be ignored since gate eram_init is set to off

@@ -486,6 +486,7 @@
             </File>
             <File Path="al_ip/ChipWatcher_0/ChipWatcher_0.xml">
                 <FileInfo>
+                    <Attr Name="AutoExcluded" Val="true"/>
                     <Attr Name="UsedInSyn" Val="true"/>
                     <Attr Name="UsedInP&R" Val="true"/>
                     <Attr Name="BelongTo" Val="design_1"/>
