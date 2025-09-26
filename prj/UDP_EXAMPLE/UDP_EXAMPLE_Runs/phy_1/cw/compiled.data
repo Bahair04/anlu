@@ -32,19 +32,21 @@
                 <net_in_bus name="[1]" original_name="u_udp_rx_buf/app_rx_data_length[1]" synchronizable="true" color="#00ff00"/>
                 <net_in_bus name="[0]" original_name="u_udp_rx_buf/app_rx_data_length[0]" synchronizable="true" color="#00ff00"/>
             </bus>
+            <bus name="u_udp_rx_buf/dly_cnt[9:0]" original_name="u_udp_rx_buf/dly_cnt[9:0]" bus_radix="3" synchronizable="true" color="#00ff00">
+                <net_in_bus name="[9]" original_name="u_udp_rx_buf/dly_cnt[9]" synchronizable="true" color="#00ff00"/>
+                <net_in_bus name="[8]" original_name="u_udp_rx_buf/dly_cnt[8]" synchronizable="true" color="#00ff00"/>
+                <net_in_bus name="[7]" original_name="u_udp_rx_buf/dly_cnt[7]" synchronizable="true" color="#00ff00"/>
+                <net_in_bus name="[6]" original_name="u_udp_rx_buf/dly_cnt[6]" synchronizable="true" color="#00ff00"/>
+                <net_in_bus name="[5]" original_name="u_udp_rx_buf/dly_cnt[5]" synchronizable="true" color="#00ff00"/>
+                <net_in_bus name="[4]" original_name="u_udp_rx_buf/dly_cnt[4]" synchronizable="true" color="#00ff00"/>
+                <net_in_bus name="[3]" original_name="u_udp_rx_buf/dly_cnt[3]" synchronizable="true" color="#00ff00"/>
+                <net_in_bus name="[2]" original_name="u_udp_rx_buf/dly_cnt[2]" synchronizable="true" color="#00ff00"/>
+                <net_in_bus name="[1]" original_name="u_udp_rx_buf/dly_cnt[1]" synchronizable="true" color="#00ff00"/>
+                <net_in_bus name="[0]" original_name="u_udp_rx_buf/dly_cnt[0]" synchronizable="true" color="#00ff00"/>
+            </bus>
             <bus name="u_udp_rx_buf/state[1:0]" original_name="u_udp_rx_buf/state[1:0]" bus_radix="0" synchronizable="true" color="#00ff00">
                 <net_in_bus name="[1]" original_name="u_udp_rx_buf/state[1]" synchronizable="true" color="#00ff00"/>
                 <net_in_bus name="[0]" original_name="u_udp_rx_buf/state[0]" synchronizable="true" color="#00ff00"/>
-            </bus>
-            <bus name="u_udp_rx_buf/app_rx_data_d[9][7:0]" original_name="u_udp_rx_buf/app_rx_data_d[9][7:0]" bus_radix="4" synchronizable="true" color="#00ff00">
-                <net_in_bus name="[7]" original_name="u_udp_rx_buf/app_rx_data_d[9][7]" synchronizable="true" color="#00ff00"/>
-                <net_in_bus name="[6]" original_name="u_udp_rx_buf/app_rx_data_d[9][6]" synchronizable="true" color="#00ff00"/>
-                <net_in_bus name="[5]" original_name="u_udp_rx_buf/app_rx_data_d[9][5]" synchronizable="true" color="#00ff00"/>
-                <net_in_bus name="[4]" original_name="u_udp_rx_buf/app_rx_data_d[9][4]" synchronizable="true" color="#00ff00"/>
-                <net_in_bus name="[3]" original_name="u_udp_rx_buf/app_rx_data_d[9][3]" synchronizable="true" color="#00ff00"/>
-                <net_in_bus name="[2]" original_name="u_udp_rx_buf/app_rx_data_d[9][2]" synchronizable="true" color="#00ff00"/>
-                <net_in_bus name="[1]" original_name="u_udp_rx_buf/app_rx_data_d[9][1]" synchronizable="true" color="#00ff00"/>
-                <net_in_bus name="[0]" original_name="u_udp_rx_buf/app_rx_data_d[9][0]" synchronizable="true" color="#00ff00"/>
             </bus>
             <bus name="u_udp_rx_buf/app_rx_data_cnt[24:0]" original_name="u_udp_rx_buf/app_rx_data_cnt[24:0]" bus_radix="3" synchronizable="true" color="#00ff00">
                 <net_in_bus name="[24]" original_name="u_udp_rx_buf/app_rx_data_cnt[24]" synchronizable="true" color="#00ff00"/>
@@ -72,12 +74,6 @@
                 <net_in_bus name="[2]" original_name="u_udp_rx_buf/app_rx_data_cnt[2]" synchronizable="true" color="#00ff00"/>
                 <net_in_bus name="[1]" original_name="u_udp_rx_buf/app_rx_data_cnt[1]" synchronizable="true" color="#00ff00"/>
                 <net_in_bus name="[0]" original_name="u_udp_rx_buf/app_rx_data_cnt[0]" synchronizable="true" color="#00ff00"/>
-            </bus>
-            <bus name="u_udp_rx_buf/dly_cnt[3:0]" original_name="u_udp_rx_buf/dly_cnt[3:0]" bus_radix="0" synchronizable="true" color="#00ff00">
-                <net_in_bus name="[3]" original_name="u_udp_rx_buf/dly_cnt[3]" synchronizable="true" color="#00ff00"/>
-                <net_in_bus name="[2]" original_name="u_udp_rx_buf/dly_cnt[2]" synchronizable="true" color="#00ff00"/>
-                <net_in_bus name="[1]" original_name="u_udp_rx_buf/dly_cnt[1]" synchronizable="true" color="#00ff00"/>
-                <net_in_bus name="[0]" original_name="u_udp_rx_buf/dly_cnt[0]" synchronizable="true" color="#00ff00"/>
             </bus>
             <net name="u_udp_rx_buf/vid_vs" original_name="u_udp_rx_buf/vid_vs" synchronizable="true" color="#00ff00"/>
             <net name="u_udp_rx_buf/vid_de" original_name="u_udp_rx_buf/vid_de" synchronizable="true" color="#00ff00"/>

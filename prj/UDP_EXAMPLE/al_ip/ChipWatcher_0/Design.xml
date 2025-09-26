@@ -266,7 +266,7 @@
                 <ipxact:configurableElementValue referenceId="P253_Available">0</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="P254_Available">0</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="P255_Available">0</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="Probe_Width">8 1 16 25 2 8 25 4 1 1 16 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="Probe_Width">8 1 16 25 2 8 25 10 1 1 16 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="Probe0_WIDTH">8</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="Probe1_WIDTH">1</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="Probe2_WIDTH">16</ipxact:configurableElementValue>
@@ -274,7 +274,7 @@
                 <ipxact:configurableElementValue referenceId="Probe4_WIDTH">2</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="Probe5_WIDTH">8</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="Probe6_WIDTH">25</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="Probe7_WIDTH">4</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="Probe7_WIDTH">10</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="Probe8_WIDTH">1</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="Probe9_WIDTH">1</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="Probe10_WIDTH">16</ipxact:configurableElementValue>

@@ -2,7 +2,7 @@
 | QoR metrics               |         value               |
 -----------------------------------------------------------
 | Timing                    |                             |
-|     Setup WNS             |        14808                |
+|     Setup WNS             |        14065                |
 |     Setup TNS             |            0                |
 |     Num of violated S-EP  |            0                |
 |     Hold WNS              |          694                |
@@ -10,28 +10,28 @@
 |     Num of violated H-EP  |            0                |
 -----------------------------------------------------------
 | Utilization               |                             |
-|     #registers            |         1609                |
-|     #luts                 |          601                |
+|     #registers            |         1687                |
+|     #luts                 |          626                |
 |     #lut1                 |           18                |
 |     #lut1(~A)             |           18                |
-|     #slices               |          166                |
-|     slices percentage     |        1.69%                |
-|     #RAMs                 |           12                |
+|     #slices               |          172                |
+|     slices percentage     |        1.76%                |
+|     #RAMs                 |           13                |
 |     #DSPs                 |            0                |
 |     #f7mux                |        0.00%                |
 |     #MACROs               |           23                |
-|     #insts in MACRO       |          166                |
+|     #insts in MACRO       |          172                |
 -----------------------------------------------------------
 | kept_net                  |                             |
-|     #syn_keep             |          614                |
-|     #keep_hier            |          120                |
+|     #syn_keep             |          644                |
+|     #keep_hier            |          126                |
 |     #dont_touch           |            0                |
 |     #mark_debug           |            0                |
 |     #max_fanout_keep      |            0                |
 |     #async_reg            |            0                |
 -----------------------------------------------------------
-| Top 10% datanet fanout#   |         8.83                |
-| dff(single fanout)->dff   |          442                |
+| Top 10% datanet fanout#   |         8.73                |
+| dff(single fanout)->dff   |          466                |
 | dff(single fanout)->dram  |            0                |
 -----------------------------------------------------------
 | Over-quota path num*      |                             |
@@ -46,17 +46,17 @@ Note**: Rent shows the rent exponent value of the modules whose rent value excee
         Only modules under top are reported, and the threshold is defined as 0.7.
 
 Logic Level Distribution
--------------------------------------------------------------------------
-  Clock        |  Period            |  0    |  1    |  2   |  3   |  4
--------------------------------------------------------------------------
-  DeriveClock  |  20.000ns (50MHz)  |  785  |  426  |  81  |  57  |  12
--------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+  Clock        |  Period            |  0    |  1    |  2   |  3   |  4   |  5
+-------------------------------------------------------------------------------
+  DeriveClock  |  20.000ns (50MHz)  |  821  |  446  |  82  |  54  |  13  |  2
+-------------------------------------------------------------------------------
 Hierarchical Rent Exponent Report
 +-----------------------------------------------------------------------------------+
 |Inst              |Model                    |Rent     |Cell     |Pin     |Term     |
 +-----------------------------------------------------------------------------------+
-|top               |ChipWatcher_7244eeadc913 |0.18     |3737     |10225   |12       |
-|  wrapper_cwc_top |top_cwc_hub_1            |0.64     |3736     |9824    |508      |
+|top               |ChipWatcher_7244eeadc913 |0.18     |3913     |10687   |12       |
+|  wrapper_cwc_top |top_cwc_hub_1            |0.64     |3912     |10268   |532      |
 +-----------------------------------------------------------------------------------+
 Note: Cell represents total number of cells inside module; Pin represents total number of pins
       which have net connection inside module; Term represents total number of PIs and POs of module.

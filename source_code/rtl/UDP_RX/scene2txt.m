@@ -1,5 +1,5 @@
-IMG = imread('scene.jpeg');
-IMG = uint16(IMG);
+IMG = imread('scene_1024_768.jpeg');
+IMG = double(IMG);
 color = zeros(size(IMG, 1), size(IMG, 2));
 for i = 1 : size(IMG, 1)
     for j = 1 : size(IMG, 2)
@@ -13,7 +13,7 @@ fid = fopen('scene.txt', 'w');
 fprintf(fid, 'F3 ED 7A 93 ');
 for i = 1 : size(IMG, 1)
     for j = 1 : size(IMG, 2)
-        fprintf(fid, '%x %x ', uint8(color(i, j) / 256), mod(color(i, j), 256));
+        fprintf(fid, '%02x %02x ', uint8(color(i, j) / 256), mod(color(i, j), 256));
         if j == size(IMG, 2)
             fprintf(fid, '\n');
         end

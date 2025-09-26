@@ -4,7 +4,7 @@
    Executable = D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/bin/run.exe
    Built at =   16:32:07 Jun 12 2025
    Run by =     1
-   Run Date =   Thu Sep 25 20:24:13 2025
+   Run Date =   Fri Sep 26 11:02:41 2025
 
    Run on =     LAPTOP-EUGMKLPQ
 ============================================================
@@ -53,21 +53,21 @@ HDL-1007 : elaborate module ** in D:\Anlogic\TD_6.2.1_Engineer_6.2.168.116\ip/ap
 HDL-1007 : elaborate module ** in D:\Anlogic\TD_6.2.1_Engineer_6.2.168.116\ip/apm/apm_cwc/apm_cwc.sv(1025)
 HDL-1007 : elaborate module ** in D:\Anlogic\TD_6.2.1_Engineer_6.2.168.116\ip/apm/apm_cwc/apm_cwc.sv(995)
 HDL-1007 : extracting RAM for identifier '**' in D:\Anlogic\TD_6.2.1_Engineer_6.2.168.116\ip/apm/apm_cwc/apm_cwc.sv(1010)
-HDL-1007 : elaborate module AL_LOGIC_DEBUGHUB(CTRL_LEN=376,STAT_LEN=24) in D:\Anlogic\TD_6.2.1_Engineer_6.2.168.116\arch/al_lmacro.v(381)
+HDL-1007 : elaborate module AL_LOGIC_DEBUGHUB(CTRL_LEN=394,STAT_LEN=24) in D:\Anlogic\TD_6.2.1_Engineer_6.2.168.116\arch/al_lmacro.v(381)
 HDL-1200 : Current top model is ChipWatcher_7244eeadc913
 HDL-1100 : Inferred 1 RAMs.
 RUN-1002 : start command "optimize_rtl"
 RUN-1001 : Open license file D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/license/Anlogic.lic
 SYN-1001 : Stage 1 | Optimize RTL
 SYN-1001 : Stage 1.1 | Check Design Sanity
-SYN-1001 : End Stage 1.1 | Check Design Sanity; Time: 0.002327s wall, 0.000000s user + 0.000000s system = 0.000000s CPU (n/a%); Memory(MB): used = 110, reserved = 101, peak = 110;
+SYN-1001 : End Stage 1.1 | Check Design Sanity; Time: 0.001415s wall, 0.015625s user + 0.000000s system = 0.015625s CPU (1104.6%); Memory(MB): used = 111, reserved = 101, peak = 111;
 
-SYN-1079 : finish stage Check Design Sanity. Total instances: 5324, Total nets: 11850.
+SYN-1079 : finish stage Check Design Sanity. Total instances: 5624, Total nets: 12468.
 
 SYN-1001 : Stage 1.2 | Initialize Design
-SYN-1001 : End Stage 1.2 | Initialize Design; Time: 0.183658s wall, 0.015625s user + 0.000000s system = 0.015625s CPU (8.5%); Memory(MB): used = 110, reserved = 101, peak = 110;
+SYN-1001 : End Stage 1.2 | Initialize Design; Time: 0.178863s wall, 0.062500s user + 0.000000s system = 0.062500s CPU (34.9%); Memory(MB): used = 111, reserved = 101, peak = 111;
 
-SYN-1079 : finish stage Initialize Design. Total instances: 2287, Total nets: 7291.
+SYN-1079 : finish stage Initialize Design. Total instances: 2419, Total nets: 7687.
 
 SYN-1001 : Stage 1.3 | Flatten Module
 SYN-1011 : Flatten model ChipWatcher_7244eeadc913
@@ -77,27 +77,27 @@ RUN-1001 :           instance           |  keep_hierarchy  |         down_module
 RUN-1001 : ------------------------------------------------------------------------------------------------------------
 RUN-1001 :   wrapper_cwc_top/U_cwc_ram  |       true       | anlogic05_cwc_ram(DATA_...  | D:\Anlogic\TD_6.2.1_Eng...  
 RUN-1001 : ------------------------------------------------------------------------------------------------------------
-SYN-1001 : End Stage 1.3 | Flatten Module; Time: 0.023881s wall, 0.000000s user + 0.000000s system = 0.000000s CPU (n/a%); Memory(MB): used = 110, reserved = 101, peak = 110;
+SYN-1001 : End Stage 1.3 | Flatten Module; Time: 0.022746s wall, 0.000000s user + 0.000000s system = 0.000000s CPU (n/a%); Memory(MB): used = 111, reserved = 101, peak = 111;
 
-SYN-1079 : finish stage Flatten Module. Total instances: 3271, Total nets: 5735.
+SYN-1079 : finish stage Flatten Module. Total instances: 3421, Total nets: 6005.
 
 SYN-1001 : Stage 1.4 | Uniform Instance
-SYN-1001 : End Stage 1.4 | Uniform Instance; Time: 0.008178s wall, 0.000000s user + 0.000000s system = 0.000000s CPU (n/a%); Memory(MB): used = 106, reserved = 104, peak = 110;
+SYN-1001 : End Stage 1.4 | Uniform Instance; Time: 0.006004s wall, 0.000000s user + 0.000000s system = 0.000000s CPU (n/a%); Memory(MB): used = 107, reserved = 105, peak = 111;
 
-SYN-1079 : finish stage Uniform Instance. Total instances: 2901, Total nets: 5365.
+SYN-1079 : finish stage Uniform Instance. Total instances: 3033, Total nets: 5617.
 
 SYN-1001 : Stage 1.5 | Optimize Design
-SYN-1032 : 5356/2 useful/useless nets, 2899/2 useful/useless insts
-SYN-1016 : Merged 152 instances.
+SYN-1032 : 5608/2 useful/useless nets, 3031/2 useful/useless insts
+SYN-1016 : Merged 158 instances.
 SYN-1026 : Infer Logic BRAM(wrapper_cwc_top/U_cwc_ram/ramread0_syn_4)
 	 port mode: single port
-	 port a size: 1024 x 107	 write mode: READBEFOREWRITE
-	 port b size: 1024 x 107	 write mode: NORMAL
+	 port a size: 1024 x 113	 write mode: READBEFOREWRITE
+	 port b size: 1024 x 113	 write mode: NORMAL
 SYN-1023 : Infer 0 Logic DRAMs, 1 Logic BRAMs.
-SYN-1016 : Merged 126 instances.
-SYN-1001 : End Stage 1.5 | Optimize Design; Time: 0.175067s wall, 0.000000s user + 0.000000s system = 0.000000s CPU (n/a%); Memory(MB): used = 111, reserved = 110, peak = 111;
+SYN-1016 : Merged 132 instances.
+SYN-1001 : End Stage 1.5 | Optimize Design; Time: 0.150513s wall, 0.015625s user + 0.000000s system = 0.015625s CPU (10.4%); Memory(MB): used = 111, reserved = 109, peak = 112;
 
-SYN-1079 : finish stage Optimize Design. Total instances: 4447, Total nets: 4979.
+SYN-1079 : finish stage Optimize Design. Total instances: 4657, Total nets: 5213.
 
 SYN-1001 : Stage 1.6 | Optimize Iteratively
 SYN-1014 : Optimize round 1
@@ -107,34 +107,34 @@ SYN-1015 : Optimize round 1, 120 better
 SYN-1014 : Optimize round 2
 SYN-1016 : Merged 8 instances.
 SYN-1015 : Optimize round 2, 16 better
-SYN-3010 : Optimized 106 DFF(s)
+SYN-3010 : Optimized 112 DFF(s)
 SYN-1014 : Optimize round 1
 SYN-1015 : Optimize round 1, 0 better
-SYN-1001 : End Stage 1.6 | Optimize Iteratively; Time: 0.668744s wall, 0.109375s user + 0.000000s system = 0.109375s CPU (16.4%); Memory(MB): used = 135, reserved = 129, peak = 136;
+SYN-1001 : End Stage 1.6 | Optimize Iteratively; Time: 0.639529s wall, 0.343750s user + 0.000000s system = 0.343750s CPU (53.8%); Memory(MB): used = 133, reserved = 129, peak = 138;
 
-SYN-1079 : finish stage Optimize Iteratively. Total instances: 4340, Total nets: 4872.
+SYN-1079 : finish stage Optimize Iteratively. Total instances: 4544, Total nets: 5100.
 
 SYN-1001 : Stage 1.7 | Check Design
-SYN-1001 : End Stage 1.7 | Check Design; Time: 0.001211s wall, 0.000000s user + 0.000000s system = 0.000000s CPU (n/a%); Memory(MB): used = 135, reserved = 129, peak = 136;
+SYN-1001 : End Stage 1.7 | Check Design; Time: 0.000371s wall, 0.000000s user + 0.000000s system = 0.000000s CPU (n/a%); Memory(MB): used = 133, reserved = 130, peak = 138;
 
-SYN-1079 : finish stage Check Design. Total instances: 4340, Total nets: 4872.
+SYN-1079 : finish stage Check Design. Total instances: 4544, Total nets: 5100.
 
-SYN-1001 : End Stage 1 | Optimize RTL; Time: 1.063706s wall, 0.125000s user + 0.000000s system = 0.125000s CPU (11.8%); Memory(MB): used = 135, reserved = 129, peak = 136;
+SYN-1001 : End Stage 1 | Optimize RTL; Time: 0.999873s wall, 0.437500s user + 0.000000s system = 0.437500s CPU (43.8%); Memory(MB): used = 133, reserved = 130, peak = 138;
 
-SYN-1079 : finish stage Optimize RTL. Total instances: 4340, Total nets: 4872.
+SYN-1079 : finish stage Optimize RTL. Total instances: 4544, Total nets: 5100.
 
-RUN-1003 : finish command "optimize_rtl" in  1.073411s wall, 0.125000s user + 0.000000s system = 0.125000s CPU (11.6%)
+RUN-1003 : finish command "optimize_rtl" in  1.008051s wall, 0.437500s user + 0.000000s system = 0.437500s CPU (43.4%)
 
-RUN-1004 : used memory is 135 MB, reserved memory is 129 MB, peak memory is 136 MB
+RUN-1004 : used memory is 133 MB, reserved memory is 130 MB, peak memory is 138 MB
 RUN-1002 : start command "map_macro"
 SYN-1001 : Stage 2 | Map Reg
-SYN-1001 : End Stage 2 | Map Reg; Time: 0.038878s wall, 0.000000s user + 0.000000s system = 0.000000s CPU (n/a%); Memory(MB): used = 133, reserved = 127, peak = 136;
+SYN-1001 : End Stage 2 | Map Reg; Time: 0.039184s wall, 0.000000s user + 0.000000s system = 0.000000s CPU (n/a%); Memory(MB): used = 132, reserved = 128, peak = 138;
 
-SYN-1079 : finish stage Map Reg. Total instances: 4340, Total nets: 4872.
+SYN-1079 : finish stage Map Reg. Total instances: 4544, Total nets: 5100.
 
 SYN-1001 : Stage 3 | Map IO
 SYN-2001 : Map 0 IOs to PADs of model 'ChipWatcher_7244eeadc913'
-SYN-1001 : End Stage 3 | Map IO; Time: 0.002260s wall, 0.000000s user + 0.000000s system = 0.000000s CPU (n/a%); Memory(MB): used = 133, reserved = 127, peak = 136;
+SYN-1001 : End Stage 3 | Map IO; Time: 0.002397s wall, 0.015625s user + 0.000000s system = 0.015625s CPU (651.9%); Memory(MB): used = 133, reserved = 129, peak = 138;
 
 SYN-1001 : Stage 4 | Map Macro
 RUN-1002 : start command "update_pll_param -module ChipWatcher_7244eeadc913"
@@ -145,34 +145,34 @@ SYN-2571 : Optimize after map_dsp, round 1, 0 better
 SYN-1001 : Throwback 4 control mux instances
 SYN-2501 : Optimize round 1
 SYN-1016 : Merged 3 instances.
-SYN-2501 : Optimize round 1, 122 better
+SYN-2501 : Optimize round 1, 128 better
 SYN-2501 : Optimize round 2
 SYN-2501 : Optimize round 2, 0 better
 SYN-2501 : Optimize round 1
 SYN-2501 : Optimize round 1, 0 better
 SYN-2501 : Map 26 macro adder(s)
 SYN-1016 : Merged 11 instances.
-SYN-1001 : End Stage 4 | Map Macro; Time: 0.138815s wall, 0.062500s user + 0.000000s system = 0.062500s CPU (45.0%); Memory(MB): used = 135, reserved = 130, peak = 136;
+SYN-1001 : End Stage 4 | Map Macro; Time: 0.121372s wall, 0.093750s user + 0.000000s system = 0.093750s CPU (77.2%); Memory(MB): used = 135, reserved = 131, peak = 138;
 
-SYN-1079 : finish stage Map Macro. Total instances: 5151, Total nets: 5686.
+SYN-1079 : finish stage Map Macro. Total instances: 5392, Total nets: 5950.
 
 RUN-1002 : start command "map"
 SYN-1001 : Stage 5 | Map Gate
-SYN-2581 : Mapping with K=5, #lut = 607 (3.27), #lev = 5 (1.25), #crit_level = 0
+SYN-2581 : Mapping with K=5, #lut = 633 (3.26), #lev = 5 (1.26), #crit_level = 0
 SYN-2551 : Post LUT mapping optimization.
-SYN-2581 : Mapping with K=5, #lut = 601 (3.30), #lev = 4 (1.24), #crit_level = 0
-SYN-3001 : Logic optimization opt = 0.12 sec, map = 0.04 sec, post map opt = 0.12 sec.
-SYN-1001 : End Stage 5 | Map Gate; Time: 0.305656s wall, 0.031250s user + 0.000000s system = 0.031250s CPU (10.2%); Memory(MB): used = 148, reserved = 135, peak = 148;
+SYN-2581 : Mapping with K=5, #lut = 626 (3.30), #lev = 5 (1.25), #crit_level = 0
+SYN-3001 : Logic optimization opt = 0.12 sec, map = 0.04 sec, post map opt = 0.11 sec.
+SYN-1001 : End Stage 5 | Map Gate; Time: 0.303511s wall, 0.171875s user + 0.015625s system = 0.187500s CPU (61.8%); Memory(MB): used = 148, reserved = 133, peak = 148;
 
 RUN-1002 : start command "pack"
 SYN-1001 : Packing model "ChipWatcher_7244eeadc913" ...
 SYN-4010 : Pack lib has 59 rtl pack models with 26 top pack blocks
 SYN-1014 : Optimize round 1
 SYN-1015 : Optimize round 1, 0 better
-SYN-4002 : Packing 1637 DFF/LATCH to SEQ ...
+SYN-4002 : Packing 1715 DFF/LATCH to SEQ ...
 SYN-4009 : Pack 6 carry chain into lslice
-SYN-4007 : Packing 284 adder to BLE ...
-SYN-4008 : Packed 284 adder and 28 SEQ to BLE.
+SYN-4007 : Packing 296 adder to BLE ...
+SYN-4008 : Packed 296 adder and 28 SEQ to BLE.
 SYN-4007 : Packing 0 gate4 to BLE ...
 SYN-4008 : Packed 0 gate4 and 0 SEQ to BLE.
 RUN-1002 : start command "report_qor -step gate -file gate.qor"
@@ -181,7 +181,7 @@ RUN-1002 : start command "start_timer"
 | QoR metrics               |         value               |
 -----------------------------------------------------------
 | Timing                    |                             |
-|     Setup WNS             |        14808                |
+|     Setup WNS             |        14065                |
 |     Setup TNS             |            0                |
 |     Num of violated S-EP  |            0                |
 |     Hold WNS              |          694                |
@@ -189,28 +189,28 @@ RUN-1002 : start command "start_timer"
 |     Num of violated H-EP  |            0                |
 -----------------------------------------------------------
 | Utilization               |                             |
-|     #registers            |         1609                |
-|     #luts                 |          601                |
+|     #registers            |         1687                |
+|     #luts                 |          626                |
 |     #lut1                 |           18                |
 |     #lut1(~A)             |           18                |
-|     #slices               |          166                |
-|     slices percentage     |        1.69%                |
-|     #RAMs                 |           12                |
+|     #slices               |          172                |
+|     slices percentage     |        1.76%                |
+|     #RAMs                 |           13                |
 |     #DSPs                 |            0                |
 |     #f7mux                |        0.00%                |
 |     #MACROs               |           23                |
-|     #insts in MACRO       |          166                |
+|     #insts in MACRO       |          172                |
 -----------------------------------------------------------
 | kept_net                  |                             |
-|     #syn_keep             |          614                |
-|     #keep_hier            |          120                |
+|     #syn_keep             |          644                |
+|     #keep_hier            |          126                |
 |     #dont_touch           |            0                |
 |     #mark_debug           |            0                |
 |     #max_fanout_keep      |            0                |
 |     #async_reg            |            0                |
 -----------------------------------------------------------
-| Top 10% datanet fanout#   |         8.83                |
-| dff(single fanout)->dff   |          442                |
+| Top 10% datanet fanout#   |         8.73                |
+| dff(single fanout)->dff   |          466                |
 | dff(single fanout)->dram  |            0                |
 -----------------------------------------------------------
 | Over-quota path num*      |                             |
@@ -225,19 +225,19 @@ Note**: Rent shows the rent exponent value of the modules whose rent value excee
         Only modules under top are reported, and the threshold is defined as 0.7.
 
 Logic Level Distribution
--------------------------------------------------------------------------
-  Clock        |  Period            |  0    |  1    |  2   |  3   |  4
--------------------------------------------------------------------------
-  DeriveClock  |  20.000ns (50MHz)  |  785  |  426  |  81  |  57  |  12
--------------------------------------------------------------------------
-Note: The table count the worst 100000 paths, each endpoint count only one time.(1361 paths analyzed)
+-------------------------------------------------------------------------------
+  Clock        |  Period            |  0    |  1    |  2   |  3   |  4   |  5
+-------------------------------------------------------------------------------
+  DeriveClock  |  20.000ns (50MHz)  |  821  |  446  |  82  |  54  |  13  |  2
+-------------------------------------------------------------------------------
+Note: The table count the worst 100000 paths, each endpoint count only one time.(1418 paths analyzed)
 
 Hierarchical Rent Exponent Report
 +-----------------------------------------------------------------------------------+
 |Inst              |Model                    |Rent     |Cell     |Pin     |Term     |
 +-----------------------------------------------------------------------------------+
-|top               |ChipWatcher_7244eeadc913 |0.18     |3737     |10225   |12       |
-|  wrapper_cwc_top |top_cwc_hub_1            |0.64     |3736     |9824    |508      |
+|top               |ChipWatcher_7244eeadc913 |0.18     |3913     |10687   |12       |
+|  wrapper_cwc_top |top_cwc_hub_1            |0.64     |3912     |10268   |532      |
 +-----------------------------------------------------------------------------------+
 Note: Cell represents total number of cells inside module; Pin represents total number of pins
       which have net connection inside module; Term represents total number of PIs and POs of module.
@@ -245,30 +245,30 @@ Note: Cell represents total number of cells inside module; Pin represents total 
       A module with higher rent corresponds to highly connected logic and strong connectivity with others.
 Report gate stage QoR done.
 
-SYN-1001 : The design has 113 dangling syn_keep insts.
+SYN-1001 : The design has 119 dangling syn_keep insts.
 RUN-1002 : start command "report_area -file ChipWatcher_7244eeadc913_gate.area"
 RUN-1001 : standard
 ***Report Model: ChipWatcher_7244eeadc913 Device: EG4S20BG256***
 
 IO Statistics
-#IO                       108   out of    188   57.45%
-  #input                  108
+#IO                       114   out of    188   60.64%
+  #input                  114
   #output                   0
   #inout                    0
 
 LUT Statistics
-#Total_luts               601
-  #lut4                   435
-  #lut5                   166
+#Total_luts               626
+  #lut4                   457
+  #lut5                   169
   #lut6                     0
   #lut5_mx41                0
   #lut4_alu1b               0
 
 Utilization Statistics
-#lut                      933   out of  19600    4.76%
-#reg                     1637   out of  19600    8.35%
-#bram                      12   out of     64   18.75%
-  #bram9k                  12
+#lut                      970   out of  19600    4.95%
+#reg                     1715   out of  19600    8.75%
+#bram                      13   out of     64   20.31%
+  #bram9k                  13
   #fifo9k                   0
 #bram32k                    0   out of     16    0.00%
 #dsp                        0   out of     29    0.00%

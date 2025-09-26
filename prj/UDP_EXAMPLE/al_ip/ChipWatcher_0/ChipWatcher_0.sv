@@ -3,7 +3,7 @@
 **	All Right Reserved.
 \************************************************************/
 /************************************************************\
-**	Build time: Sep 25 2025 11:26:19
+**	Build time: Sep 26 2025 10:51:44
 **	TD version	:	6.2.168116
 ************************************************************/
 module ChipWatcher_0
@@ -15,7 +15,7 @@ module ChipWatcher_0
   input   [1:0]                 probe4,
   input   [7:0]                 probe5,
   input   [24:0]                probe6,
-  input   [3:0]                 probe7,
+  input   [9:0]                 probe7,
   input   [0:0]                 probe8,
   input   [0:0]                 probe9,
   input   [15:0]                probe10,
