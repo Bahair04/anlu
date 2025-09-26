@@ -124,33 +124,7 @@
             </bus>
         </watcher_nodes>
         <trigger_config>
-            <bus name="u_udp_rx_buf/app_rx_data_cnt[24:0]" original_name="u_udp_rx_buf/app_rx_data_cnt[24:0]" bus_radix="3">
-                <net_in_bus name="[24]" original_name="u_udp_rx_buf/app_rx_data_cnt[24]"/>
-                <net_in_bus name="[23]" original_name="u_udp_rx_buf/app_rx_data_cnt[23]"/>
-                <net_in_bus name="[22]" original_name="u_udp_rx_buf/app_rx_data_cnt[22]"/>
-                <net_in_bus name="[21]" original_name="u_udp_rx_buf/app_rx_data_cnt[21]"/>
-                <net_in_bus name="[20]" original_name="u_udp_rx_buf/app_rx_data_cnt[20]"/>
-                <net_in_bus name="[19]" original_name="u_udp_rx_buf/app_rx_data_cnt[19]"/>
-                <net_in_bus name="[18]" original_name="u_udp_rx_buf/app_rx_data_cnt[18]"/>
-                <net_in_bus name="[17]" original_name="u_udp_rx_buf/app_rx_data_cnt[17]"/>
-                <net_in_bus name="[16]" original_name="u_udp_rx_buf/app_rx_data_cnt[16]"/>
-                <net_in_bus name="[15]" original_name="u_udp_rx_buf/app_rx_data_cnt[15]"/>
-                <net_in_bus name="[14]" original_name="u_udp_rx_buf/app_rx_data_cnt[14]"/>
-                <net_in_bus name="[13]" original_name="u_udp_rx_buf/app_rx_data_cnt[13]"/>
-                <net_in_bus name="[12]" original_name="u_udp_rx_buf/app_rx_data_cnt[12]"/>
-                <net_in_bus name="[11]" original_name="u_udp_rx_buf/app_rx_data_cnt[11]"/>
-                <net_in_bus name="[10]" original_name="u_udp_rx_buf/app_rx_data_cnt[10]"/>
-                <net_in_bus name="[9]" original_name="u_udp_rx_buf/app_rx_data_cnt[9]"/>
-                <net_in_bus name="[8]" original_name="u_udp_rx_buf/app_rx_data_cnt[8]"/>
-                <net_in_bus name="[7]" original_name="u_udp_rx_buf/app_rx_data_cnt[7]"/>
-                <net_in_bus name="[6]" original_name="u_udp_rx_buf/app_rx_data_cnt[6]"/>
-                <net_in_bus name="[5]" original_name="u_udp_rx_buf/app_rx_data_cnt[5]"/>
-                <net_in_bus name="[4]" original_name="u_udp_rx_buf/app_rx_data_cnt[4]"/>
-                <net_in_bus name="[3]" original_name="u_udp_rx_buf/app_rx_data_cnt[3]"/>
-                <net_in_bus name="[2]" original_name="u_udp_rx_buf/app_rx_data_cnt[2]"/>
-                <net_in_bus name="[1]" original_name="u_udp_rx_buf/app_rx_data_cnt[1]"/>
-                <net_in_bus name="[0]" original_name="u_udp_rx_buf/app_rx_data_cnt[0]"/>
-            </bus>
+            <net name="u_udp_rx_buf/app_rx_data_valid" original_name="u_udp_rx_buf/app_rx_data_valid"/>
         </trigger_config>
     </instance>
 </cwc_data>

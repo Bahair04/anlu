@@ -9,1616 +9,1616 @@ z2
 cModel Technology
 Z0 dD:/University/AL_Proj/anlu/anlu/sim
 T_opt
-!s110 1758803793
-VfN>K<zZf[dzjz4dXV@CHn2
+Z1 !s110 1758857784
+VKg]]<`_jdPahQ8Enf`dXL3
 04 13 4 work tb_udp_rx_buf fast 0
-=1-bceca0105f53-68d53751-25e-2a84
+=2-bceca0105f53-68d60a38-e8-2754
 o-quiet -auto_acc_if_foreign -work work -L D:/modeltech64_10.7/anlogic/EG4S +acc
-Z1 tCvgOpt 0
+Z2 tCvgOpt 0
 n@_opt
 OL;O;10.7;67
 vdff_slice
-Z2 !s110 1758803790
+Z3 !s110 1758857782
 !i10b 1
 !s100 [;BNz8oXRlLi@kY?8j:>J3
 Ikg;h4jE0nDR;i3QW:nbH:2
-Z3 VDg1SIo80bB@j0V0VzS_@n1
+Z4 VDg1SIo80bB@j0V0VzS_@n1
 R0
-Z4 w1752052136
-Z5 8D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_phy_dff.v
-Z6 FD:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_phy_dff.v
+Z5 w1752052136
+Z6 8D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_phy_dff.v
+Z7 FD:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_phy_dff.v
 L0 107
-Z7 OL;L;10.7;67
+Z8 OL;L;10.7;67
 r1
 !s85 0
 31
-Z8 !s108 1758803788.000000
-Z9 !s107 D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_phy_sdram_2m_32.v|D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_phy_pwrmnt.v|D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_phy_pll.v|D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_phy_pad.v|D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_phy_osc.v|D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_phy_mult18.v|D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_phy_mslice.v|D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_phy_lslice.v|D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_phy_glbl.v|D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_phy_fifo.v|D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_phy_dff.v|D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_phy_ddr_8m_16.v|D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_phy_csb.v|D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_phy_config.v|D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_phy_clk.v|D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_phy_bram32k.v|D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_phy_bram.v|D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_phy_bankref.v|D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_phy_adc.v|D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_logic_ramfifo.v|D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_logic_mult.v|D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_logic_iobuf.v|D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_logic_io.v|D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_logic_gate.v|D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_logic_fifo.v|D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_logic_dram16x4.v|D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_logic_dram.v|D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_logic_config.v|D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_logic_clk.v|D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_logic_bram.v|D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_logic_arith.v|D:/University/AL_Proj/anlu/anlu/source_code/rtl/UDP_RX/tb_udp_rx_buf.v|D:/University/AL_Proj/anlu/anlu/source_code/rtl/UDP_RX/udp_rx_buf.v|
-Z10 !s90 -reportprogress|300|-timescale|1ps/1ps|-f|compile.f|
+Z9 !s108 1758857780.000000
+Z10 !s107 D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_phy_sdram_2m_32.v|D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_phy_pwrmnt.v|D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_phy_pll.v|D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_phy_pad.v|D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_phy_osc.v|D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_phy_mult18.v|D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_phy_mslice.v|D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_phy_lslice.v|D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_phy_glbl.v|D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_phy_fifo.v|D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_phy_dff.v|D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_phy_ddr_8m_16.v|D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_phy_csb.v|D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_phy_config.v|D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_phy_clk.v|D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_phy_bram32k.v|D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_phy_bram.v|D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_phy_bankref.v|D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_phy_adc.v|D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_logic_ramfifo.v|D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_logic_mult.v|D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_logic_iobuf.v|D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_logic_io.v|D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_logic_gate.v|D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_logic_fifo.v|D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_logic_dram16x4.v|D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_logic_dram.v|D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_logic_config.v|D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_logic_clk.v|D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_logic_bram.v|D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_logic_arith.v|D:/University/AL_Proj/anlu/anlu/source_code/rtl/UDP_RX/tb_udp_rx_buf.v|D:/University/AL_Proj/anlu/anlu/source_code/rtl/UDP_RX/udp_rx_buf.v|
+Z11 !s90 -reportprogress|300|-timescale|1ps/1ps|-f|compile.f|
 !i113 0
-Z11 o-timescale 1ps/1ps -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-R1
-vdff_slice_half
+Z12 o-timescale 1ps/1ps -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 R2
+vdff_slice_half
+R3
 !i10b 1
 !s100 VW3LcPPX3Y6Y@3[>3Gbnl0
 Ig[NRS;AKocBll5GI>FgfR1
-R3
-R0
 R4
+R0
 R5
 R6
-Z12 L0 23
 R7
+Z13 L0 23
+R8
 r1
 !s85 0
 31
-R8
 R9
 R10
-!i113 0
 R11
-R1
+!i113 0
+R12
+R2
 veg_clko_ctrl
-Z13 !s110 1758803791
+Z14 !s110 1758857783
 !i10b 1
 !s100 I_PQ0fM6ZEgTSBi2Y8G=B2
 IF2P_HlBVOBkJ>j>:]ma6Y2
-R3
-R0
 R4
-Z14 8D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_phy_pll.v
-Z15 FD:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_phy_pll.v
+R0
+R5
+Z15 8D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_phy_pll.v
+Z16 FD:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_phy_pll.v
 L0 1014
-R7
+R8
 r1
 !s85 0
 31
-R8
 R9
 R10
-!i113 0
 R11
-R1
+!i113 0
+R12
+R2
 veg_clko_premux
-R13
+R14
 !i10b 1
 !s100 PfAH?BW@O9HIkQ6Ai[@582
 InjS6aOgz8ON@<LFH_ngJ^0
-R3
-R0
 R4
-R14
+R0
+R5
 R15
+R16
 L0 995
-R7
+R8
 r1
 !s85 0
 31
-R8
 R9
 R10
-!i113 0
 R11
-R1
+!i113 0
+R12
+R2
 veg_dphase_sel
-R13
+R14
 !i10b 1
 !s100 23[OZj4X7@^?YRj@YN11n3
 I;;15o6m7?G8=2E]5D:BKK2
-R3
-R0
 R4
-R14
+R0
+R5
 R15
+R16
 L0 925
-R7
+R8
 r1
 !s85 0
 31
-R8
 R9
 R10
-!i113 0
 R11
-R1
-v/AToFU/DGP/Wg/buhrgBBQ==
-Z16 !s110 1758803788
+!i113 0
+R12
+R2
+v0AhWLnMqLoPUiwn9wggnlA==
+Z17 !s110 1758857781
 !i10b 0
 !s100 a:cH8[ZA]P2=WTY@cePI31
 IEVGI@QB<S^UdD1ELKmzWn0
-R3
+R4
 !i119 1
-!i8a 1172413072
+!i8a 1718688464
 R0
-w1758803788
+w1758857781
 8D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_logic_bram.v
 FD:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_logic_bram.v
-Z17 L0 59
-R7
+Z18 L0 59
+R8
 r1
 !s85 0
 31
-R8
 R9
 R10
-!i113 0
 R11
-R1
+!i113 0
+R12
+R2
 n46765ad
 vEG_LOGIC_BUF
-R16
+R17
 !i10b 1
 !s100 oRd;OHe4dXo[zcIfFJ_XC0
 InhRg4bG>HHmYV<hC0jHD=1
-R3
-R0
 R4
+R0
+R5
 8D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_logic_gate.v
 FD:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_logic_gate.v
-R12
-R7
+R13
+R8
 r1
 !s85 0
 31
-R8
 R9
 R10
-!i113 0
 R11
-R1
+!i113 0
+R12
+R2
 n@e@g_@l@o@g@i@c_@b@u@f
 vEG_LOGIC_BUFG
-R16
+R17
 !i10b 1
 !s100 [l[M3e[0;e:5O1KGoK5^[0
 Ilkc7=LIkOEKi=l3X2@LM;3
-R3
-R0
 R4
-Z18 8D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_logic_clk.v
-Z19 FD:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_logic_clk.v
-Z20 L0 24
-R7
+R0
+R5
+Z19 8D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_logic_clk.v
+Z20 FD:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_logic_clk.v
+Z21 L0 24
+R8
 r1
 !s85 0
 31
-R8
 R9
 R10
-!i113 0
 R11
-R1
+!i113 0
+R12
+R2
 n@e@g_@l@o@g@i@c_@b@u@f@g
 vEG_LOGIC_BUFGMUX
-R16
+R17
 !i10b 1
 !s100 S19ZS70Hijn9E;?W?T;g50
 I@h=>>L:DMXJVMVIMfE^dR2
-R3
-R0
 R4
-R18
+R0
+R5
 R19
+R20
 L0 53
-R7
+R8
 r1
 !s85 0
 31
-R8
 R9
 R10
-!i113 0
 R11
-R1
+!i113 0
+R12
+R2
 n@e@g_@l@o@g@i@c_@b@u@f@g@m@u@x
 vEG_LOGIC_BUFIO
-R16
+R17
 !i10b 1
 !s100 mej=Y`=OPl59=F>KezR>G0
 IMgTK<Z<b>1XN?:C3mE[e73
-R3
-R0
 R4
-R18
+R0
+R5
 R19
-Z21 L0 32
-R7
+R20
+Z22 L0 32
+R8
 r1
 !s85 0
 31
-R8
 R9
 R10
-!i113 0
 R11
-R1
+!i113 0
+R12
+R2
 n@e@g_@l@o@g@i@c_@b@u@f@i@o
 vEG_LOGIC_CCLK
-R16
+R17
 !i10b 1
 !s100 bm=32SiJoH;H^Q2O9^MJa1
 I0_07WMPjC>2UdQM0Y3_HR3
-R3
-R0
 R4
-Z22 8D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_logic_config.v
-Z23 FD:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_logic_config.v
+R0
+R5
+Z23 8D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_logic_config.v
+Z24 FD:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_logic_config.v
 L0 74
-R7
+R8
 r1
 !s85 0
 31
-R8
 R9
 R10
-!i113 0
 R11
-R1
+!i113 0
+R12
+R2
 n@e@g_@l@o@g@i@c_@c@c@l@k
 vEG_LOGIC_DNA
-R16
+R17
 !i10b 1
 !s100 B`V74L]mj]aHLkm@kn8WV0
 IYRm739FLfzmQfg2hUEG?]1
-R3
-R0
 R4
-R22
+R0
+R5
 R23
+R24
 L0 37
-R7
+R8
 r1
 !s85 0
 31
-R8
 R9
 R10
-!i113 0
 R11
-R1
+!i113 0
+R12
+R2
 n@e@g_@l@o@g@i@c_@d@n@a
 vEG_LOGIC_DRAM
-R16
+R17
 !i10b 1
 !s100 R7FiNlO2NUbT>d3K@jGZi0
 IGofTfnh3[n5^7I;_VChgY0
-R3
-R0
 R4
+R0
+R5
 8D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_logic_dram.v
 FD:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_logic_dram.v
-Z24 L0 21
-R7
+Z25 L0 21
+R8
 r1
 !s85 0
 31
-R8
 R9
 R10
-!i113 0
 R11
-R1
+!i113 0
+R12
+R2
 n@e@g_@l@o@g@i@c_@d@r@a@m
 vEG_LOGIC_DRAM16X4
-R16
+R17
 !i10b 1
 !s100 IhHbZP^TeK4gRC1:P3WiQ2
 InQoM_kcl8m?Yd0MX`Y2EI0
-R3
-R0
 R4
+R0
+R5
 8D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_logic_dram16x4.v
 FD:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_logic_dram16x4.v
-Z25 L0 22
-R7
+Z26 L0 22
+R8
 r1
 !s85 0
 31
-R8
 R9
 R10
-!i113 0
 R11
-R1
+!i113 0
+R12
+R2
 n@e@g_@l@o@g@i@c_@d@r@a@m16@x4
 vEG_LOGIC_FIFO
-R16
+R17
 !i10b 1
 !s100 nKzddZQb1dUbjio00J?F50
 Ii6k02RUHeRDijlzii^G<@3
-R3
-R0
 R4
+R0
+R5
 8D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_logic_fifo.v
 FD:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_logic_fifo.v
-R24
-R7
+R25
+R8
 r1
 !s85 0
 31
-R8
 R9
 R10
-!i113 0
 R11
-R1
+!i113 0
+R12
+R2
 n@e@g_@l@o@g@i@c_@f@i@f@o
 vEG_LOGIC_GSRN
-R16
+R17
 !i10b 1
 !s100 AR^Hlo^KDc]J]zHeecW@[1
 I_Sh]Jh?@ggKW><Bho7L782
-R3
-R0
 R4
-R22
+R0
+R5
 R23
+R24
 L0 46
-R7
+R8
 r1
 !s85 0
 31
-R8
 R9
 R10
-!i113 0
 R11
-R1
+!i113 0
+R12
+R2
 n@e@g_@l@o@g@i@c_@g@s@r@n
 vEG_LOGIC_IBUF
-Z26 !s110 1758803789
+R17
 !i10b 1
 !s100 QcDY66kHUcEdZT^8Jo?=N2
 IgmJZl71fSKS=nJJ;EVfl42
-R3
+R4
 !i119 1
 R0
-R4
+R5
 Z27 8D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_logic_iobuf.v
 Z28 FD:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_logic_iobuf.v
-R20
-R7
+R21
+R8
 r1
 !s85 0
 31
-R8
 R9
 R10
-!i113 0
 R11
-R1
+!i113 0
+R12
+R2
 n@e@g_@l@o@g@i@c_@i@b@u@f
 vEG_LOGIC_IDDR
-R16
+R17
 !i10b 1
 !s100 4bD8Lc7N>Qb;f@BTeX>MS2
 IRZcMC_ej8>_SDz9X>VW]n0
-R3
-R0
 R4
+R0
+R5
 Z29 8D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_logic_io.v
 Z30 FD:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_logic_io.v
 L0 134
-R7
+R8
 r1
 !s85 0
 31
-R8
 R9
 R10
-!i113 0
 R11
-R1
+!i113 0
+R12
+R2
 n@e@g_@l@o@g@i@c_@i@d@d@r
 vEG_LOGIC_IDDRx2
-R16
+R17
 !i10b 1
 !s100 lGz_1hEKcM@Oc@5gd7KSz3
 IT57MX9;<5]]lSZGz?]LC31
-R3
-R0
 R4
+R0
+R5
 R29
 R30
 L0 244
-R7
+R8
 r1
 !s85 0
 31
-R8
 R9
 R10
-!i113 0
 R11
-R1
+!i113 0
+R12
+R2
 n@e@g_@l@o@g@i@c_@i@d@d@rx2
 vEG_LOGIC_IDELAY
-R16
+R17
 !i10b 1
 !s100 6>hV`X0Km?zLg:dm8:5zi2
 IZ0ibfb6NoPi[7Y^>T@@<I2
-R3
-R0
 R4
+R0
+R5
 R29
 R30
 L0 20
-R7
+R8
 r1
 !s85 0
 31
-R8
 R9
 R10
-!i113 0
 R11
-R1
+!i113 0
+R12
+R2
 n@e@g_@l@o@g@i@c_@i@d@e@l@a@y
 vEG_LOGIC_IOTRIBUF
-R26
+R17
 !i10b 1
 !s100 YbZ@z>J6Pj>89G2CIZ]5n2
 IL<Bn@TKDMJH>GUX`]hQZd0
-R3
+R4
 !i119 1
 R0
-R4
+R5
 R27
 R28
 L0 168
-R7
+R8
 r1
 !s85 0
 31
-R8
 R9
 R10
-!i113 0
 R11
-R1
+!i113 0
+R12
+R2
 n@e@g_@l@o@g@i@c_@i@o@t@r@i@b@u@f
 vEG_LOGIC_MBOOT
-R16
+R17
 !i10b 1
 !s100 e8hRVZc]M2m9RZh]DcJEQ0
 IZio3eOCDf8I0WP:>34EOV1
-R3
-R0
 R4
-R22
+R0
+R5
 R23
+R24
 L0 27
-R7
+R8
 r1
 !s85 0
 31
-R8
 R9
 R10
-!i113 0
 R11
-R1
+!i113 0
+R12
+R2
 n@e@g_@l@o@g@i@c_@m@b@o@o@t
 vEG_LOGIC_MULT
-R26
+R17
 !i10b 1
 !s100 lla_mD[m1gTHI>_UVj5Ho2
 I6Z8enNZ9=LR=cTBW<UOZb1
-R3
-R0
 R4
+R0
+R5
 8D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_logic_mult.v
 FD:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_logic_mult.v
-R24
-R7
+R25
+R8
 r1
 !s85 0
 31
-R8
 R9
 R10
-!i113 0
 R11
-R1
+!i113 0
+R12
+R2
 n@e@g_@l@o@g@i@c_@m@u@l@t
 vEG_LOGIC_OBUF
-R26
+R17
 !i10b 1
 !s100 SQ1Xe[6S;T;;6XCj1d^Kg2
 I:R9I[:L5iS4RK2SWbe1]T3
-R3
+R4
 !i119 1
 R0
-R4
+R5
 R27
 R28
 L0 95
-R7
+R8
 r1
 !s85 0
 31
-R8
 R9
 R10
-!i113 0
 R11
-R1
+!i113 0
+R12
+R2
 n@e@g_@l@o@g@i@c_@o@b@u@f
 vEG_LOGIC_ODDR
-R16
+R17
 !i10b 1
 !s100 zm;P5e^KjFjjGgKOj[2dK3
 IGid@lHSMMR:kmFdBWVN@o3
-R3
-R0
 R4
+R0
+R5
 R29
 R30
 L0 191
-R7
+R8
 r1
 !s85 0
 31
-R8
 R9
 R10
-!i113 0
 R11
-R1
+!i113 0
+R12
+R2
 n@e@g_@l@o@g@i@c_@o@d@d@r
 vEG_LOGIC_ODDRx2
-R16
+R17
 !i10b 1
 !s100 ZCaXB^Hk978z]_L9[D<[71
 Im8AB80AEEhgg>blAJ1omz2
-R3
-R0
 R4
+R0
+R5
 R29
 R30
 L0 365
-R7
+R8
 r1
 !s85 0
 31
-R8
 R9
 R10
-!i113 0
 R11
-R1
+!i113 0
+R12
+R2
 n@e@g_@l@o@g@i@c_@o@d@d@rx2
 vEG_LOGIC_ODDRx2l
-R16
+R17
 !i10b 1
 !s100 :KcN:5KRKLgg2ih<81Bo71
 Ic9`H]d0<cS9@:Na:NH`dK3
-R3
-R0
 R4
+R0
+R5
 R29
 R30
 L0 392
-R7
+R8
 r1
 !s85 0
 31
-R8
 R9
 R10
-!i113 0
 R11
-R1
+!i113 0
+R12
+R2
 n@e@g_@l@o@g@i@c_@o@d@d@rx2l
 vEG_LOGIC_ODELAY
-R16
+R17
 !i10b 1
 !s100 CQkb:V<0N_o6E<U5k?41<1
 ICP^?1WRzNbiIYbCOZYd:B0
-R3
-R0
 R4
+R0
+R5
 R29
 R30
 L0 320
-R7
+R8
 r1
 !s85 0
 31
-R8
 R9
 R10
-!i113 0
 R11
-R1
+!i113 0
+R12
+R2
 n@e@g_@l@o@g@i@c_@o@d@e@l@a@y
 vEG_LOGIC_RAMFIFO
-R26
+R3
 !i10b 1
 !s100 6naBnINKeH;8iWhk^RcQa2
 In4BjeJ0V3HK^MH5hSBigA0
-R3
-R0
 R4
+R0
+R5
 Z31 8D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_logic_ramfifo.v
 Z32 FD:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_logic_ramfifo.v
 L0 10
-R7
+R8
 r1
 !s85 0
 31
-R8
 R9
 R10
-!i113 0
 R11
-R1
+!i113 0
+R12
+R2
 n@e@g_@l@o@g@i@c_@r@a@m@f@i@f@o
 vEG_LOGIC_SEQ_DIV
-R16
+R17
 !i10b 1
 !s100 9LBAlB_ffJKSDoG;M8<W22
 I:@3SQfXFPB9ieb3lAEKJ73
-R3
-R0
 R4
+R0
+R5
 8D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_logic_arith.v
 FD:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_logic_arith.v
-R25
-R7
+R26
+R8
 r1
 !s85 0
 31
-R8
 R9
 R10
-!i113 0
 R11
-R1
+!i113 0
+R12
+R2
 n@e@g_@l@o@g@i@c_@s@e@q_@d@i@v
 vEG_PHY_ADC
-R26
+R3
 !i10b 1
 !s100 5E@bTPJR<DNij;edXT4[92
 I8abARh0e`0k:la:n[aeAX1
-R3
-R0
 R4
+R0
+R5
 Z33 8D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_phy_adc.v
 Z34 FD:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_phy_adc.v
-R24
-R7
+R25
+R8
 r1
 !s85 0
 31
-R8
 R9
 R10
-!i113 0
 R11
-R1
+!i113 0
+R12
+R2
 n@e@g_@p@h@y_@a@d@c
 vEG_PHY_BANKREF
-R26
+R3
 !i10b 1
 !s100 XS86CoE73aZG;9]f6NH4I3
 I4b]25?oF1OU[;?NKa4_5j0
-R3
-R0
 R4
+R0
+R5
 8D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_phy_bankref.v
 FD:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_phy_bankref.v
 L0 1
-R7
+R8
 r1
 !s85 0
 31
-R8
 R9
 R10
-!i113 0
 R11
-R1
+!i113 0
+R12
+R2
 n@e@g_@p@h@y_@b@a@n@k@r@e@f
 vEG_PHY_BRAM
-R26
+R3
 !i10b 1
 !s100 803GF<eV]UYdG8J^d_d@C1
 IbdGCXNHYL?YQ6jmA?QVQ=2
-R3
+R4
 !i119 1
 R0
-R4
+R5
 8D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_phy_bram.v
 FD:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_phy_bram.v
 L0 83
-R7
+R8
 r1
 !s85 0
 31
-R8
 R9
 R10
-!i113 0
 R11
-R1
+!i113 0
+R12
+R2
 n@e@g_@p@h@y_@b@r@a@m
 vEG_PHY_BRAM32K
-R26
+R3
 !i10b 1
 !s100 oSEhNi=jFaRP>^d0b<f9z3
 I<a^RfYBY<d_dGVRbY7ACb2
-R3
+R4
 !i119 1
 R0
-R4
+R5
 8D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_phy_bram32k.v
 FD:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_phy_bram32k.v
 L0 71
-R7
+R8
 r1
 !s85 0
 31
-R8
 R9
 R10
-!i113 0
 R11
-R1
+!i113 0
+R12
+R2
 n@e@g_@p@h@y_@b@r@a@m32@k
 vEG_PHY_CLKDIV
-R26
+R3
 !i10b 1
 !s100 gDhz72ORK[Hz9d9iF3=ad2
 IEB7BN9<HP?oKL:9Keb3QZ1
-R3
-R0
 R4
+R0
+R5
 Z35 8D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_phy_clk.v
 Z36 FD:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_phy_clk.v
 L0 80
-R7
+R8
 r1
 !s85 0
 31
-R8
 R9
 R10
-!i113 0
 R11
-R1
+!i113 0
+R12
+R2
 n@e@g_@p@h@y_@c@l@k@d@i@v
 vEG_PHY_CONFIG
-R26
+R3
 !i10b 1
 !s100 [8dJN0zIVSz6`GQNibVUQ3
 IKP;CHX6K9EBfh^TCVhSTO3
-R3
-R0
 R4
+R0
+R5
 8D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_phy_config.v
 FD:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_phy_config.v
-R25
-R7
+R26
+R8
 r1
 !s85 0
 31
-R8
 R9
 R10
-!i113 0
 R11
-R1
-n@e@g_@p@h@y_@c@o@n@f@i@g
-v9JtqNBm1mQTti0nY1HXTYw==
+!i113 0
+R12
 R2
+n@e@g_@p@h@y_@c@o@n@f@i@g
+vJ2YNAU1FmJtJQHvn3j4uoA==
+R3
 !i10b 0
 !s100 bW9Ydj69Hg1eE70;@2PMH1
 Ig5fZmGQnIhNPGI1CoQfKd1
-R3
+R4
 !i119 1
-!i8a 476668032
+!i8a 2012930192
 R0
-Z37 w1758803790
+Z37 w1758857782
 Z38 8D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_phy_csb.v
 Z39 FD:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_phy_csb.v
-R17
-R7
+R18
+R8
 r1
 !s85 0
 31
-R8
 R9
 R10
-!i113 0
 R11
-R1
+!i113 0
+R12
+R2
 n4dba532
 vEG_PHY_DDR_8M_16
-R2
+R3
 !i10b 1
 !s100 ^:U9HQHHAcmUD>L`n]mmg1
 IB2z?aJA4LP9k6Pm2`8a@m2
-R3
-R0
 R4
+R0
+R5
 8D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_phy_ddr_8m_16.v
 FD:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_phy_ddr_8m_16.v
 L0 1
-R7
+R8
 r1
 !s85 0
 31
-R8
 R9
 R10
-!i113 0
 R11
-R1
+!i113 0
+R12
+R2
 n@e@g_@p@h@y_@d@d@r_8@m_16
 vEG_PHY_FIFO
-R2
+R3
 !i10b 1
 !s100 G8NNLH1BOZMQIGdRUg4L;2
 IIKXB^zn=JiXjE9iAWb@^T0
-R3
-R0
 R4
+R0
+R5
 8D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_phy_fifo.v
 FD:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_phy_fifo.v
-R20
-R7
+R21
+R8
 r1
 !s85 0
 31
-R8
 R9
 R10
-!i113 0
 R11
-R1
+!i113 0
+R12
+R2
 n@e@g_@p@h@y_@f@i@f@o
 vEG_PHY_GCLK
-R26
+R3
 !i10b 1
 !s100 kjK?=oI^MfcBo8bTF6`4n2
 I^<fbi:jFP6;]i?0::7=:D3
-R3
-R0
 R4
+R0
+R5
 R35
 R36
-R24
-R7
+R25
+R8
 r1
 !s85 0
 31
-R8
 R9
 R10
-!i113 0
 R11
-R1
+!i113 0
+R12
+R2
 n@e@g_@p@h@y_@g@c@l@k
 vEG_PHY_IOCLK
-R26
+R3
 !i10b 1
 !s100 ?PRDkNXEE=KMfdTc9O]5A2
 I=d6FNbX1>ni1bP8bRlf<[0
-R3
-R0
 R4
+R0
+R5
 R35
 R36
-R21
-R7
+R22
+R8
 r1
 !s85 0
 31
-R8
 R9
 R10
-!i113 0
 R11
-R1
+!i113 0
+R12
+R2
 n@e@g_@p@h@y_@i@o@c@l@k
 vEG_PHY_LSLICE
-R2
+R14
 !i10b 1
 !s100 06fD1h`T8UC=Q;M3nJiKK3
 IU[LWz4o?ZXabzhlz0f4Vz0
-R3
+R4
 !i119 1
 R0
-R4
+R5
 Z40 8D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_phy_lslice.v
 Z41 FD:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_phy_lslice.v
 L0 77
-R7
+R8
 r1
 !s85 0
 31
-R8
 R9
 R10
-!i113 0
 R11
-R1
+!i113 0
+R12
+R2
 n@e@g_@p@h@y_@l@s@l@i@c@e
 vEG_PHY_MSLICE
-R2
+R14
 !i10b 1
 !s100 c9R?A25SDH:Ql7_zLO:8M1
 Ij`YYl6f8h;gDl^G0BC_YW3
-R3
+R4
 !i119 1
 R0
-R4
+R5
 Z42 8D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_phy_mslice.v
 Z43 FD:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_phy_mslice.v
 L0 78
-R7
+R8
 r1
 !s85 0
 31
-R8
 R9
 R10
-!i113 0
 R11
-R1
+!i113 0
+R12
+R2
 n@e@g_@p@h@y_@m@s@l@i@c@e
 vEG_PHY_MULT18
-R2
+R14
 !i10b 1
 !s100 aHef8jiA7ChV4df^THkzn1
 I7UgdYnlJJef2hb9K_LJd70
-R3
-R0
 R4
+R0
+R5
 8D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_phy_mult18.v
 FD:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_phy_mult18.v
-R12
-R7
+R13
+R8
 r1
 !s85 0
 31
-R8
 R9
 R10
-!i113 0
 R11
-R1
+!i113 0
+R12
+R2
 n@e@g_@p@h@y_@m@u@l@t18
 vEG_PHY_OSC
-R2
+R14
 !i10b 1
 !s100 IDh`:P`oV?B<175XWWOff3
 In?CAFLjgRil[Q^8jUCBGi2
-R3
-R0
 R4
+R0
+R5
 8D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_phy_osc.v
 FD:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_phy_osc.v
-R12
-R7
+R13
+R8
 r1
 !s85 0
 31
-R8
 R9
 R10
-!i113 0
 R11
-R1
+!i113 0
+R12
+R2
 n@e@g_@p@h@y_@o@s@c
 vEG_PHY_PAD
-R13
+R14
 !i10b 1
 !s100 o5kj4XSak909LEYWjGNVR2
 IiEDQ4ebA?Z6ke3ITzWA0E0
-R3
+R4
 !i119 1
 R0
-R4
+R5
 8D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_phy_pad.v
 FD:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_phy_pad.v
 L0 75
-R7
+R8
 r1
 !s85 0
 31
-R8
 R9
 R10
-!i113 0
 R11
-R1
+!i113 0
+R12
+R2
 n@e@g_@p@h@y_@p@a@d
 vEG_PHY_PLL
-R13
+R14
 !i10b 1
 !s100 kQzYVb8DDZCm2[^aJ4Dfm2
 IAN:HVnNgfnc3kl=H8C9Dk1
-R3
-R0
 R4
-R14
+R0
+R5
 R15
+R16
 L0 25
-R7
+R8
 r1
 !s85 0
 31
-R8
 R9
 R10
-!i113 0
 R11
-R1
+!i113 0
+R12
+R2
 n@e@g_@p@h@y_@p@l@l
 vEG_PHY_PWRMNT
-R13
+R14
 !i10b 1
 !s100 Ql012N_N^1z[g05WG86_K2
 IJfDz;3QzNcm]La[Do8K@^1
-R3
-R0
 R4
+R0
+R5
 8D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_phy_pwrmnt.v
 FD:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_phy_pwrmnt.v
-R20
-R7
+R21
+R8
 r1
 !s85 0
 31
-R8
 R9
 R10
-!i113 0
 R11
-R1
+!i113 0
+R12
+R2
 n@e@g_@p@h@y_@p@w@r@m@n@t
 vEG_PHY_SDRAM_2M_32
-R13
+R1
 !i10b 1
 !s100 @2^B@?kZk_WT4eo43]Akk2
 I;cUYzlkBXMfeFEI25Fz;d1
-R3
-R0
 R4
+R0
+R5
 8D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_phy_sdram_2m_32.v
 FD:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_phy_sdram_2m_32.v
 L0 1
-R7
+R8
 r1
 !s85 0
 31
-R8
 R9
 R10
-!i113 0
 R11
-R1
+!i113 0
+R12
+R2
 n@e@g_@p@h@y_@s@d@r@a@m_2@m_32
 veg_pll_div128
-R13
+R14
 !i10b 1
 !s100 ilmWINIeD4Wd4A5bF@TF;2
 I=ilF7Kj>6C42kR8YGKWe<0
-R3
-R0
 R4
-R14
+R0
+R5
 R15
+R16
 L0 1033
-R7
+R8
 r1
 !s85 0
 31
-R8
 R9
 R10
-!i113 0
 R11
-R1
+!i113 0
+R12
+R2
 veg_pll_div2
-R13
+R14
 !i10b 1
 !s100 @`E>_703l_ed@MbTQ]Y1L0
 IIVMFLC_cAWAHVP:QF5zMo1
-R3
-R0
 R4
-R14
+R0
+R5
 R15
+R16
 L0 1105
-R7
+R8
 r1
 !s85 0
 31
-R8
 R9
 R10
-!i113 0
 R11
-R1
-vxJpeh/ur2LIdOMTVhLi9Qw==
+!i113 0
+R12
 R2
+v0FBZQcoVTrdojIEs/5cKQA==
+R3
 !i10b 0
 !s100 UJ3VTcdd6F>deQ9iUeF]90
 I[gV:zV9DoN1B]HEWEih?a3
-R3
+R4
 !i119 1
-!i8a 1568042736
+!i8a 758689904
 R0
 R37
 R38
 R39
-R17
-R7
+R18
+R8
 r1
 !s85 0
 31
-R8
 R9
 R10
-!i113 0
 R11
-R1
-n4e701e4
-v18UIV5Cki7VI8Dl15E6YlA==
+!i113 0
+R12
 R2
+n4e701e4
+vPXAYdlEDEuuTv9VjLn4T1g==
+R3
 !i10b 0
 !s100 QYACc32nKoln5NPQj`2Bg3
 I<<^>^_NBlnn1ILn4n6V>P1
-R3
+R4
 !i119 1
-!i8a 478340736
+!i8a 1589528560
 R0
 R37
 R38
 R39
-R17
-R7
+R18
+R8
 r1
 !s85 0
 31
-R8
 R9
 R10
-!i113 0
 R11
-R1
-nc4e5bfd
-vU8L9Nf6u3ikjJW9529lDJQ==
+!i113 0
+R12
 R2
+nc4e5bfd
+vJh9tNI5KgLLNnX91CBrpSQ==
+R3
 !i10b 0
 !s100 T1UOSYf4d[3VlENK0jfPI0
 Iln7^Hdz_m<S0jmW=fZW;I1
-R3
+R4
 !i119 1
-!i8a 1445068320
+!i8a 879717952
 R0
 R37
 R38
 R39
-R17
-R7
+R18
+R8
 r1
 !s85 0
 31
-R8
 R9
 R10
-!i113 0
 R11
-R1
+!i113 0
+R12
+R2
 nc4e5be2
 vglbl
-R2
+R14
 !i10b 1
 !s100 :<gm22]K7C_J@mB]D`^_N0
 I?0FQ8[g><BeZCg@Rn6mOT2
-R3
-R0
 R4
+R0
+R5
 8D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_phy_glbl.v
 FD:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/sim_release/eg4/eg_phy_glbl.v
-R12
-R7
+R13
+R8
 r1
 !s85 0
 31
-R8
 R9
 R10
-!i113 0
 R11
-R1
+!i113 0
+R12
+R2
 vgray2bin
-R26
+R3
 !i10b 1
 !s100 1ZPnk6@O7ZB3g29V>Tdjz1
 I>0G`>_Eh_KzR2Y0KQSTQj2
-R3
-R0
 R4
+R0
+R5
 R31
 R32
 L0 277
-R7
+R8
 r1
 !s85 0
 31
-R8
 R9
 R10
-!i113 0
 R11
-R1
+!i113 0
+R12
+R2
 vgray_count
-R26
+R3
 !i10b 1
 !s100 =QTB7WhZ4iRRo<9MOGFfg3
 IQ@DmeD:b;gF19dZhzJN[13
-R3
-R0
 R4
+R0
+R5
 R31
 R32
 L0 297
-R7
+R8
 r1
 !s85 0
 31
-R8
 R9
 R10
-!i113 0
 R11
-R1
+!i113 0
+R12
+R2
 vHARD_SAR12_ADC
-R26
+R3
 !i10b 1
 !s100 CWQlI@3;c;2aURTlNS@Cm0
 IV4l@?ZR3^G9lVYk9[?8l_1
-R3
-R0
 R4
+R0
+R5
 R33
 R34
 L0 99
-R7
+R8
 r1
 !s85 0
 31
-R8
 R9
 R10
-!i113 0
 R11
-R1
-n@h@a@r@d_@s@a@r12_@a@d@c
-vbpe6ftNSipJdbRN9GU3JjA==
+!i113 0
+R12
 R2
+n@h@a@r@d_@s@a@r12_@a@d@c
+vCdUI5QZjzv8bM0QM2YuxGw==
+R14
 !i10b 0
 !s100 cEWm<NAf_SZ?ez^`I^mhS0
 I7GFaSEjLE5@<C:OVh7z5`2
-R3
+R4
 !i119 1
-!i8a 6060064
+!i8a 1448836960
 R0
-R37
+Z44 w1758857783
 R42
 R43
-Z44 L0 526
-R7
+Z45 L0 526
+R8
 r1
 !s85 0
 31
-R8
 R9
 R10
-!i113 0
 R11
-R1
-n8f3e900
-v5hBiu8Nr1py1oIBcoW2viA==
+!i113 0
+R12
 R2
+n8f3e900
+vLaBZWvD5zvUYoZDaRbGd3Q==
+R14
 !i10b 0
 !s100 1EG9DA2EfIhik[:=>>ZPD1
 I7[zV56a;7zWNea8Udd[LO0
-R3
+R4
 !i119 1
-!i8a 620296656
+!i8a 1638510944
 R0
-R37
+R44
 R40
 R41
-Z45 L0 574
-R7
+Z46 L0 574
+R8
 r1
 !s85 0
 31
-R8
 R9
 R10
-!i113 0
 R11
-R1
-n8f3e902
-vLM7yYDBpAYeb1V8xJRBD6g==
+!i113 0
+R12
 R2
+n8f3e902
+vrYHelr3EXyZlKiKxqgClpA==
+R14
 !i10b 0
 !s100 0]YOEjcY[lc:`MZRkH<DS3
 IHS>O^B`OPEBfhih:Az=ae1
-R3
+R4
 !i119 1
-!i8a 422286544
+!i8a 1603193632
 R0
-R37
+R44
 R40
 R41
-R45
-R7
+R46
+R8
 r1
 !s85 0
 31
-R8
 R9
 R10
-!i113 0
 R11
-R1
+!i113 0
+R12
+R2
 n8f3e903
 vpfb_dffctrl
-R2
+R3
 !i10b 1
 !s100 lKDdfB`HN;?IgQME4YEb31
 ILZJcaSk^cKK1_HL7=3Sf32
-R3
-R0
 R4
+R0
 R5
 R6
-L0 91
 R7
+L0 91
+R8
 r1
 !s85 0
 31
-R8
 R9
 R10
-!i113 0
 R11
-R1
-vamJMQy4sSLIqTt/7fHUVBg==
+!i113 0
+R12
 R2
+vDNKK/icgi9NbUsb/swOj7w==
+R14
 !i10b 0
 !s100 51PK>SD2KNTzoAmzk9SQA3
 IfnAZ07SEi><7kZnV`6gQ>1
-R3
+R4
 !i119 1
-!i8a 1653895424
+!i8a 333621856
 R0
-R37
+R44
 R40
 R41
-R45
-R7
+R46
+R8
 r1
 !s85 0
 31
-R8
 R9
 R10
-!i113 0
 R11
-R1
-n31e7b88
-vN1gI8sQsW+K72z+fiHhyaQ==
+!i113 0
+R12
 R2
+n31e7b88
+vn6l6+vSv+q9OyRfRIy/hgw==
+R14
 !i10b 0
 !s100 C5z7b8f?45Xld8P1ZYO8z3
 IzoTZ7m[H9C>l39_U=9M=E3
-R3
+R4
 !i119 1
-!i8a 1443226832
+!i8a 588783600
 R0
-R37
+R44
 R42
 R43
-R44
-R7
+R45
+R8
 r1
 !s85 0
 31
-R8
 R9
 R10
-!i113 0
 R11
-R1
-neb3caf0
-vGws/TgTYQaBO4xw+QzSayHBDT4sf6GF2znFJtGxVGgU=
+!i113 0
+R12
 R2
+neb3caf0
+vA/rxhlLMwn83ph156O6pdxBi/C16CB6GNxW3TAPJv6k=
+R14
 !i10b 0
 !s100 E@E6]5c?<DOblXAg?<_PB2
 I8zYmIc3d3o;:01BL=_1422
-R3
+R4
 !i119 1
-!i8a 2061555344
+!i8a 259522880
 R0
-R37
+R44
 R42
 R43
-R44
-R7
+R45
+R8
 r1
 !s85 0
 31
-R8
 R9
 R10
-!i113 0
 R11
-R1
-n5d061c8
-vY08EKRVKs6lHa2SH5dErRKraRmQIvl9gSH/KtNMmtEQ=
+!i113 0
+R12
 R2
+n5d061c8
+vEVGOZdj7t6SR0kqVAfopbe1at5l526Y8+R0IUwwHaVw=
+R14
 !i10b 0
 !s100 [I0kQP9NhZLP>zo]FNoPE2
 IWA]1c2[F]jJC4TlMXKLlT2
-R3
+R4
 !i119 1
-!i8a 969635264
+!i8a 1734062336
 R0
-R37
+R44
 R42
 R43
-R44
-R7
+R45
+R8
 r1
 !s85 0
 31
-R8
 R9
 R10
-!i113 0
 R11
-R1
-n5d1a974
-ve0+Q5kXZ8Fwi1SA3GZTTGZsCrr7WVwxYm1bMucxRwmk=
+!i113 0
+R12
 R2
+n5d1a974
+vwEtWU2//I9R7Xsz85IMhqXE3gokMz8GDjpKc0grGvqw=
+R14
 !i10b 0
 !s100 IlTBN?V;b]mGN7bMId5jm1
 IgNEFBY44FEgcdb_KXIU2e0
-R3
+R4
 !i119 1
-!i8a 542723248
+!i8a 610997488
 R0
-R37
+R44
 R40
 R41
-R45
-R7
+R46
+R8
 r1
 !s85 0
 31
-R8
 R9
 R10
-!i113 0
 R11
-R1
+!i113 0
+R12
+R2
 n331a974
 vprediv_mux
-R13
+R14
 !i10b 1
 !s100 Y8ifS9PTzzod=UaMlHLI92
 IOck7o3cLgMe_5PMaCb`7b1
-R3
-R0
 R4
-R14
+R0
+R5
 R15
+R16
 L0 904
-R7
+R8
 r1
 !s85 0
 31
-R8
 R9
 R10
-!i113 0
 R11
-R1
+!i113 0
+R12
+R2
 vshowahead_buffer
-R26
+R3
 !i10b 1
 !s100 <SlfQnmedGQ>:SKnEicXd3
 IQ1JQ^1cY]oK>9IQP3CHUS2
-R3
-R0
 R4
+R0
+R5
 R31
 R32
 L0 341
-R7
+R8
 r1
 !s85 0
 31
-R8
 R9
 R10
-!i113 0
 R11
-R1
+!i113 0
+R12
+R2
 vtb_udp_rx_buf
-R16
+R17
 !i10b 1
 !s100 2CCTbMDon9`V;`cgAn7F<2
 IcnD`PZaB>RzgW>REVG^YT0
-R3
+R4
 R0
 w1758803783
 8D:/University/AL_Proj/anlu/anlu/source_code/rtl/UDP_RX/tb_udp_rx_buf.v
 FD:/University/AL_Proj/anlu/anlu/source_code/rtl/UDP_RX/tb_udp_rx_buf.v
 L0 3
-R7
+R8
 r1
 !s85 0
 31
-R8
 R9
 R10
-!i113 0
 R11
-R1
-v0rm8Cf5/WrIlqlUD97VjMw==
+!i113 0
+R12
 R2
+vJ5TXWy3Y74tNQUKg452Ffg==
+R3
 !i10b 0
 !s100 PL5[;dI<UoAGa;X]fWZcT0
 IF]BQR`8V0:zP[IhiaV;3]2
-R3
+R4
 !i119 1
-!i8a 2146546224
+!i8a 959071520
 R0
 R37
 R38
 R39
-R17
-R7
+R18
+R8
 r1
 !s85 0
 31
-R8
 R9
 R10
-!i113 0
 R11
-R1
+!i113 0
+R12
+R2
 n7ae3
 vudp_rx_buf
-R16
+R17
 !i10b 1
-!s100 Obz^d]TeX2g5_BG7nTdHW3
-IUk0o^Do>2dTYk9cDXXFiV0
-R3
+!s100 adQZ7;EKJ3_PR5h[;SZ>52
+IGz=S9Tle8<UEzC8QB6O;^2
+R4
 R0
-w1758803333
+w1758857778
 8D:/University/AL_Proj/anlu/anlu/source_code/rtl/UDP_RX/udp_rx_buf.v
 FD:/University/AL_Proj/anlu/anlu/source_code/rtl/UDP_RX/udp_rx_buf.v
 L0 12
-R7
+R8
 r1
 !s85 0
 31
-R8
 R9
 R10
-!i113 0
 R11
-R1
+!i113 0
+R12
+R2

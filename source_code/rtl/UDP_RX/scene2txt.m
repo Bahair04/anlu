@@ -1,4 +1,4 @@
-IMG = imread('scene_1024_768.jpeg');
+IMG = imread('scene2_1024_768.jpeg');
 IMG = double(IMG);
 color = zeros(size(IMG, 1), size(IMG, 2));
 for i = 1 : size(IMG, 1)
@@ -9,13 +9,27 @@ for i = 1 : size(IMG, 1)
 end
 color = uint16(color);
 
-fid = fopen('scene.txt', 'w');
+fid = fopen('scene2_1024_768.txt', 'w');
+bar = waitbar(0, 'write...');
 fprintf(fid, 'F3 ED 7A 93 ');
 for i = 1 : size(IMG, 1)
     for j = 1 : size(IMG, 2)
-        fprintf(fid, '%02x %02x ', uint8(color(i, j) / 256), mod(color(i, j), 256));
+        fprintf(fid, '%02x %02x ', bitshift(color(i, j), -8), mod(color(i, j), 256));
         if j == size(IMG, 2)
             fprintf(fid, '\n');
         end
     end
+    waitbar(i / size(IMG, 1));
 end
+close(bar);
+
+img = zeros(size(IMG, 1), size(IMG, 2), 3);
+for i = 1 : size(IMG, 1)
+    for j = 1 : size(IMG, 2)
+        img(i, j, 1) = bitshift(IMG(i, j, 1), -3) * 8;
+        img(i, j, 2) = bitshift(IMG(i, j, 2), -2) * 4;
+        img(i, j, 3) = bitshift(IMG(i, j, 3), -3) * 8;
+    end
+end
+img = uint8(img);
+imshow(img);

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- HMAC is: fe199e4b6889bdf7a7f3d5904f9f44fdd2dd326984b16cd5194c93b4f4113d97 -->
+<!-- HMAC is: 3e06298d426c42fa9d23416fd63d76b56080b6c7aa531e9fa72fc01ab880105b -->
 <chipwatcher version="3.040000" project_name="UDP_EXAMPLE" chip_name="EG4S20BG256">
 	<watcher_nodes>
 		<bus name="u_udp_rx_buf/app_rx_data[7:0]" clock="app_rx_clk" inst="u_udp_rx_buf/u_ChipWatcher_0" type="IP_PROBE" is_enabled="yes">
@@ -147,7 +147,7 @@
 					<net name="u_udp_rx_buf/app_rx_data[1]" cond="low" capture_cond="low"/>
 					<net name="u_udp_rx_buf/app_rx_data[0]" cond="low" capture_cond="low"/>
 				</bus>
-				<net name="u_udp_rx_buf/app_rx_data_valid" cond="any" capture_cond="any"/>
+				<net name="u_udp_rx_buf/app_rx_data_valid" cond="high" capture_cond="any"/>
 				<bus name="u_udp_rx_buf/app_rx_data_length[15:0]" op="dont_care" capture_op="dont_care">
 					<net name="u_udp_rx_buf/app_rx_data_length[15]" cond="low" capture_cond="low"/>
 					<net name="u_udp_rx_buf/app_rx_data_length[14]" cond="low" capture_cond="low"/>
@@ -207,27 +207,27 @@
 					<net name="u_udp_rx_buf/app_rx_data_d[200][1]" cond="low" capture_cond="low"/>
 					<net name="u_udp_rx_buf/app_rx_data_d[200][0]" cond="low" capture_cond="low"/>
 				</bus>
-				<bus name="u_udp_rx_buf/app_rx_data_cnt[24:0]" op="equal" capture_op="dont_care">
+				<bus name="u_udp_rx_buf/app_rx_data_cnt[24:0]" op="dont_care" capture_op="dont_care">
 					<net name="u_udp_rx_buf/app_rx_data_cnt[24]" cond="low" capture_cond="low"/>
 					<net name="u_udp_rx_buf/app_rx_data_cnt[23]" cond="low" capture_cond="low"/>
 					<net name="u_udp_rx_buf/app_rx_data_cnt[22]" cond="low" capture_cond="low"/>
 					<net name="u_udp_rx_buf/app_rx_data_cnt[21]" cond="low" capture_cond="low"/>
 					<net name="u_udp_rx_buf/app_rx_data_cnt[20]" cond="low" capture_cond="low"/>
-					<net name="u_udp_rx_buf/app_rx_data_cnt[19]" cond="high" capture_cond="low"/>
+					<net name="u_udp_rx_buf/app_rx_data_cnt[19]" cond="low" capture_cond="low"/>
 					<net name="u_udp_rx_buf/app_rx_data_cnt[18]" cond="low" capture_cond="low"/>
-					<net name="u_udp_rx_buf/app_rx_data_cnt[17]" cond="high" capture_cond="low"/>
-					<net name="u_udp_rx_buf/app_rx_data_cnt[16]" cond="high" capture_cond="low"/>
-					<net name="u_udp_rx_buf/app_rx_data_cnt[15]" cond="high" capture_cond="low"/>
-					<net name="u_udp_rx_buf/app_rx_data_cnt[14]" cond="high" capture_cond="low"/>
-					<net name="u_udp_rx_buf/app_rx_data_cnt[13]" cond="high" capture_cond="low"/>
-					<net name="u_udp_rx_buf/app_rx_data_cnt[12]" cond="high" capture_cond="low"/>
-					<net name="u_udp_rx_buf/app_rx_data_cnt[11]" cond="high" capture_cond="low"/>
-					<net name="u_udp_rx_buf/app_rx_data_cnt[10]" cond="high" capture_cond="low"/>
-					<net name="u_udp_rx_buf/app_rx_data_cnt[9]" cond="high" capture_cond="low"/>
-					<net name="u_udp_rx_buf/app_rx_data_cnt[8]" cond="high" capture_cond="low"/>
-					<net name="u_udp_rx_buf/app_rx_data_cnt[7]" cond="high" capture_cond="low"/>
-					<net name="u_udp_rx_buf/app_rx_data_cnt[6]" cond="high" capture_cond="low"/>
-					<net name="u_udp_rx_buf/app_rx_data_cnt[5]" cond="high" capture_cond="low"/>
+					<net name="u_udp_rx_buf/app_rx_data_cnt[17]" cond="low" capture_cond="low"/>
+					<net name="u_udp_rx_buf/app_rx_data_cnt[16]" cond="low" capture_cond="low"/>
+					<net name="u_udp_rx_buf/app_rx_data_cnt[15]" cond="low" capture_cond="low"/>
+					<net name="u_udp_rx_buf/app_rx_data_cnt[14]" cond="low" capture_cond="low"/>
+					<net name="u_udp_rx_buf/app_rx_data_cnt[13]" cond="low" capture_cond="low"/>
+					<net name="u_udp_rx_buf/app_rx_data_cnt[12]" cond="low" capture_cond="low"/>
+					<net name="u_udp_rx_buf/app_rx_data_cnt[11]" cond="low" capture_cond="low"/>
+					<net name="u_udp_rx_buf/app_rx_data_cnt[10]" cond="low" capture_cond="low"/>
+					<net name="u_udp_rx_buf/app_rx_data_cnt[9]" cond="low" capture_cond="low"/>
+					<net name="u_udp_rx_buf/app_rx_data_cnt[8]" cond="low" capture_cond="low"/>
+					<net name="u_udp_rx_buf/app_rx_data_cnt[7]" cond="low" capture_cond="low"/>
+					<net name="u_udp_rx_buf/app_rx_data_cnt[6]" cond="low" capture_cond="low"/>
+					<net name="u_udp_rx_buf/app_rx_data_cnt[5]" cond="low" capture_cond="low"/>
 					<net name="u_udp_rx_buf/app_rx_data_cnt[4]" cond="low" capture_cond="low"/>
 					<net name="u_udp_rx_buf/app_rx_data_cnt[3]" cond="low" capture_cond="low"/>
 					<net name="u_udp_rx_buf/app_rx_data_cnt[2]" cond="low" capture_cond="low"/>
@@ -268,7 +268,7 @@
 				</bus>
 			</watcher_nodes>
 		</signal_vec>
-		<trigger name="u_udp_rx_buf/u_ChipWatcher_0_trigger" position="512" window_num="1" window_depth="1024">
+		<trigger name="u_udp_rx_buf/u_ChipWatcher_0_trigger" position="128" window_num="1" window_depth="1024">
 			<condition level="1" enabled="yes" type="basic_and" capture_type="basic_and"/>
 		</trigger>
 		<logic_eram name="u_udp_rx_buf/u_ChipWatcher_0/ChipWatcher_7244eeadc913_Inst/wrapper_cwc_top/U_cwc_ram" width="113" depth="1024">
