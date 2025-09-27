@@ -47,20 +47,20 @@ reg [1 : 0]             comb_data_cnt;
 reg [15 : 0]            comb_data;
 
 
-// ChipWatcher_0 u_ChipWatcher_0(
-//     .probe0(app_rx_data),
-//     .probe1(app_rx_data_valid),
-//     .probe2(app_rx_data_length),
-//     .probe3(app_rx_data_total),
-//     .probe4(state),
-//     .probe5(app_rx_data_d[DLY]),
-//     .probe6(app_rx_data_cnt),
-//     .probe7(dly_cnt),
-//     .probe8(vid_de),
-//     .probe9(vid_vs),
-//     .probe10(vid_data),
-//     .clk(app_rx_clk)
-// );
+ChipWatcher_0 u_ChipWatcher_0(
+    .probe0(app_rx_data),
+    .probe1(app_rx_data_valid),
+    .probe2(app_rx_data_length),
+    .probe3(app_rx_data_total),
+    .probe4(state),
+    .probe5(app_rx_data_d[DLY]),
+    .probe6(app_rx_data_cnt),
+    .probe7(dly_cnt),
+    .probe8(vid_de),
+    .probe9(vid_vs),
+    .probe10(vid_data),
+    .clk(app_rx_clk)
+);
 
 always @(posedge app_rx_clk or negedge rstn) begin
     if (!rstn)

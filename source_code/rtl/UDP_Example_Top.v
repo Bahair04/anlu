@@ -100,14 +100,6 @@ wire 					            vid_de; // 视频数据流有效信号
 wire                                vtc2_de; // 视频区域有效信号
 
 //*------------------------------------------------------------
-//* TPG测试数据
-//*------------------------------------------------------------
-// wire                                O_tpg_vs1; // TPG测试帧同步信号
-// wire                                O_tpg_hs1; // TPG测试行同步信号
-// wire                                O_tpg_de1; // TPG测试数据流有效信号
-// wire    [23 : 0]                    O_tpg_data1; // TPG测试数据
-
-//*------------------------------------------------------------
 //* SDRAM
 //*------------------------------------------------------------
 // PLL
@@ -204,36 +196,11 @@ uiSensorRGB565 uiSensorRGB565_inst
 assign cmos_reset = 1'b1;
 assign cmos_pwdn = 1'b0;
 
-//*------------------------------------------------------------
-//* TPG
-//*------------------------------------------------------------
-// wire    [3 : 0]        O_dis_mode;
-// // TPG测试数据
-// uitpg u_uitpg_1(
-//     .I_tpg_clk(vid_clk),
-//     .I_tpg_rstn(vtc_pll_lock),
-//     .I_tpg_vs(vid_vs),
-//     .I_tpg_hs(vid_hs),
-//     .I_tpg_de(vid_de),
-//     .O_tpg_vs(O_tpg_vs1),
-//     .O_tpg_hs(O_tpg_hs1),
-//     .O_tpg_de(O_tpg_de1),
-//     .O_tpg_data(O_tpg_data1),
-//     .O_dis_mode(O_dis_mode)
-// );
-// wire [15:0] data_565_1;
-// ui888_565 u_ui888_565_1(
-//     .data_888 	(O_tpg_data1  ),
-//     .data_565 	(data_565_1  )
-// );
-
 
 //*------------------------------------------------------------
 //* SDRAM
 //*------------------------------------------------------------
-
-// PLL
-// 产生150MHz读写时钟
+// PLL 产生150MHz读写时钟
 fdma_pll u_clk(
 	.refclk             (clk_50      	),
 	.reset              (!rstn    	    ),
@@ -291,8 +258,12 @@ u_four_channel_video_splicer(
 	.fdma_rvalid   	( fdma_rvalid    )
 );
 
+// two_channe_video_spilicer#(
 
-//////////////////////////////////////////////////////////////////////////////////////
+// ) u_four_channel_video_splicer(
+
+// );
+
 // app fdma controller
 app_fdma app_fdma_inst
 (
@@ -329,7 +300,7 @@ app_fdma app_fdma_inst
     ,.sdr_rd_dout       (sdr_rd_dout  )
     ,.sdr_busy			(sdr_busy	  )
 );
-//////////////////////////////////////////////////////////////////////////////////////
+
 // 将SDRAM控制器接口封装成类似于RAM接口的模块
 // 用于简化上层逻辑对SDRAM的访问
 sdr_as_ram  
@@ -365,7 +336,7 @@ sdr_as_ram
 	.SDR_DM(DM),
 	.SDR_DQ(DQ)	
 );
-//////////////////////////////////////////////////////////////////////////////////////
+
 // 片内嵌入式SDRAM 只需例化IP核，而不用引出信号，即可对SDRAM进行读写操作
 EG_PHY_SDRAM_2M_32 sdram(
 	.clk(CLK),
@@ -452,9 +423,7 @@ assign HDMI_D0_N = O_HDMI_TX_P[0];
 //* ETH UDP
 //*------------------------------------------------------------
 
-//------------------------------------------------------------
 //udp_loopback
-//------------------------------------------------------------
 wire                        udp_clk;
 wire                        reset;
 wire                        app_rx_data_valid;

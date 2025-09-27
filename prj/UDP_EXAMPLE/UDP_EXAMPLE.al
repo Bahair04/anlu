@@ -351,6 +351,15 @@
                     <Attr Name="CompileOrder" Val="62"/>
                 </FileInfo>
             </File>
+            <File Path="../../source_code/rtl/two_channel_video_splicer/two_channel_video_splicer.v">
+                <FileInfo>
+                    <Attr Name="AutoExcluded" Val="true"/>
+                    <Attr Name="UsedInSyn" Val="true"/>
+                    <Attr Name="UsedInP&R" Val="true"/>
+                    <Attr Name="BelongTo" Val="design_1"/>
+                    <Attr Name="CompileOrder" Val="63"/>
+                </FileInfo>
+            </File>
         </Verilog>
         <VHDL>
             <File Path="../../source_code/rtl/HDMI/hdmi_tx.vhd">
@@ -486,7 +495,6 @@
             </File>
             <File Path="al_ip/ChipWatcher_0/ChipWatcher_0.xml">
                 <FileInfo>
-                    <Attr Name="AutoExcluded" Val="true"/>
                     <Attr Name="UsedInSyn" Val="true"/>
                     <Attr Name="UsedInP&R" Val="true"/>
                     <Attr Name="BelongTo" Val="design_1"/>
