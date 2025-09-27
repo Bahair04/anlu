@@ -1,22 +1,23 @@
 module ChipWatcher_0ab6c5a2fd02 ( 
-    input [0:0] probe0, 
-    input [7:0] probe1, 
-    input [15:0] probe2, 
+    input [23:0] probe0, 
+    input [11:0] probe1, 
+    input [11:0] probe2, 
+    input [0:0] probe3, 
     input       clk  
 );  
-    localparam CWC_BUS_NUM = 3;
-    localparam CWC_BUS_DIN_NUM = 25;
-    localparam CWC_CTRL_LEN = 104;
-	localparam CWC_BUS_CTRL_LEN = 84;
+    localparam CWC_BUS_NUM = 4;
+    localparam CWC_BUS_DIN_NUM = 49;
+    localparam CWC_CTRL_LEN = 180;
+	localparam CWC_BUS_CTRL_LEN = 160;
     localparam INPUT_PIPE_NUM = 0;
     localparam OUTPUT_PIPE_NUM = 0;
 	localparam CWC_CAPTURE_CTRL_EXIST = 0;
-    localparam RAM_LEN = 25;
-    localparam RAM_DATA_DEPTH = 4096;
+    localparam RAM_LEN = 49;
+    localparam RAM_DATA_DEPTH = 2048;
     localparam STAT_REG_LEN = 24;
-    localparam integer CWC_BUS_WIDTH[0:CWC_BUS_NUM-1] = { 16,8,1 };
-    localparam integer CWC_BUS_DIN_POS[0:CWC_BUS_NUM-1] = { 0,16,24 };    
-    localparam integer CWC_BUS_CTRL_POS[0:CWC_BUS_NUM-1] = { 0,52,80 };
+    localparam integer CWC_BUS_WIDTH[0:CWC_BUS_NUM-1] = { 1,12,12,24 };
+    localparam integer CWC_BUS_DIN_POS[0:CWC_BUS_NUM-1] = { 0,1,13,25 };    
+    localparam integer CWC_BUS_CTRL_POS[0:CWC_BUS_NUM-1] = { 0,4,44,84 };
 
     wire                     cwc_rst;
     wire [CWC_CTRL_LEN-1:0]  cwc_control;
@@ -42,8 +43,8 @@ module ChipWatcher_0ab6c5a2fd02 (
 		.cwc_control(cwc_control),
 		.cwc_status(cwc_status),
 		.cwc_rst(cwc_rst),
-		.cwc_bus_din({probe0,probe1,probe2}),
-		.ram_data_din({probe0,probe1,probe2})
+		.cwc_bus_din({probe0,probe1,probe2,probe3}),
+		.ram_data_din({probe0,probe1,probe2,probe3})
 	);
 
     AL_LOGIC_DEBUGHUB #(

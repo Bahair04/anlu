@@ -3,35 +3,35 @@
 -----------------------------------------------------------
 | Timing                    |                             |
 |     Setup WNS             |        -5958                |
-|     Setup TNS             |      -319490                |
-|     Num of violated S-EP  |           90                |
+|     Setup TNS             |      -336441                |
+|     Num of violated S-EP  |          360                |
 |     Hold WNS              |          471                |
 |     Hold TNS              |            0                |
 |     Num of violated H-EP  |            0                |
 -----------------------------------------------------------
 | Utilization               |                             |
-|     #registers            |         5477                |
-|     #luts                 |         4485                |
-|     #lut1                 |           45                |
-|     #lut1(~A)             |           45                |
-|     #slices               |          331                |
-|     slices percentage     |        3.38%                |
-|     #RAMs                 |           22                |
+|     #registers            |         6440                |
+|     #luts                 |         5101                |
+|     #lut1                 |           67                |
+|     #lut1(~A)             |           66                |
+|     #slices               |          453                |
+|     slices percentage     |        4.62%                |
+|     #RAMs                 |           39                |
 |     #DSPs                 |            0                |
 |     #f7mux                |        0.00%                |
-|     #MACROs               |           50                |
-|     #insts in MACRO       |          331                |
+|     #MACROs               |           68                |
+|     #insts in MACRO       |          453                |
 -----------------------------------------------------------
 | kept_net                  |                             |
-|     #syn_keep             |           89                |
-|     #keep_hier            |            0                |
+|     #syn_keep             |          392                |
+|     #keep_hier            |           63                |
 |     #dont_touch           |            0                |
 |     #mark_debug           |            0                |
 |     #max_fanout_keep      |            0                |
-|     #async_reg            |           12                |
+|     #async_reg            |           27                |
 -----------------------------------------------------------
-| Top 10% datanet fanout#   |        39.73                |
-| dff(single fanout)->dff   |         1528                |
+| Top 10% datanet fanout#   |        35.63                |
+| dff(single fanout)->dff   |         1706                |
 | dff(single fanout)->dram  |            0                |
 -----------------------------------------------------------
 | Over-quota path num*      |                             |
@@ -59,24 +59,25 @@ Logic Level Distribution
 ---------------------------------------------------------------------------------------------------------------------------------------------
   Clock                                         |  Period            |  0     |  1     |  2     |  3    |  4    |  5    |  6    |  7   |  8
 ---------------------------------------------------------------------------------------------------------------------------------------------
-  clk_in                                        |  20.000ns (50MHz)  |  40    |  44    |  21    |  8    |  10   |  11   |  3    |  0   |  0
-  phy1_rgmii_rx_clk                             |  8.000ns (125MHz)  |  518   |  161   |  104   |  45   |  33   |  2    |  0    |  0   |  0
-  u_PLL_HDMI_CLK/pll_inst.clkc[0]               |  16.000ns (62MHz)  |  89    |  15    |  39    |  14   |  32   |  37   |  11   |  0   |  0
+  clk_in                                        |  20.000ns (50MHz)  |  40    |  44    |  22    |  8    |  12   |  9    |  2    |  0   |  0
+  phy1_rgmii_rx_clk                             |  8.000ns (125MHz)  |  518   |  160   |  102   |  49   |  30   |  4    |  0    |  0   |  0
+  u_PLL_HDMI_CLK/pll_inst.clkc[0]               |  16.000ns (62MHz)  |  537   |  253   |  96    |  70   |  34   |  29   |  23   |  0   |  0
   u_PLL_HDMI_CLK/pll_inst.clkc[1]               |  3.200ns (312MHz)  |  43    |  27    |  0     |  0    |  0    |  0    |  0    |  0   |  0
-  u_clk/pll_inst.clkc[0]                        |  6.666ns (150MHz)  |  775   |  280   |  137   |  138  |  37   |  4    |  1    |  0   |  0
+  u_clk/pll_inst.clkc[0]                        |  6.666ns (150MHz)  |  827   |  401   |  248   |  159  |  103  |  5    |  1    |  0   |  0
   u_clk/pll_inst.clkc[2]                        |  6.666ns (150MHz)  |  16    |  32    |  0     |  0    |  0    |  0    |  0    |  0   |  0
-  u_udp_top/u_clk_gen/u_pll_0/pll_inst.clkc[0]  |  8.000ns (125MHz)  |  323   |  100   |  131   |  79   |  36   |  6    |  1    |  0   |  0
-  u_udp_top/u_clk_gen/u_pll_0/pll_inst.clkc[1]  |  8.000ns (125MHz)  |  2073  |  1186  |  4552  |  493  |  400  |  781  |  300  |  43  |  2
+  u_udp_top/u_clk_gen/u_pll_0/pll_inst.clkc[0]  |  8.000ns (125MHz)  |  323   |  100   |  132   |  80   |  34   |  5    |  2    |  0   |  0
+  u_udp_top/u_clk_gen/u_pll_0/pll_inst.clkc[1]  |  8.000ns (125MHz)  |  2073  |  1186  |  4571  |  477  |  440  |  503  |  557  |  21  |  2
   u_udp_top/u_clk_gen/u_pll_0/pll_inst.clkc[4]  |  8.000ns (125MHz)  |  2     |  0     |  0     |  0    |  0    |  0    |  0    |  0   |  0
-  Total                                         |  NA                |  3879  |  1845  |  4984  |  777  |  548  |  841  |  316  |  43  |  2
+  Total                                         |  NA                |  4379  |  2203  |  5171  |  843  |  653  |  555  |  585  |  21  |  2
 ---------------------------------------------------------------------------------------------------------------------------------------------
 Hierarchical Rent Exponent Report
 +-----------------------------------------------------------------------+
 |Inst           |Model           |Rent     |Cell     |Pin     |Term     |
 +-----------------------------------------------------------------------+
-|top            |UDP_Example_Top |0.20     |10617    |41382   |24       |
-|  u_udp_rx_buf |udp_rx_buf_6    |0.37     |1053     |3348    |41       |
-|  u_udp_top    |udp_top_7       |0.36     |6870     |28083   |95       |
+|top            |UDP_Example_Top |0.20     |13035    |49251   |24       |
+|  u_udp_rx_buf |udp_rx_buf_7    |0.37     |1053     |3348    |41       |
+|  u_udp_top    |udp_top_8       |0.36     |6879     |28111   |95       |
+|  uivtc_inst   |uivtc_12        |0.26     |1944     |5797    |22       |
 +-----------------------------------------------------------------------+
 Note: Cell represents total number of cells inside module; Pin represents total number of pins
       which have net connection inside module; Term represents total number of PIs and POs of module.

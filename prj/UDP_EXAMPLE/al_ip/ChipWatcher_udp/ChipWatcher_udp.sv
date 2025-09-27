@@ -3,14 +3,15 @@
 **	All Right Reserved.
 \************************************************************/
 /************************************************************\
-**	Build time: Sep 14 2025 15:13:12
+**	Build time: Sep 27 2025 16:37:13
 **	TD version	:	6.2.168116
 ************************************************************/
 module ChipWatcher_udp
 (
-  input   [0:0]                 probe0,
-  input   [7:0]                 probe1,
-  input   [15:0]                probe2,
+  input   [23:0]                probe0,
+  input   [11:0]                probe1,
+  input   [11:0]                probe2,
+  input   [0:0]                 probe3,
   input                         clk
 );
 
@@ -19,6 +20,7 @@ module ChipWatcher_udp
       .probe0(probe0),
       .probe1(probe1),
       .probe2(probe2),
+      .probe3(probe3),
       .clk(clk)
   );
 endmodule

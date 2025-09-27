@@ -9,11 +9,11 @@
             <ipxact:instanceName>ChipWatcher_0ab6c5a2fd02_Inst</ipxact:instanceName>
             <ipxact:componentRef vendor="anlogic.com" library="ip" name="ChipWatcher" version="1.1"/>
             <ipxact:configurableElementValues>
-                <ipxact:configurableElementValue referenceId="CWC_BUS_NUM">3</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="CWC_BUS_NUM">4</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="P0_Available">1</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="P1_Available">1</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="P2_Available">1</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="P3_Available">0</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="P3_Available">1</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="P4_Available">0</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="P5_Available">0</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="P6_Available">0</ipxact:configurableElementValue>
@@ -266,19 +266,22 @@
                 <ipxact:configurableElementValue referenceId="P253_Available">0</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="P254_Available">0</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="P255_Available">0</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="Probe_Width">1 8 16 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="Probe0_WIDTH">1</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="Probe1_WIDTH">8</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="Probe2_WIDTH">16</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="Probe_Width">24 12 12 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="Probe0_WIDTH">24</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="Probe1_WIDTH">12</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="Probe2_WIDTH">12</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="Probe3_WIDTH">1</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="Probe0_Data_Enable">1</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="Probe1_Data_Enable">1</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="Probe2_Data_Enable">1</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="Probe3_Data_Enable">1</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="Probe_Data_Enable">1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="Probe0_Trigger_Enable">1</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="Probe1_Trigger_Enable">1</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="Probe2_Trigger_Enable">1</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="Probe3_Trigger_Enable">1</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="Probe_Trigger_Enable">1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="RAM_DATA_DEPTH">4096</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="RAM_DATA_DEPTH">2048</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="INPUT_PIPE_NUM">0</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="OUTPUT_PIPE_NUM">0</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="Capture_Control">0</ipxact:configurableElementValue>
@@ -307,6 +310,13 @@
             <ipxact:portReferences>
                 <ipxact:internalPortReference componentRef="ChipWatcher_0ab6c5a2fd02_Inst" portRef="probe2"/>
                 <ipxact:externalPortReference portRef="probe2"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>probe3</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="ChipWatcher_0ab6c5a2fd02_Inst" portRef="probe3"/>
+                <ipxact:externalPortReference portRef="probe3"/>
             </ipxact:portReferences>
         </ipxact:adHocConnection>
         <ipxact:adHocConnection>

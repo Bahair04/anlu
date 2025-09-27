@@ -49,7 +49,8 @@ module uivtc#
     output  reg                 O_vtc_de,//视频数据有效 
     input   wire    [11 : 0]    vtc2_offset_x,
     input   wire    [11 : 0]    vtc2_offset_y,
-    output  reg                 vtc2_de_o
+    output  reg                 vtc2_de_o,
+    input   wire    [23 : 0]    data_888
 );
 
 reg [11:0] hcnt = 12'd0;    //视频水平方向，列计数器，寄存器
@@ -110,6 +111,15 @@ always @(posedge I_vtc_clk)begin
         vtc2_de_o <= vtc2_de;	
 	end
 end
+
+ChipWatcher_udp u_ChipWatcher_udp(
+	.probe0 	( data_888  ),
+	.probe1 	( hcnt  ),
+	.probe2 	( vcnt  ),
+    .probe3 	( vtc_de  ),
+	.clk    	( I_vtc_clk     )
+);
+
 
 endmodule
 

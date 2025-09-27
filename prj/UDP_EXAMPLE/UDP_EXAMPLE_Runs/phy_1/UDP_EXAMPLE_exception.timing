@@ -1,11 +1,11 @@
 Created by          : Tang Dynasty v6.2.168116
                     : Copyright (c) 2012-2025 Anlogic Inc.
-Generated           : Sat Sep 27 13:07:46 2025
+Generated           : Sat Sep 27 17:12:40 2025
 
 Top Model           : UDP_Example_Top
 Device              : EG4S20BG256
 Speed               : NA
-STA coverage        : 99.45%
+STA coverage        : 99.04%
 Constraint File     : D:/University/AL_Proj/anlu/anlu/source_code/constraints/UDP.sdc;
 Confidence          : Routed
 Check Corner        : Both (Slow and Fast)
@@ -27,6 +27,11 @@ MCP/SMD Summary
 		Max Check
 		--------------------
 		     Total    Dominated     Shadowed      Ignored   Constraint
+		       175          175            0            0   set_max_delay -nowarn -from [get_regs {debug_hub_top/U_*_handshake_sync_ctrl/bus_data_r_aclk[*]}] -to [get_regs {debug_hub_top/U_*_handshake_sync_ctrl/bus_data_r_bclk[*]}] -datapath_only 1
+		        24           24            0            0   set_max_delay -nowarn -from [get_regs {debug_hub_top/U_*_handshake_sync_stat/bus_data_r_bclk[*]}] -to [get_regs {debug_hub_top/U_*_handshake_sync_stat/bus_data_r_aclk[*]}] -datapath_only 1
+		         2            2            0            0   set_max_delay -nowarn -from [get_regs {debug_hub_top/U_*_handshake_sync_*/U_handshake_sync/req_aclk*}] -to [get_regs {debug_hub_top/U_*_handshake_sync_*/U_handshake_sync/req_sync1_bclk*}] -datapath_only 1
+		         2            2            0            0   set_max_delay -nowarn -from [get_regs {debug_hub_top/U_*_handshake_sync_*/U_handshake_sync/ack_bclk*}] -to [get_regs {debug_hub_top/U_*_handshake_sync_*/U_handshake_sync/ack_sync1_aclk*}] -datapath_only 1
+		        10           10            0            0   set_max_delay -nowarn -from [get_regs {debug_hub_top/U_tap/rst*}] -to [get_regs {debug_hub_top/slave_*_rst_sync*}] -datapath_only 1
 
 		Min Check
 		--------------------
@@ -39,8 +44,1892 @@ MCP/SMD Details
 --------------------
 
 
+Constraint     :   set_max_delay -nowarn -from [get_regs {debug_hub_top/U_*_handshake_sync_ctrl/bus_data_r_aclk[*]}] -to [get_regs {debug_hub_top/U_*_handshake_sync_ctrl/bus_data_r_bclk[*]}] -datapath_only 1
+Check Type     :   Max
+--------------------------------------------------------------------------------
+Total Paths    :          175
+Dominated      :          175,        100.0%
+
+
+Constraint     :   set_max_delay -nowarn -from [get_regs {debug_hub_top/U_*_handshake_sync_stat/bus_data_r_bclk[*]}] -to [get_regs {debug_hub_top/U_*_handshake_sync_stat/bus_data_r_aclk[*]}] -datapath_only 1
+Check Type     :   Max
+--------------------------------------------------------------------------------
+Total Paths    :           24
+Dominated      :           24,        100.0%
+
+
+Constraint     :   set_max_delay -nowarn -from [get_regs {debug_hub_top/U_*_handshake_sync_*/U_handshake_sync/req_aclk*}] -to [get_regs {debug_hub_top/U_*_handshake_sync_*/U_handshake_sync/req_sync1_bclk*}] -datapath_only 1
+Check Type     :   Max
+--------------------------------------------------------------------------------
+Total Paths    :            2
+Dominated      :            2,        100.0%
+
+
+Constraint     :   set_max_delay -nowarn -from [get_regs {debug_hub_top/U_*_handshake_sync_*/U_handshake_sync/ack_bclk*}] -to [get_regs {debug_hub_top/U_*_handshake_sync_*/U_handshake_sync/ack_sync1_aclk*}] -datapath_only 1
+Check Type     :   Max
+--------------------------------------------------------------------------------
+Total Paths    :            2
+Dominated      :            2,        100.0%
+
+
+Constraint     :   set_max_delay -nowarn -from [get_regs {debug_hub_top/U_tap/rst*}] -to [get_regs {debug_hub_top/slave_*_rst_sync*}] -datapath_only 1
+Check Type     :   Max
+--------------------------------------------------------------------------------
+Total Paths    :           10
+Dominated      :           10,        100.0%
+
+
 Details on timing exceptions
 --------------------------------------------------
+
+Timing details for constraint:
+	set_max_delay -nowarn -from [get_regs {debug_hub_top/U_*_handshake_sync_ctrl/bus_data_r_aclk[*]}] -to [get_regs {debug_hub_top/U_*_handshake_sync_ctrl/bus_data_r_bclk[*]}] -datapath_only 1
+--------------------------------------------------
+
+----------------------------------------------------------------------------------------------------
+Path Group     :     
+set_max_delay -nowarn -from [get_regs {debug_hub_top/U_*_handshake_sync_ctrl/bus_data_r_aclk[*]}] -to [get_regs {debug_hub_top/U_*_handshake_sync_ctrl/bus_data_r_bclk[*]}] -datapath_only 1
+
+Type           :     SMD
+
+Statistics:
+Max            : SWNS     -0.154ns, STNS     -0.965ns,        50 Viol Endpoints,       175 Total Endpoints,       175 Paths Analyzed
+Min            : HWNS      0.000ns, HTNS      0.000ns,         0 Viol Endpoints,         0 Total Endpoints,         0 Paths Analyzed
+----------------------------------------------------------------------------------------------------
+
+Max Paths
+----------------------------------------------------------------------------------------------------
+Slack               : -0.154ns
+Begin Point         : debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_aclk_reg[122]_syn_3.clk (rising edge triggered by clock config_inst.jtck  { rise@0.000000ns  fall@50.000000ns  period=100.000000 })
+End Point           : debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_bclk_reg[122]_syn_3.mi[0] (rising edge triggered by clock u_PLL_HDMI_CLK/pll_inst.clkc[0]  { rise@0.000000ns  fall@8.000000ns  period=16.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 1.000ns { u_PLL_HDMI_CLK/pll_inst.clkc[0] rising@0.000ns - config_inst.jtck rising@0.000ns }
+Data Path Delay     : 1.038ns (cell 0.289ns (27%), net 0.749ns (73%))
+Clock Skew          : 0.000ns
+Logic Level         : 0
+Max Fanout          : 1
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.100ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+CONFIG              x000y068            0.000          0.000          pin: config_inst.jtck
+net (fo=1)                              0.000          0.000          net: cwc_jtck,  NOFILE(0)
+                                                                      pin: cwc_jtck_syn_1.clki
+GCLK                x001y068z0          0.000          0.000          pin: cwc_jtck_syn_1.clko
+net (fo=452)                            0.000          0.000          net: cwc_jtck_syn_2,  NOFILE(0)
+                                                                      pin: debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_aclk_reg[122]_syn_3.clk
+--------------------------------------------------------------------  ---------------
+clk2q               x033y056z3          0.146    r     0.146          pin: debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_aclk_reg[122]_syn_3.q[1]
+net (fo=1)                              0.749          0.895          net: debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_aclk[122],  D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/ip/apm/apm_cwc\apm_debughub.sv(0)
+                                                                      pin: debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_bclk_reg[122]_syn_3.mi[0]
+reg                 x033y056z0          0.143    r     1.038          net: debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_bclk[122],  D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/ip/apm/apm_cwc\apm_debughub.sv(0)
+--------------------------------------------------------------------  ---------------
+Arrival                                                1.038               
+
+source latency                          0.000          0.000               
+port                R7                  0.000          0.000          pin: clk_50
+hierarchy                               0.000          0.000          pin: clk_50_syn_2.ipad
+PAD                 x020y071            0.000          0.000          pin: clk_50_syn_2.di
+net (fo=59)         x000y000            0.000          0.000          net: clk_50_dup_1,  ../../../../source_code/rtl/UDP_Example_Top.v(41)
+                                                                      pin: u_PLL_HDMI_CLK/pll_inst.refclk
+PLL                 x000y000            0.000          0.000          pin: u_PLL_HDMI_CLK/pll_inst.clkc[0]
+net (fo=1)                              0.000          0.000          net: u_PLL_HDMI_CLK/clk0_buf,  ../../al_ip/PLL_HDMI_CLK.v(37)
+                                                                      pin: u_PLL_HDMI_CLK/bufg_feedback.clki
+GCLK                x001y001z2          0.000          0.000          pin: u_PLL_HDMI_CLK/bufg_feedback.clko
+net (fo=771)                            0.000          0.000          net: uivtc_inst/I_vtc_clk,  ../../../../source_code/rtl/uivtc/uivtc.v(46)
+                                                                      pin: debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_bclk_reg[122]_syn_3.clk
+constraint delay                        1.000          1.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.116          0.884               
+clock uncertainty                       0.000          0.884               
+clock pessimism                         0.000          0.884               
+--------------------------------------------------------------------  ---------------
+Required                                               0.884               
+--------------------------------------------------------------------  ---------------
+Slack                                                 -0.154               
+
+Slack               : -0.044ns
+Begin Point         : debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_aclk_reg[107]_syn_3.clk (rising edge triggered by clock config_inst.jtck  { rise@0.000000ns  fall@50.000000ns  period=100.000000 })
+End Point           : debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_bclk_reg[107]_syn_3.mi[1] (rising edge triggered by clock u_PLL_HDMI_CLK/pll_inst.clkc[0]  { rise@0.000000ns  fall@8.000000ns  period=16.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 1.000ns { u_PLL_HDMI_CLK/pll_inst.clkc[0] rising@0.000ns - config_inst.jtck rising@0.000ns }
+Data Path Delay     : 0.928ns (cell 0.289ns (31%), net 0.639ns (69%))
+Clock Skew          : 0.000ns
+Logic Level         : 0
+Max Fanout          : 1
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.100ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+CONFIG              x000y068            0.000          0.000          pin: config_inst.jtck
+net (fo=1)                              0.000          0.000          net: cwc_jtck,  NOFILE(0)
+                                                                      pin: cwc_jtck_syn_1.clki
+GCLK                x001y068z0          0.000          0.000          pin: cwc_jtck_syn_1.clko
+net (fo=452)                            0.000          0.000          net: cwc_jtck_syn_2,  NOFILE(0)
+                                                                      pin: debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_aclk_reg[107]_syn_3.clk
+--------------------------------------------------------------------  ---------------
+clk2q               x020y069z0          0.146    r     0.146          pin: debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_aclk_reg[107]_syn_3.q[1]
+net (fo=1)                              0.639          0.785          net: debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_aclk[107],  D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/ip/apm/apm_cwc\apm_debughub.sv(0)
+                                                                      pin: debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_bclk_reg[107]_syn_3.mi[1]
+reg                 x020y069z2          0.143    r     0.928          net: debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_bclk[107],  D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/ip/apm/apm_cwc\apm_debughub.sv(0)
+--------------------------------------------------------------------  ---------------
+Arrival                                                0.928               
+
+source latency                          0.000          0.000               
+port                R7                  0.000          0.000          pin: clk_50
+hierarchy                               0.000          0.000          pin: clk_50_syn_2.ipad
+PAD                 x020y071            0.000          0.000          pin: clk_50_syn_2.di
+net (fo=59)         x000y000            0.000          0.000          net: clk_50_dup_1,  ../../../../source_code/rtl/UDP_Example_Top.v(41)
+                                                                      pin: u_PLL_HDMI_CLK/pll_inst.refclk
+PLL                 x000y000            0.000          0.000          pin: u_PLL_HDMI_CLK/pll_inst.clkc[0]
+net (fo=1)                              0.000          0.000          net: u_PLL_HDMI_CLK/clk0_buf,  ../../al_ip/PLL_HDMI_CLK.v(37)
+                                                                      pin: u_PLL_HDMI_CLK/bufg_feedback.clki
+GCLK                x001y001z2          0.000          0.000          pin: u_PLL_HDMI_CLK/bufg_feedback.clko
+net (fo=771)                            0.000          0.000          net: uivtc_inst/I_vtc_clk,  ../../../../source_code/rtl/uivtc/uivtc.v(46)
+                                                                      pin: debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_bclk_reg[107]_syn_3.clk
+constraint delay                        1.000          1.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.116          0.884               
+clock uncertainty                       0.000          0.884               
+clock pessimism                         0.000          0.884               
+--------------------------------------------------------------------  ---------------
+Required                                               0.884               
+--------------------------------------------------------------------  ---------------
+Slack                                                 -0.044               
+
+Slack               : -0.038ns
+Begin Point         : debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_aclk_reg[73]_syn_3.clk (rising edge triggered by clock config_inst.jtck  { rise@0.000000ns  fall@50.000000ns  period=100.000000 })
+End Point           : debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_bclk_reg[73]_syn_4.mi[1] (rising edge triggered by clock u_PLL_HDMI_CLK/pll_inst.clkc[0]  { rise@0.000000ns  fall@8.000000ns  period=16.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 1.000ns { u_PLL_HDMI_CLK/pll_inst.clkc[0] rising@0.000ns - config_inst.jtck rising@0.000ns }
+Data Path Delay     : 0.922ns (cell 0.289ns (31%), net 0.633ns (69%))
+Clock Skew          : 0.000ns
+Logic Level         : 0
+Max Fanout          : 1
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.100ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+CONFIG              x000y068            0.000          0.000          pin: config_inst.jtck
+net (fo=1)                              0.000          0.000          net: cwc_jtck,  NOFILE(0)
+                                                                      pin: cwc_jtck_syn_1.clki
+GCLK                x001y068z0          0.000          0.000          pin: cwc_jtck_syn_1.clko
+net (fo=452)                            0.000          0.000          net: cwc_jtck_syn_2,  NOFILE(0)
+                                                                      pin: debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_aclk_reg[73]_syn_3.clk
+--------------------------------------------------------------------  ---------------
+clk2q               x011y060z1          0.146    r     0.146          pin: debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_aclk_reg[73]_syn_3.q[1]
+net (fo=1)                              0.633          0.779          net: debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_aclk[73],  D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/ip/apm/apm_cwc\apm_debughub.sv(0)
+                                                                      pin: debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_bclk_reg[73]_syn_4.mi[1]
+reg                 x011y060z3          0.143    r     0.922          net: debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_bclk[73],  D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/ip/apm/apm_cwc\apm_debughub.sv(0)
+--------------------------------------------------------------------  ---------------
+Arrival                                                0.922               
+
+source latency                          0.000          0.000               
+port                R7                  0.000          0.000          pin: clk_50
+hierarchy                               0.000          0.000          pin: clk_50_syn_2.ipad
+PAD                 x020y071            0.000          0.000          pin: clk_50_syn_2.di
+net (fo=59)         x000y000            0.000          0.000          net: clk_50_dup_1,  ../../../../source_code/rtl/UDP_Example_Top.v(41)
+                                                                      pin: u_PLL_HDMI_CLK/pll_inst.refclk
+PLL                 x000y000            0.000          0.000          pin: u_PLL_HDMI_CLK/pll_inst.clkc[0]
+net (fo=1)                              0.000          0.000          net: u_PLL_HDMI_CLK/clk0_buf,  ../../al_ip/PLL_HDMI_CLK.v(37)
+                                                                      pin: u_PLL_HDMI_CLK/bufg_feedback.clki
+GCLK                x001y001z2          0.000          0.000          pin: u_PLL_HDMI_CLK/bufg_feedback.clko
+net (fo=771)                            0.000          0.000          net: uivtc_inst/I_vtc_clk,  ../../../../source_code/rtl/uivtc/uivtc.v(46)
+                                                                      pin: debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_bclk_reg[73]_syn_4.clk
+constraint delay                        1.000          1.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.116          0.884               
+clock uncertainty                       0.000          0.884               
+clock pessimism                         0.000          0.884               
+--------------------------------------------------------------------  ---------------
+Required                                               0.884               
+--------------------------------------------------------------------  ---------------
+Slack                                                 -0.038               
+
+Slack               : -0.038ns
+Begin Point         : debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_aclk_reg[121]_syn_3.clk (rising edge triggered by clock config_inst.jtck  { rise@0.000000ns  fall@50.000000ns  period=100.000000 })
+End Point           : debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_bclk_reg[121]_syn_3.mi[1] (rising edge triggered by clock u_PLL_HDMI_CLK/pll_inst.clkc[0]  { rise@0.000000ns  fall@8.000000ns  period=16.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 1.000ns { u_PLL_HDMI_CLK/pll_inst.clkc[0] rising@0.000ns - config_inst.jtck rising@0.000ns }
+Data Path Delay     : 0.922ns (cell 0.289ns (31%), net 0.633ns (69%))
+Clock Skew          : 0.000ns
+Logic Level         : 0
+Max Fanout          : 1
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.100ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+CONFIG              x000y068            0.000          0.000          pin: config_inst.jtck
+net (fo=1)                              0.000          0.000          net: cwc_jtck,  NOFILE(0)
+                                                                      pin: cwc_jtck_syn_1.clki
+GCLK                x001y068z0          0.000          0.000          pin: cwc_jtck_syn_1.clko
+net (fo=452)                            0.000          0.000          net: cwc_jtck_syn_2,  NOFILE(0)
+                                                                      pin: debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_aclk_reg[121]_syn_3.clk
+--------------------------------------------------------------------  ---------------
+clk2q               x033y055z1          0.146    r     0.146          pin: debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_aclk_reg[121]_syn_3.q[1]
+net (fo=1)                              0.633          0.779          net: debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_aclk[121],  D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/ip/apm/apm_cwc\apm_debughub.sv(0)
+                                                                      pin: debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_bclk_reg[121]_syn_3.mi[1]
+reg                 x033y055z3          0.143    r     0.922          net: debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_bclk[121],  D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/ip/apm/apm_cwc\apm_debughub.sv(0)
+--------------------------------------------------------------------  ---------------
+Arrival                                                0.922               
+
+source latency                          0.000          0.000               
+port                R7                  0.000          0.000          pin: clk_50
+hierarchy                               0.000          0.000          pin: clk_50_syn_2.ipad
+PAD                 x020y071            0.000          0.000          pin: clk_50_syn_2.di
+net (fo=59)         x000y000            0.000          0.000          net: clk_50_dup_1,  ../../../../source_code/rtl/UDP_Example_Top.v(41)
+                                                                      pin: u_PLL_HDMI_CLK/pll_inst.refclk
+PLL                 x000y000            0.000          0.000          pin: u_PLL_HDMI_CLK/pll_inst.clkc[0]
+net (fo=1)                              0.000          0.000          net: u_PLL_HDMI_CLK/clk0_buf,  ../../al_ip/PLL_HDMI_CLK.v(37)
+                                                                      pin: u_PLL_HDMI_CLK/bufg_feedback.clki
+GCLK                x001y001z2          0.000          0.000          pin: u_PLL_HDMI_CLK/bufg_feedback.clko
+net (fo=771)                            0.000          0.000          net: uivtc_inst/I_vtc_clk,  ../../../../source_code/rtl/uivtc/uivtc.v(46)
+                                                                      pin: debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_bclk_reg[121]_syn_3.clk
+constraint delay                        1.000          1.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.116          0.884               
+clock uncertainty                       0.000          0.884               
+clock pessimism                         0.000          0.884               
+--------------------------------------------------------------------  ---------------
+Required                                               0.884               
+--------------------------------------------------------------------  ---------------
+Slack                                                 -0.038               
+
+Slack               : -0.038ns
+Begin Point         : debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_aclk_reg[127]_syn_3.clk (rising edge triggered by clock config_inst.jtck  { rise@0.000000ns  fall@50.000000ns  period=100.000000 })
+End Point           : debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_bclk_reg[127]_syn_3.mi[1] (rising edge triggered by clock u_PLL_HDMI_CLK/pll_inst.clkc[0]  { rise@0.000000ns  fall@8.000000ns  period=16.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 1.000ns { u_PLL_HDMI_CLK/pll_inst.clkc[0] rising@0.000ns - config_inst.jtck rising@0.000ns }
+Data Path Delay     : 0.922ns (cell 0.289ns (31%), net 0.633ns (69%))
+Clock Skew          : 0.000ns
+Logic Level         : 0
+Max Fanout          : 1
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.100ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+CONFIG              x000y068            0.000          0.000          pin: config_inst.jtck
+net (fo=1)                              0.000          0.000          net: cwc_jtck,  NOFILE(0)
+                                                                      pin: cwc_jtck_syn_1.clki
+GCLK                x001y068z0          0.000          0.000          pin: cwc_jtck_syn_1.clko
+net (fo=452)                            0.000          0.000          net: cwc_jtck_syn_2,  NOFILE(0)
+                                                                      pin: debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_aclk_reg[127]_syn_3.clk
+--------------------------------------------------------------------  ---------------
+clk2q               x022y061z0          0.146    r     0.146          pin: debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_aclk_reg[127]_syn_3.q[1]
+net (fo=1)                              0.633          0.779          net: debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_aclk[127],  D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/ip/apm/apm_cwc\apm_debughub.sv(0)
+                                                                      pin: debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_bclk_reg[127]_syn_3.mi[1]
+reg                 x022y061z2          0.143    r     0.922          net: debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_bclk[127],  D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/ip/apm/apm_cwc\apm_debughub.sv(0)
+--------------------------------------------------------------------  ---------------
+Arrival                                                0.922               
+
+source latency                          0.000          0.000               
+port                R7                  0.000          0.000          pin: clk_50
+hierarchy                               0.000          0.000          pin: clk_50_syn_2.ipad
+PAD                 x020y071            0.000          0.000          pin: clk_50_syn_2.di
+net (fo=59)         x000y000            0.000          0.000          net: clk_50_dup_1,  ../../../../source_code/rtl/UDP_Example_Top.v(41)
+                                                                      pin: u_PLL_HDMI_CLK/pll_inst.refclk
+PLL                 x000y000            0.000          0.000          pin: u_PLL_HDMI_CLK/pll_inst.clkc[0]
+net (fo=1)                              0.000          0.000          net: u_PLL_HDMI_CLK/clk0_buf,  ../../al_ip/PLL_HDMI_CLK.v(37)
+                                                                      pin: u_PLL_HDMI_CLK/bufg_feedback.clki
+GCLK                x001y001z2          0.000          0.000          pin: u_PLL_HDMI_CLK/bufg_feedback.clko
+net (fo=771)                            0.000          0.000          net: uivtc_inst/I_vtc_clk,  ../../../../source_code/rtl/uivtc/uivtc.v(46)
+                                                                      pin: debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_bclk_reg[127]_syn_3.clk
+constraint delay                        1.000          1.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.116          0.884               
+clock uncertainty                       0.000          0.884               
+clock pessimism                         0.000          0.884               
+--------------------------------------------------------------------  ---------------
+Required                                               0.884               
+--------------------------------------------------------------------  ---------------
+Slack                                                 -0.038               
+
+Slack               : -0.038ns
+Begin Point         : debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_aclk_reg[128]_syn_3.clk (rising edge triggered by clock config_inst.jtck  { rise@0.000000ns  fall@50.000000ns  period=100.000000 })
+End Point           : debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_bclk_reg[128]_syn_3.mi[1] (rising edge triggered by clock u_PLL_HDMI_CLK/pll_inst.clkc[0]  { rise@0.000000ns  fall@8.000000ns  period=16.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 1.000ns { u_PLL_HDMI_CLK/pll_inst.clkc[0] rising@0.000ns - config_inst.jtck rising@0.000ns }
+Data Path Delay     : 0.922ns (cell 0.289ns (31%), net 0.633ns (69%))
+Clock Skew          : 0.000ns
+Logic Level         : 0
+Max Fanout          : 1
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.100ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+CONFIG              x000y068            0.000          0.000          pin: config_inst.jtck
+net (fo=1)                              0.000          0.000          net: cwc_jtck,  NOFILE(0)
+                                                                      pin: cwc_jtck_syn_1.clki
+GCLK                x001y068z0          0.000          0.000          pin: cwc_jtck_syn_1.clko
+net (fo=452)                            0.000          0.000          net: cwc_jtck_syn_2,  NOFILE(0)
+                                                                      pin: debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_aclk_reg[128]_syn_3.clk
+--------------------------------------------------------------------  ---------------
+clk2q               x020y063z1          0.146    r     0.146          pin: debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_aclk_reg[128]_syn_3.q[1]
+net (fo=1)                              0.633          0.779          net: debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_aclk[128],  D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/ip/apm/apm_cwc\apm_debughub.sv(0)
+                                                                      pin: debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_bclk_reg[128]_syn_3.mi[1]
+reg                 x020y063z2          0.143    r     0.922          net: debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_bclk[128],  D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/ip/apm/apm_cwc\apm_debughub.sv(0)
+--------------------------------------------------------------------  ---------------
+Arrival                                                0.922               
+
+source latency                          0.000          0.000               
+port                R7                  0.000          0.000          pin: clk_50
+hierarchy                               0.000          0.000          pin: clk_50_syn_2.ipad
+PAD                 x020y071            0.000          0.000          pin: clk_50_syn_2.di
+net (fo=59)         x000y000            0.000          0.000          net: clk_50_dup_1,  ../../../../source_code/rtl/UDP_Example_Top.v(41)
+                                                                      pin: u_PLL_HDMI_CLK/pll_inst.refclk
+PLL                 x000y000            0.000          0.000          pin: u_PLL_HDMI_CLK/pll_inst.clkc[0]
+net (fo=1)                              0.000          0.000          net: u_PLL_HDMI_CLK/clk0_buf,  ../../al_ip/PLL_HDMI_CLK.v(37)
+                                                                      pin: u_PLL_HDMI_CLK/bufg_feedback.clki
+GCLK                x001y001z2          0.000          0.000          pin: u_PLL_HDMI_CLK/bufg_feedback.clko
+net (fo=771)                            0.000          0.000          net: uivtc_inst/I_vtc_clk,  ../../../../source_code/rtl/uivtc/uivtc.v(46)
+                                                                      pin: debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_bclk_reg[128]_syn_3.clk
+constraint delay                        1.000          1.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.116          0.884               
+clock uncertainty                       0.000          0.884               
+clock pessimism                         0.000          0.884               
+--------------------------------------------------------------------  ---------------
+Required                                               0.884               
+--------------------------------------------------------------------  ---------------
+Slack                                                 -0.038               
+
+Slack               : -0.034ns
+Begin Point         : debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_aclk_reg[63]_syn_3.clk (rising edge triggered by clock config_inst.jtck  { rise@0.000000ns  fall@50.000000ns  period=100.000000 })
+End Point           : debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_bclk_reg[63]_syn_4.mi[0] (rising edge triggered by clock u_PLL_HDMI_CLK/pll_inst.clkc[0]  { rise@0.000000ns  fall@8.000000ns  period=16.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 1.000ns { u_PLL_HDMI_CLK/pll_inst.clkc[0] rising@0.000ns - config_inst.jtck rising@0.000ns }
+Data Path Delay     : 0.918ns (cell 0.289ns (31%), net 0.629ns (69%))
+Clock Skew          : 0.000ns
+Logic Level         : 0
+Max Fanout          : 1
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.100ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+CONFIG              x000y068            0.000          0.000          pin: config_inst.jtck
+net (fo=1)                              0.000          0.000          net: cwc_jtck,  NOFILE(0)
+                                                                      pin: cwc_jtck_syn_1.clki
+GCLK                x001y068z0          0.000          0.000          pin: cwc_jtck_syn_1.clko
+net (fo=452)                            0.000          0.000          net: cwc_jtck_syn_2,  NOFILE(0)
+                                                                      pin: debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_aclk_reg[63]_syn_3.clk
+--------------------------------------------------------------------  ---------------
+clk2q               x011y059z3          0.146    r     0.146          pin: debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_aclk_reg[63]_syn_3.q[0]
+net (fo=1)                              0.629          0.775          net: debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_aclk[85],  D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/ip/apm/apm_cwc\apm_debughub.sv(0)
+                                                                      pin: debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_bclk_reg[63]_syn_4.mi[0]
+reg                 x011y059z1          0.143    r     0.918          net: debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_bclk[85],  D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/ip/apm/apm_cwc\apm_debughub.sv(0)
+--------------------------------------------------------------------  ---------------
+Arrival                                                0.918               
+
+source latency                          0.000          0.000               
+port                R7                  0.000          0.000          pin: clk_50
+hierarchy                               0.000          0.000          pin: clk_50_syn_2.ipad
+PAD                 x020y071            0.000          0.000          pin: clk_50_syn_2.di
+net (fo=59)         x000y000            0.000          0.000          net: clk_50_dup_1,  ../../../../source_code/rtl/UDP_Example_Top.v(41)
+                                                                      pin: u_PLL_HDMI_CLK/pll_inst.refclk
+PLL                 x000y000            0.000          0.000          pin: u_PLL_HDMI_CLK/pll_inst.clkc[0]
+net (fo=1)                              0.000          0.000          net: u_PLL_HDMI_CLK/clk0_buf,  ../../al_ip/PLL_HDMI_CLK.v(37)
+                                                                      pin: u_PLL_HDMI_CLK/bufg_feedback.clki
+GCLK                x001y001z2          0.000          0.000          pin: u_PLL_HDMI_CLK/bufg_feedback.clko
+net (fo=771)                            0.000          0.000          net: uivtc_inst/I_vtc_clk,  ../../../../source_code/rtl/uivtc/uivtc.v(46)
+                                                                      pin: debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_bclk_reg[63]_syn_4.clk
+constraint delay                        1.000          1.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.116          0.884               
+clock uncertainty                       0.000          0.884               
+clock pessimism                         0.000          0.884               
+--------------------------------------------------------------------  ---------------
+Required                                               0.884               
+--------------------------------------------------------------------  ---------------
+Slack                                                 -0.034               
+
+Slack               : -0.034ns
+Begin Point         : debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_aclk_reg[143]_syn_4.clk (rising edge triggered by clock config_inst.jtck  { rise@0.000000ns  fall@50.000000ns  period=100.000000 })
+End Point           : debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_bclk_reg[143]_syn_4.mi[0] (rising edge triggered by clock u_PLL_HDMI_CLK/pll_inst.clkc[0]  { rise@0.000000ns  fall@8.000000ns  period=16.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 1.000ns { u_PLL_HDMI_CLK/pll_inst.clkc[0] rising@0.000ns - config_inst.jtck rising@0.000ns }
+Data Path Delay     : 0.918ns (cell 0.289ns (31%), net 0.629ns (69%))
+Clock Skew          : 0.000ns
+Logic Level         : 0
+Max Fanout          : 1
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.100ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+CONFIG              x000y068            0.000          0.000          pin: config_inst.jtck
+net (fo=1)                              0.000          0.000          net: cwc_jtck,  NOFILE(0)
+                                                                      pin: cwc_jtck_syn_1.clki
+GCLK                x001y068z0          0.000          0.000          pin: cwc_jtck_syn_1.clko
+net (fo=452)                            0.000          0.000          net: cwc_jtck_syn_2,  NOFILE(0)
+                                                                      pin: debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_aclk_reg[143]_syn_4.clk
+--------------------------------------------------------------------  ---------------
+clk2q               x028y049z3          0.146    r     0.146          pin: debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_aclk_reg[143]_syn_4.q[0]
+net (fo=1)                              0.629          0.775          net: debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_aclk[143],  D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/ip/apm/apm_cwc\apm_debughub.sv(0)
+                                                                      pin: debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_bclk_reg[143]_syn_4.mi[0]
+reg                 x028y049z0          0.143    r     0.918          net: debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_bclk[143],  D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/ip/apm/apm_cwc\apm_debughub.sv(0)
+--------------------------------------------------------------------  ---------------
+Arrival                                                0.918               
+
+source latency                          0.000          0.000               
+port                R7                  0.000          0.000          pin: clk_50
+hierarchy                               0.000          0.000          pin: clk_50_syn_2.ipad
+PAD                 x020y071            0.000          0.000          pin: clk_50_syn_2.di
+net (fo=59)         x000y000            0.000          0.000          net: clk_50_dup_1,  ../../../../source_code/rtl/UDP_Example_Top.v(41)
+                                                                      pin: u_PLL_HDMI_CLK/pll_inst.refclk
+PLL                 x000y000            0.000          0.000          pin: u_PLL_HDMI_CLK/pll_inst.clkc[0]
+net (fo=1)                              0.000          0.000          net: u_PLL_HDMI_CLK/clk0_buf,  ../../al_ip/PLL_HDMI_CLK.v(37)
+                                                                      pin: u_PLL_HDMI_CLK/bufg_feedback.clki
+GCLK                x001y001z2          0.000          0.000          pin: u_PLL_HDMI_CLK/bufg_feedback.clko
+net (fo=771)                            0.000          0.000          net: uivtc_inst/I_vtc_clk,  ../../../../source_code/rtl/uivtc/uivtc.v(46)
+                                                                      pin: debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_bclk_reg[143]_syn_4.clk
+constraint delay                        1.000          1.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.116          0.884               
+clock uncertainty                       0.000          0.884               
+clock pessimism                         0.000          0.884               
+--------------------------------------------------------------------  ---------------
+Required                                               0.884               
+--------------------------------------------------------------------  ---------------
+Slack                                                 -0.034               
+
+Slack               : -0.034ns
+Begin Point         : debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_aclk_reg[151]_syn_3.clk (rising edge triggered by clock config_inst.jtck  { rise@0.000000ns  fall@50.000000ns  period=100.000000 })
+End Point           : debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_bclk_reg[151]_syn_3.mi[0] (rising edge triggered by clock u_PLL_HDMI_CLK/pll_inst.clkc[0]  { rise@0.000000ns  fall@8.000000ns  period=16.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 1.000ns { u_PLL_HDMI_CLK/pll_inst.clkc[0] rising@0.000ns - config_inst.jtck rising@0.000ns }
+Data Path Delay     : 0.918ns (cell 0.289ns (31%), net 0.629ns (69%))
+Clock Skew          : 0.000ns
+Logic Level         : 0
+Max Fanout          : 1
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.100ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+CONFIG              x000y068            0.000          0.000          pin: config_inst.jtck
+net (fo=1)                              0.000          0.000          net: cwc_jtck,  NOFILE(0)
+                                                                      pin: cwc_jtck_syn_1.clki
+GCLK                x001y068z0          0.000          0.000          pin: cwc_jtck_syn_1.clko
+net (fo=452)                            0.000          0.000          net: cwc_jtck_syn_2,  NOFILE(0)
+                                                                      pin: debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_aclk_reg[151]_syn_3.clk
+--------------------------------------------------------------------  ---------------
+clk2q               x022y060z3          0.146    r     0.146          pin: debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_aclk_reg[151]_syn_3.q[0]
+net (fo=1)                              0.629          0.775          net: debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_aclk[151],  D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/ip/apm/apm_cwc\apm_debughub.sv(0)
+                                                                      pin: debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_bclk_reg[151]_syn_3.mi[0]
+reg                 x022y060z1          0.143    r     0.918          net: debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_bclk[151],  D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/ip/apm/apm_cwc\apm_debughub.sv(0)
+--------------------------------------------------------------------  ---------------
+Arrival                                                0.918               
+
+source latency                          0.000          0.000               
+port                R7                  0.000          0.000          pin: clk_50
+hierarchy                               0.000          0.000          pin: clk_50_syn_2.ipad
+PAD                 x020y071            0.000          0.000          pin: clk_50_syn_2.di
+net (fo=59)         x000y000            0.000          0.000          net: clk_50_dup_1,  ../../../../source_code/rtl/UDP_Example_Top.v(41)
+                                                                      pin: u_PLL_HDMI_CLK/pll_inst.refclk
+PLL                 x000y000            0.000          0.000          pin: u_PLL_HDMI_CLK/pll_inst.clkc[0]
+net (fo=1)                              0.000          0.000          net: u_PLL_HDMI_CLK/clk0_buf,  ../../al_ip/PLL_HDMI_CLK.v(37)
+                                                                      pin: u_PLL_HDMI_CLK/bufg_feedback.clki
+GCLK                x001y001z2          0.000          0.000          pin: u_PLL_HDMI_CLK/bufg_feedback.clko
+net (fo=771)                            0.000          0.000          net: uivtc_inst/I_vtc_clk,  ../../../../source_code/rtl/uivtc/uivtc.v(46)
+                                                                      pin: debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_bclk_reg[151]_syn_3.clk
+constraint delay                        1.000          1.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.116          0.884               
+clock uncertainty                       0.000          0.884               
+clock pessimism                         0.000          0.884               
+--------------------------------------------------------------------  ---------------
+Required                                               0.884               
+--------------------------------------------------------------------  ---------------
+Slack                                                 -0.034               
+
+Slack               : -0.034ns
+Begin Point         : debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_aclk_reg[172]_syn_4.clk (rising edge triggered by clock config_inst.jtck  { rise@0.000000ns  fall@50.000000ns  period=100.000000 })
+End Point           : debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_bclk_reg[165]_syn_4.mi[0] (rising edge triggered by clock u_PLL_HDMI_CLK/pll_inst.clkc[0]  { rise@0.000000ns  fall@8.000000ns  period=16.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 1.000ns { u_PLL_HDMI_CLK/pll_inst.clkc[0] rising@0.000ns - config_inst.jtck rising@0.000ns }
+Data Path Delay     : 0.918ns (cell 0.289ns (31%), net 0.629ns (69%))
+Clock Skew          : 0.000ns
+Logic Level         : 0
+Max Fanout          : 1
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.100ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+CONFIG              x000y068            0.000          0.000          pin: config_inst.jtck
+net (fo=1)                              0.000          0.000          net: cwc_jtck,  NOFILE(0)
+                                                                      pin: cwc_jtck_syn_1.clki
+GCLK                x001y068z0          0.000          0.000          pin: cwc_jtck_syn_1.clko
+net (fo=452)                            0.000          0.000          net: cwc_jtck_syn_2,  NOFILE(0)
+                                                                      pin: debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_aclk_reg[172]_syn_4.clk
+--------------------------------------------------------------------  ---------------
+clk2q               x033y064z3          0.146    r     0.146          pin: debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_aclk_reg[172]_syn_4.q[1]
+net (fo=1)                              0.629          0.775          net: debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_aclk[172],  D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/ip/apm/apm_cwc\apm_debughub.sv(0)
+                                                                      pin: debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_bclk_reg[165]_syn_4.mi[0]
+reg                 x033y064z1          0.143    r     0.918          net: debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_bclk[172],  D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/ip/apm/apm_cwc\apm_debughub.sv(0)
+--------------------------------------------------------------------  ---------------
+Arrival                                                0.918               
+
+source latency                          0.000          0.000               
+port                R7                  0.000          0.000          pin: clk_50
+hierarchy                               0.000          0.000          pin: clk_50_syn_2.ipad
+PAD                 x020y071            0.000          0.000          pin: clk_50_syn_2.di
+net (fo=59)         x000y000            0.000          0.000          net: clk_50_dup_1,  ../../../../source_code/rtl/UDP_Example_Top.v(41)
+                                                                      pin: u_PLL_HDMI_CLK/pll_inst.refclk
+PLL                 x000y000            0.000          0.000          pin: u_PLL_HDMI_CLK/pll_inst.clkc[0]
+net (fo=1)                              0.000          0.000          net: u_PLL_HDMI_CLK/clk0_buf,  ../../al_ip/PLL_HDMI_CLK.v(37)
+                                                                      pin: u_PLL_HDMI_CLK/bufg_feedback.clki
+GCLK                x001y001z2          0.000          0.000          pin: u_PLL_HDMI_CLK/bufg_feedback.clko
+net (fo=771)                            0.000          0.000          net: uivtc_inst/I_vtc_clk,  ../../../../source_code/rtl/uivtc/uivtc.v(46)
+                                                                      pin: debug_hub_top/U_0_handshake_sync_ctrl/bus_data_r_bclk_reg[165]_syn_4.clk
+constraint delay                        1.000          1.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.116          0.884               
+clock uncertainty                       0.000          0.884               
+clock pessimism                         0.000          0.884               
+--------------------------------------------------------------------  ---------------
+Required                                               0.884               
+--------------------------------------------------------------------  ---------------
+Slack                                                 -0.034               
+
+
+
+Min Paths
+----------------------------------------------------------------------------------------------------
+
+
+Timing details for constraint:
+	set_max_delay -nowarn -from [get_regs {debug_hub_top/U_*_handshake_sync_stat/bus_data_r_bclk[*]}] -to [get_regs {debug_hub_top/U_*_handshake_sync_stat/bus_data_r_aclk[*]}] -datapath_only 1
+--------------------------------------------------
+
+----------------------------------------------------------------------------------------------------
+Path Group     :     
+set_max_delay -nowarn -from [get_regs {debug_hub_top/U_*_handshake_sync_stat/bus_data_r_bclk[*]}] -to [get_regs {debug_hub_top/U_*_handshake_sync_stat/bus_data_r_aclk[*]}] -datapath_only 1
+
+Type           :     SMD
+
+Statistics:
+Max            : SWNS     -0.025ns, STNS     -0.060ns,         6 Viol Endpoints,        24 Total Endpoints,        24 Paths Analyzed
+Min            : HWNS      0.000ns, HTNS      0.000ns,         0 Viol Endpoints,         0 Total Endpoints,         0 Paths Analyzed
+----------------------------------------------------------------------------------------------------
+
+Max Paths
+----------------------------------------------------------------------------------------------------
+Slack               : -0.025ns
+Begin Point         : debug_hub_top/U_0_handshake_sync_stat/bus_data_r_bclk_reg[1]_syn_3.clk (rising edge triggered by clock u_PLL_HDMI_CLK/pll_inst.clkc[0]  { rise@0.000000ns  fall@8.000000ns  period=16.000000 })
+End Point           : debug_hub_top/U_0_handshake_sync_stat/bus_data_r_aclk_reg[0]_syn_3.mi[0] (rising edge triggered by clock config_inst.jtck  { rise@0.000000ns  fall@50.000000ns  period=100.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 1.000ns { config_inst.jtck rising@0.000ns - u_PLL_HDMI_CLK/pll_inst.clkc[0] rising@0.000ns }
+Data Path Delay     : 0.909ns (cell 0.289ns (31%), net 0.620ns (69%))
+Clock Skew          : 0.000ns
+Logic Level         : 0
+Max Fanout          : 1
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.100ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                R7                  0.000          0.000          pin: clk_50
+hierarchy                               0.000          0.000          pin: clk_50_syn_2.ipad
+PAD                 x020y071            0.000          0.000          pin: clk_50_syn_2.di
+net (fo=59)         x000y000            0.000          0.000          net: clk_50_dup_1,  ../../../../source_code/rtl/UDP_Example_Top.v(41)
+                                                                      pin: u_PLL_HDMI_CLK/pll_inst.refclk
+PLL                 x000y000            0.000          0.000          pin: u_PLL_HDMI_CLK/pll_inst.clkc[0]
+net (fo=1)                              0.000          0.000          net: u_PLL_HDMI_CLK/clk0_buf,  ../../al_ip/PLL_HDMI_CLK.v(37)
+                                                                      pin: u_PLL_HDMI_CLK/bufg_feedback.clki
+GCLK                x001y001z2          0.000          0.000          pin: u_PLL_HDMI_CLK/bufg_feedback.clko
+net (fo=771)                            0.000          0.000          net: uivtc_inst/I_vtc_clk,  ../../../../source_code/rtl/uivtc/uivtc.v(46)
+                                                                      pin: debug_hub_top/U_0_handshake_sync_stat/bus_data_r_bclk_reg[1]_syn_3.clk
+--------------------------------------------------------------------  ---------------
+clk2q               x014y067z3          0.146    r     0.146          pin: debug_hub_top/U_0_handshake_sync_stat/bus_data_r_bclk_reg[1]_syn_3.q[1]
+net (fo=1)                              0.620          0.766          net: debug_hub_top/U_0_handshake_sync_stat/bus_data_r_bclk[1],  D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/ip/apm/apm_cwc\apm_debughub.sv(0)
+                                                                      pin: debug_hub_top/U_0_handshake_sync_stat/bus_data_r_aclk_reg[0]_syn_3.mi[0]
+reg                 x013y067z1          0.143    r     0.909          net: debug_hub_top/U_0_handshake_sync_stat/bus_data_r_aclk[1],  D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/ip/apm/apm_cwc\apm_debughub.sv(0)
+--------------------------------------------------------------------  ---------------
+Arrival                                                0.909               
+
+source latency                          0.000          0.000               
+CONFIG              x000y068            0.000          0.000          pin: config_inst.jtck
+net (fo=1)                              0.000          0.000          net: cwc_jtck,  NOFILE(0)
+                                                                      pin: cwc_jtck_syn_1.clki
+GCLK                x001y068z0          0.000          0.000          pin: cwc_jtck_syn_1.clko
+net (fo=452)                            0.000          0.000          net: cwc_jtck_syn_2,  NOFILE(0)
+                                                                      pin: debug_hub_top/U_0_handshake_sync_stat/bus_data_r_aclk_reg[0]_syn_3.clk
+constraint delay                        1.000          1.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.116          0.884               
+clock uncertainty                       0.000          0.884               
+clock pessimism                         0.000          0.884               
+--------------------------------------------------------------------  ---------------
+Required                                               0.884               
+--------------------------------------------------------------------  ---------------
+Slack                                                 -0.025               
+
+Slack               : -0.007ns
+Begin Point         : debug_hub_top/U_0_handshake_sync_stat/bus_data_r_bclk_reg[11]_syn_3.clk (rising edge triggered by clock u_PLL_HDMI_CLK/pll_inst.clkc[0]  { rise@0.000000ns  fall@8.000000ns  period=16.000000 })
+End Point           : debug_hub_top/U_0_handshake_sync_stat/bus_data_r_aclk_reg[11]_syn_3.mi[1] (rising edge triggered by clock config_inst.jtck  { rise@0.000000ns  fall@50.000000ns  period=100.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 1.000ns { config_inst.jtck rising@0.000ns - u_PLL_HDMI_CLK/pll_inst.clkc[0] rising@0.000ns }
+Data Path Delay     : 0.891ns (cell 0.289ns (32%), net 0.602ns (68%))
+Clock Skew          : 0.000ns
+Logic Level         : 0
+Max Fanout          : 1
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.100ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                R7                  0.000          0.000          pin: clk_50
+hierarchy                               0.000          0.000          pin: clk_50_syn_2.ipad
+PAD                 x020y071            0.000          0.000          pin: clk_50_syn_2.di
+net (fo=59)         x000y000            0.000          0.000          net: clk_50_dup_1,  ../../../../source_code/rtl/UDP_Example_Top.v(41)
+                                                                      pin: u_PLL_HDMI_CLK/pll_inst.refclk
+PLL                 x000y000            0.000          0.000          pin: u_PLL_HDMI_CLK/pll_inst.clkc[0]
+net (fo=1)                              0.000          0.000          net: u_PLL_HDMI_CLK/clk0_buf,  ../../al_ip/PLL_HDMI_CLK.v(37)
+                                                                      pin: u_PLL_HDMI_CLK/bufg_feedback.clki
+GCLK                x001y001z2          0.000          0.000          pin: u_PLL_HDMI_CLK/bufg_feedback.clko
+net (fo=771)                            0.000          0.000          net: uivtc_inst/I_vtc_clk,  ../../../../source_code/rtl/uivtc/uivtc.v(46)
+                                                                      pin: debug_hub_top/U_0_handshake_sync_stat/bus_data_r_bclk_reg[11]_syn_3.clk
+--------------------------------------------------------------------  ---------------
+clk2q               x014y069z0          0.146    r     0.146          pin: debug_hub_top/U_0_handshake_sync_stat/bus_data_r_bclk_reg[11]_syn_3.q[1]
+net (fo=1)                              0.602          0.748          net: debug_hub_top/U_0_handshake_sync_stat/bus_data_r_bclk[11],  D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/ip/apm/apm_cwc\apm_debughub.sv(0)
+                                                                      pin: debug_hub_top/U_0_handshake_sync_stat/bus_data_r_aclk_reg[11]_syn_3.mi[1]
+reg                 x014y070z0          0.143    r     0.891          net: debug_hub_top/U_0_handshake_sync_stat/bus_data_r_aclk[11],  D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/ip/apm/apm_cwc\apm_debughub.sv(0)
+--------------------------------------------------------------------  ---------------
+Arrival                                                0.891               
+
+source latency                          0.000          0.000               
+CONFIG              x000y068            0.000          0.000          pin: config_inst.jtck
+net (fo=1)                              0.000          0.000          net: cwc_jtck,  NOFILE(0)
+                                                                      pin: cwc_jtck_syn_1.clki
+GCLK                x001y068z0          0.000          0.000          pin: cwc_jtck_syn_1.clko
+net (fo=452)                            0.000          0.000          net: cwc_jtck_syn_2,  NOFILE(0)
+                                                                      pin: debug_hub_top/U_0_handshake_sync_stat/bus_data_r_aclk_reg[11]_syn_3.clk
+constraint delay                        1.000          1.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.116          0.884               
+clock uncertainty                       0.000          0.884               
+clock pessimism                         0.000          0.884               
+--------------------------------------------------------------------  ---------------
+Required                                               0.884               
+--------------------------------------------------------------------  ---------------
+Slack                                                 -0.007               
+
+Slack               : -0.007ns
+Begin Point         : debug_hub_top/U_0_handshake_sync_stat/bus_data_r_bclk_reg[14]_syn_3.clk (rising edge triggered by clock u_PLL_HDMI_CLK/pll_inst.clkc[0]  { rise@0.000000ns  fall@8.000000ns  period=16.000000 })
+End Point           : debug_hub_top/U_0_handshake_sync_stat/bus_data_r_aclk_reg[15]_syn_3.mi[1] (rising edge triggered by clock config_inst.jtck  { rise@0.000000ns  fall@50.000000ns  period=100.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 1.000ns { config_inst.jtck rising@0.000ns - u_PLL_HDMI_CLK/pll_inst.clkc[0] rising@0.000ns }
+Data Path Delay     : 0.891ns (cell 0.289ns (32%), net 0.602ns (68%))
+Clock Skew          : 0.000ns
+Logic Level         : 0
+Max Fanout          : 1
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.100ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                R7                  0.000          0.000          pin: clk_50
+hierarchy                               0.000          0.000          pin: clk_50_syn_2.ipad
+PAD                 x020y071            0.000          0.000          pin: clk_50_syn_2.di
+net (fo=59)         x000y000            0.000          0.000          net: clk_50_dup_1,  ../../../../source_code/rtl/UDP_Example_Top.v(41)
+                                                                      pin: u_PLL_HDMI_CLK/pll_inst.refclk
+PLL                 x000y000            0.000          0.000          pin: u_PLL_HDMI_CLK/pll_inst.clkc[0]
+net (fo=1)                              0.000          0.000          net: u_PLL_HDMI_CLK/clk0_buf,  ../../al_ip/PLL_HDMI_CLK.v(37)
+                                                                      pin: u_PLL_HDMI_CLK/bufg_feedback.clki
+GCLK                x001y001z2          0.000          0.000          pin: u_PLL_HDMI_CLK/bufg_feedback.clko
+net (fo=771)                            0.000          0.000          net: uivtc_inst/I_vtc_clk,  ../../../../source_code/rtl/uivtc/uivtc.v(46)
+                                                                      pin: debug_hub_top/U_0_handshake_sync_stat/bus_data_r_bclk_reg[14]_syn_3.clk
+--------------------------------------------------------------------  ---------------
+clk2q               x017y069z0          0.146    r     0.146          pin: debug_hub_top/U_0_handshake_sync_stat/bus_data_r_bclk_reg[14]_syn_3.q[0]
+net (fo=1)                              0.602          0.748          net: debug_hub_top/U_0_handshake_sync_stat/bus_data_r_bclk[15],  D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/ip/apm/apm_cwc\apm_debughub.sv(0)
+                                                                      pin: debug_hub_top/U_0_handshake_sync_stat/bus_data_r_aclk_reg[15]_syn_3.mi[1]
+reg                 x017y068z3          0.143    r     0.891          net: debug_hub_top/U_0_handshake_sync_stat/bus_data_r_aclk[15],  D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/ip/apm/apm_cwc\apm_debughub.sv(0)
+--------------------------------------------------------------------  ---------------
+Arrival                                                0.891               
+
+source latency                          0.000          0.000               
+CONFIG              x000y068            0.000          0.000          pin: config_inst.jtck
+net (fo=1)                              0.000          0.000          net: cwc_jtck,  NOFILE(0)
+                                                                      pin: cwc_jtck_syn_1.clki
+GCLK                x001y068z0          0.000          0.000          pin: cwc_jtck_syn_1.clko
+net (fo=452)                            0.000          0.000          net: cwc_jtck_syn_2,  NOFILE(0)
+                                                                      pin: debug_hub_top/U_0_handshake_sync_stat/bus_data_r_aclk_reg[15]_syn_3.clk
+constraint delay                        1.000          1.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.116          0.884               
+clock uncertainty                       0.000          0.884               
+clock pessimism                         0.000          0.884               
+--------------------------------------------------------------------  ---------------
+Required                                               0.884               
+--------------------------------------------------------------------  ---------------
+Slack                                                 -0.007               
+
+Slack               : -0.007ns
+Begin Point         : debug_hub_top/U_0_handshake_sync_stat/bus_data_r_bclk_reg[17]_syn_3.clk (rising edge triggered by clock u_PLL_HDMI_CLK/pll_inst.clkc[0]  { rise@0.000000ns  fall@8.000000ns  period=16.000000 })
+End Point           : debug_hub_top/U_0_handshake_sync_stat/bus_data_r_aclk_reg[17]_syn_3.mi[0] (rising edge triggered by clock config_inst.jtck  { rise@0.000000ns  fall@50.000000ns  period=100.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 1.000ns { config_inst.jtck rising@0.000ns - u_PLL_HDMI_CLK/pll_inst.clkc[0] rising@0.000ns }
+Data Path Delay     : 0.891ns (cell 0.289ns (32%), net 0.602ns (68%))
+Clock Skew          : 0.000ns
+Logic Level         : 0
+Max Fanout          : 1
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.100ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                R7                  0.000          0.000          pin: clk_50
+hierarchy                               0.000          0.000          pin: clk_50_syn_2.ipad
+PAD                 x020y071            0.000          0.000          pin: clk_50_syn_2.di
+net (fo=59)         x000y000            0.000          0.000          net: clk_50_dup_1,  ../../../../source_code/rtl/UDP_Example_Top.v(41)
+                                                                      pin: u_PLL_HDMI_CLK/pll_inst.refclk
+PLL                 x000y000            0.000          0.000          pin: u_PLL_HDMI_CLK/pll_inst.clkc[0]
+net (fo=1)                              0.000          0.000          net: u_PLL_HDMI_CLK/clk0_buf,  ../../al_ip/PLL_HDMI_CLK.v(37)
+                                                                      pin: u_PLL_HDMI_CLK/bufg_feedback.clki
+GCLK                x001y001z2          0.000          0.000          pin: u_PLL_HDMI_CLK/bufg_feedback.clko
+net (fo=771)                            0.000          0.000          net: uivtc_inst/I_vtc_clk,  ../../../../source_code/rtl/uivtc/uivtc.v(46)
+                                                                      pin: debug_hub_top/U_0_handshake_sync_stat/bus_data_r_bclk_reg[17]_syn_3.clk
+--------------------------------------------------------------------  ---------------
+clk2q               x015y067z3          0.146    r     0.146          pin: debug_hub_top/U_0_handshake_sync_stat/bus_data_r_bclk_reg[17]_syn_3.q[0]
+net (fo=1)                              0.602          0.748          net: debug_hub_top/U_0_handshake_sync_stat/bus_data_r_bclk[22],  D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/ip/apm/apm_cwc\apm_debughub.sv(0)
+                                                                      pin: debug_hub_top/U_0_handshake_sync_stat/bus_data_r_aclk_reg[17]_syn_3.mi[0]
+reg                 x015y068z2          0.143    r     0.891          net: debug_hub_top/U_0_handshake_sync_stat/bus_data_r_aclk[22],  D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/ip/apm/apm_cwc\apm_debughub.sv(0)
+--------------------------------------------------------------------  ---------------
+Arrival                                                0.891               
+
+source latency                          0.000          0.000               
+CONFIG              x000y068            0.000          0.000          pin: config_inst.jtck
+net (fo=1)                              0.000          0.000          net: cwc_jtck,  NOFILE(0)
+                                                                      pin: cwc_jtck_syn_1.clki
+GCLK                x001y068z0          0.000          0.000          pin: cwc_jtck_syn_1.clko
+net (fo=452)                            0.000          0.000          net: cwc_jtck_syn_2,  NOFILE(0)
+                                                                      pin: debug_hub_top/U_0_handshake_sync_stat/bus_data_r_aclk_reg[17]_syn_3.clk
+constraint delay                        1.000          1.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.116          0.884               
+clock uncertainty                       0.000          0.884               
+clock pessimism                         0.000          0.884               
+--------------------------------------------------------------------  ---------------
+Required                                               0.884               
+--------------------------------------------------------------------  ---------------
+Slack                                                 -0.007               
+
+Slack               : -0.007ns
+Begin Point         : debug_hub_top/U_0_handshake_sync_stat/bus_data_r_bclk_reg[19]_syn_3.clk (rising edge triggered by clock u_PLL_HDMI_CLK/pll_inst.clkc[0]  { rise@0.000000ns  fall@8.000000ns  period=16.000000 })
+End Point           : debug_hub_top/U_0_handshake_sync_stat/bus_data_r_aclk_reg[19]_syn_3.mi[0] (rising edge triggered by clock config_inst.jtck  { rise@0.000000ns  fall@50.000000ns  period=100.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 1.000ns { config_inst.jtck rising@0.000ns - u_PLL_HDMI_CLK/pll_inst.clkc[0] rising@0.000ns }
+Data Path Delay     : 0.891ns (cell 0.289ns (32%), net 0.602ns (68%))
+Clock Skew          : 0.000ns
+Logic Level         : 0
+Max Fanout          : 1
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.100ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                R7                  0.000          0.000          pin: clk_50
+hierarchy                               0.000          0.000          pin: clk_50_syn_2.ipad
+PAD                 x020y071            0.000          0.000          pin: clk_50_syn_2.di
+net (fo=59)         x000y000            0.000          0.000          net: clk_50_dup_1,  ../../../../source_code/rtl/UDP_Example_Top.v(41)
+                                                                      pin: u_PLL_HDMI_CLK/pll_inst.refclk
+PLL                 x000y000            0.000          0.000          pin: u_PLL_HDMI_CLK/pll_inst.clkc[0]
+net (fo=1)                              0.000          0.000          net: u_PLL_HDMI_CLK/clk0_buf,  ../../al_ip/PLL_HDMI_CLK.v(37)
+                                                                      pin: u_PLL_HDMI_CLK/bufg_feedback.clki
+GCLK                x001y001z2          0.000          0.000          pin: u_PLL_HDMI_CLK/bufg_feedback.clko
+net (fo=771)                            0.000          0.000          net: uivtc_inst/I_vtc_clk,  ../../../../source_code/rtl/uivtc/uivtc.v(46)
+                                                                      pin: debug_hub_top/U_0_handshake_sync_stat/bus_data_r_bclk_reg[19]_syn_3.clk
+--------------------------------------------------------------------  ---------------
+clk2q               x017y069z3          0.146    r     0.146          pin: debug_hub_top/U_0_handshake_sync_stat/bus_data_r_bclk_reg[19]_syn_3.q[0]
+net (fo=1)                              0.602          0.748          net: debug_hub_top/U_0_handshake_sync_stat/bus_data_r_bclk[21],  D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/ip/apm/apm_cwc\apm_debughub.sv(0)
+                                                                      pin: debug_hub_top/U_0_handshake_sync_stat/bus_data_r_aclk_reg[19]_syn_3.mi[0]
+reg                 x018y069z3          0.143    r     0.891          net: debug_hub_top/U_0_handshake_sync_stat/bus_data_r_aclk[21],  D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/ip/apm/apm_cwc\apm_debughub.sv(0)
+--------------------------------------------------------------------  ---------------
+Arrival                                                0.891               
+
+source latency                          0.000          0.000               
+CONFIG              x000y068            0.000          0.000          pin: config_inst.jtck
+net (fo=1)                              0.000          0.000          net: cwc_jtck,  NOFILE(0)
+                                                                      pin: cwc_jtck_syn_1.clki
+GCLK                x001y068z0          0.000          0.000          pin: cwc_jtck_syn_1.clko
+net (fo=452)                            0.000          0.000          net: cwc_jtck_syn_2,  NOFILE(0)
+                                                                      pin: debug_hub_top/U_0_handshake_sync_stat/bus_data_r_aclk_reg[19]_syn_3.clk
+constraint delay                        1.000          1.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.116          0.884               
+clock uncertainty                       0.000          0.884               
+clock pessimism                         0.000          0.884               
+--------------------------------------------------------------------  ---------------
+Required                                               0.884               
+--------------------------------------------------------------------  ---------------
+Slack                                                 -0.007               
+
+Slack               : -0.007ns
+Begin Point         : debug_hub_top/U_0_handshake_sync_stat/bus_data_r_bclk_reg[5]_syn_3.clk (rising edge triggered by clock u_PLL_HDMI_CLK/pll_inst.clkc[0]  { rise@0.000000ns  fall@8.000000ns  period=16.000000 })
+End Point           : debug_hub_top/U_0_handshake_sync_stat/bus_data_r_aclk_reg[23]_syn_3.mi[0] (rising edge triggered by clock config_inst.jtck  { rise@0.000000ns  fall@50.000000ns  period=100.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 1.000ns { config_inst.jtck rising@0.000ns - u_PLL_HDMI_CLK/pll_inst.clkc[0] rising@0.000ns }
+Data Path Delay     : 0.891ns (cell 0.289ns (32%), net 0.602ns (68%))
+Clock Skew          : 0.000ns
+Logic Level         : 0
+Max Fanout          : 1
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.100ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                R7                  0.000          0.000          pin: clk_50
+hierarchy                               0.000          0.000          pin: clk_50_syn_2.ipad
+PAD                 x020y071            0.000          0.000          pin: clk_50_syn_2.di
+net (fo=59)         x000y000            0.000          0.000          net: clk_50_dup_1,  ../../../../source_code/rtl/UDP_Example_Top.v(41)
+                                                                      pin: u_PLL_HDMI_CLK/pll_inst.refclk
+PLL                 x000y000            0.000          0.000          pin: u_PLL_HDMI_CLK/pll_inst.clkc[0]
+net (fo=1)                              0.000          0.000          net: u_PLL_HDMI_CLK/clk0_buf,  ../../al_ip/PLL_HDMI_CLK.v(37)
+                                                                      pin: u_PLL_HDMI_CLK/bufg_feedback.clki
+GCLK                x001y001z2          0.000          0.000          pin: u_PLL_HDMI_CLK/bufg_feedback.clko
+net (fo=771)                            0.000          0.000          net: uivtc_inst/I_vtc_clk,  ../../../../source_code/rtl/uivtc/uivtc.v(46)
+                                                                      pin: debug_hub_top/U_0_handshake_sync_stat/bus_data_r_bclk_reg[5]_syn_3.clk
+--------------------------------------------------------------------  ---------------
+clk2q               x013y068z3          0.146    r     0.146          pin: debug_hub_top/U_0_handshake_sync_stat/bus_data_r_bclk_reg[5]_syn_3.q[0]
+net (fo=1)                              0.602          0.748          net: debug_hub_top/U_0_handshake_sync_stat/bus_data_r_bclk[23],  D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/ip/apm/apm_cwc\apm_debughub.sv(0)
+                                                                      pin: debug_hub_top/U_0_handshake_sync_stat/bus_data_r_aclk_reg[23]_syn_3.mi[0]
+reg                 x013y069z0          0.143    r     0.891          net: debug_hub_top/U_0_handshake_sync_stat/bus_data_r_aclk[23],  D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/ip/apm/apm_cwc\apm_debughub.sv(0)
+--------------------------------------------------------------------  ---------------
+Arrival                                                0.891               
+
+source latency                          0.000          0.000               
+CONFIG              x000y068            0.000          0.000          pin: config_inst.jtck
+net (fo=1)                              0.000          0.000          net: cwc_jtck,  NOFILE(0)
+                                                                      pin: cwc_jtck_syn_1.clki
+GCLK                x001y068z0          0.000          0.000          pin: cwc_jtck_syn_1.clko
+net (fo=452)                            0.000          0.000          net: cwc_jtck_syn_2,  NOFILE(0)
+                                                                      pin: debug_hub_top/U_0_handshake_sync_stat/bus_data_r_aclk_reg[23]_syn_3.clk
+constraint delay                        1.000          1.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.116          0.884               
+clock uncertainty                       0.000          0.884               
+clock pessimism                         0.000          0.884               
+--------------------------------------------------------------------  ---------------
+Required                                               0.884               
+--------------------------------------------------------------------  ---------------
+Slack                                                 -0.007               
+
+Slack               : 0.113ns
+Begin Point         : debug_hub_top/U_0_handshake_sync_stat/bus_data_r_bclk_reg[18]_syn_3.clk (rising edge triggered by clock u_PLL_HDMI_CLK/pll_inst.clkc[0]  { rise@0.000000ns  fall@8.000000ns  period=16.000000 })
+End Point           : debug_hub_top/U_0_handshake_sync_stat/bus_data_r_aclk_reg[18]_syn_3.mi[0] (rising edge triggered by clock config_inst.jtck  { rise@0.000000ns  fall@50.000000ns  period=100.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 1.000ns { config_inst.jtck rising@0.000ns - u_PLL_HDMI_CLK/pll_inst.clkc[0] rising@0.000ns }
+Data Path Delay     : 0.771ns (cell 0.289ns (37%), net 0.482ns (63%))
+Clock Skew          : 0.000ns
+Logic Level         : 0
+Max Fanout          : 1
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.100ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                R7                  0.000          0.000          pin: clk_50
+hierarchy                               0.000          0.000          pin: clk_50_syn_2.ipad
+PAD                 x020y071            0.000          0.000          pin: clk_50_syn_2.di
+net (fo=59)         x000y000            0.000          0.000          net: clk_50_dup_1,  ../../../../source_code/rtl/UDP_Example_Top.v(41)
+                                                                      pin: u_PLL_HDMI_CLK/pll_inst.refclk
+PLL                 x000y000            0.000          0.000          pin: u_PLL_HDMI_CLK/pll_inst.clkc[0]
+net (fo=1)                              0.000          0.000          net: u_PLL_HDMI_CLK/clk0_buf,  ../../al_ip/PLL_HDMI_CLK.v(37)
+                                                                      pin: u_PLL_HDMI_CLK/bufg_feedback.clki
+GCLK                x001y001z2          0.000          0.000          pin: u_PLL_HDMI_CLK/bufg_feedback.clko
+net (fo=771)                            0.000          0.000          net: uivtc_inst/I_vtc_clk,  ../../../../source_code/rtl/uivtc/uivtc.v(46)
+                                                                      pin: debug_hub_top/U_0_handshake_sync_stat/bus_data_r_bclk_reg[18]_syn_3.clk
+--------------------------------------------------------------------  ---------------
+clk2q               x018y070z3          0.146    r     0.146          pin: debug_hub_top/U_0_handshake_sync_stat/bus_data_r_bclk_reg[18]_syn_3.q[0]
+net (fo=1)                              0.482          0.628          net: debug_hub_top/U_0_handshake_sync_stat/bus_data_r_bclk[20],  D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/ip/apm/apm_cwc\apm_debughub.sv(0)
+                                                                      pin: debug_hub_top/U_0_handshake_sync_stat/bus_data_r_aclk_reg[18]_syn_3.mi[0]
+reg                 x018y070z0          0.143    r     0.771          net: debug_hub_top/U_0_handshake_sync_stat/bus_data_r_aclk[20],  D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/ip/apm/apm_cwc\apm_debughub.sv(0)
+--------------------------------------------------------------------  ---------------
+Arrival                                                0.771               
+
+source latency                          0.000          0.000               
+CONFIG              x000y068            0.000          0.000          pin: config_inst.jtck
+net (fo=1)                              0.000          0.000          net: cwc_jtck,  NOFILE(0)
+                                                                      pin: cwc_jtck_syn_1.clki
+GCLK                x001y068z0          0.000          0.000          pin: cwc_jtck_syn_1.clko
+net (fo=452)                            0.000          0.000          net: cwc_jtck_syn_2,  NOFILE(0)
+                                                                      pin: debug_hub_top/U_0_handshake_sync_stat/bus_data_r_aclk_reg[18]_syn_3.clk
+constraint delay                        1.000          1.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.116          0.884               
+clock uncertainty                       0.000          0.884               
+clock pessimism                         0.000          0.884               
+--------------------------------------------------------------------  ---------------
+Required                                               0.884               
+--------------------------------------------------------------------  ---------------
+Slack                                                  0.113               
+
+Slack               : 0.122ns
+Begin Point         : debug_hub_top/U_0_handshake_sync_stat/bus_data_r_bclk_reg[16]_syn_3.clk (rising edge triggered by clock u_PLL_HDMI_CLK/pll_inst.clkc[0]  { rise@0.000000ns  fall@8.000000ns  period=16.000000 })
+End Point           : debug_hub_top/U_0_handshake_sync_stat/bus_data_r_aclk_reg[15]_syn_3.mi[0] (rising edge triggered by clock config_inst.jtck  { rise@0.000000ns  fall@50.000000ns  period=100.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 1.000ns { config_inst.jtck rising@0.000ns - u_PLL_HDMI_CLK/pll_inst.clkc[0] rising@0.000ns }
+Data Path Delay     : 0.762ns (cell 0.289ns (37%), net 0.473ns (63%))
+Clock Skew          : 0.000ns
+Logic Level         : 0
+Max Fanout          : 1
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.100ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                R7                  0.000          0.000          pin: clk_50
+hierarchy                               0.000          0.000          pin: clk_50_syn_2.ipad
+PAD                 x020y071            0.000          0.000          pin: clk_50_syn_2.di
+net (fo=59)         x000y000            0.000          0.000          net: clk_50_dup_1,  ../../../../source_code/rtl/UDP_Example_Top.v(41)
+                                                                      pin: u_PLL_HDMI_CLK/pll_inst.refclk
+PLL                 x000y000            0.000          0.000          pin: u_PLL_HDMI_CLK/pll_inst.clkc[0]
+net (fo=1)                              0.000          0.000          net: u_PLL_HDMI_CLK/clk0_buf,  ../../al_ip/PLL_HDMI_CLK.v(37)
+                                                                      pin: u_PLL_HDMI_CLK/bufg_feedback.clki
+GCLK                x001y001z2          0.000          0.000          pin: u_PLL_HDMI_CLK/bufg_feedback.clko
+net (fo=771)                            0.000          0.000          net: uivtc_inst/I_vtc_clk,  ../../../../source_code/rtl/uivtc/uivtc.v(46)
+                                                                      pin: debug_hub_top/U_0_handshake_sync_stat/bus_data_r_bclk_reg[16]_syn_3.clk
+--------------------------------------------------------------------  ---------------
+clk2q               x017y068z1          0.146    r     0.146          pin: debug_hub_top/U_0_handshake_sync_stat/bus_data_r_bclk_reg[16]_syn_3.q[0]
+net (fo=1)                              0.473          0.619          net: debug_hub_top/U_0_handshake_sync_stat/bus_data_r_bclk[16],  D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/ip/apm/apm_cwc\apm_debughub.sv(0)
+                                                                      pin: debug_hub_top/U_0_handshake_sync_stat/bus_data_r_aclk_reg[15]_syn_3.mi[0]
+reg                 x017y068z3          0.143    r     0.762          net: debug_hub_top/U_0_handshake_sync_stat/bus_data_r_aclk[16],  D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/ip/apm/apm_cwc\apm_debughub.sv(0)
+--------------------------------------------------------------------  ---------------
+Arrival                                                0.762               
+
+source latency                          0.000          0.000               
+CONFIG              x000y068            0.000          0.000          pin: config_inst.jtck
+net (fo=1)                              0.000          0.000          net: cwc_jtck,  NOFILE(0)
+                                                                      pin: cwc_jtck_syn_1.clki
+GCLK                x001y068z0          0.000          0.000          pin: cwc_jtck_syn_1.clko
+net (fo=452)                            0.000          0.000          net: cwc_jtck_syn_2,  NOFILE(0)
+                                                                      pin: debug_hub_top/U_0_handshake_sync_stat/bus_data_r_aclk_reg[15]_syn_3.clk
+constraint delay                        1.000          1.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.116          0.884               
+clock uncertainty                       0.000          0.884               
+clock pessimism                         0.000          0.884               
+--------------------------------------------------------------------  ---------------
+Required                                               0.884               
+--------------------------------------------------------------------  ---------------
+Slack                                                  0.122               
+
+Slack               : 0.122ns
+Begin Point         : debug_hub_top/U_0_handshake_sync_stat/bus_data_r_bclk_reg[18]_syn_3.clk (rising edge triggered by clock u_PLL_HDMI_CLK/pll_inst.clkc[0]  { rise@0.000000ns  fall@8.000000ns  period=16.000000 })
+End Point           : debug_hub_top/U_0_handshake_sync_stat/bus_data_r_aclk_reg[18]_syn_3.mi[1] (rising edge triggered by clock config_inst.jtck  { rise@0.000000ns  fall@50.000000ns  period=100.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 1.000ns { config_inst.jtck rising@0.000ns - u_PLL_HDMI_CLK/pll_inst.clkc[0] rising@0.000ns }
+Data Path Delay     : 0.762ns (cell 0.289ns (37%), net 0.473ns (63%))
+Clock Skew          : 0.000ns
+Logic Level         : 0
+Max Fanout          : 1
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.100ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                R7                  0.000          0.000          pin: clk_50
+hierarchy                               0.000          0.000          pin: clk_50_syn_2.ipad
+PAD                 x020y071            0.000          0.000          pin: clk_50_syn_2.di
+net (fo=59)         x000y000            0.000          0.000          net: clk_50_dup_1,  ../../../../source_code/rtl/UDP_Example_Top.v(41)
+                                                                      pin: u_PLL_HDMI_CLK/pll_inst.refclk
+PLL                 x000y000            0.000          0.000          pin: u_PLL_HDMI_CLK/pll_inst.clkc[0]
+net (fo=1)                              0.000          0.000          net: u_PLL_HDMI_CLK/clk0_buf,  ../../al_ip/PLL_HDMI_CLK.v(37)
+                                                                      pin: u_PLL_HDMI_CLK/bufg_feedback.clki
+GCLK                x001y001z2          0.000          0.000          pin: u_PLL_HDMI_CLK/bufg_feedback.clko
+net (fo=771)                            0.000          0.000          net: uivtc_inst/I_vtc_clk,  ../../../../source_code/rtl/uivtc/uivtc.v(46)
+                                                                      pin: debug_hub_top/U_0_handshake_sync_stat/bus_data_r_bclk_reg[18]_syn_3.clk
+--------------------------------------------------------------------  ---------------
+clk2q               x018y070z3          0.146    r     0.146          pin: debug_hub_top/U_0_handshake_sync_stat/bus_data_r_bclk_reg[18]_syn_3.q[1]
+net (fo=1)                              0.473          0.619          net: debug_hub_top/U_0_handshake_sync_stat/bus_data_r_bclk[18],  D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/ip/apm/apm_cwc\apm_debughub.sv(0)
+                                                                      pin: debug_hub_top/U_0_handshake_sync_stat/bus_data_r_aclk_reg[18]_syn_3.mi[1]
+reg                 x018y070z0          0.143    r     0.762          net: debug_hub_top/U_0_handshake_sync_stat/bus_data_r_aclk[18],  D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/ip/apm/apm_cwc\apm_debughub.sv(0)
+--------------------------------------------------------------------  ---------------
+Arrival                                                0.762               
+
+source latency                          0.000          0.000               
+CONFIG              x000y068            0.000          0.000          pin: config_inst.jtck
+net (fo=1)                              0.000          0.000          net: cwc_jtck,  NOFILE(0)
+                                                                      pin: cwc_jtck_syn_1.clki
+GCLK                x001y068z0          0.000          0.000          pin: cwc_jtck_syn_1.clko
+net (fo=452)                            0.000          0.000          net: cwc_jtck_syn_2,  NOFILE(0)
+                                                                      pin: debug_hub_top/U_0_handshake_sync_stat/bus_data_r_aclk_reg[18]_syn_3.clk
+constraint delay                        1.000          1.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.116          0.884               
+clock uncertainty                       0.000          0.884               
+clock pessimism                         0.000          0.884               
+--------------------------------------------------------------------  ---------------
+Required                                               0.884               
+--------------------------------------------------------------------  ---------------
+Slack                                                  0.122               
+
+Slack               : 0.265ns
+Begin Point         : debug_hub_top/U_0_handshake_sync_stat/bus_data_r_bclk_reg[4]_syn_3.clk (rising edge triggered by clock u_PLL_HDMI_CLK/pll_inst.clkc[0]  { rise@0.000000ns  fall@8.000000ns  period=16.000000 })
+End Point           : debug_hub_top/U_0_handshake_sync_stat/bus_data_r_aclk_reg[4]_syn_3.mi[0] (rising edge triggered by clock config_inst.jtck  { rise@0.000000ns  fall@50.000000ns  period=100.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 1.000ns { config_inst.jtck rising@0.000ns - u_PLL_HDMI_CLK/pll_inst.clkc[0] rising@0.000ns }
+Data Path Delay     : 0.619ns (cell 0.289ns (46%), net 0.330ns (54%))
+Clock Skew          : 0.000ns
+Logic Level         : 0
+Max Fanout          : 1
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.100ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                R7                  0.000          0.000          pin: clk_50
+hierarchy                               0.000          0.000          pin: clk_50_syn_2.ipad
+PAD                 x020y071            0.000          0.000          pin: clk_50_syn_2.di
+net (fo=59)         x000y000            0.000          0.000          net: clk_50_dup_1,  ../../../../source_code/rtl/UDP_Example_Top.v(41)
+                                                                      pin: u_PLL_HDMI_CLK/pll_inst.refclk
+PLL                 x000y000            0.000          0.000          pin: u_PLL_HDMI_CLK/pll_inst.clkc[0]
+net (fo=1)                              0.000          0.000          net: u_PLL_HDMI_CLK/clk0_buf,  ../../al_ip/PLL_HDMI_CLK.v(37)
+                                                                      pin: u_PLL_HDMI_CLK/bufg_feedback.clki
+GCLK                x001y001z2          0.000          0.000          pin: u_PLL_HDMI_CLK/bufg_feedback.clko
+net (fo=771)                            0.000          0.000          net: uivtc_inst/I_vtc_clk,  ../../../../source_code/rtl/uivtc/uivtc.v(46)
+                                                                      pin: debug_hub_top/U_0_handshake_sync_stat/bus_data_r_bclk_reg[4]_syn_3.clk
+--------------------------------------------------------------------  ---------------
+clk2q               x012y068z2          0.146    r     0.146          pin: debug_hub_top/U_0_handshake_sync_stat/bus_data_r_bclk_reg[4]_syn_3.q[0]
+net (fo=1)                              0.330          0.476          net: debug_hub_top/U_0_handshake_sync_stat/bus_data_r_bclk[9],  D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/ip/apm/apm_cwc\apm_debughub.sv(0)
+                                                                      pin: debug_hub_top/U_0_handshake_sync_stat/bus_data_r_aclk_reg[4]_syn_3.mi[0]
+reg                 x012y069z0          0.143    r     0.619          net: debug_hub_top/U_0_handshake_sync_stat/bus_data_r_aclk[9],  D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/ip/apm/apm_cwc\apm_debughub.sv(0)
+--------------------------------------------------------------------  ---------------
+Arrival                                                0.619               
+
+source latency                          0.000          0.000               
+CONFIG              x000y068            0.000          0.000          pin: config_inst.jtck
+net (fo=1)                              0.000          0.000          net: cwc_jtck,  NOFILE(0)
+                                                                      pin: cwc_jtck_syn_1.clki
+GCLK                x001y068z0          0.000          0.000          pin: cwc_jtck_syn_1.clko
+net (fo=452)                            0.000          0.000          net: cwc_jtck_syn_2,  NOFILE(0)
+                                                                      pin: debug_hub_top/U_0_handshake_sync_stat/bus_data_r_aclk_reg[4]_syn_3.clk
+constraint delay                        1.000          1.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.116          0.884               
+clock uncertainty                       0.000          0.884               
+clock pessimism                         0.000          0.884               
+--------------------------------------------------------------------  ---------------
+Required                                               0.884               
+--------------------------------------------------------------------  ---------------
+Slack                                                  0.265               
+
+
+
+Min Paths
+----------------------------------------------------------------------------------------------------
+
+
+Timing details for constraint:
+	set_max_delay -nowarn -from [get_regs {debug_hub_top/U_*_handshake_sync_*/U_handshake_sync/req_aclk*}] -to [get_regs {debug_hub_top/U_*_handshake_sync_*/U_handshake_sync/req_sync1_bclk*}] -datapath_only 1
+--------------------------------------------------
+
+----------------------------------------------------------------------------------------------------
+Path Group     :     
+set_max_delay -nowarn -from [get_regs {debug_hub_top/U_*_handshake_sync_*/U_handshake_sync/req_aclk*}] -to [get_regs {debug_hub_top/U_*_handshake_sync_*/U_handshake_sync/req_sync1_bclk*}] -datapath_only 1
+
+Type           :     SMD
+
+Statistics:
+Max            : SWNS      0.106ns, STNS      0.000ns,         0 Viol Endpoints,         2 Total Endpoints,         2 Paths Analyzed
+Min            : HWNS      0.000ns, HTNS      0.000ns,         0 Viol Endpoints,         0 Total Endpoints,         0 Paths Analyzed
+----------------------------------------------------------------------------------------------------
+
+Max Paths
+----------------------------------------------------------------------------------------------------
+Slack               : 0.106ns
+Begin Point         : debug_hub_top/U_0_handshake_sync_stat/U_handshake_sync/req_aclk_reg_syn_13.clk (rising edge triggered by clock config_inst.jtck  { rise@0.000000ns  fall@50.000000ns  period=100.000000 })
+End Point           : debug_hub_top/U_0_handshake_sync_stat/U_handshake_sync/req_sync2_bclk_reg_syn_4.mi[0] (rising edge triggered by clock u_PLL_HDMI_CLK/pll_inst.clkc[0]  { rise@0.000000ns  fall@8.000000ns  period=16.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 1.000ns { u_PLL_HDMI_CLK/pll_inst.clkc[0] rising@0.000ns - config_inst.jtck rising@0.000ns }
+Data Path Delay     : 0.778ns (cell 0.289ns (37%), net 0.489ns (63%))
+Clock Skew          : 0.000ns
+Logic Level         : 0
+Max Fanout          : 3
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.100ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+CONFIG              x000y068            0.000          0.000          pin: config_inst.jtck
+net (fo=1)                              0.000          0.000          net: cwc_jtck,  NOFILE(0)
+                                                                      pin: cwc_jtck_syn_1.clki
+GCLK                x001y068z0          0.000          0.000          pin: cwc_jtck_syn_1.clko
+net (fo=452)                            0.000          0.000          net: cwc_jtck_syn_2,  NOFILE(0)
+                                                                      pin: debug_hub_top/U_0_handshake_sync_stat/U_handshake_sync/req_aclk_reg_syn_13.clk
+--------------------------------------------------------------------  ---------------
+clk2q               x009y070z0          0.146    r     0.146          pin: debug_hub_top/U_0_handshake_sync_stat/U_handshake_sync/req_aclk_reg_syn_13.q[0]
+net (fo=3)                              0.489          0.635          net: debug_hub_top/U_0_handshake_sync_stat/U_handshake_sync/req_aclk,  D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/ip/apm/apm_cwc\apm_debughub.sv(0)
+                                                                      pin: debug_hub_top/U_0_handshake_sync_stat/U_handshake_sync/req_sync2_bclk_reg_syn_4.mi[0]
+reg                 x009y070z2          0.143    r     0.778          net: debug_hub_top/U_0_handshake_sync_stat/U_handshake_sync/req_sync1_bclk,  D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/ip/apm/apm_cwc\apm_debughub.sv(0)
+--------------------------------------------------------------------  ---------------
+Arrival                                                0.778               
+
+source latency                          0.000          0.000               
+port                R7                  0.000          0.000          pin: clk_50
+hierarchy                               0.000          0.000          pin: clk_50_syn_2.ipad
+PAD                 x020y071            0.000          0.000          pin: clk_50_syn_2.di
+net (fo=59)         x000y000            0.000          0.000          net: clk_50_dup_1,  ../../../../source_code/rtl/UDP_Example_Top.v(41)
+                                                                      pin: u_PLL_HDMI_CLK/pll_inst.refclk
+PLL                 x000y000            0.000          0.000          pin: u_PLL_HDMI_CLK/pll_inst.clkc[0]
+net (fo=1)                              0.000          0.000          net: u_PLL_HDMI_CLK/clk0_buf,  ../../al_ip/PLL_HDMI_CLK.v(37)
+                                                                      pin: u_PLL_HDMI_CLK/bufg_feedback.clki
+GCLK                x001y001z2          0.000          0.000          pin: u_PLL_HDMI_CLK/bufg_feedback.clko
+net (fo=771)                            0.000          0.000          net: uivtc_inst/I_vtc_clk,  ../../../../source_code/rtl/uivtc/uivtc.v(46)
+                                                                      pin: debug_hub_top/U_0_handshake_sync_stat/U_handshake_sync/req_sync2_bclk_reg_syn_4.clk
+constraint delay                        1.000          1.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.116          0.884               
+clock uncertainty                       0.000          0.884               
+clock pessimism                         0.000          0.884               
+--------------------------------------------------------------------  ---------------
+Required                                               0.884               
+--------------------------------------------------------------------  ---------------
+Slack                                                  0.106               
+
+Slack               : 0.265ns
+Begin Point         : debug_hub_top/U_0_register/shift_1_r_reg_syn_5.clk (rising edge triggered by clock config_inst.jtck  { rise@0.000000ns  fall@50.000000ns  period=100.000000 })
+End Point           : debug_hub_top/U_0_handshake_sync_ctrl/U_handshake_sync/req_sync2_bclk_reg_syn_5.mi[0] (rising edge triggered by clock u_PLL_HDMI_CLK/pll_inst.clkc[0]  { rise@0.000000ns  fall@8.000000ns  period=16.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 1.000ns { u_PLL_HDMI_CLK/pll_inst.clkc[0] rising@0.000ns - config_inst.jtck rising@0.000ns }
+Data Path Delay     : 0.619ns (cell 0.289ns (46%), net 0.330ns (54%))
+Clock Skew          : 0.000ns
+Logic Level         : 0
+Max Fanout          : 2
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.100ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+CONFIG              x000y068            0.000          0.000          pin: config_inst.jtck
+net (fo=1)                              0.000          0.000          net: cwc_jtck,  NOFILE(0)
+                                                                      pin: cwc_jtck_syn_1.clki
+GCLK                x001y068z0          0.000          0.000          pin: cwc_jtck_syn_1.clko
+net (fo=452)                            0.000          0.000          net: cwc_jtck_syn_2,  NOFILE(0)
+                                                                      pin: debug_hub_top/U_0_register/shift_1_r_reg_syn_5.clk
+--------------------------------------------------------------------  ---------------
+clk2q               x003y068z2          0.146    r     0.146          pin: debug_hub_top/U_0_register/shift_1_r_reg_syn_5.q[0]
+net (fo=2)                              0.330          0.476          net: debug_hub_top/U_0_handshake_sync_ctrl/U_handshake_sync/req_aclk,  D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/ip/apm/apm_cwc\apm_debughub.sv(0)
+                                                                      pin: debug_hub_top/U_0_handshake_sync_ctrl/U_handshake_sync/req_sync2_bclk_reg_syn_5.mi[0]
+reg                 x003y067z1          0.143    r     0.619          net: debug_hub_top/U_0_handshake_sync_ctrl/U_handshake_sync/req_sync1_bclk,  D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/ip/apm/apm_cwc\apm_debughub.sv(0)
+--------------------------------------------------------------------  ---------------
+Arrival                                                0.619               
+
+source latency                          0.000          0.000               
+port                R7                  0.000          0.000          pin: clk_50
+hierarchy                               0.000          0.000          pin: clk_50_syn_2.ipad
+PAD                 x020y071            0.000          0.000          pin: clk_50_syn_2.di
+net (fo=59)         x000y000            0.000          0.000          net: clk_50_dup_1,  ../../../../source_code/rtl/UDP_Example_Top.v(41)
+                                                                      pin: u_PLL_HDMI_CLK/pll_inst.refclk
+PLL                 x000y000            0.000          0.000          pin: u_PLL_HDMI_CLK/pll_inst.clkc[0]
+net (fo=1)                              0.000          0.000          net: u_PLL_HDMI_CLK/clk0_buf,  ../../al_ip/PLL_HDMI_CLK.v(37)
+                                                                      pin: u_PLL_HDMI_CLK/bufg_feedback.clki
+GCLK                x001y001z2          0.000          0.000          pin: u_PLL_HDMI_CLK/bufg_feedback.clko
+net (fo=771)                            0.000          0.000          net: uivtc_inst/I_vtc_clk,  ../../../../source_code/rtl/uivtc/uivtc.v(46)
+                                                                      pin: debug_hub_top/U_0_handshake_sync_ctrl/U_handshake_sync/req_sync2_bclk_reg_syn_5.clk
+constraint delay                        1.000          1.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.116          0.884               
+clock uncertainty                       0.000          0.884               
+clock pessimism                         0.000          0.884               
+--------------------------------------------------------------------  ---------------
+Required                                               0.884               
+--------------------------------------------------------------------  ---------------
+Slack                                                  0.265               
+
+
+
+Min Paths
+----------------------------------------------------------------------------------------------------
+
+
+Timing details for constraint:
+	set_max_delay -nowarn -from [get_regs {debug_hub_top/U_*_handshake_sync_*/U_handshake_sync/ack_bclk*}] -to [get_regs {debug_hub_top/U_*_handshake_sync_*/U_handshake_sync/ack_sync1_aclk*}] -datapath_only 1
+--------------------------------------------------
+
+----------------------------------------------------------------------------------------------------
+Path Group     :     
+set_max_delay -nowarn -from [get_regs {debug_hub_top/U_*_handshake_sync_*/U_handshake_sync/ack_bclk*}] -to [get_regs {debug_hub_top/U_*_handshake_sync_*/U_handshake_sync/ack_sync1_aclk*}] -datapath_only 1
+
+Type           :     SMD
+
+Statistics:
+Max            : SWNS      0.109ns, STNS      0.000ns,         0 Viol Endpoints,         2 Total Endpoints,         2 Paths Analyzed
+Min            : HWNS      0.000ns, HTNS      0.000ns,         0 Viol Endpoints,         0 Total Endpoints,         0 Paths Analyzed
+----------------------------------------------------------------------------------------------------
+
+Max Paths
+----------------------------------------------------------------------------------------------------
+Slack               : 0.109ns
+Begin Point         : debug_hub_top/U_0_handshake_sync_stat/U_handshake_sync/req_sync_bclk_reg_syn_4.clk (rising edge triggered by clock u_PLL_HDMI_CLK/pll_inst.clkc[0]  { rise@0.000000ns  fall@8.000000ns  period=16.000000 })
+End Point           : debug_hub_top/U_0_handshake_sync_stat/U_handshake_sync/ack_sync1_aclk_reg_syn_4.mi[1] (rising edge triggered by clock config_inst.jtck  { rise@0.000000ns  fall@50.000000ns  period=100.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 1.000ns { config_inst.jtck rising@0.000ns - u_PLL_HDMI_CLK/pll_inst.clkc[0] rising@0.000ns }
+Data Path Delay     : 0.775ns (cell 0.289ns (37%), net 0.486ns (63%))
+Clock Skew          : 0.000ns
+Logic Level         : 0
+Max Fanout          : 2
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.100ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                R7                  0.000          0.000          pin: clk_50
+hierarchy                               0.000          0.000          pin: clk_50_syn_2.ipad
+PAD                 x020y071            0.000          0.000          pin: clk_50_syn_2.di
+net (fo=59)         x000y000            0.000          0.000          net: clk_50_dup_1,  ../../../../source_code/rtl/UDP_Example_Top.v(41)
+                                                                      pin: u_PLL_HDMI_CLK/pll_inst.refclk
+PLL                 x000y000            0.000          0.000          pin: u_PLL_HDMI_CLK/pll_inst.clkc[0]
+net (fo=1)                              0.000          0.000          net: u_PLL_HDMI_CLK/clk0_buf,  ../../al_ip/PLL_HDMI_CLK.v(37)
+                                                                      pin: u_PLL_HDMI_CLK/bufg_feedback.clki
+GCLK                x001y001z2          0.000          0.000          pin: u_PLL_HDMI_CLK/bufg_feedback.clko
+net (fo=771)                            0.000          0.000          net: uivtc_inst/I_vtc_clk,  ../../../../source_code/rtl/uivtc/uivtc.v(46)
+                                                                      pin: debug_hub_top/U_0_handshake_sync_stat/U_handshake_sync/req_sync_bclk_reg_syn_4.clk
+--------------------------------------------------------------------  ---------------
+clk2q               x010y070z0          0.146    r     0.146          pin: debug_hub_top/U_0_handshake_sync_stat/U_handshake_sync/req_sync_bclk_reg_syn_4.q[0]
+net (fo=2)                              0.486          0.632          net: debug_hub_top/U_0_handshake_sync_stat/U_handshake_sync/ack_bclk,  D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/ip/apm/apm_cwc\apm_debughub.sv(0)
+                                                                      pin: debug_hub_top/U_0_handshake_sync_stat/U_handshake_sync/ack_sync1_aclk_reg_syn_4.mi[1]
+reg                 x011y070z2          0.143    r     0.775          net: debug_hub_top/U_0_handshake_sync_stat/U_handshake_sync/ack_sync1_aclk,  D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/ip/apm/apm_cwc\apm_debughub.sv(0)
+--------------------------------------------------------------------  ---------------
+Arrival                                                0.775               
+
+source latency                          0.000          0.000               
+CONFIG              x000y068            0.000          0.000          pin: config_inst.jtck
+net (fo=1)                              0.000          0.000          net: cwc_jtck,  NOFILE(0)
+                                                                      pin: cwc_jtck_syn_1.clki
+GCLK                x001y068z0          0.000          0.000          pin: cwc_jtck_syn_1.clko
+net (fo=452)                            0.000          0.000          net: cwc_jtck_syn_2,  NOFILE(0)
+                                                                      pin: debug_hub_top/U_0_handshake_sync_stat/U_handshake_sync/ack_sync1_aclk_reg_syn_4.clk
+constraint delay                        1.000          1.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.116          0.884               
+clock uncertainty                       0.000          0.884               
+clock pessimism                         0.000          0.884               
+--------------------------------------------------------------------  ---------------
+Required                                               0.884               
+--------------------------------------------------------------------  ---------------
+Slack                                                  0.109               
+
+Slack               : 0.253ns
+Begin Point         : debug_hub_top/U_0_handshake_sync_ctrl/U_handshake_sync/ack_bclk_reg_syn_6.clk (rising edge triggered by clock u_PLL_HDMI_CLK/pll_inst.clkc[0]  { rise@0.000000ns  fall@8.000000ns  period=16.000000 })
+End Point           : debug_hub_top/U_0_handshake_sync_ctrl/U_handshake_sync/ack_sync1_aclk_reg_syn_4.mi[0] (rising edge triggered by clock config_inst.jtck  { rise@0.000000ns  fall@50.000000ns  period=100.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 1.000ns { config_inst.jtck rising@0.000ns - u_PLL_HDMI_CLK/pll_inst.clkc[0] rising@0.000ns }
+Data Path Delay     : 0.631ns (cell 0.289ns (45%), net 0.342ns (55%))
+Clock Skew          : 0.000ns
+Logic Level         : 0
+Max Fanout          : 7
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.100ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                R7                  0.000          0.000          pin: clk_50
+hierarchy                               0.000          0.000          pin: clk_50_syn_2.ipad
+PAD                 x020y071            0.000          0.000          pin: clk_50_syn_2.di
+net (fo=59)         x000y000            0.000          0.000          net: clk_50_dup_1,  ../../../../source_code/rtl/UDP_Example_Top.v(41)
+                                                                      pin: u_PLL_HDMI_CLK/pll_inst.refclk
+PLL                 x000y000            0.000          0.000          pin: u_PLL_HDMI_CLK/pll_inst.clkc[0]
+net (fo=1)                              0.000          0.000          net: u_PLL_HDMI_CLK/clk0_buf,  ../../al_ip/PLL_HDMI_CLK.v(37)
+                                                                      pin: u_PLL_HDMI_CLK/bufg_feedback.clki
+GCLK                x001y001z2          0.000          0.000          pin: u_PLL_HDMI_CLK/bufg_feedback.clko
+net (fo=771)                            0.000          0.000          net: uivtc_inst/I_vtc_clk,  ../../../../source_code/rtl/uivtc/uivtc.v(46)
+                                                                      pin: debug_hub_top/U_0_handshake_sync_ctrl/U_handshake_sync/ack_bclk_reg_syn_6.clk
+--------------------------------------------------------------------  ---------------
+clk2q               x010y058z1          0.146    r     0.146          pin: debug_hub_top/U_0_handshake_sync_ctrl/U_handshake_sync/ack_bclk_reg_syn_6.q[0]
+net (fo=7)                              0.342          0.488          net: debug_hub_top/U_0_handshake_sync_ctrl/U_handshake_sync/ack_bclk,  D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/ip/apm/apm_cwc\apm_debughub.sv(0)
+                                                                      pin: debug_hub_top/U_0_handshake_sync_ctrl/U_handshake_sync/ack_sync1_aclk_reg_syn_4.mi[0]
+reg                 x010y059z0          0.143    r     0.631          net: debug_hub_top/U_0_handshake_sync_ctrl/U_handshake_sync/ack_sync1_aclk,  D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/ip/apm/apm_cwc\apm_debughub.sv(0)
+--------------------------------------------------------------------  ---------------
+Arrival                                                0.631               
+
+source latency                          0.000          0.000               
+CONFIG              x000y068            0.000          0.000          pin: config_inst.jtck
+net (fo=1)                              0.000          0.000          net: cwc_jtck,  NOFILE(0)
+                                                                      pin: cwc_jtck_syn_1.clki
+GCLK                x001y068z0          0.000          0.000          pin: cwc_jtck_syn_1.clko
+net (fo=452)                            0.000          0.000          net: cwc_jtck_syn_2,  NOFILE(0)
+                                                                      pin: debug_hub_top/U_0_handshake_sync_ctrl/U_handshake_sync/ack_sync1_aclk_reg_syn_4.clk
+constraint delay                        1.000          1.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.116          0.884               
+clock uncertainty                       0.000          0.884               
+clock pessimism                         0.000          0.884               
+--------------------------------------------------------------------  ---------------
+Required                                               0.884               
+--------------------------------------------------------------------  ---------------
+Slack                                                  0.253               
+
+
+
+Min Paths
+----------------------------------------------------------------------------------------------------
+
+
+Timing details for constraint:
+	set_max_delay -nowarn -from [get_regs {debug_hub_top/U_tap/rst*}] -to [get_regs {debug_hub_top/slave_*_rst_sync*}] -datapath_only 1
+--------------------------------------------------
+
+----------------------------------------------------------------------------------------------------
+Path Group     :     
+set_max_delay -nowarn -from [get_regs {debug_hub_top/U_tap/rst*}] -to [get_regs {debug_hub_top/slave_*_rst_sync*}] -datapath_only 1
+
+Type           :     SMD
+
+Statistics:
+Max            : SWNS     -0.231ns, STNS     -1.773ns,        10 Viol Endpoints,        10 Total Endpoints,        10 Paths Analyzed
+Min            : HWNS      0.000ns, HTNS      0.000ns,         0 Viol Endpoints,         0 Total Endpoints,         0 Paths Analyzed
+----------------------------------------------------------------------------------------------------
+
+Max Paths
+----------------------------------------------------------------------------------------------------
+Slack               : -0.231ns
+Begin Point         : debug_hub_top/U_tap/rst_reg_syn_13.clk (rising edge triggered by clock config_inst.jtck  { rise@0.000000ns  fall@50.000000ns  period=100.000000 })
+End Point           : debug_hub_top/slave_0_rst_sync2_reg_syn_29.sr (rising edge triggered by clock u_PLL_HDMI_CLK/pll_inst.clkc[0]  { rise@0.000000ns  fall@8.000000ns  period=16.000000 })
+Check Type          : recovery
+Process             : slow
+Budget              : 1.000ns { u_PLL_HDMI_CLK/pll_inst.clkc[0] rising@0.000ns - config_inst.jtck rising@0.000ns }
+Data Path Delay     : 0.931ns (cell 0.232ns (24%), net 0.699ns (76%))
+Clock Skew          : 0.000ns
+Logic Level         : 0
+Max Fanout          : 5
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.100ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+CONFIG              x000y068            0.000          0.000          pin: config_inst.jtck
+net (fo=1)                              0.000          0.000          net: cwc_jtck,  NOFILE(0)
+                                                                      pin: cwc_jtck_syn_1.clki
+GCLK                x001y068z0          0.000          0.000          pin: cwc_jtck_syn_1.clko
+net (fo=452)                            0.000          0.000          net: cwc_jtck_syn_2,  NOFILE(0)
+                                                                      pin: debug_hub_top/U_tap/rst_reg_syn_13.clk
+--------------------------------------------------------------------  ---------------
+clk2q               x015y061z1          0.146    r     0.146          pin: debug_hub_top/U_tap/rst_reg_syn_13.q[0]
+net (fo=5)                              0.699          0.845          net: debug_hub_top/U_0_register/rst_dup_11,  D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/ip/apm/apm_cwc\apm_debughub.sv(0)
+                                                                      pin: debug_hub_top/slave_0_rst_sync2_reg_syn_29.sr
+reg                 x017y063z0          0.086    r     0.931               
+--------------------------------------------------------------------  ---------------
+Arrival                                                0.931               
+
+source latency                          0.000          0.000               
+port                R7                  0.000          0.000          pin: clk_50
+hierarchy                               0.000          0.000          pin: clk_50_syn_2.ipad
+PAD                 x020y071            0.000          0.000          pin: clk_50_syn_2.di
+net (fo=59)         x000y000            0.000          0.000          net: clk_50_dup_1,  ../../../../source_code/rtl/UDP_Example_Top.v(41)
+                                                                      pin: u_PLL_HDMI_CLK/pll_inst.refclk
+PLL                 x000y000            0.000          0.000          pin: u_PLL_HDMI_CLK/pll_inst.clkc[0]
+net (fo=1)                              0.000          0.000          net: u_PLL_HDMI_CLK/clk0_buf,  ../../al_ip/PLL_HDMI_CLK.v(37)
+                                                                      pin: u_PLL_HDMI_CLK/bufg_feedback.clki
+GCLK                x001y001z2          0.000          0.000          pin: u_PLL_HDMI_CLK/bufg_feedback.clko
+net (fo=771)                            0.000          0.000          net: uivtc_inst/I_vtc_clk,  ../../../../source_code/rtl/uivtc/uivtc.v(46)
+                                                                      pin: debug_hub_top/slave_0_rst_sync2_reg_syn_29.clk
+constraint delay                        1.000          1.000               
+--------------------------------------------------------------------  ---------------
+recovery                               -0.300          0.700               
+clock uncertainty                       0.000          0.700               
+clock pessimism                         0.000          0.700               
+--------------------------------------------------------------------  ---------------
+Required                                               0.700               
+--------------------------------------------------------------------  ---------------
+Slack                                                 -0.231               
+
+Slack               : -0.216ns
+Begin Point         : debug_hub_top/U_tap/rst_reg_syn_10.clk (rising edge triggered by clock config_inst.jtck  { rise@0.000000ns  fall@50.000000ns  period=100.000000 })
+End Point           : uihdmitx_inst/Inst_DVITransmitter/Inst_TMDSEncoder_blue/cnt_t_b1[4]_syn_27.sr (rising edge triggered by clock u_PLL_HDMI_CLK/pll_inst.clkc[0]  { rise@0.000000ns  fall@8.000000ns  period=16.000000 })
+Check Type          : recovery
+Process             : slow
+Budget              : 1.000ns { u_PLL_HDMI_CLK/pll_inst.clkc[0] rising@0.000ns - config_inst.jtck rising@0.000ns }
+Data Path Delay     : 0.916ns (cell 0.232ns (25%), net 0.684ns (75%))
+Clock Skew          : 0.000ns
+Logic Level         : 0
+Max Fanout          : 23
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.100ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+CONFIG              x000y068            0.000          0.000          pin: config_inst.jtck
+net (fo=1)                              0.000          0.000          net: cwc_jtck,  NOFILE(0)
+                                                                      pin: cwc_jtck_syn_1.clki
+GCLK                x001y068z0          0.000          0.000          pin: cwc_jtck_syn_1.clko
+net (fo=452)                            0.000          0.000          net: cwc_jtck_syn_2,  NOFILE(0)
+                                                                      pin: debug_hub_top/U_tap/rst_reg_syn_10.clk
+--------------------------------------------------------------------  ---------------
+clk2q               x015y060z0          0.146    r     0.146          pin: debug_hub_top/U_tap/rst_reg_syn_10.q[0]
+net (fo=23)                             0.684          0.830          net: debug_hub_top/U_0_register/rst_dup_8,  D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/ip/apm/apm_cwc\apm_debughub.sv(0)
+                                                                      pin: uihdmitx_inst/Inst_DVITransmitter/Inst_TMDSEncoder_blue/cnt_t_b1[4]_syn_27.sr
+reg                 x015y060z3          0.086    r     0.916               
+--------------------------------------------------------------------  ---------------
+Arrival                                                0.916               
+
+source latency                          0.000          0.000               
+port                R7                  0.000          0.000          pin: clk_50
+hierarchy                               0.000          0.000          pin: clk_50_syn_2.ipad
+PAD                 x020y071            0.000          0.000          pin: clk_50_syn_2.di
+net (fo=59)         x000y000            0.000          0.000          net: clk_50_dup_1,  ../../../../source_code/rtl/UDP_Example_Top.v(41)
+                                                                      pin: u_PLL_HDMI_CLK/pll_inst.refclk
+PLL                 x000y000            0.000          0.000          pin: u_PLL_HDMI_CLK/pll_inst.clkc[0]
+net (fo=1)                              0.000          0.000          net: u_PLL_HDMI_CLK/clk0_buf,  ../../al_ip/PLL_HDMI_CLK.v(37)
+                                                                      pin: u_PLL_HDMI_CLK/bufg_feedback.clki
+GCLK                x001y001z2          0.000          0.000          pin: u_PLL_HDMI_CLK/bufg_feedback.clko
+net (fo=771)                            0.000          0.000          net: uivtc_inst/I_vtc_clk,  ../../../../source_code/rtl/uivtc/uivtc.v(46)
+                                                                      pin: uihdmitx_inst/Inst_DVITransmitter/Inst_TMDSEncoder_blue/cnt_t_b1[4]_syn_27.clk
+constraint delay                        1.000          1.000               
+--------------------------------------------------------------------  ---------------
+recovery                               -0.300          0.700               
+clock uncertainty                       0.000          0.700               
+clock pessimism                         0.000          0.700               
+--------------------------------------------------------------------  ---------------
+Required                                               0.700               
+--------------------------------------------------------------------  ---------------
+Slack                                                 -0.216               
+
+Slack               : -0.192ns
+Begin Point         : debug_hub_top/U_tap/rst_reg_syn_12.clk (rising edge triggered by clock config_inst.jtck  { rise@0.000000ns  fall@50.000000ns  period=100.000000 })
+End Point           : debug_hub_top/slave_0_rst_sync2_reg_syn_16.sr (rising edge triggered by clock u_PLL_HDMI_CLK/pll_inst.clkc[0]  { rise@0.000000ns  fall@8.000000ns  period=16.000000 })
+Check Type          : recovery
+Process             : slow
+Budget              : 1.000ns { u_PLL_HDMI_CLK/pll_inst.clkc[0] rising@0.000ns - config_inst.jtck rising@0.000ns }
+Data Path Delay     : 0.892ns (cell 0.232ns (26%), net 0.660ns (74%))
+Clock Skew          : 0.000ns
+Logic Level         : 0
+Max Fanout          : 22
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.100ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+CONFIG              x000y068            0.000          0.000          pin: config_inst.jtck
+net (fo=1)                              0.000          0.000          net: cwc_jtck,  NOFILE(0)
+                                                                      pin: cwc_jtck_syn_1.clki
+GCLK                x001y068z0          0.000          0.000          pin: cwc_jtck_syn_1.clko
+net (fo=452)                            0.000          0.000          net: cwc_jtck_syn_2,  NOFILE(0)
+                                                                      pin: debug_hub_top/U_tap/rst_reg_syn_12.clk
+--------------------------------------------------------------------  ---------------
+clk2q               x012y059z1          0.146    r     0.146          pin: debug_hub_top/U_tap/rst_reg_syn_12.q[0]
+net (fo=22)                             0.660          0.806          net: debug_hub_top/U_0_register/rst_dup_10,  D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/ip/apm/apm_cwc\apm_debughub.sv(0)
+                                                                      pin: debug_hub_top/slave_0_rst_sync2_reg_syn_16.sr
+reg                 x011y059z0          0.086    r     0.892               
+--------------------------------------------------------------------  ---------------
+Arrival                                                0.892               
+
+source latency                          0.000          0.000               
+port                R7                  0.000          0.000          pin: clk_50
+hierarchy                               0.000          0.000          pin: clk_50_syn_2.ipad
+PAD                 x020y071            0.000          0.000          pin: clk_50_syn_2.di
+net (fo=59)         x000y000            0.000          0.000          net: clk_50_dup_1,  ../../../../source_code/rtl/UDP_Example_Top.v(41)
+                                                                      pin: u_PLL_HDMI_CLK/pll_inst.refclk
+PLL                 x000y000            0.000          0.000          pin: u_PLL_HDMI_CLK/pll_inst.clkc[0]
+net (fo=1)                              0.000          0.000          net: u_PLL_HDMI_CLK/clk0_buf,  ../../al_ip/PLL_HDMI_CLK.v(37)
+                                                                      pin: u_PLL_HDMI_CLK/bufg_feedback.clki
+GCLK                x001y001z2          0.000          0.000          pin: u_PLL_HDMI_CLK/bufg_feedback.clko
+net (fo=771)                            0.000          0.000          net: uivtc_inst/I_vtc_clk,  ../../../../source_code/rtl/uivtc/uivtc.v(46)
+                                                                      pin: debug_hub_top/slave_0_rst_sync2_reg_syn_16.clk
+constraint delay                        1.000          1.000               
+--------------------------------------------------------------------  ---------------
+recovery                               -0.300          0.700               
+clock uncertainty                       0.000          0.700               
+clock pessimism                         0.000          0.700               
+--------------------------------------------------------------------  ---------------
+Required                                               0.700               
+--------------------------------------------------------------------  ---------------
+Slack                                                 -0.192               
+
+Slack               : -0.192ns
+Begin Point         : debug_hub_top/U_tap/rst_reg_syn_17.clk (rising edge triggered by clock config_inst.jtck  { rise@0.000000ns  fall@50.000000ns  period=100.000000 })
+End Point           : debug_hub_top/slave_0_rst_sync2_reg_syn_34.sr (rising edge triggered by clock u_PLL_HDMI_CLK/pll_inst.clkc[0]  { rise@0.000000ns  fall@8.000000ns  period=16.000000 })
+Check Type          : recovery
+Process             : slow
+Budget              : 1.000ns { u_PLL_HDMI_CLK/pll_inst.clkc[0] rising@0.000ns - config_inst.jtck rising@0.000ns }
+Data Path Delay     : 0.892ns (cell 0.232ns (26%), net 0.660ns (74%))
+Clock Skew          : 0.000ns
+Logic Level         : 0
+Max Fanout          : 143
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.100ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+CONFIG              x000y068            0.000          0.000          pin: config_inst.jtck
+net (fo=1)                              0.000          0.000          net: cwc_jtck,  NOFILE(0)
+                                                                      pin: cwc_jtck_syn_1.clki
+GCLK                x001y068z0          0.000          0.000          pin: cwc_jtck_syn_1.clko
+net (fo=452)                            0.000          0.000          net: cwc_jtck_syn_2,  NOFILE(0)
+                                                                      pin: debug_hub_top/U_tap/rst_reg_syn_17.clk
+--------------------------------------------------------------------  ---------------
+clk2q               x023y064z0          0.146    r     0.146          pin: debug_hub_top/U_tap/rst_reg_syn_17.q[0]
+net (fo=143)                            0.660          0.806          net: debug_hub_top/U_0_register/rst_dup_15,  D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/ip/apm/apm_cwc\apm_debughub.sv(0)
+                                                                      pin: debug_hub_top/slave_0_rst_sync2_reg_syn_34.sr
+reg                 x023y065z0          0.086    r     0.892               
+--------------------------------------------------------------------  ---------------
+Arrival                                                0.892               
+
+source latency                          0.000          0.000               
+port                R7                  0.000          0.000          pin: clk_50
+hierarchy                               0.000          0.000          pin: clk_50_syn_2.ipad
+PAD                 x020y071            0.000          0.000          pin: clk_50_syn_2.di
+net (fo=59)         x000y000            0.000          0.000          net: clk_50_dup_1,  ../../../../source_code/rtl/UDP_Example_Top.v(41)
+                                                                      pin: u_PLL_HDMI_CLK/pll_inst.refclk
+PLL                 x000y000            0.000          0.000          pin: u_PLL_HDMI_CLK/pll_inst.clkc[0]
+net (fo=1)                              0.000          0.000          net: u_PLL_HDMI_CLK/clk0_buf,  ../../al_ip/PLL_HDMI_CLK.v(37)
+                                                                      pin: u_PLL_HDMI_CLK/bufg_feedback.clki
+GCLK                x001y001z2          0.000          0.000          pin: u_PLL_HDMI_CLK/bufg_feedback.clko
+net (fo=771)                            0.000          0.000          net: uivtc_inst/I_vtc_clk,  ../../../../source_code/rtl/uivtc/uivtc.v(46)
+                                                                      pin: debug_hub_top/slave_0_rst_sync2_reg_syn_34.clk
+constraint delay                        1.000          1.000               
+--------------------------------------------------------------------  ---------------
+recovery                               -0.300          0.700               
+clock uncertainty                       0.000          0.700               
+clock pessimism                         0.000          0.700               
+--------------------------------------------------------------------  ---------------
+Required                                               0.700               
+--------------------------------------------------------------------  ---------------
+Slack                                                 -0.192               
+
+Slack               : -0.166ns
+Begin Point         : debug_hub_top/U_tap/rst_reg_syn_18.clk (rising edge triggered by clock config_inst.jtck  { rise@0.000000ns  fall@50.000000ns  period=100.000000 })
+End Point           : debug_hub_top/slave_0_rst_sync2_reg_syn_18.sr (rising edge triggered by clock u_PLL_HDMI_CLK/pll_inst.clkc[0]  { rise@0.000000ns  fall@8.000000ns  period=16.000000 })
+Check Type          : recovery
+Process             : slow
+Budget              : 1.000ns { u_PLL_HDMI_CLK/pll_inst.clkc[0] rising@0.000ns - config_inst.jtck rising@0.000ns }
+Data Path Delay     : 0.866ns (cell 0.232ns (26%), net 0.634ns (74%))
+Clock Skew          : 0.000ns
+Logic Level         : 0
+Max Fanout          : 8
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.100ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+CONFIG              x000y068            0.000          0.000          pin: config_inst.jtck
+net (fo=1)                              0.000          0.000          net: cwc_jtck,  NOFILE(0)
+                                                                      pin: cwc_jtck_syn_1.clki
+GCLK                x001y068z0          0.000          0.000          pin: cwc_jtck_syn_1.clko
+net (fo=452)                            0.000          0.000          net: cwc_jtck_syn_2,  NOFILE(0)
+                                                                      pin: debug_hub_top/U_tap/rst_reg_syn_18.clk
+--------------------------------------------------------------------  ---------------
+clk2q               x009y062z1          0.146    r     0.146          pin: debug_hub_top/U_tap/rst_reg_syn_18.q[0]
+net (fo=8)                              0.634          0.780          net: debug_hub_top/U_0_register/rst_dup_16,  D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/ip/apm/apm_cwc\apm_debughub.sv(0)
+                                                                      pin: debug_hub_top/slave_0_rst_sync2_reg_syn_18.sr
+reg                 x009y063z1          0.086    r     0.866               
+--------------------------------------------------------------------  ---------------
+Arrival                                                0.866               
+
+source latency                          0.000          0.000               
+port                R7                  0.000          0.000          pin: clk_50
+hierarchy                               0.000          0.000          pin: clk_50_syn_2.ipad
+PAD                 x020y071            0.000          0.000          pin: clk_50_syn_2.di
+net (fo=59)         x000y000            0.000          0.000          net: clk_50_dup_1,  ../../../../source_code/rtl/UDP_Example_Top.v(41)
+                                                                      pin: u_PLL_HDMI_CLK/pll_inst.refclk
+PLL                 x000y000            0.000          0.000          pin: u_PLL_HDMI_CLK/pll_inst.clkc[0]
+net (fo=1)                              0.000          0.000          net: u_PLL_HDMI_CLK/clk0_buf,  ../../al_ip/PLL_HDMI_CLK.v(37)
+                                                                      pin: u_PLL_HDMI_CLK/bufg_feedback.clki
+GCLK                x001y001z2          0.000          0.000          pin: u_PLL_HDMI_CLK/bufg_feedback.clko
+net (fo=771)                            0.000          0.000          net: uivtc_inst/I_vtc_clk,  ../../../../source_code/rtl/uivtc/uivtc.v(46)
+                                                                      pin: debug_hub_top/slave_0_rst_sync2_reg_syn_18.clk
+constraint delay                        1.000          1.000               
+--------------------------------------------------------------------  ---------------
+recovery                               -0.300          0.700               
+clock uncertainty                       0.000          0.700               
+clock pessimism                         0.000          0.700               
+--------------------------------------------------------------------  ---------------
+Required                                               0.700               
+--------------------------------------------------------------------  ---------------
+Slack                                                 -0.166               
+
+Slack               : -0.166ns
+Begin Point         : debug_hub_top/U_tap/rst_reg_syn_9.clk (rising edge triggered by clock config_inst.jtck  { rise@0.000000ns  fall@50.000000ns  period=100.000000 })
+End Point           : debug_hub_top/slave_0_rst_sync2_reg_syn_20.sr (rising edge triggered by clock u_PLL_HDMI_CLK/pll_inst.clkc[0]  { rise@0.000000ns  fall@8.000000ns  period=16.000000 })
+Check Type          : recovery
+Process             : slow
+Budget              : 1.000ns { u_PLL_HDMI_CLK/pll_inst.clkc[0] rising@0.000ns - config_inst.jtck rising@0.000ns }
+Data Path Delay     : 0.866ns (cell 0.232ns (26%), net 0.634ns (74%))
+Clock Skew          : 0.000ns
+Logic Level         : 0
+Max Fanout          : 16
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.100ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+CONFIG              x000y068            0.000          0.000          pin: config_inst.jtck
+net (fo=1)                              0.000          0.000          net: cwc_jtck,  NOFILE(0)
+                                                                      pin: cwc_jtck_syn_1.clki
+GCLK                x001y068z0          0.000          0.000          pin: cwc_jtck_syn_1.clko
+net (fo=452)                            0.000          0.000          net: cwc_jtck_syn_2,  NOFILE(0)
+                                                                      pin: debug_hub_top/U_tap/rst_reg_syn_9.clk
+--------------------------------------------------------------------  ---------------
+clk2q               x004y061z1          0.146    r     0.146          pin: debug_hub_top/U_tap/rst_reg_syn_9.q[0]
+net (fo=16)                             0.634          0.780          net: debug_hub_top/U_0_register/rst_dup_7,  D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/ip/apm/apm_cwc\apm_debughub.sv(0)
+                                                                      pin: debug_hub_top/slave_0_rst_sync2_reg_syn_20.sr
+reg                 x004y060z1          0.086    r     0.866               
+--------------------------------------------------------------------  ---------------
+Arrival                                                0.866               
+
+source latency                          0.000          0.000               
+port                R7                  0.000          0.000          pin: clk_50
+hierarchy                               0.000          0.000          pin: clk_50_syn_2.ipad
+PAD                 x020y071            0.000          0.000          pin: clk_50_syn_2.di
+net (fo=59)         x000y000            0.000          0.000          net: clk_50_dup_1,  ../../../../source_code/rtl/UDP_Example_Top.v(41)
+                                                                      pin: u_PLL_HDMI_CLK/pll_inst.refclk
+PLL                 x000y000            0.000          0.000          pin: u_PLL_HDMI_CLK/pll_inst.clkc[0]
+net (fo=1)                              0.000          0.000          net: u_PLL_HDMI_CLK/clk0_buf,  ../../al_ip/PLL_HDMI_CLK.v(37)
+                                                                      pin: u_PLL_HDMI_CLK/bufg_feedback.clki
+GCLK                x001y001z2          0.000          0.000          pin: u_PLL_HDMI_CLK/bufg_feedback.clko
+net (fo=771)                            0.000          0.000          net: uivtc_inst/I_vtc_clk,  ../../../../source_code/rtl/uivtc/uivtc.v(46)
+                                                                      pin: debug_hub_top/slave_0_rst_sync2_reg_syn_20.clk
+constraint delay                        1.000          1.000               
+--------------------------------------------------------------------  ---------------
+recovery                               -0.300          0.700               
+clock uncertainty                       0.000          0.700               
+clock pessimism                         0.000          0.700               
+--------------------------------------------------------------------  ---------------
+Required                                               0.700               
+--------------------------------------------------------------------  ---------------
+Slack                                                 -0.166               
+
+Slack               : -0.166ns
+Begin Point         : debug_hub_top/U_tap/rst_reg_syn_9.clk (rising edge triggered by clock config_inst.jtck  { rise@0.000000ns  fall@50.000000ns  period=100.000000 })
+End Point           : debug_hub_top/slave_0_rst_sync2_reg_syn_23.sr (rising edge triggered by clock u_PLL_HDMI_CLK/pll_inst.clkc[0]  { rise@0.000000ns  fall@8.000000ns  period=16.000000 })
+Check Type          : recovery
+Process             : slow
+Budget              : 1.000ns { u_PLL_HDMI_CLK/pll_inst.clkc[0] rising@0.000ns - config_inst.jtck rising@0.000ns }
+Data Path Delay     : 0.866ns (cell 0.232ns (26%), net 0.634ns (74%))
+Clock Skew          : 0.000ns
+Logic Level         : 0
+Max Fanout          : 16
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.100ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+CONFIG              x000y068            0.000          0.000          pin: config_inst.jtck
+net (fo=1)                              0.000          0.000          net: cwc_jtck,  NOFILE(0)
+                                                                      pin: cwc_jtck_syn_1.clki
+GCLK                x001y068z0          0.000          0.000          pin: cwc_jtck_syn_1.clko
+net (fo=452)                            0.000          0.000          net: cwc_jtck_syn_2,  NOFILE(0)
+                                                                      pin: debug_hub_top/U_tap/rst_reg_syn_9.clk
+--------------------------------------------------------------------  ---------------
+clk2q               x004y061z1          0.146    r     0.146          pin: debug_hub_top/U_tap/rst_reg_syn_9.q[0]
+net (fo=16)                             0.634          0.780          net: debug_hub_top/U_0_register/rst_dup_7,  D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/ip/apm/apm_cwc\apm_debughub.sv(0)
+                                                                      pin: debug_hub_top/slave_0_rst_sync2_reg_syn_23.sr
+reg                 x004y062z1          0.086    r     0.866               
+--------------------------------------------------------------------  ---------------
+Arrival                                                0.866               
+
+source latency                          0.000          0.000               
+port                R7                  0.000          0.000          pin: clk_50
+hierarchy                               0.000          0.000          pin: clk_50_syn_2.ipad
+PAD                 x020y071            0.000          0.000          pin: clk_50_syn_2.di
+net (fo=59)         x000y000            0.000          0.000          net: clk_50_dup_1,  ../../../../source_code/rtl/UDP_Example_Top.v(41)
+                                                                      pin: u_PLL_HDMI_CLK/pll_inst.refclk
+PLL                 x000y000            0.000          0.000          pin: u_PLL_HDMI_CLK/pll_inst.clkc[0]
+net (fo=1)                              0.000          0.000          net: u_PLL_HDMI_CLK/clk0_buf,  ../../al_ip/PLL_HDMI_CLK.v(37)
+                                                                      pin: u_PLL_HDMI_CLK/bufg_feedback.clki
+GCLK                x001y001z2          0.000          0.000          pin: u_PLL_HDMI_CLK/bufg_feedback.clko
+net (fo=771)                            0.000          0.000          net: uivtc_inst/I_vtc_clk,  ../../../../source_code/rtl/uivtc/uivtc.v(46)
+                                                                      pin: debug_hub_top/slave_0_rst_sync2_reg_syn_23.clk
+constraint delay                        1.000          1.000               
+--------------------------------------------------------------------  ---------------
+recovery                               -0.300          0.700               
+clock uncertainty                       0.000          0.700               
+clock pessimism                         0.000          0.700               
+--------------------------------------------------------------------  ---------------
+Required                                               0.700               
+--------------------------------------------------------------------  ---------------
+Slack                                                 -0.166               
+
+Slack               : -0.166ns
+Begin Point         : debug_hub_top/U_tap/rst_reg_syn_14.clk (rising edge triggered by clock config_inst.jtck  { rise@0.000000ns  fall@50.000000ns  period=100.000000 })
+End Point           : debug_hub_top/U_0_register/ctrl_preamble_reg_syn_21.sr (rising edge triggered by clock u_PLL_HDMI_CLK/pll_inst.clkc[0]  { rise@0.000000ns  fall@8.000000ns  period=16.000000 })
+Check Type          : recovery
+Process             : slow
+Budget              : 1.000ns { u_PLL_HDMI_CLK/pll_inst.clkc[0] rising@0.000ns - config_inst.jtck rising@0.000ns }
+Data Path Delay     : 0.866ns (cell 0.232ns (26%), net 0.634ns (74%))
+Clock Skew          : 0.000ns
+Logic Level         : 0
+Max Fanout          : 17
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.100ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+CONFIG              x000y068            0.000          0.000          pin: config_inst.jtck
+net (fo=1)                              0.000          0.000          net: cwc_jtck,  NOFILE(0)
+                                                                      pin: cwc_jtck_syn_1.clki
+GCLK                x001y068z0          0.000          0.000          pin: cwc_jtck_syn_1.clko
+net (fo=452)                            0.000          0.000          net: cwc_jtck_syn_2,  NOFILE(0)
+                                                                      pin: debug_hub_top/U_tap/rst_reg_syn_14.clk
+--------------------------------------------------------------------  ---------------
+clk2q               x002y065z0          0.146    r     0.146          pin: debug_hub_top/U_tap/rst_reg_syn_14.q[0]
+net (fo=17)                             0.634          0.780          net: debug_hub_top/U_0_register/rst_dup_12,  D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/ip/apm/apm_cwc\apm_debughub.sv(0)
+                                                                      pin: debug_hub_top/U_0_register/ctrl_preamble_reg_syn_21.sr
+reg                 x002y066z1          0.086    r     0.866               
+--------------------------------------------------------------------  ---------------
+Arrival                                                0.866               
+
+source latency                          0.000          0.000               
+port                R7                  0.000          0.000          pin: clk_50
+hierarchy                               0.000          0.000          pin: clk_50_syn_2.ipad
+PAD                 x020y071            0.000          0.000          pin: clk_50_syn_2.di
+net (fo=59)         x000y000            0.000          0.000          net: clk_50_dup_1,  ../../../../source_code/rtl/UDP_Example_Top.v(41)
+                                                                      pin: u_PLL_HDMI_CLK/pll_inst.refclk
+PLL                 x000y000            0.000          0.000          pin: u_PLL_HDMI_CLK/pll_inst.clkc[0]
+net (fo=1)                              0.000          0.000          net: u_PLL_HDMI_CLK/clk0_buf,  ../../al_ip/PLL_HDMI_CLK.v(37)
+                                                                      pin: u_PLL_HDMI_CLK/bufg_feedback.clki
+GCLK                x001y001z2          0.000          0.000          pin: u_PLL_HDMI_CLK/bufg_feedback.clko
+net (fo=771)                            0.000          0.000          net: uivtc_inst/I_vtc_clk,  ../../../../source_code/rtl/uivtc/uivtc.v(46)
+                                                                      pin: debug_hub_top/U_0_register/ctrl_preamble_reg_syn_21.clk
+constraint delay                        1.000          1.000               
+--------------------------------------------------------------------  ---------------
+recovery                               -0.300          0.700               
+clock uncertainty                       0.000          0.700               
+clock pessimism                         0.000          0.700               
+--------------------------------------------------------------------  ---------------
+Required                                               0.700               
+--------------------------------------------------------------------  ---------------
+Slack                                                 -0.166               
+
+Slack               : -0.144ns
+Begin Point         : debug_hub_top/U_tap/rst_reg_syn_5.clk (rising edge triggered by clock config_inst.jtck  { rise@0.000000ns  fall@50.000000ns  period=100.000000 })
+End Point           : debug_hub_top/slave_0_rst_sync2_reg_syn_25.sr (rising edge triggered by clock u_PLL_HDMI_CLK/pll_inst.clkc[0]  { rise@0.000000ns  fall@8.000000ns  period=16.000000 })
+Check Type          : recovery
+Process             : slow
+Budget              : 1.000ns { u_PLL_HDMI_CLK/pll_inst.clkc[0] rising@0.000ns - config_inst.jtck rising@0.000ns }
+Data Path Delay     : 0.844ns (cell 0.232ns (27%), net 0.612ns (73%))
+Clock Skew          : 0.000ns
+Logic Level         : 0
+Max Fanout          : 13
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.100ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+CONFIG              x000y068            0.000          0.000          pin: config_inst.jtck
+net (fo=1)                              0.000          0.000          net: cwc_jtck,  NOFILE(0)
+                                                                      pin: cwc_jtck_syn_1.clki
+GCLK                x001y068z0          0.000          0.000          pin: cwc_jtck_syn_1.clko
+net (fo=452)                            0.000          0.000          net: cwc_jtck_syn_2,  NOFILE(0)
+                                                                      pin: debug_hub_top/U_tap/rst_reg_syn_5.clk
+--------------------------------------------------------------------  ---------------
+clk2q               x004y059z0          0.146    r     0.146          pin: debug_hub_top/U_tap/rst_reg_syn_5.q[0]
+net (fo=13)                             0.612          0.758          net: debug_hub_top/U_0_register/rst_dup_3,  D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/ip/apm/apm_cwc\apm_debughub.sv(0)
+                                                                      pin: debug_hub_top/slave_0_rst_sync2_reg_syn_25.sr
+reg                 x005y059z1          0.086    r     0.844               
+--------------------------------------------------------------------  ---------------
+Arrival                                                0.844               
+
+source latency                          0.000          0.000               
+port                R7                  0.000          0.000          pin: clk_50
+hierarchy                               0.000          0.000          pin: clk_50_syn_2.ipad
+PAD                 x020y071            0.000          0.000          pin: clk_50_syn_2.di
+net (fo=59)         x000y000            0.000          0.000          net: clk_50_dup_1,  ../../../../source_code/rtl/UDP_Example_Top.v(41)
+                                                                      pin: u_PLL_HDMI_CLK/pll_inst.refclk
+PLL                 x000y000            0.000          0.000          pin: u_PLL_HDMI_CLK/pll_inst.clkc[0]
+net (fo=1)                              0.000          0.000          net: u_PLL_HDMI_CLK/clk0_buf,  ../../al_ip/PLL_HDMI_CLK.v(37)
+                                                                      pin: u_PLL_HDMI_CLK/bufg_feedback.clki
+GCLK                x001y001z2          0.000          0.000          pin: u_PLL_HDMI_CLK/bufg_feedback.clko
+net (fo=771)                            0.000          0.000          net: uivtc_inst/I_vtc_clk,  ../../../../source_code/rtl/uivtc/uivtc.v(46)
+                                                                      pin: debug_hub_top/slave_0_rst_sync2_reg_syn_25.clk
+constraint delay                        1.000          1.000               
+--------------------------------------------------------------------  ---------------
+recovery                               -0.300          0.700               
+clock uncertainty                       0.000          0.700               
+clock pessimism                         0.000          0.700               
+--------------------------------------------------------------------  ---------------
+Required                                               0.700               
+--------------------------------------------------------------------  ---------------
+Slack                                                 -0.144               
+
+Slack               : -0.134ns
+Begin Point         : debug_hub_top/U_tap/rst_reg_syn_4.clk (rising edge triggered by clock config_inst.jtck  { rise@0.000000ns  fall@50.000000ns  period=100.000000 })
+End Point           : debug_hub_top/slave_0_rst_sync2_reg_syn_27.sr (rising edge triggered by clock u_PLL_HDMI_CLK/pll_inst.clkc[0]  { rise@0.000000ns  fall@8.000000ns  period=16.000000 })
+Check Type          : recovery
+Process             : slow
+Budget              : 1.000ns { u_PLL_HDMI_CLK/pll_inst.clkc[0] rising@0.000ns - config_inst.jtck rising@0.000ns }
+Data Path Delay     : 0.834ns (cell 0.232ns (27%), net 0.602ns (73%))
+Clock Skew          : 0.000ns
+Logic Level         : 0
+Max Fanout          : 4
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.100ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+CONFIG              x000y068            0.000          0.000          pin: config_inst.jtck
+net (fo=1)                              0.000          0.000          net: cwc_jtck,  NOFILE(0)
+                                                                      pin: cwc_jtck_syn_1.clki
+GCLK                x001y068z0          0.000          0.000          pin: cwc_jtck_syn_1.clko
+net (fo=452)                            0.000          0.000          net: cwc_jtck_syn_2,  NOFILE(0)
+                                                                      pin: debug_hub_top/U_tap/rst_reg_syn_4.clk
+--------------------------------------------------------------------  ---------------
+clk2q               x007y064z0          0.146    r     0.146          pin: debug_hub_top/U_tap/rst_reg_syn_4.q[0]
+net (fo=4)                              0.602          0.748          net: debug_hub_top/U_0_register/rst,  D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/ip/apm/apm_cwc\apm_debughub.sv(0)
+                                                                      pin: debug_hub_top/slave_0_rst_sync2_reg_syn_27.sr
+reg                 x007y063z1          0.086    r     0.834               
+--------------------------------------------------------------------  ---------------
+Arrival                                                0.834               
+
+source latency                          0.000          0.000               
+port                R7                  0.000          0.000          pin: clk_50
+hierarchy                               0.000          0.000          pin: clk_50_syn_2.ipad
+PAD                 x020y071            0.000          0.000          pin: clk_50_syn_2.di
+net (fo=59)         x000y000            0.000          0.000          net: clk_50_dup_1,  ../../../../source_code/rtl/UDP_Example_Top.v(41)
+                                                                      pin: u_PLL_HDMI_CLK/pll_inst.refclk
+PLL                 x000y000            0.000          0.000          pin: u_PLL_HDMI_CLK/pll_inst.clkc[0]
+net (fo=1)                              0.000          0.000          net: u_PLL_HDMI_CLK/clk0_buf,  ../../al_ip/PLL_HDMI_CLK.v(37)
+                                                                      pin: u_PLL_HDMI_CLK/bufg_feedback.clki
+GCLK                x001y001z2          0.000          0.000          pin: u_PLL_HDMI_CLK/bufg_feedback.clko
+net (fo=771)                            0.000          0.000          net: uivtc_inst/I_vtc_clk,  ../../../../source_code/rtl/uivtc/uivtc.v(46)
+                                                                      pin: debug_hub_top/slave_0_rst_sync2_reg_syn_27.clk
+constraint delay                        1.000          1.000               
+--------------------------------------------------------------------  ---------------
+recovery                               -0.300          0.700               
+clock uncertainty                       0.000          0.700               
+clock pessimism                         0.000          0.700               
+--------------------------------------------------------------------  ---------------
+Required                                               0.700               
+--------------------------------------------------------------------  ---------------
+Slack                                                 -0.134               
+
+
+
+Min Paths
+----------------------------------------------------------------------------------------------------
+
 
 
 

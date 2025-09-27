@@ -1,7 +1,7 @@
 probe0; 1
 probe1; 1
 probe2; 1
-probe3; 0
+probe3; 1
 probe4; 0
 probe5; 0
 probe6; 0

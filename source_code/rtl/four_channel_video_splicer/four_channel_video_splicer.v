@@ -56,69 +56,72 @@ module four_channel_video_splicer
     input   wire                                fdma_rvalid
 );
 
-wire                            ds_vid_clk1 = vid_clk1;
-wire                            ds_vid_vs1;
-wire                            ds_vid_de1;
-wire    [VID_DATA_WIDTH-1:0]    ds_vid_data1;
+// wire                            ds_vid_clk1 = vid_clk1;
+// wire                            ds_vid_vs1;
+// wire                            ds_vid_de1;
+// wire    [VID_DATA_WIDTH-1:0]    ds_vid_data1;
 
-wire                            ds_vid_clk2 = vid_clk2;
-wire                            ds_vid_vs2;
-wire                            ds_vid_de2;
-wire    [VID_DATA_WIDTH-1:0]    ds_vid_data2;
+// wire                            ds_vid_clk2 = vid_clk2;
+// wire                            ds_vid_vs2;
+// wire                            ds_vid_de2;
+// wire    [VID_DATA_WIDTH-1:0]    ds_vid_data2;
 
-wire                            ds_vid_clk3 = vid_clk3;
-wire                            ds_vid_vs3;
-wire                            ds_vid_de3;
-wire    [VID_DATA_WIDTH-1:0]    ds_vid_data3;
+// wire                            ds_vid_clk3 = vid_clk3;
+// wire                            ds_vid_vs3;
+// wire                            ds_vid_de3;
+// wire    [VID_DATA_WIDTH-1:0]    ds_vid_data3;
 
-wire                            ds_vid_clk4 = vid_clk4;
-wire                            ds_vid_vs4;
-wire                            ds_vid_de4;
-wire    [VID_DATA_WIDTH-1:0]    ds_vid_data4;
+// wire                            ds_vid_clk4 = vid_clk4;
+// wire                            ds_vid_vs4;
+// wire                            ds_vid_de4;
+// wire    [VID_DATA_WIDTH-1:0]    ds_vid_data4;
 
-uidown_sample u_uidown_sample1(
-    .I_clk(vid_clk1),
-    .I_rstn(sdr_init_done),
-    .I_vid_vs(vid_vs1),
-    .I_vid_de(vid_de1),
-    .I_vid_data(vid_data1),
-    .O_vid_vs(ds_vid_vs1),
-    .O_vid_de(ds_vid_de1),
-    .O_vid_data(ds_vid_data1)
-);
+// uidown_sample u_uidown_sample1(
+//     .I_clk(vid_clk1),
+//     .I_rstn(sdr_init_done),
+//     .I_vid_vs(vid_vs1),
+//     .I_vid_de(vid_de1),
+//     .I_vid_data(vid_data1),
+//     .O_vid_vs(ds_vid_vs1),
+//     .O_vid_de(ds_vid_de1),
+//     .O_vid_data(ds_vid_data1)
+// );
 
-uidown_sample u_uidown_sample2(
-    .I_clk(vid_clk2),
-    .I_rstn(sdr_init_done),
-    .I_vid_vs(vid_vs2),
-    .I_vid_de(vid_de2),
-    .I_vid_data(vid_data2),
-    .O_vid_vs(ds_vid_vs2),
-    .O_vid_de(ds_vid_de2),
-    .O_vid_data(ds_vid_data2)
-);
+// uidown_sample u_uidown_sample2(
+//     .I_clk(vid_clk2),
+//     .I_rstn(sdr_init_done),
+//     .I_vid_vs(vid_vs2),
+//     .I_vid_de(vid_de2),
+//     .I_vid_data(vid_data2),
+//     .O_vid_vs(ds_vid_vs2),
+//     .O_vid_de(ds_vid_de2),
+//     .O_vid_data(ds_vid_data2)
+// );
 
-uidown_sample u_uidown_sample3(
-    .I_clk(vid_clk3),
-    .I_rstn(sdr_init_done),
-    .I_vid_vs(vid_vs3),
-    .I_vid_de(vid_de3),
-    .I_vid_data(vid_data3),
-    .O_vid_vs(ds_vid_vs3),
-    .O_vid_de(ds_vid_de3),
-    .O_vid_data(ds_vid_data3)
-);
+// uidown_sample u_uidown_sample3(
+//     .I_clk(vid_clk3),
+//     .I_rstn(sdr_init_done),
+//     .I_vid_vs(vid_vs3),
+//     .I_vid_de(vid_de3),
+//     .I_vid_data(vid_data3),
+//     .O_vid_vs(ds_vid_vs3),
+//     .O_vid_de(ds_vid_de3),
+//     .O_vid_data(ds_vid_data3)
+// );
 
-uidown_sample u_uidown_sample4(
-    .I_clk(vid_clk4),
-    .I_rstn(sdr_init_done),
-    .I_vid_vs(vid_vs4),
-    .I_vid_de(vid_de4),
-    .I_vid_data(vid_data4),
-    .O_vid_vs(ds_vid_vs4),
-    .O_vid_de(ds_vid_de4),
-    .O_vid_data(ds_vid_data4)
-);
+// uidown_sample u_uidown_sample4(
+//     .I_clk(vid_clk4),
+//     .I_rstn(sdr_init_done),
+//     .I_vid_vs(vid_vs4),
+//     .I_vid_de(vid_de4),
+//     .I_vid_data(vid_data4),
+//     .O_vid_vs(ds_vid_vs4),
+//     .O_vid_de(ds_vid_de4),
+//     .O_vid_data(ds_vid_data4)
+// );
+
+localparam W_BUFSIZE = 'd3;
+localparam R_BUFSIZE = 'd3;
 
 wire    [7 : 0]                     W_sync_cnt_o1;
 wire    [7 : 0]                     R_buf_i;
@@ -129,7 +132,10 @@ wire                                fdma_wbusy1;
 wire    [AXI_DATA_WIDTH-1'b1:0]     fdma_wdata1; //wdata要立刻输出
 wire                                fdma_wvalid1;
 
-uisetvbuf uisetvbuf_i
+uisetvbuf#(
+    .BUF_DELAY(1),
+    .BUF_LENTH(3)
+) uisetvbuf_i
 (
     .ui_clk(fdma_clk0),
     .bufn_i(W_sync_cnt_o1),
@@ -150,7 +156,7 @@ uidbuf #(
     .W_DSIZEBITS         	(21                 ),
     .W_XSIZE             	(512                ),
     .W_YSIZE             	(384                ),
-    .W_BUFSIZE           	(3                  ),
+    .W_BUFSIZE           	(W_BUFSIZE          ),
     .W_XSTRIDE           	(512                ),
 
     .R_BUFDEPTH          	(2048               ),
@@ -159,7 +165,7 @@ uidbuf #(
     .R_DSIZEBITS         	(21                 ),
     .R_XSIZE             	(1024               ),
     .R_YSIZE             	(768                ),
-    .R_BUFSIZE           	(3                  ),
+    .R_BUFSIZE           	(R_BUFSIZE          ),
     .R_XSTRIDE           	(0                  ))
 u_uidbuf_1(
     .ui_clk       	(fdma_clk0     ),
@@ -213,7 +219,7 @@ uidbuf #(
     .W_DSIZEBITS         	(21                 ),
     .W_XSIZE             	(512                ),
     .W_YSIZE             	(384                ),
-    .W_BUFSIZE           	(3                  ),
+    .W_BUFSIZE           	(W_BUFSIZE          ),
     .W_XSTRIDE           	(512                ))
 u_uidbuf_2(
     .ui_clk       	(fdma_clk0     ),
@@ -242,27 +248,27 @@ wire    [AXI_DATA_WIDTH-1'b1:0]     fdma_wdata3; //wdata要立刻输出
 wire                                fdma_wvalid3;
 uidbuf #(
     .SDRAM_MAX_BURST_LEN 	(256                ),
-    .VIDEO_ENABLE        	(0                  ),
+    .VIDEO_ENABLE        	(1                  ),
     .ENABLE_WRITE        	(1                  ),
     .ENABLE_READ         	(0                  ),
     .AXI_DATA_WIDTH      	(AXI_DATA_WIDTH     ),
     .AXI_ADDR_WIDTH      	(AXI_ADDR_WIDTH     ),
     
-    .W_BUFDEPTH          	(4096               ),
+    .W_BUFDEPTH          	(2048               ),
     .W_DATAWIDTH         	(16                 ),
     .W_BASEADDR          	(1024*384*2         ),
     .W_DSIZEBITS         	(21                 ),
-    .W_XSIZE             	(512                ),
+    .W_XSIZE             	(1024               ),
     .W_YSIZE             	(384                ),
-    .W_BUFSIZE           	(3                  ),
-    .W_XSTRIDE           	(512                ))
+    .W_BUFSIZE           	(W_BUFSIZE          ),
+    .W_XSTRIDE           	(0                  ))
 u_uidbuf_3(
     .ui_clk       	(fdma_clk0     ),
     .ui_rstn      	(sdr_init_done ),
-    .W_wclk_i     	(vid_clk3   ),
-    .W_FS_i       	(vid_vs3    ),
-    .W_wren_i     	(vid_de3    ),
-    .W_data_i     	(vid_data3  ),
+    .W_wclk_i     	(vid_clk3      ),
+    .W_FS_i       	(vid_vs3       ),
+    .W_wren_i     	(vid_de3       ),
+    .W_data_i     	(vid_data3     ),
     .W_sync_cnt_o 	(W_sync_cnt_o3 ),
     .W_buf_i      	(W_sync_cnt_o3 ),
 
@@ -291,19 +297,19 @@ uidbuf #(
     
     .W_BUFDEPTH          	(1024               ),
     .W_DATAWIDTH         	(16                 ),
-    .W_BASEADDR          	(1024*384*2+512*2   ),
+    .W_BASEADDR          	(1024*768*2         ),
     .W_DSIZEBITS         	(21                 ),
     .W_XSIZE             	(512                ),
     .W_YSIZE             	(384                ),
-    .W_BUFSIZE           	(3                  ),
-    .W_XSTRIDE           	(512                ))
+    .W_BUFSIZE           	(W_BUFSIZE          ),
+    .W_XSTRIDE           	(0                  ))
 u_uidbuf_4(
     .ui_clk       	(fdma_clk0     ),
     .ui_rstn      	(sdr_init_done ),
-    .W_wclk_i     	(ds_vid_clk4   ),
-    .W_FS_i       	(ds_vid_vs4    ),
-    .W_wren_i     	(ds_vid_de4    ),
-    .W_data_i     	(ds_vid_data4  ),
+    .W_wclk_i     	(vid_clk4      ),
+    .W_FS_i       	(vid_vs4       ),
+    .W_wren_i     	(vid_de4       ),
+    .W_data_i     	(vid_data4     ),
     .W_sync_cnt_o 	(W_sync_cnt_o4 ),
     .W_buf_i      	(W_sync_cnt_o4 ),
 

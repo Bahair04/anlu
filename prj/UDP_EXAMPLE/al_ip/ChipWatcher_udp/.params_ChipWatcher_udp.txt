@@ -1,8 +1,8 @@
-CWC_BUS_NUM : 3 : U : En :  : 1 : 256
+CWC_BUS_NUM : 4 : U : En :  : 1 : 256
 P0_Available : 1 : G : En :  :  : 
 P1_Available : 1 : G : En :  :  : 
 P2_Available : 1 : G : En :  :  : 
-P3_Available : 0 : G : En :  :  : 
+P3_Available : 1 : G : En :  :  : 
 P4_Available : 0 : G : En :  :  : 
 P5_Available : 0 : G : En :  :  : 
 P6_Available : 0 : G : En :  :  : 
@@ -255,11 +255,11 @@ P252_Available : 0 : G : En :  :  :
 P253_Available : 0 : G : En :  :  : 
 P254_Available : 0 : G : En :  :  : 
 P255_Available : 0 : G : En :  :  : 
-Probe_Width : 1 8 16 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 : G : En :  :  : 
-Probe0_WIDTH : 1 : U : En :  : 1 : 1024
-Probe1_WIDTH : 8 : U : En :  : 1 : 1024
-Probe2_WIDTH : 16 : U : En :  : 1 : 1024
-Probe3_WIDTH : 1 : U : Dis :  : 1 : 1024
+Probe_Width : 24 12 12 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 : G : En :  :  : 
+Probe0_WIDTH : 24 : U : En :  : 1 : 1024
+Probe1_WIDTH : 12 : U : En :  : 1 : 1024
+Probe2_WIDTH : 12 : U : En :  : 1 : 1024
+Probe3_WIDTH : 1 : U : En :  : 1 : 1024
 Probe4_WIDTH : 1 : U : Dis :  : 1 : 1024
 Probe5_WIDTH : 1 : U : Dis :  : 1 : 1024
 Probe6_WIDTH : 1 : U : Dis :  : 1 : 1024
@@ -515,7 +515,7 @@ Probe255_WIDTH : 1 : U : Dis :  : 1 : 1024
 Probe0_Data_Enable : 1 : U : En :  :  : 
 Probe1_Data_Enable : 1 : U : En :  :  : 
 Probe2_Data_Enable : 1 : U : En :  :  : 
-Probe3_Data_Enable : 1 : U : Dis :  :  : 
+Probe3_Data_Enable : 1 : U : En :  :  : 
 Probe4_Data_Enable : 1 : U : Dis :  :  : 
 Probe5_Data_Enable : 1 : U : Dis :  :  : 
 Probe6_Data_Enable : 1 : U : Dis :  :  : 
@@ -772,7 +772,7 @@ Probe_Data_Enable : 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
 Probe0_Trigger_Enable : 1 : U : En :  :  : 
 Probe1_Trigger_Enable : 1 : U : En :  :  : 
 Probe2_Trigger_Enable : 1 : U : En :  :  : 
-Probe3_Trigger_Enable : 1 : U : Dis :  :  : 
+Probe3_Trigger_Enable : 1 : U : En :  :  : 
 Probe4_Trigger_Enable : 1 : U : Dis :  :  : 
 Probe5_Trigger_Enable : 1 : U : Dis :  :  : 
 Probe6_Trigger_Enable : 1 : U : Dis :  :  : 
@@ -1026,7 +1026,7 @@ Probe253_Trigger_Enable : 1 : U : Dis :  :  :
 Probe254_Trigger_Enable : 1 : U : Dis :  :  : 
 Probe255_Trigger_Enable : 1 : U : Dis :  :  : 
 Probe_Trigger_Enable : 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 : G : En :  :  : 
-RAM_DATA_DEPTH : 4096 : U : En : 128;;256;;512;;1024;;2048;;4096;;8192;;16384;;32768;;65536 :  : 
+RAM_DATA_DEPTH : 2048 : U : En : 128;;256;;512;;1024;;2048;;4096;;8192;;16384;;32768;;65536 :  : 
 INPUT_PIPE_NUM : 0 : U : En : 0;;1;;2;;3;;4;;5;;6 : 0 : 6
 OUTPUT_PIPE_NUM : 0 : U : En : 0;;1;;2;;3;;4;;5;;6 : 0 : 6
 Capture_Control : 0 : U : En :  :  : 
