@@ -4,7 +4,7 @@
    Executable = D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/bin/run.exe
    Built at =   16:32:07 Jun 12 2025
    Run by =     1
-   Run Date =   Sat Sep 27 17:10:47 2025
+   Run Date =   Sat Sep 27 17:46:40 2025
 
    Run on =     LAPTOP-EUGMKLPQ
 ============================================================
@@ -330,8 +330,6 @@ HDL-1007 : elaborate module EG_PHY_SDRAM_2M_32 in D:\Anlogic\TD_6.2.1_Engineer_6
 HDL-1007 : elaborate module PLL_HDMI_CLK in ../../al_ip/PLL_HDMI_CLK.v(23)
 HDL-1007 : elaborate module EG_PHY_PLL(FIN="50.000000",REFCLK_DIV=4,FBCLK_DIV=5,CLKC0_DIV=15,CLKC1_DIV=3,CLKC0_ENABLE="ENABLE",CLKC1_ENABLE="ENABLE",FEEDBK_PATH="CLKC0_EXT",STDBY_ENABLE="DISABLE",CLKC0_CPHASE=14,CLKC1_CPHASE=2,GMC_GAIN=0,ICP_CURRENT=9,KVCO=2,LPF_CAPACITOR=2,LPF_RESISTOR=8,SYNC_ENABLE="DISABLE") in D:\Anlogic\TD_6.2.1_Engineer_6.2.168.116\arch/eagle_macro.v(889)
 HDL-1007 : elaborate module uivtc(H_FrameSize=1344,H_SyncStart=1184,H_SyncEnd=1320,V_ActiveSize=768,V_FrameSize=806,V_SyncStart=797,V_SyncEnd=803,H2_ActiveSize=32'b01111111111,V2_ActiveSize=32'b01100000000) in ../../../../source_code/rtl/uivtc/uivtc.v(30)
-HDL-1007 : elaborate module ChipWatcher_udp in ../../al_ip/ChipWatcher_udp/ChipWatcher_udp.sv(9)
-HDL-1007 : elaborate module ChipWatcher_0ab6c5a2fd02 in ../../al_ip/ChipWatcher_udp/RTL/ChipWatcher_0ab6c5a2fd02.sv(2)
 HDL-1007 : elaborate module ui565_888 in ../../../../source_code/rtl/uiwidth_conv/ui565_888.v(10)
 HDL-1007 : switch to vhdl to elaborate module uihdmitx in ../../../../source_code/rtl/UDP_Example_Top.v(429)
 HDL-1007 : elaborate uihdmitx(1,3)(Behavioral) in ../../../../source_code/rtl/al_ui_hdmi_tx/hdmi_tx.vhd(11)
@@ -565,335 +563,24 @@ RUN-1001 :       min_ripple_len      |     12     |       auto       |   *
 RUN-1001 :          seq_syn          |     on     |        on        |        
 RUN-1001 : -------------------------------------------------------------------
 RUN-1002 : start command "insert_debugger ../../chip_debugger"
-KIT-1004 : Ooc flow for module ChipWatcher_0ab6c5a2fd02 is running...
-RUN-1002 : start command "import_db -link -mode ooc cw/ChipWatcher_0ab6c5a2fd02/ChipWatcher_0ab6c5a2fd02_ooc.db"
-USR-1600 : Load OOC design OOC Model: ChipWatcher_0ab6c5a2fd02 .
-RUN-1001 : Import OOC design success TD_VERSION=6.2.168116 , DB_VERSION=46207
-KIT-1004 : ooc link black box model ChipWatcher_0ab6c5a2fd02.
-KIT-1004 : create ChipWatcher instance uivtc_inst/u_ChipWatcher_udp
-RUN-1003 : finish command "insert_debugger ../../chip_debugger" in  1.316291s wall, 0.015625s user + 0.000000s system = 0.015625s CPU (1.2%)
-
-RUN-1004 : used memory is 290 MB, reserved memory is 392 MB, peak memory is 290 MB
 RUN-1002 : start command "optimize_rtl"
 RUN-1001 : Open license file D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/license/Anlogic.lic
 SYN-1001 : Stage 1 | Optimize RTL
 SYN-1001 : Stage 1.1 | Check Design Sanity
-SYN-1001 : End Stage 1.1 | Check Design Sanity; Time: 0.007054s wall, 0.000000s user + 0.000000s system = 0.000000s CPU (n/a%); Memory(MB): used = 290, reserved = 392, peak = 290;
+SYN-1001 : End Stage 1.1 | Check Design Sanity; Time: 0.007347s wall, 0.000000s user + 0.000000s system = 0.000000s CPU (n/a%); Memory(MB): used = 287, reserved = 393, peak = 287;
 
-SYN-1079 : finish stage Check Design Sanity. Total instances: 34177, Total nets: 72670.
+SYN-1079 : finish stage Check Design Sanity. Total instances: 32335, Total nets: 70546.
 
 SYN-1001 : Stage 1.2 | Initialize Design
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[179](wrapper_cwc_top/cwc_control[179]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[178](wrapper_cwc_top/cwc_control[178]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[177](wrapper_cwc_top/cwc_control[177]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[176](wrapper_cwc_top/cwc_control[176]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[175](wrapper_cwc_top/cwc_control[175]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[174](wrapper_cwc_top/cwc_control[174]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[173](wrapper_cwc_top/cwc_control[173]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[172](wrapper_cwc_top/cwc_control[172]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[171](wrapper_cwc_top/cwc_control[171]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[170](wrapper_cwc_top/cwc_control[170]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[169](wrapper_cwc_top/cwc_control[169]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[168](wrapper_cwc_top/cwc_control[168]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[167](wrapper_cwc_top/cwc_control[167]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[166](wrapper_cwc_top/cwc_control[166]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[165](wrapper_cwc_top/cwc_control[165]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[164](wrapper_cwc_top/cwc_control[164]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[163](wrapper_cwc_top/cwc_control[163]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[162](wrapper_cwc_top/cwc_control[162]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[161](wrapper_cwc_top/cwc_control[161]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[160](wrapper_cwc_top/cwc_control[160]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[159](wrapper_cwc_top/cwc_control[159]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[158](wrapper_cwc_top/cwc_control[158]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[157](wrapper_cwc_top/cwc_control[157]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[156](wrapper_cwc_top/cwc_control[156]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[155](wrapper_cwc_top/cwc_control[155]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[154](wrapper_cwc_top/cwc_control[154]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[153](wrapper_cwc_top/cwc_control[153]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[152](wrapper_cwc_top/cwc_control[152]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[151](wrapper_cwc_top/cwc_control[151]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[150](wrapper_cwc_top/cwc_control[150]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[149](wrapper_cwc_top/cwc_control[149]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[148](wrapper_cwc_top/cwc_control[148]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[147](wrapper_cwc_top/cwc_control[147]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[146](wrapper_cwc_top/cwc_control[146]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[145](wrapper_cwc_top/cwc_control[145]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[144](wrapper_cwc_top/cwc_control[144]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[143](wrapper_cwc_top/cwc_control[143]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[142](wrapper_cwc_top/cwc_control[142]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[141](wrapper_cwc_top/cwc_control[141]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[140](wrapper_cwc_top/cwc_control[140]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[139](wrapper_cwc_top/cwc_control[139]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[138](wrapper_cwc_top/cwc_control[138]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[137](wrapper_cwc_top/cwc_control[137]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[136](wrapper_cwc_top/cwc_control[136]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[135](wrapper_cwc_top/cwc_control[135]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[134](wrapper_cwc_top/cwc_control[134]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[133](wrapper_cwc_top/cwc_control[133]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[132](wrapper_cwc_top/cwc_control[132]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[131](wrapper_cwc_top/cwc_control[131]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[130](wrapper_cwc_top/cwc_control[130]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[129](wrapper_cwc_top/cwc_control[129]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[128](wrapper_cwc_top/cwc_control[128]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[127](wrapper_cwc_top/cwc_control[127]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[126](wrapper_cwc_top/cwc_control[126]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[125](wrapper_cwc_top/cwc_control[125]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[124](wrapper_cwc_top/cwc_control[124]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[123](wrapper_cwc_top/cwc_control[123]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[122](wrapper_cwc_top/cwc_control[122]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[121](wrapper_cwc_top/cwc_control[121]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[120](wrapper_cwc_top/cwc_control[120]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[119](wrapper_cwc_top/cwc_control[119]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[118](wrapper_cwc_top/cwc_control[118]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[117](wrapper_cwc_top/cwc_control[117]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[116](wrapper_cwc_top/cwc_control[116]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[115](wrapper_cwc_top/cwc_control[115]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[114](wrapper_cwc_top/cwc_control[114]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[113](wrapper_cwc_top/cwc_control[113]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[112](wrapper_cwc_top/cwc_control[112]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[111](wrapper_cwc_top/cwc_control[111]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[110](wrapper_cwc_top/cwc_control[110]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[109](wrapper_cwc_top/cwc_control[109]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[108](wrapper_cwc_top/cwc_control[108]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[107](wrapper_cwc_top/cwc_control[107]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[106](wrapper_cwc_top/cwc_control[106]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[105](wrapper_cwc_top/cwc_control[105]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[104](wrapper_cwc_top/cwc_control[104]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[103](wrapper_cwc_top/cwc_control[103]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[102](wrapper_cwc_top/cwc_control[102]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[101](wrapper_cwc_top/cwc_control[101]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[100](wrapper_cwc_top/cwc_control[100]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[99](wrapper_cwc_top/cwc_control[99]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[98](wrapper_cwc_top/cwc_control[98]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[97](wrapper_cwc_top/cwc_control[97]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[96](wrapper_cwc_top/cwc_control[96]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[95](wrapper_cwc_top/cwc_control[95]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[94](wrapper_cwc_top/cwc_control[94]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[93](wrapper_cwc_top/cwc_control[93]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[92](wrapper_cwc_top/cwc_control[92]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[91](wrapper_cwc_top/cwc_control[91]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[90](wrapper_cwc_top/cwc_control[90]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[89](wrapper_cwc_top/cwc_control[89]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[88](wrapper_cwc_top/cwc_control[88]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[87](wrapper_cwc_top/cwc_control[87]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[86](wrapper_cwc_top/cwc_control[86]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[85](wrapper_cwc_top/cwc_control[85]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[84](wrapper_cwc_top/cwc_control[84]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[83](wrapper_cwc_top/cwc_control[83]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[82](wrapper_cwc_top/cwc_control[82]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[81](wrapper_cwc_top/cwc_control[81]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[80](wrapper_cwc_top/cwc_control[80]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[79](wrapper_cwc_top/cwc_control[79]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[78](wrapper_cwc_top/cwc_control[78]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[77](wrapper_cwc_top/cwc_control[77]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[76](wrapper_cwc_top/cwc_control[76]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[75](wrapper_cwc_top/cwc_control[75]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[74](wrapper_cwc_top/cwc_control[74]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[73](wrapper_cwc_top/cwc_control[73]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[72](wrapper_cwc_top/cwc_control[72]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[71](wrapper_cwc_top/cwc_control[71]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[70](wrapper_cwc_top/cwc_control[70]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[69](wrapper_cwc_top/cwc_control[69]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[68](wrapper_cwc_top/cwc_control[68]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[67](wrapper_cwc_top/cwc_control[67]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[66](wrapper_cwc_top/cwc_control[66]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[65](wrapper_cwc_top/cwc_control[65]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[64](wrapper_cwc_top/cwc_control[64]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[63](wrapper_cwc_top/cwc_control[63]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[62](wrapper_cwc_top/cwc_control[62]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[61](wrapper_cwc_top/cwc_control[61]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[60](wrapper_cwc_top/cwc_control[60]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[59](wrapper_cwc_top/cwc_control[59]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[58](wrapper_cwc_top/cwc_control[58]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[57](wrapper_cwc_top/cwc_control[57]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[56](wrapper_cwc_top/cwc_control[56]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[55](wrapper_cwc_top/cwc_control[55]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[54](wrapper_cwc_top/cwc_control[54]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[53](wrapper_cwc_top/cwc_control[53]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[52](wrapper_cwc_top/cwc_control[52]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[51](wrapper_cwc_top/cwc_control[51]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[50](wrapper_cwc_top/cwc_control[50]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[49](wrapper_cwc_top/cwc_control[49]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[48](wrapper_cwc_top/cwc_control[48]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[47](wrapper_cwc_top/cwc_control[47]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[46](wrapper_cwc_top/cwc_control[46]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[45](wrapper_cwc_top/cwc_control[45]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[44](wrapper_cwc_top/cwc_control[44]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[43](wrapper_cwc_top/cwc_control[43]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[42](wrapper_cwc_top/cwc_control[42]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[41](wrapper_cwc_top/cwc_control[41]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[40](wrapper_cwc_top/cwc_control[40]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[39](wrapper_cwc_top/cwc_control[39]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[38](wrapper_cwc_top/cwc_control[38]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[37](wrapper_cwc_top/cwc_control[37]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[36](wrapper_cwc_top/cwc_control[36]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[35](wrapper_cwc_top/cwc_control[35]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[34](wrapper_cwc_top/cwc_control[34]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[33](wrapper_cwc_top/cwc_control[33]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[32](wrapper_cwc_top/cwc_control[32]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[31](wrapper_cwc_top/cwc_control[31]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[30](wrapper_cwc_top/cwc_control[30]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[29](wrapper_cwc_top/cwc_control[29]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[28](wrapper_cwc_top/cwc_control[28]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[27](wrapper_cwc_top/cwc_control[27]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[26](wrapper_cwc_top/cwc_control[26]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[25](wrapper_cwc_top/cwc_control[25]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[24](wrapper_cwc_top/cwc_control[24]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[23](wrapper_cwc_top/cwc_control[23]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[22](wrapper_cwc_top/cwc_control[22]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[21](wrapper_cwc_top/cwc_control[21]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[20](wrapper_cwc_top/cwc_control[20]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[19](wrapper_cwc_top/cwc_control[19]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[18](wrapper_cwc_top/cwc_control[18]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[17](wrapper_cwc_top/cwc_control[17]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[16](wrapper_cwc_top/cwc_control[16]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[15](wrapper_cwc_top/cwc_control[15]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[14](wrapper_cwc_top/cwc_control[14]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[13](wrapper_cwc_top/cwc_control[13]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[12](wrapper_cwc_top/cwc_control[12]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[11](wrapper_cwc_top/cwc_control[11]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[10](wrapper_cwc_top/cwc_control[10]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[9](wrapper_cwc_top/cwc_control[9]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[8](wrapper_cwc_top/cwc_control[8]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[7](wrapper_cwc_top/cwc_control[7]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[6](wrapper_cwc_top/cwc_control[6]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[5](wrapper_cwc_top/cwc_control[5]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[4](wrapper_cwc_top/cwc_control[4]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[3](wrapper_cwc_top/cwc_control[3]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[2](wrapper_cwc_top/cwc_control[2]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[1](wrapper_cwc_top/cwc_control[1]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_control[0](wrapper_cwc_top/cwc_control[0]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_status[23](wrapper_cwc_top/cwc_status[23]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_status[22](wrapper_cwc_top/cwc_status[22]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_status[21](wrapper_cwc_top/cwc_status[21]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_status[20](wrapper_cwc_top/cwc_status[20]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_status[19](wrapper_cwc_top/cwc_status[19]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_status[18](wrapper_cwc_top/cwc_status[18]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_status[17](wrapper_cwc_top/cwc_status[17]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_status[16](wrapper_cwc_top/cwc_status[16]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_status[15](wrapper_cwc_top/cwc_status[15]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_status[14](wrapper_cwc_top/cwc_status[14]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_status[13](wrapper_cwc_top/cwc_status[13]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_status[12](wrapper_cwc_top/cwc_status[12]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_status[11](wrapper_cwc_top/cwc_status[11]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_status[10](wrapper_cwc_top/cwc_status[10]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_status[9](wrapper_cwc_top/cwc_status[9]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_status[8](wrapper_cwc_top/cwc_status[8]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_status[7](wrapper_cwc_top/cwc_status[7]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_status[6](wrapper_cwc_top/cwc_status[6]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_status[5](wrapper_cwc_top/cwc_status[5]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_status[4](wrapper_cwc_top/cwc_status[4]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_status[3](wrapper_cwc_top/cwc_status[3]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_status[2](wrapper_cwc_top/cwc_status[2]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_status[1](wrapper_cwc_top/cwc_status[1]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/cwc_status[0](wrapper_cwc_top/cwc_status[0]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/U_cwc_ram/dia[48](wrapper_cwc_top/U_cwc_ram/dia[48]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/U_cwc_ram/dia[47](wrapper_cwc_top/U_cwc_ram/dia[47]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/U_cwc_ram/dia[46](wrapper_cwc_top/U_cwc_ram/dia[46]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/U_cwc_ram/dia[45](wrapper_cwc_top/U_cwc_ram/dia[45]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/U_cwc_ram/dia[44](wrapper_cwc_top/U_cwc_ram/dia[44]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/U_cwc_ram/dia[43](wrapper_cwc_top/U_cwc_ram/dia[43]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/U_cwc_ram/dia[42](wrapper_cwc_top/U_cwc_ram/dia[42]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/U_cwc_ram/dia[41](wrapper_cwc_top/U_cwc_ram/dia[41]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/U_cwc_ram/dia[40](wrapper_cwc_top/U_cwc_ram/dia[40]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/U_cwc_ram/dia[39](wrapper_cwc_top/U_cwc_ram/dia[39]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/U_cwc_ram/dia[38](wrapper_cwc_top/U_cwc_ram/dia[38]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/U_cwc_ram/dia[37](wrapper_cwc_top/U_cwc_ram/dia[37]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/U_cwc_ram/dia[36](wrapper_cwc_top/U_cwc_ram/dia[36]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/U_cwc_ram/dia[35](wrapper_cwc_top/U_cwc_ram/dia[35]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/U_cwc_ram/dia[34](wrapper_cwc_top/U_cwc_ram/dia[34]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/U_cwc_ram/dia[33](wrapper_cwc_top/U_cwc_ram/dia[33]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/U_cwc_ram/dia[32](wrapper_cwc_top/U_cwc_ram/dia[32]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/U_cwc_ram/dia[31](wrapper_cwc_top/U_cwc_ram/dia[31]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/U_cwc_ram/dia[30](wrapper_cwc_top/U_cwc_ram/dia[30]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/U_cwc_ram/dia[29](wrapper_cwc_top/U_cwc_ram/dia[29]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/U_cwc_ram/dia[28](wrapper_cwc_top/U_cwc_ram/dia[28]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/U_cwc_ram/dia[27](wrapper_cwc_top/U_cwc_ram/dia[27]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/U_cwc_ram/dia[26](wrapper_cwc_top/U_cwc_ram/dia[26]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/U_cwc_ram/dia[25](wrapper_cwc_top/U_cwc_ram/dia[25]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/U_cwc_ram/dia[24](wrapper_cwc_top/U_cwc_ram/dia[24]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/U_cwc_ram/dia[23](wrapper_cwc_top/U_cwc_ram/dia[23]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/U_cwc_ram/dia[22](wrapper_cwc_top/U_cwc_ram/dia[22]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/U_cwc_ram/dia[21](wrapper_cwc_top/U_cwc_ram/dia[21]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/U_cwc_ram/dia[20](wrapper_cwc_top/U_cwc_ram/dia[20]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/U_cwc_ram/dia[19](wrapper_cwc_top/U_cwc_ram/dia[19]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/U_cwc_ram/dia[18](wrapper_cwc_top/U_cwc_ram/dia[18]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/U_cwc_ram/dia[17](wrapper_cwc_top/U_cwc_ram/dia[17]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/U_cwc_ram/dia[16](wrapper_cwc_top/U_cwc_ram/dia[16]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/U_cwc_ram/dia[15](wrapper_cwc_top/U_cwc_ram/dia[15]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/U_cwc_ram/dia[14](wrapper_cwc_top/U_cwc_ram/dia[14]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/U_cwc_ram/dia[13](wrapper_cwc_top/U_cwc_ram/dia[13]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/U_cwc_ram/dia[12](wrapper_cwc_top/U_cwc_ram/dia[12]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/U_cwc_ram/dia[11](wrapper_cwc_top/U_cwc_ram/dia[11]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/U_cwc_ram/dia[10](wrapper_cwc_top/U_cwc_ram/dia[10]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/U_cwc_ram/dia[9](wrapper_cwc_top/U_cwc_ram/dia[9]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/U_cwc_ram/dia[8](wrapper_cwc_top/U_cwc_ram/dia[8]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/U_cwc_ram/dia[7](wrapper_cwc_top/U_cwc_ram/dia[7]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/U_cwc_ram/dia[6](wrapper_cwc_top/U_cwc_ram/dia[6]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/U_cwc_ram/dia[5](wrapper_cwc_top/U_cwc_ram/dia[5]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/U_cwc_ram/dia[4](wrapper_cwc_top/U_cwc_ram/dia[4]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/U_cwc_ram/dia[3](wrapper_cwc_top/U_cwc_ram/dia[3]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/U_cwc_ram/dia[2](wrapper_cwc_top/U_cwc_ram/dia[2]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/U_cwc_ram/dia[1](wrapper_cwc_top/U_cwc_ram/dia[1]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/U_cwc_ram/dia[0](wrapper_cwc_top/U_cwc_ram/dia[0]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/U_cwc_ram/doa_keep[48](wrapper_cwc_top/U_cwc_ram/doa_keep[48]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/U_cwc_ram/doa_keep[47](wrapper_cwc_top/U_cwc_ram/doa_keep[47]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/U_cwc_ram/doa_keep[46](wrapper_cwc_top/U_cwc_ram/doa_keep[46]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/U_cwc_ram/doa_keep[45](wrapper_cwc_top/U_cwc_ram/doa_keep[45]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/U_cwc_ram/doa_keep[44](wrapper_cwc_top/U_cwc_ram/doa_keep[44]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/U_cwc_ram/doa_keep[43](wrapper_cwc_top/U_cwc_ram/doa_keep[43]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/U_cwc_ram/doa_keep[42](wrapper_cwc_top/U_cwc_ram/doa_keep[42]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/U_cwc_ram/doa_keep[41](wrapper_cwc_top/U_cwc_ram/doa_keep[41]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/U_cwc_ram/doa_keep[40](wrapper_cwc_top/U_cwc_ram/doa_keep[40]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/U_cwc_ram/doa_keep[39](wrapper_cwc_top/U_cwc_ram/doa_keep[39]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/U_cwc_ram/doa_keep[38](wrapper_cwc_top/U_cwc_ram/doa_keep[38]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/U_cwc_ram/doa_keep[37](wrapper_cwc_top/U_cwc_ram/doa_keep[37]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/U_cwc_ram/doa_keep[36](wrapper_cwc_top/U_cwc_ram/doa_keep[36]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/U_cwc_ram/doa_keep[35](wrapper_cwc_top/U_cwc_ram/doa_keep[35]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/U_cwc_ram/doa_keep[34](wrapper_cwc_top/U_cwc_ram/doa_keep[34]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/U_cwc_ram/doa_keep[33](wrapper_cwc_top/U_cwc_ram/doa_keep[33]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/U_cwc_ram/doa_keep[32](wrapper_cwc_top/U_cwc_ram/doa_keep[32]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/U_cwc_ram/doa_keep[31](wrapper_cwc_top/U_cwc_ram/doa_keep[31]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/U_cwc_ram/doa_keep[30](wrapper_cwc_top/U_cwc_ram/doa_keep[30]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/U_cwc_ram/doa_keep[29](wrapper_cwc_top/U_cwc_ram/doa_keep[29]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/U_cwc_ram/doa_keep[28](wrapper_cwc_top/U_cwc_ram/doa_keep[28]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/U_cwc_ram/doa_keep[27](wrapper_cwc_top/U_cwc_ram/doa_keep[27]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/U_cwc_ram/doa_keep[26](wrapper_cwc_top/U_cwc_ram/doa_keep[26]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/U_cwc_ram/doa_keep[25](wrapper_cwc_top/U_cwc_ram/doa_keep[25]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/U_cwc_ram/doa_keep[24](wrapper_cwc_top/U_cwc_ram/doa_keep[24]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/U_cwc_ram/doa_keep[23](wrapper_cwc_top/U_cwc_ram/doa_keep[23]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/U_cwc_ram/doa_keep[22](wrapper_cwc_top/U_cwc_ram/doa_keep[22]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/U_cwc_ram/doa_keep[21](wrapper_cwc_top/U_cwc_ram/doa_keep[21]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/U_cwc_ram/doa_keep[20](wrapper_cwc_top/U_cwc_ram/doa_keep[20]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/U_cwc_ram/doa_keep[19](wrapper_cwc_top/U_cwc_ram/doa_keep[19]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/U_cwc_ram/doa_keep[18](wrapper_cwc_top/U_cwc_ram/doa_keep[18]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/U_cwc_ram/doa_keep[17](wrapper_cwc_top/U_cwc_ram/doa_keep[17]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/U_cwc_ram/doa_keep[16](wrapper_cwc_top/U_cwc_ram/doa_keep[16]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/U_cwc_ram/doa_keep[15](wrapper_cwc_top/U_cwc_ram/doa_keep[15]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/U_cwc_ram/doa_keep[14](wrapper_cwc_top/U_cwc_ram/doa_keep[14]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/U_cwc_ram/doa_keep[13](wrapper_cwc_top/U_cwc_ram/doa_keep[13]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/U_cwc_ram/doa_keep[12](wrapper_cwc_top/U_cwc_ram/doa_keep[12]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/U_cwc_ram/doa_keep[11](wrapper_cwc_top/U_cwc_ram/doa_keep[11]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/U_cwc_ram/doa_keep[10](wrapper_cwc_top/U_cwc_ram/doa_keep[10]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/U_cwc_ram/doa_keep[9](wrapper_cwc_top/U_cwc_ram/doa_keep[9]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/U_cwc_ram/doa_keep[8](wrapper_cwc_top/U_cwc_ram/doa_keep[8]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/U_cwc_ram/doa_keep[7](wrapper_cwc_top/U_cwc_ram/doa_keep[7]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/U_cwc_ram/doa_keep[6](wrapper_cwc_top/U_cwc_ram/doa_keep[6]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/U_cwc_ram/doa_keep[5](wrapper_cwc_top/U_cwc_ram/doa_keep[5]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/U_cwc_ram/doa_keep[4](wrapper_cwc_top/U_cwc_ram/doa_keep[4]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/U_cwc_ram/doa_keep[3](wrapper_cwc_top/U_cwc_ram/doa_keep[3]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/U_cwc_ram/doa_keep[2](wrapper_cwc_top/U_cwc_ram/doa_keep[2]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/U_cwc_ram/doa_keep[1](wrapper_cwc_top/U_cwc_ram/doa_keep[1]_syn_1)
-SYN-1001 : 	kept net: wrapper_cwc_top/U_cwc_ram/doa_keep[0](wrapper_cwc_top/U_cwc_ram/doa_keep[0]_syn_1)
-SYN-1001 : End Stage 1.2 | Initialize Design; Time: 1.136222s wall, 0.328125s user + 0.000000s system = 0.328125s CPU (28.9%); Memory(MB): used = 290, reserved = 392, peak = 290;
+SYN-1001 : End Stage 1.2 | Initialize Design; Time: 1.078677s wall, 0.281250s user + 0.000000s system = 0.281250s CPU (26.1%); Memory(MB): used = 287, reserved = 393, peak = 287;
 
-SYN-1079 : finish stage Initialize Design. Total instances: 8726, Total nets: 41266.
+SYN-1079 : finish stage Initialize Design. Total instances: 6792, Total nets: 39026.
 
 SYN-1001 : Stage 1.3 | Flatten Module
 SYN-1011 : Flatten model UDP_Example_Top
-SYN-1001 : End Stage 1.3 | Flatten Module; Time: 0.191199s wall, 0.078125s user + 0.000000s system = 0.078125s CPU (40.9%); Memory(MB): used = 291, reserved = 392, peak = 291;
+SYN-1001 : End Stage 1.3 | Flatten Module; Time: 0.175660s wall, 0.000000s user + 0.000000s system = 0.000000s CPU (n/a%); Memory(MB): used = 288, reserved = 393, peak = 288;
 
-SYN-1079 : finish stage Flatten Module. Total instances: 9326, Total nets: 33228.
+SYN-1079 : finish stage Flatten Module. Total instances: 7394, Total nets: 31112.
 
 SYN-1001 : Stage 1.4 | Uniform Instance
 SYN-5013 WARNING: Undriven net: model "UDP_Example_Top" / net "u2_ram/u2_wrrd/Sdr_init_ref_ba[1]" in ../../../../source_code/rtl/uieg4d_dram/enc_file/sdr_wrrd.enc.v(0)
@@ -924,9 +611,9 @@ SYN-5013 WARNING: Undriven net: model "UDP_Example_Top" / net "u_udp_top/u6_tx_f
 		the net's pin: pin "dib[2]" in ../../../../source_code/rtl/ETH/RAMB16_S9_S9.v(45)
 SYN-5013 Similar messages will be suppressed.
 SYN-5025 WARNING: Using 0 for all undriven pins and nets
-SYN-1001 : End Stage 1.4 | Uniform Instance; Time: 0.033716s wall, 0.015625s user + 0.000000s system = 0.015625s CPU (46.3%); Memory(MB): used = 274, reserved = 375, peak = 291;
+SYN-1001 : End Stage 1.4 | Uniform Instance; Time: 0.034556s wall, 0.015625s user + 0.000000s system = 0.015625s CPU (45.2%); Memory(MB): used = 272, reserved = 377, peak = 288;
 
-SYN-1079 : finish stage Uniform Instance. Total instances: 8792, Total nets: 32645.
+SYN-1079 : finish stage Uniform Instance. Total instances: 6860, Total nets: 30529.
 
 SYN-1001 : Stage 1.5 | Optimize Design
 SYN-1066 : Inferred FSM for state register 'app_fdma_inst/state_reg' in module 'UDP_Example_Top'
@@ -1338,13 +1025,13 @@ SYN-1066 : Inferred FSM for state register 'u_uicfg5640/TS_S_reg' in module 'UDP
 --------------------------------------------
 SYN-1067 : encoded FSM with state register 'u_uicfg5640/TS_S_reg' using encoding 'one_hot' in model 'UDP_Example_Top'
 SYN-1057 : Inferred 31 FSM(s)
-SYN-1032 : 30250/729 useful/useless nets, 7979/57 useful/useless insts
+SYN-1032 : 28134/729 useful/useless nets, 6150/57 useful/useless insts
 SYN-1021 : Optimized 3 onehot mux instances.
 SYN-1068 : Optimized 26 binary mux instances.
 SYN-1019 : Optimized 3 mux instances.
 SYN-1021 : Optimized 1 onehot mux instances.
 SYN-1021 : Optimized 1 onehot mux instances.
-SYN-1016 : Merged 562 instances.
+SYN-1016 : Merged 512 instances.
 USR-1002 : Derived clock:  create_generated_clock -name {u_PLL_HDMI_CLK/pll_inst.clkc[0]} -source [get_ports {clk_50}] -master_clock {clk_in} -multiply_by 1.2500 -duty_cycle 50.0000 [get_pins {u_PLL_HDMI_CLK/pll_inst.clkc[0]}]
 USR-1002 : Derived clock:  create_generated_clock -name {u_PLL_HDMI_CLK/pll_inst.clkc[1]} -source [get_ports {clk_50}] -master_clock {clk_in} -multiply_by 6.2500 -duty_cycle 50.0000 [get_pins {u_PLL_HDMI_CLK/pll_inst.clkc[1]}]
 USR-1002 : Derived clock:  create_generated_clock -name {u_clk/pll_inst.clkc[0]} -source [get_ports {clk_50}] -master_clock {clk_in} -multiply_by 3.0000 -duty_cycle 50.0000 [get_pins {u_clk/pll_inst.clkc[0]}]
@@ -1369,9 +1056,9 @@ USR-8130 CRITICAL-WARNING: No clock match the pattern: udp_clk_125m.
 USR-8208 CRITICAL-WARNING: Clock group is empty.
 USR-8159 CRITICAL-WARNING: Command set_clock_groups -exclusive -group [get_clocks {udp_clk_125m}] in D:/University/AL_Proj/anlu/anlu/source_code/constraints/UDP.sdc(13) fails.
 SYN-1016 : Merged 663 instances.
-SYN-1001 : End Stage 1.5 | Optimize Design; Time: 3.697688s wall, 1.093750s user + 0.031250s system = 1.125000s CPU (30.4%); Memory(MB): used = 377, reserved = 364, peak = 377;
+SYN-1001 : End Stage 1.5 | Optimize Design; Time: 3.580813s wall, 1.343750s user + 0.000000s system = 1.343750s CPU (37.5%); Memory(MB): used = 366, reserved = 351, peak = 366;
 
-SYN-1079 : finish stage Optimize Design. Total instances: 16798, Total nets: 18775.
+SYN-1079 : finish stage Optimize Design. Total instances: 15009, Total nets: 16712.
 
 SYN-1001 : Stage 1.6 | Optimize Iteratively
 SYN-1018 : Transformed 4 mux instances.
@@ -1406,29 +1093,29 @@ SYN-1014 : Optimize round 1
 SYN-1017 : Remove 1 const input seq instances
 SYN-1020 : Optimized 181 distributor mux.
 SYN-1016 : Merged 937 instances.
-SYN-1015 : Optimize round 1, 1182 better
+SYN-1015 : Optimize round 1, 1191 better
 SYN-1014 : Optimize round 2
 SYN-1020 : Optimized 41 distributor mux.
 SYN-1016 : Merged 79 instances.
 SYN-1015 : Optimize round 2, 122 better
 SYN-1014 : Optimize round 3
 SYN-1015 : Optimize round 3, 0 better
-SYN-1001 : End Stage 1.6 | Optimize Iteratively; Time: 8.478842s wall, 3.171875s user + 0.031250s system = 3.203125s CPU (37.8%); Memory(MB): used = 381, reserved = 376, peak = 432;
+SYN-1001 : End Stage 1.6 | Optimize Iteratively; Time: 12.238517s wall, 4.953125s user + 0.078125s system = 5.031250s CPU (41.1%); Memory(MB): used = 127, reserved = 364, peak = 423;
 
-SYN-1079 : finish stage Optimize Iteratively. Total instances: 21840, Total nets: 23409.
+SYN-1079 : finish stage Optimize Iteratively. Total instances: 20049, Total nets: 21344.
 
 SYN-1001 : Stage 1.7 | Check Design
-SYN-1001 : End Stage 1.7 | Check Design; Time: 0.003211s wall, 0.000000s user + 0.000000s system = 0.000000s CPU (n/a%); Memory(MB): used = 381, reserved = 376, peak = 432;
+SYN-1001 : End Stage 1.7 | Check Design; Time: 0.002727s wall, 0.000000s user + 0.000000s system = 0.000000s CPU (n/a%); Memory(MB): used = 127, reserved = 364, peak = 423;
 
-SYN-1079 : finish stage Check Design. Total instances: 21840, Total nets: 23409.
+SYN-1079 : finish stage Check Design. Total instances: 20049, Total nets: 21344.
 
-SYN-1001 : End Stage 1 | Optimize RTL; Time: 13.548930s wall, 4.703125s user + 0.062500s system = 4.765625s CPU (35.2%); Memory(MB): used = 381, reserved = 376, peak = 432;
+SYN-1001 : End Stage 1 | Optimize RTL; Time: 17.119317s wall, 6.593750s user + 0.078125s system = 6.671875s CPU (39.0%); Memory(MB): used = 127, reserved = 364, peak = 423;
 
-SYN-1079 : finish stage Optimize RTL. Total instances: 21840, Total nets: 23409.
+SYN-1079 : finish stage Optimize RTL. Total instances: 20049, Total nets: 21344.
 
-RUN-1003 : finish command "optimize_rtl" in  13.556753s wall, 4.703125s user + 0.062500s system = 4.765625s CPU (35.2%)
+RUN-1003 : finish command "optimize_rtl" in  17.127517s wall, 6.593750s user + 0.078125s system = 6.671875s CPU (39.0%)
 
-RUN-1004 : used memory is 381 MB, reserved memory is 376 MB, peak memory is 432 MB
+RUN-1004 : used memory is 127 MB, reserved memory is 364 MB, peak memory is 423 MB
 RUN-1002 : start command "report_area -file UDP_EXAMPLE_rtl.area"
 RUN-1001 : standard
 ***Report Model: UDP_Example_Top Device: EG4S20BG256***
@@ -1440,7 +1127,7 @@ IO Statistics
   #inout                    1
 
 Gate Statistics
-#Basic gates            16865
+#Basic gates            16199
   #and                   3967
   #nand                     0
   #or                    4132
@@ -1448,24 +1135,16 @@ Gate Statistics
   #xor                    473
   #xnor                    12
   #buf                      0
-  #not                    709
+  #not                    708
   #bufif1                  33
   #MX21                   943
   #FADD                     0
-  #DFF                   6596
+  #DFF                   5931
   #LATCH                    0
 #MACRO_ADD                225
 #MACRO_EQ                 125
-#MACRO_MUX               3229
+#MACRO_MUX               3231
 #MACRO_OTHERS              30
-
-LUT Statistics
-#Total_luts               343
-  #lut4                   269
-  #lut5                    74
-  #lut6                     0
-  #lut5_mx41                0
-  #lut4_alu1b               0
 
 RUN-1002 : start command "export_db UDP_EXAMPLE_rtl.db"
 RUN-1001 : Exported flow parameters
@@ -1511,21 +1190,20 @@ RUN-1002 : start command "optimize_gate -packarea UDP_EXAMPLE_gate.area"
 RUN-1001 : Open license file D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/license/Anlogic.lic
 SYN-1001 : Stage 2 | Optimize Gate
 SYN-1001 : Stage 2.1 | Map Reg
-SYN-1001 : End Stage 2.1 | Map Reg; Time: 0.335687s wall, 0.156250s user + 0.000000s system = 0.156250s CPU (46.5%); Memory(MB): used = 403, reserved = 510, peak = 432;
+SYN-1001 : End Stage 2.1 | Map Reg; Time: 0.330446s wall, 0.125000s user + 0.000000s system = 0.125000s CPU (37.8%); Memory(MB): used = 163, reserved = 370, peak = 423;
 
-SYN-1079 : finish stage Map Reg. Total instances: 21840, Total nets: 23409.
+SYN-1079 : finish stage Map Reg. Total instances: 20049, Total nets: 21344.
 
 SYN-1001 : Stage 2.2 | Map IO
 SYN-2002 : EG_PHY_SDRAM_2M_32 instance sdram.
 SYN-2001 : Map 92 IOs to PADs of model 'UDP_Example_Top'
-SYN-1001 : End Stage 2.2 | Map IO; Time: 0.206019s wall, 0.062500s user + 0.000000s system = 0.062500s CPU (30.3%); Memory(MB): used = 403, reserved = 510, peak = 432;
+SYN-1001 : End Stage 2.2 | Map IO; Time: 0.182616s wall, 0.078125s user + 0.000000s system = 0.078125s CPU (42.8%); Memory(MB): used = 164, reserved = 371, peak = 423;
 
 SYN-1001 : Stage 2.3 | Map Macro
 RUN-1002 : start command "update_pll_param -module UDP_Example_Top"
 SYN-6577 WARNING: The clock signal "u2_ram/SDRAM_CLK" is added with the synthetic instruction (keep/mark_debug/dont_touch/max_fanout), which may create additional logic on this net
 SYN-6577 WARNING: The clock signal "u_udp_top/temac_clk" is added with the synthetic instruction (keep/mark_debug/dont_touch/max_fanout), which may create additional logic on this net
 SYN-6577 WARNING: The clock signal "u_udp_top/udp_clk" is added with the synthetic instruction (keep/mark_debug/dont_touch/max_fanout), which may create additional logic on this net
-SYN-6577 WARNING: The clock signal "uivtc_inst/I_vtc_clk" is added with the synthetic instruction (keep/mark_debug/dont_touch/max_fanout), which may create additional logic on this net
 SYN-2501 : Processed 0 LOGIC_BUF instances.
 SYN-2501 : 4 BUFG to GCLK
 SYN-6562 WARNING: The init value of "u2_udp_loopback/udp_packet_fifo/u_anlogic_soft_async_fifo/inst(../../../../source_code/rtl/ETH/udp_ip_protocol_stack_merge.enc.v(0))" will be ignored since gate eram_init is set to off
@@ -1555,7 +1233,7 @@ SYN-2501 : Optimize round 2
 SYN-2501 : Optimize round 2, 0 better
 SYN-2501 : Map 192 macro adder(s)
 SYN-1019 : Optimized 2099 mux instances.
-SYN-1016 : Merged 395 instances.
+SYN-1016 : Merged 396 instances.
 SYN-5011 WARNING: Undriven pin: model "UDP_Example_Top" / inst "u2_ram/u2_wrrd/Sdr_rd_dout_reg[0]" in ../../../../source_code/rtl/uieg4d_dram/enc_file/sdr_wrrd.enc.v(0) / pin "clk"
 SYN-5011 WARNING: Undriven pin: model "UDP_Example_Top" / inst "u2_ram/u2_wrrd/Sdr_rd_dout_reg[1]" in ../../../../source_code/rtl/uieg4d_dram/enc_file/sdr_wrrd.enc.v(0) / pin "clk"
 SYN-5011 WARNING: Undriven pin: model "UDP_Example_Top" / inst "u2_ram/u2_wrrd/Sdr_rd_dout_reg[2]" in ../../../../source_code/rtl/uieg4d_dram/enc_file/sdr_wrrd.enc.v(0) / pin "clk"
@@ -1568,23 +1246,23 @@ SYN-5011 WARNING: Undriven pin: model "UDP_Example_Top" / inst "u2_ram/u2_wrrd/S
 SYN-5011 WARNING: Undriven pin: model "UDP_Example_Top" / inst "u2_ram/u2_wrrd/Sdr_rd_dout_reg[9]" in ../../../../source_code/rtl/uieg4d_dram/enc_file/sdr_wrrd.enc.v(0) / pin "clk"
 SYN-5011 Similar messages will be suppressed.
 SYN-5025 WARNING: Using 0 for all undriven pins and nets
-SYN-1001 : End Stage 2.3 | Map Macro; Time: 6.567390s wall, 1.890625s user + 0.031250s system = 1.921875s CPU (29.3%); Memory(MB): used = 415, reserved = 401, peak = 432;
+SYN-1001 : End Stage 2.3 | Map Macro; Time: 3.798904s wall, 1.859375s user + 0.000000s system = 1.859375s CPU (48.9%); Memory(MB): used = 303, reserved = 388, peak = 423;
 
-SYN-1079 : finish stage Map Macro. Total instances: 26517, Total nets: 28029.
+SYN-1079 : finish stage Map Macro. Total instances: 24731, Total nets: 25969.
 
 SYN-1001 : Stage 2.4 | Map Gate
-SYN-3001 : Collect 4526 PI 3127 PO (44 timing unconstrained) for mapping
-SYN-2581 : Mapping with K=5, #lut = 4901 (3.36), #lev = 7 (2.31), #crit_level = 1
+SYN-3001 : Collect 4526 PI 3125 PO (44 timing unconstrained) for mapping
+SYN-2581 : Mapping with K=5, #lut = 5087 (3.41), #lev = 7 (2.30), #crit_level = 1
 SYN-2551 : Post LUT mapping optimization.
-SYN-2581 : Mapping with K=5, #lut = 4757 (3.32), #lev = 6 (2.38), #crit_level = 0
-SYN-3001 : Logic optimization opt = 1.64 sec, map = 0.39 sec, post map opt = 11.65 sec.
-SYN-1001 : End Stage 2.4 | Map Gate; Time: 16.546305s wall, 8.968750s user + 0.031250s system = 9.000000s CPU (54.4%); Memory(MB): used = 441, reserved = 424, peak = 441;
+SYN-2581 : Mapping with K=5, #lut = 4732 (3.32), #lev = 6 (2.37), #crit_level = 0
+SYN-3001 : Logic optimization opt = 1.59 sec, map = 0.39 sec, post map opt = 11.13 sec.
+SYN-1001 : End Stage 2.4 | Map Gate; Time: 15.629300s wall, 8.390625s user + 0.015625s system = 8.406250s CPU (53.8%); Memory(MB): used = 332, reserved = 412, peak = 423;
 
 SYN-1001 : Packing model "UDP_Example_Top" ...
 SYN-4010 : Pack lib has 57 rtl pack models with 26 top pack blocks
 SYN-1014 : Optimize round 1
 SYN-1015 : Optimize round 1, 0 better
-SYN-4002 : Packing 5784 DFF/LATCH to SEQ ...
+SYN-4002 : Packing 5874 DFF/LATCH to SEQ ...
 SYN-4009 : Pack 23 carry chain into lslice
 SYN-4007 : Packing 426 adder to BLE ...
 SYN-4008 : Packed 426 adder and 99 SEQ to BLE.
@@ -1597,35 +1275,35 @@ RUN-1002 : start command "start_timer"
 -----------------------------------------------------------
 | Timing                    |                             |
 |     Setup WNS             |        -5958                |
-|     Setup TNS             |      -336441                |
-|     Num of violated S-EP  |          360                |
+|     Setup TNS             |      -331467                |
+|     Num of violated S-EP  |          310                |
 |     Hold WNS              |          471                |
 |     Hold TNS              |            0                |
 |     Num of violated H-EP  |            0                |
 -----------------------------------------------------------
 | Utilization               |                             |
-|     #registers            |         6440                |
-|     #luts                 |         5101                |
-|     #lut1                 |           67                |
-|     #lut1(~A)             |           66                |
-|     #slices               |          453                |
-|     slices percentage     |        4.62%                |
-|     #RAMs                 |           39                |
+|     #registers            |         5775                |
+|     #luts                 |         4733                |
+|     #lut1                 |           60                |
+|     #lut1(~A)             |           59                |
+|     #slices               |          350                |
+|     slices percentage     |        3.57%                |
+|     #RAMs                 |           28                |
 |     #DSPs                 |            0                |
 |     #f7mux                |        0.00%                |
-|     #MACROs               |           68                |
-|     #insts in MACRO       |          453                |
+|     #MACROs               |           53                |
+|     #insts in MACRO       |          350                |
 -----------------------------------------------------------
 | kept_net                  |                             |
-|     #syn_keep             |          392                |
-|     #keep_hier            |           63                |
+|     #syn_keep             |           89                |
+|     #keep_hier            |            0                |
 |     #dont_touch           |            0                |
 |     #mark_debug           |            0                |
 |     #max_fanout_keep      |            0                |
 |     #async_reg            |           27                |
 -----------------------------------------------------------
-| Top 10% datanet fanout#   |        35.63                |
-| dff(single fanout)->dff   |         1706                |
+| Top 10% datanet fanout#   |        39.22                |
+| dff(single fanout)->dff   |         1625                |
 | dff(single fanout)->dram  |            0                |
 -----------------------------------------------------------
 | Over-quota path num*      |                             |
@@ -1650,30 +1328,29 @@ Over-quota Path Details
 Note: Table only show top 5 paths for each clock group in default
 
 Logic Level Distribution
----------------------------------------------------------------------------------------------------------------------------------------------
-  Clock                                         |  Period            |  0     |  1     |  2     |  3    |  4    |  5    |  6    |  7   |  8
----------------------------------------------------------------------------------------------------------------------------------------------
-  clk_in                                        |  20.000ns (50MHz)  |  40    |  44    |  22    |  8    |  12   |  9    |  2    |  0   |  0
-  phy1_rgmii_rx_clk                             |  8.000ns (125MHz)  |  518   |  160   |  102   |  49   |  30   |  4    |  0    |  0   |  0
-  u_PLL_HDMI_CLK/pll_inst.clkc[0]               |  16.000ns (62MHz)  |  537   |  253   |  96    |  70   |  34   |  29   |  23   |  0   |  0
-  u_PLL_HDMI_CLK/pll_inst.clkc[1]               |  3.200ns (312MHz)  |  43    |  27    |  0     |  0    |  0    |  0    |  0    |  0   |  0
-  u_clk/pll_inst.clkc[0]                        |  6.666ns (150MHz)  |  827   |  401   |  248   |  159  |  103  |  5    |  1    |  0   |  0
-  u_clk/pll_inst.clkc[2]                        |  6.666ns (150MHz)  |  16    |  32    |  0     |  0    |  0    |  0    |  0    |  0   |  0
-  u_udp_top/u_clk_gen/u_pll_0/pll_inst.clkc[0]  |  8.000ns (125MHz)  |  323   |  100   |  132   |  80   |  34   |  5    |  2    |  0   |  0
-  u_udp_top/u_clk_gen/u_pll_0/pll_inst.clkc[1]  |  8.000ns (125MHz)  |  2073  |  1186  |  4571  |  477  |  440  |  503  |  557  |  21  |  2
-  u_udp_top/u_clk_gen/u_pll_0/pll_inst.clkc[4]  |  8.000ns (125MHz)  |  2     |  0     |  0     |  0    |  0    |  0    |  0    |  0   |  0
-  Total                                         |  NA                |  4379  |  2203  |  5171  |  843  |  653  |  555  |  585  |  21  |  2
----------------------------------------------------------------------------------------------------------------------------------------------
-Note: The table count the worst 100000 paths, each endpoint count only one time.(14412 paths analyzed)
+----------------------------------------------------------------------------------------------------------------------------------------------
+  Clock                                         |  Period            |  0     |  1     |  2     |  3     |  4    |  5    |  6    |  7   |  8
+----------------------------------------------------------------------------------------------------------------------------------------------
+  clk_in                                        |  20.000ns (50MHz)  |  40    |  44    |  21    |  6     |  10   |  13   |  3    |  0   |  0
+  phy1_rgmii_rx_clk                             |  8.000ns (125MHz)  |  518   |  153   |  113   |  46    |  31   |  2    |  0    |  0   |  0
+  u_PLL_HDMI_CLK/pll_inst.clkc[0]               |  16.000ns (62MHz)  |  89    |  15    |  40    |  13    |  29   |  20   |  31   |  0   |  0
+  u_PLL_HDMI_CLK/pll_inst.clkc[1]               |  3.200ns (312MHz)  |  43    |  27    |  0     |  0     |  0    |  0    |  0    |  0   |  0
+  u_clk/pll_inst.clkc[0]                        |  6.666ns (150MHz)  |  827   |  401   |  248   |  159   |  105  |  4    |  0    |  0   |  0
+  u_clk/pll_inst.clkc[2]                        |  6.666ns (150MHz)  |  16    |  32    |  0     |  0     |  0    |  0    |  0    |  0   |  0
+  u_udp_top/u_clk_gen/u_pll_0/pll_inst.clkc[0]  |  8.000ns (125MHz)  |  323   |  100   |  72    |  137   |  35   |  4    |  5    |  0   |  0
+  u_udp_top/u_clk_gen/u_pll_0/pll_inst.clkc[1]  |  8.000ns (125MHz)  |  2163  |  1184  |  777   |  4366  |  384  |  415  |  697  |  22  |  2
+  u_udp_top/u_clk_gen/u_pll_0/pll_inst.clkc[4]  |  8.000ns (125MHz)  |  2     |  0     |  0     |  0     |  0    |  0    |  0    |  0   |  0
+  Total                                         |  NA                |  4021  |  1956  |  1271  |  4727  |  594  |  458  |  736  |  22  |  2
+----------------------------------------------------------------------------------------------------------------------------------------------
+Note: The table count the worst 100000 paths, each endpoint count only one time.(13787 paths analyzed)
 
 Hierarchical Rent Exponent Report
 +-----------------------------------------------------------------------+
 |Inst           |Model           |Rent     |Cell     |Pin     |Term     |
 +-----------------------------------------------------------------------+
-|top            |UDP_Example_Top |0.20     |13035    |49251   |24       |
-|  u_udp_rx_buf |udp_rx_buf_7    |0.37     |1053     |3348    |41       |
-|  u_udp_top    |udp_top_8       |0.36     |6879     |28111   |95       |
-|  uivtc_inst   |uivtc_12        |0.26     |1944     |5797    |22       |
+|top            |UDP_Example_Top |0.19     |11218    |43847   |24       |
+|  u_udp_rx_buf |udp_rx_buf_7    |0.36     |1142     |3617    |41       |
+|  u_udp_top    |udp_top_8       |0.36     |6854     |28004   |95       |
 +-----------------------------------------------------------------------+
 Note: Cell represents total number of cells inside module; Pin represents total number of pins
       which have net connection inside module; Term represents total number of PIs and POs of module.
@@ -1681,10 +1358,9 @@ Note: Cell represents total number of cells inside module; Pin represents total 
       A module with higher rent corresponds to highly connected logic and strong connectivity with others.
 Report gate stage QoR done.
 
-SYN-1001 : The design has 54 dangling syn_keep insts.
-RUN-1003 : finish command "report_qor -step gate -file gate.qor" in  1.761043s wall, 0.984375s user + 0.000000s system = 0.984375s CPU (55.9%)
+RUN-1003 : finish command "report_qor -step gate -file gate.qor" in  1.631870s wall, 1.015625s user + 0.000000s system = 1.015625s CPU (62.2%)
 
-RUN-1004 : used memory is 442 MB, reserved memory is 425 MB, peak memory is 442 MB
+RUN-1004 : used memory is 333 MB, reserved memory is 411 MB, peak memory is 423 MB
 RUN-1002 : start command "report_area -file UDP_EXAMPLE_gate.area"
 RUN-1001 : standard
 ***Report Model: UDP_Example_Top Device: EG4S20BG256***
@@ -1696,18 +1372,18 @@ IO Statistics
   #inout                    1
 
 LUT Statistics
-#Total_luts              5101
-  #lut4                  4275
-  #lut5                   826
+#Total_luts              4733
+  #lut4                  3982
+  #lut5                   751
   #lut6                     0
   #lut5_mx41                0
   #lut4_alu1b               0
 
 Utilization Statistics
-#lut                     6007   out of  19600   30.65%
-#reg                     6551   out of  19600   33.42%
-#bram                      39   out of     64   60.94%
-  #bram9k                  25
+#lut                     5433   out of  19600   27.72%
+#reg                     5874   out of  19600   29.97%
+#bram                      28   out of     64   43.75%
+  #bram9k                  14
   #fifo9k                  14
 #bram32k                    0   out of     16    0.00%
 #dsp                        0   out of     29    0.00%
@@ -1718,15 +1394,15 @@ Utilization Statistics
 #pll                        3   out of      4   75.00%
 #gclk                       4   out of     16   25.00%
 
-SYN-1001 : End Stage 2 | Optimize Gate; Time: 26.361650s wall, 12.125000s user + 0.437500s system = 12.562500s CPU (47.7%); Memory(MB): used = 442, reserved = 425, peak = 442;
+SYN-1001 : End Stage 2 | Optimize Gate; Time: 22.497056s wall, 11.609375s user + 0.515625s system = 12.125000s CPU (53.9%); Memory(MB): used = 333, reserved = 411, peak = 423;
 
-RUN-1003 : finish command "optimize_gate -packarea UDP_EXAMPLE_gate.area" in  26.370196s wall, 12.125000s user + 0.437500s system = 12.562500s CPU (47.6%)
+RUN-1003 : finish command "optimize_gate -packarea UDP_EXAMPLE_gate.area" in  22.505124s wall, 11.609375s user + 0.515625s system = 12.125000s CPU (53.9%)
 
-RUN-1004 : used memory is 442 MB, reserved memory is 425 MB, peak memory is 442 MB
+RUN-1004 : used memory is 333 MB, reserved memory is 411 MB, peak memory is 423 MB
 RUN-1002 : start command "legalize_phy_inst"
 SYN-1001 : Stage 3 | Legalize Phy Inst
 SYN-1011 : Flatten model UDP_Example_Top
-SYN-1001 : End Stage 3 | Legalize Phy Inst; Time: 0.028191s wall, 0.000000s user + 0.000000s system = 0.000000s CPU (n/a%); Memory(MB): used = 442, reserved = 425, peak = 442;
+SYN-1001 : End Stage 3 | Legalize Phy Inst; Time: 0.024436s wall, 0.000000s user + 0.000000s system = 0.000000s CPU (n/a%); Memory(MB): used = 334, reserved = 411, peak = 423;
 
 RUN-1002 : start command "update_timing"
 RUN-1002 : start command "start_timer"
@@ -1741,7 +1417,7 @@ Device           : EG4S20BG256
 Speed            : NA
 
 Timing Mode      : basic
-Setup            : WNS -5958ps  TNS  -336441ps  NUM_FEPS   360
+Setup            : WNS -5958ps  TNS  -331467ps  NUM_FEPS   310
 Hold             : WNS   471ps  TNS        0ps  NUM_FEPS     0
 
 Flow Statistics  :
@@ -1749,14 +1425,13 @@ RUN-1001 : Flow Statistics:
 RUN-1001 : --------------------------------------------------------------------------------------------------
 RUN-1001 :      command     |  #calls  |  wall time  |  cpu time(s)  |  used memory(mb)  |  peak memory(mb)  
 RUN-1001 : --------------------------------------------------------------------------------------------------
-RUN-1001 :   optimize_gate  |    1     |  26s(66%)   |    12(75%)    |        442        |        442        
-RUN-1001 :   optimize_rtl   |    1     |  13s(33%)   |    4(25%)     |        381        |        432        
-RUN-1001 :     import_db    |    1     |   0s(0%)    |     0(0%)     |        290        |        290        
+RUN-1001 :   optimize_gate  |    1     |  22s(56%)   |    11(64%)    |        333        |        423        
+RUN-1001 :   optimize_rtl   |    1     |  17s(43%)   |    6(35%)     |        127        |        423        
 RUN-1001 :   import_device  |    1     |   0s(0%)    |     0(0%)     |        82         |        82         
-RUN-1001 :     read_adc     |    1     |   0s(0%)    |     0(0%)     |        265        |        265        
-RUN-1001 :     read_sdc     |    2     |   0s(0%)    |     0(0%)     |        265        |        265        
+RUN-1001 :     read_adc     |    1     |   0s(0%)    |     0(0%)     |        268        |        268        
+RUN-1001 :     read_sdc     |    2     |   0s(0%)    |     0(0%)     |        268        |        268        
 RUN-1001 : --------------------------------------------------------------------------------------------------
-RUN-1001 :       total      |    7     |     39s     |      16       |        442        |        442        
+RUN-1001 :       total      |    6     |     39s     |      17       |        333        |        423        
 RUN-1001 : --------------------------------------------------------------------------------------------------
 RUN-1002 : start command "export_db UDP_EXAMPLE_gate.db"
 RUN-1001 : Exported flow parameters
@@ -1788,19 +1463,18 @@ Device           : EG4S20BG256
 Speed            : NA
 
 Timing Mode      : basic
-Setup            : WNS -5958ps  TNS  -336441ps  NUM_FEPS   360
+Setup            : WNS -5958ps  TNS  -331467ps  NUM_FEPS   310
 Hold             : WNS   471ps  TNS        0ps  NUM_FEPS     0
 
 RUN-1001 : Flow Statistics:
 RUN-1001 : --------------------------------------------------------------------------------------------------
 RUN-1001 :      command     |  #calls  |  wall time  |  cpu time(s)  |  used memory(mb)  |  peak memory(mb)  
 RUN-1001 : --------------------------------------------------------------------------------------------------
-RUN-1001 :   optimize_gate  |    1     |  26s(66%)   |    12(75%)    |        442        |        442        
-RUN-1001 :   optimize_rtl   |    1     |  13s(33%)   |    4(25%)     |        381        |        432        
-RUN-1001 :     import_db    |    1     |   0s(0%)    |     0(0%)     |        290        |        290        
+RUN-1001 :   optimize_gate  |    1     |  22s(56%)   |    11(64%)    |        333        |        423        
+RUN-1001 :   optimize_rtl   |    1     |  17s(43%)   |    6(35%)     |        127        |        423        
 RUN-1001 :   import_device  |    1     |   0s(0%)    |     0(0%)     |        82         |        82         
-RUN-1001 :     read_adc     |    1     |   0s(0%)    |     0(0%)     |        265        |        265        
-RUN-1001 :     read_sdc     |    2     |   0s(0%)    |     0(0%)     |        265        |        265        
+RUN-1001 :     read_adc     |    1     |   0s(0%)    |     0(0%)     |        268        |        268        
+RUN-1001 :     read_sdc     |    2     |   0s(0%)    |     0(0%)     |        268        |        268        
 RUN-1001 : --------------------------------------------------------------------------------------------------
-RUN-1001 :       total      |    7     |     39s     |      16       |        442        |        442        
+RUN-1001 :       total      |    6     |     39s     |      17       |        333        |        423        
 RUN-1001 : --------------------------------------------------------------------------------------------------

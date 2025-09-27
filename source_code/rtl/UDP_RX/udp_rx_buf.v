@@ -12,7 +12,7 @@
 module udp_rx_buf
 #(
     parameter FRAME_HEAD =  32'hF3ED7A93,
-    parameter DLY        = 'd100
+    parameter DLY        = 'd110
 )(
     input   wire                    rstn,
 

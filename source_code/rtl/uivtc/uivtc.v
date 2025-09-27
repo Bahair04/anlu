@@ -112,13 +112,13 @@ always @(posedge I_vtc_clk)begin
 	end
 end
 
-ChipWatcher_udp u_ChipWatcher_udp(
-	.probe0 	( data_888  ),
-	.probe1 	( hcnt  ),
-	.probe2 	( vcnt  ),
-    .probe3 	( vtc_de  ),
-	.clk    	( I_vtc_clk     )
-);
+// ChipWatcher_udp u_ChipWatcher_udp(
+// 	.probe0 	( data_888  ),
+// 	.probe1 	( hcnt  ),
+// 	.probe2 	( vcnt  ),
+//     .probe3 	( vtc_de  ),
+// 	.clk    	( I_vtc_clk     )
+// );
 
 
 endmodule

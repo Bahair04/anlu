@@ -3,35 +3,35 @@
 -----------------------------------------------------------
 | Timing                    |                             |
 |     Setup WNS             |        -5958                |
-|     Setup TNS             |      -336441                |
-|     Num of violated S-EP  |          360                |
+|     Setup TNS             |      -331467                |
+|     Num of violated S-EP  |          310                |
 |     Hold WNS              |          471                |
 |     Hold TNS              |            0                |
 |     Num of violated H-EP  |            0                |
 -----------------------------------------------------------
 | Utilization               |                             |
-|     #registers            |         6440                |
-|     #luts                 |         5101                |
-|     #lut1                 |           67                |
-|     #lut1(~A)             |           66                |
-|     #slices               |          453                |
-|     slices percentage     |        4.62%                |
-|     #RAMs                 |           39                |
+|     #registers            |         5775                |
+|     #luts                 |         4733                |
+|     #lut1                 |           60                |
+|     #lut1(~A)             |           59                |
+|     #slices               |          350                |
+|     slices percentage     |        3.57%                |
+|     #RAMs                 |           28                |
 |     #DSPs                 |            0                |
 |     #f7mux                |        0.00%                |
-|     #MACROs               |           68                |
-|     #insts in MACRO       |          453                |
+|     #MACROs               |           53                |
+|     #insts in MACRO       |          350                |
 -----------------------------------------------------------
 | kept_net                  |                             |
-|     #syn_keep             |          392                |
-|     #keep_hier            |           63                |
+|     #syn_keep             |           89                |
+|     #keep_hier            |            0                |
 |     #dont_touch           |            0                |
 |     #mark_debug           |            0                |
 |     #max_fanout_keep      |            0                |
 |     #async_reg            |           27                |
 -----------------------------------------------------------
-| Top 10% datanet fanout#   |        35.63                |
-| dff(single fanout)->dff   |         1706                |
+| Top 10% datanet fanout#   |        39.22                |
+| dff(single fanout)->dff   |         1625                |
 | dff(single fanout)->dram  |            0                |
 -----------------------------------------------------------
 | Over-quota path num*      |                             |
@@ -56,28 +56,27 @@ Over-quota Path Details
 Note: Table only show top 5 paths for each clock group in default
 
 Logic Level Distribution
----------------------------------------------------------------------------------------------------------------------------------------------
-  Clock                                         |  Period            |  0     |  1     |  2     |  3    |  4    |  5    |  6    |  7   |  8
----------------------------------------------------------------------------------------------------------------------------------------------
-  clk_in                                        |  20.000ns (50MHz)  |  40    |  44    |  22    |  8    |  12   |  9    |  2    |  0   |  0
-  phy1_rgmii_rx_clk                             |  8.000ns (125MHz)  |  518   |  160   |  102   |  49   |  30   |  4    |  0    |  0   |  0
-  u_PLL_HDMI_CLK/pll_inst.clkc[0]               |  16.000ns (62MHz)  |  537   |  253   |  96    |  70   |  34   |  29   |  23   |  0   |  0
-  u_PLL_HDMI_CLK/pll_inst.clkc[1]               |  3.200ns (312MHz)  |  43    |  27    |  0     |  0    |  0    |  0    |  0    |  0   |  0
-  u_clk/pll_inst.clkc[0]                        |  6.666ns (150MHz)  |  827   |  401   |  248   |  159  |  103  |  5    |  1    |  0   |  0
-  u_clk/pll_inst.clkc[2]                        |  6.666ns (150MHz)  |  16    |  32    |  0     |  0    |  0    |  0    |  0    |  0   |  0
-  u_udp_top/u_clk_gen/u_pll_0/pll_inst.clkc[0]  |  8.000ns (125MHz)  |  323   |  100   |  132   |  80   |  34   |  5    |  2    |  0   |  0
-  u_udp_top/u_clk_gen/u_pll_0/pll_inst.clkc[1]  |  8.000ns (125MHz)  |  2073  |  1186  |  4571  |  477  |  440  |  503  |  557  |  21  |  2
-  u_udp_top/u_clk_gen/u_pll_0/pll_inst.clkc[4]  |  8.000ns (125MHz)  |  2     |  0     |  0     |  0    |  0    |  0    |  0    |  0   |  0
-  Total                                         |  NA                |  4379  |  2203  |  5171  |  843  |  653  |  555  |  585  |  21  |  2
----------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------
+  Clock                                         |  Period            |  0     |  1     |  2     |  3     |  4    |  5    |  6    |  7   |  8
+----------------------------------------------------------------------------------------------------------------------------------------------
+  clk_in                                        |  20.000ns (50MHz)  |  40    |  44    |  21    |  6     |  10   |  13   |  3    |  0   |  0
+  phy1_rgmii_rx_clk                             |  8.000ns (125MHz)  |  518   |  153   |  113   |  46    |  31   |  2    |  0    |  0   |  0
+  u_PLL_HDMI_CLK/pll_inst.clkc[0]               |  16.000ns (62MHz)  |  89    |  15    |  40    |  13    |  29   |  20   |  31   |  0   |  0
+  u_PLL_HDMI_CLK/pll_inst.clkc[1]               |  3.200ns (312MHz)  |  43    |  27    |  0     |  0     |  0    |  0    |  0    |  0   |  0
+  u_clk/pll_inst.clkc[0]                        |  6.666ns (150MHz)  |  827   |  401   |  248   |  159   |  105  |  4    |  0    |  0   |  0
+  u_clk/pll_inst.clkc[2]                        |  6.666ns (150MHz)  |  16    |  32    |  0     |  0     |  0    |  0    |  0    |  0   |  0
+  u_udp_top/u_clk_gen/u_pll_0/pll_inst.clkc[0]  |  8.000ns (125MHz)  |  323   |  100   |  72    |  137   |  35   |  4    |  5    |  0   |  0
+  u_udp_top/u_clk_gen/u_pll_0/pll_inst.clkc[1]  |  8.000ns (125MHz)  |  2163  |  1184  |  777   |  4366  |  384  |  415  |  697  |  22  |  2
+  u_udp_top/u_clk_gen/u_pll_0/pll_inst.clkc[4]  |  8.000ns (125MHz)  |  2     |  0     |  0     |  0     |  0    |  0    |  0    |  0   |  0
+  Total                                         |  NA                |  4021  |  1956  |  1271  |  4727  |  594  |  458  |  736  |  22  |  2
+----------------------------------------------------------------------------------------------------------------------------------------------
 Hierarchical Rent Exponent Report
 +-----------------------------------------------------------------------+
 |Inst           |Model           |Rent     |Cell     |Pin     |Term     |
 +-----------------------------------------------------------------------+
-|top            |UDP_Example_Top |0.20     |13035    |49251   |24       |
-|  u_udp_rx_buf |udp_rx_buf_7    |0.37     |1053     |3348    |41       |
-|  u_udp_top    |udp_top_8       |0.36     |6879     |28111   |95       |
-|  uivtc_inst   |uivtc_12        |0.26     |1944     |5797    |22       |
+|top            |UDP_Example_Top |0.19     |11218    |43847   |24       |
+|  u_udp_rx_buf |udp_rx_buf_7    |0.36     |1142     |3617    |41       |
+|  u_udp_top    |udp_top_8       |0.36     |6854     |28004   |95       |
 +-----------------------------------------------------------------------+
 Note: Cell represents total number of cells inside module; Pin represents total number of pins
       which have net connection inside module; Term represents total number of PIs and POs of module.
