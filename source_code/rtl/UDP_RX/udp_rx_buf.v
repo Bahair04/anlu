@@ -12,6 +12,7 @@
 module udp_rx_buf
 #(
     parameter FRAME_HEAD =  32'hF3ED7A93,
+    parameter FRAME_TAIL =  32'hF3ED7A94,
     parameter DLY        = 'd110
 )(
     input   wire                    rstn,
@@ -80,7 +81,7 @@ always @(posedge app_rx_clk or negedge rstn) begin
                 state <= IDLE;
         end
         REC : begin
-            if (app_rx_data_cnt == app_rx_data_total - 1'b1)
+            if (app_rx_data_cnt == app_rx_data_total - 1'b1 || frame_head == FRAME_TAIL)
                 state <= IDLE;
             else 
                 state <= REC;
@@ -124,6 +125,8 @@ end
 
 always @(posedge app_rx_clk or negedge rstn) begin
     if (!rstn)
+        app_rx_data_cnt <= 'd0;
+    else if (state == IDLE)
         app_rx_data_cnt <= 'd0;
     else if (dly_cnt >= DLY && app_rx_data_valid_d[DLY]) begin
         if (app_rx_data_cnt == app_rx_data_total - 1'b1)

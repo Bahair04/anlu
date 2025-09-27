@@ -1,4 +1,4 @@
-IMG = imread('scene1_1024_384.jpeg');
+IMG = imread('scene_1024_384.jpeg');
 IMG = double(IMG);
 color = zeros(size(IMG, 1), size(IMG, 2));
 for i = 1 : size(IMG, 1)
@@ -9,7 +9,7 @@ for i = 1 : size(IMG, 1)
 end
 color = uint16(color);
 
-fid = fopen('scene1_1024_384.txt', 'w');
+fid = fopen('scene_1024_384.txt', 'w');
 bar = waitbar(0, 'write...');
 fprintf(fid, 'F3 ED 7A 93 ');
 for i = 1 : size(IMG, 1)
@@ -22,6 +22,7 @@ for i = 1 : size(IMG, 1)
     waitbar(i / size(IMG, 1));
 end
 close(bar);
+fprintf(fid, 'F3 ED 7A 94 ');
 
 img = zeros(size(IMG, 1), size(IMG, 2), 3);
 for i = 1 : size(IMG, 1)

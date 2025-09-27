@@ -4,7 +4,7 @@
    Executable = D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/bin/run.exe
    Built at =   16:32:07 Jun 12 2025
    Run by =     1
-   Run Date =   Sat Sep 27 17:46:40 2025
+   Run Date =   Sat Sep 27 21:18:10 2025
 
    Run on =     LAPTOP-EUGMKLPQ
 ============================================================
@@ -567,20 +567,20 @@ RUN-1002 : start command "optimize_rtl"
 RUN-1001 : Open license file D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/license/Anlogic.lic
 SYN-1001 : Stage 1 | Optimize RTL
 SYN-1001 : Stage 1.1 | Check Design Sanity
-SYN-1001 : End Stage 1.1 | Check Design Sanity; Time: 0.007347s wall, 0.000000s user + 0.000000s system = 0.000000s CPU (n/a%); Memory(MB): used = 287, reserved = 393, peak = 287;
+SYN-1001 : End Stage 1.1 | Check Design Sanity; Time: 0.007086s wall, 0.000000s user + 0.000000s system = 0.000000s CPU (n/a%); Memory(MB): used = 287, reserved = 393, peak = 287;
 
-SYN-1079 : finish stage Check Design Sanity. Total instances: 32335, Total nets: 70546.
+SYN-1079 : finish stage Check Design Sanity. Total instances: 32363, Total nets: 70598.
 
 SYN-1001 : Stage 1.2 | Initialize Design
-SYN-1001 : End Stage 1.2 | Initialize Design; Time: 1.078677s wall, 0.281250s user + 0.000000s system = 0.281250s CPU (26.1%); Memory(MB): used = 287, reserved = 393, peak = 287;
+SYN-1001 : End Stage 1.2 | Initialize Design; Time: 1.049053s wall, 0.609375s user + 0.000000s system = 0.609375s CPU (58.1%); Memory(MB): used = 287, reserved = 393, peak = 287;
 
-SYN-1079 : finish stage Initialize Design. Total instances: 6792, Total nets: 39026.
+SYN-1079 : finish stage Initialize Design. Total instances: 6795, Total nets: 39053.
 
 SYN-1001 : Stage 1.3 | Flatten Module
 SYN-1011 : Flatten model UDP_Example_Top
-SYN-1001 : End Stage 1.3 | Flatten Module; Time: 0.175660s wall, 0.000000s user + 0.000000s system = 0.000000s CPU (n/a%); Memory(MB): used = 288, reserved = 393, peak = 288;
+SYN-1001 : End Stage 1.3 | Flatten Module; Time: 0.169394s wall, 0.062500s user + 0.000000s system = 0.062500s CPU (36.9%); Memory(MB): used = 288, reserved = 393, peak = 288;
 
-SYN-1079 : finish stage Flatten Module. Total instances: 7394, Total nets: 31112.
+SYN-1079 : finish stage Flatten Module. Total instances: 7397, Total nets: 31139.
 
 SYN-1001 : Stage 1.4 | Uniform Instance
 SYN-5013 WARNING: Undriven net: model "UDP_Example_Top" / net "u2_ram/u2_wrrd/Sdr_init_ref_ba[1]" in ../../../../source_code/rtl/uieg4d_dram/enc_file/sdr_wrrd.enc.v(0)
@@ -611,9 +611,9 @@ SYN-5013 WARNING: Undriven net: model "UDP_Example_Top" / net "u_udp_top/u6_tx_f
 		the net's pin: pin "dib[2]" in ../../../../source_code/rtl/ETH/RAMB16_S9_S9.v(45)
 SYN-5013 Similar messages will be suppressed.
 SYN-5025 WARNING: Using 0 for all undriven pins and nets
-SYN-1001 : End Stage 1.4 | Uniform Instance; Time: 0.034556s wall, 0.015625s user + 0.000000s system = 0.015625s CPU (45.2%); Memory(MB): used = 272, reserved = 377, peak = 288;
+SYN-1001 : End Stage 1.4 | Uniform Instance; Time: 0.033922s wall, 0.015625s user + 0.000000s system = 0.015625s CPU (46.1%); Memory(MB): used = 271, reserved = 377, peak = 288;
 
-SYN-1079 : finish stage Uniform Instance. Total instances: 6860, Total nets: 30529.
+SYN-1079 : finish stage Uniform Instance. Total instances: 6863, Total nets: 30556.
 
 SYN-1001 : Stage 1.5 | Optimize Design
 SYN-1066 : Inferred FSM for state register 'app_fdma_inst/state_reg' in module 'UDP_Example_Top'
@@ -1025,7 +1025,7 @@ SYN-1066 : Inferred FSM for state register 'u_uicfg5640/TS_S_reg' in module 'UDP
 --------------------------------------------
 SYN-1067 : encoded FSM with state register 'u_uicfg5640/TS_S_reg' using encoding 'one_hot' in model 'UDP_Example_Top'
 SYN-1057 : Inferred 31 FSM(s)
-SYN-1032 : 28134/729 useful/useless nets, 6150/57 useful/useless insts
+SYN-1032 : 28161/729 useful/useless nets, 6153/57 useful/useless insts
 SYN-1021 : Optimized 3 onehot mux instances.
 SYN-1068 : Optimized 26 binary mux instances.
 SYN-1019 : Optimized 3 mux instances.
@@ -1056,9 +1056,9 @@ USR-8130 CRITICAL-WARNING: No clock match the pattern: udp_clk_125m.
 USR-8208 CRITICAL-WARNING: Clock group is empty.
 USR-8159 CRITICAL-WARNING: Command set_clock_groups -exclusive -group [get_clocks {udp_clk_125m}] in D:/University/AL_Proj/anlu/anlu/source_code/constraints/UDP.sdc(13) fails.
 SYN-1016 : Merged 663 instances.
-SYN-1001 : End Stage 1.5 | Optimize Design; Time: 3.580813s wall, 1.343750s user + 0.000000s system = 1.343750s CPU (37.5%); Memory(MB): used = 366, reserved = 351, peak = 366;
+SYN-1001 : End Stage 1.5 | Optimize Design; Time: 3.371149s wall, 1.750000s user + 0.015625s system = 1.765625s CPU (52.4%); Memory(MB): used = 367, reserved = 351, peak = 367;
 
-SYN-1079 : finish stage Optimize Design. Total instances: 15009, Total nets: 16712.
+SYN-1079 : finish stage Optimize Design. Total instances: 15036, Total nets: 16739.
 
 SYN-1001 : Stage 1.6 | Optimize Iteratively
 SYN-1018 : Transformed 4 mux instances.
@@ -1068,7 +1068,7 @@ SYN-1014 : Optimize round 1
 SYN-1044 : Optimized 30 inv instances.
 SYN-1017 : Remove 38 const input seq instances
 SYN-1019 : Optimized 46 mux instances.
-SYN-1020 : Optimized 176 distributor mux.
+SYN-1020 : Optimized 178 distributor mux.
 SYN-1001 : Optimize 25 less-than instances
 SYN-5084 WARNING: Register "app_fdma_inst/rburst_len[0]" in ../../../../source_code/rtl/uiappfdma/uiappfdma.v(148) is described with both an asynchronous reset/set and an initialization value of the opposite polarity. Ignore the initialization value '0'
 SYN-5084 WARNING: Register "app_fdma_inst/wburst_len[0]" in ../../../../source_code/rtl/uiappfdma/uiappfdma.v(84) is described with both an asynchronous reset/set and an initialization value of the opposite polarity. Ignore the initialization value '0'
@@ -1077,8 +1077,8 @@ SYN-2595 : bram inst: u_udp_top/u6_tx_fifo/ramgen_l/inst is set to PDPW/SP from 
 SYN-2595 : bram inst: u_udp_top/u6_tx_fifo/ramgen_u/inst is set to PDPW/SP from DP for resource saving
 SYN-2595 : bram inst: u_udp_top/u7_rx_fifo/ramgen_l/inst is set to PDPW/SP from DP for resource saving
 SYN-2595 : bram inst: u_udp_top/u7_rx_fifo/ramgen_u/inst is set to PDPW/SP from DP for resource saving
-SYN-1016 : Merged 12115 instances.
-SYN-1015 : Optimize round 1, 21602 better
+SYN-1016 : Merged 12118 instances.
+SYN-1015 : Optimize round 1, 21616 better
 SYN-1014 : Optimize round 2
 SYN-1044 : Optimized 12 inv instances.
 SYN-1017 : Remove 11 const input seq instances
@@ -1088,34 +1088,34 @@ SYN-1001 : Optimize 1 less-than instances
 SYN-1019 : Optimized 449 mux instances.
 SYN-1016 : Merged 60 instances.
 SYN-1015 : Optimize round 2, 1013 better
-SYN-3010 : Optimized 297 DFF(s)
+SYN-3010 : Optimized 296 DFF(s)
 SYN-1014 : Optimize round 1
 SYN-1017 : Remove 1 const input seq instances
 SYN-1020 : Optimized 181 distributor mux.
 SYN-1016 : Merged 937 instances.
-SYN-1015 : Optimize round 1, 1191 better
+SYN-1015 : Optimize round 1, 1182 better
 SYN-1014 : Optimize round 2
 SYN-1020 : Optimized 41 distributor mux.
 SYN-1016 : Merged 79 instances.
 SYN-1015 : Optimize round 2, 122 better
 SYN-1014 : Optimize round 3
 SYN-1015 : Optimize round 3, 0 better
-SYN-1001 : End Stage 1.6 | Optimize Iteratively; Time: 12.238517s wall, 4.953125s user + 0.078125s system = 5.031250s CPU (41.1%); Memory(MB): used = 127, reserved = 364, peak = 423;
+SYN-1001 : End Stage 1.6 | Optimize Iteratively; Time: 8.731054s wall, 2.703125s user + 0.062500s system = 2.765625s CPU (31.7%); Memory(MB): used = 372, reserved = 365, peak = 425;
 
-SYN-1079 : finish stage Optimize Iteratively. Total instances: 20049, Total nets: 21344.
+SYN-1079 : finish stage Optimize Iteratively. Total instances: 20080, Total nets: 21375.
 
 SYN-1001 : Stage 1.7 | Check Design
-SYN-1001 : End Stage 1.7 | Check Design; Time: 0.002727s wall, 0.000000s user + 0.000000s system = 0.000000s CPU (n/a%); Memory(MB): used = 127, reserved = 364, peak = 423;
+SYN-1001 : End Stage 1.7 | Check Design; Time: 0.003374s wall, 0.000000s user + 0.000000s system = 0.000000s CPU (n/a%); Memory(MB): used = 372, reserved = 365, peak = 425;
 
-SYN-1079 : finish stage Check Design. Total instances: 20049, Total nets: 21344.
+SYN-1079 : finish stage Check Design. Total instances: 20080, Total nets: 21375.
 
-SYN-1001 : End Stage 1 | Optimize RTL; Time: 17.119317s wall, 6.593750s user + 0.078125s system = 6.671875s CPU (39.0%); Memory(MB): used = 127, reserved = 364, peak = 423;
+SYN-1001 : End Stage 1 | Optimize RTL; Time: 13.366029s wall, 5.140625s user + 0.078125s system = 5.218750s CPU (39.0%); Memory(MB): used = 372, reserved = 365, peak = 425;
 
-SYN-1079 : finish stage Optimize RTL. Total instances: 20049, Total nets: 21344.
+SYN-1079 : finish stage Optimize RTL. Total instances: 20080, Total nets: 21375.
 
-RUN-1003 : finish command "optimize_rtl" in  17.127517s wall, 6.593750s user + 0.078125s system = 6.671875s CPU (39.0%)
+RUN-1003 : finish command "optimize_rtl" in  13.374432s wall, 5.140625s user + 0.078125s system = 5.218750s CPU (39.0%)
 
-RUN-1004 : used memory is 127 MB, reserved memory is 364 MB, peak memory is 423 MB
+RUN-1004 : used memory is 372 MB, reserved memory is 365 MB, peak memory is 425 MB
 RUN-1002 : start command "report_area -file UDP_EXAMPLE_rtl.area"
 RUN-1001 : standard
 ***Report Model: UDP_Example_Top Device: EG4S20BG256***
@@ -1127,23 +1127,23 @@ IO Statistics
   #inout                    1
 
 Gate Statistics
-#Basic gates            16199
-  #and                   3967
+#Basic gates            16206
+  #and                   3968
   #nand                     0
-  #or                    4132
+  #or                    4133
   #nor                      0
   #xor                    473
   #xnor                    12
   #buf                      0
-  #not                    708
+  #not                    710
   #bufif1                  33
-  #MX21                   943
+  #MX21                   945
   #FADD                     0
-  #DFF                   5931
+  #DFF                   5932
   #LATCH                    0
 #MACRO_ADD                225
-#MACRO_EQ                 125
-#MACRO_MUX               3231
+#MACRO_EQ                 126
+#MACRO_MUX               3254
 #MACRO_OTHERS              30
 
 RUN-1002 : start command "export_db UDP_EXAMPLE_rtl.db"
@@ -1190,14 +1190,14 @@ RUN-1002 : start command "optimize_gate -packarea UDP_EXAMPLE_gate.area"
 RUN-1001 : Open license file D:/Anlogic/TD_6.2.1_Engineer_6.2.168.116/license/Anlogic.lic
 SYN-1001 : Stage 2 | Optimize Gate
 SYN-1001 : Stage 2.1 | Map Reg
-SYN-1001 : End Stage 2.1 | Map Reg; Time: 0.330446s wall, 0.125000s user + 0.000000s system = 0.125000s CPU (37.8%); Memory(MB): used = 163, reserved = 370, peak = 423;
+SYN-1001 : End Stage 2.1 | Map Reg; Time: 0.339158s wall, 0.140625s user + 0.000000s system = 0.140625s CPU (41.5%); Memory(MB): used = 396, reserved = 502, peak = 425;
 
-SYN-1079 : finish stage Map Reg. Total instances: 20049, Total nets: 21344.
+SYN-1079 : finish stage Map Reg. Total instances: 20080, Total nets: 21375.
 
 SYN-1001 : Stage 2.2 | Map IO
 SYN-2002 : EG_PHY_SDRAM_2M_32 instance sdram.
 SYN-2001 : Map 92 IOs to PADs of model 'UDP_Example_Top'
-SYN-1001 : End Stage 2.2 | Map IO; Time: 0.182616s wall, 0.078125s user + 0.000000s system = 0.078125s CPU (42.8%); Memory(MB): used = 164, reserved = 371, peak = 423;
+SYN-1001 : End Stage 2.2 | Map IO; Time: 0.198938s wall, 0.078125s user + 0.000000s system = 0.078125s CPU (39.3%); Memory(MB): used = 396, reserved = 502, peak = 425;
 
 SYN-1001 : Stage 2.3 | Map Macro
 RUN-1002 : start command "update_pll_param -module UDP_Example_Top"
@@ -1217,13 +1217,13 @@ SYN-1016 : Merged 8 instances.
 SYN-2571 : Optimize after map_dsp, round 1, 8 better
 SYN-2571 : Optimize after map_dsp, round 2
 SYN-2571 : Optimize after map_dsp, round 2, 0 better
-SYN-1001 : Throwback 339 control mux instances
+SYN-1001 : Throwback 340 control mux instances
 SYN-1001 : Generate 14 bigger adders
 SYN-1001 : Optimize 30 adders
 SYN-1001 : Optimize 3 less-than instances
 SYN-2501 : Optimize round 1
-SYN-1016 : Merged 120 instances.
-SYN-2501 : Optimize round 1, 908 better
+SYN-1016 : Merged 164 instances.
+SYN-2501 : Optimize round 1, 984 better
 SYN-2501 : Optimize round 2
 SYN-2501 : Optimize round 2, 0 better
 SYN-2501 : Optimize round 1
@@ -1232,7 +1232,7 @@ SYN-2501 : Optimize round 1, 1 better
 SYN-2501 : Optimize round 2
 SYN-2501 : Optimize round 2, 0 better
 SYN-2501 : Map 192 macro adder(s)
-SYN-1019 : Optimized 2099 mux instances.
+SYN-1019 : Optimized 2103 mux instances.
 SYN-1016 : Merged 396 instances.
 SYN-5011 WARNING: Undriven pin: model "UDP_Example_Top" / inst "u2_ram/u2_wrrd/Sdr_rd_dout_reg[0]" in ../../../../source_code/rtl/uieg4d_dram/enc_file/sdr_wrrd.enc.v(0) / pin "clk"
 SYN-5011 WARNING: Undriven pin: model "UDP_Example_Top" / inst "u2_ram/u2_wrrd/Sdr_rd_dout_reg[1]" in ../../../../source_code/rtl/uieg4d_dram/enc_file/sdr_wrrd.enc.v(0) / pin "clk"
@@ -1246,23 +1246,23 @@ SYN-5011 WARNING: Undriven pin: model "UDP_Example_Top" / inst "u2_ram/u2_wrrd/S
 SYN-5011 WARNING: Undriven pin: model "UDP_Example_Top" / inst "u2_ram/u2_wrrd/Sdr_rd_dout_reg[9]" in ../../../../source_code/rtl/uieg4d_dram/enc_file/sdr_wrrd.enc.v(0) / pin "clk"
 SYN-5011 Similar messages will be suppressed.
 SYN-5025 WARNING: Using 0 for all undriven pins and nets
-SYN-1001 : End Stage 2.3 | Map Macro; Time: 3.798904s wall, 1.859375s user + 0.000000s system = 1.859375s CPU (48.9%); Memory(MB): used = 303, reserved = 388, peak = 423;
+SYN-1001 : End Stage 2.3 | Map Macro; Time: 4.106215s wall, 1.062500s user + 0.000000s system = 1.062500s CPU (25.9%); Memory(MB): used = 273, reserved = 516, peak = 425;
 
-SYN-1079 : finish stage Map Macro. Total instances: 24731, Total nets: 25969.
+SYN-1079 : finish stage Map Macro. Total instances: 24771, Total nets: 26009.
 
 SYN-1001 : Stage 2.4 | Map Gate
-SYN-3001 : Collect 4526 PI 3125 PO (44 timing unconstrained) for mapping
-SYN-2581 : Mapping with K=5, #lut = 5087 (3.41), #lev = 7 (2.30), #crit_level = 1
+SYN-3001 : Collect 4549 PI 3148 PO (44 timing unconstrained) for mapping
+SYN-2581 : Mapping with K=5, #lut = 4921 (3.37), #lev = 8 (2.27), #crit_level = 1
 SYN-2551 : Post LUT mapping optimization.
-SYN-2581 : Mapping with K=5, #lut = 4732 (3.32), #lev = 6 (2.37), #crit_level = 0
-SYN-3001 : Logic optimization opt = 1.59 sec, map = 0.39 sec, post map opt = 11.13 sec.
-SYN-1001 : End Stage 2.4 | Map Gate; Time: 15.629300s wall, 8.390625s user + 0.015625s system = 8.406250s CPU (53.8%); Memory(MB): used = 332, reserved = 412, peak = 423;
+SYN-2581 : Mapping with K=5, #lut = 4763 (3.31), #lev = 6 (2.34), #crit_level = 0
+SYN-3001 : Logic optimization opt = 1.66 sec, map = 0.42 sec, post map opt = 11.09 sec.
+SYN-1001 : End Stage 2.4 | Map Gate; Time: 15.821162s wall, 6.015625s user + 0.015625s system = 6.031250s CPU (38.1%); Memory(MB): used = 334, reserved = 538, peak = 425;
 
 SYN-1001 : Packing model "UDP_Example_Top" ...
 SYN-4010 : Pack lib has 57 rtl pack models with 26 top pack blocks
 SYN-1014 : Optimize round 1
 SYN-1015 : Optimize round 1, 0 better
-SYN-4002 : Packing 5874 DFF/LATCH to SEQ ...
+SYN-4002 : Packing 5875 DFF/LATCH to SEQ ...
 SYN-4009 : Pack 23 carry chain into lslice
 SYN-4007 : Packing 426 adder to BLE ...
 SYN-4008 : Packed 426 adder and 99 SEQ to BLE.
@@ -1275,17 +1275,17 @@ RUN-1002 : start command "start_timer"
 -----------------------------------------------------------
 | Timing                    |                             |
 |     Setup WNS             |        -5958                |
-|     Setup TNS             |      -331467                |
-|     Num of violated S-EP  |          310                |
+|     Setup TNS             |      -333064                |
+|     Num of violated S-EP  |          314                |
 |     Hold WNS              |          471                |
 |     Hold TNS              |            0                |
 |     Num of violated H-EP  |            0                |
 -----------------------------------------------------------
 | Utilization               |                             |
-|     #registers            |         5775                |
-|     #luts                 |         4733                |
-|     #lut1                 |           60                |
-|     #lut1(~A)             |           59                |
+|     #registers            |         5776                |
+|     #luts                 |         4764                |
+|     #lut1                 |           59                |
+|     #lut1(~A)             |           58                |
 |     #slices               |          350                |
 |     slices percentage     |        3.57%                |
 |     #RAMs                 |           28                |
@@ -1328,29 +1328,29 @@ Over-quota Path Details
 Note: Table only show top 5 paths for each clock group in default
 
 Logic Level Distribution
-----------------------------------------------------------------------------------------------------------------------------------------------
-  Clock                                         |  Period            |  0     |  1     |  2     |  3     |  4    |  5    |  6    |  7   |  8
-----------------------------------------------------------------------------------------------------------------------------------------------
-  clk_in                                        |  20.000ns (50MHz)  |  40    |  44    |  21    |  6     |  10   |  13   |  3    |  0   |  0
-  phy1_rgmii_rx_clk                             |  8.000ns (125MHz)  |  518   |  153   |  113   |  46    |  31   |  2    |  0    |  0   |  0
-  u_PLL_HDMI_CLK/pll_inst.clkc[0]               |  16.000ns (62MHz)  |  89    |  15    |  40    |  13    |  29   |  20   |  31   |  0   |  0
-  u_PLL_HDMI_CLK/pll_inst.clkc[1]               |  3.200ns (312MHz)  |  43    |  27    |  0     |  0     |  0    |  0    |  0    |  0   |  0
-  u_clk/pll_inst.clkc[0]                        |  6.666ns (150MHz)  |  827   |  401   |  248   |  159   |  105  |  4    |  0    |  0   |  0
-  u_clk/pll_inst.clkc[2]                        |  6.666ns (150MHz)  |  16    |  32    |  0     |  0     |  0    |  0    |  0    |  0   |  0
-  u_udp_top/u_clk_gen/u_pll_0/pll_inst.clkc[0]  |  8.000ns (125MHz)  |  323   |  100   |  72    |  137   |  35   |  4    |  5    |  0   |  0
-  u_udp_top/u_clk_gen/u_pll_0/pll_inst.clkc[1]  |  8.000ns (125MHz)  |  2163  |  1184  |  777   |  4366  |  384  |  415  |  697  |  22  |  2
-  u_udp_top/u_clk_gen/u_pll_0/pll_inst.clkc[4]  |  8.000ns (125MHz)  |  2     |  0     |  0     |  0     |  0    |  0    |  0    |  0   |  0
-  Total                                         |  NA                |  4021  |  1956  |  1271  |  4727  |  594  |  458  |  736  |  22  |  2
-----------------------------------------------------------------------------------------------------------------------------------------------
-Note: The table count the worst 100000 paths, each endpoint count only one time.(13787 paths analyzed)
+---------------------------------------------------------------------------------------------------------------------------------------
+  Clock                                         |  Period            |  0     |  1     |  2     |  3    |  4    |  5    |  6    |  7
+---------------------------------------------------------------------------------------------------------------------------------------
+  clk_in                                        |  20.000ns (50MHz)  |  40    |  44    |  21    |  7    |  11   |  13   |  1    |  0
+  phy1_rgmii_rx_clk                             |  8.000ns (125MHz)  |  518   |  141   |  112   |  61   |  29   |  2    |  0    |  0
+  u_PLL_HDMI_CLK/pll_inst.clkc[0]               |  16.000ns (62MHz)  |  89    |  15    |  41    |  24   |  16   |  28   |  24   |  0
+  u_PLL_HDMI_CLK/pll_inst.clkc[1]               |  3.200ns (312MHz)  |  43    |  27    |  0     |  0    |  0    |  0    |  0    |  0
+  u_clk/pll_inst.clkc[0]                        |  6.666ns (150MHz)  |  827   |  401   |  249   |  157  |  104  |  5    |  1    |  0
+  u_clk/pll_inst.clkc[2]                        |  6.666ns (150MHz)  |  16    |  32    |  0     |  0    |  0    |  0    |  0    |  0
+  u_udp_top/u_clk_gen/u_pll_0/pll_inst.clkc[0]  |  8.000ns (125MHz)  |  323   |  100   |  131   |  77   |  38   |  5    |  2    |  0
+  u_udp_top/u_clk_gen/u_pll_0/pll_inst.clkc[1]  |  8.000ns (125MHz)  |  2163  |  1182  |  4625  |  544  |  421  |  532  |  522  |  23
+  u_udp_top/u_clk_gen/u_pll_0/pll_inst.clkc[4]  |  8.000ns (125MHz)  |  2     |  0     |  0     |  0    |  0    |  0    |  0    |  0
+  Total                                         |  NA                |  4021  |  1942  |  5179  |  870  |  619  |  585  |  550  |  23
+---------------------------------------------------------------------------------------------------------------------------------------
+Note: The table count the worst 100000 paths, each endpoint count only one time.(13789 paths analyzed)
 
 Hierarchical Rent Exponent Report
 +-----------------------------------------------------------------------+
 |Inst           |Model           |Rent     |Cell     |Pin     |Term     |
 +-----------------------------------------------------------------------+
-|top            |UDP_Example_Top |0.19     |11218    |43847   |24       |
-|  u_udp_rx_buf |udp_rx_buf_7    |0.36     |1142     |3617    |41       |
-|  u_udp_top    |udp_top_8       |0.36     |6854     |28004   |95       |
+|top            |UDP_Example_Top |0.19     |11250    |43918   |24       |
+|  u_udp_rx_buf |udp_rx_buf_7    |0.36     |1168     |3701    |41       |
+|  u_udp_top    |udp_top_8       |0.36     |6859     |27970   |95       |
 +-----------------------------------------------------------------------+
 Note: Cell represents total number of cells inside module; Pin represents total number of pins
       which have net connection inside module; Term represents total number of PIs and POs of module.
@@ -1358,9 +1358,9 @@ Note: Cell represents total number of cells inside module; Pin represents total 
       A module with higher rent corresponds to highly connected logic and strong connectivity with others.
 Report gate stage QoR done.
 
-RUN-1003 : finish command "report_qor -step gate -file gate.qor" in  1.631870s wall, 1.015625s user + 0.000000s system = 1.015625s CPU (62.2%)
+RUN-1003 : finish command "report_qor -step gate -file gate.qor" in  1.814582s wall, 0.546875s user + 0.000000s system = 0.546875s CPU (30.1%)
 
-RUN-1004 : used memory is 333 MB, reserved memory is 411 MB, peak memory is 423 MB
+RUN-1004 : used memory is 337 MB, reserved memory is 538 MB, peak memory is 425 MB
 RUN-1002 : start command "report_area -file UDP_EXAMPLE_gate.area"
 RUN-1001 : standard
 ***Report Model: UDP_Example_Top Device: EG4S20BG256***
@@ -1372,16 +1372,16 @@ IO Statistics
   #inout                    1
 
 LUT Statistics
-#Total_luts              4733
-  #lut4                  3982
-  #lut5                   751
+#Total_luts              4764
+  #lut4                  4029
+  #lut5                   735
   #lut6                     0
   #lut5_mx41                0
   #lut4_alu1b               0
 
 Utilization Statistics
-#lut                     5433   out of  19600   27.72%
-#reg                     5874   out of  19600   29.97%
+#lut                     5464   out of  19600   27.88%
+#reg                     5875   out of  19600   29.97%
 #bram                      28   out of     64   43.75%
   #bram9k                  14
   #fifo9k                  14
@@ -1394,15 +1394,15 @@ Utilization Statistics
 #pll                        3   out of      4   75.00%
 #gclk                       4   out of     16   25.00%
 
-SYN-1001 : End Stage 2 | Optimize Gate; Time: 22.497056s wall, 11.609375s user + 0.515625s system = 12.125000s CPU (53.9%); Memory(MB): used = 333, reserved = 411, peak = 423;
+SYN-1001 : End Stage 2 | Optimize Gate; Time: 23.249868s wall, 7.906250s user + 0.171875s system = 8.078125s CPU (34.7%); Memory(MB): used = 337, reserved = 538, peak = 425;
 
-RUN-1003 : finish command "optimize_gate -packarea UDP_EXAMPLE_gate.area" in  22.505124s wall, 11.609375s user + 0.515625s system = 12.125000s CPU (53.9%)
+RUN-1003 : finish command "optimize_gate -packarea UDP_EXAMPLE_gate.area" in  23.258248s wall, 7.906250s user + 0.171875s system = 8.078125s CPU (34.7%)
 
-RUN-1004 : used memory is 333 MB, reserved memory is 411 MB, peak memory is 423 MB
+RUN-1004 : used memory is 337 MB, reserved memory is 538 MB, peak memory is 425 MB
 RUN-1002 : start command "legalize_phy_inst"
 SYN-1001 : Stage 3 | Legalize Phy Inst
 SYN-1011 : Flatten model UDP_Example_Top
-SYN-1001 : End Stage 3 | Legalize Phy Inst; Time: 0.024436s wall, 0.000000s user + 0.000000s system = 0.000000s CPU (n/a%); Memory(MB): used = 334, reserved = 411, peak = 423;
+SYN-1001 : End Stage 3 | Legalize Phy Inst; Time: 0.027312s wall, 0.015625s user + 0.000000s system = 0.015625s CPU (57.2%); Memory(MB): used = 337, reserved = 538, peak = 425;
 
 RUN-1002 : start command "update_timing"
 RUN-1002 : start command "start_timer"
@@ -1417,7 +1417,7 @@ Device           : EG4S20BG256
 Speed            : NA
 
 Timing Mode      : basic
-Setup            : WNS -5958ps  TNS  -331467ps  NUM_FEPS   310
+Setup            : WNS -5958ps  TNS  -333064ps  NUM_FEPS   314
 Hold             : WNS   471ps  TNS        0ps  NUM_FEPS     0
 
 Flow Statistics  :
@@ -1425,13 +1425,13 @@ RUN-1001 : Flow Statistics:
 RUN-1001 : --------------------------------------------------------------------------------------------------
 RUN-1001 :      command     |  #calls  |  wall time  |  cpu time(s)  |  used memory(mb)  |  peak memory(mb)  
 RUN-1001 : --------------------------------------------------------------------------------------------------
-RUN-1001 :   optimize_gate  |    1     |  22s(56%)   |    11(64%)    |        333        |        423        
-RUN-1001 :   optimize_rtl   |    1     |  17s(43%)   |    6(35%)     |        127        |        423        
+RUN-1001 :   optimize_gate  |    1     |  23s(63%)   |    7(58%)     |        337        |        425        
+RUN-1001 :   optimize_rtl   |    1     |  13s(36%)   |    5(41%)     |        372        |        425        
 RUN-1001 :   import_device  |    1     |   0s(0%)    |     0(0%)     |        82         |        82         
 RUN-1001 :     read_adc     |    1     |   0s(0%)    |     0(0%)     |        268        |        268        
 RUN-1001 :     read_sdc     |    2     |   0s(0%)    |     0(0%)     |        268        |        268        
 RUN-1001 : --------------------------------------------------------------------------------------------------
-RUN-1001 :       total      |    6     |     39s     |      17       |        333        |        423        
+RUN-1001 :       total      |    6     |     36s     |      12       |        372        |        425        
 RUN-1001 : --------------------------------------------------------------------------------------------------
 RUN-1002 : start command "export_db UDP_EXAMPLE_gate.db"
 RUN-1001 : Exported flow parameters
@@ -1463,18 +1463,18 @@ Device           : EG4S20BG256
 Speed            : NA
 
 Timing Mode      : basic
-Setup            : WNS -5958ps  TNS  -331467ps  NUM_FEPS   310
+Setup            : WNS -5958ps  TNS  -333064ps  NUM_FEPS   314
 Hold             : WNS   471ps  TNS        0ps  NUM_FEPS     0
 
 RUN-1001 : Flow Statistics:
 RUN-1001 : --------------------------------------------------------------------------------------------------
 RUN-1001 :      command     |  #calls  |  wall time  |  cpu time(s)  |  used memory(mb)  |  peak memory(mb)  
 RUN-1001 : --------------------------------------------------------------------------------------------------
-RUN-1001 :   optimize_gate  |    1     |  22s(56%)   |    11(64%)    |        333        |        423        
-RUN-1001 :   optimize_rtl   |    1     |  17s(43%)   |    6(35%)     |        127        |        423        
+RUN-1001 :   optimize_gate  |    1     |  23s(63%)   |    7(58%)     |        337        |        425        
+RUN-1001 :   optimize_rtl   |    1     |  13s(36%)   |    5(41%)     |        372        |        425        
 RUN-1001 :   import_device  |    1     |   0s(0%)    |     0(0%)     |        82         |        82         
 RUN-1001 :     read_adc     |    1     |   0s(0%)    |     0(0%)     |        268        |        268        
 RUN-1001 :     read_sdc     |    2     |   0s(0%)    |     0(0%)     |        268        |        268        
 RUN-1001 : --------------------------------------------------------------------------------------------------
-RUN-1001 :       total      |    6     |     39s     |      17       |        333        |        423        
+RUN-1001 :       total      |    6     |     36s     |      12       |        372        |        425        
 RUN-1001 : --------------------------------------------------------------------------------------------------
